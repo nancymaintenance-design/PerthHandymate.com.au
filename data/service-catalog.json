@@ -1,0 +1,3060 @@
+{
+  "version": "1.5",
+  "rawServices": [
+    {
+      "label": "Aircon Installation",
+      "sourceSection": "Interior",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "canonicalTitle": "Air Conditioning",
+      "url": "services/electrical-plumbing-gas-air-conditioning/air-conditioning/"
+    },
+    {
+      "label": "Blinds & Curtains",
+      "sourceSection": "Interior",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Blinds & Curtains",
+      "url": "services/handyman-interiors-appliance-repairs/blinds-and-curtains/"
+    },
+    {
+      "label": "Carpenters",
+      "sourceSection": "Interior",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Carpenters",
+      "url": "services/handyman-interiors-appliance-repairs/carpenters/"
+    },
+    {
+      "label": "Carpet Repair",
+      "sourceSection": "Interior",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Carpet Repair",
+      "url": "services/handyman-interiors-appliance-repairs/carpet-repair/"
+    },
+    {
+      "label": "Cladding",
+      "sourceSection": "Interior",
+      "category": "roofing-gutters-exterior",
+      "canonicalTitle": "Cladding",
+      "url": "services/roofing-gutters-exterior/cladding/"
+    },
+    {
+      "label": "Electricians",
+      "sourceSection": "Interior",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "canonicalTitle": "Electricians",
+      "url": "services/electrical-plumbing-gas-air-conditioning/electricians/"
+    },
+    {
+      "label": "Floor Sanding",
+      "sourceSection": "Interior",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Floor Sanding",
+      "url": "services/handyman-interiors-appliance-repairs/floor-sanding/"
+    },
+    {
+      "label": "Fly Screens",
+      "sourceSection": "Interior",
+      "category": "doors-windows-glass-screens",
+      "canonicalTitle": "Fly Screens & Repairs",
+      "url": "services/doors-windows-glass-screens/fly-screens/"
+    },
+    {
+      "label": "Insulation",
+      "sourceSection": "Interior",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "canonicalTitle": "Insulation",
+      "url": "services/electrical-plumbing-gas-air-conditioning/insulation/"
+    },
+    {
+      "label": "New Carpet",
+      "sourceSection": "Interior",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "New Carpet",
+      "url": "services/handyman-interiors-appliance-repairs/new-carpet/"
+    },
+    {
+      "label": "Plasterers",
+      "sourceSection": "Interior",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Plasterers",
+      "url": "services/handyman-interiors-appliance-repairs/plasterers/"
+    },
+    {
+      "label": "Plumbers",
+      "sourceSection": "Interior",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "canonicalTitle": "Plumbers",
+      "url": "services/electrical-plumbing-gas-air-conditioning/plumbers/"
+    },
+    {
+      "label": "Shower Screens",
+      "sourceSection": "Interior",
+      "category": "doors-windows-glass-screens",
+      "canonicalTitle": "Shower Screens",
+      "url": "services/doors-windows-glass-screens/shower-screens/"
+    },
+    {
+      "label": "Tiling",
+      "sourceSection": "Interior",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Tiling",
+      "url": "services/handyman-interiors-appliance-repairs/tiling/"
+    },
+    {
+      "label": "Waterproofing",
+      "sourceSection": "Interior",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Waterproofing",
+      "url": "services/handyman-interiors-appliance-repairs/waterproofing/"
+    },
+    {
+      "label": "Asbestos Removal",
+      "sourceSection": "Exterior",
+      "category": "cleaning-removals-pest-hazard",
+      "canonicalTitle": "Asbestos Removal",
+      "url": "services/cleaning-removals-pest-hazard/asbestos-removal/"
+    },
+    {
+      "label": "Concrete Resurfacing",
+      "sourceSection": "Exterior",
+      "category": "building-renovation-structural",
+      "canonicalTitle": "Concrete Resurfacing",
+      "url": "services/building-renovation-structural/concrete-resurfacing/"
+    },
+    {
+      "label": "Flyscreen Repair",
+      "sourceSection": "Exterior",
+      "category": "doors-windows-glass-screens",
+      "canonicalTitle": "Fly Screens & Repairs",
+      "url": "services/doors-windows-glass-screens/fly-screens/"
+    },
+    {
+      "label": "Gutter Cleaning",
+      "sourceSection": "Exterior",
+      "category": "roofing-gutters-exterior",
+      "canonicalTitle": "Gutter Services",
+      "url": "services/roofing-gutters-exterior/gutter-services/"
+    },
+    {
+      "label": "Gutter Installation",
+      "sourceSection": "Exterior",
+      "category": "roofing-gutters-exterior",
+      "canonicalTitle": "Gutter Services",
+      "url": "services/roofing-gutters-exterior/gutter-services/"
+    },
+    {
+      "label": "Gutter Repair",
+      "sourceSection": "Exterior",
+      "category": "roofing-gutters-exterior",
+      "canonicalTitle": "Gutter Services",
+      "url": "services/roofing-gutters-exterior/gutter-services/"
+    },
+    {
+      "label": "House Painters",
+      "sourceSection": "Exterior",
+      "category": "roofing-gutters-exterior",
+      "canonicalTitle": "House Painters",
+      "url": "services/roofing-gutters-exterior/house-painters/"
+    },
+    {
+      "label": "New Doors",
+      "sourceSection": "Exterior",
+      "category": "doors-windows-glass-screens",
+      "canonicalTitle": "Door Installation",
+      "url": "services/doors-windows-glass-screens/door-installation/"
+    },
+    {
+      "label": "Pavers",
+      "sourceSection": "Exterior",
+      "category": "roofing-gutters-exterior",
+      "canonicalTitle": "Pavers",
+      "url": "services/roofing-gutters-exterior/pavers/"
+    },
+    {
+      "label": "Roof Repairs",
+      "sourceSection": "Exterior",
+      "category": "roofing-gutters-exterior",
+      "canonicalTitle": "Roofing & Roof Repairs",
+      "url": "services/roofing-gutters-exterior/roofing/"
+    },
+    {
+      "label": "Roofing",
+      "sourceSection": "Exterior",
+      "category": "roofing-gutters-exterior",
+      "canonicalTitle": "Roofing & Roof Repairs",
+      "url": "services/roofing-gutters-exterior/roofing/"
+    },
+    {
+      "label": "Skylights",
+      "sourceSection": "Exterior",
+      "category": "doors-windows-glass-screens",
+      "canonicalTitle": "Skylights",
+      "url": "services/doors-windows-glass-screens/skylights/"
+    },
+    {
+      "label": "Verandah Builders",
+      "sourceSection": "Exterior",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Verandah Builders",
+      "url": "services/outdoor-structures-fencing-pools/verandah-builders/"
+    },
+    {
+      "label": "Window Installation",
+      "sourceSection": "Exterior",
+      "category": "doors-windows-glass-screens",
+      "canonicalTitle": "Window Installation",
+      "url": "services/doors-windows-glass-screens/window-installation/"
+    },
+    {
+      "label": "Window Repairs",
+      "sourceSection": "Exterior",
+      "category": "doors-windows-glass-screens",
+      "canonicalTitle": "Window Repairs",
+      "url": "services/doors-windows-glass-screens/window-repairs/"
+    },
+    {
+      "label": "Deck Builders",
+      "sourceSection": "Outdoor",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Deck Builders",
+      "url": "services/outdoor-structures-fencing-pools/deck-builders/"
+    },
+    {
+      "label": "Fence Builders",
+      "sourceSection": "Outdoor",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Fence Builders",
+      "url": "services/outdoor-structures-fencing-pools/fence-builders/"
+    },
+    {
+      "label": "Fencing Contractors",
+      "sourceSection": "Outdoor",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Fencing Contractors",
+      "url": "services/outdoor-structures-fencing-pools/fencing-contractors/"
+    },
+    {
+      "label": "Garden Clean Up",
+      "sourceSection": "Outdoor",
+      "category": "gardens-landscaping",
+      "canonicalTitle": "Garden Clean Up",
+      "url": "services/gardens-landscaping/garden-clean-up/"
+    },
+    {
+      "label": "Garden Landscapers",
+      "sourceSection": "Outdoor",
+      "category": "gardens-landscaping",
+      "canonicalTitle": "Garden Landscapers",
+      "url": "services/gardens-landscaping/garden-landscapers/"
+    },
+    {
+      "label": "Gardeners",
+      "sourceSection": "Outdoor",
+      "category": "gardens-landscaping",
+      "canonicalTitle": "Gardeners",
+      "url": "services/gardens-landscaping/gardeners/"
+    },
+    {
+      "label": "Lawn Mowing",
+      "sourceSection": "Outdoor",
+      "category": "gardens-landscaping",
+      "canonicalTitle": "Lawn Mowing",
+      "url": "services/gardens-landscaping/lawn-mowing/"
+    },
+    {
+      "label": "Patio Builders",
+      "sourceSection": "Outdoor",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Patio Builders",
+      "url": "services/outdoor-structures-fencing-pools/patio-builders/"
+    },
+    {
+      "label": "Pergola Builders",
+      "sourceSection": "Outdoor",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Pergola Builders",
+      "url": "services/outdoor-structures-fencing-pools/pergola-builders/"
+    },
+    {
+      "label": "Pool Fence Installers",
+      "sourceSection": "Outdoor",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Pool Fence Installers",
+      "url": "services/outdoor-structures-fencing-pools/pool-fence-installers/"
+    },
+    {
+      "label": "Pool Resurfacing",
+      "sourceSection": "Outdoor",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Pool Resurfacing",
+      "url": "services/outdoor-structures-fencing-pools/pool-resurfacing/"
+    },
+    {
+      "label": "Surveyors",
+      "sourceSection": "Outdoor",
+      "category": "planning-inspection-compliance",
+      "canonicalTitle": "Surveyors",
+      "url": "services/planning-inspection-compliance/surveyors/"
+    },
+    {
+      "label": "Synthetic Grass",
+      "sourceSection": "Outdoor",
+      "category": "gardens-landscaping",
+      "canonicalTitle": "Synthetic Grass",
+      "url": "services/gardens-landscaping/synthetic-grass/"
+    },
+    {
+      "label": "Timber Fencing",
+      "sourceSection": "Outdoor",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Timber Fencing",
+      "url": "services/outdoor-structures-fencing-pools/timber-fencing/"
+    },
+    {
+      "label": "Tree Arborists",
+      "sourceSection": "Outdoor",
+      "category": "gardens-landscaping",
+      "canonicalTitle": "Tree Arborists",
+      "url": "services/gardens-landscaping/tree-arborists/"
+    },
+    {
+      "label": "Bathroom",
+      "sourceSection": "Build & Renovate",
+      "category": "building-renovation-structural",
+      "canonicalTitle": "Bathroom",
+      "url": "services/building-renovation-structural/bathroom/"
+    },
+    {
+      "label": "Bricklayers",
+      "sourceSection": "Build & Renovate",
+      "category": "building-renovation-structural",
+      "canonicalTitle": "Bricklayers",
+      "url": "services/building-renovation-structural/bricklayers/"
+    },
+    {
+      "label": "Builders",
+      "sourceSection": "Build & Renovate",
+      "category": "building-renovation-structural",
+      "canonicalTitle": "Builders & Renovation Builders",
+      "url": "services/building-renovation-structural/builders/"
+    },
+    {
+      "label": "Building Certifiers",
+      "sourceSection": "Build & Renovate",
+      "category": "planning-inspection-compliance",
+      "canonicalTitle": "Building Certifiers",
+      "url": "services/planning-inspection-compliance/building-certifiers/"
+    },
+    {
+      "label": "Building Inspectors",
+      "sourceSection": "Build & Renovate",
+      "category": "planning-inspection-compliance",
+      "canonicalTitle": "Building Inspectors",
+      "url": "services/planning-inspection-compliance/building-inspectors/"
+    },
+    {
+      "label": "Carports & Garages",
+      "sourceSection": "Build & Renovate",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Carports & Garages",
+      "url": "services/outdoor-structures-fencing-pools/carports-and-garages/"
+    },
+    {
+      "label": "Concreters",
+      "sourceSection": "Build & Renovate",
+      "category": "building-renovation-structural",
+      "canonicalTitle": "Concreters",
+      "url": "services/building-renovation-structural/concreters/"
+    },
+    {
+      "label": "Demolition",
+      "sourceSection": "Build & Renovate",
+      "category": "building-renovation-structural",
+      "canonicalTitle": "Demolition",
+      "url": "services/building-renovation-structural/demolition/"
+    },
+    {
+      "label": "Draftsmen",
+      "sourceSection": "Build & Renovate",
+      "category": "planning-inspection-compliance",
+      "canonicalTitle": "Draftsmen",
+      "url": "services/planning-inspection-compliance/draftsmen/"
+    },
+    {
+      "label": "Home Renovators",
+      "sourceSection": "Build & Renovate",
+      "category": "building-renovation-structural",
+      "canonicalTitle": "Home Renovators",
+      "url": "services/building-renovation-structural/home-renovators/"
+    },
+    {
+      "label": "Renderers",
+      "sourceSection": "Build & Renovate",
+      "category": "roofing-gutters-exterior",
+      "canonicalTitle": "Renderers",
+      "url": "services/roofing-gutters-exterior/renderers/"
+    },
+    {
+      "label": "Renovation Builders",
+      "sourceSection": "Build & Renovate",
+      "category": "building-renovation-structural",
+      "canonicalTitle": "Builders & Renovation Builders",
+      "url": "services/building-renovation-structural/builders/"
+    },
+    {
+      "label": "Restumping",
+      "sourceSection": "Build & Renovate",
+      "category": "building-renovation-structural",
+      "canonicalTitle": "Restumping",
+      "url": "services/building-renovation-structural/restumping/"
+    },
+    {
+      "label": "Retaining Walls",
+      "sourceSection": "Build & Renovate",
+      "category": "outdoor-structures-fencing-pools",
+      "canonicalTitle": "Retaining Walls",
+      "url": "services/outdoor-structures-fencing-pools/retaining-walls/"
+    },
+    {
+      "label": "Structural Engineers",
+      "sourceSection": "Build & Renovate",
+      "category": "planning-inspection-compliance",
+      "canonicalTitle": "Structural Engineers",
+      "url": "services/planning-inspection-compliance/structural-engineers/"
+    },
+    {
+      "label": "Air Conditioning",
+      "sourceSection": "More",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "canonicalTitle": "Air Conditioning",
+      "url": "services/electrical-plumbing-gas-air-conditioning/air-conditioning/"
+    },
+    {
+      "label": "Cabinet Makers",
+      "sourceSection": "More",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Cabinet Makers",
+      "url": "services/handyman-interiors-appliance-repairs/cabinet-makers/"
+    },
+    {
+      "label": "Cleaners",
+      "sourceSection": "More",
+      "category": "cleaning-removals-pest-hazard",
+      "canonicalTitle": "Cleaners",
+      "url": "services/cleaning-removals-pest-hazard/cleaners/"
+    },
+    {
+      "label": "Dishwasher Repair",
+      "sourceSection": "More",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Dishwasher Repair",
+      "url": "services/handyman-interiors-appliance-repairs/dishwasher-repair/"
+    },
+    {
+      "label": "Door Installers",
+      "sourceSection": "More",
+      "category": "doors-windows-glass-screens",
+      "canonicalTitle": "Door Installation",
+      "url": "services/doors-windows-glass-screens/door-installation/"
+    },
+    {
+      "label": "Furniture Removalists",
+      "sourceSection": "More",
+      "category": "cleaning-removals-pest-hazard",
+      "canonicalTitle": "Furniture & Household Removalists",
+      "url": "services/cleaning-removals-pest-hazard/removalists/"
+    },
+    {
+      "label": "Gas Fitters",
+      "sourceSection": "More",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "canonicalTitle": "Gas Fitters",
+      "url": "services/electrical-plumbing-gas-air-conditioning/gas-fitters/"
+    },
+    {
+      "label": "Glass Glaziers",
+      "sourceSection": "More",
+      "category": "doors-windows-glass-screens",
+      "canonicalTitle": "Glass Glaziers",
+      "url": "services/doors-windows-glass-screens/glass-glaziers/"
+    },
+    {
+      "label": "Handymen",
+      "sourceSection": "More",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Handymen",
+      "url": "services/handyman-interiors-appliance-repairs/handymen/"
+    },
+    {
+      "label": "IKEA Kitchens",
+      "sourceSection": "More",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "IKEA Kitchens",
+      "url": "services/handyman-interiors-appliance-repairs/ikea-kitchens/"
+    },
+    {
+      "label": "Oven Repair",
+      "sourceSection": "More",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Oven Repair",
+      "url": "services/handyman-interiors-appliance-repairs/oven-repair/"
+    },
+    {
+      "label": "Pest Control",
+      "sourceSection": "More",
+      "category": "cleaning-removals-pest-hazard",
+      "canonicalTitle": "Pest Control",
+      "url": "services/cleaning-removals-pest-hazard/pest-control/"
+    },
+    {
+      "label": "Rubbish Removal",
+      "sourceSection": "More",
+      "category": "cleaning-removals-pest-hazard",
+      "canonicalTitle": "Rubbish Removal",
+      "url": "services/cleaning-removals-pest-hazard/rubbish-removal/"
+    },
+    {
+      "label": "Removalists",
+      "sourceSection": "More",
+      "category": "cleaning-removals-pest-hazard",
+      "canonicalTitle": "Furniture & Household Removalists",
+      "url": "services/cleaning-removals-pest-hazard/removalists/"
+    },
+    {
+      "label": "Upholstery Repair",
+      "sourceSection": "More",
+      "category": "handyman-interiors-appliance-repairs",
+      "canonicalTitle": "Upholstery Repair",
+      "url": "services/handyman-interiors-appliance-repairs/upholstery-repair/"
+    }
+  ],
+  "canonicalServices": [
+    {
+      "key": "air-conditioning",
+      "title": "Air Conditioning",
+      "slug": "air-conditioning",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "rawLabels": [
+        "Aircon Installation",
+        "Air Conditioning"
+      ],
+      "sourceSections": [
+        "Interior",
+        "More"
+      ],
+      "categoryTitle": "Electrical, plumbing, gas & air conditioning",
+      "summary": "Air conditioning help can cover a new split or ducted system, a poorly performing unit, servicing needs or replacement advice for a home or managed property.",
+      "commonTasks": [
+        "Assess the room layout, existing system and suitable unit type",
+        "Install or replace indoor and outdoor equipment where the scope permits",
+        "Investigate weak airflow, unusual noise, leaks or temperature problems"
+      ],
+      "customerInfo": [
+        "Property type, room sizes and the areas that need heating or cooling",
+        "Photos and model details of any existing indoor and outdoor units",
+        "Switchboard location, outdoor-unit access and preferred outcome"
+      ],
+      "safetyNote": "Electrical connections and refrigerant work may require appropriately licensed providers; isolate a unit that is sparking, smoking or visibly damaged and avoid touching it.",
+      "nextStep": "Send the system type, affected rooms and suburb so Ellis can arrange the right air-conditioning pathway.",
+      "majorAliases": [
+        "aircon",
+        "air con",
+        "split system",
+        "cooling"
+      ],
+      "aliases": [
+        "aircon installation",
+        "air conditioning",
+        "aircon",
+        "air con",
+        "split system",
+        "cooling"
+      ],
+      "searchTerms": [
+        "air conditioning",
+        "aircon installation",
+        "aircon",
+        "air con",
+        "split system",
+        "cooling"
+      ],
+      "url": "services/electrical-plumbing-gas-air-conditioning/air-conditioning/"
+    },
+    {
+      "key": "blinds-and-curtains",
+      "title": "Blinds & Curtains",
+      "slug": "blinds-and-curtains",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Blinds & Curtains"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Blind and curtain services cover measuring, fitting and repairing common window furnishings, from roller blinds to tracks, rods and curtain systems.",
+      "commonTasks": [
+        "Measure windows for suitable blinds, curtains, tracks or rods",
+        "Fit supplied window furnishings and mounting hardware",
+        "Repair loose brackets, damaged cords, tracks or operating mechanisms"
+      ],
+      "customerInfo": [
+        "Window measurements, wall material and number of openings",
+        "Photos showing frames, existing brackets and nearby obstructions",
+        "Product details and whether items are supplied or need sourcing"
+      ],
+      "safetyNote": "Corded window coverings can present a child-strangulation risk and should comply with current safety requirements; high or difficult access also needs suitable controls.",
+      "nextStep": "Share photos, measurements and the product style to help Ellis scope the window-furnishing work.",
+      "majorAliases": [],
+      "aliases": [
+        "blinds & curtains"
+      ],
+      "searchTerms": [
+        "blinds & curtains"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/blinds-and-curtains/"
+    },
+    {
+      "key": "carpenters",
+      "title": "Carpenters",
+      "slug": "carpenters",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Carpenters"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Carpentry enquiries can include timber repairs, internal fit-out, framing adjustments and made-to-fit features around the home.",
+      "commonTasks": [
+        "Repair or replace damaged timber trim, doors, frames and skirting",
+        "Build shelving, storage or other fitted timber elements",
+        "Complete scoped framing, lining or finishing carpentry"
+      ],
+      "customerInfo": [
+        "Photos and dimensions of the item or area",
+        "Timber species, finish or matching requirements if known",
+        "Any signs of rot, movement, termites or water damage"
+      ],
+      "safetyNote": "Structural alterations, load-bearing work and tasks near concealed services may need engineering, approvals or appropriately qualified trades.",
+      "nextStep": "Provide dimensions, close-up photos and the intended finish so Ellis can identify the appropriate carpentry response.",
+      "majorAliases": [
+        "carpenter",
+        "carpentry"
+      ],
+      "aliases": [
+        "carpenters",
+        "carpenter",
+        "carpentry"
+      ],
+      "searchTerms": [
+        "carpenters",
+        "carpenter",
+        "carpentry"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/carpenters/"
+    },
+    {
+      "key": "carpet-repair",
+      "title": "Carpet Repair",
+      "slug": "carpet-repair",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Carpet Repair"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Carpet repair focuses on localised damage, loose edges, wrinkles, joins and small areas affected by wear, stains or burns.",
+      "commonTasks": [
+        "Re-stretch loose or rippled carpet",
+        "Patch damaged sections using a compatible donor piece",
+        "Repair joins, edges, transitions or lifting around doorways"
+      ],
+      "customerInfo": [
+        "Photos of the damage and the overall room",
+        "Carpet type, age and whether matching offcuts are available",
+        "Approximate affected dimensions and any moisture history"
+      ],
+      "safetyNote": "Moisture, mould or contaminated flooring should be assessed before cosmetic repair; do not lift material where hidden electrical or hazardous-material risks may exist.",
+      "nextStep": "Send a wide photo, a close-up and the damaged area size for a carpet-repair assessment.",
+      "majorAliases": [
+        "carpet repairer"
+      ],
+      "aliases": [
+        "carpet repair",
+        "carpet repairer"
+      ],
+      "searchTerms": [
+        "carpet repair",
+        "carpet repairer"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/carpet-repair/"
+    },
+    {
+      "key": "cladding",
+      "title": "Cladding",
+      "slug": "cladding",
+      "category": "roofing-gutters-exterior",
+      "rawLabels": [
+        "Cladding"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Roofing, gutters & exterior",
+      "summary": "Cladding work can address damaged exterior boards or panels, localised weather exposure, replacement sections and new wall-finish enquiries.",
+      "commonTasks": [
+        "Inspect visible deterioration, gaps, loose sections or failed junctions",
+        "Replace compatible cladding boards or panels within an agreed scope",
+        "Detail corners, openings and flashings as part of an exterior envelope job"
+      ],
+      "customerInfo": [
+        "Building type, wall elevation and approximate affected area",
+        "Photos of the cladding profile, damage and nearby roof or window junctions",
+        "Known material type, age and access constraints"
+      ],
+      "safetyNote": "Some older cladding may contain hazardous materials, while height and weatherproofing work require specialist controls; do not disturb suspect products.",
+      "nextStep": "Upload elevation and close-up photos so Ellis can route the cladding enquiry appropriately.",
+      "majorAliases": [],
+      "aliases": [
+        "cladding"
+      ],
+      "searchTerms": [
+        "cladding"
+      ],
+      "url": "services/roofing-gutters-exterior/cladding/"
+    },
+    {
+      "key": "electricians",
+      "title": "Electricians",
+      "slug": "electricians",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "rawLabels": [
+        "Electricians"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Electrical, plumbing, gas & air conditioning",
+      "summary": "Electrical services cover faults, fittings, power points, lighting, switchboards and electrical work associated with renovations or appliances.",
+      "commonTasks": [
+        "Diagnose tripping circuits, loss of power or faulty fittings",
+        "Install or replace lights, switches, power points and hard-wired equipment",
+        "Assess switchboards, safety switches and renovation electrical requirements"
+      ],
+      "customerInfo": [
+        "What stopped working, when it began and whether circuits are tripping",
+        "Photos of the fitting, switchboard labels or equipment model where safe",
+        "Property age, access details and the rooms or circuits involved"
+      ],
+      "safetyNote": "Electrical work must be handled by an appropriately licensed electrician where required. Keep clear of exposed wires, heat, smoke, sparks or wet electrical equipment and use emergency services for immediate danger.",
+      "nextStep": "Tell Ellis the symptoms, affected circuit or fitting, and location to arrange an appropriate electrical assessment.",
+      "majorAliases": [
+        "electrician",
+        "sparky",
+        "power point",
+        "switchboard"
+      ],
+      "aliases": [
+        "electricians",
+        "electrician",
+        "sparky",
+        "power point",
+        "switchboard"
+      ],
+      "searchTerms": [
+        "electricians",
+        "electrician",
+        "sparky",
+        "power point",
+        "switchboard"
+      ],
+      "url": "services/electrical-plumbing-gas-air-conditioning/electricians/"
+    },
+    {
+      "key": "floor-sanding",
+      "title": "Floor Sanding",
+      "slug": "floor-sanding",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Floor Sanding"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Floor sanding can restore suitable timber floors by removing worn coatings, smoothing boards and preparing the surface for a chosen finish.",
+      "commonTasks": [
+        "Assess timber condition, coating build-up and board movement",
+        "Sand accessible timber floors and edges to an agreed level",
+        "Apply a compatible coating system after colour and sheen selection"
+      ],
+      "customerInfo": [
+        "Room dimensions and clear photos in natural light",
+        "Timber type and existing coating if known",
+        "Stains, protruding nails, loose boards, furniture and access constraints"
+      ],
+      "safetyNote": "Old coatings, dust and unknown floor materials can require special controls; occupied areas need isolation and adequate ventilation during the work.",
+      "nextStep": "Share room sizes, timber photos and finish preferences for a floor-sanding scope.",
+      "majorAliases": [],
+      "aliases": [
+        "floor sanding"
+      ],
+      "searchTerms": [
+        "floor sanding"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/floor-sanding/"
+    },
+    {
+      "key": "fly-screens",
+      "title": "Fly Screens & Repairs",
+      "slug": "fly-screens",
+      "category": "doors-windows-glass-screens",
+      "rawLabels": [
+        "Fly Screens",
+        "Flyscreen Repair"
+      ],
+      "sourceSections": [
+        "Interior",
+        "Exterior"
+      ],
+      "categoryTitle": "Doors, windows, glass & screens",
+      "summary": "Fly-screen services cover new mesh screens, remeshing, frame repairs and adjustments to fixed, sliding or hinged screen units.",
+      "commonTasks": [
+        "Remesh torn or brittle insect screens",
+        "Repair or replace damaged frames, corners, rollers and handles",
+        "Measure and fit screens for compatible windows or doors"
+      ],
+      "customerInfo": [
+        "Opening dimensions and screen type",
+        "Photos of the full frame, track and damaged area",
+        "Preferred mesh type and whether pets or coastal exposure are considerations"
+      ],
+      "safetyNote": "Screens on upper levels or difficult external openings require safe access; security-screen work may have product-specific installation requirements.",
+      "nextStep": "Send frame measurements and photos of the opening so Ellis can scope the fly-screen solution.",
+      "majorAliases": [
+        "flyscreen",
+        "screen repair"
+      ],
+      "aliases": [
+        "fly screens",
+        "flyscreen repair",
+        "flyscreen",
+        "screen repair"
+      ],
+      "searchTerms": [
+        "fly screens & repairs",
+        "fly screens",
+        "flyscreen repair",
+        "flyscreen",
+        "screen repair"
+      ],
+      "url": "services/doors-windows-glass-screens/fly-screens/"
+    },
+    {
+      "key": "insulation",
+      "title": "Insulation",
+      "slug": "insulation",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "rawLabels": [
+        "Insulation"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Electrical, plumbing, gas & air conditioning",
+      "summary": "Insulation enquiries can cover roof, ceiling, wall or underfloor upgrades, missing sections and comfort or energy-performance concerns.",
+      "commonTasks": [
+        "Inspect accessible insulation coverage and condition",
+        "Install suitable bulk or reflective insulation to the agreed area",
+        "Address gaps around penetrations while maintaining required clearances"
+      ],
+      "customerInfo": [
+        "Area to be insulated and property construction type",
+        "Roof-space, underfloor or wall access details",
+        "Any moisture, pest, wiring or existing-insulation concerns"
+      ],
+      "safetyNote": "Roof spaces can contain heat, electrical, asbestos and access hazards. Electrical clearances and installation requirements should be handled by appropriately qualified providers.",
+      "nextStep": "Provide the property type, target area and access details for an insulation assessment.",
+      "majorAliases": [
+        "ceiling insulation",
+        "wall insulation"
+      ],
+      "aliases": [
+        "insulation",
+        "ceiling insulation",
+        "wall insulation"
+      ],
+      "searchTerms": [
+        "insulation",
+        "ceiling insulation",
+        "wall insulation"
+      ],
+      "url": "services/electrical-plumbing-gas-air-conditioning/insulation/"
+    },
+    {
+      "key": "new-carpet",
+      "title": "New Carpet",
+      "slug": "new-carpet",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "New Carpet"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "New-carpet services cover measuring, product selection support, removal planning and installation across bedrooms, living areas or managed properties.",
+      "commonTasks": [
+        "Measure rooms, stairs and transitions for carpet quantities",
+        "Prepare for underlay and carpet installation over suitable substrates",
+        "Install carpet, joins, edges and transition trims to the agreed layout"
+      ],
+      "customerInfo": [
+        "Floor plan or room measurements and photos",
+        "Preferred fibre, colour, pile and use requirements",
+        "Existing flooring, furniture, access and disposal needs"
+      ],
+      "safetyNote": "Subfloor moisture, damaged substrates or suspect legacy materials must be assessed before removal or installation proceeds.",
+      "nextStep": "Share room dimensions, use requirements and flooring photos to start a carpet-installation scope.",
+      "majorAliases": [],
+      "aliases": [
+        "new carpet"
+      ],
+      "searchTerms": [
+        "new carpet"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/new-carpet/"
+    },
+    {
+      "key": "plasterers",
+      "title": "Plasterers",
+      "slug": "plasterers",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Plasterers"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Plastering covers wall and ceiling repairs, new linings, joints, cornices and surfaces that need preparation before decorating.",
+      "commonTasks": [
+        "Patch holes, impact damage and localised ceiling defects",
+        "Install plasterboard and finish joints for scoped alterations",
+        "Repair or replace cornice and prepare surfaces for painting"
+      ],
+      "customerInfo": [
+        "Photos with an object for scale and the affected dimensions",
+        "Whether damage is on a wall, ceiling, wet area or external surface",
+        "Any leak, movement, cracking or previous repair history"
+      ],
+      "safetyNote": "Active leaks, structural movement and suspect asbestos-containing materials must be resolved or assessed before plaster is disturbed.",
+      "nextStep": "Send clear photos and explain what caused the damage so Ellis can match the plastering scope.",
+      "majorAliases": [],
+      "aliases": [
+        "plasterers"
+      ],
+      "searchTerms": [
+        "plasterers"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/plasterers/"
+    },
+    {
+      "key": "plumbers",
+      "title": "Plumbers",
+      "slug": "plumbers",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "rawLabels": [
+        "Plumbers"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Electrical, plumbing, gas & air conditioning",
+      "summary": "Plumbing services can address leaks, blocked fixtures, taps, toilets, pipework and water connections associated with repairs or upgrades.",
+      "commonTasks": [
+        "Locate and repair leaking accessible pipework or fixtures",
+        "Clear suitable blocked sinks, toilets or drains after assessment",
+        "Install or replace taps, toilets and plumbing-connected fixtures"
+      ],
+      "customerInfo": [
+        "Where the problem appears and which fixtures are affected",
+        "When it started, whether water can be isolated and any visible damage",
+        "Photos, fixture details and access to meters, valves or drains"
+      ],
+      "safetyNote": "Plumbing work may require an appropriately licensed provider. For uncontrolled water, isolate the supply only if safe and keep clear of electrical equipment or contaminated overflow.",
+      "nextStep": "Describe the affected fixture, symptoms and suburb so Ellis can arrange the suitable plumbing pathway.",
+      "majorAliases": [
+        "plumber",
+        "blocked drain",
+        "leaking tap",
+        "hot water"
+      ],
+      "aliases": [
+        "plumbers",
+        "plumber",
+        "blocked drain",
+        "leaking tap",
+        "hot water"
+      ],
+      "searchTerms": [
+        "plumbers",
+        "plumber",
+        "blocked drain",
+        "leaking tap",
+        "hot water"
+      ],
+      "url": "services/electrical-plumbing-gas-air-conditioning/plumbers/"
+    },
+    {
+      "key": "shower-screens",
+      "title": "Shower Screens",
+      "slug": "shower-screens",
+      "category": "doors-windows-glass-screens",
+      "rawLabels": [
+        "Shower Screens"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Doors, windows, glass & screens",
+      "summary": "Shower-screen work includes measuring, installation, adjustment and replacement of framed, semi-frameless or frameless enclosures.",
+      "commonTasks": [
+        "Measure the shower opening and check wall and floor conditions",
+        "Install a suitable screen, door and hardware system",
+        "Adjust hinges, rollers, seals and alignment on serviceable screens"
+      ],
+      "customerInfo": [
+        "Opening measurements and bathroom photos",
+        "Screen style, glass configuration and hardware finish preferences",
+        "Leaks, loose panels, cracked glass or wall-fixing concerns"
+      ],
+      "safetyNote": "Cracked or unstable toughened glass should not be handled. Glazing, drilling and wet-area penetrations require suitable methods and qualified providers where applicable.",
+      "nextStep": "Share full shower photos, approximate dimensions and the issue to scope the screen work.",
+      "majorAliases": [],
+      "aliases": [
+        "shower screens"
+      ],
+      "searchTerms": [
+        "shower screens"
+      ],
+      "url": "services/doors-windows-glass-screens/shower-screens/"
+    },
+    {
+      "key": "tiling",
+      "title": "Tiling",
+      "slug": "tiling",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Tiling"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Tiling enquiries can cover new wall or floor finishes, replacement of damaged tiles, regrouting and preparation of suitable substrates.",
+      "commonTasks": [
+        "Lay wall or floor tiles to an agreed pattern and finish",
+        "Replace localised cracked or loose tiles where a compatible match exists",
+        "Renew grout or sealant after checking the underlying condition"
+      ],
+      "customerInfo": [
+        "Area dimensions, tile size and layout preference",
+        "Photos of the substrate, damage, corners and penetrations",
+        "Whether tiles are supplied and any known waterproofing or movement issue"
+      ],
+      "safetyNote": "Loose tiles, persistent moisture or cracking may indicate substrate or waterproofing problems that need assessment before cosmetic work.",
+      "nextStep": "Provide dimensions, tile details and photos of the whole area for a tiling scope.",
+      "majorAliases": [
+        "tiler"
+      ],
+      "aliases": [
+        "tiling",
+        "tiler"
+      ],
+      "searchTerms": [
+        "tiling",
+        "tiler"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/tiling/"
+    },
+    {
+      "key": "waterproofing",
+      "title": "Waterproofing",
+      "slug": "waterproofing",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Waterproofing"
+      ],
+      "sourceSections": [
+        "Interior"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Waterproofing services address membranes and junction detailing in bathrooms, balconies and other wet areas as part of an appropriately prepared project.",
+      "commonTasks": [
+        "Assess the proposed wet area and substrate condition",
+        "Apply a compatible membrane system to the specified zones",
+        "Detail corners, penetrations, wastes and upturns before finishes are installed"
+      ],
+      "customerInfo": [
+        "Plans or dimensions and the wet-area location",
+        "Photos of the prepared substrate and all penetrations",
+        "Any leak history, existing finishes and downstream damage"
+      ],
+      "safetyNote": "Waterproofing may require licensed or otherwise qualified providers and must integrate with drainage, substrate and relevant building requirements; active leaks need proper diagnosis.",
+      "nextStep": "Send the wet-area layout, substrate photos and project stage so Ellis can arrange the right assessment.",
+      "majorAliases": [
+        "waterproofer"
+      ],
+      "aliases": [
+        "waterproofing",
+        "waterproofer"
+      ],
+      "searchTerms": [
+        "waterproofing",
+        "waterproofer"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/waterproofing/"
+    },
+    {
+      "key": "asbestos-removal",
+      "title": "Asbestos Removal",
+      "slug": "asbestos-removal",
+      "category": "cleaning-removals-pest-hazard",
+      "rawLabels": [
+        "Asbestos Removal"
+      ],
+      "sourceSections": [
+        "Exterior"
+      ],
+      "categoryTitle": "Cleaning, removals, pest & hazard",
+      "summary": "Asbestos-removal enquiries require controlled assessment and, where confirmed, compliant removal and disposal by providers authorised for the material and job type.",
+      "commonTasks": [
+        "Arrange identification or sampling through a competent asbestos professional",
+        "Prepare a removal scope with isolation, controls and clearance needs",
+        "Remove and dispose of confirmed asbestos-containing material through authorised channels"
+      ],
+      "customerInfo": [
+        "Material location, approximate area and current condition",
+        "Building age, renovation history and any existing laboratory report",
+        "Photos taken without touching the material, plus occupancy and access details"
+      ],
+      "safetyNote": "Do not cut, drill, sand, break, sweep or vacuum suspected asbestos. Keep people away from damaged material and use appropriately licensed removalists where required by the material, quantity and jurisdiction.",
+      "nextStep": "Leave suspect material undisturbed and contact Ellis with the location and any existing report for specialist routing.",
+      "majorAliases": [],
+      "aliases": [
+        "asbestos removal"
+      ],
+      "searchTerms": [
+        "asbestos removal"
+      ],
+      "url": "services/cleaning-removals-pest-hazard/asbestos-removal/"
+    },
+    {
+      "key": "concrete-resurfacing",
+      "title": "Concrete Resurfacing",
+      "slug": "concrete-resurfacing",
+      "category": "building-renovation-structural",
+      "rawLabels": [
+        "Concrete Resurfacing"
+      ],
+      "sourceSections": [
+        "Exterior"
+      ],
+      "categoryTitle": "Building, renovation & structural",
+      "summary": "Concrete resurfacing refreshes a sound slab or paved area with a compatible coating or overlay after condition and preparation checks.",
+      "commonTasks": [
+        "Assess cracking, contamination, moisture and existing coatings",
+        "Prepare the surface by suitable cleaning or mechanical methods",
+        "Apply a selected resurfacing system and finish to the agreed area"
+      ],
+      "customerInfo": [
+        "Area dimensions, use and desired appearance",
+        "Photos of cracks, stains, drainage and transitions",
+        "Existing coating details, vehicle loads and access timing"
+      ],
+      "safetyNote": "Moving slabs, major structural cracks, moisture or chemical contamination may rule out a cosmetic overlay until the cause is assessed.",
+      "nextStep": "Share area measurements and condition photos to determine whether resurfacing is suitable.",
+      "majorAliases": [],
+      "aliases": [
+        "concrete resurfacing"
+      ],
+      "searchTerms": [
+        "concrete resurfacing"
+      ],
+      "url": "services/building-renovation-structural/concrete-resurfacing/"
+    },
+    {
+      "key": "gutter-services",
+      "title": "Gutter Services",
+      "slug": "gutter-services",
+      "category": "roofing-gutters-exterior",
+      "rawLabels": [
+        "Gutter Cleaning",
+        "Gutter Installation",
+        "Gutter Repair"
+      ],
+      "sourceSections": [
+        "Exterior"
+      ],
+      "categoryTitle": "Roofing, gutters & exterior",
+      "summary": "Gutter services bring cleaning, repair and replacement under one pathway for gutters and downpipes that are blocked, leaking, rusted, loose or poorly draining.",
+      "commonTasks": [
+        "Remove accessible leaf build-up and check outlets for blockages",
+        "Repair leaking joins, loose brackets and localised damaged sections",
+        "Replace deteriorated gutters or downpipes and review falls and discharge points"
+      ],
+      "customerInfo": [
+        "Building height, roof type and safe access points",
+        "Photos of overflow locations, rust, sagging and downpipe connections",
+        "Whether the issue occurs in light rain, heavy rain or remains constant"
+      ],
+      "safetyNote": "Roof-edge work involves fall and electrical-clearance risks. Do not climb onto a wet or unsuitable roof; stormwater changes may also need to meet local requirements.",
+      "nextStep": "Send exterior photos and note where water overflows so Ellis can distinguish cleaning, repair or replacement needs.",
+      "majorAliases": [
+        "gutters",
+        "gutter cleaner",
+        "gutter installer",
+        "gutter repairer"
+      ],
+      "aliases": [
+        "gutter cleaning",
+        "gutter installation",
+        "gutter repair",
+        "gutters",
+        "gutter cleaner",
+        "gutter installer",
+        "gutter repairer"
+      ],
+      "searchTerms": [
+        "gutter services",
+        "gutter cleaning",
+        "gutter installation",
+        "gutter repair",
+        "gutters",
+        "gutter cleaner",
+        "gutter installer",
+        "gutter repairer"
+      ],
+      "url": "services/roofing-gutters-exterior/gutter-services/"
+    },
+    {
+      "key": "house-painters",
+      "title": "House Painters",
+      "slug": "house-painters",
+      "category": "roofing-gutters-exterior",
+      "rawLabels": [
+        "House Painters"
+      ],
+      "sourceSections": [
+        "Exterior"
+      ],
+      "categoryTitle": "Roofing, gutters & exterior",
+      "summary": "House painting can cover interior rooms, exterior surfaces, trims and repainting programs after preparation and coating compatibility are assessed.",
+      "commonTasks": [
+        "Prepare surfaces by cleaning, filling and sanding where suitable",
+        "Apply compatible primers and finish coats to agreed areas",
+        "Paint walls, ceilings, trims or exterior elements to the selected scheme"
+      ],
+      "customerInfo": [
+        "Rooms or elevations, dimensions and current surface condition",
+        "Colour, sheen and product preferences if selected",
+        "Access, furniture, peeling paint, moisture or previous coating concerns"
+      ],
+      "safetyNote": "Older coatings may contain lead, and height or deteriorated surfaces require appropriate testing and controls before preparation.",
+      "nextStep": "Provide photos, approximate areas and colour intentions for a painting scope.",
+      "majorAliases": [
+        "painter",
+        "painting",
+        "house painting"
+      ],
+      "aliases": [
+        "house painters",
+        "painter",
+        "painting",
+        "house painting"
+      ],
+      "searchTerms": [
+        "house painters",
+        "painter",
+        "painting",
+        "house painting"
+      ],
+      "url": "services/roofing-gutters-exterior/house-painters/"
+    },
+    {
+      "key": "door-installation",
+      "title": "Door Installation",
+      "slug": "door-installation",
+      "category": "doors-windows-glass-screens",
+      "rawLabels": [
+        "New Doors",
+        "Door Installers"
+      ],
+      "sourceSections": [
+        "Exterior",
+        "More"
+      ],
+      "categoryTitle": "Doors, windows, glass & screens",
+      "summary": "Door-installation services cover internal and external doors, frames, hinges, hardware and adjustments needed for a secure, smooth fit.",
+      "commonTasks": [
+        "Measure the opening and check frame condition and clearances",
+        "Fit a compatible hinged, sliding or cavity door system",
+        "Install or adjust hinges, handles, locks, closers and weather seals"
+      ],
+      "customerInfo": [
+        "Opening width, height, wall thickness and door location",
+        "Photos of the frame, threshold, swing area and existing hardware",
+        "Door type, material, fire or security requirements if known"
+      ],
+      "safetyNote": "Entry, fire-rated, security and glazed doors can have specific product, fixing and compliance requirements; lock work may need a suitable specialist.",
+      "nextStep": "Send opening measurements, frame photos and the preferred door type for accurate routing.",
+      "majorAliases": [
+        "doors",
+        "door installer"
+      ],
+      "aliases": [
+        "new doors",
+        "door installers",
+        "doors",
+        "door installer"
+      ],
+      "searchTerms": [
+        "door installation",
+        "new doors",
+        "door installers",
+        "doors",
+        "door installer"
+      ],
+      "url": "services/doors-windows-glass-screens/door-installation/"
+    },
+    {
+      "key": "pavers",
+      "title": "Pavers",
+      "slug": "pavers",
+      "category": "roofing-gutters-exterior",
+      "rawLabels": [
+        "Pavers"
+      ],
+      "sourceSections": [
+        "Exterior"
+      ],
+      "categoryTitle": "Roofing, gutters & exterior",
+      "summary": "Paving services cover new paths and outdoor areas, lifted or sunken sections, edging and repairs where the base and drainage are suitable.",
+      "commonTasks": [
+        "Prepare or repair the base for a stable paved surface",
+        "Lay pavers to the chosen pattern, level and edge restraint",
+        "Lift and relay localised uneven sections after investigating the cause"
+      ],
+      "customerInfo": [
+        "Area dimensions, intended use and paver preference",
+        "Photos showing levels, drainage points and adjoining surfaces",
+        "Access for materials, existing base and any tree-root or settlement issue"
+      ],
+      "safetyNote": "Uneven paving may reflect drainage, roots or ground movement; service locations should be checked before excavation.",
+      "nextStep": "Share measurements, level photos and intended use to scope the paving work.",
+      "majorAliases": [],
+      "aliases": [
+        "pavers"
+      ],
+      "searchTerms": [
+        "pavers"
+      ],
+      "url": "services/roofing-gutters-exterior/pavers/"
+    },
+    {
+      "key": "roofing",
+      "title": "Roofing & Roof Repairs",
+      "slug": "roofing",
+      "category": "roofing-gutters-exterior",
+      "rawLabels": [
+        "Roof Repairs",
+        "Roofing"
+      ],
+      "sourceSections": [
+        "Exterior"
+      ],
+      "categoryTitle": "Roofing, gutters & exterior",
+      "summary": "Roofing enquiries include leak investigation, damaged tiles or sheets, flashings, roof penetrations and larger repair or replacement scopes.",
+      "commonTasks": [
+        "Inspect accessible roof coverings, ridges, flashings and penetrations",
+        "Repair or replace damaged tiles, sheets or localised components",
+        "Trace likely water-entry paths and address agreed roof defects"
+      ],
+      "customerInfo": [
+        "Roof material, building height and approximate age",
+        "Photos from ground level and where internal staining appears",
+        "When leaks occur, previous repairs and safe access information"
+      ],
+      "safetyNote": "Roof access carries fall, fragile-surface and electrical risks. Do not climb during wet or windy conditions; significant storm damage or live electrical hazards require an urgent specialist response.",
+      "nextStep": "Provide roof type, leak timing and safe-to-take photos so Ellis can route the roofing assessment.",
+      "majorAliases": [
+        "roofer",
+        "roof repair",
+        "roof leak"
+      ],
+      "aliases": [
+        "roof repairs",
+        "roofing",
+        "roofer",
+        "roof repair",
+        "roof leak"
+      ],
+      "searchTerms": [
+        "roofing & roof repairs",
+        "roof repairs",
+        "roofing",
+        "roofer",
+        "roof repair",
+        "roof leak"
+      ],
+      "url": "services/roofing-gutters-exterior/roofing/"
+    },
+    {
+      "key": "skylights",
+      "title": "Skylights",
+      "slug": "skylights",
+      "category": "doors-windows-glass-screens",
+      "rawLabels": [
+        "Skylights"
+      ],
+      "sourceSections": [
+        "Exterior"
+      ],
+      "categoryTitle": "Doors, windows, glass & screens",
+      "summary": "Skylight services can cover new units, replacements, leaking junctions and ventilation or light improvements in suitable roof locations.",
+      "commonTasks": [
+        "Assess roof type, ceiling layout and proposed skylight position",
+        "Install or replace compatible skylight and flashing components",
+        "Investigate leaks, condensation or failed seals around an existing unit"
+      ],
+      "customerInfo": [
+        "Roof and ceiling photos, room location and roof material",
+        "Existing unit brand, dimensions and opening style if available",
+        "Leak timing, access conditions and desired light or ventilation outcome"
+      ],
+      "safetyNote": "Roof penetrations involve fall and weatherproofing risks; electrical blinds or nearby wiring may require an appropriately licensed electrician.",
+      "nextStep": "Send room and roof photos with the skylight dimensions or desired location for assessment.",
+      "majorAliases": [],
+      "aliases": [
+        "skylights"
+      ],
+      "searchTerms": [
+        "skylights"
+      ],
+      "url": "services/doors-windows-glass-screens/skylights/"
+    },
+    {
+      "key": "verandah-builders",
+      "title": "Verandah Builders",
+      "slug": "verandah-builders",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Verandah Builders"
+      ],
+      "sourceSections": [
+        "Exterior"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Verandah projects can range from replacing components to planning a new covered outdoor area connected to a home.",
+      "commonTasks": [
+        "Develop the footprint, roof form and connection details for a verandah",
+        "Construct framing, roofing, posts and selected finishes to an approved scope",
+        "Repair deteriorated boards, roof sheets or structural elements after assessment"
+      ],
+      "customerInfo": [
+        "Site dimensions, photos and preferred footprint",
+        "House construction, roof relationship and drainage considerations",
+        "Desired materials, use and any plans or approvals already held"
+      ],
+      "safetyNote": "Structural connections, footings, permits, boundaries and stormwater can require design, approval and appropriately qualified providers.",
+      "nextStep": "Share the site layout, proposed size and any existing documents to begin a verandah assessment.",
+      "majorAliases": [],
+      "aliases": [
+        "verandah builders"
+      ],
+      "searchTerms": [
+        "verandah builders"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/verandah-builders/"
+    },
+    {
+      "key": "window-installation",
+      "title": "Window Installation",
+      "slug": "window-installation",
+      "category": "doors-windows-glass-screens",
+      "rawLabels": [
+        "Window Installation"
+      ],
+      "sourceSections": [
+        "Exterior"
+      ],
+      "categoryTitle": "Doors, windows, glass & screens",
+      "summary": "Window installation covers measuring and fitting replacement or new window units while addressing openings, flashings, seals and finishes.",
+      "commonTasks": [
+        "Measure the structural opening and select a compatible window configuration",
+        "Remove and replace an existing unit within an agreed scope",
+        "Install flashings, seals and trims appropriate to the wall system"
+      ],
+      "customerInfo": [
+        "Opening measurements, wall construction and storey level",
+        "Photos inside and outside, including sills and surrounding finishes",
+        "Frame material, glazing, opening style and performance preferences"
+      ],
+      "safetyNote": "Glazing, upper-storey access and changes to structural openings require specialist controls; energy, bushfire or heritage requirements may affect product selection.",
+      "nextStep": "Provide inside and outside photos plus approximate opening sizes for a window-installation pathway.",
+      "majorAliases": [],
+      "aliases": [
+        "window installation"
+      ],
+      "searchTerms": [
+        "window installation"
+      ],
+      "url": "services/doors-windows-glass-screens/window-installation/"
+    },
+    {
+      "key": "window-repairs",
+      "title": "Window Repairs",
+      "slug": "window-repairs",
+      "category": "doors-windows-glass-screens",
+      "rawLabels": [
+        "Window Repairs"
+      ],
+      "sourceSections": [
+        "Exterior"
+      ],
+      "categoryTitle": "Doors, windows, glass & screens",
+      "summary": "Window repair addresses sticking sashes, failed rollers, damaged hardware, draughts, seals and localised frame defects where the unit remains serviceable.",
+      "commonTasks": [
+        "Adjust or repair hinges, stays, rollers, locks and balances",
+        "Replace suitable seals, catches or other worn window hardware",
+        "Repair localised frame or sill damage after identifying moisture sources"
+      ],
+      "customerInfo": [
+        "Window style, material and approximate age",
+        "Photos of the full window, hardware and damaged area",
+        "How operation has changed and whether water entry is present"
+      ],
+      "safetyNote": "Cracked glass and upper-level external work should not be handled without suitable glazing and access controls; frame rot may indicate a wider moisture issue.",
+      "nextStep": "Send photos of the window open and closed, plus the operating problem, for repair triage.",
+      "majorAliases": [],
+      "aliases": [
+        "window repairs"
+      ],
+      "searchTerms": [
+        "window repairs"
+      ],
+      "url": "services/doors-windows-glass-screens/window-repairs/"
+    },
+    {
+      "key": "deck-builders",
+      "title": "Deck Builders",
+      "slug": "deck-builders",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Deck Builders"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Deck services can include new timber or composite platforms, board replacement, stairs, balustrades and refurbishment of an existing deck.",
+      "commonTasks": [
+        "Plan deck dimensions, levels, materials and connection points",
+        "Build framing, decking, stairs and edge details to an agreed scope",
+        "Replace deteriorated boards or components after checking the supporting structure"
+      ],
+      "customerInfo": [
+        "Site measurements, height above ground and intended use",
+        "Photos of access, ground conditions and the house connection",
+        "Material preference and any existing drawings or approvals"
+      ],
+      "safetyNote": "Elevated decks, balustrades, footings and structural connections may require approvals, engineering and appropriately qualified builders.",
+      "nextStep": "Share the proposed size, height and site photos so Ellis can identify the deck project pathway.",
+      "majorAliases": [],
+      "aliases": [
+        "deck builders"
+      ],
+      "searchTerms": [
+        "deck builders"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/deck-builders/"
+    },
+    {
+      "key": "fence-builders",
+      "title": "Fence Builders",
+      "slug": "fence-builders",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Fence Builders"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Fence-building enquiries cover new boundary or internal fences, replacement runs, gates and common materials such as timber, metal or composite systems.",
+      "commonTasks": [
+        "Measure the fence line and confirm levels and access",
+        "Install posts, rails, panels and gates to the selected system",
+        "Replace a failed fence run after reviewing footings and ground conditions"
+      ],
+      "customerInfo": [
+        "Fence length, height, material and gate requirements",
+        "Photos of boundaries, slopes, retaining walls and access",
+        "Any neighbour agreement, survey information or existing fence issues"
+      ],
+      "safetyNote": "Boundary position, pool proximity, retaining loads, underground services and local rules may affect the work; do not assume an existing fence marks the legal boundary.",
+      "nextStep": "Send fence-line photos, dimensions and material preference to scope a new or replacement fence.",
+      "majorAliases": [],
+      "aliases": [
+        "fence builders"
+      ],
+      "searchTerms": [
+        "fence builders"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/fence-builders/"
+    },
+    {
+      "key": "fencing-contractors",
+      "title": "Fencing Contractors",
+      "slug": "fencing-contractors",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Fencing Contractors"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Fencing contractors can coordinate larger, mixed-material or site-specific fencing packages for homes, strata and managed properties.",
+      "commonTasks": [
+        "Assess a multi-section fence layout and performance needs",
+        "Deliver replacement, security or screening fencing to a defined specification",
+        "Coordinate gates, access points and interfaces with walls or landscaping"
+      ],
+      "customerInfo": [
+        "Site plan, total lengths, heights and fence purpose",
+        "Material or performance specification and gate schedule",
+        "Boundary, access, ground condition and staging information"
+      ],
+      "safetyNote": "Projects near boundaries, pools, retaining walls or services may require surveys, approvals and specialist design.",
+      "nextStep": "Provide the fence schedule or marked-up site plan so Ellis can route the contractor enquiry.",
+      "majorAliases": [
+        "fence contractor"
+      ],
+      "aliases": [
+        "fencing contractors",
+        "fence contractor"
+      ],
+      "searchTerms": [
+        "fencing contractors",
+        "fence contractor"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/fencing-contractors/"
+    },
+    {
+      "key": "garden-clean-up",
+      "title": "Garden Clean Up",
+      "slug": "garden-clean-up",
+      "category": "gardens-landscaping",
+      "rawLabels": [
+        "Garden Clean Up"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Gardens & landscaping",
+      "summary": "Garden clean-up helps restore overgrown or untidy outdoor areas through a defined mix of cutting back, clearing and green-waste handling.",
+      "commonTasks": [
+        "Cut back manageable overgrowth and remove spent plant material",
+        "Weed and tidy garden beds, paths and accessible edges",
+        "Collect and coordinate disposal of agreed green waste"
+      ],
+      "customerInfo": [
+        "Property size and photos of each work zone",
+        "Vegetation height, waste volume and access width",
+        "Known sharp waste, pests, unstable branches or restricted areas"
+      ],
+      "safetyNote": "Large trees, overhead services, hazardous waste and potentially asbestos-containing debris need specialist assessment rather than routine clean-up.",
+      "nextStep": "Send zone photos and access details so Ellis can estimate the clean-up scope and waste needs.",
+      "majorAliases": [],
+      "aliases": [
+        "garden clean up"
+      ],
+      "searchTerms": [
+        "garden clean up"
+      ],
+      "url": "services/gardens-landscaping/garden-clean-up/"
+    },
+    {
+      "key": "garden-landscapers",
+      "title": "Garden Landscapers",
+      "slug": "garden-landscapers",
+      "category": "gardens-landscaping",
+      "rawLabels": [
+        "Garden Landscapers"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Gardens & landscaping",
+      "summary": "Garden landscaping covers planned changes to planting, beds, edging and outdoor layout rather than routine mowing alone.",
+      "commonTasks": [
+        "Develop a practical planting and soft-landscape layout",
+        "Prepare beds, improve soil and install selected plants or mulch",
+        "Add garden edging and coordinate compatible minor landscape elements"
+      ],
+      "customerInfo": [
+        "Site dimensions, sun, soil and drainage observations",
+        "Photos and the preferred style or maintenance level",
+        "Plants or materials to retain, access and water availability"
+      ],
+      "safetyNote": "Excavation should account for underground services, drainage and retaining needs; significant structures or level changes may require specialist design.",
+      "nextStep": "Share site photos, dimensions and the desired garden character for a landscaping assessment.",
+      "majorAliases": [
+        "landscaper",
+        "landscaping"
+      ],
+      "aliases": [
+        "garden landscapers",
+        "landscaper",
+        "landscaping"
+      ],
+      "searchTerms": [
+        "garden landscapers",
+        "landscaper",
+        "landscaping"
+      ],
+      "url": "services/gardens-landscaping/garden-landscapers/"
+    },
+    {
+      "key": "gardeners",
+      "title": "Gardeners",
+      "slug": "gardeners",
+      "category": "gardens-landscaping",
+      "rawLabels": [
+        "Gardeners"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Gardens & landscaping",
+      "summary": "Gardening services support recurring or one-off care of established lawns, garden beds, shrubs and small plants.",
+      "commonTasks": [
+        "Weed, prune and maintain garden beds within a defined visit",
+        "Shape manageable shrubs and remove spent growth",
+        "Refresh mulch and complete seasonal planting or general garden care"
+      ],
+      "customerInfo": [
+        "Garden size, photos and desired visit frequency",
+        "Priority plants or zones and the current maintenance issue",
+        "Green-waste expectations, pets, gates and water access"
+      ],
+      "safetyNote": "Tall trees, powerline clearance, chemicals and heavy or unstable branches require suitable specialist controls.",
+      "nextStep": "Describe the garden zones, priorities and preferred frequency so Ellis can match the maintenance request.",
+      "majorAliases": [
+        "gardener",
+        "gardening"
+      ],
+      "aliases": [
+        "gardeners",
+        "gardener",
+        "gardening"
+      ],
+      "searchTerms": [
+        "gardeners",
+        "gardener",
+        "gardening"
+      ],
+      "url": "services/gardens-landscaping/gardeners/"
+    },
+    {
+      "key": "lawn-mowing",
+      "title": "Lawn Mowing",
+      "slug": "lawn-mowing",
+      "category": "gardens-landscaping",
+      "rawLabels": [
+        "Lawn Mowing"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Gardens & landscaping",
+      "summary": "Lawn mowing covers routine cutting, edging and presentation of accessible residential or managed-property lawn areas.",
+      "commonTasks": [
+        "Mow lawns to an appropriate height for the turf and season",
+        "Edge paths, garden borders and accessible fixed features",
+        "Collect or mulch clippings according to the agreed service"
+      ],
+      "customerInfo": [
+        "Approximate lawn area, slope and current grass height",
+        "Photos of front, rear and side access",
+        "Preferred frequency, green-bin access and any obstacles"
+      ],
+      "safetyNote": "Hidden debris, steep slopes, pets and irrigation components should be identified before powered equipment is used.",
+      "nextStep": "Send lawn photos, approximate size and access width to arrange a mowing scope.",
+      "majorAliases": [
+        "lawn",
+        "mowing",
+        "lawn care"
+      ],
+      "aliases": [
+        "lawn mowing",
+        "lawn",
+        "mowing",
+        "lawn care"
+      ],
+      "searchTerms": [
+        "lawn mowing",
+        "lawn",
+        "mowing",
+        "lawn care"
+      ],
+      "url": "services/gardens-landscaping/lawn-mowing/"
+    },
+    {
+      "key": "patio-builders",
+      "title": "Patio Builders",
+      "slug": "patio-builders",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Patio Builders"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Patio-building services address paved or decked outdoor living areas, including layout, base preparation, drainage and selected finishes.",
+      "commonTasks": [
+        "Set out a patio footprint that works with doors, levels and drainage",
+        "Prepare a suitable base and install the selected surface system",
+        "Coordinate edges, steps and transitions with adjoining landscape elements"
+      ],
+      "customerInfo": [
+        "Dimensions, current surface and intended furniture or use",
+        "Photos of levels, drainage, door thresholds and access",
+        "Preferred paving, concrete or decking finish and any existing plans"
+      ],
+      "safetyNote": "Excavation, drainage, structural covers and work near boundaries may need approvals or specialist input.",
+      "nextStep": "Share the proposed footprint, levels and material preference for a patio project assessment.",
+      "majorAliases": [],
+      "aliases": [
+        "patio builders"
+      ],
+      "searchTerms": [
+        "patio builders"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/patio-builders/"
+    },
+    {
+      "key": "pergola-builders",
+      "title": "Pergola Builders",
+      "slug": "pergola-builders",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Pergola Builders"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Pergola enquiries cover freestanding or attached shade structures, from open battens to roofed designs where permitted.",
+      "commonTasks": [
+        "Plan dimensions, post positions and the desired shade or roof form",
+        "Construct the approved frame, connections and selected covering",
+        "Repair scoped deterioration after the structure is assessed"
+      ],
+      "customerInfo": [
+        "Site measurements and photos of the proposed location",
+        "Whether the structure is attached, freestanding, open or roofed",
+        "Material preference, drainage needs and existing approvals"
+      ],
+      "safetyNote": "Footings, structural connections, wind exposure, boundaries and roofing can trigger engineering or approval requirements.",
+      "nextStep": "Provide site dimensions and the preferred pergola form so Ellis can determine the right design and build pathway.",
+      "majorAliases": [],
+      "aliases": [
+        "pergola builders"
+      ],
+      "searchTerms": [
+        "pergola builders"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/pergola-builders/"
+    },
+    {
+      "key": "pool-fence-installers",
+      "title": "Pool Fence Installers",
+      "slug": "pool-fence-installers",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Pool Fence Installers"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Pool-fence services focus on compliant barrier layouts, gates and repairs intended to maintain safe separation around a pool area.",
+      "commonTasks": [
+        "Measure and install a suitable pool-barrier system",
+        "Fit self-closing, self-latching gates and compatible hardware",
+        "Repair panels, posts or gates after assessing the complete barrier"
+      ],
+      "customerInfo": [
+        "Pool-area photos and a sketch of the full barrier line",
+        "Measurements, ground levels and gate locations",
+        "Existing compliance information and nearby climbable features"
+      ],
+      "safetyNote": "Pool barriers are safety-critical and must satisfy the requirements applying to the property and jurisdiction; keep the pool area secured while any defect remains.",
+      "nextStep": "Send full-perimeter photos, dimensions and gate details for a pool-fence assessment.",
+      "majorAliases": [],
+      "aliases": [
+        "pool fence installers"
+      ],
+      "searchTerms": [
+        "pool fence installers"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/pool-fence-installers/"
+    },
+    {
+      "key": "pool-resurfacing",
+      "title": "Pool Resurfacing",
+      "slug": "pool-resurfacing",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Pool Resurfacing"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Pool resurfacing renews a deteriorated interior finish after the shell, leaks, equipment interfaces and chosen coating system are assessed.",
+      "commonTasks": [
+        "Inspect the pool surface for delamination, staining and cracking",
+        "Prepare the shell for a compatible render, pebble or coating system",
+        "Apply the selected finish and coordinate curing and refill requirements"
+      ],
+      "customerInfo": [
+        "Pool dimensions, construction type and approximate age",
+        "Photos of staining, cracks, loose areas and fittings",
+        "Water-loss history, previous coatings and access for equipment"
+      ],
+      "safetyNote": "Draining a pool can affect shell stability and must be planned by experienced providers; chemicals and confined work areas require controlled handling.",
+      "nextStep": "Share pool dimensions, finish photos and leak history to start a resurfacing assessment.",
+      "majorAliases": [],
+      "aliases": [
+        "pool resurfacing"
+      ],
+      "searchTerms": [
+        "pool resurfacing"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/pool-resurfacing/"
+    },
+    {
+      "key": "surveyors",
+      "title": "Surveyors",
+      "slug": "surveyors",
+      "category": "planning-inspection-compliance",
+      "rawLabels": [
+        "Surveyors"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Planning, inspection & compliance",
+      "summary": "Surveying services provide measured site and boundary information for property, design and construction decisions.",
+      "commonTasks": [
+        "Undertake a feature and level survey for design inputs",
+        "Locate or re-establish boundaries where the requested survey permits",
+        "Set out approved construction points or prepare relevant survey documentation"
+      ],
+      "customerInfo": [
+        "Property address, title details and purpose of the survey",
+        "Plans, previous surveys or design documents available",
+        "Required deliverable, project stage and site-access constraints"
+      ],
+      "safetyNote": "Boundary and cadastral work must be completed by appropriately registered or licensed surveyors where required; site hazards must be disclosed before attendance.",
+      "nextStep": "Provide the address, survey purpose and available plans so Ellis can route the request to the appropriate surveying discipline.",
+      "majorAliases": [],
+      "aliases": [
+        "surveyors"
+      ],
+      "searchTerms": [
+        "surveyors"
+      ],
+      "url": "services/planning-inspection-compliance/surveyors/"
+    },
+    {
+      "key": "synthetic-grass",
+      "title": "Synthetic Grass",
+      "slug": "synthetic-grass",
+      "category": "gardens-landscaping",
+      "rawLabels": [
+        "Synthetic Grass"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Gardens & landscaping",
+      "summary": "Synthetic-grass services cover preparation and installation for lawns, courtyards, play spaces or other suitable outdoor areas.",
+      "commonTasks": [
+        "Excavate and prepare a stable, free-draining base",
+        "Cut, join and secure the chosen synthetic turf system",
+        "Detail edges, penetrations and infill for the intended use"
+      ],
+      "customerInfo": [
+        "Area dimensions, shape and intended use",
+        "Photos of current surface, drainage and access",
+        "Preferred pile, colour and pet or heat considerations"
+      ],
+      "safetyNote": "Poor drainage, heat exposure and unknown underground services should be resolved in the design before excavation and installation.",
+      "nextStep": "Send dimensions, site photos and intended use for a synthetic-grass installation scope.",
+      "majorAliases": [],
+      "aliases": [
+        "synthetic grass"
+      ],
+      "searchTerms": [
+        "synthetic grass"
+      ],
+      "url": "services/gardens-landscaping/synthetic-grass/"
+    },
+    {
+      "key": "timber-fencing",
+      "title": "Timber Fencing",
+      "slug": "timber-fencing",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Timber Fencing"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Timber fencing services cover paling, picket and screening fences, including new runs, damaged sections and gates.",
+      "commonTasks": [
+        "Install posts, rails and timber boards to the agreed fence style",
+        "Replace rotted or storm-damaged sections after checking the support",
+        "Build or adjust compatible timber gates and screening panels"
+      ],
+      "customerInfo": [
+        "Fence length, height, style and timber preference",
+        "Photos of posts, slopes, access and adjoining structures",
+        "Boundary information and whether removal of an old fence is needed"
+      ],
+      "safetyNote": "Boundaries, underground services, treated-timber handling and any retaining function need to be considered before digging or replacement.",
+      "nextStep": "Share fence-line photos and measurements to scope the timber materials and site work.",
+      "majorAliases": [],
+      "aliases": [
+        "timber fencing"
+      ],
+      "searchTerms": [
+        "timber fencing"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/timber-fencing/"
+    },
+    {
+      "key": "tree-arborists",
+      "title": "Tree Arborists",
+      "slug": "tree-arborists",
+      "category": "gardens-landscaping",
+      "rawLabels": [
+        "Tree Arborists"
+      ],
+      "sourceSections": [
+        "Outdoor"
+      ],
+      "categoryTitle": "Gardens & landscaping",
+      "summary": "Arborist services address tree health, risk, pruning and removal decisions where tree size, condition or location needs specialist knowledge.",
+      "commonTasks": [
+        "Assess tree health, defects and risks to people or property",
+        "Prune trees using species-appropriate and structurally sound methods",
+        "Plan tree removal, stump handling or clearance where assessment supports it"
+      ],
+      "customerInfo": [
+        "Photos of the entire tree, trunk base, canopy and nearby targets",
+        "Approximate height, species if known and recent changes or damage",
+        "Access for equipment, overhead services and any council information"
+      ],
+      "safetyNote": "Do not climb, cut or work beneath unstable branches. Large trees, chainsaws, rigging, powerlines and protected vegetation require qualified arborists, controlled exclusion zones and any necessary approvals.",
+      "nextStep": "Keep clear of suspect limbs and send whole-tree photos, location and concerns for arborist triage.",
+      "majorAliases": [
+        "arborist",
+        "tree pruning"
+      ],
+      "aliases": [
+        "tree arborists",
+        "arborist",
+        "tree pruning"
+      ],
+      "searchTerms": [
+        "tree arborists",
+        "arborist",
+        "tree pruning"
+      ],
+      "url": "services/gardens-landscaping/tree-arborists/"
+    },
+    {
+      "key": "bathroom",
+      "title": "Bathroom",
+      "slug": "bathroom",
+      "category": "building-renovation-structural",
+      "rawLabels": [
+        "Bathroom"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Building, renovation & structural",
+      "summary": "Bathroom projects may combine layout changes, fixtures, tiling, waterproofing, cabinetry and coordinated licensed trades.",
+      "commonTasks": [
+        "Develop a scope for a full renovation or targeted bathroom upgrade",
+        "Coordinate demolition, substrate preparation, waterproofing and finishes",
+        "Install selected fixtures, cabinetry and accessories through suitable trades"
+      ],
+      "customerInfo": [
+        "Room dimensions, photos and the desired layout",
+        "Fixture selections, budget priorities and current plumbing locations",
+        "Leak history, ventilation, access and any drawings or approvals"
+      ],
+      "safetyNote": "Electrical, plumbing and waterproofing components may require appropriately licensed or qualified providers; active leaks and suspect materials need assessment before demolition.",
+      "nextStep": "Share room measurements, inspiration and must-keep items so Ellis can shape the bathroom project scope.",
+      "majorAliases": [
+        "bathroom renovation",
+        "bathroom remodel"
+      ],
+      "aliases": [
+        "bathroom",
+        "bathroom renovation",
+        "bathroom remodel"
+      ],
+      "searchTerms": [
+        "bathroom",
+        "bathroom renovation",
+        "bathroom remodel"
+      ],
+      "url": "services/building-renovation-structural/bathroom/"
+    },
+    {
+      "key": "bricklayers",
+      "title": "Bricklayers",
+      "slug": "bricklayers",
+      "category": "building-renovation-structural",
+      "rawLabels": [
+        "Bricklayers"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Building, renovation & structural",
+      "summary": "Bricklaying services cover new walls, localised rebuilding, damaged masonry and matching work around homes and outdoor areas.",
+      "commonTasks": [
+        "Build scoped brick or block walls and piers",
+        "Rebuild loose, cracked or weather-damaged masonry sections",
+        "Match brick bond, joint profile and mortar colour where practical"
+      ],
+      "customerInfo": [
+        "Wall dimensions, purpose and photos from both sides",
+        "Brick type or matching stock, if available",
+        "Crack history, footings, drainage and nearby openings"
+      ],
+      "safetyNote": "Cracking, leaning walls and load-bearing masonry may need structural assessment; excavation and boundary work can require approvals and service checks.",
+      "nextStep": "Send wall photos, dimensions and crack history for a brickwork assessment.",
+      "majorAliases": [],
+      "aliases": [
+        "bricklayers"
+      ],
+      "searchTerms": [
+        "bricklayers"
+      ],
+      "url": "services/building-renovation-structural/bricklayers/"
+    },
+    {
+      "key": "builders",
+      "title": "Builders & Renovation Builders",
+      "slug": "builders",
+      "category": "building-renovation-structural",
+      "rawLabels": [
+        "Builders",
+        "Renovation Builders"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Building, renovation & structural",
+      "summary": "Building and renovation services coordinate multi-trade projects, additions and substantial alterations from defined scope through delivery.",
+      "commonTasks": [
+        "Develop a detailed build scope from plans or an initial brief",
+        "Coordinate sequencing across structural work, services and finishes",
+        "Deliver approved renovation or addition works with required project controls"
+      ],
+      "customerInfo": [
+        "Property address, project goals and target rooms or footprint",
+        "Plans, engineering, approvals and selections already available",
+        "Occupancy, access, staging and major constraints"
+      ],
+      "safetyNote": "Building work may require licensed builders, permits, engineering and regulated trade certificates depending on scope and jurisdiction.",
+      "nextStep": "Provide the project brief and available drawings so Ellis can identify the next design, approval or construction step.",
+      "majorAliases": [
+        "builder",
+        "renovation builder"
+      ],
+      "aliases": [
+        "builders",
+        "renovation builders",
+        "builder",
+        "renovation builder"
+      ],
+      "searchTerms": [
+        "builders & renovation builders",
+        "builders",
+        "renovation builders",
+        "builder",
+        "renovation builder"
+      ],
+      "url": "services/building-renovation-structural/builders/"
+    },
+    {
+      "key": "building-certifiers",
+      "title": "Building Certifiers",
+      "slug": "building-certifiers",
+      "category": "planning-inspection-compliance",
+      "rawLabels": [
+        "Building Certifiers"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Planning, inspection & compliance",
+      "summary": "Building-certification enquiries concern statutory assessment, approvals and inspections associated with proposed or completed building work.",
+      "commonTasks": [
+        "Clarify the approval pathway and documentation required",
+        "Assess submitted plans against applicable building requirements",
+        "Undertake required stage inspections and issue relevant determinations or certificates"
+      ],
+      "customerInfo": [
+        "Property address, jurisdiction and description of works",
+        "Plans, specifications, engineering and existing approvals",
+        "Project stage and the specific certification question"
+      ],
+      "safetyNote": "Certification functions must be performed by appropriately registered or accredited practitioners and may require independence from design or construction roles.",
+      "nextStep": "Send the property details, project stage and document list so Ellis can route the certification enquiry correctly.",
+      "majorAliases": [],
+      "aliases": [
+        "building certifiers"
+      ],
+      "searchTerms": [
+        "building certifiers"
+      ],
+      "url": "services/planning-inspection-compliance/building-certifiers/"
+    },
+    {
+      "key": "building-inspectors",
+      "title": "Building Inspectors",
+      "slug": "building-inspectors",
+      "category": "planning-inspection-compliance",
+      "rawLabels": [
+        "Building Inspectors"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Planning, inspection & compliance",
+      "summary": "Building inspections provide an independent visual assessment of accessible property conditions for purchase, maintenance or construction-stage decisions.",
+      "commonTasks": [
+        "Inspect accessible interior, exterior, roof-space or subfloor areas as scoped",
+        "Document visible defects, maintenance concerns and limitations",
+        "Complete a pre-purchase, handover or targeted condition inspection"
+      ],
+      "customerInfo": [
+        "Property address, type, age and inspection purpose",
+        "Areas of concern and any seller, agent or builder access arrangements",
+        "Plans, previous reports and required report timing"
+      ],
+      "safetyNote": "An inspection is limited to the agreed scope and accessible conditions; specialist pest, structural, electrical or hazardous-material assessments may be recommended separately.",
+      "nextStep": "Provide the address, inspection purpose and access contact to define the appropriate inspection scope.",
+      "majorAliases": [],
+      "aliases": [
+        "building inspectors"
+      ],
+      "searchTerms": [
+        "building inspectors"
+      ],
+      "url": "services/planning-inspection-compliance/building-inspectors/"
+    },
+    {
+      "key": "carports-and-garages",
+      "title": "Carports & Garages",
+      "slug": "carports-and-garages",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Carports & Garages"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Carport and garage projects include freestanding or attached structures, enclosures, doors and repairs that need coordinated design and construction.",
+      "commonTasks": [
+        "Develop the footprint, access and structural form for a carport or garage",
+        "Construct approved footings, framing, roof and enclosure elements",
+        "Repair selected structural or exterior components after assessment"
+      ],
+      "customerInfo": [
+        "Site dimensions, vehicle needs and proposed location",
+        "Photos showing driveway, house connection, levels and boundaries",
+        "Plans, preferred materials and approvals already held"
+      ],
+      "safetyNote": "Setbacks, vehicle access, stormwater, footings and structural design may require permits, engineering and appropriately qualified builders.",
+      "nextStep": "Share the site plan, vehicle requirements and photos to start a carport or garage feasibility review.",
+      "majorAliases": [],
+      "aliases": [
+        "carports & garages"
+      ],
+      "searchTerms": [
+        "carports & garages"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/carports-and-garages/"
+    },
+    {
+      "key": "concreters",
+      "title": "Concreters",
+      "slug": "concreters",
+      "category": "building-renovation-structural",
+      "rawLabels": [
+        "Concreters"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Building, renovation & structural",
+      "summary": "Concreting services cover slabs, paths, driveways, footings and other formed concrete work designed for the intended load and site.",
+      "commonTasks": [
+        "Excavate, form and prepare reinforcement for an agreed concrete element",
+        "Place and finish concrete to the specified level, fall and texture",
+        "Saw-cut or detail joints and interfaces after placement"
+      ],
+      "customerInfo": [
+        "Dimensions, thickness or intended use and desired finish",
+        "Photos of access, levels, drainage and adjoining surfaces",
+        "Plans, reinforcement details and known underground services"
+      ],
+      "safetyNote": "Excavation, structural loads, drainage and underground services must be assessed; engineered slabs or footings require the relevant design and inspections.",
+      "nextStep": "Provide dimensions, intended loads and site-access photos for a concreting scope.",
+      "majorAliases": [
+        "concreter"
+      ],
+      "aliases": [
+        "concreters",
+        "concreter"
+      ],
+      "searchTerms": [
+        "concreters",
+        "concreter"
+      ],
+      "url": "services/building-renovation-structural/concreters/"
+    },
+    {
+      "key": "demolition",
+      "title": "Demolition",
+      "slug": "demolition",
+      "category": "building-renovation-structural",
+      "rawLabels": [
+        "Demolition"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Building, renovation & structural",
+      "summary": "Demolition services range from selective strip-out to removal of structures under a planned, controlled and appropriately approved scope.",
+      "commonTasks": [
+        "Survey the work zone and define elements to retain or remove",
+        "Complete controlled strip-out or structural demolition to the approved extent",
+        "Sort, remove and dispose of materials through suitable waste streams"
+      ],
+      "customerInfo": [
+        "Plans or photos marking the exact demolition area",
+        "Building age, services, occupancy and access conditions",
+        "Known asbestos reports, structural information and disposal constraints"
+      ],
+      "safetyNote": "Do not disturb suspect asbestos or unknown services. Structural demolition may require permits, engineering, service disconnections and appropriately licensed contractors.",
+      "nextStep": "Send marked-up photos, building age and any hazard reports so Ellis can arrange a demolition assessment.",
+      "majorAliases": [],
+      "aliases": [
+        "demolition"
+      ],
+      "searchTerms": [
+        "demolition"
+      ],
+      "url": "services/building-renovation-structural/demolition/"
+    },
+    {
+      "key": "draftsmen",
+      "title": "Draftsmen",
+      "slug": "draftsmen",
+      "category": "planning-inspection-compliance",
+      "rawLabels": [
+        "Draftsmen"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Planning, inspection & compliance",
+      "summary": "Drafting services turn a renovation, addition or new-build brief into measured drawings and documentation suitable for design coordination or approvals.",
+      "commonTasks": [
+        "Measure and document existing property conditions",
+        "Prepare concept, planning or construction drawings to the agreed stage",
+        "Coordinate drawing updates from consultant and client information"
+      ],
+      "customerInfo": [
+        "Property address, project brief and required drawing purpose",
+        "Existing plans, surveys, photos and consultant information",
+        "Council or certifier feedback and preferred project stage"
+      ],
+      "safetyNote": "Drafting does not replace engineering, surveying or statutory certification where those disciplines are required; practitioner registration requirements vary by work and location.",
+      "nextStep": "Provide the brief and existing documents so Ellis can identify the drawing package needed next.",
+      "majorAliases": [],
+      "aliases": [
+        "draftsmen"
+      ],
+      "searchTerms": [
+        "draftsmen"
+      ],
+      "url": "services/planning-inspection-compliance/draftsmen/"
+    },
+    {
+      "key": "home-renovators",
+      "title": "Home Renovators",
+      "slug": "home-renovators",
+      "category": "building-renovation-structural",
+      "rawLabels": [
+        "Home Renovators"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Building, renovation & structural",
+      "summary": "Home renovation services bring together alterations, repairs and finishes across one or more rooms under a coordinated project scope.",
+      "commonTasks": [
+        "Define priorities, inclusions and staging for the renovation",
+        "Coordinate demolition, building work, regulated trades and finishes",
+        "Manage interfaces between existing conditions and selected new work"
+      ],
+      "customerInfo": [
+        "Rooms involved, desired outcome and photos",
+        "Plans, selections, priorities and any approvals already held",
+        "Occupancy, access, staging and known property defects"
+      ],
+      "safetyNote": "Structural changes and regulated electrical, plumbing or waterproofing work may require approvals and appropriately licensed providers.",
+      "nextStep": "Share the renovation goals, rooms and available plans to establish the next scoping step.",
+      "majorAliases": [],
+      "aliases": [
+        "home renovators"
+      ],
+      "searchTerms": [
+        "home renovators"
+      ],
+      "url": "services/building-renovation-structural/home-renovators/"
+    },
+    {
+      "key": "renderers",
+      "title": "Renderers",
+      "slug": "renderers",
+      "category": "roofing-gutters-exterior",
+      "rawLabels": [
+        "Renderers"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Roofing, gutters & exterior",
+      "summary": "Rendering services apply or repair compatible exterior and interior masonry finishes after the substrate and moisture conditions are assessed.",
+      "commonTasks": [
+        "Prepare masonry and apply a selected render system",
+        "Repair localised hollow, cracked or damaged render where suitable",
+        "Match texture and finish across an agreed wall area"
+      ],
+      "customerInfo": [
+        "Wall area, location and photos in even light",
+        "Existing finish type, colour and age if known",
+        "Crack movement, salt, damp or previous repair history"
+      ],
+      "safetyNote": "Persistent cracking, drummy areas or damp can indicate substrate or moisture problems that need diagnosis before resurfacing; height work requires safe access.",
+      "nextStep": "Send full-wall and close-up photos with dimensions for a rendering assessment.",
+      "majorAliases": [],
+      "aliases": [
+        "renderers"
+      ],
+      "searchTerms": [
+        "renderers"
+      ],
+      "url": "services/roofing-gutters-exterior/renderers/"
+    },
+    {
+      "key": "restumping",
+      "title": "Restumping",
+      "slug": "restumping",
+      "category": "building-renovation-structural",
+      "rawLabels": [
+        "Restumping"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Building, renovation & structural",
+      "summary": "Restumping or reblocking addresses deteriorated supports beneath suitable raised buildings and requires careful structural assessment and sequencing.",
+      "commonTasks": [
+        "Assess accessible stumps, bearers, levels and signs of movement",
+        "Develop a staged support and replacement approach for the building",
+        "Replace approved stumps and re-level affected areas within the engineered scope"
+      ],
+      "customerInfo": [
+        "Property age, construction type and subfloor access",
+        "Photos of stumps, cracks, uneven floors and external levels",
+        "Previous reports, drainage issues and renovation plans"
+      ],
+      "safetyNote": "Supporting and lifting a building is high-risk structural work that may require engineering, permits and appropriately licensed contractors; occupants should not enter unsafe areas.",
+      "nextStep": "Provide subfloor photos, movement symptoms and any reports so Ellis can route a restumping assessment.",
+      "majorAliases": [],
+      "aliases": [
+        "restumping"
+      ],
+      "searchTerms": [
+        "restumping"
+      ],
+      "url": "services/building-renovation-structural/restumping/"
+    },
+    {
+      "key": "retaining-walls",
+      "title": "Retaining Walls",
+      "slug": "retaining-walls",
+      "category": "outdoor-structures-fencing-pools",
+      "rawLabels": [
+        "Retaining Walls"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Outdoor structures, fencing & pools",
+      "summary": "Retaining-wall services cover replacement or new structures intended to hold soil where height, drainage, loads and boundaries are understood.",
+      "commonTasks": [
+        "Assess levels, soil, drainage and loads behind the proposed wall",
+        "Construct an approved timber, masonry, concrete or modular system",
+        "Replace a leaning or failed wall after the cause is investigated"
+      ],
+      "customerInfo": [
+        "Wall length, maximum height and level difference",
+        "Photos of both sides, drainage and nearby buildings or fences",
+        "Boundary information, material preference and any engineering"
+      ],
+      "safetyNote": "Retaining walls can affect buildings, boundaries and soil stability; engineering, approvals and underground-service checks may be required before excavation.",
+      "nextStep": "Send measurements, level photos and the wall location for a retaining-wall assessment.",
+      "majorAliases": [],
+      "aliases": [
+        "retaining walls"
+      ],
+      "searchTerms": [
+        "retaining walls"
+      ],
+      "url": "services/outdoor-structures-fencing-pools/retaining-walls/"
+    },
+    {
+      "key": "structural-engineers",
+      "title": "Structural Engineers",
+      "slug": "structural-engineers",
+      "category": "planning-inspection-compliance",
+      "rawLabels": [
+        "Structural Engineers"
+      ],
+      "sourceSections": [
+        "Build & Renovate"
+      ],
+      "categoryTitle": "Planning, inspection & compliance",
+      "summary": "Structural-engineering services provide analysis and design for building elements, movement, alterations and load-bearing concerns.",
+      "commonTasks": [
+        "Assess cracking, movement or a proposed structural alteration",
+        "Design beams, footings, walls or other structural elements for a defined project",
+        "Prepare calculations, drawings or inspection advice within the agreed brief"
+      ],
+      "customerInfo": [
+        "Property address, construction type and project objective",
+        "Photos, plans, surveys and previous reports",
+        "Crack history, recent changes and access to affected areas"
+      ],
+      "safetyNote": "Visible instability, sudden movement or partial collapse requires the area to be isolated and an urgent professional response; engineering advice must come from appropriately qualified practitioners.",
+      "nextStep": "Provide the plans, photos and exact engineering question so Ellis can route the brief efficiently.",
+      "majorAliases": [],
+      "aliases": [
+        "structural engineers"
+      ],
+      "searchTerms": [
+        "structural engineers"
+      ],
+      "url": "services/planning-inspection-compliance/structural-engineers/"
+    },
+    {
+      "key": "cabinet-makers",
+      "title": "Cabinet Makers",
+      "slug": "cabinet-makers",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Cabinet Makers"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Cabinet-making services cover custom storage, replacement cabinetry, alterations and fitted units designed for a specific room.",
+      "commonTasks": [
+        "Measure and design cabinetry for kitchens, laundries, wardrobes or living areas",
+        "Manufacture and install selected doors, drawers, carcasses and panels",
+        "Modify existing cabinetry for changed appliances or storage needs"
+      ],
+      "customerInfo": [
+        "Wall and opening dimensions with room photos",
+        "Preferred layout, material, colour and hardware",
+        "Appliance models, plumbing locations and items to retain"
+      ],
+      "safetyNote": "Cabinet changes around electrical, gas or plumbing services require the relevant licensed trades; wall fixing must account for concealed services.",
+      "nextStep": "Share dimensions, appliance details and style references to develop the cabinetry scope.",
+      "majorAliases": [],
+      "aliases": [
+        "cabinet makers"
+      ],
+      "searchTerms": [
+        "cabinet makers"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/cabinet-makers/"
+    },
+    {
+      "key": "cleaners",
+      "title": "Cleaners",
+      "slug": "cleaners",
+      "category": "cleaning-removals-pest-hazard",
+      "rawLabels": [
+        "Cleaners"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Cleaning, removals, pest & hazard",
+      "summary": "Cleaning services can be scoped for regular home care, end-of-lease work, post-project cleaning or defined high-use areas.",
+      "commonTasks": [
+        "Complete an agreed room-by-room general clean",
+        "Undertake an end-of-lease or post-project clean to a stated checklist",
+        "Deep-clean selected kitchens, bathrooms or high-touch surfaces"
+      ],
+      "customerInfo": [
+        "Property size, room count and cleaning type",
+        "Priority areas, surface materials and expected condition",
+        "Access, parking, pets and supplied or preferred products"
+      ],
+      "safetyNote": "Biohazards, sharps, mould, asbestos dust and uncontrolled chemical spills are specialist hazards and should be disclosed rather than treated as routine cleaning.",
+      "nextStep": "Provide the property size, cleaning checklist and condition photos where relevant for accurate scoping.",
+      "majorAliases": [
+        "cleaner",
+        "cleaning"
+      ],
+      "aliases": [
+        "cleaners",
+        "cleaner",
+        "cleaning"
+      ],
+      "searchTerms": [
+        "cleaners",
+        "cleaner",
+        "cleaning"
+      ],
+      "url": "services/cleaning-removals-pest-hazard/cleaners/"
+    },
+    {
+      "key": "dishwasher-repair",
+      "title": "Dishwasher Repair",
+      "slug": "dishwasher-repair",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Dishwasher Repair"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Dishwasher repair addresses drainage, filling, heating, leakage, noise and cycle problems after the appliance and installation are identified.",
+      "commonTasks": [
+        "Diagnose error codes, incomplete cycles or poor washing results",
+        "Investigate accessible leaks, pumps, hoses or inlet issues",
+        "Replace serviceable components when repair is viable and parts are available"
+      ],
+      "customerInfo": [
+        "Brand, model and serial details",
+        "Error code, symptoms and when they occur in the cycle",
+        "Photos of the installation, connections and any water leakage"
+      ],
+      "safetyNote": "Disconnect power and stop using an appliance that is leaking onto electrical components, smoking or overheating; electrical and plumbing work may require licensed providers.",
+      "nextStep": "Send the model number, symptom and error code so Ellis can arrange suitable appliance-repair triage.",
+      "majorAliases": [],
+      "aliases": [
+        "dishwasher repair"
+      ],
+      "searchTerms": [
+        "dishwasher repair"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/dishwasher-repair/"
+    },
+    {
+      "key": "removalists",
+      "title": "Furniture & Household Removalists",
+      "slug": "removalists",
+      "category": "cleaning-removals-pest-hazard",
+      "rawLabels": [
+        "Furniture Removalists",
+        "Removalists"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Cleaning, removals, pest & hazard",
+      "summary": "Furniture and household removal services cover packing choices, loading, transport and unloading for local moves or selected item relocations.",
+      "commonTasks": [
+        "Move listed furniture and boxes between agreed addresses",
+        "Provide packing, disassembly or reassembly where included in the scope",
+        "Handle bulky or fragile items using planned access and protection"
+      ],
+      "customerInfo": [
+        "Pickup and delivery suburbs, dates and access conditions",
+        "Inventory, approximate box count and heavy or fragile items",
+        "Stairs, lifts, parking, travel constraints and assembly needs"
+      ],
+      "safetyNote": "Pianos, safes, oversized items and hazardous goods require disclosure and may need specialist equipment or separate arrangements.",
+      "nextStep": "Send the inventory, both access descriptions and preferred date for a removal scope.",
+      "majorAliases": [
+        "removalist",
+        "moving furniture"
+      ],
+      "aliases": [
+        "furniture removalists",
+        "removalists",
+        "removalist",
+        "moving furniture"
+      ],
+      "searchTerms": [
+        "furniture & household removalists",
+        "furniture removalists",
+        "removalists",
+        "removalist",
+        "moving furniture"
+      ],
+      "url": "services/cleaning-removals-pest-hazard/removalists/"
+    },
+    {
+      "key": "gas-fitters",
+      "title": "Gas Fitters",
+      "slug": "gas-fitters",
+      "category": "electrical-plumbing-gas-air-conditioning",
+      "rawLabels": [
+        "Gas Fitters"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Electrical, plumbing, gas & air conditioning",
+      "summary": "Gas-fitting services cover appliance connections, gas leaks, pipework and alterations that require controlled testing and compliant work.",
+      "commonTasks": [
+        "Investigate a reported gas odour or suspected installation fault",
+        "Install, replace or disconnect compatible gas appliances",
+        "Alter gas pipework and complete required testing within the approved scope"
+      ],
+      "customerInfo": [
+        "Appliance type, brand and model",
+        "Location of the meter, cylinders or isolation valve if known",
+        "Symptoms, recent work and photos taken only where safe"
+      ],
+      "safetyNote": "Gas work must be completed by an appropriately licensed gas fitter where required. If gas is strongly suspected, avoid flames and electrical switching, leave the area, contact the gas emergency service, and call emergency services for immediate danger.",
+      "nextStep": "For non-emergency work, provide the appliance details and location so Ellis can arrange licensed gas-service routing.",
+      "majorAliases": [
+        "gas fitter",
+        "gas fitting"
+      ],
+      "aliases": [
+        "gas fitters",
+        "gas fitter",
+        "gas fitting"
+      ],
+      "searchTerms": [
+        "gas fitters",
+        "gas fitter",
+        "gas fitting"
+      ],
+      "url": "services/electrical-plumbing-gas-air-conditioning/gas-fitters/"
+    },
+    {
+      "key": "glass-glaziers",
+      "title": "Glass Glaziers",
+      "slug": "glass-glaziers",
+      "category": "doors-windows-glass-screens",
+      "rawLabels": [
+        "Glass Glaziers"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Doors, windows, glass & screens",
+      "summary": "Glazing services cover replacement panes, mirrors and selected glass installations after the glass type, dimensions and safety needs are identified.",
+      "commonTasks": [
+        "Measure and replace broken or failed glass in suitable frames",
+        "Install mirrors, shelves or other specified glazing products",
+        "Assess cracked panes, failed seals or damaged glazing hardware"
+      ],
+      "customerInfo": [
+        "Opening dimensions and photos from a safe distance",
+        "Frame material, location and storey level",
+        "Glass type or safety markings if visible without touching"
+      ],
+      "safetyNote": "Do not handle cracked, unsupported or shattered glass; isolate the area from people and pets. Safety glazing and elevated work require suitably qualified glaziers and access controls.",
+      "nextStep": "Keep clear of damaged glass and send safe-distance photos plus approximate dimensions for glazier triage.",
+      "majorAliases": [
+        "glazier",
+        "glass repair"
+      ],
+      "aliases": [
+        "glass glaziers",
+        "glazier",
+        "glass repair"
+      ],
+      "searchTerms": [
+        "glass glaziers",
+        "glazier",
+        "glass repair"
+      ],
+      "url": "services/doors-windows-glass-screens/glass-glaziers/"
+    },
+    {
+      "key": "handymen",
+      "title": "Handymen",
+      "slug": "handymen",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Handymen"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Handyman services suit defined minor maintenance, assembly, mounting and repair tasks that do not cross into regulated or specialist trade work.",
+      "commonTasks": [
+        "Complete a grouped list of small household repairs",
+        "Assemble furniture and fit non-structural accessories",
+        "Adjust doors, replace basic hardware or complete minor patch-and-fix work"
+      ],
+      "customerInfo": [
+        "A prioritised task list with a photo of each item",
+        "Wall, floor or furniture materials and any product instructions",
+        "Property access, parking and whether parts are already supplied"
+      ],
+      "safetyNote": "Electrical, plumbing, gas, structural, roofing-height and hazardous-material work should be routed to appropriately licensed or specialist providers rather than general handyman work.",
+      "nextStep": "Send one photo per task and identify supplied parts so Ellis can separate handyman items from specialist work.",
+      "majorAliases": [
+        "handyman",
+        "handy man",
+        "odd jobs",
+        "maintenance"
+      ],
+      "aliases": [
+        "handymen",
+        "handyman",
+        "handy man",
+        "odd jobs",
+        "maintenance"
+      ],
+      "searchTerms": [
+        "handymen",
+        "handyman",
+        "handy man",
+        "odd jobs",
+        "maintenance"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/handymen/"
+    },
+    {
+      "key": "ikea-kitchens",
+      "title": "IKEA Kitchens",
+      "slug": "ikea-kitchens",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "IKEA Kitchens"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "IKEA kitchen services can support assembly and installation of a confirmed modular design, with regulated services coordinated separately.",
+      "commonTasks": [
+        "Check the plan, cabinet inventory and room readiness",
+        "Assemble and install cabinet frames, fronts, panels and selected fittings",
+        "Coordinate benchtop, appliance and service interfaces within the project scope"
+      ],
+      "customerInfo": [
+        "Final IKEA plan, order list and delivery status",
+        "Room dimensions, wall condition and photos of service locations",
+        "Benchtop, appliance and splashback details plus items to retain"
+      ],
+      "safetyNote": "Electrical, gas, plumbing and some waterproofing or structural changes require appropriately licensed providers; cabinets must not conceal unsafe or unapproved services.",
+      "nextStep": "Send the final plan, order list and room photos so Ellis can check installation readiness.",
+      "majorAliases": [],
+      "aliases": [
+        "ikea kitchens"
+      ],
+      "searchTerms": [
+        "ikea kitchens"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/ikea-kitchens/"
+    },
+    {
+      "key": "oven-repair",
+      "title": "Oven Repair",
+      "slug": "oven-repair",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Oven Repair"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Oven repair covers heating, controls, fans, doors and performance faults in built-in or freestanding domestic ovens.",
+      "commonTasks": [
+        "Diagnose uneven heating, no heat, fan or control faults",
+        "Replace viable elements, seals, hinges or control components",
+        "Test repaired operation within the appliance service scope"
+      ],
+      "customerInfo": [
+        "Brand, model, fuel type and serial details",
+        "Symptoms, error codes and which functions are affected",
+        "Photos of the appliance, installation and plug or isolation arrangement where safe"
+      ],
+      "safetyNote": "Stop using an oven that smells of gas, sparks, smokes or overheats. Gas and hard-wired electrical work require appropriately licensed providers.",
+      "nextStep": "Provide the model, fuel type and precise symptom for oven-repair routing.",
+      "majorAliases": [],
+      "aliases": [
+        "oven repair"
+      ],
+      "searchTerms": [
+        "oven repair"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/oven-repair/"
+    },
+    {
+      "key": "pest-control",
+      "title": "Pest Control",
+      "slug": "pest-control",
+      "category": "cleaning-removals-pest-hazard",
+      "rawLabels": [
+        "Pest Control"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Cleaning, removals, pest & hazard",
+      "summary": "Pest-control services assess activity, likely entry points and suitable treatment or management for common household pests.",
+      "commonTasks": [
+        "Inspect accessible signs, harbourage and entry points",
+        "Apply a targeted treatment or trapping program for the identified pest",
+        "Recommend exclusion and monitoring measures after treatment"
+      ],
+      "customerInfo": [
+        "Pest type or photos of evidence without handling it",
+        "Rooms or outdoor zones affected and when activity occurs",
+        "Children, pets, allergies, food areas and previous treatments"
+      ],
+      "safetyNote": "Do not touch unknown insects, droppings, baits or nests. Termites, bees, rodents and chemical applications may require specialist methods and occupant precautions.",
+      "nextStep": "Send evidence photos, affected locations and household safety considerations for pest triage.",
+      "majorAliases": [
+        "pest",
+        "pest treatment"
+      ],
+      "aliases": [
+        "pest control",
+        "pest",
+        "pest treatment"
+      ],
+      "searchTerms": [
+        "pest control",
+        "pest",
+        "pest treatment"
+      ],
+      "url": "services/cleaning-removals-pest-hazard/pest-control/"
+    },
+    {
+      "key": "rubbish-removal",
+      "title": "Rubbish Removal",
+      "slug": "rubbish-removal",
+      "category": "cleaning-removals-pest-hazard",
+      "rawLabels": [
+        "Rubbish Removal"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Cleaning, removals, pest & hazard",
+      "summary": "Rubbish-removal services clear agreed household, garden or project waste where material types, volume and access are known.",
+      "commonTasks": [
+        "Collect and remove a listed load of general household items",
+        "Clear green waste or renovation debris accepted under the agreed scope",
+        "Separate recyclable or special-disposal items where arrangements exist"
+      ],
+      "customerInfo": [
+        "Photos of the complete pile and approximate volume",
+        "Item list, material types and any heavy pieces",
+        "Access width, stairs, parking and pickup location"
+      ],
+      "safetyNote": "Asbestos, chemicals, batteries, gas cylinders, sharps and contaminated waste must be declared and may require licensed or specialist disposal; do not mix suspect material into general loads.",
+      "nextStep": "Send full-load photos and identify every unusual material so Ellis can confirm the correct waste pathway.",
+      "majorAliases": [
+        "junk removal"
+      ],
+      "aliases": [
+        "rubbish removal",
+        "junk removal"
+      ],
+      "searchTerms": [
+        "rubbish removal",
+        "junk removal"
+      ],
+      "url": "services/cleaning-removals-pest-hazard/rubbish-removal/"
+    },
+    {
+      "key": "upholstery-repair",
+      "title": "Upholstery Repair",
+      "slug": "upholstery-repair",
+      "category": "handyman-interiors-appliance-repairs",
+      "rawLabels": [
+        "Upholstery Repair"
+      ],
+      "sourceSections": [
+        "More"
+      ],
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "summary": "Upholstery repair restores suitable furniture through fabric, padding, webbing, stitching or local frame-related work after condition review.",
+      "commonTasks": [
+        "Repair torn seams, worn panels or localised fabric damage",
+        "Replace padding, webbing or support materials in suitable furniture",
+        "Recover a chair, cushion or selected furniture piece in a chosen material"
+      ],
+      "customerInfo": [
+        "Photos of the complete item and damaged details",
+        "Dimensions, age and furniture construction if known",
+        "Fabric preference, matching needs and collection access"
+      ],
+      "safetyNote": "Mould, pest contamination, broken recliner mechanisms or unstable frames may need separate treatment before upholstery work.",
+      "nextStep": "Share whole-item and close-up photos with dimensions to assess repair or recovering options.",
+      "majorAliases": [],
+      "aliases": [
+        "upholstery repair"
+      ],
+      "searchTerms": [
+        "upholstery repair"
+      ],
+      "url": "services/handyman-interiors-appliance-repairs/upholstery-repair/"
+    }
+  ]
+}
