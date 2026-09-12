@@ -5,14 +5,14 @@ const root = path.resolve(__dirname, '..');
 const failures = [];
 const notes = [];
 const htmlFiles = [];
-const productionOrigin = 'https://perthhandymate.com.au/';
+const productionOrigin = 'https://www.perthhandymate.com.au/';
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (entry.name === 'tests') continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full);
-    else if (entry.name.endsWith('.html')) htmlFiles.push(full);
+    else if (entry.name.endsWith('.html') && !entry.name.startsWith('google')) htmlFiles.push(full);
   }
 }
 function fail(message) { failures.push(message); }

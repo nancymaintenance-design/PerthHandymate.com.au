@@ -41,7 +41,7 @@ The contact form is a local demonstration. It validates and prefills fields in t
 
 ## Release boundary
 
-Canonical URLs, structured data, the sitemap and robots policy are configured for `https://perthhandymate.com.au/`. Publication is currently authorized only to the named GitHub repository; the package has not been deployed through Vercel or connected through GoDaddy DNS. Follow `DEPLOYMENT.md` and obtain separate explicit authorization before any hosting or DNS action.
+Canonical URLs, structured data, the sitemap and robots policy are configured for `https://www.perthhandymate.com.au/`. Publication is currently authorized only to the named GitHub repository; the package has not been deployed through Vercel or connected through GoDaddy DNS. Follow `DEPLOYMENT.md` and obtain separate explicit authorization before any hosting or DNS action.
 
 ## Local verification record
 Trigger Vercel production deployment

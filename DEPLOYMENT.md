@@ -4,7 +4,7 @@ This checklist prepares the static candidate for GitHub, Vercel and a GoDaddy-ma
 
 ## 1. Pre-release review
 
-1. Confirm that the approved production domain remains `https://perthhandymate.com.au/`.
+1. Confirm that the approved production domain remains `https://www.perthhandymate.com.au/`.
 2. Confirm canonical, sitemap and structured-data URLs consistently use that HTTPS origin.
 3. Review the production `index,follow` page directives and the crawl-allowing `robots.txt` policy.
 4. Confirm the public phone number, Perth metropolitan service-area wording, form limitations, page content and image rights.
