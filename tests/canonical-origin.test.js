@@ -8,7 +8,7 @@ const origin = 'https://www.perthhandymate.com.au/';
 
 function htmlPages(dir = root, pages = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === 'tests') continue;
+    if (entry.name === 'tests' || entry.name.startsWith('.vercel')) continue;
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) htmlPages(fullPath, pages);
     if (entry.isFile() && entry.name.endsWith('.html') && !entry.name.startsWith('google')) pages.push(fullPath);

@@ -9,7 +9,7 @@ const productionOrigin = 'https://www.perthhandymate.com.au/';
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === 'tests') continue;
+    if (entry.name === 'tests' || entry.name.startsWith('.vercel')) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full);
     else if (entry.name.endsWith('.html') && !entry.name.startsWith('google')) htmlFiles.push(full);
@@ -83,7 +83,7 @@ if (/<form[^>]+action=/.test(contact)) fail('Contact form unexpectedly has a sub
 if (!contact.includes('does not transmit or store them')) fail('Contact page lacks explicit non-transmission message');
 if (!contact.includes('name="postcode"')) fail('Contact page lacks the local location-prefill field');
 if (!contact.includes('name="phone"') || !contact.includes('data-error="phone"')) fail('Contact page lacks the required phone field and local error target');
-if (!contact.includes('No recipient or sending service is configured')) fail('Contact page overstates the current delivery state');
+if (!contact.includes('href="mailto:handyman.maintenance.au@outlook.com"')) fail('Contact page lacks the approved enquiry email link');
 if ((contact.match(/href="tel:\+61403069685"/g) || []).length < 3) fail('Contact page lacks its dedicated confirmed phone link');
 
 const formConfig = fs.readFileSync(path.join(root, 'data/form-config.js'), 'utf8');
