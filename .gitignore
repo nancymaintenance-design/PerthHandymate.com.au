@@ -1,4 +1,5 @@
 .env*
+!.env.example
 node_modules/
 .vercel/
 coverage/
@@ -19,4 +20,3 @@ Desktop.ini
 credentials*
 secrets*
 ellis-github-ready.zip
-

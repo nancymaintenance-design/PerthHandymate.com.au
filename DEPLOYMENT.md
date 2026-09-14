@@ -7,7 +7,7 @@ This checklist prepares the static candidate for GitHub, Vercel and a GoDaddy-ma
 1. Confirm that the approved production domain remains `https://perthhandymate.com.au/`.
 2. Confirm canonical, sitemap and structured-data URLs consistently use that HTTPS origin.
 3. Review the production `index,follow` page directives and the crawl-allowing `robots.txt` policy.
-4. Confirm the public phone number, Perth metropolitan service-area wording, form limitations, page content and image rights.
+4. Confirm the public phone number, email, Perth address, Perth metropolitan service-area wording, form behaviour, page content and image rights.
 5. Run `node tests/site.test.js` and `node tests/check-site.js`, then run the HTTP smoke test against the local preview.
 
 ## 2. GitHub repository
@@ -23,7 +23,7 @@ This checklist prepares the static candidate for GitHub, Vercel and a GoDaddy-ma
 1. In the authorized Vercel account, import `<YOUR_GITHUB_REPO_URL>`.
 2. Choose the repository root as the project root.
 3. Use the static/Other framework preset. Do not add an install or build command; the committed files are the output.
-4. Do not add environment variables for the current candidate. It has no backend and contains no secrets.
+4. For online contact-form delivery, add `RESEND_API_KEY` and `RESEND_FROM_EMAIL` in Vercel Project Settings. Never commit either value or expose it to browser JavaScript. Use a Resend-verified sender address before promoting the form.
 5. Review the preview deployment, directory URLs and branded 404 behaviour before promoting anything to production.
 
 ## 4. GoDaddy DNS

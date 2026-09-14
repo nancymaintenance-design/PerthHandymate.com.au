@@ -1,0 +1,1371 @@
+{
+  "version": "1.0",
+  "checkedDate": "2026-09-14",
+  "currency": "AUD",
+  "disclaimer": "Prices shown are Ellis official guide prices. Contact Ellis for a tailored consultation.",
+  "entries": [
+    {
+      "slug": "air-conditioning",
+      "serviceName": "Air Conditioning",
+      "status": "indicative-national",
+      "rangeAud": "A$600-12,000",
+      "unit": "installation project; a split installation is separately stated as 600-1,500 labour",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_air_conditioning_installation_cost",
+          "title": "How much does Air Conditioning Installation cost? [2026]",
+          "date": "Updated 2 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide states 600-12,000 depending on unit and complexity; split installation 600-1,500."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Use only after system type, capacity, electrical supply, access and whether the unit is supplied are known. Perth-specific rate was not verified in this pass."
+    },
+    {
+      "slug": "asbestos-removal",
+      "serviceName": "Asbestos Removal",
+      "status": "indicative-local",
+      "rangeAud": "A$20–50",
+      "unit": "per m²; bonded/non-friable lining only",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://whatsthedamage.com.au/asbestos-removal-cost-perth/",
+          "title": "How much does asbestos removal cost in Perth?",
+          "date": "Updated September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth metro; bonded versus friable material, access, testing, air monitoring, clearance and disposal change the price."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Friable work is materially different ($100–$160/m² in the same guide) and should be treated as quote-required after licensed assessment."
+    },
+    {
+      "slug": "bathroom",
+      "serviceName": "Bathroom",
+      "status": "indicative-local",
+      "rangeAud": "A$25000–50000+",
+      "unit": "per full bathroom renovation",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://houserenovationsperth.com.au/bathroom-renovations-perth/",
+          "title": "Bathroom Renovations Perth from $25,000",
+          "date": "Undated; accessed 14 September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth provider guide; size, materials and structural changes affect scope; entry-level, mid-range and premium work are separately described."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "This is a provider-published guide, not a fixed Ellis price. Existing layout, slab alterations, waterproofing and fixtures must be quoted."
+    },
+    {
+      "slug": "blinds-and-curtains",
+      "serviceName": "Blinds & Curtains",
+      "status": "indicative-local",
+      "rangeAud": "A$75-125 labour-only per window; 140-290 roller blind supply-and-install per window",
+      "unit": "per window",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://matesrates.app/cost-guides/blinds-installation-cost-australia",
+          "title": "Blinds Installation Cost Australia 2026: Roman, Roller & Venetian Prices",
+          "date": "Accessed 14 Sep 2026",
+          "locality": "Perth row in city comparison",
+          "evidence": "Perth row lists 75-125 labour-only and 140-290 roller blind supply-and-install per window."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Third-party market guide. Curtains, tracks, motorisation, shutters and outdoor systems need their own quote."
+    },
+    {
+      "slug": "bricklayers",
+      "serviceName": "Bricklayers",
+      "status": "indicative-local",
+      "rangeAud": "A$60–95",
+      "unit": "per m²",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://www.bodabuildinggroup.com.au/blog/how-much-does-bricklaying-cost/",
+          "title": "How Much Does Bricklaying Cost in Perth? 2026 Price Guide",
+          "date": "16 January 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth guide; pricing may instead be hourly ($80–$120) or per brick; site conditions and materials vary."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Confirm whether materials, footings, access equipment, demolition and making-good are included."
+    },
+    {
+      "slug": "builders",
+      "serviceName": "Builders & Renovation Builders",
+      "status": "indicative-local",
+      "rangeAud": "A$2500–5000",
+      "unit": "per m²",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://whatsthedamage.com.au/city/perth/",
+          "title": "Tradie Costs in Perth 2026 - All Trades",
+          "date": "2026 listing; accessed 14 September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth market guide; excludes project-specific approvals, siteworks, design, services and selections unless a quote states otherwise."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Whole projects need a documented scope and builder quote; this broad published guide is not suitable for a fixed-price offer."
+    },
+    {
+      "slug": "building-certifiers",
+      "serviceName": "Building Certifiers",
+      "status": "quote-required",
+      "rangeAud": null,
+      "unit": "scope-dependent certification and approval work",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://www.perth.wa.gov.au/building-and-planning/planning-and-building-applications/building-permits-licenses-and-approvals",
+          "title": "Permits, licences and approvals",
+          "date": "Accessed 14 September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "City of Perth explains when a registered building surveyor and Certificate of Design Compliance are required; no current universal private-certifier fee is published."
+        },
+        {
+          "url": "https://www.wa.gov.au/organisation/building-and-energy/building-approvals",
+          "title": "Building approvals",
+          "date": "Updated August 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Official WA page lists statutory application fees and states Class 1/10 permit fee is 0.19% of estimated work value, minimum $121; this is not a complete private-certifier quote."
+        }
+      ],
+      "confidence": "high",
+      "notes": "Do not present the statutory permit fee as the certifier fee. Certification, plans, inspections, permit authority and building class must be scoped."
+    },
+    {
+      "slug": "building-inspectors",
+      "serviceName": "Building Inspectors",
+      "status": "indicative-local",
+      "rangeAud": "A$495–1495",
+      "unit": "per inspection",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://www.bestwestbuilding.com.au/blog/building-inspection-cost-perth/",
+          "title": "How Much Does a Building Inspection Cost in Perth? (2026)",
+          "date": "2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth provider guide; states range varies with inspection type, property size, location and complexity. Standard pre-purchase listed at $595–$895."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Pest, construction-stage and practical-completion inspections have different inclusions and should be separately quoted."
+    },
+    {
+      "slug": "cabinet-makers",
+      "serviceName": "Cabinet Makers",
+      "status": "indicative-national",
+      "rangeAud": "A$50-75 per hour; 100-600+ per cabinet",
+      "unit": "labour hour or individual cabinet",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_do_kitchen_cabinet_makers_cost",
+          "title": "How much do kitchen cabinet makers cost? [2026]",
+          "date": "Updated 6 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide gives 50-75/hr and 100-600+ per cabinet depending on customisation."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Kitchen layout, hardware, benchtops, materials, appliances and trades are not interchangeable; price only after drawings/measurements."
+    },
+    {
+      "slug": "carpenters",
+      "serviceName": "Carpenters",
+      "status": "indicative-national",
+      "rangeAud": "A$40-120",
+      "unit": "labour hour",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_a_carpenter_cost",
+          "title": "How Much Does a Carpenter Cost? [2026]",
+          "date": "Updated 25 Aug 2026; accessed 14 Sep 2026",
+          "locality": "Australia; includes WA licensing context",
+          "evidence": "Guide states 40-120/hr; notes WA builder licence threshold for work over 20,000."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Do not use for structural, engineered or high-value building work without a scoped quote."
+    },
+    {
+      "slug": "carpet-repair",
+      "serviceName": "Carpet Repair",
+      "status": "quote-required",
+      "rangeAud": null,
+      "unit": "site-specific repair",
+      "checkedDate": "2026-09-14",
+      "sources": [],
+      "confidence": "none",
+      "notes": "No verifiable Perth/WA public price for repair, re-stretching or patching was retained. Quote from photos, damage size, carpet type and availability of matching offcuts."
+    },
+    {
+      "slug": "carports-and-garages",
+      "serviceName": "Carports & Garages",
+      "status": "indicative-local",
+      "rangeAud": "A$4,000–$12,000",
+      "unit": "per standard Perth carport project; single or double",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://patiofactory.com.au/carport-cost/",
+          "title": "Carport Cost and What Affects Pricing in Perth",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-11",
+          "locality": "Perth",
+          "evidence": "States single carports on a flat block with standard approval start at $4,000–$6,000 and doubles at $7,000–$12,000, based on 2026 quote data."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "This evidence is for carports only, not enclosed garages. Garages require an individual quote for slab, walls, door, electrical, approvals and engineering."
+    },
+    {
+      "slug": "cladding",
+      "serviceName": "Cladding",
+      "status": "indicative-local",
+      "rangeAud": "A$90–$210",
+      "unit": "per m², supplied and installed exterior wall cladding",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://renoperth.com.au/services/external-wall-cladding",
+          "title": "External Wall Cladding Perth",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-10",
+          "locality": "Perth",
+          "evidence": "Lists supplied-and-installed external wall cladding at $90/m² (Weathertex) to $210/m² (charred timber feature wall), including substrate, membrane, flashings and paint."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Range covers very different material systems. Quote after measuring wall area, substrate, openings, cavity/wrap condition, flashings and access."
+    },
+    {
+      "slug": "cleaners",
+      "serviceName": "Cleaners",
+      "status": "indicative-local",
+      "rangeAud": "A$35–60",
+      "unit": "per cleaner hour",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://whatsthedamage.com.au/house-cleaning-cost-perth/house-cleaner-hourly-rates/",
+          "title": "What do house cleaners charge per hour in Perth?",
+          "date": "Updated September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth guide; solo cleaners, agencies and deep/vacate crews are separately described; common minimum booking is two hours."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "End-of-lease, deep, carpet, oven and post-construction work should be quoted separately."
+    },
+    {
+      "slug": "concrete-resurfacing",
+      "serviceName": "Concrete Resurfacing",
+      "status": "indicative-national",
+      "rangeAud": "A$70–165",
+      "unit": "per m²",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/what_does_concrete_resurfacing_cost",
+          "title": "What Does Concrete Resurfacing Cost? [2026]",
+          "date": "Updated 23 January 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Australian national averages, not Perth-specific; repair to cracked/spalled slabs and finish selection can raise the figure."
+        }
+      ],
+      "confidence": "low",
+      "notes": "No sufficiently specific Perth public rate was located; use as a broad budget signal only and obtain a Perth site quote."
+    },
+    {
+      "slug": "concreters",
+      "serviceName": "Concreters",
+      "status": "indicative-local",
+      "rangeAud": "A$79–160",
+      "unit": "per m² for a standard plain concrete slab",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://whatsthedamage.com.au/concreting-cost-perth/",
+          "title": "How much does concreting cost in Perth?",
+          "date": "Updated September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth metro guide, GST included; soil, access, thickness, old-slab removal and decorative finishes alter price."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Decorative finishes quoted by the same source reach $125–$210/m²; use site-specific pricing for engineering or earthworks."
+    },
+    {
+      "slug": "deck-builders",
+      "serviceName": "Deck Builders",
+      "status": "indicative-local",
+      "rangeAud": "A$190–$630",
+      "unit": "per m², installed deck; material dependent",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://landscapeswa.com.au/blog/landscaping-cost-perth/",
+          "title": "What landscaping costs in Perth in 2026, per square metre and per element",
+          "date": "Published 2026-09-12; retrieved 2026-09-14",
+          "locality": "Perth/WA",
+          "evidence": "Lists treated pine $190–$370/m², jarrah $280–$350/m², merbau/spotted gum $315–$630/m² and composite $295–$580/m²."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Elevated decks, steps, balustrades, engineering, footings and demolition are not represented by a single m² rate."
+    },
+    {
+      "slug": "demolition",
+      "serviceName": "Demolition",
+      "status": "indicative-local",
+      "rangeAud": "A$30000–70000",
+      "unit": "per standard single-storey house demolition and site clear",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://www.thepropertyplug.com.au/knockdown-rebuild-cost-perth/",
+          "title": "What a knockdown rebuild costs in Perth",
+          "date": "Updated June 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth guide; house size, access, material separation and asbestos alter the demolition price. Asbestos is listed separately."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Partial strip-outs are a separate service and should not be priced from a house-demolition band."
+    },
+    {
+      "slug": "dishwasher-repair",
+      "serviceName": "Dishwasher Repair",
+      "status": "indicative-national",
+      "rangeAud": "A$100-300",
+      "unit": "repair including typical parts and labour in cited guide",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_appliance_repair_cost",
+          "title": "How Much Does Average Appliance Repair Cost [2026]",
+          "date": "Updated 6 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide lists dishwasher repair 100-300, but exhaust-system repair can be materially higher."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Model, fault code, spare-part availability and access determine the final quote."
+    },
+    {
+      "slug": "door-installation",
+      "serviceName": "Door Installation",
+      "status": "indicative-national",
+      "rangeAud": "A$300-5,500+",
+      "unit": "installation project by door type; door supply additional unless quoted",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_do_doors_cost",
+          "title": "How Much Does Door Installation Cost? [2026]",
+          "date": "Updated 6 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide says installation ranges from 300 for sliding doors to 5,500+ for complex bifolds."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Frame alteration, hardware, security rating, glass, painting and access must be priced separately."
+    },
+    {
+      "slug": "draftsmen",
+      "serviceName": "Draftsmen",
+      "status": "indicative-local",
+      "rangeAud": "A$750–6990 + GST",
+      "unit": "per residential drawing package",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://perthdrafting.com.au/draftsman/",
+          "title": "Draftsman - Perth Drafting Service",
+          "date": "Undated; accessed 14 September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth provider guide; fixed packages vary by existing site information, project complexity and drawing scope. It excludes separate consultant services such as engineering and certification."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "The source also lists $60–$100 hourly rates; the range selected is its stated fixed-price residential range."
+    },
+    {
+      "slug": "electricians",
+      "serviceName": "Electricians",
+      "status": "indicative-local",
+      "rangeAud": "A$80-130 service fee; 80-100 per hour",
+      "unit": "service fee and labour hour; materials extra unless included",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_an_electrician_cost",
+          "title": "How Much Does an Electrician Cost? [2026]",
+          "date": "Updated 8 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia, including a Western Australia average",
+          "evidence": "Guide states service fee 80-130, labour 80-100/hr and WA average hourly rate 95."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "WA is explicitly named, but this is still a broad guide rather than a Perth supplier quote. Licensed electrical work, access, materials and after-hours work change the total."
+    },
+    {
+      "slug": "fence-builders",
+      "serviceName": "Fence Builders",
+      "status": "indicative-local",
+      "rangeAud": "A$84–$200",
+      "unit": "per linear metre, standard Colorbond or timber paling supply and install",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://whatsthedamage.com.au/fencing-cost-perth/",
+          "title": "Colorbond Fencing Perth 2026: $84–$170/m Installed",
+          "date": "Updated/verified September 2026; retrieved 2026-09-14",
+          "locality": "Perth",
+          "evidence": "Lists Colorbond at $84–$170/m and timber paling at $84–$200/m, supply and installed."
+        },
+        {
+          "url": "https://renoperth.com.au/services/fencing",
+          "title": "Fencing Perth | Colorbond, Composite & Glass",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-11",
+          "locality": "Perth",
+          "evidence": "Lists 1.8 m installed Colorbond $140–$220/m and pine paling $180–$240/m, excluding demolition."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Boundary type, height, gates, demolition, slope, retaining interface and Dividing Fences Act arrangements need confirmation."
+    },
+    {
+      "slug": "fencing-contractors",
+      "serviceName": "Fencing Contractors",
+      "status": "indicative-local",
+      "rangeAud": "A$84–$520",
+      "unit": "per linear metre, installed; material and height dependent",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://renoperth.com.au/services/fencing",
+          "title": "Fencing Perth | Colorbond, Composite & Glass",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-11",
+          "locality": "Perth",
+          "evidence": "Lists installed 1.8 m fencing from Colorbond $140–$220/m through aluminium slat privacy fencing $360–$520/m."
+        },
+        {
+          "url": "https://whatsthedamage.com.au/fencing-cost-perth/",
+          "title": "Colorbond Fencing Perth 2026: $84–$170/m Installed",
+          "date": "Updated/verified September 2026; retrieved 2026-09-14",
+          "locality": "Perth",
+          "evidence": "Lists timber paling $84–$200/m, gates and old-fence removal as distinct pricing factors."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "This broader category includes site-specific/complex work; the range must not be used for glass pool fencing or retaining walls."
+    },
+    {
+      "slug": "floor-sanding",
+      "serviceName": "Floor Sanding",
+      "status": "indicative-national",
+      "rangeAud": "A$30-110",
+      "unit": "per m² including sanding and finish in the cited guide",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_floor_sanding_cost",
+          "title": "How much does floor sanding cost? [2026]",
+          "date": "Updated 13 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide lists 30-110/m² depending on finish; 80m² three-bedroom example 2,500-4,500."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Board condition, furniture moving, floor repairs, coating and minimum charge change price."
+    },
+    {
+      "slug": "fly-screens",
+      "serviceName": "Fly Screens & Repairs",
+      "status": "indicative-national",
+      "rangeAud": "A$130-500",
+      "unit": "supply and install for standard window batches in cited guide",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_it_cost_to_install_flyscreens",
+          "title": "How Much Does It Cost To Install Flyscreens? [2026]",
+          "date": "Updated 6 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide states 130 single window, 290 five windows and 500 ten windows for fibreglass mesh supply/install."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Screen type, frame condition, door screens, mesh grade and retractable systems require a specific quote."
+    },
+    {
+      "slug": "garden-clean-up",
+      "serviceName": "Garden Clean Up",
+      "status": "indicative-local",
+      "rangeAud": "A$300–$800",
+      "unit": "per one-off residential clean-up",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://landscaping-perth.com.au/cost/garden-maintenance-cost",
+          "title": "Garden Maintenance Cost Perth — 2026 Price Guide",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-13",
+          "locality": "Perth",
+          "evidence": "Lists one-off garden clean-up at $300–$800 and says green waste, overgrowth and site size affect the result."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Indicative only; confirm green-waste removal, hedge height, access and whether tree work is excluded."
+    },
+    {
+      "slug": "garden-landscapers",
+      "serviceName": "Garden Landscapers",
+      "status": "indicative-local",
+      "rangeAud": "A$8,000–$20,000",
+      "unit": "per typical 60–100 m² Perth front-garden landscape project",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://landscapeswa.com.au/blog/landscaping-cost-perth/",
+          "title": "What landscaping costs in Perth in 2026, per square metre and per element",
+          "date": "Published 2026-09-12; retrieved 2026-09-14",
+          "locality": "Perth/WA",
+          "evidence": "States a typical Perth 60–100 m² front garden with lawn, planted beds, reticulation and path is $8,000–$20,000."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Project range, not an hourly rate. Design, reticulation, drainage, paving, plant size and access materially change the quote."
+    },
+    {
+      "slug": "gardeners",
+      "serviceName": "Gardeners",
+      "status": "indicative-local",
+      "rangeAud": "A$60–$80",
+      "unit": "per hour for custom/general garden work",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://landscaping-perth.com.au/cost/garden-maintenance-cost",
+          "title": "Garden Maintenance Cost Perth — 2026 Price Guide",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-13",
+          "locality": "Perth",
+          "evidence": "Lists a $60–$80 hourly rate for custom work and larger properties."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Check minimum call-out, green-waste charges and whether equipment/chemicals are included."
+    },
+    {
+      "slug": "gas-fitters",
+      "serviceName": "Gas Fitters",
+      "status": "indicative-national",
+      "rangeAud": "A$100-200",
+      "unit": "labour hour",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_do_gas_fitters_cost",
+          "title": "How Much Do Gas Fitters Cost? [2026]",
+          "date": "Updated 28 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide states gasfitters typically charge 100-200 per hour."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Licensed gas work only. Appliance, pipe length, certification and emergency attendance require a Perth quote."
+    },
+    {
+      "slug": "glass-glaziers",
+      "serviceName": "Glass Glaziers",
+      "status": "indicative-national",
+      "rangeAud": "A$38-403",
+      "unit": "glass material per m²; professional installation additional",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_glass_and_glazing_cost",
+          "title": "How Much Does Glass & Glazing Cost? [2026]",
+          "date": "Updated 23 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide states float glass 38-46/m² and glass cost up to 403/m² for laminated glass; installation is additional."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Safety glazing, thickness, cutting, delivery, frame work and emergency response must be quoted."
+    },
+    {
+      "slug": "gutter-services",
+      "serviceName": "Gutter Services",
+      "status": "indicative-local",
+      "rangeAud": "A$105–$550",
+      "unit": "per residential cleaning job; repair/replacement must be itemised separately",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://www.powerdriveroofing.com.au/gutter-cleaning-cost/",
+          "title": "Gutter Cleaning Cost Perth | $150–$550",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-07",
+          "locality": "Perth",
+          "evidence": "Lists standard Perth gutter cleaning at $150–$550, with single-storey 3-bedroom homes $150–$230 and double-storey jobs up to $550."
+        },
+        {
+          "url": "https://whatsthedamage.com.au/gutter-cleaning-cost-perth/",
+          "title": "Gutter Cleaning Cost Perth 2026: $105–$470 Price List",
+          "date": "Updated/verified September 2026; retrieved 2026-09-14",
+          "locality": "Perth",
+          "evidence": "Lists cleaning at $105–$470 by storey; minor leak sealing $84–$295/job and gutter replacement $37–$105/linear m."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "The displayed headline is appropriate for cleaning only. Repair/replacement must state component and unit, and height/access can increase cost."
+    },
+    {
+      "slug": "handymen",
+      "serviceName": "Handymen",
+      "status": "indicative-local",
+      "rangeAud": "A$52-145 per hour; 210-590 half-day; 400-945 full-day",
+      "unit": "labour hour or booking block",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://whatsthedamage.com.au/handyman-cost-perth/",
+          "title": "Handyman Cost Perth 2026: $52–$145/hr",
+          "date": "Verified Sep 2026; accessed 14 Sep 2026",
+          "locality": "Perth metro",
+          "evidence": "Published Perth guide gives 52-145/hr, 210-590 half-day and 400-945 full-day including GST."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Third-party price guide; general maintenance only. Electrical, plumbing, gas and structural work must be routed to appropriately licensed trades."
+    },
+    {
+      "slug": "home-renovators",
+      "serviceName": "Home Renovators",
+      "status": "indicative-local",
+      "rangeAud": "A$2100–6900",
+      "unit": "per m²",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://site.co-architecture.com/advice/home-renovation-cost-perth/",
+          "title": "Home Renovation Cost in Perth: 2026 Guide by Room and Suburb",
+          "date": "2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth guide: cosmetic $2,100–$3,300/m², standard $3,300–$4,700/m² and high-end $4,500–$6,900/m²; actual inclusions and regulated trade work vary."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Use only to frame a discussion. Existing-condition investigation, permits, design and selections can materially change a renovation proposal."
+    },
+    {
+      "slug": "house-painters",
+      "serviceName": "House Painters",
+      "status": "indicative-local",
+      "rangeAud": "A$25–$65",
+      "unit": "per m² of exterior painting; typical full exterior $3,500–$15,000",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://abcpaintdeco.com.au/cost-to-paint-a-house-perth/",
+          "title": "How Much Does It Cost to Paint a House in Perth?",
+          "date": "Published 2026-07-31; retrieved 2026-09-14",
+          "locality": "Perth",
+          "evidence": "Lists single-storey exterior $3,500–$8,500, double-storey $6,000–$15,000 and $45–$65/m²."
+        },
+        {
+          "url": "https://www.blueskypaintingwa.com.au/average-cost-of-exterior-house-painting-in-perth",
+          "title": "Average Cost of Exterior House Painting in Perth",
+          "date": "Published 2026-05-11; retrieved 2026-09-14",
+          "locality": "Perth/WA",
+          "evidence": "Lists Perth exterior painting at $4,000–$15,000 and $25–$60+/m²."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Preparation, substrate condition, height, scaffolding, coating system and whether gutters/fascia are included must be confirmed."
+    },
+    {
+      "slug": "ikea-kitchens",
+      "serviceName": "IKEA Kitchens",
+      "status": "indicative-national",
+      "rangeAud": "A$1,500-15,000",
+      "unit": "kitchen installation project by kitchen size in cited guide",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/ikea_kitchen_remodel_cost",
+          "title": "How much does an IKEA kitchen installation cost? [2026]",
+          "date": "Updated 27 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide states small 1,500-4,000; medium 4,000-10,000; large 10,000-15,000."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Confirm whether cabinetry, assembly, benchtop, removal, plumbing/electrical and project management are included."
+    },
+    {
+      "slug": "insulation",
+      "serviceName": "Insulation",
+      "status": "indicative-national",
+      "rangeAud": "A$50-70",
+      "unit": "per m² for roof-insulation installation",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_roof_insulation_cost",
+          "title": "How Much Does Roof Insulation Cost? [2026]",
+          "date": "Updated 27 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide states roof insulation installation 50-70/m²; material choice and access affect total."
+        }
+      ],
+      "confidence": "low",
+      "notes": "This is roof-installation context, not a universal all-insulation price. Specify ceiling/wall/underfloor, R-value, access and removal requirements before display."
+    },
+    {
+      "slug": "lawn-mowing",
+      "serviceName": "Lawn Mowing",
+      "status": "indicative-local",
+      "rangeAud": "A$30–$60",
+      "unit": "per standard residential mowing visit",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://landscaping-perth.com.au/cost/garden-maintenance-cost",
+          "title": "Garden Maintenance Cost Perth — 2026 Price Guide",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-13",
+          "locality": "Perth",
+          "evidence": "Lists standard residential mowing at $30–$60 per visit, including mowing, edging and blowing clippings from hard surfaces."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Long grass, large verge, sloping blocks, waste removal and irregular booking can increase the price."
+    },
+    {
+      "slug": "new-carpet",
+      "serviceName": "New Carpet",
+      "status": "indicative-national",
+      "rangeAud": "A$55-75",
+      "unit": "per m² carpet installation in cited guide",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_carpet_laying_cost",
+          "title": "How much does carpet laying cost per m2? [2026]",
+          "date": "Updated 6 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide states average installation 55-75/m² and says furniture, old-carpet removal, preparation and stairs may be excluded."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Clarify whether range includes carpet, underlay, removal and floor preparation before use."
+    },
+    {
+      "slug": "oven-repair",
+      "serviceName": "Oven Repair",
+      "status": "indicative-national",
+      "rangeAud": "A$50-150",
+      "unit": "repair (guide average)",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_appliance_repair_cost",
+          "title": "How Much Does Average Appliance Repair Cost [2026]",
+          "date": "Updated 6 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide lists oven repair 50-150 and says gas ovens generally cost more than electric."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Parts and diagnosis can exceed this guide range; gas or hard-wired appliance work requires the applicable qualified trade."
+    },
+    {
+      "slug": "patio-builders",
+      "serviceName": "Patio Builders",
+      "status": "quote-required",
+      "rangeAud": null,
+      "unit": "site-specific patio project",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://patiofactory.com.au/patio-cost-perth/",
+          "title": "How Much Does a Patio Cost in Perth? (2026 Guide)",
+          "date": "Published 2026-07-21; retrieved 2026-09-14",
+          "locality": "Perth",
+          "evidence": "Confirms size, roof type, panels, approvals, ground conditions and access determine price, but the publicly indexed extract provides finance deposits rather than a comparable installed project range."
+        }
+      ],
+      "confidence": "high",
+      "notes": "Do not infer an installed patio price from finance advertisements or forum anecdotes. Obtain dimensions, roof type, council/engineering requirements and site access before quoting."
+    },
+    {
+      "slug": "pavers",
+      "serviceName": "Pavers",
+      "status": "indicative-local",
+      "rangeAud": "A$70–$220",
+      "unit": "per m², supply and installation; paving material dependent",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://landscapeswa.com.au/blog/landscaping-cost-perth/",
+          "title": "What landscaping costs in Perth in 2026, per square metre and per element",
+          "date": "Published 2026-09-12; retrieved 2026-09-14",
+          "locality": "Perth/WA",
+          "evidence": "Lists concrete/brick pavers $70–$170/m², limestone $100–$160/m² and travertine/natural stone $140–$220/m²."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Base preparation, excavation, drainage, cutting, access and removal of existing paving must be allowed for separately."
+    },
+    {
+      "slug": "pergola-builders",
+      "serviceName": "Pergola Builders",
+      "status": "indicative-local",
+      "rangeAud": "A$5,000–$16,000",
+      "unit": "per timber pergola project",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://landscapeswa.com.au/blog/landscaping-cost-perth/",
+          "title": "What landscaping costs in Perth in 2026, per square metre and per element",
+          "date": "Published 2026-09-12; retrieved 2026-09-14",
+          "locality": "Perth/WA",
+          "evidence": "Lists timber pergola at $5,000–$16,000 and notes it as an additional element to a deck."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Roofing, electrical, footing type, connection to dwelling, approvals and engineering can change the total substantially."
+    },
+    {
+      "slug": "pest-control",
+      "serviceName": "Pest Control",
+      "status": "indicative-local",
+      "rangeAud": "A$190–470",
+      "unit": "per general interior and exterior treatment visit",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://whatsthedamage.com.au/pest-control-cost-perth/",
+          "title": "How much does pest control cost in Perth?",
+          "date": "Updated September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth guide; general treatment differs from termites, bed bugs, rodents and pre-purchase inspections."
+        },
+        {
+          "url": "https://pinpointinspections.com.au/pricing/pest-control",
+          "title": "Pest Control Prices Perth",
+          "date": "Undated; accessed 14 September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth Metro provider lists single-pest treatment from $189 and notes prices assume a single-storey home with four bedrooms or fewer."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Termite treatment is quote-required after inspection; do not apply the general-treatment band to termite barriers."
+    },
+    {
+      "slug": "plasterers",
+      "serviceName": "Plasterers",
+      "status": "indicative-local",
+      "rangeAud": "A$15-90",
+      "unit": "per m² depending on plaster type; Perth plasterboard installation average 50 per hour",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_plastering_cost",
+          "title": "How Much Does Plastering Cost? [2026]",
+          "date": "Updated 6 Aug 2026; accessed 14 Sep 2026",
+          "locality": "Australia with Perth hourly row",
+          "evidence": "Guide lists plasterboard supply/install 15-20/m², hard plaster 20-70/m², wet plaster 45-90/m² and Perth gyprock installation average 50/hr."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Repairs, removal, difficult access and ornamental work need a separate quote."
+    },
+    {
+      "slug": "plumbers",
+      "serviceName": "Plumbers",
+      "status": "indicative-local",
+      "rangeAud": "A$80-200 per hour; 60-250 call-out",
+      "unit": "labour hour and call-out; emergency WA call-outs 150-350 plus 180-320 per hour",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_a_plumber_cost",
+          "title": "How Much Does a Plumber Cost? [2026]",
+          "date": "Updated 24 Jul 2026; accessed 14 Sep 2026",
+          "locality": "Australia, with WA emergency band",
+          "evidence": "Guide gives 80-200/hr and 60-250 call-out. It specifically groups WA emergency call-outs at 150-350 plus 180-320/hr."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Applicable only to labour/call-out guidance; repair parts, drainage scope and time of service must be quoted."
+    },
+    {
+      "slug": "pool-fence-installers",
+      "serviceName": "Pool Fence Installers",
+      "status": "indicative-local",
+      "rangeAud": "A$105–$840",
+      "unit": "per linear metre, supply and installation; material dependent",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://whatsthedamage.com.au/fencing-cost-perth/",
+          "title": "Colorbond Fencing Perth 2026: $84–$170/m Installed",
+          "date": "Updated/verified September 2026; retrieved 2026-09-14",
+          "locality": "Perth",
+          "evidence": "Lists Perth aluminium pool fencing at $105–$370/m and glass pool fencing at $315–$840/m."
+        },
+        {
+          "url": "https://mrfencingwork.com.au/blog/pool-security-fence-cost/",
+          "title": "How Much Does a Pool Security Fence Cost in Perth?",
+          "date": "Published 2026-07-29; retrieved 2026-09-14",
+          "locality": "Perth",
+          "evidence": "Perth installer states around $180/m for aluminium through $500+/m for frameless glass, depending on conditions."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Compliance, gates, core drilling, deck/concrete fixing, boundary geometry and certification must be assessed."
+    },
+    {
+      "slug": "pool-resurfacing",
+      "serviceName": "Pool Resurfacing",
+      "status": "indicative-local",
+      "rangeAud": "A$5,000–$18,000",
+      "unit": "per residential pool resurfacing project; finish/shell dependent",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://www.perthpoolreborn.com.au/pool-resurfacing-cost-perth",
+          "title": "How Much Does Pool Resurfacing Cost in Perth? (2026 Price Guide)",
+          "date": "Published 2026-08-10; retrieved 2026-09-14",
+          "locality": "Perth",
+          "evidence": "Lists epoxy pool painting from $5,000, full fibreglass resurfacing from $12,000, and concrete-to-fibreglass conversion from $13,000."
+        },
+        {
+          "url": "https://www.thequoteyard.com.au/services/pool-renovation-wa",
+          "title": "Pool Renovation WA 2026 - Complete Pricing Guide",
+          "date": "Published 2026-03; retrieved 2026-09-14",
+          "locality": "WA/Perth example",
+          "evidence": "Gives a standard suburban Perth Quartzon River Pebble resurfacing example of $14,000–$18,000."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Starting figures only. Emptying, shell condition, crack repair, access, pool size, chosen finish, tiles/coping and refilling must be individually assessed."
+    },
+    {
+      "slug": "removalists",
+      "serviceName": "Furniture & Household Removalists",
+      "status": "indicative-local",
+      "rangeAud": "A$120–300",
+      "unit": "per hour for local move crew and truck",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://awesomemateremovals.com.au/blog/how-much-do-removalists-cost-per-hour-in-perth-2026-guide",
+          "title": "How Much Do Removalists Cost Per Hour in Perth?",
+          "date": "27 July 2026",
+          "locality": "Australia / source context",
+          "evidence": "Provider states two movers and truck start from $120/hour ($132 incl. GST)."
+        },
+        {
+          "url": "https://a2bremovalsgroup.com.au/blog/cost-of-removalists-in-perth/",
+          "title": "Cost of Removalists in Perth 2026",
+          "date": "2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth guide says most removalists charge $150–$300/hour depending on crew size and truck capacity and commonly impose a minimum engagement."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Confirm GST, depot/travel time, crew size, stairs, packing and minimum hours in the written quote."
+    },
+    {
+      "slug": "renderers",
+      "serviceName": "Renderers",
+      "status": "indicative-local",
+      "rangeAud": "A$30–$85",
+      "unit": "per m² of wall area, rendering finish dependent",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://abcpaintdeco.com.au/rendering-cost-perth/",
+          "title": "How Much Does Rendering Cost in Perth?",
+          "date": "Published August 2026; retrieved 2026-09-14",
+          "locality": "Perth",
+          "evidence": "Lists cement render $30–$65/m², acrylic render $45–$85/m² and texture coat $50–$85/m²; full single-storey homes $6,000–$14,000."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Substrate repair, moisture diagnosis, scaffolding, finish type, patch matching and paint are not interchangeable and need site assessment."
+    },
+    {
+      "slug": "restumping",
+      "serviceName": "Restumping",
+      "status": "quote-required",
+      "rangeAud": null,
+      "unit": "structural scope-dependent project",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://www.perthrestumping.com.au/about-us/",
+          "title": "About Us | What We Do | Restump My House",
+          "date": "Undated; accessed 14 September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth specialist describes restumping services but a reliable public Perth price table was not available in the indexed material."
+        }
+      ],
+      "confidence": "high",
+      "notes": "Foundation condition, access, engineering, permits, number/type of stumps and remediation requirements require site assessment before pricing."
+    },
+    {
+      "slug": "retaining-walls",
+      "serviceName": "Retaining Walls",
+      "status": "indicative-local",
+      "rangeAud": "A$210–$630",
+      "unit": "per linear metre for timber or concrete sleeper retaining wall; height/specification dependent",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://landscapeswa.com.au/blog/landscaping-cost-perth/",
+          "title": "What landscaping costs in Perth in 2026, per square metre and per element",
+          "date": "Published 2026-09-12; retrieved 2026-09-14",
+          "locality": "Perth/WA",
+          "evidence": "Lists timber sleeper retaining at $210–$470/lineal m and concrete sleeper retaining at $260–$630/lineal m; limestone block is separately $420–$680/m² of wall face."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Do not apply the range to limestone or engineered walls. Drainage, footings, height, approvals and engineering need separate scoping."
+    },
+    {
+      "slug": "roofing",
+      "serviceName": "Roofing & Roof Repairs",
+      "status": "indicative-local",
+      "rangeAud": "A$800–$9,000",
+      "unit": "per scoped roof clean, repair or restoration job",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://kiliandcousins.com.au/roof-restoration-cost-perth/",
+          "title": "How much does roof restoration cost in Perth?",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-12",
+          "locality": "Perth",
+          "evidence": "Lists Perth roof cleaning only at $800–$2,000 and full three/four-bedroom roof restoration at $4,000–$9,000."
+        },
+        {
+          "url": "https://www.powerdriveroofing.com.au/cost-of-a-roof-restoration-in-perth/",
+          "title": "Roof Restoration Cost Perth | $22 per sqm",
+          "date": "Retrieved 2026-09-14; page crawled 2026-08-14",
+          "locality": "Perth",
+          "evidence": "States $22/m² for a defined full restoration scope after inspection."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "This does not price re-roofing or structural defects. Leak source, roof type, pitch, access, tiles/sheets, flashing and safety setup require inspection."
+    },
+    {
+      "slug": "rubbish-removal",
+      "serviceName": "Rubbish Removal",
+      "status": "indicative-local",
+      "rangeAud": "A$120–1300+",
+      "unit": "per load/job",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://ratingsplus.net/en/reviews-news/rubbish-removal-cost-perth-2026",
+          "title": "How Much Does Rubbish Removal Cost in Perth? [2026 Prices]",
+          "date": "1 July 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth guide: small jobs $120–$260, quarter truck $190–$380, half truck $380–$700 and full truck $700–$1,300+; heavy, hazardous or hard-access waste can cost more."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Asbestos and other hazardous waste are excluded from ordinary rubbish pricing and require specialist handling."
+    },
+    {
+      "slug": "shower-screens",
+      "serviceName": "Shower Screens",
+      "status": "indicative-national",
+      "rangeAud": "A$250-700 plus 45-65 per hour installation",
+      "unit": "screen supply; installation additional",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_a_new_shower_screen_cost",
+          "title": "How much does shower screen costs? [2026]",
+          "date": "Updated 6 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide lists 250-700 excluding installation, and installer rates 45-65/hr."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Custom glass, removal, wall condition, safety glass and waterproofing rectification are separate scope items."
+    },
+    {
+      "slug": "skylights",
+      "serviceName": "Skylights",
+      "status": "indicative-national",
+      "rangeAud": "A$300-2,000+",
+      "unit": "skylight installation project",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_a_skylight_cost",
+          "title": "How Much Does a Skylight Cost? [2026]",
+          "date": "Updated 20 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide gives 300-2,000+ installation; tubular supply/install 350-1,400 and acrylic supply/install 500-1,000."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Roof type/pitch, structural alteration, flashing, internal shaft and ceiling finish require an onsite quote."
+    },
+    {
+      "slug": "structural-engineers",
+      "serviceName": "Structural Engineers",
+      "status": "quote-required",
+      "rangeAud": null,
+      "unit": "inspection, report, calculations or design scope",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://perth.wa.gov.au/forms-and-payments/building-planning-and-development/building-permits-licences-and-approvals/certificate-of-structural-sufficiency",
+          "title": "Certificate of Structural Sufficiency",
+          "date": "Accessed 14 September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "City of Perth says the certificate is to be endorsed by a professional engineer; it does not publish a universal engineering fee."
+        },
+        {
+          "url": "https://www.take2.net.au/wp-content/uploads/2025/01/Take-2-Home-Inspections-Professional-Services-Guide-and-Pricing.pdf",
+          "title": "Professional Services Guide and Pricing",
+          "date": "January 2025",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Perth metro pricing document lists a structural-fundamentals inspection/report product, but this cannot be generalised to engineering calculations or structural design."
+        }
+      ],
+      "confidence": "high",
+      "notes": "Do not publish a single engineering price: a visual inspection, signed report, structural calculations and design drawings are materially different scopes."
+    },
+    {
+      "slug": "surveyors",
+      "serviceName": "Surveyors",
+      "status": "indicative-local",
+      "rangeAud": "A$140–160",
+      "unit": "per hour",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/cost_guide_to_different_surveyors",
+          "title": "How Much Do Surveyors Cost? [2026]",
+          "date": "2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "Search result identifies Perth hourly pricing; boundary, feature/contour and subdivision work have different scope and fieldwork requirements."
+        },
+        {
+          "url": "https://www.brownmcallister.com.au/category8_1/",
+          "title": "TASKS AND FEES",
+          "date": "Undated; accessed 14 September 2026",
+          "locality": "Perth / WA (as stated by source)",
+          "evidence": "WA Institution of Surveyors-derived discussion says Perth metropolitan survey fees are indicative and individually negotiated."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Use a written scope quote for legal-boundary, feature/contour or subdivision work; hourly figures are not a total-job estimate."
+    },
+    {
+      "slug": "synthetic-grass",
+      "serviceName": "Synthetic Grass",
+      "status": "indicative-local",
+      "rangeAud": "A$50–$110",
+      "unit": "per m², supply and installation on prepared ground",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://landscapeswa.com.au/blog/landscaping-cost-perth/",
+          "title": "What landscaping costs in Perth in 2026, per square metre and per element",
+          "date": "Published 2026-09-12; retrieved 2026-09-14",
+          "locality": "Perth/WA",
+          "evidence": "Lists artificial turf at $50–$110/m² supply and install."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Base excavation, drainage, edging, existing-turf removal and access should be separately scoped."
+    },
+    {
+      "slug": "tiling",
+      "serviceName": "Tiling",
+      "status": "indicative-national",
+      "rangeAud": "A$45-150",
+      "unit": "per m² tiler charge",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_a_tiler_cost",
+          "title": "How Much Does a Tiler Cost? [2026]",
+          "date": "Updated 2 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide states tilers typically charge around 45-150/m²."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Separate tile supply, removal, substrate preparation, waterproofing, pattern and complex cuts."
+    },
+    {
+      "slug": "timber-fencing",
+      "serviceName": "Timber Fencing",
+      "status": "indicative-local",
+      "rangeAud": "A$84–$320",
+      "unit": "per linear metre, installed; timber/specification dependent",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://whatsthedamage.com.au/fencing-cost-perth/",
+          "title": "Colorbond Fencing Perth 2026: $84–$170/m Installed",
+          "date": "Updated/verified September 2026; retrieved 2026-09-14",
+          "locality": "Perth",
+          "evidence": "Lists Perth timber paling at $84–$200/m installed."
+        },
+        {
+          "url": "https://renoperth.com.au/services/fencing",
+          "title": "Fencing Perth | Colorbond, Composite & Glass",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-11",
+          "locality": "Perth",
+          "evidence": "Lists pine paling $180–$240/m and Jarrah/Merbau paling $230–$320/m for installed 1.8 m fencing."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Range spans different timber grades and heights; gates, removal, slope and retaining should be priced separately."
+    },
+    {
+      "slug": "tree-arborists",
+      "serviceName": "Tree Arborists",
+      "status": "indicative-local",
+      "rangeAud": "A$300–$6,000+",
+      "unit": "per tree removal; size/access dependent",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://perthtreecare.com.au/tree-removal-cost-perth/",
+          "title": "How Much Does Tree Removal Cost in Perth?",
+          "date": "Retrieved 2026-09-14; page crawled 2026-09-13",
+          "locality": "Perth",
+          "evidence": "Lists small trees $300–$800, medium $800–$2,500 and large trees $2,500–$6,000+; stump grinding is stated separately at $100–$400."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Arborist reports, protected-tree approvals, powerline proximity, crane/chipper access and stump removal require a site-specific quote."
+    },
+    {
+      "slug": "upholstery-repair",
+      "serviceName": "Upholstery Repair",
+      "status": "indicative-local",
+      "rangeAud": "A$50-100 per hour; 150-3,000+ depending on furniture type",
+      "unit": "labour hour or item project",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://www.homestars.com/upholstery/upholsterer-pros/perth",
+          "title": "Find upholsterers in Perth | HomeStars",
+          "date": "Accessed 14 Sep 2026",
+          "locality": "Perth",
+          "evidence": "Published guide gives 50-100/hr; dining chair 150-300, armchair 400-800, two-seat sofa 800-1,500, larger sofa 1,800-3,000+."
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Third-party guide. Fabric, foam, frame/spring condition and collection/delivery must be quoted."
+    },
+    {
+      "slug": "verandah-builders",
+      "serviceName": "Verandah Builders",
+      "status": "indicative-national",
+      "rangeAud": "A$2,000–$20,000+",
+      "unit": "per verandah project; Australian national reference, not a Perth quote",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_a_verandah_cost",
+          "title": "How Much Does A Verandah Cost? [2026]",
+          "date": "Published 2026-01-20; retrieved 2026-09-14",
+          "locality": "Australia national, not Perth-specific",
+          "evidence": "States national cost-guide range $2,000–$20,000+ and explicitly describes its prices as national averages."
+        },
+        {
+          "url": "https://perthpatioconcepts.com.au/services/verandahs/",
+          "title": "Verandahs Perth - Custom Verandah Design & Build",
+          "date": "Retrieved 2026-09-14; page crawled 2026-08",
+          "locality": "Perth",
+          "evidence": "Local service page confirms material selection and multiple quotes matter, but no verifiable installed range appeared in the indexed extract."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Do not present this national range as a Perth price. Use only as a broad budget reference and obtain a Perth site quote for dimensions, roof type, attachment, approvals and engineering."
+    },
+    {
+      "slug": "waterproofing",
+      "serviceName": "Waterproofing",
+      "status": "indicative-national",
+      "rangeAud": "A$500-750",
+      "unit": "average bathroom waterproofing project",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_waterproofing_cost",
+          "title": "How Much Does Waterproofing Cost? [2026]",
+          "date": "Updated 6 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide gives 500-750 to waterproof an average bathroom and notes roof waterproofing about 100/m²."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Bathroom size, membrane system, substrate work, access and compliance requirements must be confirmed locally."
+    },
+    {
+      "slug": "window-installation",
+      "serviceName": "Window Installation",
+      "status": "indicative-national",
+      "rangeAud": "A$40-50 per hour; windows 100-1,250 per m² supply examples",
+      "unit": "installation labour hour and selected supply examples",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_window_installation_cost",
+          "title": "How Much Does Window Installation Cost? [2026]",
+          "date": "Updated 8 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide lists installers at 40-50/hr, fixed 600x600 window about 100, hinged 600x1200 about 300 and premium bifold up to 1,250/m²."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Frame type, glazing, opening alteration, waterproofing and disposal mean this must be treated as a guide, not a Perth quote."
+    },
+    {
+      "slug": "window-repairs",
+      "serviceName": "Window Repairs",
+      "status": "indicative-national",
+      "rangeAud": "A$100-2,000",
+      "unit": "standard repair project; emergency labour may reach 150 per hour plus materials",
+      "checkedDate": "2026-09-14",
+      "sources": [
+        {
+          "url": "https://hipages.com.au/article/how_much_does_window_repair_cost",
+          "title": "How Much Does Window Repair Cost? [2026]",
+          "date": "Updated 22 Jan 2026; accessed 14 Sep 2026",
+          "locality": "Australia (not Perth-specific)",
+          "evidence": "Guide states standard repairs 100-2,000; normal labour 50-60/hr and emergency up to 150/hr plus materials."
+        }
+      ],
+      "confidence": "low",
+      "notes": "Broken glass should be made safe promptly; exact pricing depends on frame, glass specification, access and urgency."
+    }
+  ]
+}

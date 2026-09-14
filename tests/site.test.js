@@ -9,6 +9,7 @@ require('../data/search-catalog.js');
 const {
   resolveServiceSearch,
   validateContact,
+  contactPayload,
   mergeContactHref,
   buildContactPrefill,
 } = require('../assets/js/site.js');
@@ -154,6 +155,27 @@ test('accepts a complete local enquiry check', () => {
     service: 'Roofing, gutters & exterior',
     message: 'Please inspect a leaking gutter near the rear deck.',
   }), { valid: true, errors: {} });
+});
+
+test('submits only the approved enquiry fields to the contact endpoint', () => {
+  assert.deepEqual(contactPayload({
+    name: 'Alex Morgan',
+    email: 'alex@example.com',
+    phone: '0400 000 000',
+    postcode: '6000',
+    service: 'Roofing, gutters & exterior',
+    message: 'Please inspect a leaking gutter near the rear deck.',
+    website: '',
+    untrusted: 'must not be sent',
+  }), {
+    name: 'Alex Morgan',
+    email: 'alex@example.com',
+    phone: '0400 000 000',
+    postcode: '6000',
+    service: 'Roofing, gutters & exterior',
+    message: 'Please inspect a leaking gutter near the rear deck.',
+    website: '',
+  });
 });
 
 test('preserves the known search query and location when continuing from a service page', () => {
