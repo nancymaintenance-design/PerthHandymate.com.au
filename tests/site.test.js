@@ -200,3 +200,23 @@ test('builds local contact prefills from canonical service and postcode paramete
     message: 'Service request: roofer',
   });
 });
+
+test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
+  const customerPages = [];
+  const walk = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const target = path.join(directory, entry.name);
+      if (entry.isDirectory()) walk(target);
+      if (entry.isFile() && entry.name.endsWith('.html') && entry.name !== 'google28003a8fb6bb282a.html') customerPages.push(target);
+    }
+  };
+  walk(path.join(__dirname, '..'));
+  assert.equal(customerPages.length, 98, 'customer-facing page inventory changed unexpectedly');
+  for (const page of customerPages) {
+    const html = fs.readFileSync(page, 'utf8');
+    assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-QDLBD5EN3B/, page);
+    assert.equal((html.match(/gtag\('config','G-QDLBD5EN3B'\)/g) || []).length, 1, page);
+  }
+  const verification = fs.readFileSync(path.join(__dirname, '../google28003a8fb6bb282a.html'), 'utf8');
+  assert.doesNotMatch(verification, /G-QDLBD5EN3B/);
+});

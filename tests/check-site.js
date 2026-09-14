@@ -5,11 +5,11 @@ const root = path.resolve(__dirname, '..');
 const failures = [];
 const notes = [];
 const htmlFiles = [];
-const productionOrigin = 'https://perthhandymate.com.au/';
+const productionOrigin = 'https://www.perthhandymate.com.au/';
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === 'tests') continue;
+    if (entry.name === 'tests' || entry.name === 'google28003a8fb6bb282a.html') continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full);
     else if (entry.name.endsWith('.html')) htmlFiles.push(full);
@@ -59,7 +59,9 @@ for (const file of htmlFiles) {
     const value = match[1];
     if (/^(?:https?:|data:|#|mailto:|tel:)/.test(value)) continue;
     const clean = value.split(/[?#]/)[0];
-    let target = path.resolve(path.dirname(file), clean || '.');
+    let target = clean.startsWith('/')
+      ? path.join(root, clean.slice(1))
+      : path.resolve(path.dirname(file), clean || '.');
     if (clean.endsWith('/')) target = path.join(target, 'index.html');
     if (!fs.existsSync(target)) fail(`${rel(file)} has broken local reference: ${value}`);
     checkedLinks += 1;
