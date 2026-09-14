@@ -5,11 +5,11 @@ const root = path.resolve(__dirname, '..');
 const failures = [];
 const notes = [];
 const htmlFiles = [];
-const productionOrigin = 'https://perthhandymate.com.au/';
+const productionOrigin = 'https://www.perthhandymate.com.au/';
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === 'tests') continue;
+    if (entry.name === 'tests' || entry.name === 'google28003a8fb6bb282a.html') continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full);
     else if (entry.name.endsWith('.html')) htmlFiles.push(full);
