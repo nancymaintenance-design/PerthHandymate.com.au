@@ -35,28 +35,18 @@ $env:ELLIS_PREVIEW_PORT=4173
 node tests/http-smoke.js
 ```
 
-## Contact form delivery
+## Contact form boundary
 
-The contact form posts same-origin JSON to `/api/contact`. The Vercel serverless function validates the request, restricts allowed origins, ignores honeypot submissions and sends valid enquiries to `handyman.maintenance.au@outlook.com` through Resend. It does not persist enquiry data. The customer's email is used only as the email reply-to address.
-
-Before form delivery can work in a deployed environment, create a Resend API key and configure the following Vercel environment variables; do not put live values in GitHub or client-side JavaScript:
-
-```text
-RESEND_API_KEY=<your Resend API key>
-RESEND_FROM_EMAIL=Ellis Services Group <verified Resend sender>
-```
-
-`.env.example` contains placeholders only. The public direct contact details are `handyman.maintenance.au@outlook.com` and 140 St Georges Terrace, Perth WA 6000.
+The contact form is a local demonstration. It validates and prefills fields in the browser but does not transmit or store enquiries. No recipient, backend endpoint, API key or secret is included. A reviewed recipient and sending service must be configured separately before online enquiry delivery can be enabled; the visible feedback must remain accurate until then.
 
 ## Release boundary
 
 Canonical URLs, structured data, the sitemap and robots policy are configured for `https://perthhandymate.com.au/`. Publication is currently authorized only to the named GitHub repository; the package has not been deployed through Vercel or connected through GoDaddy DNS. Follow `DEPLOYMENT.md` and obtain separate explicit authorization before any hosting or DNS action.
 
 ## Local verification record
-
+Trigger Vercel production deployment
 Recorded 9 September 2026 from this standalone package:
 
-- `node tests/site.test.js`: verifies site navigation, search and contact payload behaviour.
-- `node tests/contact-api.test.js`: verifies form method, origin, validation, honeypot, safe errors and Resend payload behaviour.
+- `node tests/site.test.js`: 13/13 passed.
 - `node tests/check-site.js`: passed; 98 HTML pages, 98 unique titles, 98 unique descriptions, 2,905 local references and 183 valid JSON-LD blocks checked.
 - `node tests/http-smoke.js` against `preview-server.js`: 97/97 sitemap pages plus the branded 404 page returned expected local HTML.
