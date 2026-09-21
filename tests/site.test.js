@@ -9,31 +9,30 @@ require('../data/search-catalog.js');
 const {
   resolveServiceSearch,
   validateContact,
-  contactPayload,
   mergeContactHref,
   buildContactPrefill,
 } = require('../assets/js/site.js');
 
-test('routes recognised trade aliases to the correct service detail with location preserved', () => {
-  assert.deepEqual(resolveServiceSearch('  Sparky  ', '2000'), {
-    route: 'services/electrical-plumbing-gas-air-conditioning/electricians/',
-    service: 'Electrical, plumbing, gas & air conditioning',
-    query: 'Sparky',
-    postcode: '2000',
+test('routes approved core-service queries to the correct detail with location preserved', () => {
+  assert.deepEqual(resolveServiceSearch('  handyman  ', '6000'), {
+    route: 'services/handyman-interiors-appliance-repairs/handymen/',
+    service: 'Handyman, interiors & appliance repairs',
+    query: 'handyman',
+    postcode: '6000',
     matched: true,
   });
-  assert.deepEqual(resolveServiceSearch('roofing', '4000'), {
-    route: 'services/roofing-gutters-exterior/roofing/',
-    service: 'Roofing, gutters & exterior',
-    query: 'roofing',
-    postcode: '4000',
+  assert.deepEqual(resolveServiceSearch('carpentry', 'Perth'), {
+    route: 'services/handyman-interiors-appliance-repairs/carpenters/',
+    service: 'Handyman, interiors & appliance repairs',
+    query: 'carpentry',
+    postcode: 'Perth',
     matched: true,
   });
-  assert.deepEqual(resolveServiceSearch('lawn mowing', 'North Sydney'), {
-    route: 'services/gardens-landscaping/lawn-mowing/',
-    service: 'Gardens & landscaping',
-    query: 'lawn mowing',
-    postcode: 'North Sydney',
+  assert.deepEqual(resolveServiceSearch('flyscreen repair', '6050'), {
+    route: 'services/doors-windows-glass-screens/fly-screens/',
+    service: 'Doors, windows, glass & screens',
+    query: 'flyscreen repair',
+    postcode: '6050',
     matched: true,
   });
 });
@@ -64,24 +63,20 @@ test('generated service catalog covers all 75 source labels through 67 canonical
   for (const item of catalog.rawServices) assert.ok(fs.existsSync(path.join(__dirname, '..', item.url, 'index.html')), item.label);
 });
 
-test('exhaustively routes the 205 governed canonical, source-label and major-alias combinations', () => {
-  const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/service-catalog.json'), 'utf8'));
-  const combinations = [];
-  for (const item of catalog.canonicalServices) {
-    combinations.push({ query: item.title, route: item.url, canonical: item.categoryTitle, kind: 'canonical' });
-    for (const query of item.rawLabels) combinations.push({ query, route: item.url, canonical: item.categoryTitle, kind: 'source' });
-    for (const query of item.majorAliases || []) combinations.push({ query, route: item.url, canonical: item.categoryTitle, kind: 'alias' });
+test('search catalog contains only the approved 15 core services', () => {
+  const policy = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/indexing-policy.json'), 'utf8'));
+  assert.equal(window.ELLIS_SEARCH_CATALOG.length, 15);
+  assert.deepEqual(
+    new Set(window.ELLIS_SEARCH_CATALOG.map((item) => item.route)),
+    new Set(policy.indexableServiceRoutes),
+  );
+  for (const item of window.ELLIS_SEARCH_CATALOG) {
+    const actual = resolveServiceSearch(item.terms[0], '6000');
+    assert.equal(actual.route, item.route, item.service);
+    assert.equal(actual.postcode, '6000', item.service);
   }
-  assert.equal(combinations.filter((item) => item.kind === 'canonical').length, 67);
-  assert.equal(combinations.filter((item) => item.kind === 'source').length, 75);
-  assert.equal(combinations.filter((item) => item.kind === 'alias').length, 63);
-  assert.equal(combinations.length, 205);
-  for (const item of combinations) {
-    const actual = resolveServiceSearch(item.query, '2060');
-    assert.equal(actual.route, item.route, `${item.kind}: ${item.query}`);
-    assert.equal(actual.service, item.canonical, `${item.kind} canonical: ${item.query}`);
-    assert.equal(actual.postcode, '2060', `${item.kind} location: ${item.query}`);
-  }
+  assert.equal(resolveServiceSearch('sparky', '6000').matched, false);
+  assert.equal(resolveServiceSearch('roofing', '6000').matched, false);
 });
 
 test('canonical detail content has no exact summary or common-task-group reuse', () => {
@@ -157,27 +152,6 @@ test('accepts a complete local enquiry check', () => {
   }), { valid: true, errors: {} });
 });
 
-test('submits only the approved enquiry fields to the contact endpoint', () => {
-  assert.deepEqual(contactPayload({
-    name: 'Alex Morgan',
-    email: 'alex@example.com',
-    phone: '0400 000 000',
-    postcode: '6000',
-    service: 'Roofing, gutters & exterior',
-    message: 'Please inspect a leaking gutter near the rear deck.',
-    website: '',
-    untrusted: 'must not be sent',
-  }), {
-    name: 'Alex Morgan',
-    email: 'alex@example.com',
-    phone: '0400 000 000',
-    postcode: '6000',
-    service: 'Roofing, gutters & exterior',
-    message: 'Please inspect a leaking gutter near the rear deck.',
-    website: '',
-  });
-});
-
 test('preserves the known search query and location when continuing from a service page', () => {
   assert.equal(
     mergeContactHref('../../contact/index.html?service=Electrical%2C+plumbing%2C+gas+%26+air+conditioning', '?q=sparky&postcode=2000'),
@@ -219,4 +193,49 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
   }
   const verification = fs.readFileSync(path.join(__dirname, '../google28003a8fb6bb282a.html'), 'utf8');
   assert.doesNotMatch(verification, /G-QDLBD5EN3B/);
+});
+
+test('keeps all service pages live while focusing indexation, sitemap and homepage promotion on the approved core', () => {
+  const policy = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/indexing-policy.json'), 'utf8'));
+  const root = path.join(__dirname, '..');
+  const leafRoutes = [];
+  const walk = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const target = path.join(directory, entry.name);
+      if (entry.isDirectory()) walk(target);
+      if (entry.isFile() && entry.name === 'index.html') {
+        const route = `${path.relative(root, path.dirname(target)).split(path.sep).join('/')}/`;
+        if (route.split('/').filter(Boolean).length === 3 && route.startsWith('services/')) leafRoutes.push(route);
+      }
+    }
+  };
+  walk(path.join(root, 'services'));
+  assert.equal(leafRoutes.length, 67, 'existing service URLs must remain live');
+  assert.equal(policy.indexableServiceRoutes.length, 15);
+  assert.equal(policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length, 42);
+
+  const indexable = new Set(policy.indexableServiceRoutes);
+  for (const route of leafRoutes) {
+    const html = fs.readFileSync(path.join(root, route, 'index.html'), 'utf8');
+    if (indexable.has(route)) assert.match(html, /<meta name="robots" content="index,follow">/);
+    else assert.match(html, /<meta name="robots" content="noindex,follow">/);
+  }
+
+  const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 42);
+  for (const route of policy.indexableServiceRoutes) assert.match(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
+  for (const route of leafRoutes.filter((route) => !indexable.has(route))) assert.doesNotMatch(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
+
+  const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const popular = home.slice(home.indexOf('<div class="card-grid popular-grid">'), home.indexOf('<p class="section-action">'));
+  assert.equal((popular.match(/class="service-card popular-card"/g) || []).length, 8);
+  for (const route of policy.homepagePromotionRoutes) assert.match(popular, new RegExp(`href="\\./${route}index\\.html"`));
+  for (const retiredRoute of [
+    'services/electrical-plumbing-gas-air-conditioning/electricians/',
+    'services/electrical-plumbing-gas-air-conditioning/plumbers/',
+    'services/electrical-plumbing-gas-air-conditioning/air-conditioning/',
+    'services/roofing-gutters-exterior/roofing/',
+    'services/gardens-landscaping/lawn-mowing/',
+    'services/building-renovation-structural/bathroom/',
+  ]) assert.doesNotMatch(popular, new RegExp(`href="\\./${retiredRoute}index\\.html"`));
 });

@@ -7,8 +7,8 @@ const contact = fs.readFileSync(path.join(__dirname, '..', 'contact', 'index.htm
 
 test('contact page uses a production enquiry title rather than a demo label', () => {
   const title = contact.match(/<title>([^<]+)<\/title>/)?.[1] || '';
-  assert.equal(title, 'Contact Ellis Services Group | Perth Home Maintenance');
-  assert.match(contact, /<meta name="description" content="Contact Ellis Services Group for Perth home maintenance and trade service enquiries\.">/);
+  assert.equal(title, 'Contact Ellis Services Group | Perth Property Services');
+  assert.match(contact, /<meta name="description" content="Contact Ellis Services Group about a Perth property service request\. Browser form entries are not transmitted or stored automatically\.">/);
   assert.doesNotMatch(title, /\bDemo\b/i);
 });
 
@@ -17,7 +17,6 @@ test('contact page exposes the approved written-enquiry email as a mailto link',
   assert.match(contact, />handyman\.maintenance\.au@outlook\.com</);
 });
 
-test('contact page uses the same-origin enquiry delivery endpoint', () => {
-  assert.match(contact, /data-contact-endpoint="\/api\/contact"/);
-  assert.match(contact, /Online delivery is enabled once Resend is configured for this deployment\./);
+test('contact page remains explicit that the browser form does not transmit or store entries', () => {
+  assert.match(contact, /does not transmit or store them/);
 });

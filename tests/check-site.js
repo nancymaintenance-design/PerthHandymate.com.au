@@ -6,6 +6,8 @@ const failures = [];
 const notes = [];
 const htmlFiles = [];
 const productionOrigin = 'https://www.perthhandymate.com.au/';
+const indexingPolicy = JSON.parse(fs.readFileSync(path.join(root, 'data/indexing-policy.json'), 'utf8'));
+const indexableServiceRoutes = new Set(indexingPolicy.indexableServiceRoutes);
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -36,7 +38,10 @@ for (const file of htmlFiles) {
   if (titles.has(title)) fail(`${rel(file)} duplicates title from ${titles.get(title)}`); else titles.set(title, rel(file));
   if (descriptions.has(description)) fail(`${rel(file)} duplicates description from ${descriptions.get(description)}`); else descriptions.set(description, rel(file));
   if (!source.includes(`rel="canonical" href="${productionOrigin}`)) fail(`${rel(file)} lacks production-domain canonical`);
-  if (!source.includes('<meta name="robots" content="index,follow">')) fail(`${rel(file)} lacks production indexing directive`);
+  const route = rel(file).replace(/index\.html$/, '');
+  const isServiceLeaf = route.startsWith('services/') && route.split('/').filter(Boolean).length === 3;
+  const expectedRobots = isServiceLeaf && !indexableServiceRoutes.has(route) ? 'noindex,follow' : 'index,follow';
+  if (!source.includes(`<meta name="robots" content="${expectedRobots}">`)) fail(`${rel(file)} lacks expected ${expectedRobots} directive`);
   if (source.includes('https://www.ellisservices.example/')) fail(`${rel(file)} retains the test domain`);
   const logoPattern = /<header class="site-header">[\s\S]*?<img class="brand-logo" src="[^"]*assets\/images\/ellis-services-group-logo\.png" alt="Ellis Services Group logo" width="1237" height="1272">[\s\S]*?<\/header>/;
   if (!logoPattern.test(source)) fail(`${rel(file)} does not use the official header logo`);
@@ -44,10 +49,6 @@ for (const file of htmlFiles) {
   if ((source.match(/<span class="brand-name">Ellis Services Group<\/span>/g) || []).length !== 1) fail(`${rel(file)} must show the company name beside the header logo`);
   if ((source.match(/href="tel:\+61403069685"/g) || []).length < 2) fail(`${rel(file)} must expose the confirmed phone link in header and footer`);
   if ((source.match(/0403 069 685/g) || []).length < 2) fail(`${rel(file)} must display the confirmed phone number in header and footer`);
-  if (!source.includes('mailto:handyman.maintenance.au@outlook.com')) fail(`${rel(file)} must expose the confirmed email address in the footer`);
-  if (!source.includes('140 St Georges Terrace, Perth WA 6000')) fail(`${rel(file)} must expose the confirmed Perth address in the footer`);
-  if (source.includes('Local website candidate only. No online form data is transmitted.')) fail(`${rel(file)} retains obsolete demo-only footer wording`);
-  if (source.includes('"@type":"Organization"') && (!source.includes('"email":"handyman.maintenance.au@outlook.com"') || !source.includes('"streetAddress":"140 St Georges Terrace"'))) fail(`${rel(file)} lacks the confirmed organization contact structured data`);
   const prohibitedAssetDisclosure = /AI-generated|illustrative concept|not evidence|concept candidate|not (?:a |an )?real (?:customer|project|employee|provider|property|advice session)/i;
   if (prohibitedAssetDisclosure.test(source)) fail(`${rel(file)} retains a customer-visible material disclaimer phrase`);
 
@@ -59,9 +60,7 @@ for (const file of htmlFiles) {
     const value = match[1];
     if (/^(?:https?:|data:|#|mailto:|tel:)/.test(value)) continue;
     const clean = value.split(/[?#]/)[0];
-    let target = clean.startsWith('/')
-      ? path.join(root, clean.slice(1))
-      : path.resolve(path.dirname(file), clean || '.');
+    let target = path.resolve(path.dirname(file), clean || '.');
     if (clean.endsWith('/')) target = path.join(target, 'index.html');
     if (!fs.existsSync(target)) fail(`${rel(file)} has broken local reference: ${value}`);
     checkedLinks += 1;
@@ -86,16 +85,14 @@ if (!css.includes('@media(max-width:1100px){.header-call strong{display:none}}')
 const contact = fs.readFileSync(path.join(root, 'contact/index.html'), 'utf8');
 if (!/<form[^>]+data-contact-form[^>]+novalidate/.test(contact)) fail('Contact form must use local novalidate behavior');
 if (/<form[^>]+action=/.test(contact)) fail('Contact form unexpectedly has a submission action');
-if (!contact.includes('data-contact-endpoint="/api/contact"')) fail('Contact form lacks the server-side delivery endpoint');
-if (!contact.includes('name="website"')) fail('Contact form lacks the anti-spam honeypot field');
+if (!contact.includes('does not transmit or store them')) fail('Contact page lacks explicit non-transmission message');
 if (!contact.includes('name="postcode"')) fail('Contact page lacks the local location-prefill field');
 if (!contact.includes('name="phone"') || !contact.includes('data-error="phone"')) fail('Contact page lacks the required phone field and local error target');
-if (!contact.includes('Online delivery is enabled once Resend is configured for this deployment.')) fail('Contact page lacks accurate delivery configuration wording');
-if (!contact.includes('handyman.maintenance.au@outlook.com') || !contact.includes('140 St Georges Terrace, Perth WA 6000')) fail('Contact page lacks confirmed direct contact details');
+if (!contact.includes('No recipient or sending service is configured')) fail('Contact page overstates the current delivery state');
 if ((contact.match(/href="tel:\+61403069685"/g) || []).length < 3) fail('Contact page lacks its dedicated confirmed phone link');
 
 const formConfig = fs.readFileSync(path.join(root, 'data/form-config.js'), 'utf8');
-if (!formConfig.includes("endpoint:'/api/contact'")) fail('Form delivery endpoint contract is incomplete');
+if (!formConfig.includes("recipient:''") || !formConfig.includes("endpoint:''") || !formConfig.includes('enabled:false')) fail('Form delivery recipient/endpoint contract is incomplete');
 
 const notFound = fs.readFileSync(path.join(root, '404.html'), 'utf8');
 if (!notFound.includes('404 · Page not found') || !notFound.includes('data-service-search') || !notFound.includes('Return home')) fail('404 page lacks branded recovery controls');
