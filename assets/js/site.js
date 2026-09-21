@@ -68,10 +68,6 @@
     return { valid: Object.keys(errors).length === 0, errors };
   }
 
-  function contactPayload(values) {
-    return Object.fromEntries(['name', 'email', 'phone', 'postcode', 'service', 'message', 'website'].map((name) => [name, clean(values[name]) ]));
-  }
-
   function mergeContactHref(href, currentSearch) {
     const parts = String(href).split('?');
     const params = new URLSearchParams(parts[1] || '');
@@ -138,7 +134,7 @@
     if (prefill.service && [...form.elements.service.options].some((option) => option.value === prefill.service)) form.elements.service.value = prefill.service;
     if (prefill.location) form.elements.postcode.value = prefill.location;
     if (prefill.message) form.elements.message.value = prefill.message;
-    form.addEventListener('submit', async (event) => {
+    form.addEventListener('submit', (event) => {
       event.preventDefault();
       const values = Object.fromEntries(new FormData(form));
       const result = validateContact(values);
@@ -155,27 +151,8 @@
         form.querySelector('[aria-invalid="true"]').focus();
         return;
       }
-      const submit = form.querySelector('[type="submit"]');
-      const previousLabel = submit.textContent;
-      submit.disabled = true;
-      submit.textContent = 'Sending…';
-      status.textContent = 'Sending your enquiry…';
-      try {
-        const response = await fetch(form.dataset.contactEndpoint || '/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(contactPayload(values)),
-        });
-        const body = await response.json().catch(() => ({}));
-        if (!response.ok) throw new Error(body.error || 'We could not send your enquiry just now. Please call 0403 069 685.');
-        status.textContent = body.message || 'Thanks. Your enquiry has been received.';
-        form.reset();
-      } catch (error) {
-        status.textContent = error.message || 'We could not send your enquiry just now. Please call 0403 069 685.';
-      } finally {
-        submit.disabled = false;
-        submit.textContent = previousLabel;
-      }
+      status.textContent = 'Details checked locally. No recipient or sending service is configured, so your enquiry was not sent.';
+      form.reset();
     });
   }
 
@@ -219,5 +196,5 @@
     });
   }
 
-  return { resolveServiceSearch, validateContact, contactPayload, findService, mergeContactHref, buildContactPrefill };
+  return { resolveServiceSearch, validateContact, findService, mergeContactHref, buildContactPrefill };
 });
