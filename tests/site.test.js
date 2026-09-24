@@ -198,6 +198,27 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
   assert.doesNotMatch(verification, /G-QDLBD5EN3B/);
 });
 
+test('uses the company favicon on every customer-facing HTML page', () => {
+  const root = path.join(__dirname, '..');
+  const customerPages = [];
+  const walk = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      if (entry.name === '.git' || entry.name === '.superpowers' || entry.name === 'node_modules') continue;
+      const target = path.join(directory, entry.name);
+      if (entry.isDirectory()) walk(target);
+      if (entry.isFile() && entry.name.endsWith('.html') && entry.name !== 'google28003a8fb6bb282a.html') customerPages.push(target);
+    }
+  };
+  walk(root);
+  assert.ok(customerPages.length > 0);
+  for (const page of customerPages) {
+    const html = fs.readFileSync(page, 'utf8');
+    const faviconPath = path.relative(path.dirname(page), path.join(root, 'assets/images/favicon-32.png')).replace(/\\/g, '/');
+    assert.ok(html.includes(`<link rel="icon" href="${faviconPath}">`), path.relative(root, page));
+    assert.doesNotMatch(html, /<link rel="icon" href="data:,">/, path.relative(root, page));
+  }
+});
+
 test('places an OpenStreetMap office map below the homepage call to action with a Google Maps fallback link', () => {
   const home = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
   const ctaEnd = home.indexOf('</section>', home.indexOf('<section class="cta-band">'));
