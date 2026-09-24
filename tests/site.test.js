@@ -216,7 +216,7 @@ test('exposes the Ellis Services Group Instagram profile from the homepage foote
   const home = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
   const styles = fs.readFileSync(path.join(__dirname, '../assets/css/global.css'), 'utf8');
   assert.match(home, /<div class="footer-social-links">/);
-  assert.match(home, /<a class="footer-instagram" href="https:\/\/www\.instagram\.com\/elliservices_group\/" target="_blank" rel="noopener noreferrer" aria-label="Follow Ellis Services Group on Instagram">/);
+  assert.match(home, /<a class="footer-instagram" href="https:\/\/www\.instagram\.com\/elliservices_group\/" target="_blank" rel="noopener noreferrer" aria-label="Follow Ellis Services Group on Instagram" style="display:inline-flex;flex-direction:row;align-items:center;gap:6px">/);
   assert.match(home, /<img src="\.\/assets\/images\/instagram-icon\.png" alt="" width="18" height="18">/);
   assert.match(home, /<span>Instagram<\/span>/);
   assert.match(styles, /\.site-footer \.footer-social-links\{display:flex/);
