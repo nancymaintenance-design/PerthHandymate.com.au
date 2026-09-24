@@ -195,6 +195,19 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
   assert.doesNotMatch(verification, /G-QDLBD5EN3B/);
 });
 
+test('places the Perth office map below the homepage call to action with an accessible Maps link', () => {
+  const home = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
+  const ctaEnd = home.indexOf('</section>', home.indexOf('<section class="cta-band">'));
+  const officeStart = home.indexOf('<section class="office-location"');
+
+  assert.ok(officeStart > ctaEnd, 'office location follows the homepage call to action');
+  assert.match(home, /<h2[^>]*>Visit our Perth office<\/h2>/);
+  assert.match(home, /140 St Georges Terrace<br>Perth WA 6000/);
+  assert.match(home, /<iframe[^>]+title="Map showing the Ellis Services Group Perth office"/);
+  assert.match(home, /href="https:\/\/www\.google\.com\/maps\/place\/140\+St\+Georges\+Terrace/);
+  assert.match(home, /target="_blank"[^>]*>Open in Google Maps/);
+});
+
 test('keeps all service pages live while focusing indexation, sitemap and homepage promotion on the approved core', () => {
   const policy = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/indexing-policy.json'), 'utf8'));
   const root = path.join(__dirname, '..');
