@@ -198,7 +198,7 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
   assert.doesNotMatch(verification, /G-QDLBD5EN3B/);
 });
 
-test('places the Perth office map below the homepage call to action with an accessible Maps link', () => {
+test('places an OpenStreetMap office map below the homepage call to action with a Google Maps fallback link', () => {
   const home = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
   const ctaEnd = home.indexOf('</section>', home.indexOf('<section class="cta-band">'));
   const officeStart = home.indexOf('<section class="office-location"');
@@ -206,7 +206,8 @@ test('places the Perth office map below the homepage call to action with an acce
   assert.ok(officeStart > ctaEnd, 'office location follows the homepage call to action');
   assert.match(home, /<h2[^>]*>Visit our Perth office<\/h2>/);
   assert.match(home, /140 St Georges Terrace<br>Perth WA 6000/);
-  assert.match(home, /<iframe[^>]+title="Map showing the Ellis Services Group Perth office"/);
+  assert.match(home, /<iframe[^>]+title="Map showing the Ellis Services Group Perth office"[^>]+src="https:\/\/www\.openstreetmap\.org\/export\/embed\.html\?bbox=/);
+  assert.doesNotMatch(home, /<iframe[^>]+src="https:\/\/www\.google\.com\/maps/);
   assert.match(home, /href="https:\/\/www\.google\.com\/maps\/place\/140\+St\+Georges\+Terrace/);
   assert.match(home, /target="_blank"[^>]*>Open in Google Maps/);
 });
