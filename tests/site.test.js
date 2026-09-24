@@ -275,7 +275,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   walk(path.join(root, 'services'));
   assert.equal(leafRoutes.length, 67, 'existing service URLs must remain live');
   assert.equal(policy.indexableServiceRoutes.length, 15);
-  assert.equal(policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length, 42);
+  assert.equal(policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + 1, 43);
 
   const indexable = new Set(policy.indexableServiceRoutes);
   for (const route of leafRoutes) {
@@ -285,7 +285,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   }
 
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 42);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 43);
   for (const route of policy.indexableServiceRoutes) assert.match(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
   for (const route of leafRoutes.filter((route) => !indexable.has(route))) assert.doesNotMatch(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
 
