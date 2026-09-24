@@ -21,11 +21,11 @@ function fail(message) { failures.push(message); }
 function rel(file) { return path.relative(root, file).replace(/\\/g, '/'); }
 
 walk(root);
-if (htmlFiles.length !== 98) fail(`Expected 98 HTML pages, found ${htmlFiles.length}`);
+if (htmlFiles.length !== 99) fail(`Expected 99 HTML pages, found ${htmlFiles.length}`);
 
 const titles = new Map();
 const descriptions = new Map();
-const expectedNav = ['Home', 'Services', 'Areas We Service', 'Guides & Advice', 'Contact Us'];
+const expectedNav = ['Home', 'Services', 'Areas We Service', 'About Us', 'Guides & Advice', 'Contact Us'];
 let checkedLinks = 0;
 let jsonLdBlocks = 0;
 
@@ -222,6 +222,11 @@ if (!robots.includes('Allow: /') || robots.includes('Disallow: /')) fail('robots
 if (!robots.includes(`Sitemap: ${productionOrigin}sitemap.xml`)) fail('robots.txt lacks the production sitemap URL');
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 if (sitemap.includes('https://www.ellisservices.example/') || !sitemap.includes(`<loc>${productionOrigin}`)) fail('sitemap.xml does not consistently use the production domain');
+
+const about = fs.readFileSync(path.join(root, 'about/index.html'), 'utf8');
+if (!about.includes('https://www.perthhandymate.com.au/about/')) fail('About page lacks production canonical');
+if (!about.includes('https://abr.business.gov.au/ABN/View?id=645821745')) fail('About page lacks the supplied ABR lookup');
+if (!sitemap.includes('<loc>https://www.perthhandymate.com.au/about/</loc>')) fail('sitemap.xml lacks the About URL');
 
 notes.push(`HTML pages: ${htmlFiles.length}`);
 notes.push(`Unique titles: ${titles.size}`);

@@ -188,7 +188,7 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
     }
   };
   walk(path.join(__dirname, '..'));
-  assert.equal(customerPages.length, 98, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 99, 'customer-facing page inventory changed unexpectedly');
   for (const page of customerPages) {
     const html = fs.readFileSync(page, 'utf8');
     assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-QDLBD5EN3B/, page);
@@ -243,6 +243,19 @@ test('exposes the Ellis Services Group Instagram profile from the homepage foote
   assert.match(styles, /\.site-footer \.footer-social-links\{display:flex/);
   assert.match(styles, /\.site-footer \.footer-instagram\{display:inline-flex/);
   assert.doesNotMatch(home, /<a class="footer-instagram"[^>]*>\s*<svg/);
+});
+
+test('publishes a company-led About page with confirmed contact details and an ABR lookup', () => {
+  const about = fs.readFileSync(path.join(__dirname, '../about/index.html'), 'utf8');
+  assert.match(about, /<title>About Ellis Services Group \| Perth Property Services<\/title>/);
+  assert.match(about, /<link rel="canonical" href="https:\/\/www\.perthhandymate\.com\.au\/about\/">/);
+  assert.match(about, /<h1>About Ellis Services Group<\/h1>/);
+  assert.match(about, /140 St Georges Terrace, Perth WA 6000/);
+  assert.match(about, /href="tel:\+61403069685"/);
+  assert.match(about, /mailto:handyman\.maintenance\.au@outlook\.com/);
+  assert.match(about, /href="https:\/\/abr\.business\.gov\.au\/ABN\/View\?id=645821745" target="_blank" rel="noopener noreferrer"/);
+  assert.match(about, />View our ABR record<\/a>/);
+  assert.doesNotMatch(about, /insured|insurance policy|licen[cs]e number|policy limit/i);
 });
 
 test('keeps all service pages live while focusing indexation, sitemap and homepage promotion on the approved core', () => {
