@@ -11,7 +11,7 @@ const indexableServiceRoutes = new Set(indexingPolicy.indexableServiceRoutes);
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === 'tests' || entry.name === 'google28003a8fb6bb282a.html') continue;
+    if (entry.name === 'tests' || entry.name === '.git' || entry.name === '.superpowers' || entry.name === 'node_modules' || entry.name === 'google28003a8fb6bb282a.html') continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full);
     else if (entry.name.endsWith('.html')) htmlFiles.push(full);

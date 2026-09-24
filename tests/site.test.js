@@ -180,7 +180,10 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
   const walk = (directory) => {
     for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
       const target = path.join(directory, entry.name);
-      if (entry.isDirectory()) walk(target);
+      if (entry.isDirectory()) {
+        if (entry.name === '.git' || entry.name === '.superpowers' || entry.name === 'node_modules') continue;
+        walk(target);
+      }
       if (entry.isFile() && entry.name.endsWith('.html') && entry.name !== 'google28003a8fb6bb282a.html') customerPages.push(target);
     }
   };
@@ -206,6 +209,12 @@ test('places the Perth office map below the homepage call to action with an acce
   assert.match(home, /<iframe[^>]+title="Map showing the Ellis Services Group Perth office"/);
   assert.match(home, /href="https:\/\/www\.google\.com\/maps\/place\/140\+St\+Georges\+Terrace/);
   assert.match(home, /target="_blank"[^>]*>Open in Google Maps/);
+});
+
+test('exposes the Ellis Services Group Instagram profile from the homepage footer', () => {
+  const home = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
+  assert.match(home, /<a class="footer-instagram" href="https:\/\/www\.instagram\.com\/elliservices_group\/" target="_blank" rel="noopener noreferrer" aria-label="Follow Ellis Services Group on Instagram">/);
+  assert.match(home, /<svg[^>]*aria-hidden="true"[^>]*>/);
 });
 
 test('keeps all service pages live while focusing indexation, sitemap and homepage promotion on the approved core', () => {
