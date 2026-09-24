@@ -181,7 +181,7 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
     for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
       const target = path.join(directory, entry.name);
       if (entry.isDirectory()) {
-        if (entry.name === '.git' || entry.name === '.superpowers' || entry.name === 'node_modules') continue;
+        if (entry.name === '.git' || entry.name === '.superpowers' || entry.name === '.worktrees' || entry.name === 'node_modules') continue;
         walk(target);
       }
       if (entry.isFile() && entry.name.endsWith('.html') && entry.name !== 'google28003a8fb6bb282a.html') customerPages.push(target);
@@ -203,7 +203,7 @@ test('uses the company favicon on every customer-facing HTML page', () => {
   const customerPages = [];
   const walk = (directory) => {
     for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
-      if (entry.name === '.git' || entry.name === '.superpowers' || entry.name === 'node_modules') continue;
+      if (entry.name === '.git' || entry.name === '.superpowers' || entry.name === '.worktrees' || entry.name === 'node_modules') continue;
       const target = path.join(directory, entry.name);
       if (entry.isDirectory()) walk(target);
       if (entry.isFile() && entry.name.endsWith('.html') && entry.name !== 'google28003a8fb6bb282a.html') customerPages.push(target);
