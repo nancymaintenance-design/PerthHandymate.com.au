@@ -202,7 +202,7 @@ const allGuideSource = guidePages.map((file) => fs.readFileSync(file, 'utf8')).j
 if (allGuideSource.split(oldGuideSentence).length - 1 !== 0) fail('Old guide scope sentence remains in guide pages');
 if (allGuideSource.split(newGuideSentence).length - 1 !== 8) fail('New on-site assessment guide sentence must appear on all 8 guide pages');
 
-for (const asset of ['ellis-services-group-logo.png','hero-homepage-v2.png','icon-electrician.png','icon-plumber.png','icon-air-conditioning.png','icon-handyman.png','icon-roofing.png','icon-lawn-mowing.png','icon-house-painting.png','icon-bathroom.png','support-service-network.png','support-property-manager.png','support-guides-advice.png']) {
+for (const asset of ['ellis-services-group-logo.png','hero-homepage-v2.png','icon-electrician.png','icon-plumber.png','icon-air-conditioning.png','icon-handyman.png','icon-carpentry.png','icon-fly-screen-repairs.png','icon-window-repairs.png','icon-tiling.png','icon-roofing.png','icon-lawn-mowing.png','icon-house-painting.png','icon-bathroom.png','support-service-network.png','support-property-manager.png','support-guides-advice.png']) {
   if (!fs.existsSync(path.join(root, 'assets/images', asset))) fail(`Missing image asset: ${asset}`);
 }
 

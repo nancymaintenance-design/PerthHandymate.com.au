@@ -313,11 +313,15 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   assert.equal((popular.match(/class="service-card popular-card"/g) || []).length, 8);
   for (const [route, icon] of [
     ['services/handyman-interiors-appliance-repairs/handymen/', 'icon-handyman.png'],
-    ['services/handyman-interiors-appliance-repairs/carpenters/', 'icon-handyman.png'],
+    ['services/handyman-interiors-appliance-repairs/carpenters/', 'icon-carpentry.png'],
     ['services/doors-windows-glass-screens/door-installation/', 'icon-bathroom.png'],
-    ['services/doors-windows-glass-screens/fly-screens/', 'icon-bathroom.png'],
-    ['services/doors-windows-glass-screens/window-repairs/', 'icon-bathroom.png'],
+    ['services/doors-windows-glass-screens/fly-screens/', 'icon-fly-screen-repairs.png'],
+    ['services/doors-windows-glass-screens/window-repairs/', 'icon-window-repairs.png'],
+    ['services/handyman-interiors-appliance-repairs/tiling/', 'icon-tiling.png'],
+    ['services/roofing-gutters-exterior/house-painters/', 'icon-house-painting.png'],
+    ['services/gardens-landscaping/garden-clean-up/', 'icon-lawn-mowing.png'],
   ]) {
+    assert.ok(fs.existsSync(path.join(root, 'assets/images', icon)), `missing ${icon}`);
     assert.match(
       popular,
       new RegExp(`<article class="service-card popular-card"><img src="\\./assets/images/${icon}"[^>]*>[\\s\\S]*?href="\\./${route}index\\.html"`),
