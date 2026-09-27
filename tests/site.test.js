@@ -79,6 +79,23 @@ test('search catalog contains only the approved 15 core services', () => {
   assert.equal(resolveServiceSearch('roofing', '6000').matched, false);
 });
 
+test('prioritises Perth service intent on the five primary SEO landing pages', () => {
+  const pages = [
+    ['services/handyman-interiors-appliance-repairs/handymen/index.html', 'Handyman Services Perth | Repairs & Property Maintenance | Ellis Services Group', 'Handyman Services in Perth', 'Handyman services in Perth for minor repairs, maintenance, assembly and property fixes. Share your task and location with Ellis Services Group.'],
+    ['services/handyman-interiors-appliance-repairs/carpenters/index.html', 'Carpentry Services Perth | Repairs, Doors & Joinery | Ellis Services Group', 'Carpentry Services in Perth', 'Carpentry services in Perth for timber repairs, doors, trim, fitted storage and scoped home improvements. Start your enquiry with Ellis Services Group.'],
+    ['services/roofing-gutters-exterior/gutter-services/index.html', 'Gutter Cleaning & Repairs Perth | Ellis Services Group', 'Gutter Cleaning & Repairs in Perth', 'Gutter cleaning and repair services in Perth for blocked, leaking or damaged gutters and downpipes. Share your property details with Ellis Services Group.'],
+    ['services/doors-windows-glass-screens/door-installation/index.html', 'Door Installation Perth | Internal & External Doors | Ellis Services Group', 'Door Installation in Perth', 'Door installation services in Perth for internal and external doors, frames, hardware and adjustments. Share your door requirements with Ellis Services Group.'],
+    ['services/handyman-interiors-appliance-repairs/ikea-kitchens/index.html', 'IKEA Kitchen Installation Perth | Ellis Services Group', 'IKEA Kitchen Installation in Perth', 'IKEA kitchen installation services in Perth for confirmed modular kitchen plans, cabinet assembly and fitting coordination. Contact Ellis Services Group.'],
+  ];
+
+  for (const [file, title, h1, description] of pages) {
+    const page = fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
+    assert.ok(page.includes(`<title>${title}</title>`), `${file} title`);
+    assert.ok(page.includes(`<h1>${h1}</h1>`), `${file} H1`);
+    assert.ok(page.includes(`<meta name="description" content="${description}">`), `${file} description`);
+  }
+});
+
 test('canonical detail content has no exact summary or common-task-group reuse', () => {
   const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/service-catalog.json'), 'utf8'));
   const summaries = catalog.canonicalServices.map((item) => item.summary.trim().toLowerCase());
