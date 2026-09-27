@@ -245,7 +245,7 @@ test('exposes the Ellis Services Group Instagram profile from the homepage foote
   assert.doesNotMatch(home, /<a class="footer-instagram"[^>]*>\s*<svg/);
 });
 
-test('publishes company registration identifiers without an ABR lookup', () => {
+test('publishes company registration identifiers with the official ABR lookup', () => {
   const about = fs.readFileSync(path.join(__dirname, '../about/index.html'), 'utf8');
   assert.match(about, /<title>About Ellis Services Group \| Perth Property Services<\/title>/);
   assert.match(about, /<link rel="canonical" href="https:\/\/www\.perthhandymate\.com\.au\/about\/">/);
@@ -256,7 +256,7 @@ test('publishes company registration identifiers without an ABR lookup', () => {
   assert.match(about, /<h3>Company Registration<\/h3>/);
   assert.match(about, /<strong>ABN<\/strong><br>96 645 821 745/);
   assert.match(about, /<strong>ACN<\/strong><br>645 821 745/);
-  assert.doesNotMatch(about, /abr\.business\.gov\.au/);
+  assert.match(about, /href="https:\/\/abr\.business\.gov\.au\/ABN\/View\?id=645821745"[\s\S]*?>View our ABR record/);
   assert.doesNotMatch(about, /insured|insurance policy|licen[cs]e number|policy limit/i);
 });
 

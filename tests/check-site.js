@@ -226,7 +226,7 @@ if (sitemap.includes('https://www.ellisservices.example/') || !sitemap.includes(
 const about = fs.readFileSync(path.join(root, 'about/index.html'), 'utf8');
 if (!about.includes('https://www.perthhandymate.com.au/about/')) fail('About page lacks production canonical');
 if (!about.includes('96 645 821 745') || !about.includes('645 821 745')) fail('About page lacks the confirmed ABN and ACN');
-if (about.includes('abr.business.gov.au')) fail('About page must not retain the removed ABR lookup');
+if (!about.includes('https://abr.business.gov.au/ABN/View?id=645821745')) fail('About page lacks the official ABR lookup');
 if (!sitemap.includes('<loc>https://www.perthhandymate.com.au/about/</loc>')) fail('sitemap.xml lacks the About URL');
 
 notes.push(`HTML pages: ${htmlFiles.length}`);
