@@ -213,7 +213,7 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
     }
   };
   walk(path.join(__dirname, '..'));
-  assert.equal(customerPages.length, 99, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 100, 'customer-facing page inventory changed unexpectedly');
   for (const page of customerPages) {
     const html = fs.readFileSync(page, 'utf8');
     assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-QDLBD5EN3B/, page);
@@ -302,7 +302,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   walk(path.join(root, 'services'));
   assert.equal(leafRoutes.length, 67, 'existing service URLs must remain live');
   assert.equal(policy.indexableServiceRoutes.length, 15);
-  assert.equal(policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + 1, 43);
+  assert.equal(policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + 2, 44);
 
   const indexable = new Set(policy.indexableServiceRoutes);
   for (const route of leafRoutes) {
@@ -312,7 +312,8 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   }
 
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 43);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 44);
+  assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/roof-and-gutter-maintenance\//);
   for (const route of policy.indexableServiceRoutes) assert.match(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
   for (const route of leafRoutes.filter((route) => !indexable.has(route))) assert.doesNotMatch(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
 
@@ -345,4 +346,22 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
     'services/gardens-landscaping/lawn-mowing/',
     'services/building-renovation-structural/bathroom/',
   ]) assert.doesNotMatch(popular, new RegExp(`href="\\./${retiredRoute}index\\.html"`));
+});
+
+test('publishes the roof and gutter maintenance case study from the homepage', () => {
+  const root = path.join(__dirname, '..');
+  const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const caseStudy = fs.readFileSync(path.join(root, 'projects/roof-and-gutter-maintenance/index.html'), 'utf8');
+
+  assert.match(home, /href="\.\/projects\/roof-and-gutter-maintenance\/index\.html"/);
+  assert.match(home, /Roof &amp; gutter maintenance/);
+  assert.ok(caseStudy.includes('<h1>Roof &amp; gutter maintenance</h1>'));
+  assert.match(caseStudy, /Before, during and completed/);
+  assert.match(caseStudy, /services\/roofing-gutters-exterior\/index\.html/);
+  assert.match(caseStudy, /contact\/index\.html\?service=Roofing%2C%20gutters%20%26%20exterior/);
+
+  for (const asset of ['roof-gutter-before.png', 'roof-gutter-during.png', 'roof-gutter-completed.png', 'roof-gutter-detail.png']) {
+    const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
+    assert.ok(image.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10])), `${asset} must be a PNG`);
+  }
 });
