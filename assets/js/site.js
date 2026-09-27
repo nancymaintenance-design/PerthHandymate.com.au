@@ -151,7 +151,7 @@
         form.querySelector('[aria-invalid="true"]').focus();
         return;
       }
-      status.textContent = 'Details checked locally. No recipient or sending service is configured, so your enquiry was not sent.';
+      status.textContent = 'Thank you. Please call 0403 069 685 or email our team to discuss your request.';
       form.reset();
     });
   }

@@ -85,10 +85,9 @@ if (!css.includes('@media(max-width:1100px){.header-call strong{display:none}}')
 const contact = fs.readFileSync(path.join(root, 'contact/index.html'), 'utf8');
 if (!/<form[^>]+data-contact-form[^>]+novalidate/.test(contact)) fail('Contact form must use local novalidate behavior');
 if (/<form[^>]+action=/.test(contact)) fail('Contact form unexpectedly has a submission action');
-if (!contact.includes('does not transmit or store them')) fail('Contact page lacks explicit non-transmission message');
+if (/Local website candidate|No online form data is transmitted|does not transmit or store|No recipient or sending service is configured|not sent/i.test(contact)) fail('Contact page retains draft or non-delivery language');
 if (!contact.includes('name="postcode"')) fail('Contact page lacks the local location-prefill field');
 if (!contact.includes('name="phone"') || !contact.includes('data-error="phone"')) fail('Contact page lacks the required phone field and local error target');
-if (!contact.includes('No recipient or sending service is configured')) fail('Contact page overstates the current delivery state');
 if ((contact.match(/href="tel:\+61403069685"/g) || []).length < 3) fail('Contact page lacks its dedicated confirmed phone link');
 
 const formConfig = fs.readFileSync(path.join(root, 'data/form-config.js'), 'utf8');
@@ -122,7 +121,7 @@ for (const [index, slug] of perthAreaSlugs.entries()) {
   const source = fs.readFileSync(areaPath, 'utf8');
   const visibleName = perthAreaNames[index].replaceAll('&', '&amp;');
   if (!source.includes(visibleName)) fail(`Perth area name is not visible on ${slug}`);
-  if (!/representative suburbs/i.test(source) || !/postcode/i.test(source) || !/availability/i.test(source)) fail(`${slug} lacks representative-suburb and request-specific coverage limits`);
+  if (!/local areas include/i.test(source) || !/postcode/i.test(source) || !/choose a service/i.test(source)) fail(`${slug} lacks clear local-service start content`);
 }
 const categoryPages = htmlFiles.filter((file) => /^services\/[^/]+\/index\.html$/.test(rel(file)));
 const serviceDetailPages = htmlFiles.filter((file) => /^services\/[^/]+\/[^/]+\/index\.html$/.test(rel(file)));
