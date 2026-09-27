@@ -213,7 +213,7 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
     }
   };
   walk(path.join(__dirname, '..'));
-  assert.equal(customerPages.length, 101, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 102, 'customer-facing page inventory changed unexpectedly');
   for (const page of customerPages) {
     const html = fs.readFileSync(page, 'utf8');
     assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-QDLBD5EN3B/, page);
@@ -302,7 +302,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   walk(path.join(root, 'services'));
   assert.equal(leafRoutes.length, 67, 'existing service URLs must remain live');
   assert.equal(policy.indexableServiceRoutes.length, 15);
-  assert.equal(policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + 3, 45);
+  assert.equal(policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + 4, 46);
 
   const indexable = new Set(policy.indexableServiceRoutes);
   for (const route of leafRoutes) {
@@ -312,9 +312,10 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   }
 
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 45);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 46);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/roof-and-gutter-maintenance\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/exterior-timber-window-door-repair\//);
+  assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/bathroom-tile-shower-repair\//);
   for (const route of policy.indexableServiceRoutes) assert.match(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
   for (const route of leafRoutes.filter((route) => !indexable.has(route))) assert.doesNotMatch(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
 
@@ -379,6 +380,23 @@ test('publishes the exterior timber window and door repair case study from the h
   assert.match(caseStudy, /services\/handyman-interiors-appliance-repairs\/carpenters\/index\.html/);
 
   for (const asset of ['timber-repair-before.png', 'timber-repair-damage.png', 'timber-repair-during.png', 'timber-repair-completed.png']) {
+    const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
+    assert.ok(image.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10])), `${asset} must be a PNG`);
+  }
+});
+
+test('publishes the bathroom tile and shower area repair case study from the homepage', () => {
+  const root = path.join(__dirname, '..');
+  const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const caseStudy = fs.readFileSync(path.join(root, 'projects/bathroom-tile-shower-repair/index.html'), 'utf8');
+
+  assert.match(home, /href="\.\/projects\/bathroom-tile-shower-repair\/index\.html"/);
+  assert.match(home, /Bathroom tile &amp; shower area repair/);
+  assert.ok(caseStudy.includes('<h1>Bathroom tile &amp; shower area repair</h1>'));
+  assert.match(caseStudy, /Before, repair and completed/);
+  assert.match(caseStudy, /services\/handyman-interiors-appliance-repairs\/tiling\/index\.html/);
+
+  for (const asset of ['bathroom-repair-before.png', 'bathroom-repair-damage.png', 'bathroom-repair-during.png', 'bathroom-repair-completed.png']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
     assert.ok(image.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10])), `${asset} must be a PNG`);
   }
