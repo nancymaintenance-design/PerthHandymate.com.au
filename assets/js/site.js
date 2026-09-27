@@ -85,7 +85,7 @@
     const query = clean(params.get('q'));
     return {
       service: clean(params.get('service')),
-      location: clean(params.get('postcode')) || clean(params.get('suburb')),
+      location: clean(params.get('postcode')) || clean(params.get('suburb')) || clean(params.get('location')),
       message: query ? `Service request: ${query}` : '',
     };
   }

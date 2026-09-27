@@ -192,6 +192,14 @@ test('builds local contact prefills from canonical service and postcode paramete
   });
 });
 
+test('prefills contact from a selected regional service project', () => {
+  assert.deepEqual(buildContactPrefill('?service=Electrical%2C+plumbing%2C+gas+%26+air+conditioning&location=Perth+CBD+%26+Inner+Suburbs&q=Essential+systems'), {
+    service: 'Electrical, plumbing, gas & air conditioning',
+    location: 'Perth CBD & Inner Suburbs',
+    message: 'Service request: Essential systems',
+  });
+});
+
 test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
   const customerPages = [];
   const walk = (directory) => {
