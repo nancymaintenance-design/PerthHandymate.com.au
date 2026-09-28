@@ -213,7 +213,7 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
     }
   };
   walk(path.join(__dirname, '..'));
-  assert.equal(customerPages.length, 105, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 106, 'customer-facing page inventory changed unexpectedly');
   for (const page of customerPages) {
     const html = fs.readFileSync(page, 'utf8');
     assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-QDLBD5EN3B/, page);
@@ -302,7 +302,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   walk(path.join(root, 'services'));
   assert.equal(leafRoutes.length, 67, 'existing service URLs must remain live');
   assert.equal(policy.indexableServiceRoutes.length, 15);
-  assert.equal(policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + 7, 49);
+  assert.equal(policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + 8, 50);
 
   const indexable = new Set(policy.indexableServiceRoutes);
   for (const route of leafRoutes) {
@@ -312,13 +312,14 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   }
 
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 49);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 50);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/roof-and-gutter-maintenance\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/exterior-timber-window-door-repair\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/bathroom-tile-shower-repair\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/garden-clean-up\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/interior-wall-repair-painting\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/sliding-door-flyscreen-repair\//);
+  assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/timber-fence-repair\//);
   for (const route of policy.indexableServiceRoutes) assert.match(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
   for (const route of leafRoutes.filter((route) => !indexable.has(route))) assert.doesNotMatch(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
 
@@ -451,6 +452,21 @@ test('publishes the sliding door flyscreen repair case study from the homepage',
   assert.match(caseStudy, /services\/doors-windows-glass-screens\/fly-screens\/index\.html/);
 
   for (const asset of ['flyscreen-before.jpg', 'flyscreen-detail.jpg', 'flyscreen-during.jpg', 'flyscreen-completed.jpg']) {
+    const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
+    assert.ok(image.subarray(0, 3).equals(Buffer.from([255,216,255])), `${asset} must be a JPEG`);
+  }
+});
+
+test('publishes the timber fence repair case study from the homepage', () => {
+  const root = path.join(__dirname, '..');
+  const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const caseStudy = fs.readFileSync(path.join(root, 'projects/timber-fence-repair/index.html'), 'utf8');
+  assert.match(home, /href="\.\/projects\/timber-fence-repair\/index\.html"/);
+  assert.match(home, /Timber fence repair/);
+  assert.ok(caseStudy.includes('<h1>Timber fence repair</h1>'));
+  assert.match(caseStudy, /Before, repair and completed/);
+  assert.match(caseStudy, /services\/outdoor-structures-fencing-pools\/fence-builders\/index\.html/);
+  for (const asset of ['fence-before.jpg', 'fence-detail.jpg', 'fence-during.jpg', 'fence-completed.jpg']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
     assert.ok(image.subarray(0, 3).equals(Buffer.from([255,216,255])), `${asset} must be a JPEG`);
   }
