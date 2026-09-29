@@ -109,6 +109,8 @@ test('uses the core handyman services Perth phrase on the homepage', () => {
   assert.match(home, /<title>Handyman Services Perth \| Home Repairs & Maintenance \| Ellis Services Group<\/title>/);
   assert.match(home, /<h1>Handyman Services Perth for Home Repairs & Maintenance<\/h1>/);
   assert.match(home, /Handyman services in Perth for home repairs, maintenance and practical property fixes/);
+  assert.match(home, /<h2>Local Handyman Services in Perth<\/h2>/);
+  assert.match(home, /<h2>Home Maintenance To-Do List for Property Managers<\/h2>/);
   assert.doesNotMatch(home, /One request\.<br><em>One team accountable\.<\/em>/);
 });
 
