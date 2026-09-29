@@ -96,6 +96,14 @@ test('prioritises Perth service intent on the five primary SEO landing pages', (
   }
 });
 
+test('uses a search-led Perth handyman question on the services index', () => {
+  const services = fs.readFileSync(path.join(__dirname, '../services/index.html'), 'utf8');
+  assert.match(services, /<title>Find a Reliable Handyman in Perth \| Property Maintenance Services \| Ellis Services Group<\/title>/);
+  assert.match(services, /<h1>How do I find a reliable handyman in Perth\?<\/h1>/);
+  assert.match(services, /Looking for a reliable handyman in Perth\?/);
+  assert.doesNotMatch(services, /Property work, organised around how people ask for help/);
+});
+
 test('canonical detail content has no exact summary or common-task-group reuse', () => {
   const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/service-catalog.json'), 'utf8'));
   const summaries = catalog.canonicalServices.map((item) => item.summary.trim().toLowerCase());
