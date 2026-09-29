@@ -104,6 +104,14 @@ test('uses a search-led Perth handyman question on the services index', () => {
   assert.doesNotMatch(services, /Property work, organised around how people ask for help/);
 });
 
+test('uses the core handyman services Perth phrase on the homepage', () => {
+  const home = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
+  assert.match(home, /<title>Handyman Services Perth \| Home Repairs & Maintenance \| Ellis Services Group<\/title>/);
+  assert.match(home, /<h1>Handyman Services Perth for Home Repairs & Maintenance<\/h1>/);
+  assert.match(home, /Handyman services in Perth for home repairs, maintenance and practical property fixes/);
+  assert.doesNotMatch(home, /One request\.<br><em>One team accountable\.<\/em>/);
+});
+
 test('canonical detail content has no exact summary or common-task-group reuse', () => {
   const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/service-catalog.json'), 'utf8'));
   const summaries = catalog.canonicalServices.map((item) => item.summary.trim().toLowerCase());
