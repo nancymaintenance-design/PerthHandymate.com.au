@@ -122,6 +122,63 @@ test('uses the local handyman near me query on the areas index', () => {
   assert.doesNotMatch(areas, /Local Perth service pathways, coordinated through one team/);
 });
 
+test('replaces generic content headings with service, location or topic-led headings', () => {
+  const siteRoot = path.join(__dirname, '..');
+  const home = fs.readFileSync(path.join(siteRoot, 'index.html'), 'utf8');
+  for (const heading of [
+    'How Local Handyman Services in Perth Work',
+    'Perth Handyman Service Areas',
+    'Perth Handyman Repair & Maintenance Projects',
+    'Perth Home Maintenance Guides & Advice',
+  ]) assert.match(home, new RegExp(`<h2>${heading.replace(/[&]/g, '&amp;')}<\\/h2>`));
+
+  const categoryPages = [
+    'building-renovation-structural',
+    'cleaning-removals-pest-hazard',
+    'doors-windows-glass-screens',
+    'electrical-plumbing-gas-air-conditioning',
+    'gardens-landscaping',
+    'handyman-interiors-appliance-repairs',
+    'outdoor-structures-fencing-pools',
+    'planning-inspection-compliance',
+    'roofing-gutters-exterior',
+  ].map((slug) => fs.readFileSync(path.join(siteRoot, 'services', slug, 'index.html'), 'utf8'));
+  for (const page of categoryPages) {
+    assert.doesNotMatch(page, /<h2>(?:Choose the closest service|Start with the service, then confirm the postcode|What to include|Before you enquire)<\/h2>/);
+    assert.match(page, /<h2>Before Booking .+ Services in Perth<\/h2>/);
+  }
+
+  const catalog = JSON.parse(fs.readFileSync(path.join(siteRoot, 'data/service-catalog.json'), 'utf8')).canonicalServices;
+  for (const item of catalog) {
+    const page = fs.readFileSync(path.join(siteRoot, item.url, 'index.html'), 'utf8');
+    assert.doesNotMatch(page, /<h2>A practical route for /);
+    assert.match(page, /<h2>Finding .+ in Perth<\/h2>/);
+  }
+
+  for (const guide of [
+    'home-repair-priorities',
+    'how-to-find-the-right-home-repairer',
+    'photos-and-clear-scope-for-home-repairs',
+    'prepare-before-home-repair-quote',
+    'property-manager-maintenance-coordination',
+    'seasonal-home-maintenance-australia',
+    'understanding-service-areas-and-postcode-checks',
+    'when-home-maintenance-needs-a-licensed-trade',
+  ]) {
+    const page = fs.readFileSync(path.join(siteRoot, 'guides', guide, 'index.html'), 'utf8');
+    assert.doesNotMatch(page, /<h2>Questions from this guide<\/h2>/);
+    assert.match(page, /<h2>.+(?:Questions|FAQs)<\/h2>/);
+  }
+
+  const about = fs.readFileSync(path.join(siteRoot, 'about/index.html'), 'utf8');
+  const guides = fs.readFileSync(path.join(siteRoot, 'guides/index.html'), 'utf8');
+  const contact = fs.readFileSync(path.join(siteRoot, 'contact/index.html'), 'utf8');
+  assert.match(about, /<h2>How Perth Property Maintenance Requests Are Coordinated<\/h2>/);
+  assert.match(about, /<h2>Perth Handyman Service Request Process<\/h2>/);
+  assert.match(guides, /<h1>Perth Home Maintenance Guides &amp; Checklists<\/h1>/);
+  assert.match(contact, /<h1>Request Handyman Services in Perth<\/h1>/);
+});
+
 test('canonical detail content has no exact summary or common-task-group reuse', () => {
   const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/service-catalog.json'), 'utf8'));
   const summaries = catalog.canonicalServices.map((item) => item.summary.trim().toLowerCase());
