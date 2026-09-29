@@ -152,7 +152,7 @@ test('replaces generic content headings with service, location or topic-led head
   for (const item of catalog) {
     const page = fs.readFileSync(path.join(siteRoot, item.url, 'index.html'), 'utf8');
     assert.doesNotMatch(page, /<h2>A practical route for /);
-    assert.match(page, /<h2>Finding .+ in Perth<\/h2>/);
+    assert.match(page, /<h2>.+ in Perth: Common Questions<\/h2>/);
   }
 
   for (const guide of [
@@ -177,6 +177,23 @@ test('replaces generic content headings with service, location or topic-led head
   assert.match(about, /<h2>Perth Handyman Service Request Process<\/h2>/);
   assert.match(guides, /<h1>Perth Home Maintenance Guides &amp; Checklists<\/h1>/);
   assert.match(contact, /<h1>Request Handyman Services in Perth<\/h1>/);
+});
+
+test('service detail pages replace generic next-step copy with service-specific customer questions', () => {
+  const siteRoot = path.join(__dirname, '..');
+  const catalog = JSON.parse(fs.readFileSync(path.join(siteRoot, 'data/service-catalog.json'), 'utf8')).canonicalServices;
+  for (const item of catalog) {
+    const page = fs.readFileSync(path.join(siteRoot, item.url, 'index.html'), 'utf8');
+    assert.doesNotMatch(page, /<section class="section shell next-step">/);
+    assert.match(page, /<section class="section shell service-questions">/);
+    const escapedTitle = item.title.replaceAll('&', '&amp;').replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&');
+    assert.match(page, new RegExp(`<h2>${escapedTitle} in Perth: Common Questions<\\/h2>`));
+    assert.doesNotMatch(page, /<section class="section shell detail-grid service-detail">/);
+    assert.doesNotMatch(page, /<section class="section muted">/);
+    assert.ok(page.indexOf('service-questions') < page.indexOf('city-service-band'), `${item.slug} question guide should precede service-area links`);
+    assert.ok(page.includes(item.safetyNote.replaceAll('&', '&amp;')), `${item.slug} safety answer`);
+    assert.ok(page.includes(item.customerInfo[0].replaceAll('&', '&amp;')), `${item.slug} preparation answer`);
+  }
 });
 
 test('canonical detail content has no exact summary or common-task-group reuse', () => {
