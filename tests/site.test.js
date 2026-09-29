@@ -112,6 +112,14 @@ test('uses the core handyman services Perth phrase on the homepage', () => {
   assert.doesNotMatch(home, /One request\.<br><em>One team accountable\.<\/em>/);
 });
 
+test('uses the local handyman near me query on the areas index', () => {
+  const areas = fs.readFileSync(path.join(__dirname, '../areas/index.html'), 'utf8');
+  assert.match(areas, /<title>Handyman Near Me in Perth \| Local Service Areas \| Ellis Services Group<\/title>/);
+  assert.match(areas, /<h1>Looking for a Handyman Near Me in Perth\?<\/h1>/);
+  assert.match(areas, /Find the Perth service area closest to your property/);
+  assert.doesNotMatch(areas, /Local Perth service pathways, coordinated through one team/);
+});
+
 test('canonical detail content has no exact summary or common-task-group reuse', () => {
   const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/service-catalog.json'), 'utf8'));
   const summaries = catalog.canonicalServices.map((item) => item.summary.trim().toLowerCase());
