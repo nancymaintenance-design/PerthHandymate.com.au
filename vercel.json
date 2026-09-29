@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "unzip -q perth-handymate-site.zip -d dist",
+  "buildCommand": "mkdir -p dist && cp -R 404.html about areas assets contact data faq google28003a8fb6bb282a.html guides index.html projects robots.txt services site.webmanifest sitemap.xml dist/",
   "outputDirectory": "dist",
   "headers": [
     {
