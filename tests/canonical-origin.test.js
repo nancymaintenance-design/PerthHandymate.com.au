@@ -31,3 +31,11 @@ test('publishes www as the only absolute Handymate origin', () => {
   assert.match(robots, new RegExp(`Sitemap: ${canonicalOrigin}/sitemap\\.xml`));
   assert.match(sitemap, new RegExp(`<loc>${canonicalOrigin}/`));
 });
+
+test('redirects the legacy North Perth index.html URL to its canonical directory URL', () => {
+  const config = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
+  const redirect = config.redirects.find((rule) => rule.source === '/areas/north-perth-stirling/index.html');
+  assert.ok(redirect, 'legacy index.html redirect exists');
+  assert.equal(redirect.destination, 'https://www.perthhandymate.com.au/areas/north-perth-stirling/');
+  assert.equal(redirect.permanent, true);
+});
