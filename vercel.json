@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "mkdir -p dist && cp -R 404.html about areas assets contact data faq google28003a8fb6bb282a.html guides index.html projects robots.txt services site.webmanifest sitemap.xml dist/",
+  "buildCommand": "mkdir -p dist && cp -R 404.html about areas assets contact data faq google28003a8fb6bb282a.html guides index.html projects robots.txt services site.webmanifest sitemap.xml dist/ && node scripts/normalize-index-links.js dist",
   "outputDirectory": "dist",
   "headers": [
     {
@@ -23,6 +23,16 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/index.html",
+      "destination": "/:path*/",
+      "permanent": true
+    },
     {
       "source": "/areas/north-perth-stirling/index.html",
       "destination": "https://www.perthhandymate.com.au/areas/north-perth-stirling/",

@@ -442,11 +442,11 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
     assert.ok(fs.existsSync(path.join(root, 'assets/images', icon)), `missing ${icon}`);
     assert.match(
       popular,
-      new RegExp(`<article class="service-card popular-card"><img src="\\./assets/images/${icon}"[^>]*>[\\s\\S]*?href="\\./${route}index\\.html"`),
+      new RegExp(`<article class="service-card popular-card"><img src="\\./assets/images/${icon}"[^>]*>[\\s\\S]*?href="\\./${route}"`),
       route,
     );
   }
-  for (const route of policy.homepagePromotionRoutes) assert.match(popular, new RegExp(`href="\\./${route}index\\.html"`));
+  for (const route of policy.homepagePromotionRoutes) assert.match(popular, new RegExp(`href="\\./${route}"`));
   for (const retiredRoute of [
     'services/electrical-plumbing-gas-air-conditioning/electricians/',
     'services/electrical-plumbing-gas-air-conditioning/plumbers/',
@@ -454,7 +454,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
     'services/roofing-gutters-exterior/roofing/',
     'services/gardens-landscaping/lawn-mowing/',
     'services/building-renovation-structural/bathroom/',
-  ]) assert.doesNotMatch(popular, new RegExp(`href="\\./${retiredRoute}index\\.html"`));
+  ]) assert.doesNotMatch(popular, new RegExp(`href="\\./${retiredRoute}"`));
 });
 
 test('publishes the roof and gutter maintenance case study from the homepage', () => {
@@ -462,12 +462,12 @@ test('publishes the roof and gutter maintenance case study from the homepage', (
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const caseStudy = fs.readFileSync(path.join(root, 'projects/roof-and-gutter-maintenance/index.html'), 'utf8');
 
-  assert.match(home, /href="\.\/projects\/roof-and-gutter-maintenance\/index\.html"/);
+  assert.match(home, /href="\.\/projects\/roof-and-gutter-maintenance\/"/);
   assert.match(home, /Gutter cleaning &amp; roofline maintenance/);
   assert.ok(caseStudy.includes('<h1>Gutter cleaning &amp; roofline maintenance</h1>'));
   assert.match(caseStudy, /blocked gutter cleaning/);
-  assert.match(caseStudy, /services\/roofing-gutters-exterior\/index\.html/);
-  assert.match(caseStudy, /contact\/index\.html\?service=Roofing%2C%20gutters%20%26%20exterior/);
+  assert.match(caseStudy, /services\/roofing-gutters-exterior\//);
+  assert.match(caseStudy, /contact\/\?service=Roofing%2C%20gutters%20%26%20exterior/);
 
   for (const asset of ['roof-gutter-before.png', 'roof-gutter-during.png', 'roof-gutter-completed.png', 'roof-gutter-detail.png']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
@@ -480,11 +480,11 @@ test('publishes the exterior timber window and door repair case study from the h
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const caseStudy = fs.readFileSync(path.join(root, 'projects/exterior-timber-window-door-repair/index.html'), 'utf8');
 
-  assert.match(home, /href="\.\/projects\/exterior-timber-window-door-repair\/index\.html"/);
+  assert.match(home, /href="\.\/projects\/exterior-timber-window-door-repair\/"/);
   assert.match(home, /Sticking timber window &amp; exterior door repair/);
   assert.ok(caseStudy.includes('<h1>Sticking timber window &amp; exterior door repair</h1>'));
   assert.match(caseStudy, /sticking timber window/);
-  assert.match(caseStudy, /services\/handyman-interiors-appliance-repairs\/carpenters\/index\.html/);
+  assert.match(caseStudy, /services\/handyman-interiors-appliance-repairs\/carpenters\//);
 
   for (const asset of ['timber-repair-before.png', 'timber-repair-damage.png', 'timber-repair-during.png', 'timber-repair-completed.png']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
@@ -497,11 +497,11 @@ test('publishes the bathroom tile and shower area repair case study from the hom
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const caseStudy = fs.readFileSync(path.join(root, 'projects/bathroom-tile-shower-repair/index.html'), 'utf8');
 
-  assert.match(home, /href="\.\/projects\/bathroom-tile-shower-repair\/index\.html"/);
+  assert.match(home, /href="\.\/projects\/bathroom-tile-shower-repair\/"/);
   assert.match(home, /Shower resealing &amp; tile grout repair/);
   assert.ok(caseStudy.includes('<h1>Shower resealing &amp; tile grout repair</h1>'));
   assert.match(caseStudy, /split shower silicone/);
-  assert.match(caseStudy, /services\/handyman-interiors-appliance-repairs\/tiling\/index\.html/);
+  assert.match(caseStudy, /services\/handyman-interiors-appliance-repairs\/tiling\//);
 
   for (const asset of ['bathroom-repair-before.png', 'bathroom-repair-damage.png', 'bathroom-repair-during.png', 'bathroom-repair-completed.png']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
@@ -514,11 +514,11 @@ test('publishes the garden clean-up case study from the homepage', () => {
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const caseStudy = fs.readFileSync(path.join(root, 'projects/garden-clean-up/index.html'), 'utf8');
 
-  assert.match(home, /href="\.\/projects\/garden-clean-up\/index\.html"/);
+  assert.match(home, /href="\.\/projects\/garden-clean-up\/"/);
   assert.match(home, /Garden clean-up &amp; maintenance odd jobs/);
   assert.ok(caseStudy.includes('<h1>Garden clean-up &amp; maintenance odd jobs</h1>'));
   assert.match(caseStudy, /garden maintenance odd jobs/);
-  assert.match(caseStudy, /services\/gardens-landscaping\/garden-clean-up\/index\.html/);
+  assert.match(caseStudy, /services\/gardens-landscaping\/garden-clean-up\//);
 
   for (const asset of ['garden-clean-up-before.png', 'garden-clean-up-detail.png', 'garden-clean-up-during.png', 'garden-clean-up-completed.png']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
@@ -531,11 +531,11 @@ test('publishes the interior wall repair and painting case study from the homepa
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const caseStudy = fs.readFileSync(path.join(root, 'projects/interior-wall-repair-painting/index.html'), 'utf8');
 
-  assert.match(home, /href="\.\/projects\/interior-wall-repair-painting\/index\.html"/);
+  assert.match(home, /href="\.\/projects\/interior-wall-repair-painting\/"/);
   assert.match(home, /Interior wall repair &amp; painting touch-ups/);
   assert.ok(caseStudy.includes('<h1>Interior wall repair &amp; painting touch-ups</h1>'));
   assert.match(caseStudy, /painting touch-ups/);
-  assert.match(caseStudy, /services\/roofing-gutters-exterior\/house-painters\/index\.html/);
+  assert.match(caseStudy, /services\/roofing-gutters-exterior\/house-painters\//);
 
   for (const asset of ['interior-wall-before.jpg', 'interior-wall-detail.jpg', 'interior-wall-during.jpg', 'interior-wall-completed.jpg']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
@@ -548,11 +548,11 @@ test('publishes the sliding door flyscreen repair case study from the homepage',
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const caseStudy = fs.readFileSync(path.join(root, 'projects/sliding-door-flyscreen-repair/index.html'), 'utf8');
 
-  assert.match(home, /href="\.\/projects\/sliding-door-flyscreen-repair\/index\.html"/);
+  assert.match(home, /href="\.\/projects\/sliding-door-flyscreen-repair\/"/);
   assert.match(home, /Torn flyscreen mesh repair &amp; remeshing/);
   assert.ok(caseStudy.includes('<h1>Torn flyscreen mesh repair &amp; remeshing</h1>'));
   assert.match(caseStudy, /torn flyscreen mesh/);
-  assert.match(caseStudy, /services\/doors-windows-glass-screens\/fly-screens\/index\.html/);
+  assert.match(caseStudy, /services\/doors-windows-glass-screens\/fly-screens\//);
 
   for (const asset of ['flyscreen-before.jpg', 'flyscreen-detail.jpg', 'flyscreen-during.jpg', 'flyscreen-completed.jpg']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
@@ -564,11 +564,11 @@ test('publishes the timber fence repair case study from the homepage', () => {
   const root = path.join(__dirname, '..');
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const caseStudy = fs.readFileSync(path.join(root, 'projects/timber-fence-repair/index.html'), 'utf8');
-  assert.match(home, /href="\.\/projects\/timber-fence-repair\/index\.html"/);
+  assert.match(home, /href="\.\/projects\/timber-fence-repair\/"/);
   assert.match(home, /Damaged timber fence panel &amp; post repair/);
   assert.ok(caseStudy.includes('<h1>Damaged timber fence panel &amp; post repair</h1>'));
   assert.match(caseStudy, /damaged fence panel/);
-  assert.match(caseStudy, /services\/outdoor-structures-fencing-pools\/fence-builders\/index\.html/);
+  assert.match(caseStudy, /services\/outdoor-structures-fencing-pools\/fence-builders\//);
   for (const asset of ['fence-before.jpg', 'fence-detail.jpg', 'fence-during.jpg', 'fence-completed.jpg']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
     assert.ok(image.subarray(0, 3).equals(Buffer.from([255,216,255])), `${asset} must be a JPEG`);
@@ -579,11 +579,11 @@ test('publishes decking refinishing and maintenance examples without presenting 
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const page = fs.readFileSync(path.join(root, 'projects/decking-refinishing-maintenance/index.html'), 'utf8');
 
-  assert.match(home, /href="\.\/projects\/decking-refinishing-maintenance\/index\.html"/);
+  assert.match(home, /href="\.\/projects\/decking-refinishing-maintenance\/"/);
   assert.match(home, /Deck timber maintenance &amp; refinishing/);
   assert.ok(page.includes('<h1>Deck timber maintenance &amp; refinishing</h1>'));
   assert.match(page, /These images are examples, not a single before-and-after project sequence\./);
-  assert.match(page, /services\/outdoor-structures-fencing-pools\/deck-builders\/index\.html/);
+  assert.match(page, /services\/outdoor-structures-fencing-pools\/deck-builders\//);
 
   for (const asset of ['decking-preparation.jpg', 'decking-coating.jpg', 'decking-finished-entry.jpg', 'decking-finished-outdoor.jpg']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
@@ -596,11 +596,11 @@ test('publishes the door lock replacement and smart lock installation example fr
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const page = fs.readFileSync(path.join(root, 'projects/door-lock-replacement-installation/index.html'), 'utf8');
 
-  assert.match(home, /href="\.\/projects\/door-lock-replacement-installation\/index\.html"/);
+  assert.match(home, /href="\.\/projects\/door-lock-replacement-installation\/"/);
   assert.ok(page.includes('<h1>Door hardware replacement &amp; smart lock fitting</h1>'));
   assert.match(page, /Door hardware replacement and smart lock fitting example/);
   assert.doesNotMatch(page, /Samsung/);
-  assert.match(page, /services\/doors-windows-glass-screens\/door-installation\/index\.html/);
+  assert.match(page, /services\/doors-windows-glass-screens\/door-installation\//);
 
   for (const asset of ['door-lock-removed.jpg', 'door-lock-hardware.jpg', 'door-smart-lock-installed.jpg', 'door-lock-completed.jpg']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
@@ -613,11 +613,11 @@ test('publishes the kitchen cabinet hinge repair case study from the homepage', 
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const page = fs.readFileSync(path.join(root, 'projects/kitchen-cabinet-hinge-repair/index.html'), 'utf8');
 
-  assert.match(home, /href="\.\/projects\/kitchen-cabinet-hinge-repair\/index\.html"/);
+  assert.match(home, /href="\.\/projects\/kitchen-cabinet-hinge-repair\/"/);
   assert.match(home, /Cupboard hinge pulled-out repair &amp; cabinet door alignment/);
   assert.ok(page.includes('<h1>Cupboard hinge pulled-out repair &amp; cabinet door alignment</h1>'));
   assert.match(page, /cupboard hinge pulled out/);
-  assert.match(page, /services\/handyman-interiors-appliance-repairs\/carpenters\/index\.html/);
+  assert.match(page, /services\/handyman-interiors-appliance-repairs\/carpenters\//);
 
   for (const asset of ['cabinet-hinge-before.jpg', 'cabinet-hinge-detail.jpg', 'cabinet-hinge-during.jpg', 'cabinet-hinge-completed.jpg']) {
     const image = fs.readFileSync(path.join(root, 'assets/images/projects', asset));
@@ -648,7 +648,7 @@ test('uses distinct search-led case-study titles and grounded scenario copy', ()
 
   for (const [slug, title, scenario] of cases) {
     const page = fs.readFileSync(path.join(root, 'projects', slug, 'index.html'), 'utf8');
-    assert.match(home, new RegExp(`${title}[\\s\\S]{0,800}?href=\"\\.\\/projects\\/${slug}\\/index\\.html\"`));
+    assert.match(home, new RegExp(`${title}[\\s\\S]{0,800}?href=\"\\.\\/projects\\/${slug}\\/\"`));
     assert.ok(page.includes(`<h1>${title}</h1>`), `${slug} should use its search-led heading`);
     assert.match(page.toLowerCase(), new RegExp(scenario.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'));
     assert.doesNotMatch(page, phaseHeadings);

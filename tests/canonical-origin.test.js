@@ -39,3 +39,23 @@ test('redirects the legacy North Perth index.html URL to its canonical directory
   assert.equal(redirect.destination, 'https://www.perthhandymate.com.au/areas/north-perth-stirling/');
   assert.equal(redirect.permanent, true);
 });
+
+test('redirects every legacy index.html URL to its canonical directory URL', () => {
+  const config = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
+  const rootRedirect = config.redirects.find((rule) => rule.source === '/index.html');
+  const nestedRedirect = config.redirects.find((rule) => rule.source === '/:path*/index.html');
+  assert.deepEqual(rootRedirect, { source: '/index.html', destination: '/', permanent: true });
+  assert.deepEqual(nestedRedirect, { source: '/:path*/index.html', destination: '/:path*/', permanent: true });
+});
+
+test('public pages link to canonical directory URLs instead of index.html', () => {
+  for (const file of htmlFiles(root)) {
+    if (path.basename(file) !== 'index.html') continue;
+    const source = fs.readFileSync(file, 'utf8');
+    for (const match of source.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)) {
+      const href = match[1];
+      if (/^(?:https?:|mailto:|tel:|#)/i.test(href)) continue;
+      assert.doesNotMatch(href.split(/[?#]/)[0], /(?:^|\/)index\.html$/i, `${path.relative(root, file)}: ${href}`);
+    }
+  }
+});

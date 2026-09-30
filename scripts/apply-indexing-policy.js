@@ -61,7 +61,7 @@ const cards = [
   ['icon-bathroom.png', 'Minor tiling', 'services/handyman-interiors-appliance-repairs/tiling/'],
   ['icon-house-painting.png', 'House painting', 'services/roofing-gutters-exterior/house-painters/'],
   ['icon-lawn-mowing.png', 'Garden clean-up', 'services/gardens-landscaping/garden-clean-up/'],
-].map(([icon, label, route]) => `<article class="service-card popular-card"><img src="./assets/images/${icon}" alt="" width="96" height="96"><p class="eyebrow">Popular service</p><h3><a href="./${route}index.html">${label}</a></h3><span class="text-link">Explore service <span aria-hidden="true">→</span></span></article>`).join('');
+].map(([icon, label, route]) => `<article class="service-card popular-card"><img src="./assets/images/${icon}" alt="" width="96" height="96"><p class="eyebrow">Popular service</p><h3><a href="./${route}">${label}</a></h3><span class="text-link">Explore service <span aria-hidden="true">→</span></span></article>`).join('');
 const homeFile = path.join(root, 'index.html');
 const home = fs.readFileSync(homeFile, 'utf8');
 const start = '<div class="card-grid popular-grid">';

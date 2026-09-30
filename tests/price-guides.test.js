@@ -61,7 +61,7 @@ test('every service detail page renders its matching price guide without public 
     assert.ok(page.includes(`data-price-guide-status="${guide.status}"`), `${service.slug} status module`);
     assert.ok(page.includes(disclaimer), `${service.slug} English price disclaimer`);
     assert.ok(!page.includes(retiredDisclaimer), `${service.slug} omits retired Chinese disclaimer`);
-    assert.match(page, /data-preserve-search href="[^"]*contact\/index\.html\?service=/, `${service.slug} retains Contact CTA`);
+    assert.match(page, /data-preserve-search href="[^"]*contact\/\?service=/, `${service.slug} retains Contact CTA`);
     assert.ok(priceGuide, `${service.slug} price guide module`);
     assert.ok(!priceGuide.includes('<h3>Sources</h3>'), `${service.slug} omits Sources heading`);
     assert.ok(!priceGuide.includes('price-guide-sources'), `${service.slug} omits source list`);
