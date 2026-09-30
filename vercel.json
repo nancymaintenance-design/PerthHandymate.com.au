@@ -24,6 +24,11 @@
   ],
   "redirects": [
     {
+      "source": "/areas/north-perth-stirling/index.html",
+      "destination": "https://www.perthhandymate.com.au/areas/north-perth-stirling/",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
