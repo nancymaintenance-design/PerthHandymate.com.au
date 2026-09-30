@@ -4,6 +4,7 @@
     "",
     "services/",
     "areas/",
+    "about/",
     "contact/",
     "faq/",
     "guides/",
@@ -45,6 +46,18 @@
     "services/roofing-gutters-exterior/gutter-services/",
     "services/roofing-gutters-exterior/house-painters/",
     "services/gardens-landscaping/garden-clean-up/"
+  ],
+  "indexableProjectRoutes": [
+    "projects/roof-and-gutter-maintenance/",
+    "projects/exterior-timber-window-door-repair/",
+    "projects/bathroom-tile-shower-repair/",
+    "projects/garden-clean-up/",
+    "projects/interior-wall-repair-painting/",
+    "projects/sliding-door-flyscreen-repair/",
+    "projects/timber-fence-repair/",
+    "projects/decking-refinishing-maintenance/",
+    "projects/door-lock-replacement-installation/",
+    "projects/kitchen-cabinet-hinge-repair/"
   ],
   "homepagePromotionRoutes": [
     "services/handyman-interiors-appliance-repairs/handymen/",

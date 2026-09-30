@@ -32,7 +32,11 @@ walk(path.join(root, 'services'), (file) => {
   setRobotsDirective(file, indexableServices.has(route) ? 'index,follow' : 'noindex,follow');
 });
 
-const sitemapRoutes = [...policy.indexableSitemapRoutes, ...policy.indexableServiceRoutes];
+const sitemapRoutes = [
+  ...policy.indexableSitemapRoutes,
+  ...policy.indexableServiceRoutes,
+  ...(policy.indexableProjectRoutes || []),
+];
 const sitemap = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -54,14 +58,14 @@ fs.writeFileSync(catalogFile, `${catalogPrefix}${JSON.stringify(focusedCatalog, 
 
 const cards = [
   ['icon-handyman.png', 'Handyman repairs', 'services/handyman-interiors-appliance-repairs/handymen/'],
-  ['icon-handyman.png', 'Carpentry', 'services/handyman-interiors-appliance-repairs/carpenters/'],
-  ['icon-handyman.png', 'Door repairs & installation', 'services/doors-windows-glass-screens/door-installation/'],
-  ['icon-handyman.png', 'Fly screen repairs', 'services/doors-windows-glass-screens/fly-screens/'],
-  ['icon-handyman.png', 'Window repairs', 'services/doors-windows-glass-screens/window-repairs/'],
-  ['icon-bathroom.png', 'Minor tiling', 'services/handyman-interiors-appliance-repairs/tiling/'],
+  ['icon-carpentry.png', 'Carpentry', 'services/handyman-interiors-appliance-repairs/carpenters/'],
+  ['icon-bathroom.png', 'Door repairs & installation', 'services/doors-windows-glass-screens/door-installation/'],
+  ['icon-fly-screen-repairs.png', 'Fly screen repairs', 'services/doors-windows-glass-screens/fly-screens/'],
+  ['icon-window-repairs.png', 'Window repairs', 'services/doors-windows-glass-screens/window-repairs/'],
+  ['icon-tiling.png', 'Minor tiling', 'services/handyman-interiors-appliance-repairs/tiling/'],
   ['icon-house-painting.png', 'House painting', 'services/roofing-gutters-exterior/house-painters/'],
   ['icon-lawn-mowing.png', 'Garden clean-up', 'services/gardens-landscaping/garden-clean-up/'],
-].map(([icon, label, route]) => `<article class="service-card popular-card"><img src="./assets/images/${icon}" alt="" width="96" height="96"><p class="eyebrow">Popular service</p><h3><a href="./${route}">${label}</a></h3><span class="text-link">Explore service <span aria-hidden="true">→</span></span></article>`).join('');
+].map(([icon, label, route]) => `<article class="service-card popular-card"><img src="./assets/images/${icon}" alt="" width="96" height="96" loading="lazy" decoding="async"><p class="eyebrow">Popular service</p><h3><a href="./${route}">${label}</a></h3><span class="text-link">Explore service <span aria-hidden="true">→</span></span></article>`).join('');
 const homeFile = path.join(root, 'index.html');
 const home = fs.readFileSync(homeFile, 'utf8');
 const start = '<div class="card-grid popular-grid">';

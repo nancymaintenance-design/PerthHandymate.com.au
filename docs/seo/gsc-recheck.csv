@@ -1,0 +1,5 @@
+"Checkpoint","Date after release","URLs / report to inspect","Metrics to compare","Success signal","Notes"
+"D0","Release day","sitemap.xml; 15 Owner URLs; 10 project URLs","Sitemap read, canonical and robots directives","Sitemap accepted and no unexpected coverage error","No deployment performed in this branch"
+"D7","7 days","GSC Page indexing and Performance","Indexed URLs, impressions, clicks, average position","Owner URLs are crawled or show first impressions","Compare against the user-provided snapshot only"
+"D14","14 days","GSC Page indexing and Performance","Indexed URLs, impressions, clicks, average position","More owner/project URL evidence; no avoidable duplicate issue","Inspect URL-level detail where available"
+"D28","28 days","GSC Page indexing and Performance","Indexed URLs, impressions, clicks, CTR, average position","Improvement judged against D0/D7/D14, not a guaranteed ranking result","Decide whether a second content cluster is warranted"

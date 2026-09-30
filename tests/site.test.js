@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const root = path.join(__dirname, '..');
 
 global.window = global;
 require('../data/search-catalog.js');
@@ -405,7 +406,11 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   walk(path.join(root, 'services'));
   assert.equal(leafRoutes.length, 67, 'existing service URLs must remain live');
   assert.equal(policy.indexableServiceRoutes.length, 15);
-  assert.equal(policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + 8, 50);
+  assert.equal(
+    policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + policy.indexableProjectRoutes.length,
+    53,
+    'the declared indexable routes should account for every sitemap URL',
+  );
 
   const indexable = new Set(policy.indexableServiceRoutes);
   for (const route of leafRoutes) {
@@ -458,6 +463,105 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
     'services/gardens-landscaping/lawn-mowing/',
     'services/building-renovation-structural/bathroom/',
   ]) assert.doesNotMatch(popular, new RegExp(`href="\\./${retiredRoute}"`));
+});
+
+test('connects supported SEO owner pages with matching photo-led project evidence', () => {
+  const ownerProjects = {
+    'services/handyman-interiors-appliance-repairs/handymen/': [
+      'projects/door-lock-replacement-installation/',
+      'projects/kitchen-cabinet-hinge-repair/',
+    ],
+    'services/handyman-interiors-appliance-repairs/carpenters/': [
+      'projects/exterior-timber-window-door-repair/',
+      'projects/kitchen-cabinet-hinge-repair/',
+    ],
+    'services/handyman-interiors-appliance-repairs/tiling/': [
+      'projects/bathroom-tile-shower-repair/',
+    ],
+    'services/doors-windows-glass-screens/door-installation/': [
+      'projects/exterior-timber-window-door-repair/',
+      'projects/door-lock-replacement-installation/',
+    ],
+    'services/doors-windows-glass-screens/fly-screens/': [
+      'projects/sliding-door-flyscreen-repair/',
+    ],
+    'services/doors-windows-glass-screens/window-repairs/': [
+      'projects/exterior-timber-window-door-repair/',
+    ],
+    'services/doors-windows-glass-screens/shower-screens/': [
+      'projects/bathroom-tile-shower-repair/',
+    ],
+    'services/roofing-gutters-exterior/gutter-services/': [
+      'projects/roof-and-gutter-maintenance/',
+    ],
+    'services/roofing-gutters-exterior/house-painters/': [
+      'projects/interior-wall-repair-painting/',
+    ],
+    'services/gardens-landscaping/garden-clean-up/': [
+      'projects/garden-clean-up/',
+    ],
+  };
+
+  for (const [ownerRoute, projectRoutes] of Object.entries(ownerProjects)) {
+    const owner = fs.readFileSync(path.join(root, ownerRoute, 'index.html'), 'utf8');
+    assert.match(owner, /<section class="section shell related-projects">/, `${ownerRoute} related-projects section`);
+    for (const projectRoute of projectRoutes) {
+      const ownerHref = `../../../${projectRoute}`;
+      assert.ok(owner.includes(ownerHref), `${ownerRoute} links to ${projectRoute}`);
+      const project = fs.readFileSync(path.join(root, projectRoute, 'index.html'), 'utf8');
+      const projectOwnerHref = `../../${ownerRoute}`;
+      assert.ok(project.includes(projectOwnerHref), `${projectRoute} links back to ${ownerRoute}`);
+    }
+  }
+});
+
+test('ships reproducible first-round SEO delivery records', () => {
+  const seoDocs = path.join(root, 'docs', 'seo');
+  const required = [
+    'url-inventory.csv',
+    'priority-owner-map.csv',
+    'seo-implementation-report.md',
+    'gsc-recheck.csv',
+  ];
+  for (const file of required) assert.ok(fs.existsSync(path.join(seoDocs, file)), `missing docs/seo/${file}`);
+
+  const inventory = fs.readFileSync(path.join(seoDocs, 'url-inventory.csv'), 'utf8');
+  assert.match(inventory, /"URL","Page type","Source file","HTTP status"/);
+  assert.match(inventory, /https:\/\/www\.perthhandymate\.com\.au\/services\/doors-windows-glass-screens\/fly-screens\//);
+  assert.match(inventory, /GSC snapshot; URL-level status unknown/);
+
+  const owners = fs.readFileSync(path.join(seoDocs, 'priority-owner-map.csv'), 'utf8');
+  assert.match(owners, /Fly screen repairs Perth/);
+  assert.match(owners, /Shower screen repairs Perth/);
+  assert.match(owners, /No noindex changes in this round/);
+
+  const report = fs.readFileSync(path.join(seoDocs, 'seo-implementation-report.md'), 'utf8');
+  assert.match(report, /用户提供的 GSC 快照/);
+  assert.match(report, /未上线/);
+
+  const recheck = fs.readFileSync(path.join(seoDocs, 'gsc-recheck.csv'), 'utf8');
+  assert.match(recheck, /D7/);
+  assert.match(recheck, /D14/);
+  assert.match(recheck, /D28/);
+});
+
+test('keeps approved project evidence URLs when the indexing policy rebuilds the sitemap', () => {
+  const policy = JSON.parse(fs.readFileSync(path.join(root, 'data', 'indexing-policy.json'), 'utf8'));
+  assert.ok(Array.isArray(policy.indexableProjectRoutes));
+
+  const expectedProjectRoutes = [
+    'projects/sliding-door-flyscreen-repair/',
+    'projects/bathroom-tile-shower-repair/',
+    'projects/roof-and-gutter-maintenance/',
+  ];
+  for (const route of expectedProjectRoutes) {
+    assert.ok(policy.indexableProjectRoutes.includes(route), `${route} should remain approved for the sitemap`);
+  }
+
+  const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+  for (const route of expectedProjectRoutes) {
+    assert.match(sitemap, new RegExp(`https://www\\.perthhandymate\\.com\\.au/${route}`));
+  }
 });
 
 test('publishes the roof and gutter maintenance case study from the homepage', () => {
