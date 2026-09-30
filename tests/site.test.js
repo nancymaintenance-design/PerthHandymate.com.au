@@ -82,11 +82,11 @@ test('search catalog contains only the approved 15 core services', () => {
 
 test('prioritises Perth service intent on the five primary SEO landing pages', () => {
   const pages = [
-    ['services/handyman-interiors-appliance-repairs/handymen/index.html', 'Handyman Services Perth | Repairs & Property Maintenance | Ellis Services Group', 'Handyman Services in Perth', 'Handyman services in Perth for minor repairs, maintenance, assembly and property fixes. Share your task and location with Ellis Services Group.'],
-    ['services/handyman-interiors-appliance-repairs/carpenters/index.html', 'Carpentry Services Perth | Repairs, Doors & Joinery | Ellis Services Group', 'Carpentry Services in Perth', 'Carpentry services in Perth for timber repairs, doors, trim, fitted storage and scoped home improvements. Start your enquiry with Ellis Services Group.'],
-    ['services/roofing-gutters-exterior/gutter-services/index.html', 'Gutter Cleaning & Repairs Perth | Ellis Services Group', 'Gutter Cleaning & Repairs in Perth', 'Gutter cleaning and repair services in Perth for blocked, leaking or damaged gutters and downpipes. Share your property details with Ellis Services Group.'],
-    ['services/doors-windows-glass-screens/door-installation/index.html', 'Door Installation Perth | Internal & External Doors | Ellis Services Group', 'Door Installation in Perth', 'Door installation services in Perth for internal and external doors, frames, hardware and adjustments. Share your door requirements with Ellis Services Group.'],
-    ['services/handyman-interiors-appliance-repairs/ikea-kitchens/index.html', 'IKEA Kitchen Installation Perth | Ellis Services Group', 'IKEA Kitchen Installation in Perth', 'IKEA kitchen installation services in Perth for confirmed modular kitchen plans, cabinet assembly and fitting coordination. Contact Ellis Services Group.'],
+    ['services/handyman-interiors-appliance-repairs/handymen/index.html', 'Handyman Services Perth | Repairs & Property Maintenance | Ellis Services Group', 'Handyman Services in Perth', 'Handyman services in Perth from the Ellis Perth office. Speak directly with our local handyman team about repairs, maintenance, assembly and property fixes.'],
+    ['services/handyman-interiors-appliance-repairs/carpenters/index.html', 'Carpentry Services Perth | Repairs, Doors & Joinery | Ellis Services Group', 'Carpentry Services in Perth', 'Carpentry services in Perth from the Ellis Perth office. Speak directly with our local team about timber repairs, doors, trim and fitted storage.'],
+    ['services/roofing-gutters-exterior/gutter-services/index.html', 'Gutter Cleaning & Repairs Perth | Ellis Services Group', 'Gutter Cleaning & Repairs in Perth', 'Gutter cleaning and repair services in Perth from the Ellis Perth office. Speak directly with our local team about blocked, leaking or damaged gutters and downpipes.'],
+    ['services/doors-windows-glass-screens/door-installation/index.html', 'Door Installation Perth | Internal & External Doors | Ellis Services Group', 'Door Installation in Perth', 'Door installation services in Perth from the Ellis Perth office. Speak directly with our local team about doors, frames, hardware and adjustments.'],
+    ['services/handyman-interiors-appliance-repairs/ikea-kitchens/index.html', 'IKEA Kitchen Installation Perth | Ellis Services Group', 'IKEA Kitchen Installation in Perth', 'IKEA kitchen installation services in Perth from the Ellis Perth office. Discuss your confirmed plan, cabinet assembly and fitting requirements directly with our local team.'],
   ];
 
   for (const [file, title, h1, description] of pages) {
@@ -109,10 +109,10 @@ test('uses the core handyman services Perth phrase on the homepage', () => {
   const home = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
   const title = home.match(/<title>([^<]+)<\/title>/)?.[1] || '';
   assert.match(title, /^Handyman Services Perth\b/);
-  assert.match(title, /\bEllis Services Group$/);
+  assert.match(title, /\bLocal Repair Team \| Ellis$/);
   assert.ok(title.length <= 60, 'homepage title stays concise in search results');
   assert.match(home, /<h1>Handyman Services Perth for Home Repairs & Maintenance<\/h1>/);
-  assert.match(home, /Handyman services in Perth for home repairs, maintenance and practical property fixes/);
+  assert.match(home, /The Ellis Perth office provides direct handyman services for home repairs and maintenance/);
   assert.match(home, /<h2>Local Handyman Services in Perth<\/h2>/);
   assert.match(home, /<h2>Home Maintenance To-Do List for Property Managers<\/h2>/);
   assert.doesNotMatch(home, /One request\.<br><em>One team accountable\.<\/em>/);
@@ -130,7 +130,7 @@ test('replaces generic content headings with service, location or topic-led head
   const siteRoot = path.join(__dirname, '..');
   const home = fs.readFileSync(path.join(siteRoot, 'index.html'), 'utf8');
   for (const heading of [
-    'How Local Handyman Services in Perth Work',
+    'How Our Perth Handyman Team Works',
     'Perth Handyman Service Areas',
     'Perth Handyman Repair & Maintenance Projects',
     'Perth Home Maintenance Guides & Advice',
@@ -177,7 +177,7 @@ test('replaces generic content headings with service, location or topic-led head
   const about = fs.readFileSync(path.join(siteRoot, 'about/index.html'), 'utf8');
   const guides = fs.readFileSync(path.join(siteRoot, 'guides/index.html'), 'utf8');
   const contact = fs.readFileSync(path.join(siteRoot, 'contact/index.html'), 'utf8');
-  assert.match(about, /<h2>How Perth Property Maintenance Requests Are Coordinated<\/h2>/);
+  assert.match(about, /<h2>How Our Perth Local Team Handles a Job<\/h2>/);
   assert.match(about, /<h2>Perth Handyman Service Request Process<\/h2>/);
   assert.match(guides, /<h1>Perth Home Maintenance Guides &amp; Checklists<\/h1>/);
   assert.match(contact, /<h1>Request Handyman Services in Perth<\/h1>/);
@@ -376,7 +376,7 @@ test('exposes the Ellis Services Group Instagram profile from the homepage foote
 
 test('publishes company registration identifiers with the official ABR lookup', () => {
   const about = fs.readFileSync(path.join(__dirname, '../about/index.html'), 'utf8');
-  assert.match(about, /<title>About Ellis Services Group \| Perth Property Services<\/title>/);
+  assert.match(about, /<title>About Ellis Perth \| Local Handyman &amp; Maintenance Team<\/title>/);
   assert.match(about, /<link rel="canonical" href="https:\/\/www\.perthhandymate\.com\.au\/about\/">/);
   assert.match(about, /<h1>About Ellis Services Group<\/h1>/);
   assert.match(about, /140 St Georges Terrace, Perth WA 6000/);
@@ -787,4 +787,39 @@ test('uses distinct search-led case-study titles and grounded scenario copy', ()
     assert.match(page.toLowerCase(), new RegExp(scenario.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'));
     assert.doesNotMatch(page, phaseHeadings);
   }
+});
+
+test('presents Ellis Perth as a direct local handyman and maintenance team', () => {
+  const footerMessage = 'Perth office. Local handyman &amp; maintenance team. Direct service.';
+  const sourceFiles = [];
+  const collectHtml = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      if (['.git', '.worktrees', 'node_modules', 'dist'].includes(entry.name)) continue;
+      const target = path.join(directory, entry.name);
+      if (entry.isDirectory()) collectHtml(target);
+      else if (entry.name === 'index.html' || entry.name === '404.html') sourceFiles.push(target);
+    }
+  };
+  collectHtml(root);
+
+  for (const file of sourceFiles) {
+    const source = fs.readFileSync(file, 'utf8');
+    assert.match(source, new RegExp(footerMessage), file);
+    assert.doesNotMatch(source, /Coordinate [^<]{0,80} enquiries/i, file);
+    assert.doesNotMatch(source, /Ellis Services Group coordinates/i, file);
+    assert.doesNotMatch(source, /route the request/i, file);
+    assert.doesNotMatch(source, /another provider/i, file);
+  }
+
+  const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const about = fs.readFileSync(path.join(root, 'about', 'index.html'), 'utf8');
+  const faq = fs.readFileSync(path.join(root, 'faq', 'index.html'), 'utf8');
+  const content = fs.readFileSync(path.join(root, 'data', 'content.js'), 'utf8');
+  const serviceCatalog = fs.readFileSync(path.join(root, 'data', 'service-catalog.json'), 'utf8');
+  assert.match(home, /local handyman and maintenance team/i);
+  assert.match(about, /part of Ellis Services Group/i);
+  assert.match(about, /not a lead-generation, brokerage or referral platform/i);
+  assert.match(faq, /directly with our Perth office and local team/i);
+  assert.doesNotMatch(content, /Ellis Services Group coordinates|route the request|another provider/i);
+  assert.doesNotMatch(serviceCatalog, /Ellis Services Group coordinates|route the request|another provider/i);
 });
