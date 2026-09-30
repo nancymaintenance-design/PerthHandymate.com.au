@@ -2,7 +2,6 @@
   "version": "1.0",
   "checkedDate": "2026-09-14",
   "currency": "AUD",
-  "disclaimer": "Published market references are indicative only; they are not Ellis prices or quotes. Request a tailored quote for your scope.",
   "entries": [
     {
       "slug": "air-conditioning",
@@ -29,6 +28,7 @@
       "status": "indicative-local",
       "rangeAud": "A$20–50",
       "unit": "per m²; bonded/non-friable lining only",
+      "scope": "Scope: bonded/non-friable lining; friable removal priced after licensed assessment.",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -218,6 +218,7 @@
       "status": "indicative-local",
       "rangeAud": "A$4,000–$12,000",
       "unit": "per standard Perth carport project; single or double",
+      "scope": "Scope: open carports; enclosed garages priced from project specifications.",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -612,6 +613,7 @@
       "status": "indicative-local",
       "rangeAud": "A$105–$550",
       "unit": "per residential cleaning job; repair/replacement must be itemised separately",
+      "scope": "Scope: gutter cleaning; repairs and replacement priced by component.",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -854,6 +856,7 @@
       "status": "indicative-local",
       "rangeAud": "A$190–470",
       "unit": "per general interior and exterior treatment visit",
+      "scope": "Scope: general pest treatment; termite treatment priced after inspection.",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -1053,6 +1056,7 @@
       "status": "indicative-local",
       "rangeAud": "A$800–$9,000",
       "unit": "per scoped roof clean, repair or restoration job",
+      "scope": "Scope: roof cleaning, repairs and restoration; re-roofing and structural repairs priced separately.",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -1079,6 +1083,7 @@
       "status": "indicative-local",
       "rangeAud": "A$120–1300+",
       "unit": "per load/job",
+      "scope": "Scope: non-hazardous loads; hazardous materials require specialist handling.",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -1281,7 +1286,7 @@
       "serviceName": "Verandah Builders",
       "status": "indicative-national",
       "rangeAud": "A$2,000–$20,000+",
-      "unit": "per verandah project; Australian national reference, not a Perth quote",
+      "unit": "per verandah project",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -1345,7 +1350,7 @@
       "serviceName": "Window Repairs",
       "status": "indicative-national",
       "rangeAud": "A$100-2,000",
-      "unit": "standard repair project; emergency labour may reach 150 per hour plus materials",
+      "unit": "per standard repair project; emergency labour and materials priced separately",
       "checkedDate": "2026-09-14",
       "sources": [
         {

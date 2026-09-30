@@ -72,29 +72,44 @@ test('the price-guide compiler preserves the reviewed in-repository source data'
 test('every service detail page labels dated price references and links its published sources', () => {
   const priceGuides = JSON.parse(fs.readFileSync(priceGuidePath, 'utf8'));
   const bySlug = new Map(priceGuides.entries.map((entry) => [entry.slug, entry]));
-  const disclaimer = 'Published market references are indicative only; they are not Ellis prices or quotes. Request a tailored quote for your scope.';
   for (const service of catalog.canonicalServices) {
     const guide = bySlug.get(service.slug);
+    assert.doesNotMatch(guide.unit, /\b(?:may|might|could|not a Perth quote)\b/i, `${service.slug} price unit uses direct wording`);
     const page = fs.readFileSync(path.join(root, service.url, 'index.html'), 'utf8');
     const priceGuide = page.match(/<section class="section muted"><div class="shell price-guide"[\s\S]*?<\/section>/)?.[0] || '';
     assert.ok(priceGuide.includes(`data-price-guide-status="${guide.status}"`), `${service.slug} status module`);
     assert.ok(priceGuide.includes(`Reference checked ${guide.checkedDate}`), `${service.slug} reference date`);
-    assert.ok(priceGuide.includes(disclaimer), `${service.slug} price disclaimer`);
+    assert.ok(priceGuide.includes(guide.rangeAud ? '<h2>Reference price</h2>' : '<h2>Project price</h2>'), `${service.slug} accurate price heading`);
+    assert.ok(!priceGuide.includes('not Ellis') && !priceGuide.includes('not a Perth quote'), `${service.slug} avoids negative pricing claims`);
+    assert.doesNotMatch(priceGuide.replace(/<[^>]*>/g, ' '), /\b(?:may|might|could|perhaps|possibly|approximately|roughly|indicative)\b/i, `${service.slug} avoids vague price wording`);
+    assert.ok(!priceGuide.includes('price-guide-notes') && !priceGuide.includes('price-guide-disclaimer'), `${service.slug} keeps pricing copy concise`);
     assert.match(page, /data-preserve-search href="[^"]*contact\/\?service=/, `${service.slug} retains Contact CTA`);
     assert.ok(page.indexOf('service-questions') < page.indexOf('price-guide') && page.indexOf('price-guide') < page.indexOf('city-service-band'), `${service.slug} price reference follows service questions`);
     assert.ok(!page.includes('"@type":"Offer"') && !page.includes('"@type":"Product"'), `${service.slug} has no price structured data`);
     if (guide.status === 'indicative-local') {
-      assert.ok(priceGuide.includes('Indicative Perth cost guide'), `${service.slug} local heading`);
+      assert.ok(priceGuide.includes('Third-party published Perth / WA reference'), `${service.slug} local source context`);
       assert.ok(priceGuide.includes(guide.rangeAud), `${service.slug} local range`);
     } else if (guide.status === 'indicative-national') {
-      assert.ok(priceGuide.includes('Australian price reference — not a Perth quote'), `${service.slug} national warning`);
+      assert.ok(priceGuide.includes('Third-party published Australian reference'), `${service.slug} national source context`);
       assert.ok(priceGuide.includes(guide.rangeAud), `${service.slug} national range`);
     } else {
-      assert.ok(priceGuide.includes('Site-specific quote required'), `${service.slug} quote-required heading`);
+      assert.ok(priceGuide.includes('Request your project price'), `${service.slug} direct next step`);
       assert.ok(!priceGuide.includes('A$'), `${service.slug} no invented range`);
     }
+    if (guide.scope) assert.ok(priceGuide.includes(guide.scope), `${service.slug} price scope`);
     for (const source of guide.sources) {
       assert.ok(priceGuide.includes(`href="${source.url.replaceAll('&', '&amp;')}"`), `${service.slug} cites external source`);
     }
+  }
+});
+
+test('narrow price bands state the applicable scope on the service page', () => {
+  const pricing = JSON.parse(fs.readFileSync(priceGuidePath, 'utf8'));
+  for (const slug of ['asbestos-removal', 'carports-and-garages', 'gutter-services', 'pest-control', 'roofing', 'rubbish-removal']) {
+    const guide = pricing.entries.find((entry) => entry.slug === slug);
+    assert.ok(guide.scope, `${slug} has a scope boundary`);
+    const service = catalog.canonicalServices.find((entry) => entry.slug === slug);
+    const page = fs.readFileSync(path.join(root, service.url, 'index.html'), 'utf8');
+    assert.ok(page.includes(guide.scope), `${slug} publishes the scope boundary`);
   }
 });
