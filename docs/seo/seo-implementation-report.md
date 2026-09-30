@@ -30,7 +30,7 @@
 
 2026-09-30 已完成以下本地验证：
 
-- `node --test tests/site.test.js`：40 项通过。
+- `node --test tests/site.test.js`：41 项通过。
 - `node tests/check-site.js`：通过；检查 109 个 HTML 页面、109 个唯一 title 和 109 个唯一 meta description。
 - `ELLIS_PREVIEW_PORT=4173 node tests/http-smoke.js`：53/53 个 sitemap 页面及品牌 404 页面通过。
 - `node tests/canonical-origin.test.js`、`node tests/contact-email.test.js`、`node tests/price-guides.test.js`：全部通过。

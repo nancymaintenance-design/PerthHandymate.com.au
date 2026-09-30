@@ -564,6 +564,33 @@ test('keeps approved project evidence URLs when the indexing policy rebuilds the
   }
 });
 
+test('does not publish prototype or unsupported provider-vetting claims', () => {
+  const sourceFiles = [path.join(root, 'data', 'content.js')];
+  const collectHtml = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      if (['.git', '.worktrees', 'node_modules', 'dist'].includes(entry.name)) continue;
+      const target = path.join(directory, entry.name);
+      if (entry.isDirectory()) collectHtml(target);
+      else if (entry.name === 'index.html' || entry.name === '404.html') sourceFiles.push(target);
+    }
+  };
+  collectHtml(root);
+
+  for (const file of sourceFiles) {
+    const source = fs.readFileSync(file, 'utf8');
+    assert.doesNotMatch(source, /concept website/i, file);
+    assert.doesNotMatch(source, /pending publication evidence/i, file);
+    assert.doesNotMatch(source, /vetted service partner/i, file);
+    assert.doesNotMatch(source, /reviewed partner/i, file);
+    assert.doesNotMatch(source, /reviewed under the Ellis process/i, file);
+    assert.doesNotMatch(source, /\ba another provider\b/i, file);
+  }
+
+  const faq = fs.readFileSync(path.join(root, 'faq', 'index.html'), 'utf8');
+  assert.match(faq, /How will I know who is attending\?/);
+  assert.match(faq, /Ellis confirms the attending provider and the agreed scope before booking\./);
+});
+
 test('publishes the roof and gutter maintenance case study from the homepage', () => {
   const root = path.join(__dirname, '..');
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
