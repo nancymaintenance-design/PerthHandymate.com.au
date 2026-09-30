@@ -316,8 +316,8 @@ window.ELLIS_CONTENT={
           "answer": "No. Business registration and trade licensing are different checks."
         },
         {
-          "question": "Does Ellis guarantee every provider has every licence?",
-          "answer": "No blanket claim is made. The attending provider and any task-specific credentials should be confirmed for each job."
+          "question": "How do I confirm the right licence for an Ellis-arranged job?",
+          "answer": "Confirm the attending provider and check any task-specific credential through the relevant regulator before the job starts."
         }
       ]
     },
@@ -531,7 +531,7 @@ window.ELLIS_CONTENT={
           "Use one record through to completion",
           [
             "Keep the original request, accepted scope, quote or estimate, provider identity, applicable credentials, access confirmation, variations and completion notes together. If a provider finds a different cause or additional work, require an updated written scope and approval before continuing, except where immediate action is authorised and necessary to make a hazard safe.",
-            "Ellis offers a single intake point and may coordinate work through an Ellis team or a vetted service partner. The service and postcode are manually checked before serviceability is confirmed. Property managers should still confirm the attending entity, credentials relevant to regulated work, pricing basis, timing and invoicing details for each job. No portfolio-wide coverage or response time should be assumed without an agreed service arrangement.",
+            "Ellis offers a single intake point and may coordinate work through an Ellis team or a vetted service partner. The service and postcode are manually checked before serviceability is confirmed. Property managers should confirm the attending entity, credentials relevant to regulated work, pricing basis, timing and invoicing details for each job. For multi-property arrangements, agree coverage and response expectations in writing before work is booked.",
             "Close the loop with the occupant and owner after completion. Record what was done, any exclusions, recommended monitoring and whether a separate follow-up is required. Completion photos should show the relevant area without unnecessary personal detail. Reconcile the invoice against the approved scope and documented variations before filing the job record securely for future reference."
           ]
         ]
@@ -635,8 +635,8 @@ window.ELLIS_CONTENT={
       "Quotes & scope"
     ],
     [
-      "Can Ellis give an instant online price?",
-      "No instant-price promise is made. The job may need clarification or inspection before pricing can be confirmed.",
+      "How is my project price worked out?",
+      "Share the task, postcode, measurements and safe photos. Ellis reviews the scope and confirms whether an inspection is needed before a price is provided.",
       "Quotes & scope"
     ],
     [
@@ -680,8 +680,8 @@ window.ELLIS_CONTENT={
       "Licensed trades"
     ],
     [
-      "Are all Ellis providers licensed and insured for every job?",
-      "No blanket claim is published. Confirm the credentials and insurance relevant to the attending provider and exact scope before work starts.",
+      "How do I check licences and insurance for my job?",
+      "The attending provider is identified before booking proceeds. Check the licences and insurance relevant to the agreed scope before work starts.",
       "Licensed trades"
     ],
     [
@@ -695,8 +695,8 @@ window.ELLIS_CONTENT={
       "Service areas"
     ],
     [
-      "Does a listed city guarantee coverage?",
-      "No. A city page is a general entry point, not a guarantee that every service is available in every postcode.",
+      "How do I confirm service in my suburb?",
+      "Share the service and postcode. Ellis reviews the request and confirms local serviceability and the next step.",
       "Service areas"
     ],
     [
@@ -710,13 +710,13 @@ window.ELLIS_CONTENT={
       "Service areas"
     ],
     [
-      "Do you provide emergency or same-day attendance?",
-      "No general response-time promise is published. Use emergency services or utilities for immediate danger and ask Ellis to confirm any available service window.",
+      "How do I request urgent or same-day work?",
+      "Send the task and postcode so Ellis can confirm available appointment times. For immediate danger, contact emergency services or the relevant utility.",
       "Service areas"
     ],
     [
-      "What if Ellis cannot service my postcode?",
-      "Ellis should give a clear status or request more detail. For regulated or urgent needs, use an appropriate official or emergency channel.",
+      "What happens after my postcode is checked?",
+      "Ellis confirms whether a suitable service pathway is available or asks for further details. For immediate danger, contact the relevant emergency service or utility.",
       "Service areas"
     ],
     [
@@ -735,13 +735,13 @@ window.ELLIS_CONTENT={
       "Ellis process"
     ],
     [
-      "Does Ellis guarantee a response time?",
-      "No verified standard response time is published in this content pack. Timing must be confirmed for each request.",
+      "When will Ellis confirm the next step?",
+      "Ellis reviews the task, postcode and availability, then confirms the next step and timing for your request.",
       "Ellis process"
     ],
     [
-      "Does Ellis guarantee prices or outcomes?",
-      "No. Pricing, availability and work outcomes depend on the confirmed scope and provider terms. Review written details before proceeding.",
+      "How are the price and work scope confirmed?",
+      "Review the written scope, price, provider terms and agreed completion criteria before work proceeds.",
       "Ellis process"
     ],
     [
@@ -775,8 +775,8 @@ window.ELLIS_CONTENT={
       "Property managers"
     ],
     [
-      "Does Ellis offer portfolio-wide service levels?",
-      "No portfolio-wide coverage or response standard should be assumed. Any service level, invoicing or coverage arrangement must be separately agreed and verified.",
+      "How can property managers arrange multi-property service?",
+      "Share the properties, service types and approval process. Agree coverage, response expectations, invoicing and any service-level terms in writing.",
       "Property managers"
     ]
   ],
