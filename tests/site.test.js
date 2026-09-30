@@ -106,7 +106,10 @@ test('uses a search-led Perth handyman question on the services index', () => {
 
 test('uses the core handyman services Perth phrase on the homepage', () => {
   const home = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
-  assert.match(home, /<title>Handyman Services Perth \| Home Repairs & Maintenance \| Ellis Services Group<\/title>/);
+  const title = home.match(/<title>([^<]+)<\/title>/)?.[1] || '';
+  assert.match(title, /^Handyman Services Perth\b/);
+  assert.match(title, /\bEllis Services Group$/);
+  assert.ok(title.length <= 60, 'homepage title stays concise in search results');
   assert.match(home, /<h1>Handyman Services Perth for Home Repairs & Maintenance<\/h1>/);
   assert.match(home, /Handyman services in Perth for home repairs, maintenance and practical property fixes/);
   assert.match(home, /<h2>Local Handyman Services in Perth<\/h2>/);
@@ -189,7 +192,7 @@ test('service detail pages replace generic next-step copy with service-specific 
     const escapedTitle = item.title.replaceAll('&', '&amp;').replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&');
     assert.match(page, new RegExp(`<h2>${escapedTitle} in Perth: Common Questions<\\/h2>`));
     assert.doesNotMatch(page, /<section class="section shell detail-grid service-detail">/);
-    assert.doesNotMatch(page, /<section class="section muted">/);
+    assert.doesNotMatch(page, /<p class="eyebrow">What to tell us<\/p>/);
     assert.ok(page.indexOf('service-questions') < page.indexOf('city-service-band'), `${item.slug} question guide should precede service-area links`);
     assert.ok(page.includes(item.safetyNote.replaceAll('&', '&amp;')), `${item.slug} safety answer`);
     assert.ok(page.includes(item.customerInfo[0].replaceAll('&', '&amp;')), `${item.slug} preparation answer`);

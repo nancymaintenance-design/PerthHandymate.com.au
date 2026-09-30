@@ -2,7 +2,7 @@
   "version": "1.0",
   "checkedDate": "2026-09-14",
   "currency": "AUD",
-  "disclaimer": "Prices shown are Ellis official guide prices. Contact Ellis for a tailored consultation.",
+  "disclaimer": "Published market references are indicative only; they are not Ellis prices or quotes. Request a tailored quote for your scope.",
   "entries": [
     {
       "slug": "air-conditioning",
@@ -405,15 +405,15 @@
     {
       "slug": "electricians",
       "serviceName": "Electricians",
-      "status": "indicative-local",
+      "status": "indicative-national",
       "rangeAud": "A$80-130 service fee; 80-100 per hour",
       "unit": "service fee and labour hour; materials extra unless included",
-      "checkedDate": "2026-09-14",
+      "checkedDate": "2026-09-30",
       "sources": [
         {
           "url": "https://hipages.com.au/article/how_much_does_an_electrician_cost",
           "title": "How Much Does an Electrician Cost? [2026]",
-          "date": "Updated 8 Jan 2026; accessed 14 Sep 2026",
+          "date": "Updated 8 Jan 2026; rechecked 30 Sep 2026",
           "locality": "Australia, including a Western Australia average",
           "evidence": "Guide states service fee 80-130, labour 80-100/hr and WA average hourly rate 95."
         }
@@ -877,15 +877,15 @@
     {
       "slug": "plasterers",
       "serviceName": "Plasterers",
-      "status": "indicative-local",
+      "status": "indicative-national",
       "rangeAud": "A$15-90",
       "unit": "per m² depending on plaster type; Perth plasterboard installation average 50 per hour",
-      "checkedDate": "2026-09-14",
+      "checkedDate": "2026-09-30",
       "sources": [
         {
           "url": "https://hipages.com.au/article/how_much_does_plastering_cost",
           "title": "How Much Does Plastering Cost? [2026]",
-          "date": "Updated 6 Aug 2026; accessed 14 Sep 2026",
+          "date": "Updated 6 Aug 2026; rechecked 30 Sep 2026",
           "locality": "Australia with Perth hourly row",
           "evidence": "Guide lists plasterboard supply/install 15-20/m², hard plaster 20-70/m², wet plaster 45-90/m² and Perth gyprock installation average 50/hr."
         }
@@ -896,15 +896,15 @@
     {
       "slug": "plumbers",
       "serviceName": "Plumbers",
-      "status": "indicative-local",
+      "status": "indicative-national",
       "rangeAud": "A$80-200 per hour; 60-250 call-out",
       "unit": "labour hour and call-out; emergency WA call-outs 150-350 plus 180-320 per hour",
-      "checkedDate": "2026-09-14",
+      "checkedDate": "2026-09-30",
       "sources": [
         {
           "url": "https://hipages.com.au/article/how_much_does_a_plumber_cost",
           "title": "How Much Does a Plumber Cost? [2026]",
-          "date": "Updated 24 Jul 2026; accessed 14 Sep 2026",
+          "date": "Updated 24 Jul 2026; rechecked 30 Sep 2026",
           "locality": "Australia, with WA emergency band",
           "evidence": "Guide gives 80-200/hr and 60-250 call-out. It specifically groups WA emergency call-outs at 150-350 plus 180-320/hr."
         }
@@ -1268,21 +1268,13 @@
     {
       "slug": "upholstery-repair",
       "serviceName": "Upholstery Repair",
-      "status": "indicative-local",
-      "rangeAud": "A$50-100 per hour; 150-3,000+ depending on furniture type",
-      "unit": "labour hour or item project",
-      "checkedDate": "2026-09-14",
-      "sources": [
-        {
-          "url": "https://www.homestars.com/upholstery/upholsterer-pros/perth",
-          "title": "Find upholsterers in Perth | HomeStars",
-          "date": "Accessed 14 Sep 2026",
-          "locality": "Perth",
-          "evidence": "Published guide gives 50-100/hr; dining chair 150-300, armchair 400-800, two-seat sofa 800-1,500, larger sofa 1,800-3,000+."
-        }
-      ],
-      "confidence": "medium",
-      "notes": "Third-party guide. Fabric, foam, frame/spring condition and collection/delivery must be quoted."
+      "status": "quote-required",
+      "rangeAud": null,
+      "unit": "per furniture repair or reupholstery project",
+      "checkedDate": "2026-09-30",
+      "sources": [],
+      "confidence": "none",
+      "notes": "No verified Perth WA or Australian public rate was retained. Fabric, foam, frame and spring condition, and collection or delivery must be assessed before quoting."
     },
     {
       "slug": "verandah-builders",
