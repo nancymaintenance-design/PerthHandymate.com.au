@@ -716,7 +716,7 @@
         "Known material type, age and access constraints"
       ],
       "safetyNote": "Some older cladding may contain hazardous materials, while height and weatherproofing work require specialist controls; do not disturb suspect products.",
-      "nextStep": "Upload elevation and close-up photos so Ellis can route the cladding enquiry appropriately.",
+      "nextStep": "Upload elevation and close-up photos so the Ellis Perth team can discuss the cladding work and next step with you.",
       "majorAliases": [],
       "aliases": [
         "cladding"
@@ -1143,7 +1143,7 @@
         "Photos taken without touching the material, plus occupancy and access details"
       ],
       "safetyNote": "Do not cut, drill, sand, break, sweep or vacuum suspected asbestos. Keep people away from damaged material and use appropriately licensed removalists where required by the material, quantity and jurisdiction.",
-      "nextStep": "Leave suspect material undisturbed and contact Ellis with the location and any existing report for specialist routing.",
+      "nextStep": "Leave suspect material undisturbed and contact Ellis with the location and any existing report so we can discuss the appropriate specialist next step with you.",
       "majorAliases": [],
       "aliases": [
         "asbestos removal"
@@ -1311,7 +1311,7 @@
         "Door type, material, fire or security requirements if known"
       ],
       "safetyNote": "Entry, fire-rated, security and glazed doors can have specific product, fixing and compliance requirements; lock work may need a suitable specialist.",
-      "nextStep": "Send opening measurements, frame photos and the preferred door type for accurate routing.",
+      "nextStep": "Send opening measurements, frame photos and the preferred door type so our Perth team can discuss the installation details with you.",
       "majorAliases": [
         "doors",
         "door installer"
@@ -1390,7 +1390,7 @@
         "When leaks occur, previous repairs and safe access information"
       ],
       "safetyNote": "Roof access carries fall, fragile-surface and electrical risks. Do not climb during wet or windy conditions; significant storm damage or live electrical hazards require an urgent specialist response.",
-      "nextStep": "Provide roof type, leak timing and safe-to-take photos so Ellis can route the roofing assessment.",
+      "nextStep": "Provide roof type, leak timing and safe-to-take photos so Ellis can discuss the roofing assessment and next step with you.",
       "majorAliases": [
         "roofer",
         "roof repair",
@@ -1641,7 +1641,7 @@
         "Boundary, access, ground condition and staging information"
       ],
       "safetyNote": "Projects near boundaries, pools, retaining walls or services may require surveys, approvals and specialist design.",
-      "nextStep": "Provide the fence schedule or marked-up site plan so Ellis can route the contractor enquiry.",
+      "nextStep": "Provide the fence schedule or marked-up site plan so our Perth team can discuss the fence work and next step with you.",
       "majorAliases": [
         "fence contractor"
       ],
@@ -2238,7 +2238,7 @@
         "Project stage and the specific certification question"
       ],
       "safetyNote": "Certification functions must be performed by appropriately registered or accredited practitioners and may require independence from design or construction roles.",
-      "nextStep": "Send the property details, project stage and document list so Ellis can route the certification enquiry correctly.",
+      "nextStep": "Send the property details, project stage and document list so our Perth office can discuss the certification requirement and next step with you.",
       "majorAliases": [],
       "aliases": [
         "building certifiers"
@@ -2514,7 +2514,7 @@
         "Previous reports, drainage issues and renovation plans"
       ],
       "safetyNote": "Supporting and lifting a building is high-risk structural work that may require engineering, permits and appropriately licensed contractors; occupants should not enter unsafe areas.",
-      "nextStep": "Provide subfloor photos, movement symptoms and any reports so Ellis can route a restumping assessment.",
+      "nextStep": "Provide subfloor photos, movement symptoms and any reports so our Perth team can discuss the assessment and next step with you.",
       "majorAliases": [],
       "aliases": [
         "restumping"
@@ -2582,7 +2582,7 @@
         "Crack history, recent changes and access to affected areas"
       ],
       "safetyNote": "Visible instability, sudden movement or partial collapse requires the area to be isolated and an urgent professional response; engineering advice must come from appropriately qualified practitioners.",
-      "nextStep": "Provide the plans, photos and exact engineering question so Ellis can route the brief efficiently.",
+      "nextStep": "Provide the plans, photos and exact engineering question so our Perth team can discuss the engineering next step with you.",
       "majorAliases": [],
       "aliases": [
         "structural engineers"
@@ -2770,7 +2770,7 @@
         "Symptoms, recent work and photos taken only where safe"
       ],
       "safetyNote": "Gas work must be completed by an appropriately licensed gas fitter where required. If gas is strongly suspected, avoid flames and electrical switching, leave the area, contact the gas emergency service, and call emergency services for immediate danger.",
-      "nextStep": "For non-emergency work, provide the appliance details and location so Ellis can arrange licensed gas-service routing.",
+      "nextStep": "For non-emergency work, provide the appliance details and location so Ellis Perth can discuss the licensed gas-service requirement and next step with you.",
       "majorAliases": [
         "gas fitter",
         "gas fitting"
@@ -2851,7 +2851,7 @@
         "Wall, floor or furniture materials and any product instructions",
         "Property access, parking and whether parts are already supplied"
       ],
-      "safetyNote": "Electrical, plumbing, gas, structural, roofing-height and hazardous-material work should be routed to appropriately licensed or specialist providers rather than general handyman work.",
+      "safetyNote": "Electrical, plumbing, gas, structural, roofing-height and hazardous-material work require appropriately licensed or specialist work rather than general handyman work.",
       "nextStep": "Send one photo per task and identify supplied parts so Ellis can separate handyman items from specialist work.",
       "majorAliases": [
         "handyman",
@@ -2933,7 +2933,7 @@
         "Photos of the appliance, installation and plug or isolation arrangement where safe"
       ],
       "safetyNote": "Stop using an oven that smells of gas, sparks, smokes or overheats. Gas and hard-wired electrical work require appropriately licensed providers.",
-      "nextStep": "Provide the model, fuel type and precise symptom for oven-repair routing.",
+      "nextStep": "Provide the model, fuel type and precise symptom so Ellis can discuss the oven-repair next step with you.",
       "majorAliases": [],
       "aliases": [
         "oven repair"

@@ -91,7 +91,7 @@ if (!contact.includes('name="phone"') || !contact.includes('data-error="phone"')
 if ((contact.match(/href="tel:\+61403069685"/g) || []).length < 3) fail('Contact page lacks its dedicated confirmed phone link');
 
 const formConfig = fs.readFileSync(path.join(root, 'data/form-config.js'), 'utf8');
-if (!formConfig.includes("recipient:''") || !formConfig.includes("endpoint:''") || !formConfig.includes('enabled:false')) fail('Form delivery recipient/endpoint contract is incomplete');
+if (!formConfig.includes("endpoint:'/api/contact'") || !formConfig.includes('enabled:true')) fail('Form delivery endpoint contract is incomplete');
 
 const notFound = fs.readFileSync(path.join(root, '404.html'), 'utf8');
 if (!notFound.includes('404 · Page not found') || !notFound.includes('data-service-search') || !notFound.includes('Return home')) fail('404 page lacks branded recovery controls');

@@ -301,7 +301,7 @@ window.ELLIS_CONTENT={
           "How Ellis handles the hand-off",
           [
             "Ellis receives the request through a single service channel, then checks the requested service and postcode before confirming whether it can be handled. Delivery may be by the local Ellis team or a licensed specialist where required. That operating model does not remove the need to identify the person or business attending and verify credentials that apply to the specific work.",
-            "Provide enough detail for the request to be routed accurately, including photos taken from a safe position. Before work begins, confirm the provider, written scope, credential details where required and how any newly discovered regulated work will be handled. If the scope changes, pause and document the variation rather than assuming the original approval covers it.",
+            "Provide enough detail about the job, including photos taken from a safe position, so our local team can discuss the right next step with you. Before work begins, confirm the person or business completing the work, the written scope, credential details where required and how any newly discovered regulated work will be handled. If the scope changes, pause and document the variation rather than assuming the original approval covers it.",
             "When checking a credential, use the official register rather than a screenshot alone. Make sure the holder’s name, licence class, status and location match the person or business being engaged. If the register or scope is unclear, ask the regulator or provider for clarification before authorising the work."
           ]
         ]
@@ -386,7 +386,7 @@ window.ELLIS_CONTENT={
           "Write the scope in observable terms",
           [
             "Pair the images with a short description: what is wrong, where it is, the desired outcome, how many items are affected and any known history. Separate required work from optional work. For example, ‘required: rehang one sticking internal door; optional: replace three handles if compatible’ is clearer than ‘fix doors’.",
-            "List known materials, finishes and dimensions, but mark estimates as approximate. Note whether matching an existing finish matters and whether the provider should supply materials. If the cause is unknown, say so. A provider can then decide whether the job can be assessed remotely, requires an inspection or should be routed to another trade."
+            "List known materials, finishes and dimensions, but mark estimates as approximate. Note whether matching an existing finish matters and whether materials are needed. If the cause is unknown, say so. Our Perth team can then discuss whether the job can be assessed remotely, needs an inspection or requires a licensed specialist."
           ]
         ],
         [

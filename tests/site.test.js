@@ -10,6 +10,7 @@ require('../data/search-catalog.js');
 const {
   resolveServiceSearch,
   validateContact,
+  contactPayload,
   mergeContactHref,
   buildContactPrefill,
 } = require('../assets/js/site.js');
@@ -271,6 +272,26 @@ test('accepts a complete local enquiry check', () => {
     service: 'Roofing, gutters & exterior',
     message: 'Please inspect a leaking gutter near the rear deck.',
   }), { valid: true, errors: {} });
+});
+
+test('builds the approved client-side payload for the Resend contact endpoint', () => {
+  assert.deepEqual(contactPayload({
+    name: ' Alex Morgan ',
+    email: ' alex@example.com ',
+    phone: ' 0400 000 000 ',
+    postcode: ' 6000 ',
+    service: ' Handyman, interiors & appliance repairs ',
+    message: ' Please repair a sticking door. ',
+    website: '',
+  }), {
+    name: 'Alex Morgan',
+    email: 'alex@example.com',
+    phone: '0400 000 000',
+    postcode: '6000',
+    service: 'Handyman, interiors & appliance repairs',
+    message: 'Please repair a sticking door.',
+    website: '',
+  });
 });
 
 test('preserves the known search query and location when continuing from a service page', () => {
@@ -602,8 +623,8 @@ test('uses direct local-team language in P2 booking and service-area copy', () =
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data', 'service-catalog.json'), 'utf8'));
   for (const item of catalog.canonicalServices) {
     const page = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
-    assert.match(page, /<h2>Talk to a Local Perth Handyman Team<\/h2>/, item.url);
-    assert.match(page, /<h2>Discuss Your Handyman Job<\/h2>/, item.url);
+    assert.match(page, /<h2>Talk to Our Perth Service Team<\/h2>/, item.url);
+    assert.match(page, /<h2>Discuss This Service Request<\/h2>/, item.url);
     assert.doesNotMatch(page, /Confirm local serviceability|Start a service request/);
   }
 
@@ -842,4 +863,49 @@ test('presents Ellis Perth as a direct local handyman and maintenance team', () 
   assert.match(faq, /directly with our Perth office and local team/i);
   assert.doesNotMatch(content, /Ellis Services Group coordinates|route the request|another provider/i);
   assert.doesNotMatch(serviceCatalog, /Ellis Services Group coordinates|route the request|another provider/i);
+});
+
+test('keeps customer-facing next steps direct, publishes 24-hour availability and enables the contact endpoint', () => {
+  const customerPages = [];
+  const collectHtml = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      if (['.git', '.worktrees', 'node_modules', 'dist', 'tests', 'docs', 'scripts', 'tools'].includes(entry.name)) continue;
+      const target = path.join(directory, entry.name);
+      if (entry.isDirectory()) collectHtml(target);
+      else if ((entry.name === 'index.html' || entry.name === '404.html') && entry.name !== 'google28003a8fb6bb282a.html') customerPages.push(target);
+    }
+  };
+  collectHtml(root);
+
+  assert.equal(customerPages.length, 109, 'customer-facing page inventory changed unexpectedly');
+  for (const file of customerPages) {
+    const source = fs.readFileSync(file, 'utf8');
+    assert.match(source, /<p class="footer-hours">Open 24 hours<\/p>/, file);
+    assert.doesNotMatch(source, /\broute(?:s|d|ing)?\b/i, file);
+  }
+
+  const content = fs.readFileSync(path.join(root, 'data', 'content.js'), 'utf8');
+  const serviceCatalog = fs.readFileSync(path.join(root, 'data', 'service-catalog.json'), 'utf8');
+  assert.doesNotMatch(content, /\broute(?:s|d|ing)?\b/i);
+  assert.doesNotMatch(serviceCatalog, /\broute(?:s|d|ing)?\b/i);
+
+  const about = fs.readFileSync(path.join(root, 'about', 'index.html'), 'utf8');
+  const contact = fs.readFileSync(path.join(root, 'contact', 'index.html'), 'utf8');
+  const formConfig = fs.readFileSync(path.join(root, 'data', 'form-config.js'), 'utf8');
+  const client = fs.readFileSync(path.join(root, 'assets', 'js', 'site.js'), 'utf8');
+  assert.match(about, /https:\/\/share\.google\/qaKT4Kj7ycWHQCQWh/);
+  assert.match(about, /Read our Google reviews/);
+  assert.match(contact, /name="website"/);
+  assert.match(contact, /Not sure — please advise/);
+  assert.match(formConfig, /endpoint:'\/api\/contact'/);
+  assert.match(formConfig, /enabled:true/);
+  assert.match(client, /fetch\(form\.dataset\.contactEndpoint \|\| '\/api\/contact'/);
+  assert.doesNotMatch(client, /Please call 0403 069 685 or email our team to discuss your request\./);
+
+  const catalog = JSON.parse(serviceCatalog).canonicalServices;
+  for (const item of catalog) {
+    const source = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
+    assert.match(source, /<h2>Talk to Our Perth Service Team<\/h2>/, item.slug);
+    assert.match(source, /<h2>Discuss This Service Request<\/h2>/, item.slug);
+  }
 });
