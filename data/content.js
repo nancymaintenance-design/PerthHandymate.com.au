@@ -600,8 +600,8 @@ window.ELLIS_CONTENT={
   ],
   "faqs": [
     [
-      "How do I ask Ellis for help with a repair?",
-      "Send the service needed, property postcode and a plain-language description. Safe photos, approximate measurements and access notes help Ellis review the request.",
+      "How do I book a handyman in Perth?",
+      "Tell the Ellis Perth office what needs fixing, your suburb or postcode and a plain-language description. Safe photos, approximate measurements and access notes help our local team discuss the job with you.",
       "Hiring & matching"
     ],
     [
@@ -610,23 +610,23 @@ window.ELLIS_CONTENT={
       "Hiring & matching"
     ],
     [
-      "Who may carry out the work?",
-      "Ellis confirms the attending provider and the agreed scope before booking.",
+      "Who will handle my handyman job?",
+      "For everyday repairs and maintenance, you deal directly with the Ellis Perth local handyman and maintenance team. If the job requires a licensed specialist, we explain that requirement before you book.",
       "Hiring & matching"
     ],
     [
-      "How will I know who is attending?",
-      "Booking confirmation identifies the attending provider, agreed scope and any job-specific requirements.",
+      "Who will arrive for my booking?",
+      "Your booking confirmation names the Ellis Perth team member or explains any licensed specialist requirement, together with the agreed scope and arrival details.",
       "Hiring & matching"
     ],
     [
-      "How do I know a provider suits my job?",
-      "Check the written scope, relevant experience, provider identity, required credentials, proposed timing and how questions or variations will be handled.",
+      "How do I know the right person is handling my job?",
+      "Confirm the written scope, relevant experience, any required credentials, proposed timing and how questions or variations will be handled before work starts.",
       "Hiring & matching"
     ],
     [
-      "Does submitting a request confirm a booking?",
-      "No. Ellis first reviews the service and postcode, then confirms serviceability and the next step.",
+      "Does sending a request confirm a booking?",
+      "Not yet. The Ellis Perth office first confirms the job details, suburb or postcode and practical next step with you.",
       "Hiring & matching"
     ],
     [
@@ -670,8 +670,8 @@ window.ELLIS_CONTENT={
       "Licensed trades"
     ],
     [
-      "Will Ellis tell me who is attending?",
-      "The attending Ellis team or service partner should be identified as part of booking confirmation. Ask if this is not clear.",
+      "Will I know who is coming to my property?",
+      "Yes. Your booking confirmation identifies the Ellis Perth team member or explains any licensed specialist requirement. Ask us before booking if anything is unclear.",
       "Licensed trades"
     ],
     [
@@ -681,7 +681,7 @@ window.ELLIS_CONTENT={
     ],
     [
       "How do I check licences and insurance for my job?",
-      "The attending provider is identified before booking proceeds. Check the licences and insurance relevant to the agreed scope before work starts.",
+      "Where licensed work is required, Ellis Perth explains the specialist requirement before booking. Check the licences and insurance that apply to the agreed scope before work starts.",
       "Licensed trades"
     ],
     [
@@ -690,13 +690,13 @@ window.ELLIS_CONTENT={
       "Licensed trades"
     ],
     [
-      "Where does Ellis provide services?",
-      "Ellis reviews requests across its stated operating markets, but actual coverage depends on the service and postcode. Serviceability is manually confirmed.",
+      "Where in Perth do you provide handyman services?",
+      "The Ellis Perth office serves metropolitan Perth. Tell us the job and your suburb or postcode so our local team can discuss the booking details with you.",
       "Service areas"
     ],
     [
-      "How do I confirm service in my suburb?",
-      "Share the service and postcode. Ellis reviews the request and confirms local serviceability and the next step.",
+      "How do I confirm handyman service in my suburb?",
+      "Tell the Ellis Perth office what needs attention and your suburb or postcode. Our local team will discuss the job and next practical step directly with you.",
       "Service areas"
     ],
     [
@@ -706,7 +706,7 @@ window.ELLIS_CONTENT={
     ],
     [
       "Can availability differ by service in the same suburb?",
-      "Yes. Capability, licences, equipment, job size and provider availability can differ even at the same address.",
+      "Yes. The job size, equipment, access and any licensed-work requirement can affect the appointment options for the same address.",
       "Service areas"
     ],
     [
@@ -715,23 +715,23 @@ window.ELLIS_CONTENT={
       "Service areas"
     ],
     [
-      "What happens after my postcode is checked?",
-      "Ellis confirms whether a suitable service plan is available or asks for further details. For immediate danger, contact the relevant emergency service or utility.",
+      "What happens after I share my postcode?",
+      "Our Perth office discusses the local team’s next available step or asks for any details needed to understand the job. For immediate danger, contact the relevant emergency service or utility.",
       "Service areas"
     ],
     [
-      "What happens after I send a request?",
-      "Ellis reviews the service, postcode and job details, asks for clarification if needed, and manually confirms whether a suitable delivery option is available.",
+      "What happens after I contact Ellis Perth?",
+      "Our Perth office reviews the job details with you, confirms the practical scope and explains the next booking step.",
       "Ellis process"
     ],
     [
-      "Is Ellis a public marketplace?",
-      "Ellis is presented as one managed intake point. Work may be delivered by the local Ellis team or a licensed specialist where required rather than through an open bidding directory.",
+      "Is Ellis Perth a booking marketplace?",
+      "No. Ellis Perth is a direct local handyman and maintenance office, not an open bidding directory. You deal with our Perth office and local team from the first conversation. If specialised licensed work is required, we tell you before booking.",
       "Ellis process"
     ],
     [
       "When will I know who is doing the work?",
-      "The attending business or provider should be identified before the booking proceeds, along with the agreed scope and next step.",
+      "Before booking, Ellis Perth confirms the local team member or explains any licensed specialist requirement, together with the agreed scope and next step.",
       "Ellis process"
     ],
     [
@@ -741,17 +741,17 @@ window.ELLIS_CONTENT={
     ],
     [
       "How are the price and work scope confirmed?",
-      "Review the written scope, price, provider terms and agreed completion criteria before work proceeds.",
+      "Review the written scope, price, agreed completion criteria and any licensed-work requirement before work proceeds.",
       "Ellis process"
     ],
     [
-      "How is my request matched?",
-      "Ellis uses the requested service, postcode and scope details for manual review. Our local team handles work within its scope, and we explain any licensed specialist requirement before booking.",
+      "How does Ellis Perth assess my request?",
+      "Our Perth office discusses the requested work, postcode and scope directly with you. Our local team handles everyday work within its scope, and we explain any licensed specialist requirement before booking.",
       "Ellis process"
     ],
     [
       "Can property managers send requests for multiple properties?",
-      "Yes, but each property and scope should be recorded separately so serviceability, access, provider and approval details remain clear.",
+      "Yes, but each property and scope should be recorded separately so access, approval and work details remain clear.",
       "Property managers"
     ],
     [

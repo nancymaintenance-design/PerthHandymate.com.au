@@ -587,8 +587,28 @@ test('does not publish prototype or unsupported provider-vetting claims', () => 
   }
 
   const faq = fs.readFileSync(path.join(root, 'faq', 'index.html'), 'utf8');
-  assert.match(faq, /How will I know who is attending\?/);
-  assert.match(faq, /Ellis confirms the attending provider and the agreed scope before booking\./);
+  assert.match(faq, /Who will arrive for my booking\?/);
+  assert.match(faq, /deal directly with the Ellis Perth local handyman and maintenance team/);
+});
+
+test('uses direct local-team language in P2 booking and service-area copy', () => {
+  const faq = fs.readFileSync(path.join(root, 'faq', 'index.html'), 'utf8');
+  const content = fs.readFileSync(path.join(root, 'data', 'content.js'), 'utf8');
+  assert.doesNotMatch(faq, /service partner|managed intake|attending provider|suitable delivery option/i);
+  assert.match(faq, /direct local handyman and maintenance office/i);
+  assert.match(content, /"Is Ellis Perth a booking marketplace\?"/);
+  assert.match(content, /direct local handyman and maintenance office/i);
+
+  const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data', 'service-catalog.json'), 'utf8'));
+  for (const item of catalog.canonicalServices) {
+    const page = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
+    assert.match(page, /<h2>Talk to a Local Perth Handyman Team<\/h2>/, item.url);
+    assert.match(page, /<h2>Discuss Your Handyman Job<\/h2>/, item.url);
+    assert.doesNotMatch(page, /Confirm local serviceability|Start a service request/);
+  }
+
+  const contact = fs.readFileSync(path.join(root, 'contact', 'index.html'), 'utf8');
+  assert.match(contact, /Tell the Ellis Perth office what needs attention, where the property is and the best way to reach you/);
 });
 
 test('publishes the roof and gutter maintenance case study from the homepage', () => {
