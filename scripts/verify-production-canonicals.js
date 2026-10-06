@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, '..');
 
 function publicPaths(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
-    if (['.git', 'node_modules', 'dist', 'tests'].includes(entry.name)) return [];
+    if (entry.isDirectory() && (entry.name.startsWith('.') || ['node_modules', 'dist', 'tests'].includes(entry.name))) return [];
     const full = path.join(directory, entry.name);
     if (entry.isDirectory()) return publicPaths(full);
     if (entry.name !== 'index.html') return [];
@@ -44,7 +44,7 @@ async function main() {
   assert.equal(new Set(urls.map((url) => url.href)).size, urls.length, 'duplicate sitemap entries');
   for (const url of urls) assert.equal(url.origin, origin, `${url.href}: canonical host`);
   const paths = publicPaths(root);
-  assert.equal(paths.length, 108, 'expected public page count');
+  assert.equal(paths.length, 109, 'expected public page count');
   for (const url of urls) assert.ok(paths.includes(url.pathname), `${url.pathname}: sitemap page missing from source`);
   for (let index = 0; index < paths.length; index += 8) {
     await Promise.all(paths.slice(index, index + 8).map(verify));
