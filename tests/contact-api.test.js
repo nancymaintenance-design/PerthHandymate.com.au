@@ -79,15 +79,17 @@ test('rejects a cross-origin contact request before it can send an email', async
   assert.equal(calls.length, 0);
 });
 
-test('accepts the current Vercel production origin for a valid enquiry', async () => {
-  const { handler, calls } = makeHandler();
-  const response = makeResponse();
+test('accepts the custom production domain and current Vercel production origin for a valid enquiry', async () => {
+  for (const origin of ['https://www.perthhandymate.com.au', 'https://perthhandymate.vercel.app']) {
+    const { handler, calls } = makeHandler();
+    const response = makeResponse();
 
-  await handler(request(validEnquiry(), { headers: { origin: 'https://perthhandymate.vercel.app' } }), response);
+    await handler(request(validEnquiry(), { headers: { origin } }), response);
 
-  assert.equal(response.statusCode, 201);
-  assert.deepEqual(response.body, { ok: true, message: 'Thanks. Your enquiry has been received.' });
-  assert.equal(calls.length, 1);
+    assert.equal(response.statusCode, 201, origin);
+    assert.deepEqual(response.body, { ok: true, message: 'Thanks. Your enquiry has been received.' });
+    assert.equal(calls.length, 1, origin);
+  }
 });
 
 test('rejects malformed or incomplete JSON enquiries without calling Resend', async () => {
