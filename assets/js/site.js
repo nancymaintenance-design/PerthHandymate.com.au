@@ -168,7 +168,7 @@
         });
         const body = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(body.error || 'We could not send your enquiry just now. Please call 0403 069 685.');
-        status.textContent = body.message || 'Thanks. Your enquiry has been received.';
+        status.textContent = body.message || 'Thanks. Our customer service team will call you about your request.';
         form.reset();
       } catch (error) {
         status.textContent = error.message || 'We could not send your enquiry just now. Please call 0403 069 685.';

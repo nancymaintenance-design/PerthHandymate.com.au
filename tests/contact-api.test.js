@@ -87,7 +87,7 @@ test('accepts the custom production domain and current Vercel production origin 
     await handler(request(validEnquiry(), { headers: { origin } }), response);
 
     assert.equal(response.statusCode, 201, origin);
-    assert.deepEqual(response.body, { ok: true, message: 'Thanks. Your enquiry has been received.' });
+    assert.deepEqual(response.body, { ok: true, message: 'Thanks. Our customer service team will call you about your request.' });
     assert.equal(calls.length, 1, origin);
   }
 });
@@ -121,7 +121,7 @@ test('accepts a filled honeypot without forwarding it to Resend', async () => {
   await handler(request(validEnquiry({ website: 'https://spam.example' })), response);
 
   assert.equal(response.statusCode, 200);
-  assert.deepEqual(response.body, { ok: true, message: 'Thanks. Your enquiry has been received.' });
+  assert.deepEqual(response.body, { ok: true, message: 'Thanks. Our customer service team will call you about your request.' });
   assert.equal(calls.length, 0);
 });
 
@@ -132,7 +132,7 @@ test('sends a valid same-origin enquiry to Ellis with the customer email as repl
   await handler(request(validEnquiry()), response);
 
   assert.equal(response.statusCode, 201);
-  assert.deepEqual(response.body, { ok: true, message: 'Thanks. Your enquiry has been received.' });
+  assert.deepEqual(response.body, { ok: true, message: 'Thanks. Our customer service team will call you about your request.' });
   assert.equal(calls.length, 1);
   assert.equal(calls[0][0], 'https://api.resend.com/emails');
   const outbound = JSON.parse(calls[0][1].body);

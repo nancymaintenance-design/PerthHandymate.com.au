@@ -553,7 +553,7 @@
         "Photos and model details of any existing indoor and outdoor units",
         "Switchboard location, outdoor-unit access and preferred outcome"
       ],
-      "safetyNote": "Electrical connections and refrigerant work may require appropriately licensed providers; isolate a unit that is sparking, smoking or visibly damaged and avoid touching it.",
+      "safetyNote": "Electrical connections and refrigerant work may require appropriately licensed Ellis team members; isolate a unit that is sparking, smoking or visibly damaged and avoid touching it.",
       "nextStep": "Send the system type, affected rooms and suburb so Ellis can arrange the right air-conditioning pathway.",
       "majorAliases": [
         "aircon",
@@ -876,7 +876,7 @@
         "Roof-space, underfloor or wall access details",
         "Any moisture, pest, wiring or existing-insulation concerns"
       ],
-      "safetyNote": "Roof spaces can contain heat, electrical, asbestos and access hazards. Electrical clearances and installation requirements should be handled by appropriately qualified providers.",
+      "safetyNote": "Roof spaces can contain heat, electrical, asbestos and access hazards. Electrical clearances and installation requirements should be handled by appropriately qualified Ellis team members.",
       "nextStep": "Provide the property type, target area and access details for an insulation assessment.",
       "majorAliases": [
         "ceiling insulation",
@@ -985,7 +985,7 @@
         "When it started, whether water can be isolated and any visible damage",
         "Photos, fixture details and access to meters, valves or drains"
       ],
-      "safetyNote": "Plumbing work may require an appropriately licensed provider. For uncontrolled water, isolate the supply only if safe and keep clear of electrical equipment or contaminated overflow.",
+      "safetyNote": "Plumbing work may require an appropriately licensed Ellis Perth team. For uncontrolled water, isolate the supply only if safe and keep clear of electrical equipment or contaminated overflow.",
       "nextStep": "Describe the affected fixture, symptoms and suburb so Ellis can arrange the suitable plumbing pathway.",
       "majorAliases": [
         "plumber",
@@ -1032,7 +1032,7 @@
         "Screen style, glass configuration and hardware finish preferences",
         "Leaks, loose panels, cracked glass or wall-fixing concerns"
       ],
-      "safetyNote": "Cracked or unstable toughened glass should not be handled. Glazing, drilling and wet-area penetrations require suitable methods and qualified providers where applicable.",
+      "safetyNote": "Cracked or unstable toughened glass should not be handled. Glazing, drilling and wet-area penetrations require suitable methods and qualified Ellis team members where applicable.",
       "nextStep": "Share full shower photos, approximate dimensions and the issue to scope the screen work.",
       "majorAliases": [],
       "aliases": [
@@ -1104,7 +1104,7 @@
         "Photos of the prepared substrate and all penetrations",
         "Any leak history, existing finishes and downstream damage"
       ],
-      "safetyNote": "Waterproofing may require licensed or otherwise qualified providers and must integrate with drainage, substrate and relevant building requirements; active leaks need proper diagnosis.",
+      "safetyNote": "Waterproofing may require licensed or otherwise qualified Ellis team members and must integrate with drainage, substrate and relevant building requirements; active leaks need proper diagnosis.",
       "nextStep": "Send the wet-area layout, substrate photos and project stage so Ellis can arrange the right assessment.",
       "majorAliases": [
         "waterproofer"
@@ -1131,7 +1131,7 @@
         "Exterior"
       ],
       "categoryTitle": "Cleaning, removals, pest & hazard",
-      "summary": "Asbestos-removal enquiries require controlled assessment and, where confirmed, compliant removal and disposal by providers authorised for the material and job type.",
+      "summary": "Asbestos-removal enquiries require controlled assessment and, where confirmed, compliant removal and disposal by Ellis team members authorised for the material and job type.",
       "commonTasks": [
         "Arrange identification or sampling through a competent asbestos professional",
         "Prepare a removal scope with isolation, controls and clearance needs",
@@ -1470,7 +1470,7 @@
         "House construction, roof relationship and drainage considerations",
         "Desired materials, use and any plans or approvals already held"
       ],
-      "safetyNote": "Structural connections, footings, permits, boundaries and stormwater can require design, approval and appropriately qualified providers.",
+      "safetyNote": "Structural connections, footings, permits, boundaries and stormwater can require design, approval and appropriately qualified Ellis team members.",
       "nextStep": "Share the site layout, proposed size and any existing documents to begin a verandah assessment.",
       "majorAliases": [],
       "aliases": [
@@ -1940,7 +1940,7 @@
         "Photos of staining, cracks, loose areas and fittings",
         "Water-loss history, previous coatings and access for equipment"
       ],
-      "safetyNote": "Draining a pool can affect shell stability and must be planned by experienced providers; chemicals and confined work areas require controlled handling.",
+      "safetyNote": "Draining a pool can affect shell stability and must be planned by experienced Ellis team members; chemicals and confined work areas require controlled handling.",
       "nextStep": "Share pool dimensions, finish photos and leak history to start a resurfacing assessment.",
       "majorAliases": [],
       "aliases": [
@@ -2117,7 +2117,7 @@
         "Fixture selections, budget priorities and current plumbing locations",
         "Leak history, ventilation, access and any drawings or approvals"
       ],
-      "safetyNote": "Electrical, plumbing and waterproofing components may require appropriately licensed or qualified providers; active leaks and suspect materials need assessment before demolition.",
+      "safetyNote": "Electrical, plumbing and waterproofing components may require appropriately licensed or qualified Ellis team members; active leaks and suspect materials need assessment before demolition.",
       "nextStep": "Share room measurements, inspiration and must-keep items so Ellis can shape the bathroom project scope.",
       "majorAliases": [
         "bathroom renovation",
@@ -2445,7 +2445,7 @@
         "Plans, selections, priorities and any approvals already held",
         "Occupancy, access, staging and known property defects"
       ],
-      "safetyNote": "Structural changes and regulated electrical, plumbing or waterproofing work may require approvals and appropriately licensed providers.",
+      "safetyNote": "Structural changes and regulated electrical, plumbing or waterproofing work may require approvals and appropriately licensed Ellis team members.",
       "nextStep": "Share the renovation goals, rooms and available plans to establish the next scoping step.",
       "majorAliases": [],
       "aliases": [
@@ -2690,7 +2690,7 @@
         "Error code, symptoms and when they occur in the cycle",
         "Photos of the installation, connections and any water leakage"
       ],
-      "safetyNote": "Disconnect power and stop using an appliance that is leaking onto electrical components, smoking or overheating; electrical and plumbing work may require licensed providers.",
+      "safetyNote": "Disconnect power and stop using an appliance that is leaking onto electrical components, smoking or overheating; electrical and plumbing work may require licensed Ellis team members.",
       "nextStep": "Send the model number, symptom and error code so Ellis can arrange suitable appliance-repair triage.",
       "majorAliases": [],
       "aliases": [
@@ -2898,7 +2898,7 @@
         "Room dimensions, wall condition and photos of service locations",
         "Benchtop, appliance and splashback details plus items to retain"
       ],
-      "safetyNote": "Electrical, gas, plumbing and some waterproofing or structural changes require appropriately licensed providers; cabinets must not conceal unsafe or unapproved services.",
+      "safetyNote": "Electrical, gas, plumbing and some waterproofing or structural changes require appropriately licensed Ellis team members; cabinets must not conceal unsafe or unapproved services.",
       "nextStep": "Send the final plan, order list and room photos so Ellis can check installation readiness.",
       "majorAliases": [],
       "aliases": [
@@ -2932,7 +2932,7 @@
         "Symptoms, error codes and which functions are affected",
         "Photos of the appliance, installation and plug or isolation arrangement where safe"
       ],
-      "safetyNote": "Stop using an oven that smells of gas, sparks, smokes or overheats. Gas and hard-wired electrical work require appropriately licensed providers.",
+      "safetyNote": "Stop using an oven that smells of gas, sparks, smokes or overheats. Gas and hard-wired electrical work require appropriately licensed Ellis team members.",
       "nextStep": "Provide the model, fuel type and precise symptom so Ellis can discuss the oven-repair next step with you.",
       "majorAliases": [],
       "aliases": [

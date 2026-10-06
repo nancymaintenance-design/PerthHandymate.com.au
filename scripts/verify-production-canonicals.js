@@ -40,7 +40,7 @@ async function main() {
   assert.equal(sitemap.status, 200, 'sitemap response');
   const xml = await sitemap.text();
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => new URL(match[1]));
-  assert.equal(urls.length, 53, 'expected indexable URL count');
+  assert.equal(urls.length, 106, 'expected indexable URL count');
   assert.equal(new Set(urls.map((url) => url.href)).size, urls.length, 'duplicate sitemap entries');
   for (const url of urls) assert.equal(url.origin, origin, `${url.href}: canonical host`);
   const paths = publicPaths(root);

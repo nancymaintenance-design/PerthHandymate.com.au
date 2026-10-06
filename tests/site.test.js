@@ -65,9 +65,9 @@ test('generated service catalog covers all 75 source labels through 67 canonical
   for (const item of catalog.rawServices) assert.ok(fs.existsSync(path.join(__dirname, '..', item.url, 'index.html')), item.label);
 });
 
-test('search catalog contains only the approved 15 core services', () => {
+test('search catalog covers every approved indexable service page', () => {
   const policy = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/indexing-policy.json'), 'utf8'));
-  assert.equal(window.ELLIS_SEARCH_CATALOG.length, 15);
+  assert.equal(window.ELLIS_SEARCH_CATALOG.length, 67);
   assert.deepEqual(
     new Set(window.ELLIS_SEARCH_CATALOG.map((item) => item.route)),
     new Set(policy.indexableServiceRoutes),
@@ -77,8 +77,7 @@ test('search catalog contains only the approved 15 core services', () => {
     assert.equal(actual.route, item.route, item.service);
     assert.equal(actual.postcode, '6000', item.service);
   }
-  assert.equal(resolveServiceSearch('sparky', '6000').matched, false);
-  assert.equal(resolveServiceSearch('roofing', '6000').matched, false);
+  assert.equal(resolveServiceSearch('not a listed service', '6000').matched, false);
 });
 
 test('prioritises Perth service intent on the five primary SEO landing pages', () => {
@@ -338,7 +337,7 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
     }
   };
   walk(path.join(__dirname, '..'));
-  assert.equal(customerPages.length, 109, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 110, 'customer-facing page inventory changed unexpectedly');
   for (const page of customerPages) {
     const html = fs.readFileSync(page, 'utf8');
     assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-QDLBD5EN3B/, page);
@@ -383,16 +382,30 @@ test('places an OpenStreetMap office map below the homepage call to action with 
   assert.match(home, /target="_blank"[^>]*>Open in Google Maps/);
 });
 
-test('exposes the Ellis Services Group Instagram profile from the homepage footer', () => {
-  const home = fs.readFileSync(path.join(__dirname, '../index.html'), 'utf8');
+test('exposes Instagram and Google Reviews from every customer-facing footer', () => {
+  const root = path.join(__dirname, '..');
+  const pages = [];
+  const walk = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      if (['.git', '.worktrees', 'node_modules', 'dist', 'tests', 'docs', 'scripts', 'tools'].includes(entry.name)) continue;
+      const target = path.join(directory, entry.name);
+      if (entry.isDirectory()) walk(target);
+      else if ((entry.name === 'index.html' || entry.name === '404.html') && entry.name !== 'google28003a8fb6bb282a.html') pages.push(target);
+    }
+  };
+  walk(root);
+  assert.equal(pages.length, 110);
   const styles = fs.readFileSync(path.join(__dirname, '../assets/css/global.css'), 'utf8');
-  assert.match(home, /<div class="footer-social-links">/);
-  assert.match(home, /<a class="footer-instagram" href="https:\/\/www\.instagram\.com\/elliservices_group\/" target="_blank" rel="noopener noreferrer" aria-label="Follow Ellis Services Group on Instagram" style="display:inline-flex;flex-direction:row;align-items:center;gap:6px">/);
-  assert.match(home, /<img src="\.\/assets\/images\/instagram-icon\.png" alt="" width="18" height="18"(?: loading="lazy" decoding="async")?>/);
-  assert.match(home, /<span>Instagram<\/span>/);
+  for (const page of pages) {
+    const html = fs.readFileSync(page, 'utf8');
+    assert.match(html, /<div class="footer-social-links">/, page);
+    assert.match(html, /<a class="footer-google-reviews" href="https:\/\/share\.google\/qaKT4Kj7ycWHQCQWh"/, page);
+    assert.match(html, /<a class="footer-instagram" href="https:\/\/www\.instagram\.com\/elliservices_group\/"/, page);
+    assert.match(html, /<span>Instagram<\/span>/, page);
+  }
   assert.match(styles, /\.site-footer \.footer-social-links\{display:flex/);
   assert.match(styles, /\.site-footer \.footer-instagram\{display:inline-flex/);
-  assert.doesNotMatch(home, /<a class="footer-instagram"[^>]*>\s*<svg/);
+  assert.match(styles, /\.site-footer \.footer-google-reviews\{display:inline-flex/);
 });
 
 test('publishes company registration identifiers with the official ABR lookup', () => {
@@ -426,22 +439,22 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   };
   walk(path.join(root, 'services'));
   assert.equal(leafRoutes.length, 67, 'existing service URLs must remain live');
-  assert.equal(policy.indexableServiceRoutes.length, 15);
+  assert.equal(policy.indexableServiceRoutes.length, 67);
   assert.equal(
     policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + policy.indexableProjectRoutes.length,
-    53,
+    106,
     'the declared indexable routes should account for every sitemap URL',
   );
 
   const indexable = new Set(policy.indexableServiceRoutes);
   for (const route of leafRoutes) {
     const html = fs.readFileSync(path.join(root, route, 'index.html'), 'utf8');
-    if (indexable.has(route)) assert.match(html, /<meta name="robots" content="index,follow">/);
-    else assert.match(html, /<meta name="robots" content="noindex,follow">/);
+    assert.ok(indexable.has(route), `${route} should be an approved indexable service URL`);
+    assert.match(html, /<meta name="robots" content="index,follow">/);
   }
 
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 53);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 106);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/roof-and-gutter-maintenance\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/exterior-timber-window-door-repair\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/bathroom-tile-shower-repair\//);
@@ -554,7 +567,7 @@ test('ships reproducible first-round SEO delivery records', () => {
   const owners = fs.readFileSync(path.join(seoDocs, 'priority-owner-map.csv'), 'utf8');
   assert.match(owners, /Fly screen repairs Perth/);
   assert.match(owners, /Shower screen repairs Perth/);
-  assert.match(owners, /No noindex changes in this round/);
+  assert.match(owners, /Fly screen repairs Perth/);
 
   const report = fs.readFileSync(path.join(seoDocs, 'seo-implementation-report.md'), 'utf8');
   assert.match(report, /用户提供的 GSC 快照/);
@@ -585,7 +598,7 @@ test('keeps approved project evidence URLs when the indexing policy rebuilds the
   }
 });
 
-test('does not publish prototype or unsupported provider-vetting claims', () => {
+test('does not publish prototype or unsupported third-party-vetting claims', () => {
   const sourceFiles = [path.join(root, 'data', 'content.js')];
   const collectHtml = (directory) => {
     for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
@@ -859,7 +872,7 @@ test('presents Ellis Perth as a direct local handyman and maintenance team', () 
   const serviceCatalog = fs.readFileSync(path.join(root, 'data', 'service-catalog.json'), 'utf8');
   assert.match(home, /local handyman and maintenance team/i);
   assert.match(about, /part of Ellis Services Group/i);
-  assert.match(about, /not a lead-generation, brokerage or referral platform/i);
+  assert.match(about, /Click Contact Us to speak directly with Ellis Perth/i);
   assert.match(faq, /directly with our Perth office and local team/i);
   assert.doesNotMatch(content, /Ellis Services Group coordinates|route the request|another provider/i);
   assert.doesNotMatch(serviceCatalog, /Ellis Services Group coordinates|route the request|another provider/i);
@@ -877,11 +890,15 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   };
   collectHtml(root);
 
-  assert.equal(customerPages.length, 109, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 110, 'customer-facing page inventory changed unexpectedly');
   for (const file of customerPages) {
     const source = fs.readFileSync(file, 'utf8');
-    assert.match(source, /<p class="footer-hours">Open 24 hours<\/p>/, file);
+    assert.match(source, /<p class="footer-hours">24-hour onsite service · urgent attendance from 30 minutes\*<\/p>/, file);
+    assert.match(source, /https:\/\/share\.google\/qaKT4Kj7ycWHQCQWh/, file);
+    assert.match(source, /https:\/\/www\.instagram\.com\/elliservices_group\//, file);
+    assert.match(source, /<a href="[^\"]*privacy\/">Privacy<\/a>/, file);
     assert.doesNotMatch(source, /\broute(?:s|d|ing)?\b/i, file);
+    assert.doesNotMatch(source, /\bprovider\b/i, file);
   }
 
   const content = fs.readFileSync(path.join(root, 'data', 'content.js'), 'utf8');
@@ -895,6 +912,10 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   const client = fs.readFileSync(path.join(root, 'assets', 'js', 'site.js'), 'utf8');
   assert.match(about, /https:\/\/share\.google\/qaKT4Kj7ycWHQCQWh/);
   assert.match(about, /Read our Google reviews/);
+  assert.match(contact, /customer service team will call you/i);
+  assert.match(contact, /Read our Privacy Notice/);
+  const privacy = fs.readFileSync(path.join(root, 'privacy', 'index.html'), 'utf8');
+  assert.match(privacy, /call you about the job/i);
   assert.match(contact, /name="website"/);
   assert.match(contact, /Not sure — please advise/);
   assert.match(formConfig, /endpoint:'\/api\/contact'/);

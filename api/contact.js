@@ -97,7 +97,7 @@ function createContactHandler({ env = process.env, fetch: request = globalThis.f
 
     const body = readBody(requestObject.body);
     if (!isValidEnquiry(body)) return respond(response, 400, { error: 'Please check the highlighted details and try again.' });
-    if (clean(body.website || '')) return respond(response, 200, { ok: true, message: 'Thanks. Your enquiry has been received.' });
+    if (clean(body.website || '')) return respond(response, 200, { ok: true, message: 'Thanks. Our customer service team will call you about your request.' });
 
     const apiKey = env.RESEND_API_KEY;
     const from = env.RESEND_FROM_EMAIL;
@@ -112,7 +112,7 @@ function createContactHandler({ env = process.env, fetch: request = globalThis.f
         body: JSON.stringify(buildEmail(body, from)),
       });
       if (!sendResponse.ok) return respond(response, 502, { error: 'We could not send your enquiry just now. Please call 0403 069 685.' });
-      return respond(response, 201, { ok: true, message: 'Thanks. Your enquiry has been received.' });
+      return respond(response, 201, { ok: true, message: 'Thanks. Our customer service team will call you about your request.' });
     } catch {
       return respond(response, 502, { error: 'We could not send your enquiry just now. Please call 0403 069 685.' });
     }

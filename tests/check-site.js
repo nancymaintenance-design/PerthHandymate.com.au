@@ -21,7 +21,7 @@ function fail(message) { failures.push(message); }
 function rel(file) { return path.relative(root, file).replace(/\\/g, '/'); }
 
 walk(root);
-if (htmlFiles.length !== 109) fail(`Expected 109 HTML pages, found ${htmlFiles.length}`);
+if (htmlFiles.length !== 110) fail(`Expected 110 HTML pages, found ${htmlFiles.length}`);
 
 const titles = new Map();
 const descriptions = new Map();

@@ -48,13 +48,15 @@ fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap);
 
 const catalogFile = path.join(root, 'data/search-catalog.js');
 const catalogPrefix = 'window.ELLIS_SEARCH_CATALOG=';
-const catalogSource = fs.readFileSync(catalogFile, 'utf8');
-const catalogStart = catalogSource.indexOf(catalogPrefix);
-if (catalogStart < 0) throw new Error('Unexpected search catalog format');
-const catalog = JSON.parse(catalogSource.slice(catalogStart + catalogPrefix.length).trim().replace(/;$/, ''));
-const focusedCatalog = catalog.filter((item) => indexableServices.has(item.route));
-if (focusedCatalog.length !== policy.indexableServiceRoutes.length) throw new Error('Focused search catalog is incomplete');
-fs.writeFileSync(catalogFile, `${catalogPrefix}${JSON.stringify(focusedCatalog, null, 2)};\n`);
+const serviceCatalog = JSON.parse(fs.readFileSync(path.join(root, 'data/service-catalog.json'), 'utf8'));
+const searchCatalog = serviceCatalog.canonicalServices.map((item) => ({
+  service: item.title,
+  canonical: item.categoryTitle,
+  route: item.url,
+  terms: [...new Set([item.title, ...item.searchTerms].map((term) => term.toLowerCase()))],
+}));
+if (searchCatalog.length !== policy.indexableServiceRoutes.length) throw new Error('Search catalog coverage is incomplete');
+fs.writeFileSync(catalogFile, `${catalogPrefix}${JSON.stringify(searchCatalog, null, 2)};\n`);
 
 const cards = [
   ['icon-handyman.png', 'Handyman repairs', 'services/handyman-interiors-appliance-repairs/handymen/'],
@@ -75,4 +77,4 @@ const after = home.indexOf(end, before);
 if (before < 0 || after < 0) throw new Error('Popular service section not found');
 fs.writeFileSync(homeFile, `${home.slice(0, before)}${start}${cards}</div>${home.slice(after)}`);
 
-console.log(`Applied PHM indexing policy: ${sitemapRoutes.length} sitemap URLs, ${focusedCatalog.length} searchable services.`);
+console.log(`Applied PHM indexing policy: ${sitemapRoutes.length} sitemap URLs, ${searchCatalog.length} searchable services.`);
