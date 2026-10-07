@@ -1,4 +1,15 @@
-perth-handymate-site.zip
-.worktrees/
-docs/
-tests/
+# Stage3 release packaging: keep internal evidence out of deployment.
+node_modules
+.git
+.vercel
+.superpowers
+docs
+.env
+.env.*
+!.env.example
+**/*.log
+**/*.diff
+**/*.patch
+public
+dist
+/*.zip
