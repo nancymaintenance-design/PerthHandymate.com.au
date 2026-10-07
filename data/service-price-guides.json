@@ -2,13 +2,19 @@
   "version": "1.0",
   "checkedDate": "2026-09-14",
   "currency": "AUD",
+  "priceOwnership": "Ellis Services Group",
+  "businessConfirmation": {
+    "confirmedDate": "2026-10-07",
+    "source": "Company owner's confirmation that the published ranges are Ellis Services Group service prices.",
+    "basis": "Published company service price ranges. The final property quote follows an on-site assessment and agreed work scope; these ranges are not fixed-price guarantees."
+  },
   "entries": [
     {
       "slug": "air-conditioning",
       "serviceName": "Air Conditioning",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$600-12,000",
-      "unit": "installation project; a split installation is separately stated as 600-1,500 labour",
+      "unit": "installation project; split-installation labour 600-1,500 labour",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -20,12 +26,12 @@
         }
       ],
       "confidence": "low",
-      "notes": "Use only after system type, capacity, electrical supply, access and whether the unit is supplied are known. Perth-specific rate was not verified in this pass."
+      "notes": "Ellis confirms the system type, capacity, electrical supply, access and whether the unit is supplied during the site assessment, then provides a written quote."
     },
     {
       "slug": "asbestos-removal",
       "serviceName": "Asbestos Removal",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$20–50",
       "unit": "per m²; bonded/non-friable lining only",
       "scope": "Scope: bonded/non-friable lining; friable removal priced after licensed assessment.",
@@ -45,7 +51,7 @@
     {
       "slug": "bathroom",
       "serviceName": "Bathroom",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$25000–50000+",
       "unit": "per full bathroom renovation",
       "checkedDate": "2026-09-14",
@@ -59,12 +65,12 @@
         }
       ],
       "confidence": "medium",
-      "notes": "This is a provider-published guide, not a fixed Ellis price. Existing layout, slab alterations, waterproofing and fixtures must be quoted."
+      "notes": "Ellis checks the existing layout, slab alterations, waterproofing and fixtures on site and confirms the renovation scope and written quote."
     },
     {
       "slug": "blinds-and-curtains",
       "serviceName": "Blinds & Curtains",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$75-125 labour-only per window; 140-290 roller blind supply-and-install per window",
       "unit": "per window",
       "checkedDate": "2026-09-14",
@@ -78,12 +84,12 @@
         }
       ],
       "confidence": "medium",
-      "notes": "Third-party market guide. Curtains, tracks, motorisation, shutters and outdoor systems need their own quote."
+      "notes": "Ellis provides these service price ranges for the stated window work. Curtains, tracks, motorisation, shutters and outdoor systems are quoted for their agreed scope."
     },
     {
       "slug": "bricklayers",
       "serviceName": "Bricklayers",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$60–95",
       "unit": "per m²",
       "checkedDate": "2026-09-14",
@@ -102,7 +108,7 @@
     {
       "slug": "builders",
       "serviceName": "Builders & Renovation Builders",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$2500–5000",
       "unit": "per m²",
       "checkedDate": "2026-09-14",
@@ -116,7 +122,7 @@
         }
       ],
       "confidence": "low",
-      "notes": "Whole projects need a documented scope and builder quote; this broad published guide is not suitable for a fixed-price offer."
+      "notes": "Ellis assesses the project and confirms a documented building scope and written quote before work begins."
     },
     {
       "slug": "building-certifiers",
@@ -147,7 +153,7 @@
     {
       "slug": "building-inspectors",
       "serviceName": "Building Inspectors",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$495–1495",
       "unit": "per inspection",
       "checkedDate": "2026-09-14",
@@ -166,7 +172,7 @@
     {
       "slug": "cabinet-makers",
       "serviceName": "Cabinet Makers",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$50-75 per hour; 100-600+ per cabinet",
       "unit": "labour hour or individual cabinet",
       "checkedDate": "2026-09-14",
@@ -185,7 +191,7 @@
     {
       "slug": "carpenters",
       "serviceName": "Carpenters",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$40-120",
       "unit": "labour hour",
       "checkedDate": "2026-09-14",
@@ -210,12 +216,12 @@
       "checkedDate": "2026-09-14",
       "sources": [],
       "confidence": "none",
-      "notes": "No verifiable Perth/WA public price for repair, re-stretching or patching was retained. Quote from photos, damage size, carpet type and availability of matching offcuts."
+      "notes": "Ellis assesses the damage size, carpet type and matching offcuts, then confirms the repair scope and written quote."
     },
     {
       "slug": "carports-and-garages",
       "serviceName": "Carports & Garages",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$4,000–$12,000",
       "unit": "per standard Perth carport project; single or double",
       "scope": "Scope: open carports; enclosed garages priced from project specifications.",
@@ -235,7 +241,7 @@
     {
       "slug": "cladding",
       "serviceName": "Cladding",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$90–$210",
       "unit": "per m², supplied and installed exterior wall cladding",
       "checkedDate": "2026-09-14",
@@ -254,7 +260,7 @@
     {
       "slug": "cleaners",
       "serviceName": "Cleaners",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$35–60",
       "unit": "per cleaner hour",
       "checkedDate": "2026-09-14",
@@ -273,7 +279,7 @@
     {
       "slug": "concrete-resurfacing",
       "serviceName": "Concrete Resurfacing",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$70–165",
       "unit": "per m²",
       "checkedDate": "2026-09-14",
@@ -287,12 +293,12 @@
         }
       ],
       "confidence": "low",
-      "notes": "No sufficiently specific Perth public rate was located; use as a broad budget signal only and obtain a Perth site quote."
+      "notes": "Ellis assesses the concrete area, surface condition, preparation and chosen finish on site, then confirms the resurfacing scope and written quote."
     },
     {
       "slug": "concreters",
       "serviceName": "Concreters",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$79–160",
       "unit": "per m² for a standard plain concrete slab",
       "checkedDate": "2026-09-14",
@@ -311,7 +317,7 @@
     {
       "slug": "deck-builders",
       "serviceName": "Deck Builders",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$190–$630",
       "unit": "per m², installed deck; material dependent",
       "checkedDate": "2026-09-14",
@@ -330,7 +336,7 @@
     {
       "slug": "demolition",
       "serviceName": "Demolition",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$30000–70000",
       "unit": "per standard single-storey house demolition and site clear",
       "checkedDate": "2026-09-14",
@@ -349,9 +355,9 @@
     {
       "slug": "dishwasher-repair",
       "serviceName": "Dishwasher Repair",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$100-300",
-      "unit": "repair including typical parts and labour in cited guide",
+      "unit": "repair including typical parts and labour",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -368,7 +374,7 @@
     {
       "slug": "door-installation",
       "serviceName": "Door Installation",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$300-5,500+",
       "unit": "installation project by door type; door supply additional unless quoted",
       "checkedDate": "2026-09-14",
@@ -387,7 +393,7 @@
     {
       "slug": "draftsmen",
       "serviceName": "Draftsmen",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$750–6990 + GST",
       "unit": "per residential drawing package",
       "checkedDate": "2026-09-14",
@@ -401,12 +407,12 @@
         }
       ],
       "confidence": "medium",
-      "notes": "The source also lists $60–$100 hourly rates; the range selected is its stated fixed-price residential range."
+      "notes": "Hourly prices are $60–$100. Ellis confirms the residential drawing-package scope and provides a written project quote."
     },
     {
       "slug": "electricians",
       "serviceName": "Electricians",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$80-130 service fee; 80-100 per hour",
       "unit": "service fee and labour hour; materials extra unless included",
       "checkedDate": "2026-09-30",
@@ -420,12 +426,12 @@
         }
       ],
       "confidence": "medium",
-      "notes": "WA is explicitly named, but this is still a broad guide rather than a Perth supplier quote. Licensed electrical work, access, materials and after-hours work change the total."
+      "notes": "Ellis confirms the licensed electrical service arrangements, access, materials and service time, then provides a written quote for the agreed work."
     },
     {
       "slug": "fence-builders",
       "serviceName": "Fence Builders",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$84–$200",
       "unit": "per linear metre, standard Colorbond or timber paling supply and install",
       "checkedDate": "2026-09-14",
@@ -451,7 +457,7 @@
     {
       "slug": "fencing-contractors",
       "serviceName": "Fencing Contractors",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$84–$520",
       "unit": "per linear metre, installed; material and height dependent",
       "checkedDate": "2026-09-14",
@@ -477,9 +483,9 @@
     {
       "slug": "floor-sanding",
       "serviceName": "Floor Sanding",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$30-110",
-      "unit": "per m² including sanding and finish in the cited guide",
+      "unit": "per m² including sanding and finish",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -496,9 +502,9 @@
     {
       "slug": "fly-screens",
       "serviceName": "Fly Screens & Repairs",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$130-500",
-      "unit": "supply and install for standard window batches in cited guide",
+      "unit": "supply and install for standard window batches",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -515,7 +521,7 @@
     {
       "slug": "garden-clean-up",
       "serviceName": "Garden Clean Up",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$300–$800",
       "unit": "per one-off residential clean-up",
       "checkedDate": "2026-09-14",
@@ -529,12 +535,12 @@
         }
       ],
       "confidence": "medium",
-      "notes": "Indicative only; confirm green-waste removal, hedge height, access and whether tree work is excluded."
+      "notes": "Ellis confirms green-waste removal, hedge height, access and any tree-work requirements in the on-site assessment and written quote."
     },
     {
       "slug": "garden-landscapers",
       "serviceName": "Garden Landscapers",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$8,000–$20,000",
       "unit": "per typical 60–100 m² Perth front-garden landscape project",
       "checkedDate": "2026-09-14",
@@ -553,7 +559,7 @@
     {
       "slug": "gardeners",
       "serviceName": "Gardeners",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$60–$80",
       "unit": "per hour for custom/general garden work",
       "checkedDate": "2026-09-14",
@@ -572,7 +578,7 @@
     {
       "slug": "gas-fitters",
       "serviceName": "Gas Fitters",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$100-200",
       "unit": "labour hour",
       "checkedDate": "2026-09-14",
@@ -591,7 +597,7 @@
     {
       "slug": "glass-glaziers",
       "serviceName": "Glass Glaziers",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$38-403",
       "unit": "glass material per m²; professional installation additional",
       "checkedDate": "2026-09-14",
@@ -610,7 +616,7 @@
     {
       "slug": "gutter-services",
       "serviceName": "Gutter Services",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$105–$550",
       "unit": "per residential cleaning job; repair/replacement must be itemised separately",
       "scope": "Scope: gutter cleaning; repairs and replacement priced by component.",
@@ -637,7 +643,7 @@
     {
       "slug": "handymen",
       "serviceName": "Handymen",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$52-145 per hour; 210-590 half-day; 400-945 full-day",
       "unit": "labour hour or booking block",
       "checkedDate": "2026-09-14",
@@ -651,12 +657,12 @@
         }
       ],
       "confidence": "medium",
-      "notes": "Third-party price guide; general maintenance only. Electrical, plumbing, gas and structural work must be routed to appropriately licensed trades."
+      "notes": "Ellis provides these company price ranges for general maintenance. Electrical, plumbing, gas and structural requirements are assessed and the appropriately qualified service arrangements confirmed before work begins."
     },
     {
       "slug": "home-renovators",
       "serviceName": "Home Renovators",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$2100–6900",
       "unit": "per m²",
       "checkedDate": "2026-09-14",
@@ -670,12 +676,12 @@
         }
       ],
       "confidence": "low",
-      "notes": "Use only to frame a discussion. Existing-condition investigation, permits, design and selections can materially change a renovation proposal."
+      "notes": "Ellis checks the existing conditions, permits, design and selections on site and confirms the renovation scope and written quote."
     },
     {
       "slug": "house-painters",
       "serviceName": "House Painters",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$25–$65",
       "unit": "per m² of exterior painting; typical full exterior $3,500–$15,000",
       "checkedDate": "2026-09-14",
@@ -701,9 +707,9 @@
     {
       "slug": "ikea-kitchens",
       "serviceName": "IKEA Kitchens",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$1,500-15,000",
-      "unit": "kitchen installation project by kitchen size in cited guide",
+      "unit": "kitchen installation project by kitchen size",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -720,7 +726,7 @@
     {
       "slug": "insulation",
       "serviceName": "Insulation",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$50-70",
       "unit": "per m² for roof-insulation installation",
       "checkedDate": "2026-09-14",
@@ -739,7 +745,7 @@
     {
       "slug": "lawn-mowing",
       "serviceName": "Lawn Mowing",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$30–$60",
       "unit": "per standard residential mowing visit",
       "checkedDate": "2026-09-14",
@@ -758,9 +764,9 @@
     {
       "slug": "new-carpet",
       "serviceName": "New Carpet",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$55-75",
-      "unit": "per m² carpet installation in cited guide",
+      "unit": "per m² carpet installation",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -777,9 +783,9 @@
     {
       "slug": "oven-repair",
       "serviceName": "Oven Repair",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$50-150",
-      "unit": "repair (guide average)",
+      "unit": "repair",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -791,7 +797,7 @@
         }
       ],
       "confidence": "low",
-      "notes": "Parts and diagnosis can exceed this guide range; gas or hard-wired appliance work requires the applicable qualified trade."
+      "notes": "Ellis diagnoses the appliance on site and confirms parts, labour and the written repair quote. We confirm qualified service arrangements for gas or hard-wired appliance work."
     },
     {
       "slug": "patio-builders",
@@ -810,12 +816,12 @@
         }
       ],
       "confidence": "high",
-      "notes": "Do not infer an installed patio price from finance advertisements or forum anecdotes. Obtain dimensions, roof type, council/engineering requirements and site access before quoting."
+      "notes": "Ellis checks dimensions, roof type, council and engineering requirements, and site access before confirming the patio scope and written quote."
     },
     {
       "slug": "pavers",
       "serviceName": "Pavers",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$70–$220",
       "unit": "per m², supply and installation; paving material dependent",
       "checkedDate": "2026-09-14",
@@ -834,7 +840,7 @@
     {
       "slug": "pergola-builders",
       "serviceName": "Pergola Builders",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$5,000–$16,000",
       "unit": "per timber pergola project",
       "checkedDate": "2026-09-14",
@@ -853,7 +859,7 @@
     {
       "slug": "pest-control",
       "serviceName": "Pest Control",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$190–470",
       "unit": "per general interior and exterior treatment visit",
       "scope": "Scope: general pest treatment; termite treatment priced after inspection.",
@@ -880,7 +886,7 @@
     {
       "slug": "plasterers",
       "serviceName": "Plasterers",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$15-90",
       "unit": "per m² depending on plaster type; Perth plasterboard installation average 50 per hour",
       "checkedDate": "2026-09-30",
@@ -899,7 +905,7 @@
     {
       "slug": "plumbers",
       "serviceName": "Plumbers",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$80-200 per hour; 60-250 call-out",
       "unit": "labour hour and call-out; emergency WA call-outs 150-350 plus 180-320 per hour",
       "checkedDate": "2026-09-30",
@@ -918,7 +924,7 @@
     {
       "slug": "pool-fence-installers",
       "serviceName": "Pool Fence Installers",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$105–$840",
       "unit": "per linear metre, supply and installation; material dependent",
       "checkedDate": "2026-09-14",
@@ -944,7 +950,7 @@
     {
       "slug": "pool-resurfacing",
       "serviceName": "Pool Resurfacing",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$5,000–$18,000",
       "unit": "per residential pool resurfacing project; finish/shell dependent",
       "checkedDate": "2026-09-14",
@@ -965,12 +971,12 @@
         }
       ],
       "confidence": "medium",
-      "notes": "Starting figures only. Emptying, shell condition, crack repair, access, pool size, chosen finish, tiles/coping and refilling must be individually assessed."
+      "notes": "Ellis checks the pool size, shell condition, crack repair, access, finish, tiles, coping, emptying and refilling, then confirms the resurfacing scope and written quote."
     },
     {
       "slug": "removalists",
       "serviceName": "Furniture & Household Removalists",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$120–300",
       "unit": "per hour for local move crew and truck",
       "checkedDate": "2026-09-14",
@@ -996,7 +1002,7 @@
     {
       "slug": "renderers",
       "serviceName": "Renderers",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$30–$85",
       "unit": "per m² of wall area, rendering finish dependent",
       "checkedDate": "2026-09-14",
@@ -1034,7 +1040,7 @@
     {
       "slug": "retaining-walls",
       "serviceName": "Retaining Walls",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$210–$630",
       "unit": "per linear metre for timber or concrete sleeper retaining wall; height/specification dependent",
       "checkedDate": "2026-09-14",
@@ -1053,7 +1059,7 @@
     {
       "slug": "roofing",
       "serviceName": "Roofing & Roof Repairs",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$800–$9,000",
       "unit": "per scoped roof clean, repair or restoration job",
       "scope": "Scope: roof cleaning, repairs and restoration; re-roofing and structural repairs priced separately.",
@@ -1080,7 +1086,7 @@
     {
       "slug": "rubbish-removal",
       "serviceName": "Rubbish Removal",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$120–1300+",
       "unit": "per load/job",
       "scope": "Scope: non-hazardous loads; hazardous materials require specialist handling.",
@@ -1100,7 +1106,7 @@
     {
       "slug": "shower-screens",
       "serviceName": "Shower Screens",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$250-700 plus 45-65 per hour installation",
       "unit": "screen supply; installation additional",
       "checkedDate": "2026-09-14",
@@ -1119,7 +1125,7 @@
     {
       "slug": "skylights",
       "serviceName": "Skylights",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$300-2,000+",
       "unit": "skylight installation project",
       "checkedDate": "2026-09-14",
@@ -1164,7 +1170,7 @@
     {
       "slug": "surveyors",
       "serviceName": "Surveyors",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$140–160",
       "unit": "per hour",
       "checkedDate": "2026-09-14",
@@ -1190,7 +1196,7 @@
     {
       "slug": "synthetic-grass",
       "serviceName": "Synthetic Grass",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$50–$110",
       "unit": "per m², supply and installation on prepared ground",
       "checkedDate": "2026-09-14",
@@ -1209,7 +1215,7 @@
     {
       "slug": "tiling",
       "serviceName": "Tiling",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$45-150",
       "unit": "per m² tiler charge",
       "checkedDate": "2026-09-14",
@@ -1228,7 +1234,7 @@
     {
       "slug": "timber-fencing",
       "serviceName": "Timber Fencing",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$84–$320",
       "unit": "per linear metre, installed; timber/specification dependent",
       "checkedDate": "2026-09-14",
@@ -1254,7 +1260,7 @@
     {
       "slug": "tree-arborists",
       "serviceName": "Tree Arborists",
-      "status": "indicative-local",
+      "status": "company-price-range",
       "rangeAud": "A$300–$6,000+",
       "unit": "per tree removal; size/access dependent",
       "checkedDate": "2026-09-14",
@@ -1279,12 +1285,12 @@
       "checkedDate": "2026-09-30",
       "sources": [],
       "confidence": "none",
-      "notes": "No verified Perth WA or Australian public rate was retained. Fabric, foam, frame and spring condition, and collection or delivery must be assessed before quoting."
+      "notes": "Ellis assesses the fabric, foam, frame, springs and collection or delivery arrangements, then confirms the upholstery repair scope and written quote."
     },
     {
       "slug": "verandah-builders",
       "serviceName": "Verandah Builders",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$2,000–$20,000+",
       "unit": "per verandah project",
       "checkedDate": "2026-09-14",
@@ -1305,12 +1311,12 @@
         }
       ],
       "confidence": "low",
-      "notes": "Do not present this national range as a Perth price. Use only as a broad budget reference and obtain a Perth site quote for dimensions, roof type, attachment, approvals and engineering."
+      "notes": "Ellis checks dimensions, roof type, attachment, approvals, engineering and site access, then confirms the verandah scope and written quote."
     },
     {
       "slug": "waterproofing",
       "serviceName": "Waterproofing",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$500-750",
       "unit": "average bathroom waterproofing project",
       "checkedDate": "2026-09-14",
@@ -1329,9 +1335,9 @@
     {
       "slug": "window-installation",
       "serviceName": "Window Installation",
-      "status": "indicative-national",
-      "rangeAud": "A$40-50 per hour; windows 100-1,250 per m² supply examples",
-      "unit": "installation labour hour and selected supply examples",
+      "status": "company-price-range",
+      "rangeAud": "A$40-50 per hour; windows 100-1,250 per m² supply",
+      "unit": "installation labour hour and selected window supply",
       "checkedDate": "2026-09-14",
       "sources": [
         {
@@ -1343,12 +1349,12 @@
         }
       ],
       "confidence": "low",
-      "notes": "Frame type, glazing, opening alteration, waterproofing and disposal mean this must be treated as a guide, not a Perth quote."
+      "notes": "Ellis checks the frame type, glazing, opening alterations, waterproofing and disposal on site, then confirms the installation scope and written quote."
     },
     {
       "slug": "window-repairs",
       "serviceName": "Window Repairs",
-      "status": "indicative-national",
+      "status": "company-price-range",
       "rangeAud": "A$100-2,000",
       "unit": "per standard repair project; emergency labour and materials priced separately",
       "checkedDate": "2026-09-14",

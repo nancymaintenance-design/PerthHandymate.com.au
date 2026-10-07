@@ -16,18 +16,14 @@ function escapeHtml(value) {
 }
 
 function markup(guide) {
-  const local = guide.status === 'indicative-local';
-  const national = guide.status === 'indicative-national';
-  const context = local ? 'Third-party published Perth / WA reference' : national ? 'Third-party published Australian reference' : 'Price prepared from your project details';
+  const context = guide.rangeAud ? 'Ellis Services Group service price range' : 'Ellis Services Group project quote';
   const range = guide.rangeAud
     ? `<p class="price-guide-range"><strong>${escapeHtml(guide.rangeAud)}</strong><span>${escapeHtml(guide.unit)}</span></p>`
     : `<p class="price-guide-range price-guide-no-range"><strong>Request your project price</strong><span>${escapeHtml(guide.unit)}</span></p>`;
-  const sources = guide.sources.length
-    ? `<div class="price-guide-sources"><h3>Published sources</h3><ul>${guide.sources.map((source) => `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.title)}</a></li>`).join('')}</ul></div>`
-    : '';
   const scope = guide.scope ? `<p class="price-guide-scope">${escapeHtml(guide.scope)}</p>` : '';
-  const heading = guide.rangeAud ? 'Reference price' : 'Project price';
-  return `<section class="section muted"><div class="shell price-guide" data-price-guide-status="${guide.status}"><p class="eyebrow">Service pricing</p><h2>${heading}</h2><p>${context}</p>${range}${scope}<p class="price-guide-date">Reference checked ${escapeHtml(guide.checkedDate)}</p>${sources}</div></section>`;
+  const heading = guide.rangeAud ? 'Service price range' : 'Project price';
+  const confirmed = guide.rangeAud ? `<p class="price-guide-date">Company price range confirmed ${escapeHtml(pricing.businessConfirmation.confirmedDate)}</p>` : '';
+  return `<section class="section muted"><div class="shell price-guide" data-price-guide-status="${guide.status}"><p class="eyebrow">Service pricing</p><h2>${heading}</h2><p>${context}</p>${range}${scope}<p>We provide a written quote after an on-site assessment of the property, materials, access and agreed work scope. Contact Ellis Services Group to arrange your assessment.</p>${confirmed}</div></section>`;
 }
 
 if (guides.size !== 67 || catalog.canonicalServices.length !== 67) throw new Error('Expected 67 unique service price guides');

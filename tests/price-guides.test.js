@@ -9,6 +9,35 @@ const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data/service-catalog
 const priceGuidePath = path.join(root, 'data/service-price-guides.json');
 const cjkCharacters = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uac00-\ud7af]/u;
 
+test('customer price modules keep research citations in data rather than displaying outside contractor links', () => {
+  const pricing = JSON.parse(fs.readFileSync(priceGuidePath, 'utf8'));
+  for (const service of catalog.canonicalServices) {
+    const guide = pricing.entries.find(entry => entry.slug === service.slug);
+    const page = fs.readFileSync(path.join(root, service.url, 'index.html'), 'utf8');
+    const markup = page.match(/<section class="section muted"><div class="shell price-guide"[\s\S]*?<\/section>/)?.[0] || '';
+    assert.doesNotMatch(markup, /price-guide-sources|Background references|Published sources|href="https?:/i, service.slug);
+    assert.ok(Array.isArray(guide.sources), `${service.slug} retains research citations in data`);
+  }
+});
+
+test('confirmed Ellis price ranges preserve amounts and lead to an on-site written quote', () => {
+  const pricing = JSON.parse(fs.readFileSync(priceGuidePath, 'utf8'));
+  assert.equal(pricing.priceOwnership, 'Ellis Services Group');
+  assert.equal(pricing.businessConfirmation.confirmedDate, '2026-10-07');
+  for (const service of catalog.canonicalServices) {
+    const guide = pricing.entries.find(entry => entry.slug === service.slug);
+    const page = fs.readFileSync(path.join(root, service.url, 'index.html'), 'utf8');
+    const markup = page.match(/<section class="section muted"><div class="shell price-guide"[\s\S]*?<\/section>/)?.[0] || '';
+    assert.doesNotMatch(markup, /Third-party published|Reference price|market-reference|not a fixed Ellis price|not a Perth quote/i, service.slug);
+    assert.match(markup, /written quote.*on-site assessment/i, service.slug);
+    if (guide.rangeAud) {
+      assert.equal(guide.status, 'company-price-range');
+      assert.ok(markup.includes('Ellis Services Group service price range'), service.slug);
+      assert.ok(markup.includes(guide.rangeAud), service.slug);
+    }
+  }
+});
+
 function publicFrontstageFiles() {
   const files = fs.readdirSync(root, { recursive: true, withFileTypes: true });
   return files
@@ -35,7 +64,7 @@ test('price research normalises all 67 canonical services into a governed public
     new Set(catalog.canonicalServices.map((service) => service.slug)),
   );
   for (const entry of priceGuides.entries) {
-    assert.ok(['indicative-local', 'indicative-national', 'quote-required'].includes(entry.status), `${entry.slug} status`);
+    assert.ok(['company-price-range', 'quote-required'].includes(entry.status), `${entry.slug} status`);
     assert.ok(['low', 'medium', 'high', 'none'].includes(entry.confidence), `${entry.slug} confidence`);
     assert.equal(typeof entry.unit, 'string', `${entry.slug} unit`);
     assert.equal(typeof entry.notes, 'string', `${entry.slug} notes`);
@@ -50,7 +79,7 @@ test('price research normalises all 67 canonical services into a governed public
   }
 });
 
-test('reviewed references do not mistake Canadian Perth or national rates for Perth WA prices', () => {
+test('company price ranges retain their factual background provenance', () => {
   const priceGuides = JSON.parse(fs.readFileSync(priceGuidePath, 'utf8'));
   const bySlug = new Map(priceGuides.entries.map((entry) => [entry.slug, entry]));
   const upholstery = bySlug.get('upholstery-repair');
@@ -58,7 +87,8 @@ test('reviewed references do not mistake Canadian Perth or national rates for Pe
   assert.equal(upholstery.rangeAud, null);
   assert.ok(upholstery.sources.every((source) => !source.url.includes('homestars.com')));
   for (const slug of ['electricians', 'plasterers', 'plumbers']) {
-    assert.equal(bySlug.get(slug).status, 'indicative-national', `${slug} range is from a national guide`);
+    assert.equal(bySlug.get(slug).status, 'company-price-range', `${slug} is a confirmed Ellis price range`);
+    assert.ok(bySlug.get(slug).sources.some(source => /Australia/.test(source.locality)), `${slug} preserves background provenance`);
   }
 });
 
@@ -69,7 +99,7 @@ test('the price-guide compiler preserves the reviewed in-repository source data'
   assert.equal(fs.readFileSync(priceGuidePath, 'utf8'), before);
 });
 
-test('every service detail page labels dated price references and links its published sources', () => {
+test('every service detail page presents company price ranges while retaining research citations in data', () => {
   const priceGuides = JSON.parse(fs.readFileSync(priceGuidePath, 'utf8'));
   const bySlug = new Map(priceGuides.entries.map((entry) => [entry.slug, entry]));
   for (const service of catalog.canonicalServices) {
@@ -78,27 +108,24 @@ test('every service detail page labels dated price references and links its publ
     const page = fs.readFileSync(path.join(root, service.url, 'index.html'), 'utf8');
     const priceGuide = page.match(/<section class="section muted"><div class="shell price-guide"[\s\S]*?<\/section>/)?.[0] || '';
     assert.ok(priceGuide.includes(`data-price-guide-status="${guide.status}"`), `${service.slug} status module`);
-    assert.ok(priceGuide.includes(`Reference checked ${guide.checkedDate}`), `${service.slug} reference date`);
-    assert.ok(priceGuide.includes(guide.rangeAud ? '<h2>Reference price</h2>' : '<h2>Project price</h2>'), `${service.slug} accurate price heading`);
+    if (guide.rangeAud) assert.ok(priceGuide.includes('Company price range confirmed 2026-10-07'), `${service.slug} business confirmation date`);
+    assert.ok(priceGuide.includes(guide.rangeAud ? '<h2>Service price range</h2>' : '<h2>Project price</h2>'), `${service.slug} accurate price heading`);
     assert.ok(!priceGuide.includes('not Ellis') && !priceGuide.includes('not a Perth quote'), `${service.slug} avoids negative pricing claims`);
     assert.doesNotMatch(priceGuide.replace(/<[^>]*>/g, ' '), /\b(?:may|might|could|perhaps|possibly|approximately|roughly|indicative)\b/i, `${service.slug} avoids vague price wording`);
     assert.ok(!priceGuide.includes('price-guide-notes') && !priceGuide.includes('price-guide-disclaimer'), `${service.slug} keeps pricing copy concise`);
     assert.match(page, /data-preserve-search href="[^"]*contact\/\?service=/, `${service.slug} retains Contact CTA`);
     assert.ok(page.indexOf('service-questions') < page.indexOf('price-guide') && page.indexOf('price-guide') < page.indexOf('city-service-band'), `${service.slug} price reference follows service questions`);
     assert.ok(!page.includes('"@type":"Offer"') && !page.includes('"@type":"Product"'), `${service.slug} has no price structured data`);
-    if (guide.status === 'indicative-local') {
-      assert.ok(priceGuide.includes('Third-party published Perth / WA reference'), `${service.slug} local source context`);
+    if (guide.status === 'company-price-range') {
+      assert.ok(priceGuide.includes('Ellis Services Group service price range'), `${service.slug} company price context`);
       assert.ok(priceGuide.includes(guide.rangeAud), `${service.slug} local range`);
-    } else if (guide.status === 'indicative-national') {
-      assert.ok(priceGuide.includes('Third-party published Australian reference'), `${service.slug} national source context`);
-      assert.ok(priceGuide.includes(guide.rangeAud), `${service.slug} national range`);
     } else {
       assert.ok(priceGuide.includes('Request your project price'), `${service.slug} direct next step`);
       assert.ok(!priceGuide.includes('A$'), `${service.slug} no invented range`);
     }
     if (guide.scope) assert.ok(priceGuide.includes(guide.scope), `${service.slug} price scope`);
     for (const source of guide.sources) {
-      assert.ok(priceGuide.includes(`href="${source.url.replaceAll('&', '&amp;')}"`), `${service.slug} cites external source`);
+      assert.ok(!priceGuide.includes(`href="${source.url.replaceAll('&', '&amp;')}"`), `${service.slug} keeps the research source off the customer price module`);
     }
   }
 });
