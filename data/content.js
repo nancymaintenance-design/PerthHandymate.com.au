@@ -27,14 +27,14 @@ window.ELLIS_CONTENT={
         "Interior painting and patching enquiries",
         "Household appliance assessment and repair coordination"
       ],
-      "note": "The appropriate trade depends on the task and local requirements. Describe the issue so the work can be triaged correctly."
+      "note": "The appropriate trade depends on the task and local requirements. Describe what you have noticed. Ellis checks the work on site and confirms the repair scope, qualified service arrangements and quote."
     },
     {
       "slug": "doors-windows-glass-screens",
       "title": "Doors, windows, glass & screens",
       "short": "Openings and security",
       "icon": "icon-bathroom.png",
-      "intro": "Repair and replacement pathways for the moving, glazed and screened parts of a property.",
+      "intro": "Repairs and replacements for the moving, glazed and screened parts of a property.",
       "tasks": [
         "Door adjustment, hardware and lock enquiries",
         "Window operation and frame repairs",
@@ -90,7 +90,7 @@ window.ELLIS_CONTENT={
       "title": "Building, renovation & structural",
       "short": "Larger property works",
       "icon": "icon-handyman.png",
-      "intro": "A clear first point of contact for renovation, building and structural enquiries that need careful scoping.",
+      "intro": "Renovation, building and structural services, with on-site assessment and a written quote for the agreed scope.",
       "tasks": [
         "Carpentry, tiling and masonry enquiries",
         "Room refreshes and renovation coordination",
@@ -108,7 +108,7 @@ window.ELLIS_CONTENT={
       "tasks": [
         "Building and pre-work inspection enquiries",
         "Drafting and planning support coordination",
-        "Surveying and certification pathways",
+        "Surveying and certification assessment arrangements",
         "Maintenance compliance checks"
       ],
       "note": "Ellis arranges property inspections and project coordination, checks the proposed work and confirms the inspection scope, required project documents and qualified service arrangements before engagement."
@@ -123,7 +123,7 @@ window.ELLIS_CONTENT={
         "General and end-of-lease cleaning enquiries",
         "Furniture and household removals",
         "Pest inspection and treatment coordination",
-        "Mould, asbestos and other hazard referrals"
+        "Mould, asbestos and other hazard assessment arrangements"
       ],
       "note": "Potential asbestos, mould or hazardous material must not be disturbed. Specialist assessment may be required."
     }
@@ -241,7 +241,7 @@ window.ELLIS_CONTENT={
           "Start with the problem, not a trade label",
           [
             "You do not need to diagnose a fault before asking for help. Start with what you can see, hear or smell, where it is happening and when it began. A sentence such as ‘the bedroom door scrapes the floor after rain’ is more useful than guessing that you need a carpenter. Include whether the issue is getting worse, affecting another room or creating a safety concern.",
-            "Add the property type, approximate age if known, access conditions and any previous repair. These details help the service team decide whether the request suits a general maintenance worker or needs a regulated trade. Keep assumptions separate from observations so the person reviewing the request can make a sound match."
+            "Add the property type, approximate age if known, access conditions and any previous repair. Ellis uses these details to prepare the on-site assessment and confirm the attending team and qualified service arrangements. Describe what you have noticed; we inspect the work and confirm the scope and quote."
           ]
         ],
         [
@@ -301,7 +301,7 @@ window.ELLIS_CONTENT={
           "How Ellis handles the hand-off",
           [
             "Contact Ellis Perth with your suburb and job details to arrange an on-site assessment. We identify the work required, confirm the repair plan and quote, and explain the attending team and any qualified service arrangements needed for licensed work.",
-            "Provide enough detail about the job, including photos taken from a safe position, so our local team can discuss the right next step with you. Before work begins, confirm the person or business completing the work, the written scope, credential details where required and how any newly discovered regulated work will be handled. If the scope changes, pause and document the variation rather than assuming the original approval covers it.",
+            "Provide enough detail about the job, including photos taken from a safe position, so our local team can arrange the on-site assessment and confirm the work scope and quote. Before work begins, confirm the person or business completing the work, the written scope, credential details where required and how any newly discovered regulated work will be handled. If the scope changes, pause and document the variation rather than assuming the original approval covers it.",
             "When checking a credential, use the official register rather than a screenshot alone. Make sure the holder’s name, licence class, status and location match the person or business being engaged. If the register or scope is unclear, ask the regulator or Ellis Perth team for clarification before authorising the work."
           ]
         ]
@@ -324,7 +324,7 @@ window.ELLIS_CONTENT={
     {
       "slug": "prepare-before-home-repair-quote",
       "title": "What to Prepare Before Asking for a Home Repair Quote",
-      "desc": "Give a Ellis Perth team the details needed to understand the job and explain price, scope and inspection requirements.",
+      "desc": "Give the Ellis Perth team the details needed to understand the job and explain price, scope and inspection requirements.",
       "metaTitle": "Prepare for a Home Repair Quote | Ellis Services Group",
       "metaDescription": "Use this checklist to organise job details, access, measurements, materials and questions before requesting a home maintenance quote.",
       "read": "5 min",
@@ -386,7 +386,7 @@ window.ELLIS_CONTENT={
           "Write the scope in observable terms",
           [
             "Pair the images with a short description: what is wrong, where it is, the desired outcome, how many items are affected and any known history. Separate required work from optional work. For example, ‘required: rehang one sticking internal door; optional: replace three handles if compatible’ is clearer than ‘fix doors’.",
-            "List known materials, finishes and dimensions, but mark estimates as approximate. Note whether matching an existing finish matters and whether materials are needed. If the cause is unknown, say so. Our Perth team can then discuss whether the job can be assessed remotely, needs an inspection or requires a licensed specialist."
+            "List known materials, finishes and dimensions, but mark estimates as approximate. Note whether matching an existing finish matters and whether materials are needed. If the cause is unknown, say so. Our Perth team arranges an on-site assessment, checks the affected area and confirms the repair plan, written quote and any qualified service arrangements."
           ]
         ],
         [
@@ -455,7 +455,7 @@ window.ELLIS_CONTENT={
         },
         {
           "question": "Can I bundle small jobs?",
-          "answer": "Often, if the tasks suit the same capability and access. List them separately so Ellis can check fit and serviceability."
+          "answer": "Often, if the tasks suit the same capability and access. List them separately; Ellis assesses the work on site and confirms the combined scope, qualified service arrangements and written quote."
         }
       ]
     },
@@ -531,7 +531,7 @@ window.ELLIS_CONTENT={
           "Use one record through to completion",
           [
             "Keep the original request, accepted scope, quote or estimate, Ellis Perth team member details, applicable credentials, access confirmation, variations and completion notes together. If Ellis Perth team finds a different cause or additional work, require an updated written scope and approval before continuing, except where immediate action is authorised and necessary to make a hazard safe.",
-            "Ellis Perth takes the request directly and confirms whether our local team can complete the work or whether a licensed specialist is required. The service and postcode are manually checked before serviceability is confirmed. Property managers should confirm the attending entity, credentials relevant to regulated work, pricing basis, timing and invoicing details for each job. For multi-property arrangements, agree coverage and response expectations in writing before work is booked.",
+            "Ellis Perth arranges the on-site assessment and confirms the attending team, access, work scope and written quote. We confirm qualified service arrangements for any licensed work. Property managers should confirm the attending entity, credentials relevant to regulated work, pricing basis, timing and invoicing details for each job. For multi-property arrangements, agree coverage and response expectations in writing before work is booked.",
             "Close the loop with the occupant and owner after completion. Record what was done, any exclusions, recommended monitoring and whether a separate follow-up is required. Completion photos should show the relevant area without unnecessary personal detail. Reconcile the invoice against the approved scope and documented variations before filing the job record securely for future reference."
           ]
         ]
@@ -543,7 +543,7 @@ window.ELLIS_CONTENT={
         },
         {
           "question": "Can one request cover a whole portfolio?",
-          "answer": "Each property and task still needs serviceability, scope, Ellis Perth team and access confirmation unless a separate arrangement says otherwise."
+          "answer": "Ellis confirms the assessment appointment, scope, attending team and access for each property and task, including any separate arrangement agreed with the property manager."
         },
         {
           "question": "Who invoices the job?",
@@ -569,7 +569,7 @@ window.ELLIS_CONTENT={
         [
           "What the Ellis postcode check means",
           [
-            "Ellis uses a single intake process. You provide the requested service, postcode and job description; Ellis then manually reviews whether the local Ellis team or a licensed specialist where required may be able to handle it. Manual confirmation helps avoid implying that a search result is a confirmed booking.",
+            "Send Ellis your Perth postcode and a short description of the problem or planned work. We confirm the attending team, access and assessment appointment, inspect or measure the affected area and provide the work scope and written quote. We confirm qualified service arrangements for licensed work.",
             "Ellis confirms your assessment appointment, the attending team and access arrangements directly. We inspect the affected area on site, identify the cause and confirm the repair scope and quote. We discuss any licensed-work requirements and insurance documents for the agreed work."
           ]
         ],
@@ -601,7 +601,7 @@ window.ELLIS_CONTENT={
   "faqs": [
     [
       "How do I book a handyman in Perth?",
-      "Tell the Ellis Perth office what needs fixing, your suburb or postcode and a plain-language description. Safe photos, approximate measurements and access notes help our local team discuss the job with you.",
+      "Tell the Ellis Perth office what needs fixing, your suburb or postcode and a plain-language description. Safe photos and approximate measurements are optional. Email existing photos to handyman.maintenance.au@outlook.com; we check the job and access on site and confirm the scope and quote.",
       "Hiring & matching"
     ],
     [
@@ -636,7 +636,7 @@ window.ELLIS_CONTENT={
     ],
     [
       "How is my project price worked out?",
-      "Share the task, postcode, measurements and safe photos. Ellis reviews the scope and confirms whether an inspection is needed before a price is provided.",
+      "Tell Ellis the task and postcode. We arrange the site assessment, check measurements and access, and provide a written quote for the agreed work. Existing measurements and safe photos are optional.",
       "Quotes & scope"
     ],
     [
@@ -696,12 +696,12 @@ window.ELLIS_CONTENT={
     ],
     [
       "How do I confirm handyman service in my suburb?",
-      "Tell the Ellis Perth office what needs attention and your suburb or postcode. Our local team will discuss the job and next practical step directly with you.",
+      "Tell the Ellis Perth office what needs attention and your suburb or postcode. We arrange an on-site assessment, check the work required and confirm the repair plan and written quote.",
       "Service areas"
     ],
     [
       "Why does Ellis ask for my postcode?",
-      "The postcode helps the Ellis Perth office check whether our local team can take on the work and identify any licensed specialist requirement before booking.",
+      "The postcode helps Ellis Perth arrange the local assessment appointment and access. We confirm the attending team and any licensed-work arrangements before the visit.",
       "Service areas"
     ],
     [
@@ -716,7 +716,7 @@ window.ELLIS_CONTENT={
     ],
     [
       "What happens after I share my postcode?",
-      "Our Perth office discusses the local team’s next available step or asks for any details needed to understand the job. For immediate danger, contact the relevant emergency service or utility.",
+      "Our Perth office confirms the assessment appointment, attending team and access. We check the reported concern on site and confirm the work scope and quote. For immediate danger, contact the relevant emergency service or utility.",
       "Service areas"
     ],
     [

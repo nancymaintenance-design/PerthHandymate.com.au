@@ -554,7 +554,7 @@
         "Switchboard location, outdoor-unit access and preferred outcome"
       ],
       "safetyNote": "Electrical connections and refrigerant work may require appropriately licensed Ellis team members; isolate a unit that is sparking, smoking or visibly damaged and avoid touching it.",
-      "nextStep": "Send the system type, affected rooms and suburb so Ellis can arrange the right air-conditioning pathway.",
+      "nextStep": "Send the system type, affected rooms and suburb so Ellis can arrange the air-conditioning assessment, check the system and confirm the service or replacement scope and quote.",
       "majorAliases": [
         "aircon",
         "air con",
@@ -603,7 +603,7 @@
         "Product details and whether items are supplied or need sourcing"
       ],
       "safetyNote": "Corded window coverings can present a child-strangulation risk and should comply with current safety requirements; high or difficult access also needs suitable controls.",
-      "nextStep": "Share photos, measurements and the product style to help Ellis scope the window-furnishing work.",
+      "nextStep": "Tell Ellis which windows need furnishings and the product style you want. We measure the openings on site and confirm the fitting requirements, materials and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "blinds & curtains"
@@ -637,7 +637,7 @@
         "Any signs of rot, movement, termites or water damage"
       ],
       "safetyNote": "Structural alterations, load-bearing work and tasks near concealed services may need engineering, approvals or appropriately qualified trades.",
-      "nextStep": "Provide dimensions, close-up photos and the intended finish so Ellis can identify the appropriate carpentry response.",
+      "nextStep": "Tell Ellis what needs repairing or building and the finish you want. We inspect existing timber or measure for new work on site and confirm the carpentry scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "carpenter",
         "carpentry"
@@ -678,7 +678,7 @@
         "Approximate affected dimensions and any moisture history"
       ],
       "safetyNote": "Moisture, mould or contaminated flooring should be assessed before cosmetic repair; do not lift material where hidden electrical or hazardous-material risks may exist.",
-      "nextStep": "Send a wide photo, a close-up and the damaged area size for a carpet-repair assessment.",
+      "nextStep": "Describe the damaged carpet area and your suburb. Ellis checks the carpet, joins and accessible underlay on site and confirms repair options and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "carpet repairer"
       ],
@@ -716,7 +716,7 @@
         "Known material type, age and access constraints"
       ],
       "safetyNote": "Some older cladding may contain hazardous materials, while height and weatherproofing work require specialist controls; do not disturb suspect products.",
-      "nextStep": "Upload elevation and close-up photos so the Ellis Perth team can discuss the cladding work and next step with you.",
+      "nextStep": "Tell Ellis Perth which exterior wall needs attention and your suburb. Safe wide and close-up photos are optional; email them to handyman.maintenance.au@outlook.com if available. We arrange the site assessment and confirm the cladding repair scope and quote.",
       "majorAliases": [],
       "aliases": [
         "cladding"
@@ -797,7 +797,7 @@
         "Stains, protruding nails, loose boards, furniture and access constraints"
       ],
       "safetyNote": "Old coatings, dust and unknown floor materials can require special controls; occupied areas need isolation and adequate ventilation during the work.",
-      "nextStep": "Share room sizes, timber photos and finish preferences for a floor-sanding scope.",
+      "nextStep": "Tell Ellis which timber floors need attention and the finish you want. We check their condition and measure the area on site, then confirm preparation, sanding and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "floor sanding"
@@ -833,7 +833,7 @@
         "Preferred mesh type and whether pets or coastal exposure are considerations"
       ],
       "safetyNote": "Screens on upper levels or difficult external openings require safe access; security-screen work may have product-specific installation requirements.",
-      "nextStep": "Send frame measurements and photos of the opening so Ellis can scope the fly-screen solution.",
+      "nextStep": "Tell Ellis which screen or opening needs attention. We measure the frame and check mesh and hardware on site before confirming the screen repair or replacement scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "flyscreen",
         "screen repair"
@@ -918,7 +918,7 @@
         "Existing flooring, furniture, access and disposal needs"
       ],
       "safetyNote": "Subfloor moisture, damaged substrates or suspect legacy materials must be assessed before removal or installation proceeds.",
-      "nextStep": "Share room dimensions, use requirements and flooring photos to start a carpet-installation scope.",
+      "nextStep": "Tell Ellis which rooms need carpet and how they are used. We measure the rooms on site, check the existing floor and confirm the carpet specification, preparation and installation quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "new carpet"
@@ -952,7 +952,7 @@
         "Any leak, movement, cracking or previous repair history"
       ],
       "safetyNote": "Active leaks, structural movement and suspect asbestos-containing materials must be resolved or assessed before plaster is disturbed.",
-      "nextStep": "Send clear photos and explain what caused the damage so Ellis can match the plastering scope.",
+      "nextStep": "Tell Ellis where the wall or ceiling is damaged and what you have noticed. We inspect the area on site, investigate the cause and confirm the plaster repair scope and quote. Safe photos are optional; email them to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "plasterers"
@@ -986,7 +986,7 @@
         "Photos, fixture details and access to meters, valves or drains"
       ],
       "safetyNote": "Plumbing work may require an appropriately licensed Ellis Perth team. For uncontrolled water, isolate the supply only if safe and keep clear of electrical equipment or contaminated overflow.",
-      "nextStep": "Describe the affected fixture, symptoms and suburb so Ellis can arrange the suitable plumbing pathway.",
+      "nextStep": "Describe the affected fixture, symptoms and suburb so Ellis can arrange the plumbing assessment, investigate the reported fault and confirm the qualified repair arrangements and quote.",
       "majorAliases": [
         "plumber",
         "blocked drain",
@@ -1033,7 +1033,7 @@
         "Leaks, loose panels, cracked glass or wall-fixing concerns"
       ],
       "safetyNote": "Cracked or unstable toughened glass should not be handled. Glazing, drilling and wet-area penetrations require suitable methods and qualified Ellis team members where applicable.",
-      "nextStep": "Share full shower photos, approximate dimensions and the issue to scope the screen work.",
+      "nextStep": "Describe the shower-screen issue or the new screen you want. Ellis checks existing hardware or measures for installation on site and confirms the work and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "shower screens"
@@ -1067,7 +1067,7 @@
         "Whether tiles are supplied and any known waterproofing or movement issue"
       ],
       "safetyNote": "Loose tiles, persistent moisture or cracking may indicate substrate or waterproofing problems that need assessment before cosmetic work.",
-      "nextStep": "Provide dimensions, tile details and photos of the whole area for a tiling scope.",
+      "nextStep": "Tell Ellis the area, project stage and tile finish you want. We measure and check the substrate on site, then confirm preparation, tile requirements and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "tiler"
       ],
@@ -1105,7 +1105,7 @@
         "Any leak history, existing finishes and downstream damage"
       ],
       "safetyNote": "Waterproofing may require licensed or otherwise qualified Ellis team members and must integrate with drainage, substrate and relevant building requirements; active leaks need proper diagnosis.",
-      "nextStep": "Send the wet-area layout, substrate photos and project stage so Ellis can arrange the right assessment.",
+      "nextStep": "Tell Ellis the wet area, project stage and any visible leak. We arrange the qualified on-site assessment, check the surfaces and confirm the waterproofing work and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "waterproofer"
       ],
@@ -1143,7 +1143,7 @@
         "Photos taken without touching the material, plus occupancy and access details"
       ],
       "safetyNote": "Do not cut, drill, sand, break, sweep or vacuum suspected asbestos. Keep people away from damaged material and use appropriately licensed removalists where required by the material, quantity and jurisdiction.",
-      "nextStep": "Leave suspect material undisturbed and contact Ellis with the location and any existing report so we can discuss the appropriate specialist next step with you.",
+      "nextStep": "Leave suspect material undisturbed and contact Ellis with the location and any existing report so we can arrange a qualified hazard assessment and confirm the handling requirements, service scope and quote before work begins.",
       "majorAliases": [],
       "aliases": [
         "asbestos removal"
@@ -1177,7 +1177,7 @@
         "Existing coating details, vehicle loads and access timing"
       ],
       "safetyNote": "Moving slabs, major structural cracks, moisture or chemical contamination may rule out a cosmetic overlay until the cause is assessed.",
-      "nextStep": "Share area measurements and condition photos to determine whether resurfacing is suitable.",
+      "nextStep": "Describe the concrete surface and the finish you want. Ellis checks its condition and measures the area on site before confirming resurfacing preparation, suitability and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "concrete resurfacing"
@@ -1213,7 +1213,7 @@
         "Whether the issue occurs in light rain, heavy rain or remains constant"
       ],
       "safetyNote": "Roof-edge work involves fall and electrical-clearance risks. Do not climb onto a wet or unsuitable roof; stormwater changes may also need to meet local requirements.",
-      "nextStep": "Send exterior photos and note where water overflows so Ellis can distinguish cleaning, repair or replacement needs.",
+      "nextStep": "Tell Ellis where you have noticed overflow or damaged guttering. We arrange safe access, check gutters and downpipes and confirm clearing, repair or replacement work and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "gutters",
         "gutter cleaner",
@@ -1265,7 +1265,7 @@
         "Access, furniture, peeling paint, moisture or previous coating concerns"
       ],
       "safetyNote": "Older coatings may contain lead, and height or deteriorated surfaces require appropriate testing and controls before preparation.",
-      "nextStep": "Provide photos, approximate areas and colour intentions for a painting scope.",
+      "nextStep": "Tell Ellis the rooms or exterior areas and your colour preferences. We inspect the surfaces and measure on site, then confirm preparation, painting and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "painter",
         "painting",
@@ -1311,7 +1311,7 @@
         "Door type, material, fire or security requirements if known"
       ],
       "safetyNote": "Entry, fire-rated, security and glazed doors can have specific product, fixing and compliance requirements; lock work may need a suitable specialist.",
-      "nextStep": "Send opening measurements, frame photos and the preferred door type so our Perth team can discuss the installation details with you.",
+      "nextStep": "Tell Ellis the opening location and the door type you want. Our Perth team measures the opening on site and confirms the door specification, installation scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "doors",
         "door installer"
@@ -1355,7 +1355,7 @@
         "Access for materials, existing base and any tree-root or settlement issue"
       ],
       "safetyNote": "Uneven paving may reflect drainage, roots or ground movement; service locations should be checked before excavation.",
-      "nextStep": "Share measurements, level photos and intended use to scope the paving work.",
+      "nextStep": "Tell Ellis where paving is needed and how the area will be used. We measure the site and check levels and drainage on site before confirming preparation, paving and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "pavers"
@@ -1390,7 +1390,7 @@
         "When leaks occur, previous repairs and safe access information"
       ],
       "safetyNote": "Roof access carries fall, fragile-surface and electrical risks. Do not climb during wet or windy conditions; significant storm damage or live electrical hazards require an urgent specialist response.",
-      "nextStep": "Provide roof type, leak timing and safe-to-take photos so Ellis can discuss the roofing assessment and next step with you.",
+      "nextStep": "Tell Ellis where and when the leak appears. We arrange safe access, inspect the roof and drainage, identify the cause and confirm the repair scope and quote. Roof type and safe existing photos are helpful if available.",
       "majorAliases": [
         "roofer",
         "roof repair",
@@ -1437,7 +1437,7 @@
         "Leak timing, access conditions and desired light or ventilation outcome"
       ],
       "safetyNote": "Roof penetrations involve fall and weatherproofing risks; electrical blinds or nearby wiring may require an appropriately licensed electrician.",
-      "nextStep": "Send room and roof photos with the skylight dimensions or desired location for assessment.",
+      "nextStep": "Tell Ellis which room needs a skylight or what has changed with the existing unit. We assess the room and roof safely on site, confirm location and dimensions, and quote the installation or repair scope. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "skylights"
@@ -1505,7 +1505,7 @@
         "Frame material, glazing, opening style and performance preferences"
       ],
       "safetyNote": "Glazing, upper-storey access and changes to structural openings require specialist controls; energy, bushfire or heritage requirements may affect product selection.",
-      "nextStep": "Provide inside and outside photos plus approximate opening sizes for a window-installation pathway.",
+      "nextStep": "Tell Ellis which openings need windows and the specification you want. We arrange a site measure and confirm the window specification, installation scope and written quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "window installation"
@@ -1539,7 +1539,7 @@
         "How operation has changed and whether water entry is present"
       ],
       "safetyNote": "Cracked glass and upper-level external work should not be handled without suitable glazing and access controls; frame rot may indicate a wider moisture issue.",
-      "nextStep": "Send photos of the window open and closed, plus the operating problem, for repair triage.",
+      "nextStep": "Describe how the window operates and what has changed. Ellis checks the frame, moving parts and hardware on site and confirms the repair scope and quote.",
       "majorAliases": [],
       "aliases": [
         "window repairs"
@@ -1573,7 +1573,7 @@
         "Material preference and any existing drawings or approvals"
       ],
       "safetyNote": "Elevated decks, balustrades, footings and structural connections may require approvals, engineering and appropriately qualified builders.",
-      "nextStep": "Share the proposed size, height and site photos so Ellis can identify the deck project pathway.",
+      "nextStep": "Tell Ellis the outdoor area and how you want to use the deck. We measure the site, assess supports and access, and confirm the deck design, approval requirements, installation scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "deck builders"
@@ -1607,7 +1607,7 @@
         "Any neighbour agreement, survey information or existing fence issues"
       ],
       "safetyNote": "Boundary position, pool proximity, retaining loads, underground services and local rules may affect the work; do not assume an existing fence marks the legal boundary.",
-      "nextStep": "Send fence-line photos, dimensions and material preference to scope a new or replacement fence.",
+      "nextStep": "Tell Ellis which fence line needs a new or replacement fence and your material preference. We measure the boundary run and check site conditions on site, then confirm the fence scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "fence builders"
@@ -1641,7 +1641,7 @@
         "Boundary, access, ground condition and staging information"
       ],
       "safetyNote": "Projects near boundaries, pools, retaining walls or services may require surveys, approvals and specialist design.",
-      "nextStep": "Provide the fence schedule or marked-up site plan so our Perth team can discuss the fence work and next step with you.",
+      "nextStep": "Tell Ellis the fence location and the work required. We assess the fence line on site and confirm materials, installation requirements and the quote. Existing schedules or plans help if available. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "fence contractor"
       ],
@@ -1679,7 +1679,7 @@
         "Known sharp waste, pests, unstable branches or restricted areas"
       ],
       "safetyNote": "Large trees, overhead services, hazardous waste and potentially asbestos-containing debris need specialist assessment rather than routine clean-up.",
-      "nextStep": "Send zone photos and access details so Ellis can estimate the clean-up scope and waste needs.",
+      "nextStep": "Tell Ellis which garden zones need clearing and any access restrictions. We check the area, waste types and handling requirements on site and confirm the clean-up scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "garden clean up"
@@ -1713,7 +1713,7 @@
         "Plants or materials to retain, access and water availability"
       ],
       "safetyNote": "Excavation should account for underground services, drainage and retaining needs; significant structures or level changes may require specialist design.",
-      "nextStep": "Share site photos, dimensions and the desired garden character for a landscaping assessment.",
+      "nextStep": "Tell Ellis the garden area and the character or use you want. We assess the site, measure the space and confirm the landscaping work, materials and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "landscaper",
         "landscaping"
@@ -1795,7 +1795,7 @@
         "Preferred frequency, green-bin access and any obstacles"
       ],
       "safetyNote": "Hidden debris, steep slopes, pets and irrigation components should be identified before powered equipment is used.",
-      "nextStep": "Send lawn photos, approximate size and access width to arrange a mowing scope.",
+      "nextStep": "Tell Ellis which lawn needs mowing and any access limits. We check its size, condition and entry width on site and confirm the mowing scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "lawn",
         "mowing",
@@ -1873,7 +1873,7 @@
         "Material preference, drainage needs and existing approvals"
       ],
       "safetyNote": "Footings, structural connections, wind exposure, boundaries and roofing can trigger engineering or approval requirements.",
-      "nextStep": "Provide site dimensions and the preferred pergola form so Ellis can determine the right design and build pathway.",
+      "nextStep": "Tell Ellis where you want a pergola and the form you prefer. We measure the site and confirm the design, approval requirements, build scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "pergola builders"
@@ -1907,7 +1907,7 @@
         "Existing compliance information and nearby climbable features"
       ],
       "safetyNote": "Pool barriers are safety-critical and must satisfy the requirements applying to the property and jurisdiction; keep the pool area secured while any defect remains.",
-      "nextStep": "Send full-perimeter photos, dimensions and gate details for a pool-fence assessment.",
+      "nextStep": "Tell Ellis which pool barrier or gate needs installation or attention. We measure and check the barrier on site and confirm the qualified work arrangements, specification and quote; formal compliance decisions remain with the authorised assessor. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "pool fence installers"
@@ -1941,7 +1941,7 @@
         "Water-loss history, previous coatings and access for equipment"
       ],
       "safetyNote": "Draining a pool can affect shell stability and must be planned by experienced Ellis team members; chemicals and confined work areas require controlled handling.",
-      "nextStep": "Share pool dimensions, finish photos and leak history to start a resurfacing assessment.",
+      "nextStep": "Describe the pool finish and any visible leak history. We assess the surface on site, check the resurfacing requirements and confirm preparation, finish and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "pool resurfacing"
@@ -2009,7 +2009,7 @@
         "Preferred pile, colour and pet or heat considerations"
       ],
       "safetyNote": "Poor drainage, heat exposure and unknown underground services should be resolved in the design before excavation and installation.",
-      "nextStep": "Send dimensions, site photos and intended use for a synthetic-grass installation scope.",
+      "nextStep": "Tell Ellis where you want synthetic grass and how the area is used. We measure the site and check levels, base and drainage before confirming preparation, installation and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "synthetic grass"
@@ -2043,7 +2043,7 @@
         "Boundary information and whether removal of an old fence is needed"
       ],
       "safetyNote": "Boundaries, underground services, treated-timber handling and any retaining function need to be considered before digging or replacement.",
-      "nextStep": "Share fence-line photos and measurements to scope the timber materials and site work.",
+      "nextStep": "Describe the timber fence work you need. Ellis measures the fence line and checks posts, rails, access and ground conditions on site before confirming materials, work and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "timber fencing"
@@ -2077,7 +2077,7 @@
         "Access for equipment, overhead services and any council information"
       ],
       "safetyNote": "Do not climb, cut or work beneath unstable branches. Large trees, chainsaws, rigging, powerlines and protected vegetation require qualified arborists, controlled exclusion zones and any necessary approvals.",
-      "nextStep": "Keep clear of suspect limbs and send whole-tree photos, location and concerns for arborist triage.",
+      "nextStep": "Keep clear of suspect limbs and tell Ellis the tree location and visible concern. We confirm qualified arborist assessment arrangements, the proposed tree work, any required approvals and the quote.",
       "majorAliases": [
         "arborist",
         "tree pruning"
@@ -2118,7 +2118,7 @@
         "Leak history, ventilation, access and any drawings or approvals"
       ],
       "safetyNote": "Electrical, plumbing and waterproofing components may require appropriately licensed or qualified Ellis team members; active leaks and suspect materials need assessment before demolition.",
-      "nextStep": "Share room measurements, inspiration and must-keep items so Ellis can shape the bathroom project scope.",
+      "nextStep": "Tell Ellis your bathroom goals and the items you want to retain. We measure the room on site and confirm the layout, qualified trade arrangements, work scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "bathroom renovation",
         "bathroom remodel"
@@ -2159,7 +2159,7 @@
         "Crack history, footings, drainage and nearby openings"
       ],
       "safetyNote": "Cracking, leaning walls and load-bearing masonry may need structural assessment; excavation and boundary work can require approvals and service checks.",
-      "nextStep": "Send wall photos, dimensions and crack history for a brickwork assessment.",
+      "nextStep": "Describe the wall work or cracks you have noticed. We inspect the masonry and measure the area on site, confirm any qualified assessment requirements and provide the brickwork scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "bricklayers"
@@ -2238,7 +2238,7 @@
         "Project stage and the specific certification question"
       ],
       "safetyNote": "Certification functions must be performed by appropriately registered or accredited practitioners and may require independence from design or construction roles.",
-      "nextStep": "Send the property details, project stage and document list so our Perth office can discuss the certification requirement and next step with you.",
+      "nextStep": "Send the property details, project stage and document list so our Perth office can confirm the qualified assessment arrangements, required documents, authority responsibilities and quote.",
       "majorAliases": [],
       "aliases": [
         "building certifiers"
@@ -2306,7 +2306,7 @@
         "Plans, preferred materials and approvals already held"
       ],
       "safetyNote": "Setbacks, vehicle access, stormwater, footings and structural design may require permits, engineering and appropriately qualified builders.",
-      "nextStep": "Share the site plan, vehicle requirements and photos to start a carport or garage feasibility review.",
+      "nextStep": "Tell Ellis the vehicle and storage requirements and proposed location. We measure the site and assess access, then confirm the design, approval requirements, installation scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "carports & garages"
@@ -2340,7 +2340,7 @@
         "Plans, reinforcement details and known underground services"
       ],
       "safetyNote": "Excavation, structural loads, drainage and underground services must be assessed; engineered slabs or footings require the relevant design and inspections.",
-      "nextStep": "Provide dimensions, intended loads and site-access photos for a concreting scope.",
+      "nextStep": "Tell Ellis the area and intended use, including any known loading requirements. We measure the site and check levels and access before confirming the qualified design requirements, concreting scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "concreter"
       ],
@@ -2378,7 +2378,7 @@
         "Known asbestos reports, structural information and disposal constraints"
       ],
       "safetyNote": "Do not disturb suspect asbestos or unknown services. Structural demolition may require permits, engineering, service disconnections and appropriately licensed contractors.",
-      "nextStep": "Send marked-up photos, building age and any hazard reports so Ellis can arrange a demolition assessment.",
+      "nextStep": "Tell Ellis the structure or area to be removed and any known hazards. We arrange an on-site assessment and confirm the qualified handling arrangements, approvals, removal scope and quote. Existing hazard reports help if available. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "demolition"
@@ -2480,7 +2480,7 @@
         "Crack movement, salt, damp or previous repair history"
       ],
       "safetyNote": "Persistent cracking, drummy areas or damp can indicate substrate or moisture problems that need diagnosis before resurfacing; height work requires safe access.",
-      "nextStep": "Send full-wall and close-up photos with dimensions for a rendering assessment.",
+      "nextStep": "Describe the wall condition and the finish you want. We inspect the surface and measure on site, then confirm repairs, rendering preparation and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "renderers"
@@ -2514,7 +2514,7 @@
         "Previous reports, drainage issues and renovation plans"
       ],
       "safetyNote": "Supporting and lifting a building is high-risk structural work that may require engineering, permits and appropriately licensed contractors; occupants should not enter unsafe areas.",
-      "nextStep": "Provide subfloor photos, movement symptoms and any reports so our Perth team can discuss the assessment and next step with you.",
+      "nextStep": "Tell Ellis about uneven floors or movement you have noticed. We arrange an assessment of the supports and confirm the qualified service arrangements, repair scope and quote. Existing reports and safely taken photos are optional; do not enter an unsafe subfloor.",
       "majorAliases": [],
       "aliases": [
         "restumping"
@@ -2548,7 +2548,7 @@
         "Boundary information, material preference and any engineering"
       ],
       "safetyNote": "Retaining walls can affect buildings, boundaries and soil stability; engineering, approvals and underground-service checks may be required before excavation.",
-      "nextStep": "Send measurements, level photos and the wall location for a retaining-wall assessment.",
+      "nextStep": "Tell Ellis the wall location and any movement or proposed new work. We measure and assess the site, confirm qualified design and approval requirements and provide the retaining-wall scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "retaining walls"
@@ -2582,7 +2582,7 @@
         "Crack history, recent changes and access to affected areas"
       ],
       "safetyNote": "Visible instability, sudden movement or partial collapse requires the area to be isolated and an urgent professional response; engineering advice must come from appropriately qualified practitioners.",
-      "nextStep": "Provide the plans, photos and exact engineering question so our Perth team can discuss the engineering next step with you.",
+      "nextStep": "Describe the structural concern or proposed work to Ellis. We arrange the qualified assessment and confirm the engineering scope, required documents and quote. Existing plans and safe photos are helpful if available.",
       "majorAliases": [],
       "aliases": [
         "structural engineers"
@@ -2616,7 +2616,7 @@
         "Appliance models, plumbing locations and items to retain"
       ],
       "safetyNote": "Cabinet changes around electrical, gas or plumbing services require the relevant licensed trades; wall fixing must account for concealed services.",
-      "nextStep": "Share dimensions, appliance details and style references to develop the cabinetry scope.",
+      "nextStep": "Tell Ellis the cabinetry you need, the appliances and the style you prefer. We measure the space on site, check interfaces and confirm the cabinet specification, installation scope and quote. Existing photos and approximate dimensions are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "cabinet makers"
@@ -2650,7 +2650,7 @@
         "Access, parking, pets and supplied or preferred products"
       ],
       "safetyNote": "Biohazards, sharps, mould, asbestos dust and uncontrolled chemical spills are specialist hazards and should be disclosed rather than treated as routine cleaning.",
-      "nextStep": "Provide the property size, cleaning checklist and condition photos where relevant for accurate scoping.",
+      "nextStep": "Describe the rooms and cleaning tasks you need. Ellis checks the property condition, access and cleaning requirements on site and confirms the work scope and quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [
         "cleaner",
         "cleaning"
@@ -2691,7 +2691,7 @@
         "Photos of the installation, connections and any water leakage"
       ],
       "safetyNote": "Disconnect power and stop using an appliance that is leaking onto electrical components, smoking or overheating; electrical and plumbing work may require licensed Ellis team members.",
-      "nextStep": "Send the model number, symptom and error code so Ellis can arrange suitable appliance-repair triage.",
+      "nextStep": "Tell Ellis the dishwasher model, symptom and any displayed error code. We arrange an appliance assessment, check the fault and confirm the repair scope, qualified service requirements and quote.",
       "majorAliases": [],
       "aliases": [
         "dishwasher repair"
@@ -2770,7 +2770,7 @@
         "Symptoms, recent work and photos taken only where safe"
       ],
       "safetyNote": "Gas work must be completed by an appropriately licensed gas fitter where required. If gas is strongly suspected, avoid flames and electrical switching, leave the area, contact the gas emergency service, and call emergency services for immediate danger.",
-      "nextStep": "For non-emergency work, provide the appliance details and location so Ellis Perth can discuss the licensed gas-service requirement and next step with you.",
+      "nextStep": "For non-emergency work, provide the appliance details and location so Ellis Perth can arrange the qualified gas assessment and confirm the work scope and quote.",
       "majorAliases": [
         "gas fitter",
         "gas fitting"
@@ -2811,7 +2811,7 @@
         "Glass type or safety markings if visible without touching"
       ],
       "safetyNote": "Do not handle cracked, unsupported or shattered glass; isolate the area from people and pets. Safety glazing and elevated work require suitably qualified glaziers and access controls.",
-      "nextStep": "Keep clear of damaged glass and send safe-distance photos plus approximate dimensions for glazier triage.",
+      "nextStep": "Keep clear of damaged glass and tell Ellis the location and visible concern. We arrange the qualified glazing assessment, measure the opening and confirm the replacement or repair scope and quote.",
       "majorAliases": [
         "glazier",
         "glass repair"
@@ -2852,7 +2852,7 @@
         "Property access, parking and whether parts are already supplied"
       ],
       "safetyNote": "Electrical, plumbing, gas, structural, roofing-height and hazardous-material work require appropriately licensed or specialist work rather than general handyman work.",
-      "nextStep": "Send one photo per task and identify supplied parts so Ellis can separate handyman items from specialist work.",
+      "nextStep": "List the tasks and any supplied parts. Ellis assesses the work on site and confirms the handyman repair scope, qualified service arrangements for regulated work and written quote.",
       "majorAliases": [
         "handyman",
         "handy man",
@@ -2899,7 +2899,7 @@
         "Benchtop, appliance and splashback details plus items to retain"
       ],
       "safetyNote": "Electrical, gas, plumbing and some waterproofing or structural changes require appropriately licensed Ellis team members; cabinets must not conceal unsafe or unapproved services.",
-      "nextStep": "Send the final plan, order list and room photos so Ellis can check installation readiness.",
+      "nextStep": "Tell Ellis your kitchen product and project stage. We measure and check installation readiness on site, then confirm the assembly, qualified connections and quote. The final plan and order list are agreed before installation; existing versions help if available. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "ikea kitchens"
@@ -2933,7 +2933,7 @@
         "Photos of the appliance, installation and plug or isolation arrangement where safe"
       ],
       "safetyNote": "Stop using an oven that smells of gas, sparks, smokes or overheats. Gas and hard-wired electrical work require appropriately licensed Ellis team members.",
-      "nextStep": "Provide the model, fuel type and precise symptom so Ellis can discuss the oven-repair next step with you.",
+      "nextStep": "Provide the model, fuel type and precise symptom so Ellis can arrange an appliance assessment and confirm the repair options, qualified service requirements and quote.",
       "majorAliases": [],
       "aliases": [
         "oven repair"
@@ -2967,7 +2967,7 @@
         "Children, pets, allergies, food areas and previous treatments"
       ],
       "safetyNote": "Do not touch unknown insects, droppings, baits or nests. Termites, bees, rodents and chemical applications may require specialist methods and occupant precautions.",
-      "nextStep": "Send evidence photos, affected locations and household safety considerations for pest triage.",
+      "nextStep": "Tell Ellis where you have noticed pest activity and any household safety concerns. We arrange the qualified assessment, check the pest and affected areas and confirm the treatment scope and quote.",
       "majorAliases": [
         "pest",
         "pest treatment"
@@ -3008,7 +3008,7 @@
         "Access width, stairs, parking and pickup location"
       ],
       "safetyNote": "Asbestos, chemicals, batteries, gas cylinders, sharps and contaminated waste must be declared and may require licensed or specialist disposal; do not mix suspect material into general loads.",
-      "nextStep": "Send full-load photos and identify every unusual material so Ellis can confirm the correct waste pathway.",
+      "nextStep": "Describe the items you need removed and any known unusual materials. We check access and waste-handling requirements and confirm the removal scope and quote. Existing photos are optional; leave suspect hazardous materials undisturbed.",
       "majorAliases": [
         "junk removal"
       ],
@@ -3046,7 +3046,7 @@
         "Fabric preference, matching needs and collection access"
       ],
       "safetyNote": "Mould, pest contamination, broken recliner mechanisms or unstable frames may need separate treatment before upholstery work.",
-      "nextStep": "Share whole-item and close-up photos with dimensions to assess repair or recovering options.",
+      "nextStep": "Tell Ellis the furniture item and the repair or covering you want. We check its condition and dimensions during assessment and confirm repair options, materials and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
       "majorAliases": [],
       "aliases": [
         "upholstery repair"
