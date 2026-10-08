@@ -382,7 +382,7 @@ test('places an OpenStreetMap office map below the homepage call to action with 
   assert.match(home, /target="_blank"[^>]*>Open in Google Maps/);
 });
 
-test('exposes Instagram and Google Reviews from every customer-facing footer', () => {
+test('places icon-based review and social links in the footer information column on every customer-facing page', () => {
   const root = path.join(__dirname, '..');
   const pages = [];
   const walk = (directory) => {
@@ -398,14 +398,17 @@ test('exposes Instagram and Google Reviews from every customer-facing footer', (
   const styles = fs.readFileSync(path.join(__dirname, '../assets/css/global.css'), 'utf8');
   for (const page of pages) {
     const html = fs.readFileSync(page, 'utf8');
+    assert.match(html, /<div><h2>Important<\/h2><p>[^<]*<\/p><div class="footer-social-region"/, page);
     assert.match(html, /<div class="footer-social-links">/, page);
     assert.match(html, /<a class="footer-google-reviews" href="https:\/\/share\.google\/qaKT4Kj7ycWHQCQWh"/, page);
     assert.match(html, /<a class="footer-instagram" href="https:\/\/www\.instagram\.com\/elliservices_group\/"/, page);
     assert.match(html, /<span>Instagram<\/span>/, page);
+    assert.match(html, /href="https:\/\/share\.google\/Z4tImXHToPi9H4LmH"[^>]*>[\s\S]*?<svg class="footer-social-icon"[\s\S]*?<span>LinkedIn<\/span><\/a>/, page);
+    assert.match(html, /href="https:\/\/share\.google\/HbT2Uijg3K6yaqcpV"[^>]*>[\s\S]*?<svg class="footer-social-icon"[\s\S]*?<span>Facebook<\/span><\/a>/, page);
   }
-  assert.match(styles, /\.site-footer \.footer-social-links\{display:flex/);
-  assert.match(styles, /\.site-footer \.footer-instagram\{display:inline-flex/);
-  assert.match(styles, /\.site-footer \.footer-google-reviews\{display:inline-flex/);
+  assert.match(styles, /\.site-footer \.footer-social-region\{margin-top:28px/);
+  assert.match(styles, /\.site-footer \.footer-social-links\{display:grid/);
+  assert.match(styles, /\.site-footer \.footer-social-icon\{width:18px/);
 });
 
 test('publishes company registration identifiers with the official ABR lookup', () => {
