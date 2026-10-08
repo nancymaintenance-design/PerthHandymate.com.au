@@ -108,7 +108,7 @@ test('every service detail page presents company price ranges while retaining re
     const page = fs.readFileSync(path.join(root, service.url, 'index.html'), 'utf8');
     const priceGuide = page.match(/<section class="section muted"><div class="shell price-guide"[\s\S]*?<\/section>/)?.[0] || '';
     assert.ok(priceGuide.includes(`data-price-guide-status="${guide.status}"`), `${service.slug} status module`);
-    if (guide.rangeAud) assert.ok(priceGuide.includes('Company price range confirmed 2026-10-07'), `${service.slug} business confirmation date`);
+    assert.doesNotMatch(priceGuide, /price-guide-date|Company price range confirmed|Third-party published|Published sources|price-guide-sources/, `${service.slug} omits source and date display`);
     assert.ok(priceGuide.includes(guide.rangeAud ? '<h2>Service price range</h2>' : '<h2>Project price</h2>'), `${service.slug} accurate price heading`);
     assert.ok(!priceGuide.includes('not Ellis') && !priceGuide.includes('not a Perth quote'), `${service.slug} avoids negative pricing claims`);
     assert.doesNotMatch(priceGuide.replace(/<[^>]*>/g, ' '), /\b(?:may|might|could|perhaps|possibly|approximately|roughly|indicative)\b/i, `${service.slug} avoids vague price wording`);

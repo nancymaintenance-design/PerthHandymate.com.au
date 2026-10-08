@@ -22,7 +22,7 @@ function markup(guide) {
     : `<p class="price-guide-range price-guide-no-range"><strong>Request your project price</strong><span>${escapeHtml(guide.unit)}</span></p>`;
   const scope = guide.scope ? `<p class="price-guide-scope">${escapeHtml(guide.scope)}</p>` : '';
   const heading = guide.rangeAud ? 'Service price range' : 'Project price';
-  const confirmed = guide.rangeAud ? `<p class="price-guide-date">Company price range confirmed ${escapeHtml(pricing.businessConfirmation.confirmedDate)}</p>` : '';
+  const confirmed = '';
   return `<section class="section muted"><div class="shell price-guide" data-price-guide-status="${guide.status}"><p class="eyebrow">Service pricing</p><h2>${heading}</h2><p>${context}</p>${range}${scope}<p>We provide a written quote after an on-site assessment of the property, materials, access and agreed work scope. Contact Ellis Services Group to arrange your assessment.</p>${confirmed}</div></section>`;
 }
 
