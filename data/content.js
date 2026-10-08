@@ -376,7 +376,7 @@ window.ELLIS_CONTENT={
       "read": "5 min",
       "sections": [
         [
-          "Take context, detail and access photos",
+          "Photograph the damaged area, close-up details and access",
           [
             "A useful photo set usually includes a wide view showing where the issue sits in the room or exterior, a closer view of the damage or fitting, and an access view showing nearby obstacles. Add a ruler or common object for scale only when it is safe. Photograph labels or model numbers if they are visible without removing covers.",
             "Do not climb onto roofs, open electrical equipment, enter unsafe ceiling spaces or disturb suspected hazardous material to obtain an image. A photo is meant to support triage, not replace a safe inspection. If water, electricity, gas, structural movement or another immediate hazard is present, keep people away and seek appropriate urgent advice."
@@ -401,7 +401,7 @@ window.ELLIS_CONTENT={
       "faq": [
         {
           "question": "How many photos should I send?",
-          "answer": "Send enough to show context, detail and access. Quality and relevance matter more than a fixed number."
+          "answer": "If you already have photos, include a wider view of the damaged area, a close-up of the fault and access to the work area. Photos are optional; there is no minimum number."
         },
         {
           "question": "Can photos replace an inspection?",
@@ -432,7 +432,7 @@ window.ELLIS_CONTENT={
           "Stop active damage, then restore function",
           [
             "After immediate safety, address problems that are allowing damage to spread: ongoing leaks, failed weather seals, blocked drainage, pest entry points or openings that expose the home to rain. The visible symptom may have more than one cause, so avoid covering it cosmetically before the source is understood.",
-            "Next, consider essential daily function and security. A failed toilet in a one-bathroom home has a different priority from a stiff cupboard hinge. Heating, cooling and hot-water priorities also depend on weather and household needs. Tell the coordinator about vulnerable occupants or access constraints without sharing unnecessary personal information."
+            "Next, consider essential daily function and security. A failed toilet in a one-bathroom home has a different priority from a stiff cupboard hinge. Heating, cooling and hot-water priorities also depend on weather and household needs. Tell Ellis if a household member needs priority assistance or if stairs, locked gates or occupied rooms affect access. Only share personal information needed to arrange the visit."
           ]
         ],
         [
@@ -486,7 +486,7 @@ window.ELLIS_CONTENT={
           [
             "Keep a dated list with photos and divide it into safety, water or weather exposure, essential function and planned presentation work. Note previous repair dates and known materials. This record helps explain whether an issue is new, recurring or stable and makes it easier to group compatible tasks.",
             "Contact Ellis Perth with your suburb and seasonal maintenance list to arrange an on-site assessment. Our team checks the property, identifies priority work and confirms the maintenance plan, quote and appointment. We confirm qualified service arrangements for any licensed work.",
-            "Set reminders around local conditions rather than fixed national dates. After severe weather, compare new observations with earlier photos from a safe position. Update the list when materials are replaced or access changes. A small, current property record makes the next seasonal review faster and gives Ellis Perth team better context."
+            "Set reminders around local conditions rather than fixed national dates. After severe weather, compare new observations with earlier photos from a safe position. Update the list when materials are replaced or access changes. A small, current property record makes the next seasonal review faster and helps the Ellis Perth team identify new damage and previous repairs."
           ]
         ]
       ],
@@ -631,7 +631,7 @@ window.ELLIS_CONTENT={
     ],
     [
       "What details help with an initial assessment?",
-      "Include the desired outcome, current condition, location, quantities, approximate dimensions, materials if known, safe photos and access constraints.",
+      "Tell us what needs repairing, the property location and any locked gates, stairs or restricted work areas. If available, include quantities, approximate dimensions and safe existing photos.",
       "Quotes & scope"
     ],
     [
@@ -766,7 +766,7 @@ window.ELLIS_CONTENT={
     ],
     [
       "How are approval limits handled?",
-      "State the approval pathway and limit in the brief. Any variation should be documented and authorised by the nominated person before extra work proceeds.",
+      "Tell Ellis who can approve the work and the authorised spending limit. Any variation should be documented and authorised by the nominated person before extra work proceeds.",
       "Property managers"
     ],
     [

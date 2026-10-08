@@ -1,0 +1,323 @@
+{
+  "asbestos-removal": {
+    "title": "Asbestos Assessment & Removal Perth | Ellis Services Group",
+    "h1": "Assess suspect asbestos before removal",
+    "description": "Discuss suspect fence, eaves or building materials in Perth. Confirm identification, qualified handling, removal scope and disposal before work starts.",
+    "qa": [
+      ["Can an old fibre cement fence be repaired before it is checked for asbestos?", "Leave suspect panels undisturbed until a competent asbestos professional has assessed the material. Do not drill, cut, sand or break it to prepare for a fence repair."],
+      ["What information helps scope asbestos removal?", "Describe the material's location, approximate area and condition, along with the building age and any existing laboratory report. Isolation, removal, disposal and clearance needs depend on the assessed material and job."],
+      ["Should I clean up pieces from a damaged suspect asbestos sheet?", "Keep people away and leave the pieces in place. Do not sweep or vacuum them. The assessment must establish suitable controls and appropriately licensed handling where required."]
+    ]
+  },
+  "concrete-resurfacing": {
+    "title": "Concrete Resurfacing Perth | Slab & Surface Assessment",
+    "h1": "Refresh a sound concrete surface",
+    "description": "Plan concrete resurfacing in Perth with checks for cracks, moisture and existing coatings. Agree on preparation and a suitable overlay or finish.",
+    "qa": [
+      ["Can cracked concrete be resurfaced?", "The cracks need assessment first. A cosmetic overlay may suit a sound slab, but moving concrete, major structural cracks or moisture problems need their cause addressed before resurfacing."],
+      ["What should I tell you about the concrete area?", "Describe its size, current coating, stains and intended use, including vehicle traffic. Note drainage and adjoining levels so the preparation and selected finish can be assessed."]
+    ]
+  },
+  "verandah-builders": {
+    "title": "Verandah Building & Repairs Perth | Ellis Services Group",
+    "h1": "Plan a verandah or repair worn components",
+    "description": "Discuss a new verandah or repairs in Perth. Set out the footprint, roof connection, posts and finishes with structural and approval checks.",
+    "qa": [
+      ["Can damaged verandah boards or roof sheets be replaced?", "Selected components can be included in a repair scope after the surrounding structure is checked. Deteriorated posts or connections may require structural work rather than a surface replacement."],
+      ["What needs checking before a verandah is attached to the house?", "The house construction, roof connection, footings and stormwater arrangement need review. Provide any existing drawings; design, approvals and qualified building work may be required."]
+    ]
+  },
+  "deck-builders": {
+    "title": "Deck Building & Board Repairs Perth | Ellis Services Group",
+    "h1": "Build a deck or replace damaged boards",
+    "description": "Plan timber or composite decking in Perth, including deck board replacement, stairs and edges. Check supports and structural requirements first.",
+    "qa": [
+      ["Can a few rotten deck boards be replaced without rebuilding the deck?", "A local board replacement may be suitable if the supporting frame is sound. The assessment checks supports, fixings and the extent of decay before deciding whether a larger repair is needed."],
+      ["When does a deck repair need structural assessment?", "Movement, deteriorated supports, loose balustrades or problems at the house connection need more than a board repair. Keep people off unsafe areas; elevated decks may need engineering and approvals."],
+      ["What details help plan a new deck?", "Describe the intended use, approximate footprint, height above ground and preferred timber or composite material. Site levels, access, stairs and the house connection help define the build scope."]
+    ]
+  },
+  "fence-builders": {
+    "title": "Fence Building & Panel Replacement Perth | Ellis Services Group",
+    "h1": "Replace a fence run or damaged panels",
+    "description": "Scope new fencing or damaged fence sections in Perth. Check posts, ground conditions, access and boundaries before agreeing on panels and gates.",
+    "qa": [
+      ["Can one damaged fence panel be replaced?", "A single panel may be replaceable if the posts, rails and neighbouring sections are sound and compatible materials are available. Loose posts or failed footings can change the repair scope."],
+      ["Does the existing fence show where the legal boundary is?", "Do not assume it does. Confirm boundary information before a new fence line is set out; uncertain boundaries may need a survey. Underground services and any retaining function also need checking."]
+    ]
+  },
+  "fencing-contractors": {
+    "title": "Fencing Projects Perth | Replacement, Screening & Gates",
+    "h1": "Plan fencing across multiple sections",
+    "description": "Define a fencing project in Perth with replacement runs, screening and access gates. Review the layout, adjoining walls and site constraints.",
+    "qa": [
+      ["What helps scope a fence project with several gates and sections?", "Outline each fence run, the purpose of the fencing and where pedestrian or vehicle access is needed. The layout assessment considers gate positions, levels and connections to walls or landscaping."],
+      ["Can fencing beside a pool or retaining wall use a standard layout?", "Those interfaces need specific assessment. Pool barriers, retaining loads, boundaries and nearby services can affect the design and require surveys, approvals or specialist input."]
+    ]
+  },
+  "garden-clean-up": {
+    "title": "Garden Clean Up Perth | Weeding, Cutbacks & Green Waste",
+    "h1": "Tidy overgrown garden beds and paths",
+    "description": "Scope a garden clean up in Perth for manageable overgrowth, weeding and garden debris. Confirm access and green waste removal with the work list.",
+    "qa": [
+      ["Does a garden clean up include green waste removal?", "Green waste collection and disposal need to be included in the agreed scope. Describe the likely volume, the material to cut back and access from the garden to the collection point."],
+      ["Can garden tidying and small outdoor repairs be discussed together?", "List both sets of tasks so each can be assessed. Weeding and manageable cutbacks are garden work; damaged fences or structures need their own checks before a combined scope can be confirmed."],
+      ["What if there is old building debris among the plants?", "Mention it before the clean up and leave suspect material untouched. Hazardous waste or potentially asbestos-containing debris requires assessment outside routine green waste handling."]
+    ]
+  },
+  "garden-landscapers": {
+    "title": "Garden Landscaping Perth | Planting, Beds & Edging",
+    "h1": "Plan planting, garden beds and edging",
+    "description": "Develop a practical garden layout in Perth with soil preparation, selected plants, mulch and edging. Assess drainage and excavation constraints.",
+    "qa": [
+      ["Can existing beds be refreshed without redesigning the whole garden?", "A defined area can be scoped for bed preparation, soil improvement, selected planting and mulch. Describe the beds you want to keep and the changes you would like to make."],
+      ["What needs checking before changing garden levels?", "Changes to levels can affect drainage, retaining needs and nearby structures. Underground services must be considered before excavation, and significant level changes may need specialist design."]
+    ]
+  },
+  "gardeners": {
+    "title": "Garden Maintenance Perth | Weeding, Pruning & Mulch",
+    "h1": "Keep garden beds and shrubs manageable",
+    "description": "Discuss garden maintenance in Perth for weeding, manageable shrub pruning, mulch and seasonal planting. Agree on the tasks for each visit.",
+    "qa": [
+      ["What can be included in a garden maintenance visit?", "The work list can include weeding, pruning manageable shrubs, removing spent growth, refreshing mulch and seasonal planting. Identify priority beds and plants so the visit has a clear scope."],
+      ["Can routine gardening include tall tree pruning?", "Tall trees, unstable branches and powerline clearance need specialist assessment and controls. Describe these separately from garden bed and shrub maintenance rather than including them as routine pruning."]
+    ]
+  },
+  "lawn-mowing": {
+    "title": "Lawn Mowing & Edging Perth | Ellis Services Group",
+    "h1": "Mow the lawn and tidy accessible edges",
+    "description": "Scope lawn mowing and edging in Perth with turf condition, access and clipping preferences in mind. Identify slopes, debris and irrigation first.",
+    "qa": [
+      ["Are lawn clippings collected or left as mulch?", "Confirm your preference when the mowing visit is scoped. Collection or mulching depends on the agreed service and the lawn's condition; do not assume clipping removal is automatically included."],
+      ["What should be identified before the lawn is mown?", "Point out irrigation components, loose debris, steep areas and restricted access. Pets need to be kept clear of the work area before powered equipment is used."]
+    ]
+  },
+  "patio-builders": {
+    "title": "Patio Surface Installation Perth | Levels, Steps & Drainage",
+    "h1": "Create a patio surface that suits the site",
+    "description": "Plan a patio surface in Perth with a suitable base, levels, edges and steps. Review doors, drainage and any proposed structural cover separately.",
+    "qa": [
+      ["What needs checking before a patio surface is installed?", "The footprint, ground levels, nearby doors and drainage need assessment before the base and surface system are selected. Edges, steps and transitions should be included in the layout."],
+      ["Does a patio surface quote include a roof or cover?", "A structural cover needs to be expressly included and assessed as a separate part of the project. Its design, footings and approval needs differ from preparing and laying the patio surface."]
+    ]
+  },
+  "pergola-builders": {
+    "title": "Pergola Building & Repairs Perth | Ellis Services Group",
+    "h1": "Plan a pergola or assess worn timber",
+    "description": "Discuss pergola construction or repairs in Perth. Review posts, connections, shade or roof form, wind exposure and approval requirements.",
+    "qa": [
+      ["Can weathered pergola timber be repaired in sections?", "Scoped deterioration may be repairable after the structure is assessed. The check needs to distinguish worn components from weakened posts, beams, footings or connections."],
+      ["When do pergola repairs need structural advice?", "Leaning posts, movement, weakened beams or failed connections can affect the whole structure. These concerns need qualified assessment; roofing changes and wind exposure may also require engineering or approvals."]
+    ]
+  },
+  "pool-fence-installers": {
+    "title": "Pool Fence Installation & Gate Repairs Perth",
+    "h1": "Install or repair a complete pool barrier",
+    "description": "Scope pool fencing and pool gate repairs in Perth with checks of panels, posts, self-closing hardware and the complete safety barrier.",
+    "qa": [
+      ["Are pool gate repairs different from ordinary garden gate repairs?", "Yes. A pool gate is part of a safety barrier, so self-closing and self-latching operation must be considered with the complete barrier. An ordinary gate adjustment does not establish pool-barrier compliance."],
+      ["What should I do if the pool gate will not latch?", "Keep the pool area secured and prevent unsupervised access while the defect remains. Describe the gate behaviour and any panel or post damage so the barrier can be assessed before repairs are scoped."]
+    ]
+  },
+  "pool-resurfacing": {
+    "title": "Pool Resurfacing Perth | Shell & Finish Assessment",
+    "h1": "Assess a worn pool surface before resurfacing",
+    "description": "Discuss pool resurfacing in Perth for staining, delamination or worn finishes. Check shell condition, finish compatibility, curing and refill needs.",
+    "qa": [
+      ["Can resurfacing cover cracks in a pool shell?", "Cracking needs assessment before a finish is selected. A new surface cannot be assumed to resolve a shell defect; the preparation and repair requirements depend on the underlying condition."],
+      ["Should I drain the pool before the assessment?", "Do not drain it as a preparation step without professional advice. Emptying a pool can affect shell stability, so draining, curing and refilling need a planned sequence with experienced personnel."]
+    ]
+  },
+  "surveyors": {
+    "title": "Property Surveys Perth | Boundaries, Features & Levels",
+    "h1": "Establish site levels and boundary information",
+    "description": "Define the survey needed for a Perth fence, build or renovation. Discuss feature and level surveys, boundary work and construction set-out.",
+    "qa": [
+      ["Which survey helps a designer plan a renovation?", "A feature and level survey records site information for design inputs. Explain the proposed work and supply existing drawings so the required survey detail can be defined."],
+      ["Can a feature survey confirm the legal boundary for a new fence?", "The requested survey must specifically address boundary location where that is needed. Boundary and cadastral work require appropriately registered or licensed surveyors; an existing fence position is not sufficient evidence."]
+    ]
+  },
+  "synthetic-grass": {
+    "title": "Synthetic Grass Installation Perth | Base & Drainage",
+    "h1": "Prepare and install synthetic turf",
+    "description": "Plan synthetic grass installation in Perth with a stable base, drainage, joins and edges suited to the area and intended use.",
+    "qa": [
+      ["Can synthetic grass be laid over an uneven or poorly draining area?", "The base and drainage need assessment first. Excavation and preparation should create a stable, free-draining foundation before the turf is cut, joined and secured."],
+      ["What details affect the choice and layout of synthetic turf?", "Describe the area's size, intended use, sun exposure and existing drainage. Edges, penetrations, joins and infill need to suit the selected system, with underground services checked before excavation."]
+    ]
+  },
+  "timber-fencing": {
+    "title": "Timber Fence & Gate Repairs Perth | Ellis Services Group",
+    "h1": "Replace timber fence boards and repair gates",
+    "description": "Discuss timber fencing in Perth, from damaged palings to replacement sections and sagging gates. Check posts, rails and ground conditions first.",
+    "qa": [
+      ["Can loose or damaged timber palings be replaced individually?", "Individual boards can form part of the repair scope when the posts and rails remain sound. Rot or storm damage in the supporting sections may require more than new palings."],
+      ["Can a sagging timber side gate be repaired without replacement?", "The hinges, gate frame, post and latch alignment need checking first. Adjustment may suit sound components, while decay or movement can require replacement of the affected support or gate parts."],
+      ["Why does a timber fence keep leaning after a repair?", "Replacing visible boards may leave a failed post, footing or ground issue unresolved. The assessment should check the support and any retaining function before deciding on another local repair."]
+    ]
+  },
+  "tree-arborists": {
+    "title": "Tree Assessment & Arborist Work Perth | Ellis Services Group",
+    "h1": "Assess tree health, pruning and removal needs",
+    "description": "Discuss arborist assessment in Perth for tree defects, pruning or removal. Plan access, exclusion zones and any required vegetation approvals.",
+    "qa": [
+      ["Can a damaged tree be pruned rather than removed?", "A qualified arborist needs to assess its health, defects and structural condition. Species-appropriate pruning may be an option, while the findings determine whether removal should be considered."],
+      ["What should I do about a hanging or unstable branch?", "Keep people clear and do not climb, cut or work beneath it. Describe its location, nearby buildings and any powerlines so qualified arborists can plan safe access and an exclusion zone."]
+    ]
+  },
+  "bathroom": {
+    "title": "Bathroom Renovations & Wet-area Repairs Perth",
+    "h1": "Scope bathroom upgrades and wet-area repairs",
+    "description": "Plan bathroom work in Perth, including substrate preparation, waterproofing, tiling and fixtures. Assess leaks and confirm the required trade scope.",
+    "qa": [
+      ["Why does a shower still leak after new silicone?", "The leak may involve plumbing, the substrate or waterproofing beneath the tiles rather than the visible joint. Assess the cause before repeating resealing or choosing a full wet-area repair."],
+      ["When might shower tiles need removal for waterproofing work?", "If assessment identifies a failed underlying waterproofing system or damaged substrate, access beneath the tiles may be needed. The scope must address preparation, waterproofing and reinstatement together."],
+      ["Can fixtures and finishes be included in a bathroom renovation?", "Yes, selected fixtures, cabinetry and accessories can be included in the agreed renovation scope. Plumbing, electrical and waterproofing tasks need the appropriately licensed or qualified people for that work."]
+    ]
+  },
+  "bricklayers": {
+    "title": "Brickwork & Masonry Repairs Perth | Walls & Piers",
+    "h1": "Build or repair brick walls and piers",
+    "description": "Scope brickwork in Perth for new walls, piers or damaged masonry sections. Check structural concerns and discuss brick and mortar matching.",
+    "qa": [
+      ["Can replacement bricks and mortar match the existing wall?", "Brick bond, joint profile and mortar colour can be considered when the repair is scoped. An exact match depends on the existing materials and suitable replacements being available."],
+      ["Can a cracked or leaning brick wall be rebuilt locally?", "The cause and load-bearing role need assessment before a local rebuild is chosen. A leaning wall or structural cracking may require engineering advice, with service and approval checks for excavation."]
+    ]
+  },
+  "builders": {
+    "title": "Building & Renovation Projects Perth | Ellis Services Group",
+    "h1": "Define the scope for a build or renovation",
+    "description": "Discuss building and renovation work in Perth. Establish the plans, structural work, trade sequence, finishes and project requirements before starting.",
+    "qa": [
+      ["Can a building project be scoped from an initial brief?", "An initial brief can start the discussion about rooms, additions and intended outcomes. Available plans and existing conditions help establish what further design and documentation are needed."],
+      ["What should be confirmed before construction begins?", "The agreed scope, plans, approvals, structural requirements and regulated trade work need to be established. Required builder qualifications, engineering and certificates depend on the particular project."]
+    ]
+  },
+  "building-certifiers": {
+    "title": "Building Certification Perth | Plans & Approval Documentation",
+    "h1": "Clarify the building certification requirements",
+    "description": "Discuss certification for a Perth building project. Define plan assessment, required documentation and inspections with the appropriate practitioner.",
+    "qa": [
+      ["What information is needed to define a certification scope?", "Provide the project brief, plans and any approval feedback already received. These help identify the applicable documentation, plan assessment and inspection requirements."],
+      ["Is a building certifier the same as a renovation builder?", "Certification is a distinct function performed by an appropriately registered or accredited practitioner. It may require independence from design or construction roles; building work does not itself provide certification."]
+    ]
+  },
+  "building-inspectors": {
+    "title": "Building Inspections Perth | Pre-purchase, Handover & Defects",
+    "h1": "Inspect visible defects and property condition",
+    "description": "Scope a Perth building inspection for pre-purchase, handover or a specific concern. Confirm accessible areas, reporting and inspection limitations.",
+    "qa": [
+      ["Can an inspection focus on a particular defect?", "A targeted inspection can be scoped around a stated condition concern. Describe the location, symptoms and any changes so the accessible areas and reporting brief can be agreed."],
+      ["Does a building inspection cover hidden defects and every specialist system?", "The inspection covers the agreed scope and accessible conditions. Pest, structural, electrical or hazardous-material concerns may need separate specialist assessment; concealed conditions cannot be assumed to have been inspected."]
+    ]
+  },
+  "carports-and-garages": {
+    "title": "Carport & Garage Building Perth | Layout & Repairs",
+    "h1": "Plan a carport, garage or component repair",
+    "description": "Discuss carport and garage work in Perth. Review vehicle access, footprint, roof and enclosure details alongside footings, drainage and approvals.",
+    "qa": [
+      ["What affects the layout of a new carport or garage?", "Vehicle access, site levels, setbacks and stormwater need consideration alongside the footprint and structural form. Existing drawings and the intended use help establish the design brief."],
+      ["Can selected carport components be repaired?", "A repair scope can address identified structural or exterior components after assessment. Deteriorated supports or connections need qualified review before choosing a component replacement."]
+    ]
+  },
+  "concreters": {
+    "title": "Concrete Slabs & Flatwork Perth | Preparation & Finishing",
+    "h1": "Prepare and pour the agreed concrete area",
+    "description": "Scope concrete work in Perth with excavation, formwork, reinforcement and finishing. Confirm levels, drainage, joints and structural requirements.",
+    "qa": [
+      ["What needs deciding before a concrete area is poured?", "Define the area's use, levels, drainage falls and desired texture. Excavation, formwork, reinforcement and joints need to suit the agreed concrete element and adjoining surfaces."],
+      ["Can a structural slab or footing be treated as ordinary flatwork?", "Structural loads require the relevant design and inspection arrangements. Underground services and excavation conditions must also be assessed before preparation or placement begins."]
+    ]
+  },
+  "demolition": {
+    "title": "Demolition & Strip-out Perth | Scope & Material Checks",
+    "h1": "Plan what to remove and what to retain",
+    "description": "Discuss controlled demolition or strip-out in Perth. Define retained elements, check hazards and services, and confirm removal and waste handling.",
+    "qa": [
+      ["Can demolition be limited to selected rooms or finishes?", "A controlled strip-out can be scoped around specific elements to remove and retain. The work zone, structural role of those elements and material condition need assessment first."],
+      ["What needs checking before an older property is stripped out?", "Suspect asbestos, unknown services and load-bearing elements must be assessed before disturbance. Structural demolition may require engineering, permits, service disconnections and appropriately licensed contractors."]
+    ]
+  },
+  "draftsmen": {
+    "title": "Renovation & Building Drafting Perth | Plans & Drawings",
+    "h1": "Turn a renovation brief into measured drawings",
+    "description": "Define a drafting package for a Perth renovation, addition or build. Discuss existing measurements, concept plans and the documents needed next.",
+    "qa": [
+      ["Do I need concept drawings or construction drawings?", "The drawing purpose determines the package. Explain whether you are exploring a layout, seeking approval or preparing for construction, and include any council or consultant feedback."],
+      ["Do drafting drawings replace engineering and survey documents?", "Those are separate professional inputs where the project requires them. Drafting can incorporate consultant information, but engineering, surveying and statutory certification need the appropriate practitioners."]
+    ]
+  },
+  "home-renovators": {
+    "title": "Home Renovations Perth | Rooms, Repairs & Trade Coordination",
+    "h1": "Plan renovation work across your home",
+    "description": "Scope home renovations in Perth around the rooms, repairs and finishes you need. Discuss staging, existing defects and required building trades.",
+    "qa": [
+      ["Can a renovation be staged while the home is occupied?", "Occupancy and access need to be part of the project discussion. The proposed sequence must account for affected rooms, services and safety; suitable staging is confirmed from the actual scope."],
+      ["Should known leaks or structural defects be included in the renovation brief?", "Yes. Existing defects can affect demolition, new finishes and the trade sequence. Structural changes and electrical, plumbing or waterproofing work need the appropriate approvals and qualified trades."]
+    ]
+  },
+  "restumping": {
+    "title": "Restumping Assessment Perth | Supports & Uneven Floors",
+    "h1": "Assess deteriorated stumps and floor movement",
+    "description": "Discuss restumping in Perth for suitable raised buildings. Assess accessible supports, levels and movement before planning structural replacement.",
+    "qa": [
+      ["Do uneven floors mean the house needs restumping?", "Uneven floors are a symptom to assess, not a diagnosis. Accessible stumps, bearers, building levels, drainage and movement history help establish whether support replacement is appropriate."],
+      ["Should I enter the subfloor to photograph damaged stumps?", "Do not enter an unsafe subfloor. Describe what you have noticed and share existing reports or safely taken photos if available. Supporting and lifting the building requires qualified structural planning and controlled work."]
+    ]
+  },
+  "retaining-walls": {
+    "title": "Retaining Wall Building & Replacement Perth",
+    "h1": "Assess a retaining wall before building or replacement",
+    "description": "Scope retaining walls in Perth with checks of height, soil, drainage and nearby loads. Investigate leaning walls before agreeing on a replacement.",
+    "qa": [
+      ["Can a leaning retaining wall be replaced with the same type?", "The reason for the movement needs investigation first. Drainage, soil conditions and loads behind the wall may change the suitable replacement design, even when the original material is preferred."],
+      ["What details help assess a retaining wall project?", "Describe its length, maximum height and the level difference, plus nearby buildings, fences and boundaries. Engineering, approvals and underground-service checks may be required before excavation."]
+    ]
+  },
+  "structural-engineers": {
+    "title": "Structural Engineering Perth | Cracks, Beams & Alterations",
+    "h1": "Assess structural movement and proposed alterations",
+    "description": "Define structural engineering work in Perth for cracking, movement or load-bearing changes. Confirm the assessment, design and documentation brief.",
+    "qa": [
+      ["What information helps an engineer assess cracks or movement?", "Describe when the cracks appeared, whether they have changed and any recent work nearby. Existing plans, surveys and reports help an appropriately qualified engineer define the assessment."],
+      ["Can a wall be removed before its load-bearing role is checked?", "The proposed alteration needs structural assessment before removal. The engineering scope may include beams, footings, calculations and drawings; visible instability requires the affected area to be isolated and urgent professional attention."]
+    ]
+  },
+  "cleaners": {
+    "title": "Home & End-of-lease Cleaning Perth | Agreed Task Lists",
+    "h1": "Scope the rooms and surfaces that need cleaning",
+    "description": "Discuss home, end-of-lease or post-project cleaning in Perth. Set a room-by-room checklist, priority surfaces and access requirements.",
+    "qa": [
+      ["What should be included in an end-of-lease cleaning brief?", "Provide the property size, room count and requested checklist, including priority kitchen and bathroom tasks. Surface materials, current condition and access help define the agreed clean."],
+      ["Can routine cleaners remove asbestos dust or hazardous residue after building work?", "These hazards need specialist assessment and handling. Disclose suspected asbestos dust, sharps, mould or chemical spills before a post-project clean; a general cleaning scope does not cover uncontrolled hazards."]
+    ]
+  },
+  "removalists": {
+    "title": "Furniture & Household Removals Perth | Local Move Planning",
+    "h1": "Plan furniture and household item moves",
+    "description": "Scope furniture and household removals in Perth with an inventory, both access points and assembly needs. Declare oversized or specialist items.",
+    "qa": [
+      ["Can a move include furniture disassembly and reassembly?", "List the furniture and the assembly tasks when requesting the move scope. Packing, disassembly and reassembly are included only where agreed, with access and item condition considered."],
+      ["What access details are needed at each address?", "Describe stairs, lifts, parking, entry widths and any travel constraints at pickup and delivery. Declare pianos, safes and oversized or fragile pieces because they may need specialist equipment."]
+    ]
+  },
+  "pest-control": {
+    "title": "Pest Assessment & Treatment Perth | Household Pest Concerns",
+    "h1": "Identify pest activity and suitable treatment",
+    "description": "Discuss pest control in Perth with checks of evidence, affected areas and entry points. Plan targeted treatment with household precautions.",
+    "qa": [
+      ["What if I cannot identify the pest?", "Describe where and when activity occurs, and share a safely taken photo of the evidence if available. Do not handle unknown insects, droppings or nests; an assessment can help identify the pest and treatment scope."],
+      ["What should I disclose before treatment is planned?", "Mention children, pets, allergies, food preparation areas and previous treatments. The identified pest and chosen treatment determine the precautions and any specialist methods needed."]
+    ]
+  },
+  "rubbish-removal": {
+    "title": "Rubbish & Green Waste Removal Perth | Load & Access Checks",
+    "h1": "Clear the agreed household or garden waste",
+    "description": "Scope rubbish removal in Perth by material, volume and access. Confirm accepted household items, green waste and any special disposal needs.",
+    "qa": [
+      ["Can household rubbish and green waste be collected together?", "List the materials and approximate quantities so the accepted load and disposal arrangements can be confirmed. Renovation debris and items needing separate disposal should be identified individually."],
+      ["What materials must be declared before rubbish collection?", "Declare asbestos, chemicals, batteries, gas cylinders, sharps and contaminated waste. Do not mix suspect hazardous material into a general load; it may require specialist or licensed disposal."],
+      ["What helps estimate the collection scope?", "Describe the complete item list, approximate pile volume and heavy pieces, along with access width, stairs and parking. Photos are optional and should only be taken without disturbing suspect material."]
+    ]
+  }
+}

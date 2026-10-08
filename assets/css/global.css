@@ -8,6 +8,23 @@
 @media(max-width:900px){.service-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.service-directory-grid{grid-template-columns:1fr}.service-directory-card{min-height:0}.category-image-slot{margin-bottom:38px}.service-detail-visual{margin-top:28px}}
 .popular-card{min-height:255px}.concept-note{margin:18px 0 0;color:var(--slate);font-size:.76rem}.not-found{min-height:calc(100vh - 82px);display:flex;align-items:center}.not-found .service-search{margin-top:38px}.not-found h1{max-width:14ch}
+.services-overview-layout{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3fr);gap:28px;align-items:start;padding-top:12px}
+.services-overview-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.services-overview-cards .service-card{min-width:0;min-height:0;padding:22px;display:flex;flex-direction:column}
+.services-overview-cards .service-card>img{width:64px;height:64px;object-fit:contain;margin-bottom:16px}
+.services-overview-cards .service-card h3{font-size:1.1rem;line-height:1.3;overflow-wrap:break-word}
+.services-overview-cards .service-card .eyebrow{font-size:.64rem;line-height:1.45}
+.services-overview-cards .service-card>p:not(.eyebrow){font-size:.9rem;line-height:1.55}
+.services-overview-cards .service-card>.text-link{margin-top:auto;padding-top:8px;align-self:flex-start;cursor:pointer}
+.services-overview-layout a:focus-visible{outline:3px solid var(--orange);outline-offset:4px;border-radius:3px}
+.services-team-panel{min-width:0;padding:20px;background:var(--mist);border:1px solid var(--line);border-radius:var(--radius)}
+.services-team-panel figure{margin:0 0 24px;aspect-ratio:3/2;border-radius:12px;overflow:hidden}
+.services-team-panel img{display:block;width:100%;height:100%;object-fit:cover}
+.services-team-panel .support-copy h2{font-size:1.7rem;line-height:1.2}
+.services-team-panel .support-copy p:not(.eyebrow){font-size:.96rem;line-height:1.65}
+@media(max-width:1000px){.services-overview-layout{grid-template-columns:1fr;gap:28px}.services-team-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center}.services-team-panel figure{margin:0}}
+@media(max-width:760px){.services-overview-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.services-overview-cards{grid-template-columns:1fr}.services-team-panel{grid-template-columns:1fr;gap:24px}.services-overview-cards .service-card{padding:22px}.services-overview-layout{padding-top:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}.site-footer .footer-hours{margin:12px 0 4px;color:#fff;font-weight:800}.site-footer .footer-note{margin:0;color:#aebdc5;font-size:.76rem;line-height:1.4}.site-footer .footer-google-reviews{display:inline-flex;align-items:center;margin:0;color:#fff;font-weight:800;text-decoration:none}.site-footer .footer-google-reviews:hover{text-decoration:underline}.privacy-note{margin:14px 0 0;color:var(--slate);font-size:.86rem}.privacy-note a{font-weight:800}.hero-availability{max-width:660px;font-weight:800;color:var(--sand)}.hero-reviews{display:inline-block;margin:0 0 8px;color:#fff;font-weight:800}.availability-strip{padding-top:0}.availability-strip>div{padding:30px;border-radius:var(--radius);background:var(--mist)}
 .header-inner{gap:24px}.brand{display:inline-flex;align-items:center;justify-content:center;height:66px;flex:0 0 auto;text-decoration:none}.brand-logo{display:block;width:64px;height:64px;object-fit:contain}.brand-name{display:block;max-width:178px;color:var(--navy);font:800 .96rem/1.05 "Trebuchet MS",sans-serif;letter-spacing:.015em}.main-nav{gap:clamp(14px,2vw,26px)}.main-nav a{white-space:nowrap}.header-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}.header-call{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:#fff;border-radius:8px;padding:9px 12px;text-decoration:none;font-size:.78rem;font-weight:800}.header-call:hover{background:#c95f24}.footer-brand{display:inline-block;color:#fff;margin-bottom:20px;font:800 1.05rem/1.2 "Trebuchet MS",sans-serif;letter-spacing:.04em;text-decoration:none}.footer-phone{display:inline-block;color:#fff;font-weight:800}.footer-instagram{display:inline-flex;align-items:center;justify-content:center;gap:6px;margin:0 0 0 9px;color:#fff;font-weight:800;vertical-align:middle;text-decoration:none}.footer-instagram img{display:block;width:18px;height:18px;object-fit:contain}.contact-phone{display:inline-block;color:var(--navy);font:800 clamp(1.5rem,3vw,2.2rem)/1.1 "Trebuchet MS",sans-serif}
 @media(max-width:1100px){.header-call strong{display:none}}

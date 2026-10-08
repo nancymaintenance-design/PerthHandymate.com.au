@@ -136,7 +136,8 @@ for (const file of [...categoryPages, ...serviceDetailPages]) {
   const declared = service?.areaServed?.map((area) => area.name) || [];
   if (JSON.stringify(declared) !== JSON.stringify(['Perth metropolitan area'])) fail(`${rel(file)} does not limit Service JSON-LD to Perth metropolitan area`);
   if (!source.includes('Perth metropolitan area')) fail(`${rel(file)} visible copy does not state the Perth metropolitan service area`);
-  const serviceCtas = source.match(/data-preserve-search href="[^"]+service=/g) || [];
+  const primaryCtaSections = (source.match(/<section class="page-hero service-hero">[\s\S]*?<\/section>/) || [''])[0] + (source.match(/<section class="cta-band">[\s\S]*?<\/section>/) || [''])[0];
+  const serviceCtas = primaryCtaSections.match(/data-preserve-search href="[^"]+service=/g) || [];
   if (serviceCtas.length !== 2) fail(`${rel(file)} does not preserve service context on both contact CTAs`);
 }
 
@@ -165,11 +166,13 @@ if (!fs.existsSync(catalogPath)) {
     if (!fs.existsSync(target)) fail(`Raw service has no detail target: ${item.label} -> ${item.url}`);
   }
   const categorySource = categoryPages.map((file) => fs.readFileSync(file, 'utf8')).join('\n');
-  for (const label of expectedRawServices) {
-    const encodedLabel = label.replaceAll('&', '&amp;');
-    if (!categorySource.includes(`>${encodedLabel}<`)) fail(`Raw service label is not visible in category directories: ${label}`);
+  const directoryCards = categorySource.match(/<article class="service-directory-card">[\s\S]*?<\/article>/g) || [];
+  const directoryUrls = directoryCards.map(card => card.match(/href="\.\.\/\.\.\/(services\/[^"?]+)"/)?.[1]);
+  if (directoryCards.length !== 67 || new Set(directoryUrls).size !== 67) fail('Category directories must expose exactly 67 unique canonical service cards');
+  for (const item of catalog.canonicalServices) {
+    if (directoryUrls.filter(url => url === item.url).length !== 1) fail(`Canonical service must have exactly one directory card: ${item.url}`);
   }
-  if ((categorySource.match(/>Explore service</g) || []).length !== 75) fail('Category directories must expose one Explore service link for each raw label');
+  if ((categorySource.match(/>Explore service</g) || []).length !== 67) fail('Category directories must expose one Explore service link for each canonical service');
   if ((categorySource.match(/data-service-image=/g) || []).length !== 9) fail('Nine category image integration paths are not reserved');
   const categorySlugs = [...new Set(catalog.rawServices.map((item) => item.category))];
   if (categorySlugs.length !== 9) fail(`Expected 9 image categories, found ${categorySlugs.length}`);
@@ -186,7 +189,7 @@ if (!fs.existsSync(catalogPath)) {
     const detailPage = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
     const expectedImage = `src="../../../assets/images/services/${item.category}.png"`;
     if (!detailPage.includes(expectedImage)) fail(`Service detail does not reuse its category image: ${item.url}`);
-    const expectedAlt = `alt="${item.title.replaceAll('&', '&amp;')} service context within`;
+    const expectedAlt = `alt="${item.title.replaceAll('&', '&amp;')} services:`;
     if (!detailPage.includes(expectedAlt)) fail(`Service detail image alt is not service-specific: ${item.url}`);
   }
 }

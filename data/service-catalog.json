@@ -713,7 +713,7 @@
       "customerInfo": [
         "Building type, wall elevation and approximate affected area",
         "Photos of the cladding profile, damage and nearby roof or window junctions",
-        "Known material type, age and access constraints"
+        "Cladding material and age, building height and access to the affected wall"
       ],
       "safetyNote": "Some older cladding may contain hazardous materials, while height and weatherproofing work require specialist controls; do not disturb suspect products.",
       "nextStep": "Tell Ellis Perth which exterior wall needs attention and your suburb. Safe wide and close-up photos are optional; email them to handyman.maintenance.au@outlook.com if available. We arrange the site assessment and confirm the cladding repair scope and quote.",
@@ -794,7 +794,7 @@
       "customerInfo": [
         "Room dimensions and clear photos in natural light",
         "Timber type and existing coating if known",
-        "Stains, protruding nails, loose boards, furniture and access constraints"
+        "Stains, protruding nails, loose boards, furniture to move and entry arrangements"
       ],
       "safetyNote": "Old coatings, dust and unknown floor materials can require special controls; occupied areas need isolation and adequate ventilation during the work.",
       "nextStep": "Tell Ellis which timber floors need attention and the finish you want. We check their condition and measure the area on site, then confirm preparation, sanding and the quote. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
@@ -1201,7 +1201,7 @@
         "Exterior"
       ],
       "categoryTitle": "Roofing, gutters & exterior",
-      "summary": "Gutter services bring cleaning, repair and replacement under one pathway for gutters and downpipes that are blocked, leaking, rusted, loose or poorly draining.",
+      "summary": "Ellis cleans, repairs and replaces blocked, leaking, rusted or loose gutters and downpipes in Perth. We check the cause of overflow or poor drainage and confirm which sections need cleaning, resealing or replacement.",
       "commonTasks": [
         "Remove accessible leaf build-up and check outlets for blockages",
         "Repair leaking joins, loose brackets and localised damaged sections",
@@ -1972,7 +1972,7 @@
       "customerInfo": [
         "Property address, title details and purpose of the survey",
         "Plans, previous surveys or design documents available",
-        "Required deliverable, project stage and site-access constraints"
+        "Survey or plans required, the building stage and access to the land"
       ],
       "safetyNote": "Boundary and cadastral work must be completed by appropriately registered or licensed surveyors where required; site hazards must be disclosed before attendance.",
       "nextStep": "Provide the address, survey purpose and available plans so our Perth team can confirm the appropriate surveying discipline and any specialist requirement.",
@@ -2191,7 +2191,7 @@
       "customerInfo": [
         "Property address, project goals and target rooms or footprint",
         "Plans, engineering, approvals and selections already available",
-        "Occupancy, access, staging and major constraints"
+        "Whether the property is occupied, entry arrangements and rooms that must remain usable"
       ],
       "safetyNote": "Building work may require licensed builders, permits, engineering and regulated trade certificates depending on scope and jurisdiction.",
       "nextStep": "Provide the project brief and available drawings so Ellis can identify the next design, approval or construction step.",
@@ -2228,7 +2228,7 @@
       "categoryTitle": "Planning, inspection & compliance",
       "summary": "Building-certification enquiries concern statutory assessment, approvals and inspections associated with proposed or completed building work.",
       "commonTasks": [
-        "Clarify the approval pathway and documentation required",
+        "Identify the approvals, inspection records and documents required for the building work",
         "Assess submitted plans against applicable building requirements",
         "Undertake required stage inspections and issue relevant determinations or certificates"
       ],
@@ -2375,7 +2375,7 @@
       "customerInfo": [
         "Plans or photos marking the exact demolition area",
         "Building age, services, occupancy and access conditions",
-        "Known asbestos reports, structural information and disposal constraints"
+        "Existing asbestos reports, structural plans and requirements for removing demolition waste"
       ],
       "safetyNote": "Do not disturb suspect asbestos or unknown services. Structural demolition may require permits, engineering, service disconnections and appropriately licensed contractors.",
       "nextStep": "Tell Ellis the structure or area to be removed and any known hazards. We arrange an on-site assessment and confirm the qualified handling arrangements, approvals, removal scope and quote. Existing hazard reports help if available. Existing photos and approximate measurements are optional; email safely taken images to handyman.maintenance.au@outlook.com if available.",
@@ -2446,7 +2446,7 @@
         "Occupancy, access, staging and known property defects"
       ],
       "safetyNote": "Structural changes and regulated electrical, plumbing or waterproofing work may require approvals and appropriately licensed Ellis team members.",
-      "nextStep": "Share the renovation goals, rooms and available plans to establish the next scoping step.",
+      "nextStep": "Tell Ellis which rooms you want to renovate and what you want changed. Existing plans are optional; we inspect the property and confirm the work and quote.",
       "majorAliases": [],
       "aliases": [
         "home renovators"
@@ -2723,7 +2723,7 @@
       "customerInfo": [
         "Pickup and delivery suburbs, dates and access conditions",
         "Inventory, approximate box count and heavy or fragile items",
-        "Stairs, lifts, parking, travel constraints and assembly needs"
+        "Stairs, lifts, parking, vehicle access and furniture assembly needed at pickup or delivery"
       ],
       "safetyNote": "Pianos, safes, oversized items and hazardous goods require disclosure and may need specialist equipment or separate arrangements.",
       "nextStep": "Send the inventory, both access descriptions and preferred date for a removal scope.",

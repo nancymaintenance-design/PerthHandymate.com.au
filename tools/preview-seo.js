@@ -1,0 +1,4 @@
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml'};
+http.createServer((req,res)=>{try{const route=decodeURIComponent(new URL(req.url,'http://127.0.0.1:4175').pathname),file=path.resolve(root,'.'+route+(route.endsWith('/')?'index.html':''));if(!file.startsWith(root+path.sep)){res.writeHead(403);res.end();return;}fs.readFile(file,(e,b)=>{res.writeHead(e?404:200,{'Content-Type':types[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(e?'Not found':b);});}catch{res.writeHead(400);res.end();}}).listen(4175,'127.0.0.1',()=>console.log('SEO preview http://127.0.0.1:4175'));
