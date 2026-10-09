@@ -5,6 +5,13 @@ test('all 67 services publish their individual scenarios, quote factors and two 
  const copy=require('../tools/service-depth-copy');const seen=new Set();
  for(const item of catalog.canonicalServices){
   const html=fs.readFileSync(path.join(root,item.url,'index.html'),'utf8');
+  if(item.slug==='handymen'){
+   assert.match(html, /class="handyman-task-grid"/);
+   assert.equal([...html.matchAll(/<details\b/g)].length,6);
+   for(const slug of ['carpenters','plasterers'])assert.ok(html.includes('href="../../../'+catalog.canonicalServices.find(x=>x.slug===slug).url+'"'));
+   assert.ok(html.indexOf('id="service-work-options"')<html.indexOf('class="section shell service-questions"'));
+   continue;
+  }
   const section=html.match(/<section class="section shell" id="service-work-options">[\s\S]*?<\/section>/)?.[0];
   assert.ok(section,item.slug+' missing deep content');
   assert.equal((html.match(/id="service-work-options"/g)||[]).length,1,item.slug+' duplicate depth block');

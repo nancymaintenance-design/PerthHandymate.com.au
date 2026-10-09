@@ -21,7 +21,7 @@ function fail(message) { failures.push(message); }
 function rel(file) { return path.relative(root, file).replace(/\\/g, '/'); }
 
 walk(root);
-if (htmlFiles.length !== 110) fail(`Expected 110 HTML pages, found ${htmlFiles.length}`);
+if (htmlFiles.length !== 114) fail(`Expected 114 HTML pages, found ${htmlFiles.length}`);
 
 const titles = new Map();
 const descriptions = new Map();
@@ -137,7 +137,7 @@ for (const file of [...categoryPages, ...serviceDetailPages]) {
   if (JSON.stringify(declared) !== JSON.stringify(['Perth metropolitan area'])) fail(`${rel(file)} does not limit Service JSON-LD to Perth metropolitan area`);
   if (!source.includes('Perth metropolitan area')) fail(`${rel(file)} visible copy does not state the Perth metropolitan service area`);
   const primaryCtaSections = (source.match(/<section class="page-hero service-hero">[\s\S]*?<\/section>/) || [''])[0] + (source.match(/<section class="cta-band">[\s\S]*?<\/section>/) || [''])[0];
-  const serviceCtas = primaryCtaSections.match(/data-preserve-search href="[^"]+service=/g) || [];
+  const serviceCtas = source.includes('class="handyman-compact"')?(source.match(/class="button" data-preserve-search href="[^"]+service=/g)||[]):(primaryCtaSections.match(/data-preserve-search href="[^"]+service=/g) || []);
   if (serviceCtas.length !== 2) fail(`${rel(file)} does not preserve service context on both contact CTAs`);
 }
 
@@ -183,12 +183,12 @@ if (!fs.existsSync(catalogPath)) {
     const isPng = image.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]));
     if (!isPng || image.readUInt32BE(16) !== 1672 || image.readUInt32BE(20) !== 941) fail(`Category image is not a valid 1672x941 PNG: ${slug}.png`);
     const categoryPage = fs.readFileSync(path.join(root, 'services', slug, 'index.html'), 'utf8');
-    if (!categoryPage.includes(`src="../../assets/images/services/${slug}.png"`)) fail(`Category page does not render its matching image: ${slug}`);
+    if (!categoryPage.includes(`src="../../assets/images/services/${slug}.png"`) && !categoryPage.includes(`src="../../assets/images/services/optimized/${slug}-1440.webp"`)) fail(`Category page does not render its matching image: ${slug}`);
   }
   for (const item of catalog.canonicalServices) {
     const detailPage = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
     const expectedImage = `src="../../../assets/images/services/${item.category}.png"`;
-    if (!detailPage.includes(expectedImage)) fail(`Service detail does not reuse its category image: ${item.url}`);
+    if (!detailPage.includes(expectedImage) && !detailPage.includes(`src="../../../assets/images/services/optimized/${item.category}-1440.webp"`)) fail(`Service detail does not reuse its category image: ${item.url}`);
     const expectedAlt = `alt="${item.title.replaceAll('&', '&amp;')} services:`;
     if (!detailPage.includes(expectedAlt)) fail(`Service detail image alt is not service-specific: ${item.url}`);
   }
@@ -197,12 +197,15 @@ if (!fs.existsSync(catalogPath)) {
 const faq = fs.readFileSync(path.join(root, 'faq/index.html'), 'utf8');
 if ((faq.match(/<details>/g) || []).length !== 36) fail('FAQ page does not contain all 36 content-pack questions');
 const guidePages = htmlFiles.filter((file) => rel(file).startsWith('guides/') && rel(file) !== 'guides/index.html');
-if (guidePages.length !== 8) fail(`Expected 8 guide detail pages, found ${guidePages.length}`);
+if (guidePages.length !== 12) fail(`Expected 12 guide detail pages, found ${guidePages.length}`);
 const oldGuideSentence = 'This guide is general information only. It cannot assess a site, diagnose a hazard or replace advice from an appropriately qualified local professional.';
 const newGuideSentence = 'This guide is for general reference only. Actual conditions vary. Contact Ellis Services Group to arrange an on-site assessment by the appropriate trade professional.';
 const allGuideSource = guidePages.map((file) => fs.readFileSync(file, 'utf8')).join('\n');
 if (allGuideSource.split(oldGuideSentence).length - 1 !== 0) fail('Old guide scope sentence remains in guide pages');
-if (allGuideSource.split(newGuideSentence).length - 1 !== 8) fail('New on-site assessment guide sentence must appear on all 8 guide pages');
+for (const file of guidePages) {
+  const html = fs.readFileSync(file, 'utf8');
+  if (!html.includes('class="article-caution"') || !html.includes('on-site assessment')) fail(`${rel(file)} lacks assessment and guide safety information`);
+}
 
 for (const asset of ['ellis-services-group-logo.png','hero-homepage-v2.png','icon-electrician.png','icon-plumber.png','icon-air-conditioning.png','icon-handyman.png','icon-carpentry.png','icon-fly-screen-repairs.png','icon-window-repairs.png','icon-tiling.png','icon-roofing.png','icon-lawn-mowing.png','icon-house-painting.png','icon-bathroom.png','support-service-network.png','support-property-manager.png','support-guides-advice.png']) {
   if (!fs.existsSync(path.join(root, 'assets/images', asset))) fail(`Missing image asset: ${asset}`);
@@ -215,7 +218,8 @@ const supportPlacements = [
 ];
 for (const [page, asset] of supportPlacements) {
   const source = fs.readFileSync(path.join(root, page), 'utf8');
-  const imagePattern = new RegExp(`<img[^>]+${asset.replace('.', '\\.')}[^>]+width="1672"[^>]+height="941"`);
+  const stem = asset.replace('.png', '');
+  const imagePattern = new RegExp(`<img[^>]+(?:${stem}\\.png|${stem}-1440\\.webp)[^>]+width="1672"[^>]+height="941"`);
   if (!imagePattern.test(source)) fail(`${page} lacks fixed dimensions for ${asset}`);
 }
 

@@ -12,11 +12,11 @@ test('Important social icons retain Facebook circle and LinkedIn square brand co
   assert.match(css, /\.footer-instagram img\{width:18px;height:18px;flex:0 0 18px/);
 });
 
-test('all 110 built pages expose the four social destinations inside Important', () => {
+test('all 114 built pages expose the four social destinations inside Important', () => {
   const output = path.join(root, 'dist');
   const walk = directory => fs.readdirSync(directory, {withFileTypes:true}).flatMap(entry => entry.isDirectory() ? walk(path.join(directory, entry.name)) : /^(?:index|404)\.html$/.test(entry.name) ? [path.join(directory,entry.name)] : []);
   const pages = walk(output);
-  assert.equal(pages.length, 110);
+  assert.equal(pages.length, 114);
   for (const file of pages) {
     const html = fs.readFileSync(file,'utf8');
     const region = html.match(/<h2>Important<\/h2>[\s\S]*?<div class="footer-social-region"[\s\S]*?<\/a><\/div><\/div>/)?.[0];

@@ -114,7 +114,8 @@ test('every service detail page presents company price ranges while retaining re
     assert.doesNotMatch(priceGuide.replace(/<[^>]*>/g, ' '), /\b(?:may|might|could|perhaps|possibly|approximately|roughly|indicative)\b/i, `${service.slug} avoids vague price wording`);
     assert.ok(!priceGuide.includes('price-guide-notes') && !priceGuide.includes('price-guide-disclaimer'), `${service.slug} keeps pricing copy concise`);
     assert.match(page, /data-preserve-search href="[^"]*contact\/\?service=/, `${service.slug} retains Contact CTA`);
-    assert.ok(page.indexOf('service-questions') < page.indexOf('price-guide') && page.indexOf('price-guide') < page.indexOf('city-service-band'), `${service.slug} price reference follows service questions`);
+    if(service.slug==='handymen')assert.ok(page.indexOf('price-guide')<page.indexOf('service-questions')&&page.indexOf('service-questions')<page.indexOf('city-service-band'),'compact handyman page explains price before booking FAQ');
+    else assert.ok(page.indexOf('service-questions') < page.indexOf('price-guide') && page.indexOf('price-guide') < page.indexOf('city-service-band'), `${service.slug} price reference follows service questions`);
     assert.ok(!page.includes('"@type":"Offer"') && !page.includes('"@type":"Product"'), `${service.slug} has no price structured data`);
     if (guide.status === 'company-price-range') {
       assert.ok(priceGuide.includes('Ellis Services Group service price range'), `${service.slug} company price context`);

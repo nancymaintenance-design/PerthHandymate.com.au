@@ -6,7 +6,8 @@ test('67 service area bands link directly to Contact with service and suburb',()
   for(const s of catalog.canonicalServices){
     const html=fs.readFileSync(path.join(root,s.url,'index.html'),'utf8');
     const band=html.match(/<section class="section shell city-service-band">[\s\S]*?<\/section>/)[0];
-    const links=[...band.matchAll(/href="([^"]+)"/g)];assert.equal(links.length,7,s.slug);
+    const areaLinks=s.slug==='handymen'?band.match(/<div class="chip-list">[\s\S]*?<\/div>/)[0]:band;
+    const links=[...areaLinks.matchAll(/href="([^"]+)"/g)];assert.equal(links.length,7,s.slug);
     for(const [,href] of links){const url=new URL(href,new URL(s.url,'https://www.perthhandymate.com.au/'));assert.equal(url.pathname,'/contact/');for(const key of ['service','q','suburb'])assert.ok(url.searchParams.get(key),s.slug+': '+key);total++;}
     assert.match(band,/on-site assessment/);
   }

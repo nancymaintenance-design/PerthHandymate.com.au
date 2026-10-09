@@ -32,6 +32,12 @@ for (const service of catalog.canonicalServices) {
   if (!guide) throw new Error(`Missing price guide for ${service.slug}`);
   const file = path.join(root, service.url, 'index.html');
   const current = fs.readFileSync(file, 'utf8');
+  if(service.slug==='handymen'&&current.includes('class="handyman-compact"')){
+    const inner=markup(guide).replace('<section class="section muted">','').replace('</section>','');
+    const updated=current.replace(/<div class="shell price-guide"[\s\S]*?<\/div>/,inner);
+    if(updated!==current)fs.writeFileSync(file,updated);
+    continue;
+  }
   const withoutOldGuide = current.replace(existingGuide, '');
   if (!withoutOldGuide.includes(insertionPoint) || !withoutOldGuide.includes('service-questions')) {
     throw new Error(`Missing current service-page insertion point: ${service.slug}`);

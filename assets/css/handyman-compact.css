@@ -1,0 +1,28 @@
+/* Compact variant; colours, type and focus states inherit the site identity. */
+.handyman-compact .section{padding-block:42px}
+.handyman-compact h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:18px}
+.handyman-compact .service-hero{padding-block:42px}
+.handyman-intro{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.handyman-intro h1{font-size:clamp(2.4rem,4vw,3.8rem);max-width:19ch}
+.handyman-intro .lede{font-size:1.05rem;max-width:58ch}
+.handyman-intro-image{margin:0;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden}
+.handyman-intro-image img{width:100%;height:100%;object-fit:cover}
+.handyman-task-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+.handyman-task-grid article{display:flex;flex-direction:column;padding:22px;background:var(--white);border:1px solid var(--mist);border-top:3px solid var(--eucalypt);border-radius:12px;scroll-margin-top:110px}
+.handyman-task-grid h3{font-size:1.15rem;line-height:1.25;margin-bottom:12px}
+.handyman-task-grid p{font-size:.94rem;margin-bottom:16px;color:var(--slate)}
+.handyman-task-grid .text-link{margin-top:auto;font-size:.88rem}
+.handyman-related{font-size:.94rem;margin:24px 0 0}
+.handyman-scenes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.handyman-scenes h3{font-size:1.15rem;margin-bottom:10px}
+.handyman-scenes p{margin-bottom:0;color:var(--slate)}
+.handyman-compact .price-guide{margin-top:28px}
+.handyman-compact .price-guide h2{font-size:1.6rem}
+.handyman-compact .price-guide-value{font-size:1.5rem}
+.handyman-contact-grid{display:grid;grid-template-columns:1.7fr 1fr;gap:40px;align-items:start}
+.handyman-contact-grid aside{padding-left:26px;border-left:2px solid var(--mist)}
+.handyman-contact-grid aside h3{font-size:1.2rem}
+.handyman-contact-grid aside ul{padding-left:20px}
+.handyman-contact-grid aside li{margin-bottom:10px}
+@media(max-width:950px){.handyman-task-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.handyman-intro{gap:24px}}
+@media(max-width:700px){.handyman-compact .section{padding-block:30px}.handyman-intro,.handyman-scenes,.handyman-contact-grid{grid-template-columns:1fr;gap:24px}.handyman-intro-image{aspect-ratio:16/9;max-height:220px}.handyman-task-grid{grid-template-columns:1fr}.handyman-task-grid article{padding:18px}.handyman-contact-grid aside{padding-left:0;padding-top:24px;border-left:0;border-top:2px solid var(--mist)}}

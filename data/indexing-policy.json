@@ -29,7 +29,14 @@
     "areas/fremantle-coastal-south/",
     "areas/eastern-suburbs-midland-swan/",
     "areas/cockburn-rockingham-southern-corridor/",
-    "privacy/"
+    "privacy/",
+    "guides/cupboard-hinges-drawer-runners-repair-guide/",
+    "guides/sticking-doors-windows-repair-guide/",
+    "guides/wall-patching-paint-touch-ups-guide/",
+    "guides/shower-silicone-grout-waterproofing-guide/",
+    "guides/photos-and-clear-scope-for-home-repairs/",
+    "guides/seasonal-home-maintenance-australia/",
+    "guides/understanding-service-areas-and-postcode-checks/"
   ],
   "indexableServiceRoutes": [
     "services/electrical-plumbing-gas-air-conditioning/air-conditioning/",

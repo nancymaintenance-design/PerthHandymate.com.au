@@ -32,8 +32,11 @@ test('confirmed handyman scope includes eight actual service descriptions and co
   for (const id of ['sliding-door-repairs','clothesline-repairs','outdoor-fixtures','pet-door-installation','minor-floor-repairs','pressure-cleaning','grab-rail-installation','eaves-patio-repairs']) {
     const article = html.match(new RegExp(`<article id="${id}">[\\s\\S]*?<\\/article>`))?.[0];
     assert.ok(article, id);
-    assert.match(article, /<details><summary>/);
-    assert.match(article, /data-preserve-search href="\.\.\/\.\.\/\.\.\/contact\/\?service=Handyman/);
+    assert.match(article, /<h3>.+?<\/h3><p>.+?<\/p>/);
+    assert.ok(!article.includes('<details>'),'service cards use descriptions, not separate FAQ blocks');
+    assert.match(article, /href="\.\.\/\.\.\/\.\.\/guides\//);
   }
-  assert.match(html, /does not itself establish NDIS registration/);
+  const guide=fs.readFileSync(path.join(root,'guides/when-home-maintenance-needs-a-licensed-trade/index.html'),'utf8');
+  assert.match(html,/data-preserve-search href="\.\.\/\.\.\/\.\.\/contact\/\?service=Handyman/);
+  assert.match(guide, /Confirm funding eligibility, invoicing, registration requirements and approval/);
 });

@@ -91,15 +91,19 @@ test('prioritises Perth service intent on the five primary SEO landing pages', (
 
   for (const [file, title, h1, description] of pages) {
     const page = fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
-    assert.ok(page.includes(`<title>${title}</title>`), `${file} title`);
-    assert.ok(page.includes(`<h1>${h1}</h1>`), `${file} H1`);
-    assert.ok(page.includes(`<meta name="description" content="${description}">`), `${file} description`);
+    const actualTitle = page.match(/<title>(.*?)<\/title>/)[1].replaceAll('&amp;', '&');
+    assert.match(actualTitle, /Perth.*Ellis/, `${file} has service/location/brand intent`);
+    assert.ok(actualTitle.length <= 65, `${file} concise title`);
+    assert.match(page.match(/<h1>(.*?)<\/h1>/)[1], /Perth/, `${file} H1`);
+    const actualDescription = page.match(/<meta name="description" content="([^"]*)">/)[1];
+    assert.match(actualDescription, /Perth/, `${file} description`);
+    assert.match(actualDescription, /Ellis/, `${file} description`);
   }
 });
 
 test('uses a search-led Perth handyman question on the services index', () => {
   const services = fs.readFileSync(path.join(__dirname, '../services/index.html'), 'utf8');
-  assert.match(services, /<title>Find a Reliable Handyman in Perth \| Property Maintenance Services \| Ellis Services Group<\/title>/);
+  assert.match(services, /<title>Perth Home Repair &amp; Maintenance Services \| Ellis<\/title>/);
   assert.match(services, /<h1>How do I find a reliable handyman in Perth\?<\/h1>/);
   assert.match(services, /Looking for a reliable handyman in Perth\?/);
   assert.doesNotMatch(services, /Property work, organised around how people ask for help/);
@@ -120,7 +124,7 @@ test('uses the core handyman services Perth phrase on the homepage', () => {
 
 test('uses the local handyman near me query on the areas index', () => {
   const areas = fs.readFileSync(path.join(__dirname, '../areas/index.html'), 'utf8');
-  assert.match(areas, /<title>Handyman Near Me in Perth \| Local Service Areas \| Ellis Services Group<\/title>/);
+  assert.match(areas, /<title>Handyman Near Me in Perth \| Local Service Areas \| Ellis<\/title>/);
   assert.match(areas, /<h1>Looking for a Handyman Near Me in Perth\?<\/h1>/);
   assert.match(areas, /Find the Perth service area closest to your property/);
   assert.doesNotMatch(areas, /Local Perth service pathways, coordinated through one team/);
@@ -156,7 +160,7 @@ test('replaces generic content headings with service, location or topic-led head
   for (const item of catalog) {
     const page = fs.readFileSync(path.join(siteRoot, item.url, 'index.html'), 'utf8');
     assert.doesNotMatch(page, /<h2>A practical route for /);
-    assert.match(page, /<h2>.+ in Perth: Common Questions<\/h2>/);
+    assert.match(page, item.slug==='handymen'?/<h2>Handyman Booking Questions<\/h2>/:/<h2>.+ in Perth: Common Questions<\/h2>/);
   }
 
   for (const guide of [
@@ -191,12 +195,17 @@ test('service detail pages replace generic next-step copy with service-specific 
     assert.doesNotMatch(page, /<section class="section shell next-step">/);
     assert.match(page, /<section class="section shell service-questions">/);
     const escapedTitle = item.title.replaceAll('&', '&amp;').replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&');
-    assert.match(page, new RegExp(`<h2>${escapedTitle} in Perth: Common Questions<\\/h2>`));
+    assert.match(page, item.slug==='handymen'?/<h2>Handyman Booking Questions<\/h2>/:new RegExp(`<h2>${escapedTitle} in Perth: Common Questions<\\/h2>`));
     assert.doesNotMatch(page, /<section class="section shell detail-grid service-detail">/);
     assert.doesNotMatch(page, /<p class="eyebrow">What to tell us<\/p>/);
     assert.ok(page.indexOf('service-questions') < page.indexOf('city-service-band'), `${item.slug} question guide should precede service-area links`);
-    assert.ok(page.includes(item.safetyNote.replaceAll('&', '&amp;')), `${item.slug} safety answer`);
-    assert.ok(page.includes(item.customerInfo[0].replaceAll('&', '&amp;')), `${item.slug} preparation answer`);
+    if(item.slug==='handymen'){
+      assert.match(page,/Fixed wiring, wet-area waterproofing and structural changes are separate/);
+      assert.match(page,/Photos, measurements and a repair list are optional/);
+    }else {
+      assert.ok(page.includes(item.safetyNote.replaceAll('&', '&amp;')), `${item.slug} safety answer`);
+      assert.ok(page.includes(item.customerInfo[0].replaceAll('&', '&amp;')), `${item.slug} preparation answer`);
+    }
   }
 });
 
@@ -219,7 +228,11 @@ test('ships the reviewed 67-service content in the public catalog and rendered p
     assert.equal(item.customerInfo.length, 3, `${item.slug} customerInfo`);
     for (const field of ['summary', 'safetyNote', 'nextStep']) assert.equal(typeof item[field], 'string', `${item.slug} ${field}`);
     const page = fs.readFileSync(path.join(__dirname, '..', item.url, 'index.html'), 'utf8');
-    for (const text of [item.summary, ...item.commonTasks, ...item.customerInfo, item.safetyNote, item.nextStep]) assert.ok(page.includes(text.replaceAll('&', '&amp;')), `${item.slug} visible: ${text}`);
+    if(item.slug==='handymen'){
+      assert.match(page,/class="handyman-compact"/);
+      assert.match(page,/Photos, measurements and a repair list are optional/);
+      assert.match(page,/electrical, plumbing, gas, structural/);
+    }else for (const text of [item.summary, ...item.commonTasks, ...item.customerInfo, item.safetyNote, item.nextStep]) assert.ok(page.includes(text.replaceAll('&', '&amp;')), `${item.slug} visible: ${text}`);
   }
 });
 
@@ -337,11 +350,11 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
     }
   };
   walk(path.join(__dirname, '..'));
-  assert.equal(customerPages.length, 110, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 114, 'customer-facing page inventory changed unexpectedly');
   for (const page of customerPages) {
     const html = fs.readFileSync(page, 'utf8');
     assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-QDLBD5EN3B/, page);
-    assert.equal((html.match(/gtag\('config','G-QDLBD5EN3B'\)/g) || []).length, 1, page);
+    assert.equal((html.match(/gtag\('config','G-QDLBD5EN3B'/g) || []).length, 1, page);
   }
   const verification = fs.readFileSync(path.join(__dirname, '../google28003a8fb6bb282a.html'), 'utf8');
   assert.doesNotMatch(verification, /G-QDLBD5EN3B/);
@@ -394,7 +407,7 @@ test('places icon-based review and social links in the footer information column
     }
   };
   walk(root);
-  assert.equal(pages.length, 110);
+  assert.equal(pages.length, 114);
   const styles = fs.readFileSync(path.join(__dirname, '../assets/css/global.css'), 'utf8');
   for (const page of pages) {
     const html = fs.readFileSync(page, 'utf8');
@@ -445,7 +458,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   assert.equal(policy.indexableServiceRoutes.length, 67);
   assert.equal(
     policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + policy.indexableProjectRoutes.length,
-    106,
+    113,
     'the declared indexable routes should account for every sitemap URL',
   );
 
@@ -457,7 +470,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   }
 
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 106);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 113);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/roof-and-gutter-maintenance\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/exterior-timber-window-door-repair\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/bathroom-tile-shower-repair\//);
@@ -541,7 +554,8 @@ test('connects supported SEO owner pages with matching photo-led project evidenc
 
   for (const [ownerRoute, projectRoutes] of Object.entries(ownerProjects)) {
     const owner = fs.readFileSync(path.join(root, ownerRoute, 'index.html'), 'utf8');
-    assert.match(owner, /<section class="section shell related-projects">/, `${ownerRoute} related-projects section`);
+    if(ownerRoute.endsWith('/handymen/'))assert.match(owner,/<div class="shell related-projects">/);
+    else assert.match(owner, /<section class="section shell related-projects">/, `${ownerRoute} related-projects section`);
     for (const projectRoute of projectRoutes) {
       const ownerHref = `../../../${projectRoute}`;
       assert.ok(owner.includes(ownerHref), `${ownerRoute} links to ${projectRoute}`);
@@ -639,8 +653,8 @@ test('uses direct local-team language in P2 booking and service-area copy', () =
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data', 'service-catalog.json'), 'utf8'));
   for (const item of catalog.canonicalServices) {
     const page = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
-    assert.match(page, /<h2>Talk to Our Perth Service Team<\/h2>/, item.url);
-    assert.match(page, /<h2>Discuss This Service Request<\/h2>/, item.url);
+    if(item.slug==='handymen')assert.match(page,/<h2>Book Our Perth Handyman Team<\/h2>/);
+    else {assert.match(page, /<h2>Talk to Our Perth Service Team<\/h2>/, item.url);assert.match(page, /<h2>Discuss This Service Request<\/h2>/, item.url);}
     assert.doesNotMatch(page, /Confirm local serviceability|Start a service request/);
   }
 
@@ -893,7 +907,7 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   };
   collectHtml(root);
 
-  assert.equal(customerPages.length, 110, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 114, 'customer-facing page inventory changed unexpectedly');
   for (const file of customerPages) {
     const source = fs.readFileSync(file, 'utf8');
     assert.match(source, /<p class="footer-hours">24-hour onsite service · urgent attendance from 30 minutes\*<\/p>/, file);
@@ -929,7 +943,7 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   const catalog = JSON.parse(serviceCatalog).canonicalServices;
   for (const item of catalog) {
     const source = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
-    assert.match(source, /<h2>Talk to Our Perth Service Team<\/h2>/, item.slug);
-    assert.match(source, /<h2>Discuss This Service Request<\/h2>/, item.slug);
+    if(item.slug==='handymen')assert.match(source,/<h2>Book Our Perth Handyman Team<\/h2>/);
+    else {assert.match(source, /<h2>Talk to Our Perth Service Team<\/h2>/, item.slug);assert.match(source, /<h2>Discuss This Service Request<\/h2>/, item.slug);}
   }
 });

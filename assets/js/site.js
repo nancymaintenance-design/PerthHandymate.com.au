@@ -156,6 +156,7 @@
         return;
       }
       const submit = form.querySelector('[type="submit"]');
+      if (submit.disabled) return;
       const previousLabel = submit.textContent;
       submit.disabled = true;
       submit.textContent = 'Sending…';
@@ -168,9 +169,11 @@
         });
         const body = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(body.error || 'We could not send your enquiry just now. Please call 0403 069 685.');
+        if (window.EllisAnalytics) window.EllisAnalytics.contactResult(true);
         status.textContent = body.message || 'Thanks. Our customer service team will call you about your request.';
         form.reset();
       } catch (error) {
+        if (window.EllisAnalytics) window.EllisAnalytics.contactResult(false);
         status.textContent = error.message || 'We could not send your enquiry just now. Please call 0403 069 685.';
       } finally {
         submit.disabled = false;
