@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "mkdir -p dist && cp -R 404.html about areas assets contact data faq favicon.ico favicon-192.png favicon-32.png apple-touch-icon.png google28003a8fb6bb282a.html guides index.html privacy projects robots.txt services site.webmanifest sitemap.xml dist/ && node scripts/normalize-index-links.js dist",
+  "buildCommand": "mkdir -p dist && cp -R *.html *.ico *.png about areas assets contact data faq guides privacy projects robots.txt services site.webmanifest sitemap.xml dist/ && node scripts/normalize-index-links.js dist",
   "outputDirectory": "dist",
   "headers": [
     {
