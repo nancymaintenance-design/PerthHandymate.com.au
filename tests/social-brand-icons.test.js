@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { createBuildFixture, buildLocal } = require('./helpers/local-build');
 const root = path.resolve(__dirname, '..');
 
 test('Important social icons retain Facebook circle and LinkedIn square brand colours', () => {
@@ -12,8 +13,11 @@ test('Important social icons retain Facebook circle and LinkedIn square brand co
   assert.match(css, /\.footer-instagram img\{width:18px;height:18px;flex:0 0 18px/);
 });
 
-test('all 114 built pages expose the four social destinations inside Important', () => {
-  const output = path.join(root, 'dist');
+test('all 114 built pages expose the four social destinations inside Important', t => {
+  const fixture = createBuildFixture(t);
+  const result = buildLocal(fixture);
+  assert.equal(result.status, 0, result.stderr || result.stdout);
+  const output = path.join(fixture, 'dist');
   const walk = directory => fs.readdirSync(directory, {withFileTypes:true}).flatMap(entry => entry.isDirectory() ? walk(path.join(directory, entry.name)) : /^(?:index|404)\.html$/.test(entry.name) ? [path.join(directory,entry.name)] : []);
   const pages = walk(output);
   assert.equal(pages.length, 114);

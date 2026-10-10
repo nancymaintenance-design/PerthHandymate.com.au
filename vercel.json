@@ -2,52 +2,72 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "mkdir -p dist && cp -R *.html *.ico *.png about areas assets contact data faq guides privacy projects robots.txt services site.webmanifest sitemap.xml dist/ && node scripts/normalize-index-links.js dist",
   "outputDirectory": "dist",
-  "headers": [
+  "routes": [
     {
-      "source": "/(.*)\\.(png|jpg|jpeg|webp|gif|svg|ico|woff|woff2)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=604800, stale-while-revalidate=86400"
-        }
-      ]
+      "src": "^/.*$",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Frame-Options": "DENY"
+      },
+      "continue": true
     },
     {
-      "source": "/(.*)\\.(css|js)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, stale-while-revalidate=86400"
-        }
-      ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
+      "src": "^/(.*)\\.(png|jpg|jpeg|webp|gif|svg|ico|woff|woff2)$",
+      "headers": {
+        "Cache-Control": "public, max-age=604800, stale-while-revalidate=86400"
+      },
+      "continue": true
     },
     {
-      "source": "/:path*/index.html",
-      "destination": "/:path*/",
-      "permanent": true
+      "src": "^/(.*)\\.(css|js)$",
+      "headers": {
+        "Cache-Control": "public, max-age=3600, stale-while-revalidate=86400"
+      },
+      "continue": true
     },
     {
-      "source": "/areas/north-perth-stirling/index.html",
-      "destination": "https://www.perthhandymate.com.au/areas/north-perth-stirling/",
-      "permanent": true
+      "src": "^/index\\.html$",
+      "headers": {
+        "Location": "https://www.perthhandymate.com.au/"
+      },
+      "status": 308
     },
     {
-      "source": "/(.*)",
+      "src": "^/(.*)/index\\.html$",
+      "headers": {
+        "Location": "https://www.perthhandymate.com.au/$1/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/((?!api(?:/|$))[^.]*[^./])$",
+      "headers": {
+        "Location": "https://www.perthhandymate.com.au/$1/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/(.*)$",
       "has": [
         {
           "type": "host",
-          "value": "perthhandymate.com.au"
+          "value": "perthhandymate\\.com\\.au"
         }
       ],
-      "destination": "https://www.perthhandymate.com.au/$1",
-      "permanent": true
+      "headers": {
+        "Location": "https://www.perthhandymate.com.au/$1"
+      },
+      "status": 308
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/.*$",
+      "dest": "/404.html",
+      "status": 404
     }
   ]
 }

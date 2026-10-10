@@ -3,6 +3,7 @@
 node_modules/
 .vercel/
 coverage/
+dist/
 *.log
 npm-debug.log*
 yarn-debug.log*

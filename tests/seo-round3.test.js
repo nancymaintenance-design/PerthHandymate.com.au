@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { createBuildFixture, buildLocal } = require('./helpers/local-build');
 const root = path.resolve(__dirname, '..');
 const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data/service-catalog.json'), 'utf8'));
 test('all 67 detail pages have Perth titles and unique task-specific questions', () => {
@@ -18,14 +19,24 @@ test('all 67 detail pages have Perth titles and unique task-specific questions',
     assert.doesNotMatch(faq, /What information helps confirm the scope\?|What work is typically included|covered by this service\?|What can change the recommended approach\?/);
   }
 });
-test('local distribution and source service pages are identical', () => {
+test('local distribution and source service pages are identical', t => {
+  const fixture = createBuildFixture(t);
+  const result = buildLocal(fixture);
+  assert.equal(result.status, 0, result.stderr || result.stdout);
   const pages = new Set(['services/index.html', ...catalog.canonicalServices.map(x => x.url+'index.html'), ...catalog.canonicalServices.map(x => `services/${x.category}/index.html`)]);
-  for (const file of pages) assert.equal(fs.readFileSync(path.join(root, 'dist', file), 'utf8'), fs.readFileSync(path.join(root,file),'utf8'), file);
+  for (const file of pages) assert.equal(fs.readFileSync(path.join(fixture, 'dist', file), 'utf8'), fs.readFileSync(path.join(root,file),'utf8'), file);
 });
-test('all 527 supplied research terms remain represented in the audit inventory', () => {
-  const csv = fs.readFileSync(path.join(root,'docs/keyword-map-round3/527词条逐项核查.csv'),'utf8');
-  assert.equal((csv.match(/"HM\d+"/g)||[]).length, 527);
-  assert.equal(new Set(csv.match(/"O\d+"/g)).size, 31);
+test('all 31 committed research owners retain source content and rendered guide coverage', () => {
+  const data = JSON.parse(fs.readFileSync(path.join(root, 'data/keyword-content-round.json'), 'utf8'));
+  const guidePages = fs.readdirSync(path.join(root, 'guides')).filter(slug => fs.existsSync(path.join(root, 'guides', slug, 'index.html')))
+    .map(slug => fs.readFileSync(path.join(root, 'guides', slug, 'index.html'), 'utf8'));
+  assert.equal(data.clusters.length, 31);
+  assert.deepEqual(data.clusters.map(cluster => cluster.owner).sort(), Array.from({ length: 31 }, (_, i) => `O${String(i + 1).padStart(2, '0')}`));
+  for (const cluster of data.clusters) {
+    assert.ok(cluster.heading && cluster.answer && cluster.scenario.length === 2, cluster.owner);
+    const question = cluster.scenario[0].replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+    assert.equal(guidePages.filter(html => html.includes(`<summary>${question}</summary>`)).length, 1, `${cluster.owner} scenario has one guide owner`);
+  }
 });
 test('confirmed handyman scope includes eight actual service descriptions and contact routes', () => {
   const html = fs.readFileSync(path.join(root,'services/handyman-interiors-appliance-repairs/handymen/index.html'),'utf8');

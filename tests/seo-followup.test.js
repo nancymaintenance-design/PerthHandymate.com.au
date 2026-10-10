@@ -26,5 +26,5 @@ test('service breadcrumbs resolve to production URLs and reference the same busi
  const html=fs.readFileSync(path.join(root,'services/handyman-interiors-appliance-repairs/handymen/index.html'),'utf8');
  const blocks=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
  const crumbs=blocks.find(x=>x['@type']==='BreadcrumbList');assert.ok(crumbs);assert.equal(crumbs.itemListElement[0].item,'https://www.perthhandymate.com.au/');assert.equal(crumbs.itemListElement.at(-1).item,'https://www.perthhandymate.com.au/services/handyman-interiors-appliance-repairs/handymen/');
- const org=blocks.find(x=>x['@type']==='Organization');assert.equal(org['@id'],'https://www.perthhandymate.com.au/#business');
+ const org=blocks.flatMap(x=>x['@graph']||[x]).find(x=>x['@type']==='Organization');assert.equal(org['@id'],'https://www.perthhandymate.com.au/#organization');
 });

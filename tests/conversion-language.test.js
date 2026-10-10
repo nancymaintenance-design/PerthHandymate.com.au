@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { createBuildFixture, buildLocal } = require('./helpers/local-build');
 const root = path.resolve(__dirname, '..');
 const authoredDirs = ["about","areas","contact","faq","guides","privacy","projects","services"];
 const authoredFiles = ["index.html","404.html","data/content.js"];
@@ -20,8 +21,11 @@ function check(files) {
 test('customer copy replaces audited deflection and production commentary with service actions', () => {
   check([...authoredFiles.map(file => path.join(root, file)), ...authoredDirs.flatMap(dir => walk(path.join(root, dir)))]);
 });
-test('generated customer pages contain no audited deflection or production commentary', () => {
-  const output = path.join(root, 'dist');
+test('generated customer pages contain no audited deflection or production commentary', t => {
+  const fixture = createBuildFixture(t);
+  const result = buildLocal(fixture);
+  assert.equal(result.status, 0, result.stderr || result.stdout);
+  const output = path.join(fixture, 'dist');
   assert.ok(fs.existsSync(path.join(output, 'index.html')), 'build output exists');
   check(walk(output));
   const text = customerText(path.join(output, 'index.html'));

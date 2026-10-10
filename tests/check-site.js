@@ -40,7 +40,7 @@ for (const file of htmlFiles) {
   if (!source.includes(`rel="canonical" href="${productionOrigin}`)) fail(`${rel(file)} lacks production-domain canonical`);
   const route = rel(file).replace(/index\.html$/, '');
   const isServiceLeaf = route.startsWith('services/') && route.split('/').filter(Boolean).length === 3;
-  const expectedRobots = isServiceLeaf && !indexableServiceRoutes.has(route) ? 'noindex,follow' : 'index,follow';
+  const expectedRobots = route === '404.html' || (isServiceLeaf && !indexableServiceRoutes.has(route)) ? 'noindex,follow' : 'index,follow';
   if (!source.includes(`<meta name="robots" content="${expectedRobots}">`)) fail(`${rel(file)} lacks expected ${expectedRobots} directive`);
   if (source.includes('https://www.ellisservices.example/')) fail(`${rel(file)} retains the test domain`);
   const logoPattern = /<header class="site-header">[\s\S]*?<img class="brand-logo" src="[^"]*assets\/images\/ellis-services-group-logo\.png" alt="Ellis Services Group logo" width="1237" height="1272">[\s\S]*?<\/header>/;
@@ -60,9 +60,12 @@ for (const file of htmlFiles) {
     const value = match[1];
     if (/^(?:https?:|data:|#|mailto:|tel:)/.test(value)) continue;
     const clean = value.split(/[?#]/)[0];
-    let target = path.resolve(path.dirname(file), clean || '.');
+    let target = clean.startsWith('/') ? path.resolve(root, `.${clean}`) : path.resolve(path.dirname(file), clean || '.');
     if (clean.endsWith('/')) target = path.join(target, 'index.html');
-    if (!fs.existsSync(target)) fail(`${rel(file)} has broken local reference: ${value}`);
+    const relativeTarget = path.relative(root, target);
+    if (relativeTarget === '..' || relativeTarget.startsWith(`..${path.sep}`) || path.isAbsolute(relativeTarget)) {
+      fail(`${rel(file)} has local reference outside public root: ${value}`);
+    } else if (!fs.existsSync(target)) fail(`${rel(file)} has broken local reference: ${value}`);
     checkedLinks += 1;
   }
 

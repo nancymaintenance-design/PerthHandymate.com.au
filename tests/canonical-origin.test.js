@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { redirectFor } = require('./helpers/vercel-routing');
 
 const root = path.join(__dirname, '..');
 const canonicalOrigin = 'https://www.perthhandymate.com.au';
@@ -33,19 +34,21 @@ test('publishes www as the only absolute Handymate origin', () => {
 });
 
 test('redirects the legacy North Perth index.html URL to its canonical directory URL', () => {
-  const config = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
-  const redirect = config.redirects.find((rule) => rule.source === '/areas/north-perth-stirling/index.html');
-  assert.ok(redirect, 'legacy index.html redirect exists');
-  assert.equal(redirect.destination, 'https://www.perthhandymate.com.au/areas/north-perth-stirling/');
-  assert.equal(redirect.permanent, true);
+  assert.deepEqual(redirectFor('/areas/north-perth-stirling/index.html'), {
+    status: 308,
+    location: 'https://www.perthhandymate.com.au/areas/north-perth-stirling/',
+  });
 });
 
 test('redirects every legacy index.html URL to its canonical directory URL', () => {
-  const config = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
-  const rootRedirect = config.redirects.find((rule) => rule.source === '/index.html');
-  const nestedRedirect = config.redirects.find((rule) => rule.source === '/:path*/index.html');
-  assert.deepEqual(rootRedirect, { source: '/index.html', destination: '/', permanent: true });
-  assert.deepEqual(nestedRedirect, { source: '/:path*/index.html', destination: '/:path*/', permanent: true });
+  for (const file of htmlFiles(root)) {
+    if (path.basename(file) !== 'index.html') continue;
+    const pathname = `/${path.relative(root, file).replaceAll('\\', '/')}`;
+    assert.deepEqual(redirectFor(pathname), {
+      status: 308,
+      location: `${canonicalOrigin}${pathname.replace(/index\.html$/, '')}`,
+    }, pathname);
+  }
 });
 
 test('public pages link to canonical directory URLs instead of index.html', () => {

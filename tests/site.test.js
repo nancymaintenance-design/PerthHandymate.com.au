@@ -375,8 +375,11 @@ test('uses the company favicon on every customer-facing HTML page', () => {
   assert.ok(customerPages.length > 0);
   for (const page of customerPages) {
     const html = fs.readFileSync(page, 'utf8');
-    const faviconPath = path.relative(path.dirname(page), path.join(root, 'assets/images/favicon-32.png')).replace(/\\/g, '/');
-    assert.ok(html.includes(`<link rel="icon" href="${faviconPath}">`), path.relative(root, page));
+    const faviconHref = html.match(/<link rel="icon" href="([^"]+)">/)?.[1];
+    assert.ok(faviconHref, path.relative(root, page));
+    const faviconPath = faviconHref.startsWith('/')
+      ? path.resolve(root, `.${faviconHref}`) : path.resolve(path.dirname(page), faviconHref);
+    assert.equal(faviconPath, path.join(root, 'assets/images/favicon-32.png'), path.relative(root, page));
     assert.doesNotMatch(html, /<link rel="icon" href="data:,">/, path.relative(root, page));
   }
 });
@@ -915,7 +918,8 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
     assert.match(source, /https:\/\/www\.instagram\.com\/elliservices_group\//, file);
     assert.match(source, /<a href="[^\"]*privacy\/">Privacy<\/a>/, file);
     assert.doesNotMatch(source, /\broute(?:s|d|ing)?\b/i, file);
-    assert.doesNotMatch(source, /\bprovider\b/i, file);
+    const visibleSource = source.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
+    assert.doesNotMatch(visibleSource, /\bprovider\b/i, file);
   }
 
   const content = fs.readFileSync(path.join(root, 'data', 'content.js'), 'utf8');
