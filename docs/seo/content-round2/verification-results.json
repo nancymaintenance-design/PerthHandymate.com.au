@@ -1,0 +1,927 @@
+{
+  "analyzedAt": "2026-10-10T08:24:39.826Z",
+  "contentBase": "0b5184947d8e4e51b83ebddfc87861a9b0a60856",
+  "realGithubBaseline": "8383118",
+  "finalFixVerification": {
+    "analyzedAt": "2026-10-10T08:44:29Z",
+    "base": "e5d4ab8",
+    "status": "pass",
+    "resolvedMinors": ["service CTA container uniqueness", "nonservice mixed replacement states", "coverage introduction summary totals"],
+    "focusedTests": {
+      "command": "node --test tests/service-content-round2.test.js tests/nonservice-content-round2.test.js tests/content-round2-acceptance.test.js",
+      "behavioralRed": { "pass": 16, "fail": 4 },
+      "green": { "pass": 20, "fail": 0 }
+    },
+    "fullTests": { "command": "node --test tests/*.test.js", "pass": 198, "fail": 0, "cancelled": 0, "skipped": 0, "todo": 0 },
+    "checker": { "command": "node tests/check-site.js", "htmlPages": 114, "uniqueTitles": 114, "uniqueDescriptions": 114, "localReferences": 4454, "jsonLdBlocks": 326, "guideDetails": 12, "faqEntries": 36, "status": "pass" },
+    "sourceAcceptance": { "command": "node tools/content-round2-acceptance.js", "analyzedAt": "2026-10-10T08:43:43.784Z", "pagesReviewed": 114, "pagesChanged": 99, "pagesKept": 15, "termRoutes": 527, "localLinks": 3394, "fragments": 128, "structuredFaqPages": 13, "structuredFaqAnswers": 140, "issues": [] },
+    "readOnlyReplay": { "currentServicePages": 77, "currentNonservicePlans": 22, "serviceBaseline": "88b2ae6", "serviceExpected": "6474bdf", "nonserviceBaseline": "6474bdf", "baselineLineEndingsNormalized": true, "currentBytesUnchanged": true, "savedCoverageUnchanged": true, "filesWritten": 0 },
+    "publicAndProtectedDiffFromBase": [],
+    "preview": { "port": 4181, "pid": 33156, "httpStatus": 200, "preservedListeners": [{ "port": 4173, "pid": 11472 }, { "port": 4180, "pid": 35208 }] },
+    "buildRepeated": false,
+    "browserRepeated": false,
+    "note": "Original 194-test/build/browser evidence and timestamps retained below; no public HTML changes, push, merge or deployment."
+  },
+  "sourceAcceptance": {
+    "pagesReviewed": 114,
+    "pagesChanged": 99,
+    "pagesKept": 15,
+    "termRoutes": 527,
+    "localLinks": 3394,
+    "fragments": 128,
+    "structuredFaqPages": 13,
+    "structuredFaqAnswers": 140,
+    "issues": []
+  },
+  "fullTests": {
+    "command": "node --test tests/*.test.js",
+    "pass": 194,
+    "fail": 0,
+    "log": ".seo-cache/round2-full-tests.log"
+  },
+  "checker": {
+    "command": "node tests/check-site.js",
+    "htmlPages": 114,
+    "uniqueTitles": 114,
+    "uniqueDescriptions": 114,
+    "localReferences": 4454,
+    "jsonLdBlocks": 326,
+    "status": "pass"
+  },
+  "build": {
+    "command": "node scripts/build-local.js",
+    "output": "E:/Ellis-Services-Group-Knowledge-Base/execution/phm-seo-round1-worktree/dist",
+    "ordinaryDirectoryVerified": true,
+    "symlinkOrJunction": false,
+    "status": "pass"
+  },
+  "preview": {
+    "url": "http://127.0.0.1:4181",
+    "pid": 33156,
+    "host": "127.0.0.1",
+    "builtDistOnly": true,
+    "stdout": ".seo-cache/preview-4181.stdout.log",
+    "stderr": ".seo-cache/preview-4181.stderr.log",
+    "preservedListeners": [
+      {
+        "port": 4173,
+        "pid": 11472
+      },
+      {
+        "port": 4180,
+        "pid": 35208
+      }
+    ],
+    "note": "4180 also references the rebuilt checkout dist, not a frozen baseline."
+  },
+  "browser": {
+    "analyzedAt": "2026-10-10T08:24:39.826Z",
+    "origin": "http://127.0.0.1:4181",
+    "statuses": [
+      {
+        "path": "/",
+        "status": 200
+      },
+      {
+        "path": "/services/",
+        "status": 200
+      },
+      {
+        "path": "/areas/",
+        "status": 200
+      },
+      {
+        "path": "/about/",
+        "status": 200
+      },
+      {
+        "path": "/contact/",
+        "status": 200
+      },
+      {
+        "path": "/faq/",
+        "status": 200
+      },
+      {
+        "path": "/guides/",
+        "status": 200
+      },
+      {
+        "path": "/guides/how-to-find-the-right-home-repairer/",
+        "status": 200
+      },
+      {
+        "path": "/guides/when-home-maintenance-needs-a-licensed-trade/",
+        "status": 200
+      },
+      {
+        "path": "/guides/prepare-before-home-repair-quote/",
+        "status": 200
+      },
+      {
+        "path": "/guides/property-manager-maintenance-coordination/",
+        "status": 200
+      },
+      {
+        "path": "/guides/home-repair-priorities/",
+        "status": 200
+      },
+      {
+        "path": "/services/electrical-plumbing-gas-air-conditioning/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/",
+        "status": 200
+      },
+      {
+        "path": "/services/doors-windows-glass-screens/",
+        "status": 200
+      },
+      {
+        "path": "/services/roofing-gutters-exterior/",
+        "status": 200
+      },
+      {
+        "path": "/services/gardens-landscaping/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/",
+        "status": 200
+      },
+      {
+        "path": "/services/building-renovation-structural/",
+        "status": 200
+      },
+      {
+        "path": "/services/planning-inspection-compliance/",
+        "status": 200
+      },
+      {
+        "path": "/services/cleaning-removals-pest-hazard/",
+        "status": 200
+      },
+      {
+        "path": "/areas/perth-central/",
+        "status": 200
+      },
+      {
+        "path": "/areas/north-perth-stirling/",
+        "status": 200
+      },
+      {
+        "path": "/areas/joondalup-northern-suburbs/",
+        "status": 200
+      },
+      {
+        "path": "/areas/south-perth-canning/",
+        "status": 200
+      },
+      {
+        "path": "/areas/fremantle-coastal-south/",
+        "status": 200
+      },
+      {
+        "path": "/areas/eastern-suburbs-midland-swan/",
+        "status": 200
+      },
+      {
+        "path": "/areas/cockburn-rockingham-southern-corridor/",
+        "status": 200
+      },
+      {
+        "path": "/privacy/",
+        "status": 200
+      },
+      {
+        "path": "/services/electrical-plumbing-gas-air-conditioning/air-conditioning/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/blinds-and-curtains/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/carpenters/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/carpet-repair/",
+        "status": 200
+      },
+      {
+        "path": "/services/roofing-gutters-exterior/cladding/",
+        "status": 200
+      },
+      {
+        "path": "/services/electrical-plumbing-gas-air-conditioning/electricians/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/floor-sanding/",
+        "status": 200
+      },
+      {
+        "path": "/services/doors-windows-glass-screens/fly-screens/",
+        "status": 200
+      },
+      {
+        "path": "/services/electrical-plumbing-gas-air-conditioning/insulation/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/new-carpet/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/plasterers/",
+        "status": 200
+      },
+      {
+        "path": "/services/electrical-plumbing-gas-air-conditioning/plumbers/",
+        "status": 200
+      },
+      {
+        "path": "/services/doors-windows-glass-screens/shower-screens/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/tiling/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/waterproofing/",
+        "status": 200
+      },
+      {
+        "path": "/services/cleaning-removals-pest-hazard/asbestos-removal/",
+        "status": 200
+      },
+      {
+        "path": "/services/building-renovation-structural/concrete-resurfacing/",
+        "status": 200
+      },
+      {
+        "path": "/services/roofing-gutters-exterior/gutter-services/",
+        "status": 200
+      },
+      {
+        "path": "/services/roofing-gutters-exterior/house-painters/",
+        "status": 200
+      },
+      {
+        "path": "/services/doors-windows-glass-screens/door-installation/",
+        "status": 200
+      },
+      {
+        "path": "/services/roofing-gutters-exterior/pavers/",
+        "status": 200
+      },
+      {
+        "path": "/services/roofing-gutters-exterior/roofing/",
+        "status": 200
+      },
+      {
+        "path": "/services/doors-windows-glass-screens/skylights/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/verandah-builders/",
+        "status": 200
+      },
+      {
+        "path": "/services/doors-windows-glass-screens/window-installation/",
+        "status": 200
+      },
+      {
+        "path": "/services/doors-windows-glass-screens/window-repairs/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/deck-builders/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/fence-builders/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/fencing-contractors/",
+        "status": 200
+      },
+      {
+        "path": "/services/gardens-landscaping/garden-clean-up/",
+        "status": 200
+      },
+      {
+        "path": "/services/gardens-landscaping/garden-landscapers/",
+        "status": 200
+      },
+      {
+        "path": "/services/gardens-landscaping/gardeners/",
+        "status": 200
+      },
+      {
+        "path": "/services/gardens-landscaping/lawn-mowing/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/patio-builders/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/pergola-builders/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/pool-fence-installers/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/pool-resurfacing/",
+        "status": 200
+      },
+      {
+        "path": "/services/planning-inspection-compliance/surveyors/",
+        "status": 200
+      },
+      {
+        "path": "/services/gardens-landscaping/synthetic-grass/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/timber-fencing/",
+        "status": 200
+      },
+      {
+        "path": "/services/gardens-landscaping/tree-arborists/",
+        "status": 200
+      },
+      {
+        "path": "/services/building-renovation-structural/bathroom/",
+        "status": 200
+      },
+      {
+        "path": "/services/building-renovation-structural/bricklayers/",
+        "status": 200
+      },
+      {
+        "path": "/services/building-renovation-structural/builders/",
+        "status": 200
+      },
+      {
+        "path": "/services/planning-inspection-compliance/building-certifiers/",
+        "status": 200
+      },
+      {
+        "path": "/services/planning-inspection-compliance/building-inspectors/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/carports-and-garages/",
+        "status": 200
+      },
+      {
+        "path": "/services/building-renovation-structural/concreters/",
+        "status": 200
+      },
+      {
+        "path": "/services/building-renovation-structural/demolition/",
+        "status": 200
+      },
+      {
+        "path": "/services/planning-inspection-compliance/draftsmen/",
+        "status": 200
+      },
+      {
+        "path": "/services/building-renovation-structural/home-renovators/",
+        "status": 200
+      },
+      {
+        "path": "/services/roofing-gutters-exterior/renderers/",
+        "status": 200
+      },
+      {
+        "path": "/services/building-renovation-structural/restumping/",
+        "status": 200
+      },
+      {
+        "path": "/services/outdoor-structures-fencing-pools/retaining-walls/",
+        "status": 200
+      },
+      {
+        "path": "/services/planning-inspection-compliance/structural-engineers/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/cabinet-makers/",
+        "status": 200
+      },
+      {
+        "path": "/services/cleaning-removals-pest-hazard/cleaners/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/dishwasher-repair/",
+        "status": 200
+      },
+      {
+        "path": "/services/cleaning-removals-pest-hazard/removalists/",
+        "status": 200
+      },
+      {
+        "path": "/services/electrical-plumbing-gas-air-conditioning/gas-fitters/",
+        "status": 200
+      },
+      {
+        "path": "/services/doors-windows-glass-screens/glass-glaziers/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/ikea-kitchens/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/oven-repair/",
+        "status": 200
+      },
+      {
+        "path": "/services/cleaning-removals-pest-hazard/pest-control/",
+        "status": 200
+      },
+      {
+        "path": "/services/cleaning-removals-pest-hazard/rubbish-removal/",
+        "status": 200
+      },
+      {
+        "path": "/services/handyman-interiors-appliance-repairs/upholstery-repair/",
+        "status": 200
+      },
+      {
+        "path": "/projects/roof-and-gutter-maintenance/",
+        "status": 200
+      },
+      {
+        "path": "/projects/exterior-timber-window-door-repair/",
+        "status": 200
+      },
+      {
+        "path": "/projects/bathroom-tile-shower-repair/",
+        "status": 200
+      },
+      {
+        "path": "/projects/garden-clean-up/",
+        "status": 200
+      },
+      {
+        "path": "/projects/interior-wall-repair-painting/",
+        "status": 200
+      },
+      {
+        "path": "/projects/sliding-door-flyscreen-repair/",
+        "status": 200
+      },
+      {
+        "path": "/projects/timber-fence-repair/",
+        "status": 200
+      },
+      {
+        "path": "/projects/decking-refinishing-maintenance/",
+        "status": 200
+      },
+      {
+        "path": "/projects/door-lock-replacement-installation/",
+        "status": 200
+      },
+      {
+        "path": "/projects/kitchen-cabinet-hinge-repair/",
+        "status": 200
+      },
+      {
+        "path": "/guides/cupboard-hinges-drawer-runners-repair-guide/",
+        "status": 200
+      },
+      {
+        "path": "/guides/sticking-doors-windows-repair-guide/",
+        "status": 200
+      },
+      {
+        "path": "/guides/wall-patching-paint-touch-ups-guide/",
+        "status": 200
+      },
+      {
+        "path": "/guides/shower-silicone-grout-waterproofing-guide/",
+        "status": 200
+      },
+      {
+        "path": "/guides/photos-and-clear-scope-for-home-repairs/",
+        "status": 200
+      },
+      {
+        "path": "/guides/seasonal-home-maintenance-australia/",
+        "status": 200
+      },
+      {
+        "path": "/guides/understanding-service-areas-and-postcode-checks/",
+        "status": 200
+      },
+      {
+        "path": "/404.html",
+        "status": 200
+      }
+    ],
+    "localLinksChecked": 3394,
+    "missingRouteStatus": 404,
+    "rendering": [
+      {
+        "width": 1440,
+        "path": "/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "./assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Handyman Services Perth for Home Repairs & Maintenance"
+      },
+      {
+        "width": 1440,
+        "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../../../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Odd Jobs & Handyman Repairs in Perth"
+      },
+      {
+        "width": 1440,
+        "path": "/guides/prepare-before-home-repair-quote/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "What to Prepare Before Asking for a Home Repair Quote"
+      },
+      {
+        "width": 1440,
+        "path": "/about/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "About Ellis Services Group"
+      },
+      {
+        "width": 1440,
+        "path": "/contact/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Request Handyman Services in Perth"
+      },
+      {
+        "width": 1440,
+        "path": "/areas/north-perth-stirling/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Handyman Services in North Perth & Stirling"
+      },
+      {
+        "width": 1440,
+        "path": "/services/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Perth Home Repair & Maintenance Services"
+      },
+      {
+        "width": 1440,
+        "path": "/services/handyman-interiors-appliance-repairs/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Handyman, Interior & Appliance Repairs in Perth"
+      },
+      {
+        "width": 1440,
+        "path": "/guides/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Perth Home Maintenance Guides & Checklists"
+      },
+      {
+        "width": 1440,
+        "path": "/projects/bathroom-tile-shower-repair/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Shower resealing & tile grout repair"
+      },
+      {
+        "width": 1440,
+        "path": "/faq/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Perth Handyman FAQs"
+      },
+      {
+        "width": 1440,
+        "path": "/areas/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Looking for a Handyman Near Me in Perth?"
+      },
+      {
+        "width": 1440,
+        "path": "/privacy/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Privacy Notice"
+      },
+      {
+        "width": 1440,
+        "path": "/404.html",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "/assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "This address does not lead to a service page"
+      },
+      {
+        "width": 390,
+        "path": "/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "./assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Handyman Services Perth for Home Repairs & Maintenance"
+      },
+      {
+        "width": 390,
+        "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../../../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Odd Jobs & Handyman Repairs in Perth"
+      },
+      {
+        "width": 390,
+        "path": "/guides/prepare-before-home-repair-quote/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "What to Prepare Before Asking for a Home Repair Quote"
+      },
+      {
+        "width": 390,
+        "path": "/about/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "About Ellis Services Group"
+      },
+      {
+        "width": 390,
+        "path": "/contact/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Request Handyman Services in Perth"
+      },
+      {
+        "width": 390,
+        "path": "/areas/north-perth-stirling/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Handyman Services in North Perth & Stirling"
+      },
+      {
+        "width": 390,
+        "path": "/services/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Perth Home Repair & Maintenance Services"
+      },
+      {
+        "width": 390,
+        "path": "/services/handyman-interiors-appliance-repairs/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Handyman, Interior & Appliance Repairs in Perth"
+      },
+      {
+        "width": 390,
+        "path": "/guides/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Perth Home Maintenance Guides & Checklists"
+      },
+      {
+        "width": 390,
+        "path": "/projects/bathroom-tile-shower-repair/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Shower resealing & tile grout repair"
+      },
+      {
+        "width": 390,
+        "path": "/faq/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Perth Handyman FAQs"
+      },
+      {
+        "width": 390,
+        "path": "/areas/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Looking for a Handyman Near Me in Perth?"
+      },
+      {
+        "width": 390,
+        "path": "/privacy/",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "../assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "Privacy Notice"
+      },
+      {
+        "width": 390,
+        "path": "/404.html",
+        "overflow": false,
+        "brokenImages": [],
+        "logo": "/assets/images/ellis-services-group-logo.png",
+        "brand": "Ellis Services Group",
+        "background": "rgba(247, 248, 246, 0.94)",
+        "h1": "This address does not lead to a service page"
+      }
+    ],
+    "interactions": [
+      "1440: FAQ open/close",
+      "1440: search suggestions/clear/search route/contact CTA/service+postcode+message prefill; enquiry form never submitted",
+      "1440: guide plain contact CTA opens contact with unchanged unprefilled behavior",
+      "1440: /projects/bathroom-tile-shower-repair/ contact CTA preserves query and postcode",
+      "1440: /areas/north-perth-stirling/ contact CTA preserves query and postcode",
+      "1440: 404 search recovery and mobile navigation across 14 page types/samples",
+      "390: FAQ open/close",
+      "390: search suggestions/clear/search route/contact CTA/service+postcode+message prefill; enquiry form never submitted",
+      "390: guide plain contact CTA opens contact with unchanged unprefilled behavior",
+      "390: /projects/bathroom-tile-shower-repair/ contact CTA preserves query and postcode",
+      "390: /areas/north-perth-stirling/ contact CTA preserves query and postcode",
+      "390: 404 search recovery and mobile navigation across 14 page types/samples"
+    ],
+    "screenshots": [
+      {
+        "width": 1440,
+        "route": "/",
+        "after": ".seo-cache/after-visual/1440-0.png",
+        "before": ".seo-cache/baseline-visual/1440-0.png"
+      },
+      {
+        "width": 1440,
+        "route": "/services/handyman-interiors-appliance-repairs/handymen/",
+        "after": ".seo-cache/after-visual/1440-1.png",
+        "before": ".seo-cache/baseline-visual/1440-1.png"
+      },
+      {
+        "width": 1440,
+        "route": "/guides/prepare-before-home-repair-quote/",
+        "after": ".seo-cache/after-visual/1440-2.png",
+        "before": ".seo-cache/baseline-visual/1440-2.png"
+      },
+      {
+        "width": 1440,
+        "route": "/about/",
+        "after": ".seo-cache/after-visual/1440-3.png",
+        "before": ".seo-cache/baseline-visual/1440-3.png"
+      },
+      {
+        "width": 1440,
+        "route": "/contact/",
+        "after": ".seo-cache/after-visual/1440-4.png",
+        "before": ".seo-cache/baseline-visual/1440-4.png"
+      },
+      {
+        "width": 1440,
+        "route": "/areas/north-perth-stirling/",
+        "after": ".seo-cache/after-visual/1440-5.png",
+        "before": ".seo-cache/baseline-visual/1440-5.png"
+      },
+      {
+        "width": 390,
+        "route": "/",
+        "after": ".seo-cache/after-visual/390-0.png",
+        "before": ".seo-cache/baseline-visual/390-0.png"
+      },
+      {
+        "width": 390,
+        "route": "/services/handyman-interiors-appliance-repairs/handymen/",
+        "after": ".seo-cache/after-visual/390-1.png",
+        "before": ".seo-cache/baseline-visual/390-1.png"
+      },
+      {
+        "width": 390,
+        "route": "/guides/prepare-before-home-repair-quote/",
+        "after": ".seo-cache/after-visual/390-2.png",
+        "before": ".seo-cache/baseline-visual/390-2.png"
+      },
+      {
+        "width": 390,
+        "route": "/about/",
+        "after": ".seo-cache/after-visual/390-3.png",
+        "before": ".seo-cache/baseline-visual/390-3.png"
+      },
+      {
+        "width": 390,
+        "route": "/contact/",
+        "after": ".seo-cache/after-visual/390-4.png",
+        "before": ".seo-cache/baseline-visual/390-4.png"
+      },
+      {
+        "width": 390,
+        "route": "/areas/north-perth-stirling/",
+        "after": ".seo-cache/after-visual/390-5.png",
+        "before": ".seo-cache/baseline-visual/390-5.png"
+      }
+    ],
+    "blockedExternalRequests": 50,
+    "blockedExternalHosts": [
+      "www.googletagmanager.com"
+    ],
+    "unexpectedRequests": [],
+    "errors": [],
+    "limitations": [
+      "Built static preview has no serverless contact API; no real enquiry was submitted and email delivery is untested.",
+      "Aborted analytics script requests may create expected ERR_BLOCKED_BY_CLIENT console events, excluded from app errors."
+    ]
+  },
+  "limitations": [
+    "Local editorial and functional verification only; no ranking/traffic/AI-citation metrics or independent credentials/reputation check.",
+    "User confirmed own appropriately licensed personnel; WA lookup resource verified by controller, not individual personnel registrations.",
+    "No enquiry form submission; static preview cannot validate serverless API or real email delivery.",
+    "Baseline screenshot visual comparison allows intended text-height changes; no pixel equality claim."
+  ]
+}

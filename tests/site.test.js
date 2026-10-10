@@ -101,11 +101,14 @@ test('prioritises Perth service intent on the five primary SEO landing pages', (
   }
 });
 
-test('uses a search-led Perth handyman question on the services index', () => {
+test('services index names Perth repair intent and explains how assessment defines the scope', () => {
   const services = fs.readFileSync(path.join(__dirname, '../services/index.html'), 'utf8');
   assert.match(services, /<title>Perth Home Repair &amp; Maintenance Services \| Ellis<\/title>/);
-  assert.match(services, /<h1>How do I find a reliable handyman in Perth\?<\/h1>/);
-  assert.match(services, /Looking for a reliable handyman in Perth\?/);
+  assert.match(services, /<h1>Perth[^<]*(?:Repair|Maintenance)[^<]*Services<\/h1>/);
+  const opening = services.match(/<p class="lede">([\s\S]*?)<\/p>/)[1];
+  assert.match(opening, /handyman repairs/i);
+  assert.match(opening, /on-site assessment/i);
+  assert.match(opening, /written[^<]*quote/i);
   assert.doesNotMatch(services, /Property work, organised around how people ask for help/);
 });
 
