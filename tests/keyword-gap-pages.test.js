@@ -14,6 +14,17 @@ const routes = [
   ['/services/handyman-interiors-appliance-repairs/tv-wall-mounting/', 'tv wall mounting', 'Handyman, interiors & appliance repairs'],
 ];
 const read = route => { const file = path.join(root, route === '/' ? 'index.html' : route.slice(1) + (route.endsWith('/') ? 'index.html' : '')); return fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : null; };
+const reportsParent = path.resolve(root, '../reports/content-gap-local-2026-10-12');
+
+function createIndexPolicyFixture(t, parent) {
+  fs.mkdirSync(parent, { recursive: true });
+  const temporary = fs.mkdtempSync(path.join(parent, 'task-1-index-policy-'));
+  t.after(() => {
+    assert.equal(path.dirname(temporary), path.resolve(parent), 'cleanup stays inside the fixture reports parent');
+    fs.rmSync(temporary, { recursive: true, force: true });
+  });
+  return temporary;
+}
 
 test('four focused service destinations have contextual discovery, useful FAQs and scoped contact prefill', () => {
   const pages = inventorySite(root);
@@ -71,8 +82,28 @@ test('current acceptance covers all 118 pages and preserves every original term 
   assert.deepEqual(issues, []);
 });
 
-test('indexing rebuild preserves the four supplemental routes in sitemap and search without changing priced services', () => {
-  const temporary = fs.mkdtempSync(path.join(root, '../reports/content-gap-local-2026-10-12/task-1-index-policy-'));
+test('indexing fixture creates a missing reports parent and cleans only its own directory', async t => {
+  fs.mkdirSync(reportsParent, { recursive: true });
+  const ownedRoot = fs.mkdtempSync(path.join(reportsParent, 'task-1-reports-fixture-regression-'));
+  t.after(() => {
+    assert.equal(path.dirname(ownedRoot), reportsParent);
+    fs.rmSync(ownedRoot, { recursive: true, force: true });
+  });
+  const missingParent = path.join(ownedRoot, 'fresh-clone', 'reports');
+  assert.equal(fs.existsSync(missingParent), false);
+  let temporary;
+  await t.test('use the reports fixture', child => {
+    temporary = createIndexPolicyFixture(child, missingParent);
+    assert.equal(fs.existsSync(temporary), true);
+    fs.writeFileSync(path.join(missingParent, 'keep.txt'), 'unrelated sibling');
+  });
+  assert.equal(typeof temporary, 'string', 'fixture creation succeeds for a missing parent');
+  assert.equal(fs.existsSync(temporary), false, 'test completion removes its fixture');
+  assert.equal(fs.readFileSync(path.join(missingParent, 'keep.txt'), 'utf8'), 'unrelated sibling');
+});
+
+test('indexing rebuild preserves the four supplemental routes in sitemap and search without changing priced services', t => {
+  const temporary = createIndexPolicyFixture(t, reportsParent);
   fs.mkdirSync(path.join(temporary, 'scripts'));
   fs.copyFileSync(path.join(root, 'scripts/apply-indexing-policy.js'), path.join(temporary, 'scripts/apply-indexing-policy.js'));
   for (const directory of ['services', 'data']) fs.cpSync(path.join(root, directory), path.join(temporary, directory), { recursive: true });
