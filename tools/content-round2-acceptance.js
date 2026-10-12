@@ -1,7 +1,6 @@
 // Bounded final acceptance of existing public HTML; no content generators or network writes.
 const fs = require('node:fs');
 const path = require('node:path');
-const { execFileSync } = require('node:child_process');
 const { inventorySite, extractPage } = require('./content-seo-inventory');
 const ORIGIN = 'https://www.perthhandymate.com.au';
 function decode(s) {
@@ -71,7 +70,19 @@ function coverageRows(pages, markdown, changed, keepEvidence = new Map()) {
 }
 function fileFor(root, route) { return path.join(root, route === '/' ? 'index.html' : route.slice(1) + (route.endsWith('/') ? 'index.html' : '')); }
 function run(root) {
-  const pages = inventorySite(root);
+  // Historical acceptance is bounded by the committed 2026-10-10 evidence, not today's sitemap.
+  // This checkout intentionally has no pre-migration 88b2ae6 object. The committed page
+  // coverage records the original decisions reproducibly without needing that old history.
+  const historicalDocs = path.join(root, 'docs/seo/content-round2');
+  const historical = JSON.parse(fs.readFileSync(path.join(historicalDocs, 'inventory-after.json'), 'utf8'));
+  const evidence = fs.readFileSync(path.join(historicalDocs, 'page-coverage.md'), 'utf8');
+  const decisionRows = evidence.split(/\r?\n/).filter(line => line.startsWith('| /')).map(line => line.split('|').slice(1).map(cell => cell.trim()));
+  const historicalPaths = new Set(historical.pages.map(page => page.path));
+  if (historicalPaths.size !== 114 || decisionRows.length !== 114 || new Set(decisionRows.map(row => row[0])).size !== 114 || decisionRows.some(row => !historicalPaths.has(row[0]) || !['Change', 'Keep'].includes(row[2]))) throw new Error('Invalid historical 114-page coverage evidence');
+  const changed = new Set(decisionRows.filter(row => row[2] === 'Change').map(row => row[0]));
+  if (changed.size !== 99 || decisionRows.filter(row => row[2] === 'Keep').length !== 15 || historical.pagesReviewed !== 114 || historical.pagesChanged !== 99 || historical.pagesKept !== 15) throw new Error('Invalid historical 99-change/15-keep evidence');
+  const pages = inventorySite(root).filter(page => historicalPaths.has(page.path));
+  if (pages.length !== 114) throw new Error('Missing historical accepted page');
   const read = route => { const file = fileFor(root, route); return fs.existsSync(file) && fs.statSync(file).isFile() ? fs.readFileSync(file, 'utf8') : null; };
   const checks = pages.map(p => auditPage(read(p.path), p.path));
   let links = 0, fragments = 0;
@@ -89,8 +100,6 @@ function run(root) {
   for (const term of routes) { const issue = resolveLocalLink(term.primaryPath, '/', read); if (issue) throw new Error(`${term.id}: ${issue}`); }
   const docs = path.join(root, 'docs/seo/content-round2');
   const decisions = ['service-editorial-decisions.md', 'nonservice-editorial-decisions.md'].map(f => fs.readFileSync(path.join(docs, f), 'utf8')).join('\n');
-  const changedFiles = execFileSync('git', ['diff', '--name-only', '88b2ae6', 'HEAD', '--', '*.html'], { cwd: root, encoding: 'utf8' }).trim().split(/\r?\n/);
-  const changed = new Set(pages.filter(p => changedFiles.includes(p.file)).map(p => p.path));
   const keepEvidence = new Map(Object.entries(JSON.parse(fs.readFileSync(path.join(docs, 'keep-acceptance-evidence.json'), 'utf8'))));
   const coverage = coverageRows(pages, decisions, changed, keepEvidence);
   const summary = { analyzedAt: new Date().toISOString(), pagesReviewed: pages.length, pagesChanged: changed.size, pagesKept: pages.length - changed.size, termRoutes: routes.length, localLinks: links, fragments, structuredFaqPages: checks.filter(x => x.structuredFaqs).length, structuredFaqAnswers: checks.reduce((a, x) => a + x.structuredFaqs, 0), issues: checks.flatMap(x => x.issues.map(issue => ({ path: x.path, issue }))) };

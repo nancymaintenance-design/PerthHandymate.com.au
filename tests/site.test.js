@@ -67,10 +67,10 @@ test('generated service catalog covers all 75 source labels through 67 canonical
 
 test('search catalog covers every approved indexable service page', () => {
   const policy = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/indexing-policy.json'), 'utf8'));
-  assert.equal(window.ELLIS_SEARCH_CATALOG.length, 67);
+  assert.equal(window.ELLIS_SEARCH_CATALOG.length, 71);
   assert.deepEqual(
     new Set(window.ELLIS_SEARCH_CATALOG.map((item) => item.route)),
-    new Set(policy.indexableServiceRoutes),
+    new Set([...policy.indexableServiceRoutes, ...policy.supplementalServiceRoutes]),
   );
   for (const item of window.ELLIS_SEARCH_CATALOG) {
     const actual = resolveServiceSearch(item.terms[0], '6000');
@@ -353,7 +353,7 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
     }
   };
   walk(path.join(__dirname, '..'));
-  assert.equal(customerPages.length, 114, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 118, 'customer-facing page inventory changed unexpectedly');
   for (const page of customerPages) {
     const html = fs.readFileSync(page, 'utf8');
     assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-QDLBD5EN3B/, page);
@@ -413,7 +413,7 @@ test('places icon-based review and social links in the footer information column
     }
   };
   walk(root);
-  assert.equal(pages.length, 114);
+  assert.equal(pages.length, 118);
   const styles = fs.readFileSync(path.join(__dirname, '../assets/css/global.css'), 'utf8');
   for (const page of pages) {
     const html = fs.readFileSync(page, 'utf8');
@@ -460,15 +460,15 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
     }
   };
   walk(path.join(root, 'services'));
-  assert.equal(leafRoutes.length, 67, 'existing service URLs must remain live');
+  assert.equal(leafRoutes.length, 70, '67 original details and three nested supplemental details remain live');
   assert.equal(policy.indexableServiceRoutes.length, 67);
   assert.equal(
-    policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + policy.indexableProjectRoutes.length,
-    113,
+    policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + policy.indexableProjectRoutes.length + policy.supplementalServiceRoutes.length,
+    117,
     'the declared indexable routes should account for every sitemap URL',
   );
 
-  const indexable = new Set(policy.indexableServiceRoutes);
+  const indexable = new Set([...policy.indexableServiceRoutes, ...policy.supplementalServiceRoutes]);
   for (const route of leafRoutes) {
     const html = fs.readFileSync(path.join(root, route, 'index.html'), 'utf8');
     assert.ok(indexable.has(route), `${route} should be an approved indexable service URL`);
@@ -476,7 +476,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   }
 
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 113);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 117);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/roof-and-gutter-maintenance\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/exterior-timber-window-door-repair\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/bathroom-tile-shower-repair\//);
@@ -913,7 +913,7 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   };
   collectHtml(root);
 
-  assert.equal(customerPages.length, 114, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 118, 'customer-facing page inventory changed unexpectedly');
   for (const file of customerPages) {
     const source = fs.readFileSync(file, 'utf8');
     assert.match(source, /<p class="footer-hours">24-hour onsite service · urgent attendance from 30 minutes\*<\/p>/, file);

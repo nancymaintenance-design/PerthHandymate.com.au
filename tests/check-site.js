@@ -7,7 +7,7 @@ const notes = [];
 const htmlFiles = [];
 const productionOrigin = 'https://www.perthhandymate.com.au/';
 const indexingPolicy = JSON.parse(fs.readFileSync(path.join(root, 'data/indexing-policy.json'), 'utf8'));
-const indexableServiceRoutes = new Set(indexingPolicy.indexableServiceRoutes);
+const indexableServiceRoutes = new Set([...indexingPolicy.indexableServiceRoutes, ...indexingPolicy.supplementalServiceRoutes]);
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -21,7 +21,7 @@ function fail(message) { failures.push(message); }
 function rel(file) { return path.relative(root, file).replace(/\\/g, '/'); }
 
 walk(root);
-if (htmlFiles.length !== 114) fail(`Expected 114 HTML pages, found ${htmlFiles.length}`);
+if (htmlFiles.length !== 118) fail(`Expected 118 HTML pages, found ${htmlFiles.length}`);
 
 const titles = new Map();
 const descriptions = new Map();
@@ -126,7 +126,8 @@ for (const [index, slug] of perthAreaSlugs.entries()) {
   if (!source.includes(visibleName)) fail(`Perth area name is not visible on ${slug}`);
   if (!/local areas include/i.test(source) || !/postcode/i.test(source) || !/choose a service/i.test(source)) fail(`${slug} lacks clear local-service start content`);
 }
-const categoryPages = htmlFiles.filter((file) => /^services\/[^/]+\/index\.html$/.test(rel(file)));
+const supplementalRoutes = new Set(indexingPolicy.supplementalServiceRoutes);
+const categoryPages = htmlFiles.filter((file) => /^services\/[^/]+\/index\.html$/.test(rel(file)) && !supplementalRoutes.has(rel(file).replace(/index\.html$/, '')));
 const serviceDetailPages = htmlFiles.filter((file) => /^services\/[^/]+\/[^/]+\/index\.html$/.test(rel(file)));
 if (categoryPages.length !== 9) fail(`Expected 9 service category pages, found ${categoryPages.length}`);
 if (serviceDetailPages.length < 67) fail(`Expected at least 67 canonical service detail pages, found ${serviceDetailPages.length}`);

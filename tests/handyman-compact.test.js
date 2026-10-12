@@ -15,7 +15,7 @@ test('handyman landing offers six coherent sections instead of stacked repair de
 test('every compact service topic has a working advice destination and booking retains location',()=>{
  const h=fs.readFileSync(path.join(root,'services/handyman-interiors-appliance-repairs/handymen/index.html'),'utf8');
  const cards=h.match(/<div class="handyman-task-grid">[\s\S]*?<\/div>/)?.[0];assert.ok(cards);
- const links=[...cards.matchAll(/href="([^"]+)"/g)];assert.equal(links.length,9);
+ const links=[...cards.matchAll(/href="([^"]+)"/g)];assert.equal(links.length,12);
  for(const [,href] of links){const target=new URL(href,'https://www.perthhandymate.com.au/services/handyman-interiors-appliance-repairs/handymen/');assert.ok(fs.existsSync(path.join(root,target.pathname,'index.html')),target.pathname);}
  const band=h.match(/<section class="section shell city-service-band">[\s\S]*?<\/section>/)[0];
  const regions=[...band.matchAll(/href="([^"]*suburb[^"]*)"/g)];assert.equal(regions.length,7);

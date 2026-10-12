@@ -3,7 +3,7 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 const policy = JSON.parse(fs.readFileSync(path.join(root, 'data/indexing-policy.json'), 'utf8'));
-const indexableServices = new Set(policy.indexableServiceRoutes);
+const indexableServices = new Set([...policy.indexableServiceRoutes, ...(policy.supplementalServiceRoutes || [])]);
 
 function walk(directory, visitor) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
@@ -35,6 +35,7 @@ walk(path.join(root, 'services'), (file) => {
 const sitemapRoutes = [
   ...policy.indexableSitemapRoutes,
   ...policy.indexableServiceRoutes,
+  ...(policy.supplementalServiceRoutes || []),
   ...(policy.indexableProjectRoutes || []),
 ];
 const sitemap = [
@@ -49,13 +50,14 @@ fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap);
 const catalogFile = path.join(root, 'data/search-catalog.js');
 const catalogPrefix = 'window.ELLIS_SEARCH_CATALOG=';
 const serviceCatalog = JSON.parse(fs.readFileSync(path.join(root, 'data/service-catalog.json'), 'utf8'));
-const searchCatalog = serviceCatalog.canonicalServices.map((item) => ({
+const supplemental = JSON.parse(fs.readFileSync(path.join(root, 'data/supplemental-services.json'), 'utf8'));
+const searchCatalog = [...supplemental.services, ...serviceCatalog.canonicalServices].map((item) => ({
   service: item.title,
   canonical: item.categoryTitle,
   route: item.url,
   terms: [...new Set([item.title, ...item.searchTerms].map((term) => term.toLowerCase()))],
 }));
-if (searchCatalog.length !== policy.indexableServiceRoutes.length) throw new Error('Search catalog coverage is incomplete');
+if (searchCatalog.length !== policy.indexableServiceRoutes.length + (policy.supplementalServiceRoutes || []).length) throw new Error('Search catalog coverage is incomplete');
 fs.writeFileSync(catalogFile, `${catalogPrefix}${JSON.stringify(searchCatalog, null, 2)};\n`);
 
 const cards = [

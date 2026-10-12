@@ -1,0 +1,55 @@
+{
+  "classification": "supplemental-service-landings",
+  "note": "Focused owners of existing handyman tasks; separate from the original 67 priced canonical services. Quotes follow assessment; no new price guide.",
+  "services": [
+    {
+      "slug": "sliding-door-repairs",
+      "url": "services/doors-windows-glass-screens/sliding-door-repairs/",
+      "title": "Sliding Door Repairs",
+      "categoryTitle": "Doors, windows, glass & screens",
+      "searchTerms": [
+        "sliding door repairs",
+        "sliding door repair",
+        "sliding door roller replacement",
+        "patio sliding door repairs"
+      ]
+    },
+    {
+      "slug": "property-maintenance",
+      "url": "services/property-maintenance/",
+      "title": "Property Maintenance",
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "searchTerms": [
+        "property maintenance",
+        "rental property maintenance",
+        "home maintenance",
+        "rental maintenance"
+      ]
+    },
+    {
+      "slug": "furniture-assembly",
+      "url": "services/handyman-interiors-appliance-repairs/furniture-assembly/",
+      "title": "Furniture Assembly",
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "searchTerms": [
+        "furniture assembly",
+        "flat pack assembly",
+        "flatpack assembly",
+        "flat pack furniture",
+        "ikea furniture assembly"
+      ]
+    },
+    {
+      "slug": "tv-wall-mounting",
+      "url": "services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
+      "title": "TV Wall Mounting",
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "searchTerms": [
+        "tv wall mounting",
+        "tv mounting",
+        "television wall mounting",
+        "tv bracket installation"
+      ]
+    }
+  ]
+}

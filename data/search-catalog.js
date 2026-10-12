@@ -1,5 +1,50 @@
 window.ELLIS_SEARCH_CATALOG=[
   {
+    "service": "Sliding Door Repairs",
+    "canonical": "Doors, windows, glass & screens",
+    "route": "services/doors-windows-glass-screens/sliding-door-repairs/",
+    "terms": [
+      "sliding door repairs",
+      "sliding door repair",
+      "sliding door roller replacement",
+      "patio sliding door repairs"
+    ]
+  },
+  {
+    "service": "Property Maintenance",
+    "canonical": "Handyman, interiors & appliance repairs",
+    "route": "services/property-maintenance/",
+    "terms": [
+      "property maintenance",
+      "rental property maintenance",
+      "home maintenance",
+      "rental maintenance"
+    ]
+  },
+  {
+    "service": "Furniture Assembly",
+    "canonical": "Handyman, interiors & appliance repairs",
+    "route": "services/handyman-interiors-appliance-repairs/furniture-assembly/",
+    "terms": [
+      "furniture assembly",
+      "flat pack assembly",
+      "flatpack assembly",
+      "flat pack furniture",
+      "ikea furniture assembly"
+    ]
+  },
+  {
+    "service": "TV Wall Mounting",
+    "canonical": "Handyman, interiors & appliance repairs",
+    "route": "services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
+    "terms": [
+      "tv wall mounting",
+      "tv mounting",
+      "television wall mounting",
+      "tv bracket installation"
+    ]
+  },
+  {
     "service": "Air Conditioning",
     "canonical": "Electrical, plumbing, gas & air conditioning",
     "route": "services/electrical-plumbing-gas-air-conditioning/air-conditioning/",

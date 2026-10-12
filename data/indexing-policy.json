@@ -128,5 +128,11 @@
     "services/handyman-interiors-appliance-repairs/tiling/",
     "services/roofing-gutters-exterior/house-painters/",
     "services/gardens-landscaping/garden-clean-up/"
+  ],
+  "supplementalServiceRoutes": [
+    "services/doors-windows-glass-screens/sliding-door-repairs/",
+    "services/property-maintenance/",
+    "services/handyman-interiors-appliance-repairs/furniture-assembly/",
+    "services/handyman-interiors-appliance-repairs/tv-wall-mounting/"
   ]
 }

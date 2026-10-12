@@ -44,7 +44,7 @@ function nodes(html) {
 test('all public pages resolve the same organization and Perth operating entity', () => {
   const pages = ['index.html', '404.html'].map(file => path.join(root, file));
   for (const directory of publicDirectories) pages.push(...htmlFiles(path.join(root, directory)));
-  assert.ok(pages.length >= 114);
+  assert.ok(pages.length >= 118);
   for (const file of pages) {
     const html = fs.readFileSync(file, 'utf8');
     const graph = nodes(html);
@@ -70,7 +70,7 @@ test('every service names the Perth office as provider', () => {
       assert.deepEqual(service.areaServed.map(area => area.name), ['Perth metropolitan area'], file);
     }
   }
-  assert.equal(serviceCount, 76);
+  assert.equal(serviceCount, 80);
 });
 
 test('shared entity retains verified NAP, hours, logo and Perth service area', () => {

@@ -97,11 +97,11 @@ test('new service links resolve to existing pages and anchors, with unique categ
   assert.equal(new Set(questions).size,27,'category answers address distinct decisions');
 });
 
-test('compact handyman page keeps six sections, nine advice links and explicit own licensed personnel', () => {
+test('compact handyman page keeps six sections, advice and focused-service links and explicit own licensed personnel', () => {
   const main=page(read('handymen'));
   assert.equal([...main.matchAll(/<section\b/g)].length,6);
   assert.equal([...main.matchAll(/<details>/g)].length,6);
-  assert.equal([...main.match(/<div class="handyman-task-grid">[\s\S]*?<\/div>/)[0].matchAll(/href=/g)].length,9);
+  assert.equal([...main.match(/<div class="handyman-task-grid">[\s\S]*?<\/div>/)[0].matchAll(/href=/g)].length,12);
   assert.match(main,/own appropriately licensed personnel/);
   assert.match(main,/Photos, measurements and a repair list are optional/);
 });
