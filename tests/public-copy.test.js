@@ -19,9 +19,9 @@ test('public text and image descriptions use concrete wording instead of retired
   }
   assert.deepEqual(failures,[]);
 });
-test('all ten case pages invite direct assessment and make photos optional', () => {
+test('all thirteen case pages invite direct assessment and make photos optional', () => {
   const cases = fs.readdirSync(path.join(root,'projects'),{withFileTypes:true}).filter(e=>e.isDirectory());
-  assert.equal(cases.length,10);
+  assert.equal(cases.length,13);
   for (const entry of cases) {
     const s = fs.readFileSync(path.join(root,'projects',entry.name,'index.html'),'utf8');
     const band = s.match(/<section class="cta-band">[\s\S]*?<\/section>/)?.[0] || '';

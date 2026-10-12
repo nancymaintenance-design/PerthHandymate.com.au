@@ -4,7 +4,7 @@ Static website candidate for Ellis Services Group. The stated service market is 
 
 ## Package contents
 
-- 118 static HTML pages, including the branded `404.html`; 117 URLs in the sitemap
+- 125 static HTML pages, including the branded `404.html`; 124 URLs in the sitemap
 - Shared CSS, JavaScript, images and public data files
 - `robots.txt`, `sitemap.xml` and `vercel.json`
 - Portable reproducible build, local preview server and verification scripts
@@ -48,7 +48,7 @@ Canonical URLs, structured data, the sitemap and robots policy use the primary o
 
 Local slash/index redirects preserve the query string and stay on localhost. Explicit `/404.html` returns 200 with `noindex,follow`; unknown paths end with status 404 and the same recovery page. This preview does not validate Vercel host redirects, edge routing, response security/cache headers, production mail delivery or DNS.
 
-The current source checkout uses the real Git history of `nancymaintenance-design/PerthHandymate.com.au`, with latest verified remote main `cdd814d7f93bf224142276076a5d03a803ce9c53` (12 October 2026). Local work is on `codex/phm-keyword-gap-local-2026-10-12`; the 118-page candidate includes four supplementary task pages beyond the unchanged 67-service priced catalogue. This is local work only and does not authorise a push or release.
+The current source checkout uses the real Git history of `nancymaintenance-design/PerthHandymate.com.au`, with latest verified remote main `cdd814d7f93bf224142276076a5d03a803ce9c53` (12 October 2026). Local work is on `codex/phm-keyword-gap-local-2026-10-12`; the 125-page candidate includes eight supplementary task pages and three additional photographed examples beyond the unchanged 67-service priced catalogue. This is local work only and does not authorise a push or release.
 
 The committed historical inventory contains 527 term IDs and routes in `docs/seo/content-round2/term-routing.json`; they remain intact. Current editorial intent ownership for all 67 catalogue pages and four supplements, the 49 accepted gap actions and supplemental current-term mapping are in `docs/seo/keyword-gap-round-2026-10-12/`. The older 31 owner clusters and four guide records describe the previous content round, not the current full service ownership.
 

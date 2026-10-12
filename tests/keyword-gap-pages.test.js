@@ -59,13 +59,13 @@ test('search resolves focused tasks to supplements while retaining the original 
   }
 });
 
-test('current acceptance covers all 118 pages and preserves every original term destination and fragment', () => {
+test('current acceptance covers all 125 pages and preserves every original term destination and fragment', () => {
   const pages = inventorySite(root);
-  assert.equal(pages.length, 118);
-  assert.equal(new Set(pages.map(p => p.title)).size, 118, 'unique page titles');
+  assert.equal(pages.length, 125);
+  assert.equal(new Set(pages.map(p => p.title)).size, 125, 'unique page titles');
   const descriptions = pages.map(p => read(p.path).match(/<meta name="description" content="([^"]+)"/)?.[1]);
   assert.ok(descriptions.every(Boolean));
-  assert.equal(new Set(descriptions).size, 118, 'unique descriptions');
+  assert.equal(new Set(descriptions).size, 125, 'unique descriptions');
   const issues = [];
   for (const page of pages) {
     const html = read(page.path);
@@ -112,11 +112,11 @@ test('indexing rebuild preserves the four supplemental routes in sitemap and sea
   execFileSync(process.execPath, [path.join(temporary, 'scripts/apply-indexing-policy.js')]);
   const sitemap = fs.readFileSync(path.join(temporary, 'sitemap.xml'), 'utf8');
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => new URL(m[1]).pathname);
-  assert.equal(urls.length, 117);
+  assert.equal(urls.length, 124);
   for (const [route] of routes) assert.ok(urls.includes(route), route);
   const search = fs.readFileSync(path.join(temporary, 'data/search-catalog.js'), 'utf8');
   const entries = JSON.parse(search.slice('window.ELLIS_SEARCH_CATALOG='.length).trim().replace(/;$/, ''));
-  assert.equal(entries.length, 71);
+  assert.equal(entries.length, 75);
   for (const [route] of routes) assert.ok(entries.some(item => '/' + item.route === route), route);
   assert.equal(fs.readFileSync(path.join(temporary, 'data/service-catalog.json'), 'utf8'), before);
 });

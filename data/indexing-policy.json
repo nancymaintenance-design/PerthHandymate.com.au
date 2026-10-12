@@ -117,7 +117,10 @@
     "projects/timber-fence-repair/",
     "projects/decking-refinishing-maintenance/",
     "projects/door-lock-replacement-installation/",
-    "projects/kitchen-cabinet-hinge-repair/"
+    "projects/kitchen-cabinet-hinge-repair/",
+    "projects/clothesline-bracket-repair-canning/",
+    "projects/shelf-installation-cockburn/",
+    "projects/drawer-runner-replacement-southern-corridor/"
   ],
   "homepagePromotionRoutes": [
     "services/handyman-interiors-appliance-repairs/handymen/",
@@ -133,6 +136,10 @@
     "services/doors-windows-glass-screens/sliding-door-repairs/",
     "services/property-maintenance/",
     "services/handyman-interiors-appliance-repairs/furniture-assembly/",
-    "services/handyman-interiors-appliance-repairs/tv-wall-mounting/"
+    "services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
+    "services/doors-windows-glass-screens/door-repairs/",
+    "services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/",
+    "services/handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging/",
+    "services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/"
   ]
 }

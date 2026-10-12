@@ -7,6 +7,9 @@ const root = path.resolve(__dirname, '..');
 // Missing headings, unrelated navigation-only links and unsupported case claims
 // would break this visitor-facing evidence and onward-reading contract.
 const cases = [
+  ['clothesline-bracket-repair-canning', 'handyman-interiors-appliance-repairs/clothesline-repairs-installation', 'seasonal-home-maintenance-australia'],
+  ['shelf-installation-cockburn', 'handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging', 'photos-and-clear-scope-for-home-repairs'],
+  ['drawer-runner-replacement-southern-corridor', 'handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs', 'cupboard-hinges-drawer-runners-repair-guide'],
   ['bathroom-tile-shower-repair', 'handyman-interiors-appliance-repairs/tiling', 'shower-silicone-grout-waterproofing-guide'],
   ['decking-refinishing-maintenance', 'outdoor-structures-fencing-pools/deck-builders', 'seasonal-home-maintenance-australia'],
   ['door-lock-replacement-installation', 'doors-windows-glass-screens/door-installation', 'when-home-maintenance-needs-a-licensed-trade'],

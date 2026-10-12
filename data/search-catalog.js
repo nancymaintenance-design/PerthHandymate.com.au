@@ -45,6 +45,57 @@ window.ELLIS_SEARCH_CATALOG=[
     ]
   },
   {
+    "service": "Door Repairs",
+    "canonical": "Doors, windows, glass & screens",
+    "route": "services/doors-windows-glass-screens/door-repairs/",
+    "terms": [
+      "door repairs",
+      "door repair",
+      "internal door repairs",
+      "hinge repair",
+      "door latch repair"
+    ]
+  },
+  {
+    "service": "Cabinet & Wardrobe Repairs",
+    "canonical": "Handyman, interiors & appliance repairs",
+    "route": "services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/",
+    "terms": [
+      "cabinet & wardrobe repairs",
+      "cabinet repairs",
+      "cupboard repairs",
+      "wardrobe repairs",
+      "drawer runner replacement",
+      "cabinet hinge repair"
+    ]
+  },
+  {
+    "service": "Shelving, Mirror & Picture Hanging",
+    "canonical": "Handyman, interiors & appliance repairs",
+    "route": "services/handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging/",
+    "terms": [
+      "shelving, mirror & picture hanging",
+      "shelf installation",
+      "shelving installation",
+      "mirror hanging",
+      "picture hanging",
+      "mirror mounting"
+    ]
+  },
+  {
+    "service": "Clothesline Repairs & Installation",
+    "canonical": "Handyman, interiors & appliance repairs",
+    "route": "services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/",
+    "terms": [
+      "clothesline repairs & installation",
+      "clothesline repairs",
+      "clothesline repair",
+      "clothesline installation",
+      "clothesline restringing",
+      "clothesline bracket repair"
+    ]
+  },
+  {
     "service": "Air Conditioning",
     "canonical": "Electrical, plumbing, gas & air conditioning",
     "route": "services/electrical-plumbing-gas-air-conditioning/air-conditioning/",

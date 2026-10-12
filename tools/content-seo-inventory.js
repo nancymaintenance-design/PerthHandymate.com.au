@@ -3,6 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const ORIGIN = 'https://www.perthhandymate.com.au';
+const supplementalRoutes = new Set(require('../data/supplemental-services.json').services.map(service => '/' + service.url));
 
 function parseKeywordMap(markdown) {
   const owners = [], terms = [];
@@ -73,7 +74,7 @@ function pageType(route) {
   const parts = route.split('/').filter(Boolean);
   if (route === '/') return 'home';
   // Focused existing-task owners are supplements, not new entries in the priced 67-service catalogue.
-  if (['/services/property-maintenance/', '/services/doors-windows-glass-screens/sliding-door-repairs/', '/services/handyman-interiors-appliance-repairs/furniture-assembly/', '/services/handyman-interiors-appliance-repairs/tv-wall-mounting/'].includes(route)) return 'supplemental-service-detail';
+  if (supplementalRoutes.has(route)) return 'supplemental-service-detail';
   if (route === '/404.html') return 'not-found';
   if (parts[0] === 'services') return parts.length === 1 ? 'services-hub' : parts.length === 2 ? 'service-category' : 'service-detail';
   if (['guides', 'areas', 'projects'].includes(parts[0])) return parts.length === 1 ? `${parts[0]}-hub` : ({ guides: 'guide', areas: 'area', projects: 'project' }[parts[0]]);

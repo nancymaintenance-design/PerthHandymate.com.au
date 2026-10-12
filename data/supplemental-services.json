@@ -50,6 +50,58 @@
         "television wall mounting",
         "tv bracket installation"
       ]
+    },
+    {
+      "slug": "door-repairs",
+      "url": "services/doors-windows-glass-screens/door-repairs/",
+      "title": "Door Repairs",
+      "categoryTitle": "Doors, windows, glass & screens",
+      "searchTerms": [
+        "door repairs",
+        "door repair",
+        "internal door repairs",
+        "hinge repair",
+        "door latch repair"
+      ]
+    },
+    {
+      "slug": "cabinet-wardrobe-repairs",
+      "url": "services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/",
+      "title": "Cabinet & Wardrobe Repairs",
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "searchTerms": [
+        "cabinet repairs",
+        "cupboard repairs",
+        "wardrobe repairs",
+        "drawer runner replacement",
+        "cabinet hinge repair"
+      ]
+    },
+    {
+      "slug": "shelving-mirror-picture-hanging",
+      "url": "services/handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging/",
+      "title": "Shelving, Mirror & Picture Hanging",
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "searchTerms": [
+        "shelf installation",
+        "shelving installation",
+        "mirror hanging",
+        "picture hanging",
+        "mirror mounting"
+      ]
+    },
+    {
+      "slug": "clothesline-repairs-installation",
+      "url": "services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/",
+      "title": "Clothesline Repairs & Installation",
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "searchTerms": [
+        "clothesline repairs",
+        "clothesline repair",
+        "clothesline installation",
+        "clothesline restringing",
+        "clothesline bracket repair"
+      ]
     }
   ]
 }

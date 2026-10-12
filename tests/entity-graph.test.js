@@ -70,7 +70,7 @@ test('every service names the Perth office as provider', () => {
       assert.deepEqual(service.areaServed.map(area => area.name), ['Perth metropolitan area'], file);
     }
   }
-  assert.equal(serviceCount, 80);
+  assert.equal(serviceCount, 84);
 });
 
 test('shared entity retains verified NAP, hours, logo and Perth service area', () => {
