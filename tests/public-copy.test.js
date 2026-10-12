@@ -31,3 +31,18 @@ test('all thirteen case pages invite direct assessment and make photos optional'
     assert.equal((s.match(/>Arrange an on-site assessment<\/a>/g)||[]).length,2,entry.name);
   }
 });
+
+test('assessment headings and guide links do not insert task verbs into noun phrases', () => {
+  const routes = [
+    'building-renovation-structural/bathroom', 'gardens-landscaping/garden-clean-up',
+    'gardens-landscaping/gardeners', 'gardens-landscaping/tree-arborists',
+    'outdoor-structures-fencing-pools/pool-fence-installers', 'handyman-interiors-appliance-repairs/handymen',
+  ];
+  for (const route of routes) {
+    const source = fs.readFileSync(path.join(root, 'services', route, 'index.html'), 'utf8');
+    const labels = [...source.matchAll(/<(?:h[23]|a)\b[^>]*>([\s\S]*?)<\/(?:h[23]|a)>/g)]
+      .map(match => match[1].replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim());
+    const malformed = labels.filter(label => /^(?:Assessment details for|Detailed|more about) (?:scope|tidy|keep|assess|install|choose|compare)\b/i.test(label));
+    assert.deepEqual(malformed, [], route + ': readers need natural assessment headings and descriptive links');
+  }
+});

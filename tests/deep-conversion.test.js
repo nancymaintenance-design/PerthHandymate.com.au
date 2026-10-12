@@ -60,3 +60,22 @@ test('service preparation treats photos and dimensions as optional, with company
  }
 });
 
+// Each decision needs one answer, retaining the qualifications from both former items.
+for (const [route, decision, concepts] of [
+ ['outdoor-structures-fencing-pools/pool-fence-installers', /pool.?gate repairs different/i,
+  [/safety barrier/i, /self-closing/i, /self-latching/i, /complete barrier/i, /personnel/i, /does not establish compliance/i]],
+ ['outdoor-structures-fencing-pools/timber-fencing', /(?:fence.*keep leaning|repaired fence keep leaning)/i,
+  [/post/i, /footing/i, /connections/i, /ground movement/i, /retaining function/i, /replacement/i]],
+ ['handyman-interiors-appliance-repairs/tv-wall-mounting', /(?:move a power point|adds a power point)/i,
+  [/licensed electrical personnel/i, /quotation/i, /fixed wiring/i, /outlet position/i, /access/i, /making good/i, /WA electrical-work guidance/i]],
+ ['handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging', /(?:weight.*shelf hold|suitable shelf load)/i,
+  [/product instructions/i, /brackets/i, /fixings/i, /wall support/i, /intended use/i, /No general weight figure/i, /Photos alone/i]],
+]) test(`${route} gives one qualified FAQ answer for the reviewed decision`, () => {
+  const source = fs.readFileSync(path.join(root, 'services', route, 'index.html'), 'utf8');
+  const items = [...source.matchAll(/<details\b[^>]*>[\s\S]*?<\/details>/g)]
+    .map(match => ({ question: match[0].match(/<summary[^>]*>([\s\S]*?)<\/summary>/)?.[1], html: match[0] }))
+    .filter(item => decision.test(item.question || ''));
+  assert.equal(items.length, 1, 'the same customer decision must not occupy two FAQ items');
+  for (const concept of concepts) assert.match(items[0].html, concept, 'combined answer retains ' + concept);
+});
+

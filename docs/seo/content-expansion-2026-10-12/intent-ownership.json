@@ -1571,7 +1571,7 @@
       "path": "/services/handyman-interiors-appliance-repairs/cabinet-makers/",
       "key": "cabinet-makers",
       "primaryQuery": "cabinet makers perth",
-      "primaryIntent": "Custom and replacement cabinetry projects; existing hinge and drawer repair belongs to handymen/#cabinet-repairs.",
+      "primaryIntent": "Custom and replacement cabinetry projects; existing hinge and drawer repair belongs to /services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/.",
       "scope": "Cabinet-making services cover custom storage, replacement cabinetry, alterations and fitted units designed for a specific room.",
       "taskSeeds": [
         "Measure and design cabinetry for kitchens, laundries, wardrobes or living areas",
@@ -2151,7 +2151,7 @@
       "key": "sliding-door-repairs",
       "primaryQuery": "sliding door repairs perth",
       "primaryIntent": "Repair external sliding-door rollers, tracks and handles after panel and hardware assessment.",
-      "scope": "External sliding door faults; wardrobe repair stays with existing cabinet-repairs module.",
+      "scope": "External sliding door faults; wardrobe repair belongs to /services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/.",
       "taskSeeds": [
         "sliding door roller replacement",
         "sliding door track and handle faults"

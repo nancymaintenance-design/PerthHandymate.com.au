@@ -99,3 +99,14 @@ test('current owner pages retain unambiguous visible and structured FAQ parity',
   const issues = [...new Set(rows.map(x=>x.currentPath))].flatMap(route=>auditPage(read(route),route).issues.map(issue=>route+': '+issue));
   assert.deepEqual(issues, []);
 });
+
+test('current cabinet scope descriptions point maintainers to the focused repair owner', () => {
+  const ownership = require('../docs/seo/content-expansion-2026-10-12/intent-ownership.json');
+  const cabinetOwner = '/services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/';
+  for (const [key, field] of [['cabinet-makers', 'primaryIntent'], ['sliding-door-repairs', 'scope']]) {
+    const item = [...ownership.canonicalServices, ...ownership.supplementalServices].find(item => item.key === key);
+    assert.ok(item, key);
+    assert.ok(item[field].includes(cabinetOwner), `${key}: current repair destination must be actionable`);
+    assert.doesNotMatch(item[field], /handymen\/#cabinet-repairs|existing cabinet-repairs module/i, key);
+  }
+});
