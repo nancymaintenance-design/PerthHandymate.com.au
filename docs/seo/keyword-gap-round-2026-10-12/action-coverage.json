@@ -1,0 +1,1353 @@
+{
+  "date": "2026-10-12",
+  "sourceBaseline": "cdd814d7f93bf224142276076a5d03a803ce9c53",
+  "task1PreservedHead": "c9d35dd4fef5a0ac2ca061336faa91498501aa53",
+  "acceptedSpecification": "reports/keyword-gap-2026-10-12/cluster-plan.md + gap-candidates.json",
+  "status": "local-candidate-not-published",
+  "totals": {
+    "P1": 7,
+    "P2": 32,
+    "keep": 7,
+    "P3": 3
+  },
+  "actions": [
+    {
+      "id": "G01",
+      "keyword": "sliding door repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#sliding-door-repairs",
+      "gapType": "结构缺口",
+      "priority": "P1",
+      "action": "候选独立页",
+      "candidatePath": "/services/doors-windows-glass-screens/sliding-door-repairs/",
+      "cluster": "门窗",
+      "rationale": "已有一段服务说明及综合故障指南；缺少以滑门维修为主的商业页面。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-task-1-retained",
+      "currentOwner": "/services/doors-windows-glass-screens/sliding-door-repairs/",
+      "evidence": [
+        {
+          "path": "/services/doors-windows-glass-screens/sliding-door-repairs/",
+          "detail": "Task 1 four focused local pages retained at c9d35dd4fef5a0ac2ca061336faa91498501aa53; see task-1-report.md for route discovery, content and inbound-link evidence."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G02",
+      "keyword": "sliding door roller replacement perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#sliding-door-repairs",
+      "gapType": "深度缺口",
+      "priority": "P1",
+      "action": "并入滑门候选页",
+      "candidatePath": null,
+      "cluster": "门窗",
+      "rationale": "滚轮/轨道检查、配件与玻璃搬运范围需展开，不先另建 roller URL。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-task-1-retained",
+      "currentOwner": "/services/doors-windows-glass-screens/sliding-door-repairs/",
+      "evidence": [
+        {
+          "path": "/services/doors-windows-glass-screens/sliding-door-repairs/",
+          "detail": "Task 1 four focused local pages retained at c9d35dd4fef5a0ac2ca061336faa91498501aa53; see task-1-report.md for route discovery, content and inbound-link evidence."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G03",
+      "keyword": "door repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#sliding-door-repairs",
+      "gapType": "结构缺口",
+      "priority": "P2",
+      "action": "先拆清现有维修段落",
+      "candidatePath": null,
+      "cluster": "门窗",
+      "rationale": "与门安装是不同任务；是否独立维修页需补 Perth Google SERP/GSC。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#sliding-door-repairs",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "sliding-door-repairs",
+          "heading": "Internal Door & Sliding Door Repairs",
+          "observedText": "Internal Door & Sliding Door Repairs An ordinary hinged door that rubs, drops or will not latch may suit adjustment rather than replacement. Ellis checks hinges, loose handles, the latch strike, frame condition and floor clearance before agreeing the repair. Tell us when the problem began, especially after a flooring change or earlier repair; continuing frame movement needs investigation. A new door, changed opening or damaged frame is assessed under door installation . For a patio glass panel, use our sliding-door roller and track repair service . Entry, fire-rated and security doors have their own requirements; the quote identifies specialist work rather than treating every door as a routine adjustment. Door and sliding-door repair advice →",
+          "contextualLinks": [
+            "/services/doors-windows-glass-screens/door-installation/",
+            "/services/doors-windows-glass-screens/sliding-door-repairs/",
+            "../../../guides/sticking-doors-windows-repair-guide/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G04",
+      "keyword": "door installation perth",
+      "existingPath": "/services/doors-windows-glass-screens/door-installation/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "门窗",
+      "rationale": "已有专门安装页，不是缺页面；补测量、旧门处置及仅安装/含供货选择。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/doors-windows-glass-screens/door-installation/#door-installation-scope",
+      "evidence": [
+        {
+          "path": "/services/doors-windows-glass-screens/door-installation/",
+          "anchor": "door-installation-scope",
+          "heading": "Measuring & Quoting a Door Installation",
+          "observedText": "Measuring & Quoting a Door Installation A door installation starts with the opening, frame, swing and clearance measurements. Ellis checks whether a new leaf can use the existing frame or whether frame repairs form part of the job. Tell us whether you have already bought the door, handles and hinges; installation-only and supply-and-install quotes need different inclusions. Agree removal and disposal of the old door, compatible hardware, trimming and the final finish before work starts. For a sound door that only rubs or fails to latch, ask for ordinary door repair assessment before ordering a replacement. A glazed, rated or security door needs its specific product and qualified-work scope checked. Should I order a door from my own measurements? Contact Ellis before ordering if the fit is uncertain. Existing measurements are optional; we measure on site and confirm the specification and written quote. The door hardware example illustrates hardware work, an example of assessing existing fittings before choosing replacement.",
+          "contextualLinks": [
+            "/services/handyman-interiors-appliance-repairs/handymen/#sliding-door-repairs",
+            "/projects/door-lock-replacement-installation/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G05",
+      "keyword": "handyman perth",
+      "existingPath": "/",
+      "gapType": "已有核心覆盖",
+      "priority": "保留",
+      "action": "保留主页主词",
+      "candidatePath": null,
+      "cluster": "综合维修",
+      "rationale": "主页和 odd jobs 页分工，不另建 /handyman-perth/。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "retained-existing-owner",
+      "currentOwner": "/",
+      "evidence": [
+        {
+          "path": "/",
+          "detail": "主页和 odd jobs 页分工，不另建 /handyman-perth/。 Existing route and focus retained; no duplicate route created."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G06",
+      "keyword": "property maintenance perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/",
+      "gapType": "结构缺口",
+      "priority": "P1",
+      "action": "候选独立页",
+      "candidatePath": "/services/property-maintenance/",
+      "cluster": "物业维护",
+      "rationale": "现有商业段落把住宅、出租及strata简写在一起；现有物业经理指南为信息意图。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-task-1-retained",
+      "currentOwner": "/services/property-maintenance/",
+      "evidence": [
+        {
+          "path": "/services/property-maintenance/",
+          "detail": "Task 1 four focused local pages retained at c9d35dd4fef5a0ac2ca061336faa91498501aa53; see task-1-report.md for route discovery, content and inbound-link evidence."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G07",
+      "keyword": "rental property maintenance perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/",
+      "gapType": "深度缺口",
+      "priority": "P1",
+      "action": "先并入物业候选页",
+      "candidatePath": null,
+      "cluster": "物业维护",
+      "rationale": "授权、钥匙、租客预约、检查与维修分工需要实际流程；搜索样本与综合维护有5个共享URL。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-task-1-retained",
+      "currentOwner": "/services/property-maintenance/",
+      "evidence": [
+        {
+          "path": "/services/property-maintenance/",
+          "detail": "Task 1 four focused local pages retained at c9d35dd4fef5a0ac2ca061336faa91498501aa53; see task-1-report.md for route discovery, content and inbound-link evidence."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G08",
+      "keyword": "strata maintenance perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/",
+      "gapType": "深度缺口",
+      "priority": "P2",
+      "action": "增加独立受众模块并验证",
+      "candidatePath": null,
+      "cluster": "物业维护",
+      "rationale": "样本与property maintenance零共享；不能据此立即开strata页，需要Perth复核及common-property案例。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#strata-maintenance",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "strata-maintenance",
+          "heading": "Strata Maintenance & Authorised Access",
+          "observedText": "Strata Maintenance & Authorised Access For strata maintenance, identify the exact lot or common-property location and the person authorised to approve assessment and repairs. An occupant's request to attend does not establish approval for work on common property. Bring the approved task list, spending limit if applicable and the contact for any variation. Ellis agrees tenant or occupant appointments, keys, parking and shared-area access before attendance. Flag noisy work and any building access rules. Repair findings and extra work go back to the nominated approval contact before proceeding. Use our property maintenance service for the wider repair list and managed-property coordination guide to prepare the authority and access details.",
+          "contextualLinks": [
+            "/services/property-maintenance/",
+            "/guides/property-manager-maintenance-coordination/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G09",
+      "keyword": "furniture assembly perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#cabinet-repairs",
+      "gapType": "结构缺口",
+      "priority": "P1",
+      "action": "候选独立页",
+      "candidatePath": "/services/handyman-interiors-appliance-repairs/furniture-assembly/",
+      "cluster": "室内小活",
+      "rationale": "组装与柜门维修、TV安装共用一个短模块；缺组装主意图商业入口。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-task-1-retained",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/furniture-assembly/",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/furniture-assembly/",
+          "detail": "Task 1 four focused local pages retained at c9d35dd4fef5a0ac2ca061336faa91498501aa53; see task-1-report.md for route discovery, content and inbound-link evidence."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G10",
+      "keyword": "flat pack assembly perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#cabinet-repairs",
+      "gapType": "深度缺口",
+      "priority": "P1",
+      "action": "先并入组装候选页",
+      "candidatePath": null,
+      "cluster": "室内小活",
+      "rationale": "与家具组装样本4个共享URL；暂用同一入口测试，不声称已达7+强制合并阈值。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-task-1-retained",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/furniture-assembly/",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/furniture-assembly/",
+          "detail": "Task 1 four focused local pages retained at c9d35dd4fef5a0ac2ca061336faa91498501aa53; see task-1-report.md for route discovery, content and inbound-link evidence."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G11",
+      "keyword": "tv wall mounting perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#cabinet-repairs",
+      "gapType": "结构缺口",
+      "priority": "P1",
+      "action": "候选独立页",
+      "candidatePath": "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
+      "cluster": "室内小活",
+      "rationale": "仅TV brackets短提及；需墙体/支架兼容、走线与自有持牌电工范围边界。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-task-1-retained",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
+          "detail": "Task 1 four focused local pages retained at c9d35dd4fef5a0ac2ca061336faa91498501aa53; see task-1-report.md for route discovery, content and inbound-link evidence."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G12",
+      "keyword": "shelf installation perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#cabinet-repairs",
+      "gapType": "深度缺口",
+      "priority": "P2",
+      "action": "独立H3与FAQ",
+      "candidatePath": null,
+      "cluster": "室内小活",
+      "rationale": "TV样本零共享，不能把shelving当TV主词同义词；先完善现有小活页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#shelf-installation",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "shelf-installation",
+          "heading": "Shelf Installation & Wall Fixings",
+          "observedText": "Shelf Installation & Wall Fixings Shelf installation is planned around the wall and intended load. Tell Ellis the shelf dimensions, bracket system and what you want it to hold. We check the wall material, supporting locations, concealed-service concerns and compatible fixings before agreeing the layout. Floating shelves and bracketed shelves can need different support; a heavy storage shelf is not treated as a picture hook. Can I supply shelves and brackets? Yes. Share the product details and instructions if available, and confirm whether all fixings are included. Ellis checks suitability on site and identifies extra materials or wall repairs in the quote. Photos and approximate measurements are optional. For television brackets use TV wall mounting ; for kit furniture use flat-pack assembly .",
+          "contextualLinks": [
+            "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
+            "/services/handyman-interiors-appliance-repairs/furniture-assembly/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G13",
+      "keyword": "clothesline repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#clothesline-repairs",
+      "gapType": "深度缺口",
+      "priority": "P2",
+      "action": "扩展既有模块",
+      "candidatePath": null,
+      "cluster": "户外维护",
+      "rationale": "已有明确模块，不属零覆盖；补重穿线、框架、固定支撑及配件。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#clothesline-repairs",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "clothesline-repairs",
+          "heading": "Clothesline Repairs & Installation",
+          "observedText": "Clothesline Repairs & Installation Clothesline repairs can involve restringing or rethreading lines, compatible tensioning parts, arms, brackets and fixings. Ellis checks the frame and support before replacing the visible line: a corroded frame or loose post can change whether repair is worthwhile. Tell us whether the unit is folding, rotary or retractable and which part no longer works. Repair the existing unit or install a replacement? For clothesline installation, confirm whether Ellis is quoting supply and installation or installation of your supplied product. We check the product instructions, usable space and wall or ground support. Old-unit removal, disposal, new brackets, posts and support work are included only when agreed in the quote. Leave further part purchases until compatibility is checked. Planning outdoor maintenance →",
+          "contextualLinks": [
+            "../../../guides/seasonal-home-maintenance-australia/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G14",
+      "keyword": "clothesline installation perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#clothesline-repairs",
+      "gapType": "深度缺口",
+      "priority": "P2",
+      "action": "与维修模块联动",
+      "candidatePath": null,
+      "cluster": "户外维护",
+      "rationale": "供货/仅安装、旧物拆除与承重面分开；不复制竞品安装价。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#clothesline-repairs",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "clothesline-repairs",
+          "heading": "Clothesline Repairs & Installation",
+          "observedText": "Clothesline Repairs & Installation Clothesline repairs can involve restringing or rethreading lines, compatible tensioning parts, arms, brackets and fixings. Ellis checks the frame and support before replacing the visible line: a corroded frame or loose post can change whether repair is worthwhile. Tell us whether the unit is folding, rotary or retractable and which part no longer works. Repair the existing unit or install a replacement? For clothesline installation, confirm whether Ellis is quoting supply and installation or installation of your supplied product. We check the product instructions, usable space and wall or ground support. Old-unit removal, disposal, new brackets, posts and support work are included only when agreed in the quote. Leave further part purchases until compatibility is checked. Planning outdoor maintenance →",
+          "contextualLinks": [
+            "../../../guides/seasonal-home-maintenance-australia/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G15",
+      "keyword": "pet door installation perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#pet-door-installation",
+      "gapType": "深度缺口",
+      "priority": "P2",
+      "action": "扩展既有模块",
+      "candidatePath": null,
+      "cluster": "门窗",
+      "rationale": "已有宠物门说明；补木门/普通纱网/玻璃的不同评估流程，不承诺所有材质都能直接切孔。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#pet-door-installation",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "pet-door-installation",
+          "heading": "Pet Door Installation: Dogs & Cats",
+          "observedText": "Pet Door Installation: Dogs & Cats Pet door installation uses one assessment for dog doors and cat flaps, with the opening suited to the pet and the door construction. Tell Ellis the pet size, product model and whether the panel is timber, ordinary insect-screen mesh or glass. For a suitable timber door we check thickness, framing and the proposed cut-out; on mesh screens we check whether the frame can support the product. Can a pet door be fitted directly into glass? The glazing must be assessed before a fitting method is agreed. Do not cut or drill the existing pane yourself; a purpose-made replacement pane may be needed. Glazing work and any security-screen changes have separate product and qualified-work requirements. A pet flap must not be assumed to preserve a screen's security performance. Existing photos are optional. Ellis checks the opening on site and confirms the product, fitting method, supply and disposal scope before quoting. Assessing doors and moving panels →",
+          "contextualLinks": [
+            "/services/doors-windows-glass-screens/glass-glaziers/",
+            "../../../guides/sticking-doors-windows-repair-guide/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G16",
+      "keyword": "dog door installation perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#pet-door-installation",
+      "gapType": "同义词机会",
+      "priority": "P2",
+      "action": "同模块自然覆盖",
+      "candidatePath": null,
+      "cluster": "门窗",
+      "rationale": "与pet door样本6个共享URL；以统一pet-door任务覆盖dog/cat，不先建三个近重复页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#pet-door-installation",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "pet-door-installation",
+          "heading": "Pet Door Installation: Dogs & Cats",
+          "observedText": "Pet Door Installation: Dogs & Cats Pet door installation uses one assessment for dog doors and cat flaps, with the opening suited to the pet and the door construction. Tell Ellis the pet size, product model and whether the panel is timber, ordinary insect-screen mesh or glass. For a suitable timber door we check thickness, framing and the proposed cut-out; on mesh screens we check whether the frame can support the product. Can a pet door be fitted directly into glass? The glazing must be assessed before a fitting method is agreed. Do not cut or drill the existing pane yourself; a purpose-made replacement pane may be needed. Glazing work and any security-screen changes have separate product and qualified-work requirements. A pet flap must not be assumed to preserve a screen's security performance. Existing photos are optional. Ellis checks the opening on site and confirms the product, fitting method, supply and disposal scope before quoting. Assessing doors and moving panels →",
+          "contextualLinks": [
+            "/services/doors-windows-glass-screens/glass-glaziers/",
+            "../../../guides/sticking-doors-windows-repair-guide/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G17",
+      "keyword": "cabinet hinge repair perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#cabinet-repairs",
+      "gapType": "已有内容、需聚焦",
+      "priority": "P2",
+      "action": "强化维修锚点",
+      "candidatePath": null,
+      "cluster": "室内小活",
+      "rationale": "已有hinge维修指南及案例；不把维修词导向以新做橱柜为主的cabinet-makers页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#cabinet-repairs",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "cabinet-repairs",
+          "heading": "Cupboard Hinge & Wardrobe Door Repairs",
+          "observedText": "Cupboard Hinge & Wardrobe Door Repairs Cabinet hinge repair starts with the hinge, mounting plate and fixing holes, not an order for new cupboards. Ellis checks loose screws, stripped fixings, door alignment and drawer runners, then agrees whether adjustment or compatible hardware will suit the existing cabinet. Tell us which door drops or rubs and whether a previous fixing has failed. Wardrobe doors need their own checks For wardrobe door repairs, we check guides, stops, tracks, rollers and clearances. Mirrored panels need their condition and handling assessed before removal; do not force an unstable panel. Wardrobe fittings are different from external glass sliding-door hardware , so identify the affected door when contacting Ellis. See our cupboard hinge and alignment example and Cupboard hinge and drawer advice → . The example shows a cabinet repair, not wardrobe roller work. Custom or replacement cabinetry is a separate project. For other tasks, use furniture assembly or TV wall mounting .",
+          "contextualLinks": [
+            "/services/doors-windows-glass-screens/sliding-door-repairs/",
+            "/projects/kitchen-cabinet-hinge-repair/",
+            "../../../guides/cupboard-hinges-drawer-runners-repair-guide/",
+            "/services/handyman-interiors-appliance-repairs/cabinet-makers/",
+            "/services/handyman-interiors-appliance-repairs/furniture-assembly/",
+            "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G18",
+      "keyword": "wardrobe door repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#cabinet-repairs",
+      "gapType": "深度缺口",
+      "priority": "P2",
+      "action": "区分衣柜/露台滑门",
+      "candidatePath": null,
+      "cluster": "室内小活",
+      "rationale": "衣柜轨道已有提及，但故障类型、配件和镜面门评估不足；先不与室外玻璃滑门强制合并。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#cabinet-repairs",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "cabinet-repairs",
+          "heading": "Cupboard Hinge & Wardrobe Door Repairs",
+          "observedText": "Cupboard Hinge & Wardrobe Door Repairs Cabinet hinge repair starts with the hinge, mounting plate and fixing holes, not an order for new cupboards. Ellis checks loose screws, stripped fixings, door alignment and drawer runners, then agrees whether adjustment or compatible hardware will suit the existing cabinet. Tell us which door drops or rubs and whether a previous fixing has failed. Wardrobe doors need their own checks For wardrobe door repairs, we check guides, stops, tracks, rollers and clearances. Mirrored panels need their condition and handling assessed before removal; do not force an unstable panel. Wardrobe fittings are different from external glass sliding-door hardware , so identify the affected door when contacting Ellis. See our cupboard hinge and alignment example and Cupboard hinge and drawer advice → . The example shows a cabinet repair, not wardrobe roller work. Custom or replacement cabinetry is a separate project. For other tasks, use furniture assembly or TV wall mounting .",
+          "contextualLinks": [
+            "/services/doors-windows-glass-screens/sliding-door-repairs/",
+            "/projects/kitchen-cabinet-hinge-repair/",
+            "../../../guides/cupboard-hinges-drawer-runners-repair-guide/",
+            "/services/handyman-interiors-appliance-repairs/cabinet-makers/",
+            "/services/handyman-interiors-appliance-repairs/furniture-assembly/",
+            "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G19",
+      "keyword": "grab rail installation perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#grab-rail-installation",
+      "gapType": "深度缺口",
+      "priority": "P2",
+      "action": "补适用范围与评估",
+      "candidatePath": null,
+      "cluster": "室内小活",
+      "rationale": "已有段落；补支持墙体、用户提供摆位计划与固定评估，不推导NDIS注册/资助资格。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#grab-rail-installation",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "grab-rail-installation",
+          "heading": "Grab Rail Installation & Support Checks",
+          "observedText": "Grab Rail Installation & Support Checks Grab rail installation needs a suitable product and supporting wall structure, not a fixing into the visible lining alone. Ellis checks the proposed location, wall material, fixing support and access before agreeing installation. Tell us about tiled areas or concealed services and bring any placement plan from your adviser. Does installation include an accessibility assessment? Placement advice, accessibility assessment and installation are separate scopes. Ellis confirms what can be fixed at the requested position; this is not an accessibility guarantee or a claim of NDIS registration or funding eligibility. Confirm the person approving the work and any funding requirements separately before booking. The quote identifies the rail, supply responsibility, fixings and any support or finish work. See Safety-critical repairs and qualifications → for related repair boundaries.",
+          "contextualLinks": [
+            "../../../guides/when-home-maintenance-needs-a-licensed-trade/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G20",
+      "keyword": "pressure cleaning perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/#pressure-cleaning",
+      "gapType": "深度缺口",
+      "priority": "P2",
+      "action": "补表面与限制模块",
+      "candidatePath": null,
+      "cluster": "户外维护",
+      "rationale": "已有paving/patio清洗；不跨展为高空屋顶清洗或无条件高压清洗。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#pressure-cleaning",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "pressure-cleaning",
+          "heading": "Pressure Cleaning for Patios & Paving",
+          "observedText": "Pressure Cleaning for Patios & Paving Our handyman pressure-cleaning scope is suitable accessible patios and paving. Ellis checks the surface, coating, joints and drainage before selecting a cleaning method; more pressure is not automatically appropriate for a fragile finish. Tell us about flaking coatings, loose pavers, nearby doors and where runoff can go. Does this include roof or asbestos cleaning? No. Roof cleaning is outside this patio and paving task, and suspected asbestos is excluded from pressure cleaning. Leave suspect material undisturbed and ask for the appropriate assessment. Surface cleaning also does not repair a failed base or persistent pooling: use paving repair assessment for loose or sunken areas. Confirm the area to be cleaned, access, water availability and protection or cleanup requirements when Ellis prepares the written quote. Planning surface maintenance →",
+          "contextualLinks": [
+            "/services/roofing-gutters-exterior/pavers/",
+            "../../../guides/seasonal-home-maintenance-australia/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G21",
+      "keyword": "shower regrouting perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/tiling/",
+      "gapType": "已有覆盖、可深化",
+      "priority": "P2",
+      "action": "完善既有服务页",
+      "candidatePath": null,
+      "cluster": "湿区与表面",
+      "rationale": "已有regrouting标题/FAQ，补松砖、底层、水源与报价边界；不认定缺页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/tiling/#shower-regrouting",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/tiling/",
+          "anchor": "shower-regrouting",
+          "heading": "Shower Regrouting: Check the Tiles & Cause First",
+          "observedText": "Shower Regrouting: Check the Tiles & Cause First Shower regrouting renews joints between suitable tiles. Ellis first checks for loose tiles, movement, damaged edges and signs of continuing water entry. A weak substrate or repeated moisture problem needs investigation before fresh grout covers it. Tell us where grout is missing and whether the shower still leaks after earlier repairs. The quote identifies the repair area, grout removal, soundness of retained tiles, replacement-tile availability and any substrate work. Matching tile or grout appearance is assessed rather than promised. See the existing bathroom surface repair example for tile and finish work; it does not establish the cause of your leak.",
+          "contextualLinks": [
+            "/projects/bathroom-tile-shower-repair/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G22",
+      "keyword": "shower resealing perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/tiling/",
+      "gapType": "深度缺口",
+      "priority": "P2",
+      "action": "加独立resealing段落",
+      "candidatePath": null,
+      "cluster": "湿区与表面",
+      "rationale": "现页有silicone与深层防水区分；需要表面接缝维护流程和不适用症状，避免保证止漏。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/tiling/#shower-resealing",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/tiling/",
+          "anchor": "shower-resealing",
+          "heading": "Shower Resealing: Surface Joints & Silicone",
+          "observedText": "Shower Resealing: Surface Joints & Silicone Shower resealing concerns the visible flexible joints, including worn silicone at suitable junctions. The agreed process covers removal of failed sealant, cleaning and preparation of the joint, a compatible replacement and the product's return-to-use instructions. Tell Ellis about previous sealants and recurring discolouration, gaps or leaks. Will fresh silicone stop every shower leak? No. Loose tiles, persistent damp or repeated failure can involve plumbing, movement or the membrane beneath the finish. Surface resealing is not membrane replacement or a guaranteed leak cure. Use leaking-shower assessment if the source is unclear, and read how silicone, grout and waterproofing differ before agreeing cosmetic work.",
+          "contextualLinks": [
+            "/services/handyman-interiors-appliance-repairs/waterproofing/#leaking-shower-assessment",
+            "/guides/shower-silicone-grout-waterproofing-guide/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G23",
+      "keyword": "leaking shower repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/waterproofing/",
+      "gapType": "问题入口缺口",
+      "priority": "P2",
+      "action": "深化诊断分流",
+      "candidatePath": null,
+      "cluster": "湿区与表面",
+      "rationale": "硅胶/填缝/给排水/防水四路分流，链接现有plumbers、tiling与区别指南，不直接开保证免拆砖页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/waterproofing/#leaking-shower-assessment",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/waterproofing/",
+          "anchor": "leaking-shower-assessment",
+          "heading": "Leaking Shower Repairs: Identify the Work Required",
+          "observedText": "Leaking Shower Repairs: Identify the Work Required A leaking shower needs the water source and affected construction assessed before a repair is selected. Tell Ellis where moisture appears, when it occurs, whether the shower is in use and what earlier repairs changed. Existing photos are optional; an on-site assessment defines the investigation. Failed visible silicone joints may call for surface resealing . Missing grout or damaged tiles need tile and grout assessment , including the substrate. A supply, waste or other plumbing fault needs Ellis's appropriately licensed plumbing personnel . A failed membrane or wet-area junction needs a scoped waterproofing repair, with exposure and reinstatement agreed. Can you quote a repair without removing tiles? We first agree what can be assessed accessibly and whether further investigation is needed. Tile removal cannot be ruled out before the cause is understood. The quote separates diagnosis, plumbing, membrane work and replacement finishes; it does not promise an invisible or no-tile-removal cure. Read our wet-area repair distinctions .",
+          "contextualLinks": [
+            "/services/handyman-interiors-appliance-repairs/tiling/#shower-resealing",
+            "/services/handyman-interiors-appliance-repairs/tiling/#shower-regrouting",
+            "/services/electrical-plumbing-gas-air-conditioning/plumbers/",
+            "/guides/shower-silicone-grout-waterproofing-guide/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G24",
+      "keyword": "shower waterproofing perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/waterproofing/",
+      "gapType": "已有核心覆盖",
+      "priority": "保留",
+      "action": "保留专业页",
+      "candidatePath": null,
+      "cluster": "湿区与表面",
+      "rationale": "已有独立防水页；与regrout/reseal区分，不扩写为表面处理承诺。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "retained-existing-owner",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/waterproofing/",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/waterproofing/",
+          "detail": "已有独立防水页；与regrout/reseal区分，不扩写为表面处理承诺。 Existing route and focus retained; no duplicate route created."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G25",
+      "keyword": "flyscreen repairs perth",
+      "existingPath": "/services/doors-windows-glass-screens/fly-screens/",
+      "gapType": "已有核心覆盖",
+      "priority": "保留",
+      "action": "保留专业页",
+      "candidatePath": null,
+      "cluster": "门窗",
+      "rationale": "已有主标题、FAQ及remesh案例；不重复新建flyscreen-repairs页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "retained-existing-owner",
+      "currentOwner": "/services/doors-windows-glass-screens/fly-screens/",
+      "evidence": [
+        {
+          "path": "/services/doors-windows-glass-screens/fly-screens/",
+          "detail": "已有主标题、FAQ及remesh案例；不重复新建flyscreen-repairs页。 Existing route and focus retained; no duplicate route created."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G26",
+      "keyword": "flyscreen replacement perth",
+      "existingPath": "/services/doors-windows-glass-screens/fly-screens/",
+      "gapType": "同义词机会",
+      "priority": "P2",
+      "action": "完善同页选择模块",
+      "candidatePath": null,
+      "cluster": "门窗",
+      "rationale": "补换网/换框/整扇替换判断；不混同security-screen服务资质。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/doors-windows-glass-screens/fly-screens/#flyscreen-replacement-options",
+      "evidence": [
+        {
+          "path": "/services/doors-windows-glass-screens/fly-screens/",
+          "anchor": "flyscreen-replacement-options",
+          "heading": "Flyscreen Replacement: Mesh, Frame or Complete Screen?",
+          "observedText": "Flyscreen Replacement: Mesh, Frame or Complete Screen? Flyscreen replacement does not always mean a whole new screen. If the frame, corners and retaining channel are sound, replacement mesh may suit the job. A distorted frame, broken corners or incompatible fittings can need a replacement frame or complete unit instead. Ellis measures the opening and checks the way it is retained before quoting. Tell us which windows or doors are affected and whether they are fixed, hinged or sliding screens. The scope identifies mesh, reused parts, replacement hardware and removal. Our photographed remeshing example shows insect-screen work, not glass roller repair or security-screen certification. Is replacement insect mesh a security-screen upgrade? No. Insect-screen replacement does not establish security performance or a security licence. Security products need separate confirmation of their product and qualified-work requirements. A dragging glass panel goes to sliding-door repairs .",
+          "contextualLinks": [
+            "/projects/sliding-door-flyscreen-repair/",
+            "/services/doors-windows-glass-screens/sliding-door-repairs/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G27",
+      "keyword": "gyprock repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/plasterers/",
+      "gapType": "已有覆盖、可深化",
+      "priority": "P2",
+      "action": "补自然措辞与案例",
+      "candidatePath": null,
+      "cluster": "湿区与表面",
+      "rationale": "已有title Gyprock及问答，不因H1用Wall & Ceiling而认定零覆盖。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/plasterers/#gyprock-repair-scope",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/plasterers/",
+          "anchor": "gyprock-repair-scope",
+          "heading": "Gyprock Repairs & the Agreed Finish",
+          "observedText": "Gyprock Repairs & the Agreed Finish Gyprock repairs can address impact holes, damaged corners and areas left by removed fittings where the surrounding lining and support are suitable. Ellis checks the damaged edges and backing before agreeing a patch. Tell us what caused the damage and whether the same area has been repaired before. The quote separates patching, joint preparation and paint finishing. A touch-up may differ from repainting the full wall, so agree the desired finish rather than assuming a patch will disappear. See our wall repair and painting example and patch and paint planning guide ; that project shows wall patching and painting; a structural ceiling concern needs its own assessment.",
+          "contextualLinks": [
+            "/projects/interior-wall-repair-painting/",
+            "/guides/wall-patching-paint-touch-ups-guide/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G28",
+      "keyword": "ceiling repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/plasterers/",
+      "gapType": "已有覆盖、可深化",
+      "priority": "P2",
+      "action": "强化安全分流",
+      "candidatePath": null,
+      "cluster": "湿区与表面",
+      "rationale": "已有ceiling/cornice内容；渗水、下垂与普通补洞需区分，补已核实案例。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/plasterers/#ceiling-assessment",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/plasterers/",
+          "anchor": "ceiling-assessment",
+          "heading": "Ceiling Repairs: Patching or Further Investigation?",
+          "observedText": "Ceiling Repairs: Patching or Further Investigation? A small ceiling patch or damaged cornice is different from sagging, recurring cracks or a ceiling marked by an active leak. Tell Ellis whether the shape or staining has changed and whether water is still entering. Keep clear of unstable areas and avoid climbing up or removing lining to inspect them yourself. We arrange an appropriate assessment before deciding whether a local patch is suitable. Can a stained ceiling simply be patched and painted? The source and condition need checking first. Roof leak investigation or plumbing assessment may be separate from ceiling repair. Suspect unidentified lining also needs assessment before disturbance. Agree access, repair area, cornice profile and painting in the quote; surface work does not resolve a continuing leak or movement.",
+          "contextualLinks": [
+            "/services/roofing-gutters-exterior/roofing/",
+            "/services/electrical-plumbing-gas-air-conditioning/plumbers/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G29",
+      "keyword": "gutter cleaning perth",
+      "existingPath": "/services/roofing-gutters-exterior/gutter-services/",
+      "gapType": "已有核心覆盖",
+      "priority": "保留",
+      "action": "保留专业页",
+      "candidatePath": null,
+      "cluster": "户外维护",
+      "rationale": "已有主标题、服务页及案例；补现场可达性证据即可，不另开同义页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "retained-existing-owner",
+      "currentOwner": "/services/roofing-gutters-exterior/gutter-services/",
+      "evidence": [
+        {
+          "path": "/services/roofing-gutters-exterior/gutter-services/",
+          "detail": "已有主标题、服务页及案例；补现场可达性证据即可，不另开同义页。 Existing route and focus retained; no duplicate route created."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G30",
+      "keyword": "deck repairs perth",
+      "existingPath": "/services/outdoor-structures-fencing-pools/deck-builders/",
+      "gapType": "已有核心覆盖",
+      "priority": "保留",
+      "action": "保留修复/新建分工",
+      "candidatePath": null,
+      "cluster": "户外维护",
+      "rationale": "标题已覆盖repair/maintenance/build；先按局部木材与结构评估分段。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "retained-existing-owner",
+      "currentOwner": "/services/outdoor-structures-fencing-pools/deck-builders/",
+      "evidence": [
+        {
+          "path": "/services/outdoor-structures-fencing-pools/deck-builders/",
+          "detail": "标题已覆盖repair/maintenance/build；先按局部木材与结构评估分段。 Existing route and focus retained; no duplicate route created."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G31",
+      "keyword": "handyman cost perth",
+      "existingPath": "/guides/prepare-before-home-repair-quote/",
+      "gapType": "意图聚焦缺口",
+      "priority": "P2",
+      "action": "先完善报价指南",
+      "candidatePath": null,
+      "cluster": "物业维护",
+      "rationale": "已有公司价格范围及报价说明；不是无价格内容。补小时/半天/全天、材料与适用条件，不发布新价。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/guides/prepare-before-home-repair-quote/#handyman-cost-booking",
+      "evidence": [
+        {
+          "path": "/guides/prepare-before-home-repair-quote/",
+          "anchor": "handyman-cost-booking",
+          "heading": "Handyman Cost: Hourly, Half-day & Full-day Bookings",
+          "observedText": "Handyman Cost: Hourly, Half-day & Full-day Bookings Handyman cost in Perth depends on the agreed repair list and how the booking is priced. The existing Ellis handyman service price range provides the published hourly, half-day and full-day labour guide; it is not a final quote or a promise that every task fits one block. Ellis confirms the hours or booking block and written scope after on-site assessment. Ask what the agreed hours cover: preparation, fitting, cleanup and any agreed material collection. Confirm the duration and any minimum or attendance charge rather than assuming that a half-day or full-day label has a fixed number of included hours. Extra time and newly found work need their price and approval agreed before proceeding. What about materials and supplied parts? Separate labour from materials, equipment, removal and disposal, and confirm whether product supply is included. Customer-supplied parts still need compatibility checks; missing fixings or unsuitable products can change the scope. Regulated electrical, plumbing or other specialist work is itemised separately and completed by Ellis's own appropriately licensed personnel. Will grouping repairs guarantee a lower price? No discount is assumed. Bring a prioritised list so Ellis can assess which jobs suit the same visit. Compare quotes for the same hours, tasks, finish and material responsibility. For a managed property, use the approval and access checklist before confirming a booking.",
+          "contextualLinks": [
+            "/services/handyman-interiors-appliance-repairs/handymen/",
+            "/guides/property-manager-maintenance-coordination/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G32",
+      "keyword": "vacate repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/handymen/",
+      "gapType": "深度缺口",
+      "priority": "P2",
+      "action": "维修与清洁分流",
+      "candidatePath": null,
+      "cluster": "物业维护",
+      "rationale": "现有vacate列表及cleaners页；增加批准清单和交接流程，不许保证退bond。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/handymen/#vacate-repairs",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+          "anchor": "vacate-repairs",
+          "heading": "Vacate Repairs & Repair Handover",
+          "observedText": "Vacate Repairs & Repair Handover Vacate repairs address the authorised repair list: for example loose cupboard hardware, damaged wall patches or sticking doors. Bring the property manager's marked list if available and distinguish damage to repair from cleaning tasks. End-of-lease cleaning has its own agreed checklist and quote. Confirm the approval contact, key collection, access window and planned handover date. Ellis scopes the repairs, materials and desired finish, seeks approval for variations and agrees how completion details will be handed over. Existing photos are optional; do not remove fittings to prepare them. A repair booking does not guarantee a bond refund or an inspection result. See wall patching and finish choices where a vacate list includes plaster damage.",
+          "contextualLinks": [
+            "/services/cleaning-removals-pest-hazard/cleaners/",
+            "/services/handyman-interiors-appliance-repairs/plasterers/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G33",
+      "keyword": "handyman joondalup",
+      "existingPath": "/areas/joondalup-northern-suburbs/",
+      "gapType": "已有地域覆盖",
+      "priority": "保留",
+      "action": "完善真实本地证据",
+      "candidatePath": null,
+      "cluster": "综合维修",
+      "rationale": "已有区域页，不规模化制作suburb×service薄页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "retained-existing-owner",
+      "currentOwner": "/areas/joondalup-northern-suburbs/",
+      "evidence": [
+        {
+          "path": "/areas/joondalup-northern-suburbs/",
+          "detail": "已有区域页，不规模化制作suburb×service薄页。 Existing route and focus retained; no duplicate route created."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G34",
+      "keyword": "handyman fremantle",
+      "existingPath": "/areas/fremantle-coastal-south/",
+      "gapType": "已有地域覆盖",
+      "priority": "保留",
+      "action": "完善真实本地证据",
+      "candidatePath": null,
+      "cluster": "综合维修",
+      "rationale": "已有区域页；服务范围以确认及postcode检查为准。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "retained-existing-owner",
+      "currentOwner": "/areas/fremantle-coastal-south/",
+      "evidence": [
+        {
+          "path": "/areas/fremantle-coastal-south/",
+          "detail": "已有区域页；服务范围以确认及postcode检查为准。 Existing route and focus retained; no duplicate route created."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G35",
+      "keyword": "reticulation repairs perth",
+      "existingPath": "/services/gardens-landscaping/gardeners/",
+      "gapType": "业务待确认",
+      "priority": "P3",
+      "action": "先确认承接再研究",
+      "candidatePath": null,
+      "cluster": "新增业务验证",
+      "rationale": "全站没有明确reticulation维修主服务说明；园艺存在不代表已承接喷灌系统维修。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "unconfirmed-not-advertised",
+      "currentOwner": null,
+      "evidence": [
+        {
+          "type": "business-confirmation-required",
+          "detail": "全站没有明确reticulation维修主服务说明；园艺存在不代表已承接喷灌系统维修。 No current commercial owner assigned; no service page, search entry or title added."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G36",
+      "keyword": "washing machine repairs perth",
+      "existingPath": null,
+      "gapType": "业务待确认",
+      "priority": "P3",
+      "action": "先确认承接再研究",
+      "candidatePath": null,
+      "cluster": "新增业务验证",
+      "rationale": "已有oven/dishwasher不代表已承接洗衣机；不得直接新增服务页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "unconfirmed-not-advertised",
+      "currentOwner": null,
+      "evidence": [
+        {
+          "type": "business-confirmation-required",
+          "detail": "已有oven/dishwasher不代表已承接洗衣机；不得直接新增服务页。 No current commercial owner assigned; no service page, search entry or title added."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G37",
+      "keyword": "gas heater servicing perth",
+      "existingPath": "/services/electrical-plumbing-gas-air-conditioning/gas-fitters/",
+      "gapType": "业务待确认",
+      "priority": "P3",
+      "action": "先确认具体scope",
+      "candidatePath": null,
+      "cluster": "新增业务验证",
+      "rationale": "已有gas appliance work不等于已承诺定期heater servicing；核实机型/检测流程与人员范围。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "unconfirmed-not-advertised",
+      "currentOwner": null,
+      "evidence": [
+        {
+          "type": "business-confirmation-required",
+          "detail": "已有gas appliance work不等于已承诺定期heater servicing；核实机型/检测流程与人员范围。 No current commercial owner assigned; no service page, search entry or title added."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G38",
+      "keyword": "shower screen repairs perth",
+      "existingPath": "/services/doors-windows-glass-screens/shower-screens/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有独立服务页却未获旧527词条primary映射；补五金/胶条/玻璃分流。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/doors-windows-glass-screens/shower-screens/#shower-screen-repair-options",
+      "evidence": [
+        {
+          "path": "/services/doors-windows-glass-screens/shower-screens/",
+          "anchor": "shower-screen-repair-options",
+          "heading": "Shower Screen Repairs: Hardware, Seals & Glass",
+          "observedText": "Shower Screen Repairs: Hardware, Seals & Glass Shower screen repairs depend on which part has failed. Ellis checks hinge or roller movement, alignment, handles and fixings for a door that catches. A worn sweep or seal needs a compatible profile and a check of where water escapes. These tasks are distinct from replacement of damaged glass or the whole enclosure. Tell us the screen style, which panel moves and whether any glass or wall fixing is loose. Avoid forcing the door or handling cracked glass. Glazing assessment determines glass handling and replacement needs; wet-area leak assessment addresses moisture not explained by the screen seal. Can you replace just the shower door seal? That may suit a serviceable screen if a compatible seal is available and the leak comes from that edge. The quote confirms the part, fitting and any additional work after assessment; a new seal is not a promise to fix every shower leak.",
+          "contextualLinks": [
+            "/services/doors-windows-glass-screens/glass-glaziers/",
+            "/services/handyman-interiors-appliance-repairs/waterproofing/#leaking-shower-assessment"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G39",
+      "keyword": "paving repairs perth",
+      "existingPath": "/services/roofing-gutters-exterior/pavers/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有专业页；补沉降、松砖、排水与配砖条件，不另建同义页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/roofing-gutters-exterior/pavers/#paving-repair-assessment",
+      "evidence": [
+        {
+          "path": "/services/roofing-gutters-exterior/pavers/",
+          "anchor": "paving-repair-assessment",
+          "heading": "Paving Repairs: Settlement, Loose Pavers & Drainage",
+          "observedText": "Paving Repairs: Settlement, Loose Pavers & Drainage Paving repairs begin with the cause of settlement, loose pavers or raised edges. Ellis checks the affected area, adjoining levels, edging and accessible base before agreeing lift-and-relay work. Tell us where water pools and whether the unevenness returns after previous repairs. Reusing pavers does not remove the need to address failed support or drainage. Confirm the area, use, access width and whether spare matching pavers are available. The quote separates lifting, base preparation, drainage or edging work, replacement pavers and disposal. An older paver match depends on supply and condition; a colour match is not assumed. Does cleaning fix sunken paving? No. Patio and paving cleaning addresses surface dirt, while settlement needs repair assessment. Broader layout or planting changes belong with garden landscaping .",
+          "contextualLinks": [
+            "/services/handyman-interiors-appliance-repairs/handymen/#pressure-cleaning",
+            "/services/gardens-landscaping/garden-landscapers/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G40",
+      "keyword": "roof leak repairs perth",
+      "existingPath": "/services/roofing-gutters-exterior/roofing/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有Roof Leak标题及服务，不是缺页面；补观察条件与安全评估链接。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/roofing-gutters-exterior/roofing/#roof-leak-assessment",
+      "evidence": [
+        {
+          "path": "/services/roofing-gutters-exterior/roofing/",
+          "anchor": "roof-leak-assessment",
+          "heading": "Roof Leak Repairs: Useful Observations & Safe Access",
+          "observedText": "Roof Leak Repairs: Useful Observations & Safe Access For roof leak repairs, tell Ellis the room and location where water appears, the weather at the time and whether it follows wind-driven rain or a recent repair. Staining can show where water emerges without identifying its entry point. We agree safe access and inspect the relevant roof covering, flashings, penetrations and drainage before defining repairs. Use only existing photos or views safely available from ground level; photos are optional. Do not climb onto the roof to prepare a quote request. Building height, roof material, access restrictions and previous repairs help us plan the assessment and identify compatible materials. Should the ceiling be repaired at the same time? Water-entry work and ceiling repairs have separate scopes. Agree how the source will be addressed before cosmetic reinstatement. See our roof and gutter maintenance example and gutter assessment for related drainage work.",
+          "contextualLinks": [
+            "/services/handyman-interiors-appliance-repairs/plasterers/#ceiling-assessment",
+            "/projects/roof-and-gutter-maintenance/",
+            "/services/roofing-gutters-exterior/gutter-services/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G41",
+      "keyword": "air conditioning repairs perth",
+      "existingPath": "/services/electrical-plumbing-gas-air-conditioning/air-conditioning/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有专业服务页；补症状/机型/维修或更换决策，不新增未确认品牌授权。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/electrical-plumbing-gas-air-conditioning/air-conditioning/#aircon-repair-assessment",
+      "evidence": [
+        {
+          "path": "/services/electrical-plumbing-gas-air-conditioning/air-conditioning/",
+          "anchor": "aircon-repair-assessment",
+          "heading": "Air Conditioning Repairs: Symptoms & Repair Choices",
+          "observedText": "Air Conditioning Repairs: Symptoms & Repair Choices Air conditioning repair starts with the system and symptom. Tell Ellis whether the unit is split or ducted if known, the affected rooms, displayed error code and any weak airflow, unusual noise, water leak or loss of cooling. Existing model details for the indoor and outdoor equipment help identify compatible parts; do not remove covers to obtain them. We assess the fault, equipment condition, parts availability and access before discussing repair or replacement. The quote distinguishes investigation, components, installation changes and any electrical or refrigerant work, completed by Ellis's own appropriately licensed personnel. Brand or model information is for assessment and does not imply manufacturer authorisation. Does poor cooling mean a new system is needed? Not necessarily. The symptom needs assessment before that decision. Confirm the system details and your desired outcome, then use the quote preparation guide to compare the same repair or replacement scope.",
+          "contextualLinks": [
+            "/guides/prepare-before-home-repair-quote/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G42",
+      "keyword": "dishwasher repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/dishwasher-repair/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有故障服务页；将不排水、漏水与给排水/电路职责分开。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/dishwasher-repair/#dishwasher-fault-routing",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/dishwasher-repair/",
+          "anchor": "dishwasher-fault-routing",
+          "heading": "Dishwasher Repairs: Drainage, Leaks & Connections",
+          "observedText": "Dishwasher Repairs: Drainage, Leaks & Connections A dishwasher that does not drain may have an appliance fault or a problem at its drainage connection. A leak can also arise inside the machine or at surrounding plumbing. Tell Ellis the model, error code and the stage of the cycle when water remains or escapes; this helps plan assessment without assuming a pump or hose is the cause. The written scope distinguishes appliance diagnosis and compatible parts from supply or waste plumbing work , cabinet access and electrical connection work . Ellis's own appropriately licensed personnel complete regulated work. Stop using a leaking appliance and do not touch wet electrical components. Should I order a pump before the visit? Wait until the fault and model compatibility are checked. Parts availability, removal access and the appliance's condition affect whether repair is viable. Existing photos are optional; a symptom description is enough to begin.",
+          "contextualLinks": [
+            "/services/electrical-plumbing-gas-air-conditioning/plumbers/",
+            "/services/electrical-plumbing-gas-air-conditioning/electricians/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G43",
+      "keyword": "oven repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/oven-repair/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有专业服务页；补不加热/门封/风扇症状与型号信息，不泛化到所有白电。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/oven-repair/#oven-fault-assessment",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/oven-repair/",
+          "anchor": "oven-fault-assessment",
+          "heading": "Oven Repairs: Heating, Fan & Door Symptoms",
+          "observedText": "Oven Repairs: Heating, Fan & Door Symptoms For oven repairs, describe whether there is no heat, uneven heating, a noisy or stopped fan, a door that drops or a worn seal. Tell Ellis which settings are affected and the brand, model and fuel type if known. A seal or hinge fault has a different scope from a heating element, control or fan fault; the symptom alone does not identify the part. Assessment checks the fault, serviceable components and compatible parts before repair is agreed. The quote identifies diagnosis, parts, access or removal and any connection changes. Hard-wired electrical work and gas appliance work are completed by Ellis's own appropriately licensed personnel where required. Can you confirm a replacement part from a description? The model and fault still need checking. Share an existing visible model label if available, but do not dismantle the oven to prepare an enquiry. Oven work does not imply repair availability for every other household appliance.",
+          "contextualLinks": [
+            "/services/electrical-plumbing-gas-air-conditioning/electricians/",
+            "/services/electrical-plumbing-gas-air-conditioning/gas-fitters/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G44",
+      "keyword": "carpet repairs perth",
+      "existingPath": "/services/handyman-interiors-appliance-repairs/carpet-repair/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有repair专页；局部补片/接缝/拉伸与new-carpet页分工。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/handyman-interiors-appliance-repairs/carpet-repair/#carpet-repair-options",
+      "evidence": [
+        {
+          "path": "/services/handyman-interiors-appliance-repairs/carpet-repair/",
+          "anchor": "carpet-repair-options",
+          "heading": "Carpet Repairs: Patches, Joins & Re-stretching",
+          "observedText": "Carpet Repairs: Patches, Joins & Re-stretching Carpet repairs can involve a local patch, a failed seam or join, a lifting edge or re-stretching ripples in otherwise suitable carpet. Ellis checks the backing, surrounding wear, accessible underlay and the damage before agreeing an approach. Tell us whether you have a donor offcut and about any moisture or previous repair. A patch needs compatible material, and wear or fading can make the result visible. A loose carpet may suit re-stretching, while widespread deterioration can make new carpet installation the more relevant enquiry. Repair and full replacement are separate scopes. Can a damaged section be made invisible? Appearance depends on the donor piece, pile direction and existing wear; an invisible match is not promised. Confirm the area, furniture movement, matching material and any moisture investigation in the quote. Use the repair quote checklist to set out the intended result.",
+          "contextualLinks": [
+            "/services/handyman-interiors-appliance-repairs/new-carpet/",
+            "/guides/prepare-before-home-repair-quote/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G45",
+      "keyword": "building inspections perth",
+      "existingPath": "/services/planning-inspection-compliance/building-inspectors/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有inspection服务，补报告交付与检查类型边界，不混成法定certification。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/planning-inspection-compliance/building-inspectors/#inspection-report-scope",
+      "evidence": [
+        {
+          "path": "/services/planning-inspection-compliance/building-inspectors/",
+          "anchor": "inspection-report-scope",
+          "heading": "Building Inspections: Agree the Inspection & Report",
+          "observedText": "Building Inspections: Agree the Inspection & Report A building inspection needs a stated purpose: pre-purchase, handover, maintenance condition or a targeted visible defect. Tell Ellis the property address, inspection type, access contact, areas of concern and preferred report date. We agree the accessible areas, inspection limits and report deliverable before attendance; timing is confirmed directly. The report records observations, limitations and recommended further checks within the brief. Hidden conditions and specialist systems are not assumed to have been inspected. A repair quote or intrusive investigation is a separate step where needed. Is the inspection report building certification? No. A condition inspection and building certification have different purposes and deliverables. If your request concerns proposed structural changes, see structural engineering assessment . Confirm which document is needed before booking rather than treating every property report as an approval.",
+          "contextualLinks": [
+            "/services/planning-inspection-compliance/building-certifiers/",
+            "/services/planning-inspection-compliance/structural-engineers/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G46",
+      "keyword": "structural engineer perth",
+      "existingPath": "/services/planning-inspection-compliance/structural-engineers/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有专业服务页；工程评估/设计/施工三个阶段分开，不推导未知个人资格。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/planning-inspection-compliance/structural-engineers/#engineering-deliverables",
+      "evidence": [
+        {
+          "path": "/services/planning-inspection-compliance/structural-engineers/",
+          "anchor": "engineering-deliverables",
+          "heading": "Structural Engineering: Assessment, Design & Construction",
+          "observedText": "Structural Engineering: Assessment, Design & Construction Structural engineering assessment examines the stated concern or proposed alteration. Tell Ellis whether the request involves changing cracks, a beam, support, footing or a planned wall removal, and share existing plans or reports if available. We agree the investigation and advice needed before a design or building repair is commissioned. Design may require calculations, drawings and details for the defined change. Construction is a separate work scope using the agreed design and applicable approvals; an assessment booking does not automatically include either design or construction. Ellis confirms the appropriate personnel and deliverables for the brief without assuming a particular individual's credentials. Does an engineering report include building the repair? Only work explicitly agreed in the quote is included. Building work , drafting and certification documentation are distinct tasks. Confirm the project objective, access and documents you need so each stage can be scoped clearly.",
+          "contextualLinks": [
+            "/services/building-renovation-structural/builders/",
+            "/services/planning-inspection-compliance/draftsmen/",
+            "/services/planning-inspection-compliance/building-certifiers/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G47",
+      "keyword": "fence repairs perth",
+      "existingPath": "/services/outdoor-structures-fencing-pools/timber-fencing/",
+      "gapType": "已有覆盖、需分工",
+      "priority": "P2",
+      "action": "区分三张既有fencing页",
+      "candidatePath": null,
+      "cluster": "户外维护",
+      "rationale": "timber-fencing主修复，fence-builders主新建，fencing-contractors主项目协调；需要GSC核实是否实际互抢。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/outdoor-structures-fencing-pools/timber-fencing/#fence-repair-owner",
+      "evidence": [
+        {
+          "path": "/services/outdoor-structures-fencing-pools/timber-fencing/",
+          "anchor": "fence-repair-owner",
+          "heading": "Fence Repairs: Retain Sound Timber & Supports",
+          "observedText": "Fence Repairs: Retain Sound Timber & Supports Fence repairs focus on the existing timber fence or side gate. Ellis checks palings, rails, posts, fixings and adjoining support before agreeing local replacement or adjustment. Tell us where the fence leans or the gate drags and whether the issue returned after an earlier repair. New boards alone may not address failed support. Use new fence building for a complete new or replacement run, and fencing project coordination for several sections, gates and staged interfaces. This page remains the timber repair owner. Can just the damaged section be repaired? That depends on the retained posts, rails and available matching timber. Confirm the affected length, access and approval contact before quoting. See our existing timber fence repair example for repair evidence.",
+          "contextualLinks": [
+            "/services/outdoor-structures-fencing-pools/fence-builders/#new-fence-owner",
+            "/services/outdoor-structures-fencing-pools/fencing-contractors/#fencing-project-owner",
+            "/projects/timber-fence-repair/"
+          ]
+        },
+        {
+          "path": "/services/outdoor-structures-fencing-pools/fence-builders/",
+          "anchor": "new-fence-owner",
+          "detail": "Distinct reciprocal new-build/project owner; all historical routes retained."
+        },
+        {
+          "path": "/services/outdoor-structures-fencing-pools/fencing-contractors/",
+          "anchor": "fencing-project-owner",
+          "detail": "Distinct reciprocal new-build/project owner; all historical routes retained."
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G48",
+      "keyword": "pest control perth",
+      "existingPath": "/services/cleaning-removals-pest-hazard/pest-control/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有服务页；具体虫种及处置流程只能按确认业务展开。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/cleaning-removals-pest-hazard/pest-control/#pest-treatment-scope",
+      "evidence": [
+        {
+          "path": "/services/cleaning-removals-pest-hazard/pest-control/",
+          "anchor": "pest-treatment-scope",
+          "heading": "Pest Control: Identification Before Treatment",
+          "observedText": "Pest Control: Identification Before Treatment Pest control begins with identification of the activity and affected areas. Tell Ellis where and when you see signs, earlier treatments and any household access concerns. Existing safe photos are optional; leave unknown pests, nests and droppings undisturbed. We confirm whether the identified pest and treatment are within the service scope before booking treatment. The plan records treatment areas, preparation, occupant or pet precautions and any included follow-up. Method and timing depend on the assessment; a general pest enquiry does not confirm every species, a particular chemical treatment or ongoing elimination. Ellis confirms the appropriate personnel for the work, including its own appropriately licensed personnel for regulated tasks. Does treatment include all later visits? Only agreed follow-up is included. Confirm monitoring, return visits and exclusions in the written quote. A building condition inspection and any cleaning have separate purposes and scopes.",
+          "contextualLinks": [
+            "/services/planning-inspection-compliance/building-inspectors/",
+            "/services/cleaning-removals-pest-hazard/cleaners/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    },
+    {
+      "id": "G49",
+      "keyword": "lawn mowing perth",
+      "existingPath": "/services/gardens-landscaping/lawn-mowing/",
+      "gapType": "词表缺口",
+      "priority": "P2",
+      "action": "完善既有页",
+      "candidatePath": null,
+      "cluster": "全站扩展",
+      "rationale": "已有专业页；单次/周期、长草与清运分开，不重复开near-me页。",
+      "volume": null,
+      "perthVolume": null,
+      "validation": "Source editorial assessment + public search sample; no GSC/geo-controlled Google SERP",
+      "status": "implemented-existing-page",
+      "currentOwner": "/services/gardens-landscaping/lawn-mowing/#mowing-visit-scope",
+      "evidence": [
+        {
+          "path": "/services/gardens-landscaping/lawn-mowing/",
+          "anchor": "mowing-visit-scope",
+          "heading": "Lawn Mowing: One-off Visits, Regular Work & Long Grass",
+          "observedText": "Lawn Mowing: One-off Visits, Regular Work & Long Grass Lawn mowing can be scoped as a one-off visit or discussed as recurring work, with frequency and availability confirmed directly. Tell Ellis the front, rear and side lawn areas, present growth, gate width, slopes and obstacles. Long grass can need a different initial cut and cleanup from a regular maintenance visit; it is assessed before a booking is agreed. Confirm accessible edges, clippings collection or mulching, green-bin use and any extra green-waste removal. Mowing does not include every garden task: use garden clean-up for broader overgrowth and garden maintenance for other agreed care. Is clipping removal included every time? It depends on the written scope. Agree the collection or mulching method and disposal before attendance, especially for a long-grass first visit. Point out known irrigation fittings and debris without assuming mowing includes irrigation-system repair.",
+          "contextualLinks": [
+            "/services/gardens-landscaping/garden-clean-up/",
+            "/services/gardens-landscaping/gardeners/"
+          ]
+        }
+      ],
+      "researchLimit": "No current volume/KD, controlled Google Perth SERP or GSC Query x Page evidence; editorial scope decision only."
+    }
+  ]
+}

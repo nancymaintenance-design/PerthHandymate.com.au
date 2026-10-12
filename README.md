@@ -4,7 +4,7 @@ Static website candidate for Ellis Services Group. The stated service market is 
 
 ## Package contents
 
-- 114 static HTML pages, including the branded `404.html`; 113 URLs in the sitemap
+- 118 static HTML pages, including the branded `404.html`; 117 URLs in the sitemap
 - Shared CSS, JavaScript, images and public data files
 - `robots.txt`, `sitemap.xml` and `vercel.json`
 - Portable reproducible build, local preview server and verification scripts
@@ -24,17 +24,17 @@ node tests/check-site.js
 
 The build recreates ignored `dist/` and normalizes internal index links. Rebuild after editing source. The preview serves only `dist/` and exits with build instructions when that output is missing.
 
-In a separate terminal, use an available port (the round-one acceptance preview uses 4180):
+In a separate terminal, use an available port (the current keyword-gap candidate preview uses 4182):
 
 ```powershell
-$env:PORT=4180
+$env:PORT=4182
 node preview-server.js
 ```
 
-Open [the local preview](http://127.0.0.1:4180/). The server binds only to `127.0.0.1`; stop your preview with `Ctrl+C`. Keep it running while executing the HTTP acceptance check:
+Open [the local preview](http://127.0.0.1:4182/). The server binds only to `127.0.0.1`; stop your preview with `Ctrl+C`. Keep it running while executing the HTTP acceptance check:
 
 ```powershell
-$env:ELLIS_PREVIEW_PORT=4180
+$env:ELLIS_PREVIEW_PORT=4182
 node tests/http-smoke.js
 ```
 
@@ -48,9 +48,9 @@ Canonical URLs, structured data, the sitemap and robots policy use the primary o
 
 Local slash/index redirects preserve the query string and stay on localhost. Explicit `/404.html` returns 200 with `noindex,follow`; unknown paths end with status 404 and the same recovery page. This preview does not validate Vercel host redirects, edge routing, response security/cache headers, production mail delivery or DNS.
 
-The source baseline was captured from the GitHub `e84e79b` ZIP as synthetic local Git snapshot `3dcfede` after Git transport hung. Future integration must apply a reviewed diff onto the real Git history. Never force-push the synthetic snapshot history.
+The current source checkout uses the real Git history of `nancymaintenance-design/PerthHandymate.com.au`, with latest verified remote main `cdd814d7f93bf224142276076a5d03a803ce9c53` (12 October 2026). Local work is on `codex/phm-keyword-gap-local-2026-10-12`; the 118-page candidate includes four supplementary task pages beyond the unchanged 67-service priced catalogue. This is local work only and does not authorise a push or release.
 
-The committed keyword data has 31 owner clusters and four guide records. The historical 527-term inventory was unavailable and has not been verified. Source inspection also corrected the initial renderer-orphan claim: the renderer already had an inbound directory link; this round strengthens contextual discovery.
+The committed historical inventory contains 527 term IDs and routes in `docs/seo/content-round2/term-routing.json`; they remain intact. Current editorial intent ownership for all 67 catalogue pages and four supplements, the 49 accepted gap actions and supplemental current-term mapping are in `docs/seo/keyword-gap-round-2026-10-12/`. The older 31 owner clusters and four guide records describe the previous content round, not the current full service ownership.
 
 ## Local verification record
-Use [the 10 October 2026 round-one local verification record](docs/seo/2026-10-10-round1-local-verification.md) and this README for current acceptance evidence and boundaries. Older September reports, including `docs/seo/seo-implementation-report.md`, preserve historical evidence and do not describe this round's current state or grant deployment authorization.
+Current evidence: [12 October keyword-gap ownership and coverage](docs/seo/keyword-gap-round-2026-10-12/README.md), plus Task 1 and Task 2 reports under `../reports/content-gap-local-2026-10-12/`. The [10 October round-one local record](docs/seo/2026-10-10-round1-local-verification.md) and older September reports remain dated historical evidence. Their 114-page or 99/15 approval counts do not describe the expanded candidate and do not grant deployment authorisation.

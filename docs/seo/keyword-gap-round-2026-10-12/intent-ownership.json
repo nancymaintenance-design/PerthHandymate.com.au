@@ -1,0 +1,1801 @@
+{
+  "date": "2026-10-12",
+  "sourceBaseline": "cdd814d7f93bf224142276076a5d03a803ce9c53",
+  "task1PreservedHead": "c9d35dd4fef5a0ac2ca061336faa91498501aa53",
+  "acceptedSpecification": "reports/keyword-gap-2026-10-12/cluster-plan.md + gap-candidates.json",
+  "status": "local-candidate-not-published",
+  "canonicalServices": [
+    {
+      "path": "/services/electrical-plumbing-gas-air-conditioning/air-conditioning/",
+      "key": "air-conditioning",
+      "primaryQuery": "air conditioning perth",
+      "primaryIntent": "Air conditioning help can cover a new split or ducted system, a poorly performing unit, servicing needs or replacement advice for a home or managed property.",
+      "scope": "Air conditioning help can cover a new split or ducted system, a poorly performing unit, servicing needs or replacement advice for a home or managed property.",
+      "taskSeeds": [
+        "Assess the room layout, existing system and suitable unit type",
+        "Install or replace indoor and outdoor equipment where the scope permits",
+        "Investigate weak airflow, unusual noise, leaks or temperature problems"
+      ],
+      "quotePreparation": [
+        "Property type, room sizes and the areas that need heating or cooling",
+        "Photos and model details of any existing indoor and outdoor units",
+        "Switchboard location, outdoor-unit access and preferred outcome"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for air conditioning?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/blinds-and-curtains/",
+      "key": "blinds-and-curtains",
+      "primaryQuery": "blinds & curtains perth",
+      "primaryIntent": "Blind and curtain services cover measuring, fitting and repairing common window furnishings, from roller blinds to tracks, rods and curtain systems.",
+      "scope": "Blind and curtain services cover measuring, fitting and repairing common window furnishings, from roller blinds to tracks, rods and curtain systems.",
+      "taskSeeds": [
+        "Measure windows for suitable blinds, curtains, tracks or rods",
+        "Fit supplied window furnishings and mounting hardware",
+        "Repair loose brackets, damaged cords, tracks or operating mechanisms"
+      ],
+      "quotePreparation": [
+        "Window measurements, wall material and number of openings",
+        "Photos showing frames, existing brackets and nearby obstructions",
+        "Product details and whether items are supplied or need sourcing"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for blinds & curtains?",
+      "historicalPrimaryTermIds": [
+        "HM0199",
+        "HM0200",
+        "HM0201",
+        "HM0202",
+        "HM0203",
+        "HM0204",
+        "HM0205",
+        "HM0206",
+        "HM0207",
+        "HM0520"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/carpenters/",
+      "key": "carpenters",
+      "primaryQuery": "carpenters perth",
+      "primaryIntent": "Carpentry enquiries can include timber repairs, internal fit-out, framing adjustments and made-to-fit features around the home.",
+      "scope": "Carpentry enquiries can include timber repairs, internal fit-out, framing adjustments and made-to-fit features around the home.",
+      "taskSeeds": [
+        "Repair or replace damaged timber trim, doors, frames and skirting",
+        "Build shelving, storage or other fitted timber elements",
+        "Complete scoped framing, lining or finishing carpentry"
+      ],
+      "quotePreparation": [
+        "Photos and dimensions of the item or area",
+        "Timber species, finish or matching requirements if known",
+        "Any signs of rot, movement, termites or water damage"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for carpenters?",
+      "historicalPrimaryTermIds": [
+        "HM0122",
+        "HM0123",
+        "HM0124",
+        "HM0144",
+        "HM0145",
+        "HM0146",
+        "HM0484",
+        "HM0125",
+        "HM0126",
+        "HM0147",
+        "HM0148",
+        "HM0127",
+        "HM0128",
+        "HM0149",
+        "HM0150",
+        "HM0515",
+        "HM0129",
+        "HM0130",
+        "HM0151",
+        "HM0152"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/carpet-repair/",
+      "key": "carpet-repair",
+      "primaryQuery": "carpet repairs perth",
+      "primaryIntent": "Repair existing carpet through compatible patches, joins, edges or re-stretching.",
+      "scope": "Carpet repair focuses on localised damage, loose edges, wrinkles, joins and small areas affected by wear, stains or burns.",
+      "taskSeeds": [
+        "Re-stretch loose or rippled carpet",
+        "Patch damaged sections using a compatible donor piece",
+        "Repair joins, edges, transitions or lifting around doorways"
+      ],
+      "quotePreparation": [
+        "Photos of the damage and the overall room",
+        "Carpet type, age and whether matching offcuts are available",
+        "Approximate affected dimensions and any moisture history"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for carpet repair?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/roofing-gutters-exterior/cladding/",
+      "key": "cladding",
+      "primaryQuery": "cladding perth",
+      "primaryIntent": "Cladding work can address damaged exterior boards or panels, localised weather exposure, replacement sections and new wall-finish enquiries.",
+      "scope": "Cladding work can address damaged exterior boards or panels, localised weather exposure, replacement sections and new wall-finish enquiries.",
+      "taskSeeds": [
+        "Inspect visible deterioration, gaps, loose sections or failed junctions",
+        "Replace compatible cladding boards or panels within an agreed scope",
+        "Detail corners, openings and flashings as part of an exterior envelope job"
+      ],
+      "quotePreparation": [
+        "Building type, wall elevation and approximate affected area",
+        "Photos of the cladding profile, damage and nearby roof or window junctions",
+        "Cladding material and age, building height and access to the affected wall"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for cladding?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/electrical-plumbing-gas-air-conditioning/electricians/",
+      "key": "electricians",
+      "primaryQuery": "electricians perth",
+      "primaryIntent": "Electrical services cover faults, fittings, power points, lighting, switchboards and electrical work associated with renovations or appliances.",
+      "scope": "Electrical services cover faults, fittings, power points, lighting, switchboards and electrical work associated with renovations or appliances.",
+      "taskSeeds": [
+        "Diagnose tripping circuits, loss of power or faulty fittings",
+        "Install or replace lights, switches, power points and hard-wired equipment",
+        "Assess switchboards, safety switches and renovation electrical requirements"
+      ],
+      "quotePreparation": [
+        "What stopped working, when it began and whether circuits are tripping",
+        "Photos of the fitting, switchboard labels or equipment model where safe",
+        "Property age, access details and the rooms or circuits involved"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for electricians?",
+      "historicalPrimaryTermIds": [
+        "HM0176",
+        "HM0453",
+        "HM0456",
+        "HM0460"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/floor-sanding/",
+      "key": "floor-sanding",
+      "primaryQuery": "floor sanding perth",
+      "primaryIntent": "Floor sanding can restore suitable timber floors by removing worn coatings, smoothing boards and preparing the surface for a chosen finish.",
+      "scope": "Floor sanding can restore suitable timber floors by removing worn coatings, smoothing boards and preparing the surface for a chosen finish.",
+      "taskSeeds": [
+        "Assess timber condition, coating build-up and board movement",
+        "Sand accessible timber floors and edges to an agreed level",
+        "Apply a compatible coating system after colour and sheen selection"
+      ],
+      "quotePreparation": [
+        "Room dimensions and clear photos in natural light",
+        "Timber type and existing coating if known",
+        "Stains, protruding nails, loose boards, furniture to move and entry arrangements"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for floor sanding?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/doors-windows-glass-screens/fly-screens/",
+      "key": "fly-screens",
+      "primaryQuery": "fly screens & repairs perth",
+      "primaryIntent": "Fly-screen services cover new mesh screens, remeshing, frame repairs and adjustments to fixed, sliding or hinged screen units.",
+      "scope": "Fly-screen services cover new mesh screens, remeshing, frame repairs and adjustments to fixed, sliding or hinged screen units.",
+      "taskSeeds": [
+        "Remesh torn or brittle insect screens",
+        "Repair or replace damaged frames, corners, rollers and handles",
+        "Measure and fit screens for compatible windows or doors"
+      ],
+      "quotePreparation": [
+        "Opening dimensions and screen type",
+        "Photos of the full frame, track and damaged area",
+        "Preferred mesh type and whether pets or coastal exposure are considerations"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for fly screens & repairs?",
+      "historicalPrimaryTermIds": [
+        "HM0056",
+        "HM0057",
+        "HM0058",
+        "HM0059",
+        "HM0060",
+        "HM0511",
+        "HM0061",
+        "HM0062",
+        "HM0063",
+        "HM0064"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/electrical-plumbing-gas-air-conditioning/insulation/",
+      "key": "insulation",
+      "primaryQuery": "insulation perth",
+      "primaryIntent": "Insulation enquiries can cover roof, ceiling, wall or underfloor upgrades, missing sections and comfort or energy-performance concerns.",
+      "scope": "Insulation enquiries can cover roof, ceiling, wall or underfloor upgrades, missing sections and comfort or energy-performance concerns.",
+      "taskSeeds": [
+        "Inspect accessible insulation coverage and condition",
+        "Install suitable bulk or reflective insulation to the agreed area",
+        "Address gaps around penetrations while maintaining required clearances"
+      ],
+      "quotePreparation": [
+        "Area to be insulated and property construction type",
+        "Roof-space, underfloor or wall access details",
+        "Any moisture, pest, wiring or existing-insulation concerns"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for insulation?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/new-carpet/",
+      "key": "new-carpet",
+      "primaryQuery": "new carpet installation perth",
+      "primaryIntent": "Supply and install replacement carpet for an agreed area, distinct from local patches, joins and re-stretching.",
+      "scope": "New-carpet services cover measuring, product selection support, removal planning and installation across bedrooms, living areas or managed properties.",
+      "taskSeeds": [
+        "Measure rooms, stairs and transitions for carpet quantities",
+        "Prepare for underlay and carpet installation over suitable substrates",
+        "Install carpet, joins, edges and transition trims to the agreed layout"
+      ],
+      "quotePreparation": [
+        "Floor plan or room measurements and photos",
+        "Preferred fibre, colour, pile and use requirements",
+        "Existing flooring, furniture, access and disposal needs"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for new carpet?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/plasterers/",
+      "key": "plasterers",
+      "primaryQuery": "plasterers perth",
+      "primaryIntent": "Plastering covers wall and ceiling repairs, new linings, joints, cornices and surfaces that need preparation before decorating.",
+      "scope": "Plastering covers wall and ceiling repairs, new linings, joints, cornices and surfaces that need preparation before decorating.",
+      "taskSeeds": [
+        "Patch holes, impact damage and localised ceiling defects",
+        "Install plasterboard and finish joints for scoped alterations",
+        "Repair or replace cornice and prepare surfaces for painting"
+      ],
+      "quotePreparation": [
+        "Photos with an object for scale and the affected dimensions",
+        "Whether damage is on a wall, ceiling, wet area or external surface",
+        "Any leak, movement, cracking or previous repair history"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for plasterers?",
+      "historicalPrimaryTermIds": [
+        "HM0100",
+        "HM0101",
+        "HM0102",
+        "HM0111",
+        "HM0112",
+        "HM0113",
+        "HM0506",
+        "HM0103",
+        "HM0104",
+        "HM0114",
+        "HM0115",
+        "HM0105",
+        "HM0106",
+        "HM0116",
+        "HM0117",
+        "HM0107",
+        "HM0108",
+        "HM0118",
+        "HM0119",
+        "HM0518"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/electrical-plumbing-gas-air-conditioning/plumbers/",
+      "key": "plumbers",
+      "primaryQuery": "plumbers perth",
+      "primaryIntent": "Plumbing services can address leaks, blocked fixtures, taps, toilets, pipework and water connections associated with repairs or upgrades.",
+      "scope": "Plumbing services can address leaks, blocked fixtures, taps, toilets, pipework and water connections associated with repairs or upgrades.",
+      "taskSeeds": [
+        "Locate and repair leaking accessible pipework or fixtures",
+        "Clear suitable blocked sinks, toilets or drains after assessment",
+        "Install or replace taps, toilets and plumbing-connected fixtures"
+      ],
+      "quotePreparation": [
+        "Where the problem appears and which fixtures are affected",
+        "When it started, whether water can be isolated and any visible damage",
+        "Photos, fixture details and access to meters, valves or drains"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for plumbers?",
+      "historicalPrimaryTermIds": [
+        "HM0452",
+        "HM0455",
+        "HM0459"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/doors-windows-glass-screens/shower-screens/",
+      "key": "shower-screens",
+      "primaryQuery": "shower screens perth",
+      "primaryIntent": "Shower-screen work includes measuring, installation, adjustment and replacement of framed, semi-frameless or frameless enclosures.",
+      "scope": "Shower-screen work includes measuring, installation, adjustment and replacement of framed, semi-frameless or frameless enclosures.",
+      "taskSeeds": [
+        "Measure the shower opening and check wall and floor conditions",
+        "Install a suitable screen, door and hardware system",
+        "Adjust hinges, rollers, seals and alignment on serviceable screens"
+      ],
+      "quotePreparation": [
+        "Opening measurements and bathroom photos",
+        "Screen style, glass configuration and hardware finish preferences",
+        "Leaks, loose panels, cracked glass or wall-fixing concerns"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for shower screens?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/tiling/",
+      "key": "tiling",
+      "primaryQuery": "tile repairs and regrouting perth",
+      "primaryIntent": "Tile repairs, grout and visible surface resealing; investigate loose tiles and substrate conditions before finish work.",
+      "scope": "Tiling enquiries can cover new wall or floor finishes, replacement of damaged tiles, regrouting and preparation of suitable substrates.",
+      "taskSeeds": [
+        "Lay wall or floor tiles to an agreed pattern and finish",
+        "Replace localised cracked or loose tiles where a compatible match exists",
+        "Renew grout or sealant after checking the underlying condition"
+      ],
+      "quotePreparation": [
+        "Area dimensions, tile size and layout preference",
+        "Photos of the substrate, damage, corners and penetrations",
+        "Whether tiles are supplied and any known waterproofing or movement issue"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for tiling?",
+      "historicalPrimaryTermIds": [
+        "HM0254",
+        "HM0255",
+        "HM0256",
+        "HM0258",
+        "HM0259",
+        "HM0260",
+        "HM0517",
+        "HM0261",
+        "HM0262",
+        "HM0265",
+        "HM0266",
+        "HM0267",
+        "HM0268",
+        "HM0269",
+        "HM0270",
+        "HM0271",
+        "HM0272",
+        "HM0273"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/waterproofing/",
+      "key": "waterproofing",
+      "primaryQuery": "shower waterproofing perth",
+      "primaryIntent": "Assess leaking wet areas and scope membrane and junction repairs separately from surface joints and plumbing.",
+      "scope": "Waterproofing services address membranes and junction detailing in bathrooms, balconies and other wet areas as part of an appropriately prepared project.",
+      "taskSeeds": [
+        "Assess the proposed wet area and substrate condition",
+        "Apply a compatible membrane system to the specified zones",
+        "Detail corners, penetrations, wastes and upturns before finishes are installed"
+      ],
+      "quotePreparation": [
+        "Plans or dimensions and the wet-area location",
+        "Photos of the prepared substrate and all penetrations",
+        "Any leak history, existing finishes and downstream damage"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for waterproofing?",
+      "historicalPrimaryTermIds": [
+        "HM0463",
+        "HM0464",
+        "HM0465",
+        "HM0467",
+        "HM0468",
+        "HM0469",
+        "HM0470",
+        "HM0471"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/cleaning-removals-pest-hazard/asbestos-removal/",
+      "key": "asbestos-removal",
+      "primaryQuery": "asbestos removal perth",
+      "primaryIntent": "Asbestos-removal enquiries require controlled assessment and, where confirmed, compliant removal and disposal by Ellis team members authorised for the material and job type.",
+      "scope": "Asbestos-removal enquiries require controlled assessment and, where confirmed, compliant removal and disposal by Ellis team members authorised for the material and job type.",
+      "taskSeeds": [
+        "Arrange identification or sampling through a competent asbestos professional",
+        "Prepare a removal scope with isolation, controls and clearance needs",
+        "Remove and dispose of confirmed asbestos-containing material through authorised channels"
+      ],
+      "quotePreparation": [
+        "Material location, approximate area and current condition",
+        "Building age, renovation history and any existing laboratory report",
+        "Photos taken without touching the material, plus occupancy and access details"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for asbestos removal?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/building-renovation-structural/concrete-resurfacing/",
+      "key": "concrete-resurfacing",
+      "primaryQuery": "concrete resurfacing perth",
+      "primaryIntent": "Concrete resurfacing refreshes a sound slab or paved area with a compatible coating or overlay after condition and preparation checks.",
+      "scope": "Concrete resurfacing refreshes a sound slab or paved area with a compatible coating or overlay after condition and preparation checks.",
+      "taskSeeds": [
+        "Assess cracking, contamination, moisture and existing coatings",
+        "Prepare the surface by suitable cleaning or mechanical methods",
+        "Apply a selected resurfacing system and finish to the agreed area"
+      ],
+      "quotePreparation": [
+        "Area dimensions, use and desired appearance",
+        "Photos of cracks, stains, drainage and transitions",
+        "Existing coating details, vehicle loads and access timing"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for concrete resurfacing?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/roofing-gutters-exterior/gutter-services/",
+      "key": "gutter-services",
+      "primaryQuery": "gutter services perth",
+      "primaryIntent": "Ellis cleans, repairs and replaces blocked, leaking, rusted or loose gutters and downpipes in Perth. We check the cause of overflow or poor drainage and confirm which sections need cleaning, resealing or replacement.",
+      "scope": "Ellis cleans, repairs and replaces blocked, leaking, rusted or loose gutters and downpipes in Perth. We check the cause of overflow or poor drainage and confirm which sections need cleaning, resealing or replacement.",
+      "taskSeeds": [
+        "Remove accessible leaf build-up and check outlets for blockages",
+        "Repair leaking joins, loose brackets and localised damaged sections",
+        "Replace deteriorated gutters or downpipes and review falls and discharge points"
+      ],
+      "quotePreparation": [
+        "Building height, roof type and safe access points",
+        "Photos of overflow locations, rust, sagging and downpipe connections",
+        "Whether the issue occurs in light rain, heavy rain or remains constant"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for gutter services?",
+      "historicalPrimaryTermIds": [
+        "HM0331",
+        "HM0332",
+        "HM0333",
+        "HM0334",
+        "HM0335",
+        "HM0336",
+        "HM0337",
+        "HM0338",
+        "HM0339",
+        "HM0341"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/roofing-gutters-exterior/house-painters/",
+      "key": "house-painters",
+      "primaryQuery": "house painters perth",
+      "primaryIntent": "House painting can cover interior rooms, exterior surfaces, trims and repainting programs after preparation and coating compatibility are assessed.",
+      "scope": "House painting can cover interior rooms, exterior surfaces, trims and repainting programs after preparation and coating compatibility are assessed.",
+      "taskSeeds": [
+        "Prepare surfaces by cleaning, filling and sanding where suitable",
+        "Apply compatible primers and finish coats to agreed areas",
+        "Paint walls, ceilings, trims or exterior elements to the selected scheme"
+      ],
+      "quotePreparation": [
+        "Rooms or elevations, dimensions and current surface condition",
+        "Colour, sheen and product preferences if selected",
+        "Access, furniture, peeling paint, moisture or previous coating concerns"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for house painters?",
+      "historicalPrimaryTermIds": [
+        "HM0133",
+        "HM0134",
+        "HM0135",
+        "HM0136",
+        "HM0137",
+        "HM0138",
+        "HM0139",
+        "HM0140",
+        "HM0141"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/doors-windows-glass-screens/door-installation/",
+      "key": "door-installation",
+      "primaryQuery": "door installation perth",
+      "primaryIntent": "Door-installation services cover internal and external doors, frames, hinges, hardware and adjustments needed for a secure, smooth fit.",
+      "scope": "Door-installation services cover internal and external doors, frames, hinges, hardware and adjustments needed for a secure, smooth fit.",
+      "taskSeeds": [
+        "Measure the opening and check frame condition and clearances",
+        "Fit a compatible hinged, sliding or cavity door system",
+        "Install or adjust hinges, handles, locks, closers and weather seals"
+      ],
+      "quotePreparation": [
+        "Opening width, height, wall thickness and door location",
+        "Photos of the frame, threshold, swing area and existing hardware",
+        "Door type, material, fire or security requirements if known"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for door installation?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/roofing-gutters-exterior/pavers/",
+      "key": "pavers",
+      "primaryQuery": "pavers perth",
+      "primaryIntent": "Paving services cover new paths and outdoor areas, lifted or sunken sections, edging and repairs where the base and drainage are suitable.",
+      "scope": "Paving services cover new paths and outdoor areas, lifted or sunken sections, edging and repairs where the base and drainage are suitable.",
+      "taskSeeds": [
+        "Prepare or repair the base for a stable paved surface",
+        "Lay pavers to the chosen pattern, level and edge restraint",
+        "Lift and relay localised uneven sections after investigating the cause"
+      ],
+      "quotePreparation": [
+        "Area dimensions, intended use and paver preference",
+        "Photos showing levels, drainage points and adjoining surfaces",
+        "Access for materials, existing base and any tree-root or settlement issue"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for pavers?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/roofing-gutters-exterior/roofing/",
+      "key": "roofing",
+      "primaryQuery": "roofing & roof repairs perth",
+      "primaryIntent": "Roofing enquiries include leak investigation, damaged tiles or sheets, flashings, roof penetrations and larger repair or replacement scopes.",
+      "scope": "Roofing enquiries include leak investigation, damaged tiles or sheets, flashings, roof penetrations and larger repair or replacement scopes.",
+      "taskSeeds": [
+        "Inspect accessible roof coverings, ridges, flashings and penetrations",
+        "Repair or replace damaged tiles, sheets or localised components",
+        "Trace likely water-entry paths and address agreed roof defects"
+      ],
+      "quotePreparation": [
+        "Roof material, building height and approximate age",
+        "Photos from ground level and where internal staining appears",
+        "When leaks occur, previous repairs and safe access information"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for roofing & roof repairs?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/doors-windows-glass-screens/skylights/",
+      "key": "skylights",
+      "primaryQuery": "skylights perth",
+      "primaryIntent": "Skylight services can cover new units, replacements, leaking junctions and ventilation or light improvements in suitable roof locations.",
+      "scope": "Skylight services can cover new units, replacements, leaking junctions and ventilation or light improvements in suitable roof locations.",
+      "taskSeeds": [
+        "Assess roof type, ceiling layout and proposed skylight position",
+        "Install or replace compatible skylight and flashing components",
+        "Investigate leaks, condensation or failed seals around an existing unit"
+      ],
+      "quotePreparation": [
+        "Roof and ceiling photos, room location and roof material",
+        "Existing unit brand, dimensions and opening style if available",
+        "Leak timing, access conditions and desired light or ventilation outcome"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for skylights?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/verandah-builders/",
+      "key": "verandah-builders",
+      "primaryQuery": "verandah builders perth",
+      "primaryIntent": "Verandah projects can range from replacing components to planning a new covered outdoor area connected to a home.",
+      "scope": "Verandah projects can range from replacing components to planning a new covered outdoor area connected to a home.",
+      "taskSeeds": [
+        "Develop the footprint, roof form and connection details for a verandah",
+        "Construct framing, roofing, posts and selected finishes to an approved scope",
+        "Repair deteriorated boards, roof sheets or structural elements after assessment"
+      ],
+      "quotePreparation": [
+        "Site dimensions, photos and preferred footprint",
+        "House construction, roof relationship and drainage considerations",
+        "Desired materials, use and any plans or approvals already held"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for verandah builders?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/doors-windows-glass-screens/window-installation/",
+      "key": "window-installation",
+      "primaryQuery": "window installation perth",
+      "primaryIntent": "Window installation covers measuring and fitting replacement or new window units while addressing openings, flashings, seals and finishes.",
+      "scope": "Window installation covers measuring and fitting replacement or new window units while addressing openings, flashings, seals and finishes.",
+      "taskSeeds": [
+        "Measure the structural opening and select a compatible window configuration",
+        "Remove and replace an existing unit within an agreed scope",
+        "Install flashings, seals and trims appropriate to the wall system"
+      ],
+      "quotePreparation": [
+        "Opening measurements, wall construction and storey level",
+        "Photos inside and outside, including sills and surrounding finishes",
+        "Frame material, glazing, opening style and performance preferences"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for window installation?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/doors-windows-glass-screens/window-repairs/",
+      "key": "window-repairs",
+      "primaryQuery": "window repairs perth",
+      "primaryIntent": "Window repair addresses sticking sashes, failed rollers, damaged hardware, draughts, seals and localised frame defects where the unit remains serviceable.",
+      "scope": "Window repair addresses sticking sashes, failed rollers, damaged hardware, draughts, seals and localised frame defects where the unit remains serviceable.",
+      "taskSeeds": [
+        "Adjust or repair hinges, stays, rollers, locks and balances",
+        "Replace suitable seals, catches or other worn window hardware",
+        "Repair localised frame or sill damage after identifying moisture sources"
+      ],
+      "quotePreparation": [
+        "Window style, material and approximate age",
+        "Photos of the full window, hardware and damaged area",
+        "How operation has changed and whether water entry is present"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for window repairs?",
+      "historicalPrimaryTermIds": [
+        "HM0067",
+        "HM0068",
+        "HM0069",
+        "HM0070",
+        "HM0071",
+        "HM0072",
+        "HM0073",
+        "HM0074",
+        "HM0075",
+        "HM0521"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/deck-builders/",
+      "key": "deck-builders",
+      "primaryQuery": "deck builders perth",
+      "primaryIntent": "Deck services can include new timber or composite platforms, board replacement, stairs, balustrades and refurbishment of an existing deck.",
+      "scope": "Deck services can include new timber or composite platforms, board replacement, stairs, balustrades and refurbishment of an existing deck.",
+      "taskSeeds": [
+        "Plan deck dimensions, levels, materials and connection points",
+        "Build framing, decking, stairs and edge details to an agreed scope",
+        "Replace deteriorated boards or components after checking the supporting structure"
+      ],
+      "quotePreparation": [
+        "Site measurements, height above ground and intended use",
+        "Photos of access, ground conditions and the house connection",
+        "Material preference and any existing drawings or approvals"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for deck builders?",
+      "historicalPrimaryTermIds": [
+        "HM0309",
+        "HM0310",
+        "HM0311",
+        "HM0312",
+        "HM0313",
+        "HM0314",
+        "HM0315",
+        "HM0316",
+        "HM0317"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/fence-builders/",
+      "key": "fence-builders",
+      "primaryQuery": "new fence installation perth",
+      "primaryIntent": "Build a new fence or replace a complete run to an agreed material and layout.",
+      "scope": "Fence-building enquiries cover new boundary or internal fences, replacement runs, gates and common materials such as timber, metal or composite systems.",
+      "taskSeeds": [
+        "Measure the fence line and confirm levels and access",
+        "Install posts, rails, panels and gates to the selected system",
+        "Replace a failed fence run after reviewing footings and ground conditions"
+      ],
+      "quotePreparation": [
+        "Fence length, height, material and gate requirements",
+        "Photos of boundaries, slopes, retaining walls and access",
+        "Any neighbour agreement, survey information or existing fence issues"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for fence builders?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/fencing-contractors/",
+      "key": "fencing-contractors",
+      "primaryQuery": "fencing projects perth",
+      "primaryIntent": "Coordinate multi-section fencing, gates, materials, interfaces and staging.",
+      "scope": "Fencing contractors can coordinate larger, mixed-material or site-specific fencing packages for homes, strata and managed properties.",
+      "taskSeeds": [
+        "Assess a multi-section fence layout and performance needs",
+        "Deliver replacement, security or screening fencing to a defined specification",
+        "Coordinate gates, access points and interfaces with walls or landscaping"
+      ],
+      "quotePreparation": [
+        "Site plan, total lengths, heights and fence purpose",
+        "Material or performance specification and gate schedule",
+        "Boundary, access, ground condition and staging information"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for fencing contractors?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/gardens-landscaping/garden-clean-up/",
+      "key": "garden-clean-up",
+      "primaryQuery": "garden clean up perth",
+      "primaryIntent": "Garden clean-up helps restore overgrown or untidy outdoor areas through a defined mix of cutting back, clearing and green-waste handling.",
+      "scope": "Garden clean-up helps restore overgrown or untidy outdoor areas through a defined mix of cutting back, clearing and green-waste handling.",
+      "taskSeeds": [
+        "Cut back manageable overgrowth and remove spent plant material",
+        "Weed and tidy garden beds, paths and accessible edges",
+        "Collect and coordinate disposal of agreed green waste"
+      ],
+      "quotePreparation": [
+        "Property size and photos of each work zone",
+        "Vegetation height, waste volume and access width",
+        "Known sharp waste, pests, unstable branches or restricted areas"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for garden clean up?",
+      "historicalPrimaryTermIds": [
+        "HM0354",
+        "HM0357",
+        "HM0359",
+        "HM0360",
+        "HM0361"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/gardens-landscaping/garden-landscapers/",
+      "key": "garden-landscapers",
+      "primaryQuery": "garden landscapers perth",
+      "primaryIntent": "Garden landscaping covers planned changes to planting, beds, edging and outdoor layout rather than routine mowing alone.",
+      "scope": "Garden landscaping covers planned changes to planting, beds, edging and outdoor layout rather than routine mowing alone.",
+      "taskSeeds": [
+        "Develop a practical planting and soft-landscape layout",
+        "Prepare beds, improve soil and install selected plants or mulch",
+        "Add garden edging and coordinate compatible minor landscape elements"
+      ],
+      "quotePreparation": [
+        "Site dimensions, sun, soil and drainage observations",
+        "Photos and the preferred style or maintenance level",
+        "Plants or materials to retain, access and water availability"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for garden landscapers?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/gardens-landscaping/gardeners/",
+      "key": "gardeners",
+      "primaryQuery": "gardeners perth",
+      "primaryIntent": "Gardening services support recurring or one-off care of established lawns, garden beds, shrubs and small plants.",
+      "scope": "Gardening services support recurring or one-off care of established lawns, garden beds, shrubs and small plants.",
+      "taskSeeds": [
+        "Weed, prune and maintain garden beds within a defined visit",
+        "Shape manageable shrubs and remove spent growth",
+        "Refresh mulch and complete seasonal planting or general garden care"
+      ],
+      "quotePreparation": [
+        "Garden size, photos and desired visit frequency",
+        "Priority plants or zones and the current maintenance issue",
+        "Green-waste expectations, pets, gates and water access"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for gardeners?",
+      "historicalPrimaryTermIds": [
+        "HM0353",
+        "HM0358"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/gardens-landscaping/lawn-mowing/",
+      "key": "lawn-mowing",
+      "primaryQuery": "lawn mowing perth",
+      "primaryIntent": "Lawn mowing covers routine cutting, edging and presentation of accessible residential or managed-property lawn areas.",
+      "scope": "Lawn mowing covers routine cutting, edging and presentation of accessible residential or managed-property lawn areas.",
+      "taskSeeds": [
+        "Mow lawns to an appropriate height for the turf and season",
+        "Edge paths, garden borders and accessible fixed features",
+        "Collect or mulch clippings according to the agreed service"
+      ],
+      "quotePreparation": [
+        "Approximate lawn area, slope and current grass height",
+        "Photos of front, rear and side access",
+        "Preferred frequency, green-bin access and any obstacles"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for lawn mowing?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/patio-builders/",
+      "key": "patio-builders",
+      "primaryQuery": "patio builders perth",
+      "primaryIntent": "Patio-building services address paved or decked outdoor living areas, including layout, base preparation, drainage and selected finishes.",
+      "scope": "Patio-building services address paved or decked outdoor living areas, including layout, base preparation, drainage and selected finishes.",
+      "taskSeeds": [
+        "Set out a patio footprint that works with doors, levels and drainage",
+        "Prepare a suitable base and install the selected surface system",
+        "Coordinate edges, steps and transitions with adjoining landscape elements"
+      ],
+      "quotePreparation": [
+        "Dimensions, current surface and intended furniture or use",
+        "Photos of levels, drainage, door thresholds and access",
+        "Preferred paving, concrete or decking finish and any existing plans"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for patio builders?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/pergola-builders/",
+      "key": "pergola-builders",
+      "primaryQuery": "pergola builders perth",
+      "primaryIntent": "Pergola enquiries cover freestanding or attached shade structures, from open battens to roofed designs where permitted.",
+      "scope": "Pergola enquiries cover freestanding or attached shade structures, from open battens to roofed designs where permitted.",
+      "taskSeeds": [
+        "Plan dimensions, post positions and the desired shade or roof form",
+        "Construct the approved frame, connections and selected covering",
+        "Repair scoped deterioration after the structure is assessed"
+      ],
+      "quotePreparation": [
+        "Site measurements and photos of the proposed location",
+        "Whether the structure is attached, freestanding, open or roofed",
+        "Material preference, drainage needs and existing approvals"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for pergola builders?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/pool-fence-installers/",
+      "key": "pool-fence-installers",
+      "primaryQuery": "pool fence installers perth",
+      "primaryIntent": "Pool-fence services focus on compliant barrier layouts, gates and repairs intended to maintain safe separation around a pool area.",
+      "scope": "Pool-fence services focus on compliant barrier layouts, gates and repairs intended to maintain safe separation around a pool area.",
+      "taskSeeds": [
+        "Measure and install a suitable pool-barrier system",
+        "Fit self-closing, self-latching gates and compatible hardware",
+        "Repair panels, posts or gates after assessing the complete barrier"
+      ],
+      "quotePreparation": [
+        "Pool-area photos and a sketch of the full barrier line",
+        "Measurements, ground levels and gate locations",
+        "Existing compliance information and nearby climbable features"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for pool fence installers?",
+      "historicalPrimaryTermIds": [
+        "HM0308"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/pool-resurfacing/",
+      "key": "pool-resurfacing",
+      "primaryQuery": "pool resurfacing perth",
+      "primaryIntent": "Pool resurfacing renews a deteriorated interior finish after the shell, leaks, equipment interfaces and chosen coating system are assessed.",
+      "scope": "Pool resurfacing renews a deteriorated interior finish after the shell, leaks, equipment interfaces and chosen coating system are assessed.",
+      "taskSeeds": [
+        "Inspect the pool surface for delamination, staining and cracking",
+        "Prepare the shell for a compatible render, pebble or coating system",
+        "Apply the selected finish and coordinate curing and refill requirements"
+      ],
+      "quotePreparation": [
+        "Pool dimensions, construction type and approximate age",
+        "Photos of staining, cracks, loose areas and fittings",
+        "Water-loss history, previous coatings and access for equipment"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for pool resurfacing?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/planning-inspection-compliance/surveyors/",
+      "key": "surveyors",
+      "primaryQuery": "surveyors perth",
+      "primaryIntent": "Surveying services provide measured site and boundary information for property, design and construction decisions.",
+      "scope": "Surveying services provide measured site and boundary information for property, design and construction decisions.",
+      "taskSeeds": [
+        "Undertake a feature and level survey for design inputs",
+        "Locate or re-establish boundaries where the requested survey permits",
+        "Set out approved construction points or prepare relevant survey documentation"
+      ],
+      "quotePreparation": [
+        "Property address, title details and purpose of the survey",
+        "Plans, previous surveys or design documents available",
+        "Survey or plans required, the building stage and access to the land"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for surveyors?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/gardens-landscaping/synthetic-grass/",
+      "key": "synthetic-grass",
+      "primaryQuery": "synthetic grass perth",
+      "primaryIntent": "Synthetic-grass services cover preparation and installation for lawns, courtyards, play spaces or other suitable outdoor areas.",
+      "scope": "Synthetic-grass services cover preparation and installation for lawns, courtyards, play spaces or other suitable outdoor areas.",
+      "taskSeeds": [
+        "Excavate and prepare a stable, free-draining base",
+        "Cut, join and secure the chosen synthetic turf system",
+        "Detail edges, penetrations and infill for the intended use"
+      ],
+      "quotePreparation": [
+        "Area dimensions, shape and intended use",
+        "Photos of current surface, drainage and access",
+        "Preferred pile, colour and pet or heat considerations"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for synthetic grass?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/timber-fencing/",
+      "key": "timber-fencing",
+      "primaryQuery": "fence repairs perth",
+      "primaryIntent": "Repair existing timber fences and side gates while retaining sound components.",
+      "scope": "Timber fencing services cover paling, picket and screening fences, including new runs, damaged sections and gates.",
+      "taskSeeds": [
+        "Install posts, rails and timber boards to the agreed fence style",
+        "Replace rotted or storm-damaged sections after checking the support",
+        "Build or adjust compatible timber gates and screening panels"
+      ],
+      "quotePreparation": [
+        "Fence length, height, style and timber preference",
+        "Photos of posts, slopes, access and adjoining structures",
+        "Boundary information and whether removal of an old fence is needed"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for timber fencing?",
+      "historicalPrimaryTermIds": [
+        "HM0287",
+        "HM0288",
+        "HM0289",
+        "HM0298",
+        "HM0299",
+        "HM0300",
+        "HM0290",
+        "HM0291",
+        "HM0301",
+        "HM0302",
+        "HM0292",
+        "HM0293",
+        "HM0303",
+        "HM0304",
+        "HM0294",
+        "HM0295",
+        "HM0305",
+        "HM0306",
+        "HM0519"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/gardens-landscaping/tree-arborists/",
+      "key": "tree-arborists",
+      "primaryQuery": "tree arborists perth",
+      "primaryIntent": "Arborist services address tree health, risk, pruning and removal decisions where tree size, condition or location needs specialist knowledge.",
+      "scope": "Arborist services address tree health, risk, pruning and removal decisions where tree size, condition or location needs specialist knowledge.",
+      "taskSeeds": [
+        "Assess tree health, defects and risks to people or property",
+        "Prune trees using species-appropriate and structurally sound methods",
+        "Plan tree removal, stump handling or clearance where assessment supports it"
+      ],
+      "quotePreparation": [
+        "Photos of the entire tree, trunk base, canopy and nearby targets",
+        "Approximate height, species if known and recent changes or damage",
+        "Access for equipment, overhead services and any council information"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for tree arborists?",
+      "historicalPrimaryTermIds": [
+        "HM0363"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/building-renovation-structural/bathroom/",
+      "key": "bathroom",
+      "primaryQuery": "bathroom perth",
+      "primaryIntent": "Bathroom projects may combine layout changes, fixtures, tiling, waterproofing, cabinetry and coordinated licensed trades.",
+      "scope": "Bathroom projects may combine layout changes, fixtures, tiling, waterproofing, cabinetry and coordinated licensed trades.",
+      "taskSeeds": [
+        "Develop a scope for a full renovation or targeted bathroom upgrade",
+        "Coordinate demolition, substrate preparation, waterproofing and finishes",
+        "Install selected fixtures, cabinetry and accessories through suitable trades"
+      ],
+      "quotePreparation": [
+        "Room dimensions, photos and the desired layout",
+        "Fixture selections, budget priorities and current plumbing locations",
+        "Leak history, ventilation, access and any drawings or approvals"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for bathroom?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/building-renovation-structural/bricklayers/",
+      "key": "bricklayers",
+      "primaryQuery": "bricklayers perth",
+      "primaryIntent": "Bricklaying services cover new walls, localised rebuilding, damaged masonry and matching work around homes and outdoor areas.",
+      "scope": "Bricklaying services cover new walls, localised rebuilding, damaged masonry and matching work around homes and outdoor areas.",
+      "taskSeeds": [
+        "Build scoped brick or block walls and piers",
+        "Rebuild loose, cracked or weather-damaged masonry sections",
+        "Match brick bond, joint profile and mortar colour where practical"
+      ],
+      "quotePreparation": [
+        "Wall dimensions, purpose and photos from both sides",
+        "Brick type or matching stock, if available",
+        "Crack history, footings, drainage and nearby openings"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for bricklayers?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/building-renovation-structural/builders/",
+      "key": "builders",
+      "primaryQuery": "builders & renovation builders perth",
+      "primaryIntent": "Building and renovation services coordinate multi-trade projects, additions and substantial alterations from defined scope through delivery.",
+      "scope": "Building and renovation services coordinate multi-trade projects, additions and substantial alterations from defined scope through delivery.",
+      "taskSeeds": [
+        "Develop a detailed build scope from plans or an initial brief",
+        "Coordinate sequencing across structural work, services and finishes",
+        "Deliver approved renovation or addition works with required project controls"
+      ],
+      "quotePreparation": [
+        "Property address, project goals and target rooms or footprint",
+        "Plans, engineering, approvals and selections already available",
+        "Whether the property is occupied, entry arrangements and rooms that must remain usable"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for builders & renovation builders?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/planning-inspection-compliance/building-certifiers/",
+      "key": "building-certifiers",
+      "primaryQuery": "building certification perth",
+      "primaryIntent": "Certification and approval documentation for a defined project; distinct from visual condition inspection.",
+      "scope": "Building-certification enquiries concern statutory assessment, approvals and inspections associated with proposed or completed building work.",
+      "taskSeeds": [
+        "Identify the approvals, inspection records and documents required for the building work",
+        "Assess submitted plans against applicable building requirements",
+        "Undertake required stage inspections and issue relevant determinations or certificates"
+      ],
+      "quotePreparation": [
+        "Property address, jurisdiction and description of works",
+        "Plans, specifications, engineering and existing approvals",
+        "Project stage and the specific certification question"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for building certifiers?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/planning-inspection-compliance/building-inspectors/",
+      "key": "building-inspectors",
+      "primaryQuery": "building inspections perth",
+      "primaryIntent": "Agreed accessible visual condition inspection and report for purchase, handover or targeted defects; distinct from certification.",
+      "scope": "Building inspections provide an independent visual assessment of accessible property conditions for purchase, maintenance or construction-stage decisions.",
+      "taskSeeds": [
+        "Inspect accessible interior, exterior, roof-space or subfloor areas as scoped",
+        "Document visible defects, maintenance concerns and limitations",
+        "Complete a pre-purchase, handover or targeted condition inspection"
+      ],
+      "quotePreparation": [
+        "Property address, type, age and inspection purpose",
+        "Areas of concern and any seller, agent or builder access arrangements",
+        "Plans, previous reports and required report timing"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for building inspectors?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/carports-and-garages/",
+      "key": "carports-and-garages",
+      "primaryQuery": "carports & garages perth",
+      "primaryIntent": "Carport and garage projects include freestanding or attached structures, enclosures, doors and repairs that need coordinated design and construction.",
+      "scope": "Carport and garage projects include freestanding or attached structures, enclosures, doors and repairs that need coordinated design and construction.",
+      "taskSeeds": [
+        "Develop the footprint, access and structural form for a carport or garage",
+        "Construct approved footings, framing, roof and enclosure elements",
+        "Repair selected structural or exterior components after assessment"
+      ],
+      "quotePreparation": [
+        "Site dimensions, vehicle needs and proposed location",
+        "Photos showing driveway, house connection, levels and boundaries",
+        "Plans, preferred materials and approvals already held"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for carports & garages?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/building-renovation-structural/concreters/",
+      "key": "concreters",
+      "primaryQuery": "concreters perth",
+      "primaryIntent": "Concreting services cover slabs, paths, driveways, footings and other formed concrete work designed for the intended load and site.",
+      "scope": "Concreting services cover slabs, paths, driveways, footings and other formed concrete work designed for the intended load and site.",
+      "taskSeeds": [
+        "Excavate, form and prepare reinforcement for an agreed concrete element",
+        "Place and finish concrete to the specified level, fall and texture",
+        "Saw-cut or detail joints and interfaces after placement"
+      ],
+      "quotePreparation": [
+        "Dimensions, thickness or intended use and desired finish",
+        "Photos of access, levels, drainage and adjoining surfaces",
+        "Plans, reinforcement details and known underground services"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for concreters?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/building-renovation-structural/demolition/",
+      "key": "demolition",
+      "primaryQuery": "demolition perth",
+      "primaryIntent": "Demolition services range from selective strip-out to removal of structures under a planned, controlled and appropriately approved scope.",
+      "scope": "Demolition services range from selective strip-out to removal of structures under a planned, controlled and appropriately approved scope.",
+      "taskSeeds": [
+        "Survey the work zone and define elements to retain or remove",
+        "Complete controlled strip-out or structural demolition to the approved extent",
+        "Sort, remove and dispose of materials through suitable waste streams"
+      ],
+      "quotePreparation": [
+        "Plans or photos marking the exact demolition area",
+        "Building age, services, occupancy and access conditions",
+        "Existing asbestos reports, structural plans and requirements for removing demolition waste"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for demolition?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/planning-inspection-compliance/draftsmen/",
+      "key": "draftsmen",
+      "primaryQuery": "draftsmen perth",
+      "primaryIntent": "Drafting services turn a renovation, addition or new-build brief into measured drawings and documentation suitable for design coordination or approvals.",
+      "scope": "Drafting services turn a renovation, addition or new-build brief into measured drawings and documentation suitable for design coordination or approvals.",
+      "taskSeeds": [
+        "Measure and document existing property conditions",
+        "Prepare concept, planning or construction drawings to the agreed stage",
+        "Coordinate drawing updates from consultant and client information"
+      ],
+      "quotePreparation": [
+        "Property address, project brief and required drawing purpose",
+        "Existing plans, surveys, photos and consultant information",
+        "Council or certifier feedback and preferred project stage"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for draftsmen?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/building-renovation-structural/home-renovators/",
+      "key": "home-renovators",
+      "primaryQuery": "home renovators perth",
+      "primaryIntent": "Home renovation services bring together alterations, repairs and finishes across one or more rooms under a coordinated project scope.",
+      "scope": "Home renovation services bring together alterations, repairs and finishes across one or more rooms under a coordinated project scope.",
+      "taskSeeds": [
+        "Define priorities, inclusions and staging for the renovation",
+        "Coordinate demolition, building work, regulated trades and finishes",
+        "Manage interfaces between existing conditions and selected new work"
+      ],
+      "quotePreparation": [
+        "Rooms involved, desired outcome and photos",
+        "Plans, selections, priorities and any approvals already held",
+        "Occupancy, access, staging and known property defects"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for home renovators?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/roofing-gutters-exterior/renderers/",
+      "key": "renderers",
+      "primaryQuery": "renderers perth",
+      "primaryIntent": "Rendering services apply or repair compatible exterior and interior masonry finishes after the substrate and moisture conditions are assessed.",
+      "scope": "Rendering services apply or repair compatible exterior and interior masonry finishes after the substrate and moisture conditions are assessed.",
+      "taskSeeds": [
+        "Prepare masonry and apply a selected render system",
+        "Repair localised hollow, cracked or damaged render where suitable",
+        "Match texture and finish across an agreed wall area"
+      ],
+      "quotePreparation": [
+        "Wall area, location and photos in even light",
+        "Existing finish type, colour and age if known",
+        "Crack movement, salt, damp or previous repair history"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for renderers?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/building-renovation-structural/restumping/",
+      "key": "restumping",
+      "primaryQuery": "restumping perth",
+      "primaryIntent": "Restumping or reblocking addresses deteriorated supports beneath suitable raised buildings and requires careful structural assessment and sequencing.",
+      "scope": "Restumping or reblocking addresses deteriorated supports beneath suitable raised buildings and requires careful structural assessment and sequencing.",
+      "taskSeeds": [
+        "Assess accessible stumps, bearers, levels and signs of movement",
+        "Develop a staged support and replacement approach for the building",
+        "Replace approved stumps and re-level affected areas within the engineered scope"
+      ],
+      "quotePreparation": [
+        "Property age, construction type and subfloor access",
+        "Photos of stumps, cracks, uneven floors and external levels",
+        "Previous reports, drainage issues and renovation plans"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for restumping?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/outdoor-structures-fencing-pools/retaining-walls/",
+      "key": "retaining-walls",
+      "primaryQuery": "retaining walls perth",
+      "primaryIntent": "Retaining-wall services cover replacement or new structures intended to hold soil where height, drainage, loads and boundaries are understood.",
+      "scope": "Retaining-wall services cover replacement or new structures intended to hold soil where height, drainage, loads and boundaries are understood.",
+      "taskSeeds": [
+        "Assess levels, soil, drainage and loads behind the proposed wall",
+        "Construct an approved timber, masonry, concrete or modular system",
+        "Replace a leaning or failed wall after the cause is investigated"
+      ],
+      "quotePreparation": [
+        "Wall length, maximum height and level difference",
+        "Photos of both sides, drainage and nearby buildings or fences",
+        "Boundary information, material preference and any engineering"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for retaining walls?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/planning-inspection-compliance/structural-engineers/",
+      "key": "structural-engineers",
+      "primaryQuery": "structural engineer perth",
+      "primaryIntent": "Structural assessment and defined engineering design deliverables, distinct from drafting and construction.",
+      "scope": "Structural-engineering services provide analysis and design for building elements, movement, alterations and load-bearing concerns.",
+      "taskSeeds": [
+        "Assess cracking, movement or a proposed structural alteration",
+        "Design beams, footings, walls or other structural elements for a defined project",
+        "Prepare calculations, drawings or inspection advice within the agreed brief"
+      ],
+      "quotePreparation": [
+        "Property address, construction type and project objective",
+        "Photos, plans, surveys and previous reports",
+        "Crack history, recent changes and access to affected areas"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for structural engineers?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/cabinet-makers/",
+      "key": "cabinet-makers",
+      "primaryQuery": "cabinet makers perth",
+      "primaryIntent": "Custom and replacement cabinetry projects; existing hinge and drawer repair belongs to handymen/#cabinet-repairs.",
+      "scope": "Cabinet-making services cover custom storage, replacement cabinetry, alterations and fitted units designed for a specific room.",
+      "taskSeeds": [
+        "Measure and design cabinetry for kitchens, laundries, wardrobes or living areas",
+        "Manufacture and install selected doors, drawers, carcasses and panels",
+        "Modify existing cabinetry for changed appliances or storage needs"
+      ],
+      "quotePreparation": [
+        "Wall and opening dimensions with room photos",
+        "Preferred layout, material, colour and hardware",
+        "Appliance models, plumbing locations and items to retain"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for cabinet makers?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/cleaning-removals-pest-hazard/cleaners/",
+      "key": "cleaners",
+      "primaryQuery": "cleaners perth",
+      "primaryIntent": "Cleaning services can be scoped for regular home care, end-of-lease work, post-project cleaning or defined high-use areas.",
+      "scope": "Cleaning services can be scoped for regular home care, end-of-lease work, post-project cleaning or defined high-use areas.",
+      "taskSeeds": [
+        "Complete an agreed room-by-room general clean",
+        "Undertake an end-of-lease or post-project clean to a stated checklist",
+        "Deep-clean selected kitchens, bathrooms or high-touch surfaces"
+      ],
+      "quotePreparation": [
+        "Property size, room count and cleaning type",
+        "Priority areas, surface materials and expected condition",
+        "Access, parking, pets and supplied or preferred products"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for cleaners?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/dishwasher-repair/",
+      "key": "dishwasher-repair",
+      "primaryQuery": "dishwasher repair perth",
+      "primaryIntent": "Dishwasher repair addresses drainage, filling, heating, leakage, noise and cycle problems after the appliance and installation are identified.",
+      "scope": "Dishwasher repair addresses drainage, filling, heating, leakage, noise and cycle problems after the appliance and installation are identified.",
+      "taskSeeds": [
+        "Diagnose error codes, incomplete cycles or poor washing results",
+        "Investigate accessible leaks, pumps, hoses or inlet issues",
+        "Replace serviceable components when repair is viable and parts are available"
+      ],
+      "quotePreparation": [
+        "Brand, model and serial details",
+        "Error code, symptoms and when they occur in the cycle",
+        "Photos of the installation, connections and any water leakage"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for dishwasher repair?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/cleaning-removals-pest-hazard/removalists/",
+      "key": "removalists",
+      "primaryQuery": "furniture & household removalists perth",
+      "primaryIntent": "Furniture and household removal services cover packing choices, loading, transport and unloading for local moves or selected item relocations.",
+      "scope": "Furniture and household removal services cover packing choices, loading, transport and unloading for local moves or selected item relocations.",
+      "taskSeeds": [
+        "Move listed furniture and boxes between agreed addresses",
+        "Provide packing, disassembly or reassembly where included in the scope",
+        "Handle bulky or fragile items using planned access and protection"
+      ],
+      "quotePreparation": [
+        "Pickup and delivery suburbs, dates and access conditions",
+        "Inventory, approximate box count and heavy or fragile items",
+        "Stairs, lifts, parking, vehicle access and furniture assembly needed at pickup or delivery"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for furniture & household removalists?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/electrical-plumbing-gas-air-conditioning/gas-fitters/",
+      "key": "gas-fitters",
+      "primaryQuery": "gas fitters perth",
+      "primaryIntent": "Gas-fitting services cover appliance connections, gas leaks, pipework and alterations that require controlled testing and compliant work.",
+      "scope": "Gas-fitting services cover appliance connections, gas leaks, pipework and alterations that require controlled testing and compliant work.",
+      "taskSeeds": [
+        "Investigate a reported gas odour or suspected installation fault",
+        "Install, replace or disconnect compatible gas appliances",
+        "Alter gas pipework and complete required testing within the approved scope"
+      ],
+      "quotePreparation": [
+        "Appliance type, brand and model",
+        "Location of the meter, cylinders or isolation valve if known",
+        "Symptoms, recent work and photos taken only where safe"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for gas fitters?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/doors-windows-glass-screens/glass-glaziers/",
+      "key": "glass-glaziers",
+      "primaryQuery": "glass glaziers perth",
+      "primaryIntent": "Glazing services cover replacement panes, mirrors and selected glass installations after the glass type, dimensions and safety needs are identified.",
+      "scope": "Glazing services cover replacement panes, mirrors and selected glass installations after the glass type, dimensions and safety needs are identified.",
+      "taskSeeds": [
+        "Measure and replace broken or failed glass in suitable frames",
+        "Install mirrors, shelves or other specified glazing products",
+        "Assess cracked panes, failed seals or damaged glazing hardware"
+      ],
+      "quotePreparation": [
+        "Opening dimensions and photos from a safe distance",
+        "Frame material, location and storey level",
+        "Glass type or safety markings if visible without touching"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for glass glaziers?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/handymen/",
+      "key": "handymen",
+      "primaryQuery": "odd jobs and handyman repairs perth",
+      "primaryIntent": "Grouped minor household repairs, existing fittings and approved small installations; distinct from the homepage's broad handyman enquiry.",
+      "scope": "Handyman services suit defined minor maintenance, assembly, mounting and repair tasks that do not cross into regulated or specialist trade work.",
+      "taskSeeds": [
+        "Complete a grouped list of small household repairs",
+        "Assemble furniture and fit non-structural accessories",
+        "Adjust doors, replace basic hardware or complete minor patch-and-fix work"
+      ],
+      "quotePreparation": [
+        "A prioritised task list with a photo of each item",
+        "Wall, floor or furniture materials and any product instructions",
+        "Property access, parking and whether parts are already supplied"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for handymen?",
+      "historicalPrimaryTermIds": [
+        "HM0023",
+        "HM0024",
+        "HM0025",
+        "HM0026",
+        "HM0027",
+        "HM0028",
+        "HM0029",
+        "HM0030",
+        "HM0031",
+        "HM0034",
+        "HM0035",
+        "HM0036",
+        "HM0504",
+        "HM0037",
+        "HM0038",
+        "HM0510",
+        "HM0039",
+        "HM0040",
+        "HM0041",
+        "HM0042",
+        "HM0045",
+        "HM0046",
+        "HM0047",
+        "HM0048",
+        "HM0049",
+        "HM0050",
+        "HM0051",
+        "HM0514",
+        "HM0052",
+        "HM0053",
+        "HM0078",
+        "HM0079",
+        "HM0080",
+        "HM0089",
+        "HM0090",
+        "HM0091",
+        "HM0505",
+        "HM0081",
+        "HM0082",
+        "HM0092",
+        "HM0093",
+        "HM0083",
+        "HM0084",
+        "HM0094",
+        "HM0095",
+        "HM0513",
+        "HM0085",
+        "HM0086",
+        "HM0096",
+        "HM0097",
+        "HM0155",
+        "HM0156",
+        "HM0157",
+        "HM0502",
+        "HM0507",
+        "HM0158",
+        "HM0159",
+        "HM0160",
+        "HM0161",
+        "HM0162",
+        "HM0163",
+        "HM0166",
+        "HM0167",
+        "HM0168",
+        "HM0177",
+        "HM0178",
+        "HM0179",
+        "HM0188",
+        "HM0189",
+        "HM0190",
+        "HM0169",
+        "HM0170",
+        "HM0180",
+        "HM0181",
+        "HM0191",
+        "HM0192",
+        "HM0171",
+        "HM0172",
+        "HM0182",
+        "HM0183",
+        "HM0193",
+        "HM0194",
+        "HM0173",
+        "HM0174",
+        "HM0184",
+        "HM0185",
+        "HM0195",
+        "HM0196",
+        "HM0210",
+        "HM0211",
+        "HM0212",
+        "HM0213",
+        "HM0214",
+        "HM0215",
+        "HM0216",
+        "HM0516",
+        "HM0217",
+        "HM0218",
+        "HM0221",
+        "HM0222",
+        "HM0223",
+        "HM0224",
+        "HM0225",
+        "HM0226",
+        "HM0227",
+        "HM0228",
+        "HM0229",
+        "HM0232",
+        "HM0233",
+        "HM0234",
+        "HM0235",
+        "HM0236",
+        "HM0237",
+        "HM0238",
+        "HM0239",
+        "HM0240",
+        "HM0243",
+        "HM0244",
+        "HM0245",
+        "HM0246",
+        "HM0247",
+        "HM0248",
+        "HM0249",
+        "HM0250",
+        "HM0251",
+        "HM0276",
+        "HM0277",
+        "HM0278",
+        "HM0279",
+        "HM0280",
+        "HM0281",
+        "HM0282",
+        "HM0283",
+        "HM0284",
+        "HM0285",
+        "HM0286",
+        "HM0320",
+        "HM0321",
+        "HM0322",
+        "HM0323",
+        "HM0324",
+        "HM0325",
+        "HM0326",
+        "HM0327",
+        "HM0328",
+        "HM0342",
+        "HM0343",
+        "HM0344",
+        "HM0355",
+        "HM0345",
+        "HM0346",
+        "HM0356",
+        "HM0347",
+        "HM0348",
+        "HM0349",
+        "HM0350",
+        "HM0364",
+        "HM0365",
+        "HM0366",
+        "HM0375",
+        "HM0376",
+        "HM0377",
+        "HM0367",
+        "HM0368",
+        "HM0378",
+        "HM0379",
+        "HM0512",
+        "HM0369",
+        "HM0370",
+        "HM0380",
+        "HM0381",
+        "HM0371",
+        "HM0372",
+        "HM0382",
+        "HM0383",
+        "HM0522",
+        "HM0386",
+        "HM0387",
+        "HM0388",
+        "HM0389",
+        "HM0390",
+        "HM0391",
+        "HM0392",
+        "HM0393",
+        "HM0394",
+        "HM0397",
+        "HM0398",
+        "HM0399",
+        "HM0408",
+        "HM0409",
+        "HM0410",
+        "HM0400",
+        "HM0401",
+        "HM0411",
+        "HM0412",
+        "HM0402",
+        "HM0403",
+        "HM0413",
+        "HM0414",
+        "HM0404",
+        "HM0405",
+        "HM0415",
+        "HM0416",
+        "HM0419",
+        "HM0420",
+        "HM0421",
+        "HM0422",
+        "HM0423",
+        "HM0424",
+        "HM0425",
+        "HM0426",
+        "HM0427",
+        "HM0441",
+        "HM0442",
+        "HM0444"
+      ],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/ikea-kitchens/",
+      "key": "ikea-kitchens",
+      "primaryQuery": "ikea kitchens perth",
+      "primaryIntent": "IKEA kitchen services can support assembly and installation of a confirmed modular design, with regulated services coordinated separately.",
+      "scope": "IKEA kitchen services can support assembly and installation of a confirmed modular design, with regulated services coordinated separately.",
+      "taskSeeds": [
+        "Check the plan, cabinet inventory and room readiness",
+        "Assemble and install cabinet frames, fronts, panels and selected fittings",
+        "Coordinate benchtop, appliance and service interfaces within the project scope"
+      ],
+      "quotePreparation": [
+        "Final IKEA plan, order list and delivery status",
+        "Room dimensions, wall condition and photos of service locations",
+        "Benchtop, appliance and splashback details plus items to retain"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for ikea kitchens?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/oven-repair/",
+      "key": "oven-repair",
+      "primaryQuery": "oven repair perth",
+      "primaryIntent": "Oven repair covers heating, controls, fans, doors and performance faults in built-in or freestanding domestic ovens.",
+      "scope": "Oven repair covers heating, controls, fans, doors and performance faults in built-in or freestanding domestic ovens.",
+      "taskSeeds": [
+        "Diagnose uneven heating, no heat, fan or control faults",
+        "Replace viable elements, seals, hinges or control components",
+        "Test repaired operation within the appliance service scope"
+      ],
+      "quotePreparation": [
+        "Brand, model, fuel type and serial details",
+        "Symptoms, error codes and which functions are affected",
+        "Photos of the appliance, installation and plug or isolation arrangement where safe"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for oven repair?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/cleaning-removals-pest-hazard/pest-control/",
+      "key": "pest-control",
+      "primaryQuery": "pest control perth",
+      "primaryIntent": "Pest-control services assess activity, likely entry points and suitable treatment or management for common household pests.",
+      "scope": "Pest-control services assess activity, likely entry points and suitable treatment or management for common household pests.",
+      "taskSeeds": [
+        "Inspect accessible signs, harbourage and entry points",
+        "Apply a targeted treatment or trapping program for the identified pest",
+        "Recommend exclusion and monitoring measures after treatment"
+      ],
+      "quotePreparation": [
+        "Pest type or photos of evidence without handling it",
+        "Rooms or outdoor zones affected and when activity occurs",
+        "Children, pets, allergies, food areas and previous treatments"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for pest control?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/cleaning-removals-pest-hazard/rubbish-removal/",
+      "key": "rubbish-removal",
+      "primaryQuery": "rubbish removal perth",
+      "primaryIntent": "Rubbish-removal services clear agreed household, garden or project waste where material types, volume and access are known.",
+      "scope": "Rubbish-removal services clear agreed household, garden or project waste where material types, volume and access are known.",
+      "taskSeeds": [
+        "Collect and remove a listed load of general household items",
+        "Clear green waste or renovation debris accepted under the agreed scope",
+        "Separate recyclable or special-disposal items where arrangements exist"
+      ],
+      "quotePreparation": [
+        "Photos of the complete pile and approximate volume",
+        "Item list, material types and any heavy pieces",
+        "Access width, stairs, parking and pickup location"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for rubbish removal?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/upholstery-repair/",
+      "key": "upholstery-repair",
+      "primaryQuery": "upholstery repair perth",
+      "primaryIntent": "Upholstery repair restores suitable furniture through fabric, padding, webbing, stitching or local frame-related work after condition review.",
+      "scope": "Upholstery repair restores suitable furniture through fabric, padding, webbing, stitching or local frame-related work after condition review.",
+      "taskSeeds": [
+        "Repair torn seams, worn panels or localised fabric damage",
+        "Replace padding, webbing or support materials in suitable furniture",
+        "Recover a chair, cushion or selected furniture piece in a chosen material"
+      ],
+      "quotePreparation": [
+        "Photos of the complete item and damaged details",
+        "Dimensions, age and furniture construction if known",
+        "Fabric preference, matching needs and collection access"
+      ],
+      "decisionQuestion": "Which of the listed tasks, materials, access and exclusions belong in the written scope for upholstery repair?",
+      "historicalPrimaryTermIds": [],
+      "researchStatus": "Editorial ownership from existing confirmed catalogue and page scope; task seeds not newly verified search queries; volume/KD unknown."
+    }
+  ],
+  "supplementalServices": [
+    {
+      "path": "/services/doors-windows-glass-screens/sliding-door-repairs/",
+      "key": "sliding-door-repairs",
+      "primaryQuery": "sliding door repairs perth",
+      "primaryIntent": "Repair external sliding-door rollers, tracks and handles after panel and hardware assessment.",
+      "scope": "External sliding door faults; wardrobe repair stays with existing cabinet-repairs module.",
+      "taskSeeds": [
+        "sliding door roller replacement",
+        "sliding door track and handle faults"
+      ],
+      "pricedCatalogueEntry": false,
+      "researchStatus": "Accepted local candidate owner; no current controlled SERP/GSC/volume validation."
+    },
+    {
+      "path": "/services/property-maintenance/",
+      "key": "property-maintenance",
+      "primaryQuery": "property maintenance perth",
+      "primaryIntent": "Plan approved maintenance lists for homeowners, rental managers and strata access requirements.",
+      "scope": "Assessment, approvals, tenant access, repairs and completion details; no bond outcome guarantee.",
+      "taskSeeds": [
+        "rental property maintenance",
+        "approved strata maintenance lists"
+      ],
+      "pricedCatalogueEntry": false,
+      "researchStatus": "Accepted local candidate owner; no current controlled SERP/GSC/volume validation."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/furniture-assembly/",
+      "key": "furniture-assembly",
+      "primaryQuery": "furniture assembly perth",
+      "primaryIntent": "Assemble supplied flat-pack furniture using compatible instructions, parts and agreed anchoring.",
+      "scope": "Furniture and flat-pack tasks; custom cabinetry, kitchen fitting and fixed wiring separate.",
+      "taskSeeds": [
+        "flat pack assembly",
+        "wardrobe bed and desk assembly"
+      ],
+      "pricedCatalogueEntry": false,
+      "researchStatus": "Accepted local candidate owner; no current controlled SERP/GSC/volume validation."
+    },
+    {
+      "path": "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
+      "key": "tv-wall-mounting",
+      "primaryQuery": "tv wall mounting perth",
+      "primaryIntent": "Fit compatible TV brackets to assessed wall support and agree cable arrangements.",
+      "scope": "Bracket and TV fitting; fixed wiring by appropriately licensed Ellis personnel; shelving separate.",
+      "taskSeeds": [
+        "TV bracket installation",
+        "TV wall support and cable planning"
+      ],
+      "pricedCatalogueEntry": false,
+      "researchStatus": "Accepted local candidate owner; no current controlled SERP/GSC/volume validation."
+    }
+  ],
+  "pendingBusinessConfirmation": [
+    "reticulation repairs",
+    "washing machine repairs",
+    "gas heater servicing"
+  ],
+  "historicalResearchNote": "18 of 67 catalogue pages had historical primary term routes; the other 49 pages already existed. This file assigns editorial ownership, not evidence of search demand or indexing."
+}
