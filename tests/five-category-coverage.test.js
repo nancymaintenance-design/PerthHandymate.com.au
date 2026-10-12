@@ -77,6 +77,22 @@ test('public assessment anchors describe the topic without research record ident
     assert.equal(/\bid=["'][^"']*hm\d{4}/i.test(html), false, page.path);
   }
 });
+// These hand-reviewed intent contracts catch topic-swapped evidence, not wording changes.
+// Fragment visibility remains the validator's separate responsibility.
+for (const [id, concepts] of [
+  ['HM0005', [/\b(?:small|minor|ordinary)\b/i, /\brepairs?\b/i, /\b(?:scope|specialist|personnel)\b/i]],
+  ['HM0008', [/\blist\b/i, /\b(?:grouped|grouping|together)\b/i, /\b(?:fault|item|task)s?\b/i]],
+  ['HM0009', [/\bunit\b/i, /\b(?:permission|approval)\b/i, /\baccess\b/i]],
+  ['HM0401', [/\b(?:strata|common-property)\b/i, /\bcompletion photos\b/i, /\bagreed?\b/i]],
+  ['HM0447', [/\b(?:included|inclusions|itemised)\b/i, /\b(?:tasks|items)\b/i, /\bmaterials\b/i, /\b(?:writing|written)\b/i]],
+  ['HM0460', [/\bTV\b/i, /\bbracket\b/i, /\b(?:outlet|power.point)\b/i, /\belectrical\b/i, /\b(?:separate|separately)\b/i]],
+]) test(`${id} evidence addresses its reviewed repair intent rather than an unrelated topic`, () => {
+  const row = JSON.parse(fs.readFileSync(coveragePath, 'utf8')).records.find(row => row.id === id);
+  const evidence = [row.bodyEvidence, row.decisionEvidence, row.scenarioEvidence].filter(Boolean);
+  for (const item of evidence) for (const concept of concepts) {
+    assert.match(item.excerpt, concept, `${id} evidence needs ${concept}`);
+  }
+});
 test('current owner pages retain unambiguous visible and structured FAQ parity', () => {
   const { auditPage } = require('../tools/content-round2-acceptance');
   const rows = JSON.parse(fs.readFileSync(coveragePath, 'utf8')).records;
