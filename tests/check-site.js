@@ -43,7 +43,7 @@ for (const file of htmlFiles) {
   const expectedRobots = route === '404.html' || (isServiceLeaf && !indexableServiceRoutes.has(route)) ? 'noindex,follow' : 'index,follow';
   if (!source.includes(`<meta name="robots" content="${expectedRobots}">`)) fail(`${rel(file)} lacks expected ${expectedRobots} directive`);
   if (source.includes('https://www.ellisservices.example/')) fail(`${rel(file)} retains the test domain`);
-  const logoPattern = /<header class="site-header">[\s\S]*?<img class="brand-logo" src="[^"]*assets\/images\/ellis-services-group-logo\.png" alt="Ellis Services Group logo" width="1237" height="1272">[\s\S]*?<\/header>/;
+  const logoPattern = /<header class="site-header">[\s\S]*?<img class="brand-logo" src="[^"]*assets\/images\/ellis-services-group-logo\.webp" alt="Ellis Services Group logo" width="128" height="132" decoding="async">[\s\S]*?<\/header>/;
   if (!logoPattern.test(source)) fail(`${rel(file)} does not use the official header logo`);
   if ((source.match(/class="brand-logo"/g) || []).length !== 1) fail(`${rel(file)} must contain exactly one header brand logo`);
   if ((source.match(/<span class="brand-name">Ellis Services Group<\/span>/g) || []).length !== 1) fail(`${rel(file)} must show the company name beside the header logo`);
@@ -76,7 +76,7 @@ for (const file of htmlFiles) {
 
 const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const popularBlock = home.match(/<div class="card-grid popular-grid">([\s\S]*?)<\/div>/)?.[1] || '';
-if ((popularBlock.match(/icon-[^"']+\.png/g) || []).length !== 8) fail('Home does not expose eight popular-service icons');
+if ((popularBlock.match(/icon-[^"']+\.webp/g) || []).length !== 8) fail('Home does not expose eight popular-service icons');
 if (!home.includes('data-service-search') || !home.includes('name="q"') || !home.includes('name="postcode"') || !home.includes('data-clear-search')) fail('Home search controls are incomplete');
 
 const css = fs.readFileSync(path.join(root, 'assets/css/global.css'), 'utf8');

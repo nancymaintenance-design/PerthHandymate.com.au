@@ -494,14 +494,14 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   const popular = home.slice(home.indexOf('<div class="card-grid popular-grid">'), home.indexOf('<p class="section-action">'));
   assert.equal((popular.match(/class="service-card popular-card"/g) || []).length, 8);
   for (const [route, icon] of [
-    ['services/handyman-interiors-appliance-repairs/handymen/', 'icon-handyman.png'],
-    ['services/handyman-interiors-appliance-repairs/carpenters/', 'icon-carpentry.png'],
-    ['services/doors-windows-glass-screens/door-installation/', 'icon-bathroom.png'],
-    ['services/doors-windows-glass-screens/fly-screens/', 'icon-fly-screen-repairs.png'],
-    ['services/doors-windows-glass-screens/window-repairs/', 'icon-window-repairs.png'],
-    ['services/handyman-interiors-appliance-repairs/tiling/', 'icon-tiling.png'],
-    ['services/roofing-gutters-exterior/house-painters/', 'icon-house-painting.png'],
-    ['services/gardens-landscaping/garden-clean-up/', 'icon-lawn-mowing.png'],
+    ['services/handyman-interiors-appliance-repairs/handymen/', 'icon-handyman.webp'],
+    ['services/handyman-interiors-appliance-repairs/carpenters/', 'icon-carpentry.webp'],
+    ['services/doors-windows-glass-screens/door-installation/', 'icon-bathroom.webp'],
+    ['services/doors-windows-glass-screens/fly-screens/', 'icon-fly-screen-repairs.webp'],
+    ['services/doors-windows-glass-screens/window-repairs/', 'icon-window-repairs.webp'],
+    ['services/handyman-interiors-appliance-repairs/tiling/', 'icon-tiling.webp'],
+    ['services/roofing-gutters-exterior/house-painters/', 'icon-house-painting.webp'],
+    ['services/gardens-landscaping/garden-clean-up/', 'icon-lawn-mowing.webp'],
   ]) {
     assert.ok(fs.existsSync(path.join(root, 'assets/images', icon)), `missing ${icon}`);
     assert.match(

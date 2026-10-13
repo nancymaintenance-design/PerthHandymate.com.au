@@ -5,7 +5,7 @@ window.ELLIS_CONTENT={
       "slug": "electrical-plumbing-gas-air-conditioning",
       "title": "Electrical, plumbing, gas & air conditioning",
       "short": "Essential systems",
-      "icon": "icon-electrician.png",
+      "icon": "icon-electrician.webp",
       "intro": "Help with the essential systems that keep a property safe, comfortable and working as intended.",
       "tasks": [
         "Electrical fault finding and fixture work",
@@ -19,7 +19,7 @@ window.ELLIS_CONTENT={
       "slug": "handyman-interiors-appliance-repairs",
       "title": "Handyman, interiors & appliance repairs",
       "short": "Repairs inside the home",
-      "icon": "icon-handyman.png",
+      "icon": "icon-handyman.webp",
       "intro": "Practical help for repairs, fitting, assembly and interior upkeep across homes and managed properties.",
       "tasks": [
         "General handyman and minor maintenance tasks",
@@ -33,7 +33,7 @@ window.ELLIS_CONTENT={
       "slug": "doors-windows-glass-screens",
       "title": "Doors, windows, glass & screens",
       "short": "Openings and security",
-      "icon": "icon-bathroom.png",
+      "icon": "icon-bathroom.webp",
       "intro": "Repairs and replacements for the moving, glazed and screened parts of a property.",
       "tasks": [
         "Door adjustment, hardware and lock enquiries",
@@ -47,7 +47,7 @@ window.ELLIS_CONTENT={
       "slug": "roofing-gutters-exterior",
       "title": "Roofing, gutters & exterior",
       "short": "Weather-facing maintenance",
-      "icon": "icon-roofing.png",
+      "icon": "icon-roofing.webp",
       "intro": "Inspection-led maintenance for roofs, rainwater goods and exposed exterior surfaces.",
       "tasks": [
         "Roof leak investigation and repair planning",
@@ -61,7 +61,7 @@ window.ELLIS_CONTENT={
       "slug": "gardens-landscaping",
       "title": "Gardens & landscaping",
       "short": "Grounds and garden care",
-      "icon": "icon-lawn-mowing.png",
+      "icon": "icon-lawn-mowing.webp",
       "intro": "Routine garden care and scoped improvements for outdoor areas that need to stay usable and well managed.",
       "tasks": [
         "Lawn mowing and edging",
@@ -75,7 +75,7 @@ window.ELLIS_CONTENT={
       "slug": "outdoor-structures-fencing-pools",
       "title": "Outdoor structures, fencing & pools",
       "short": "Boundaries and outdoor living",
-      "icon": "icon-house-painting.png",
+      "icon": "icon-house-painting.webp",
       "intro": "Maintenance and project planning for built outdoor elements, boundaries and pool surrounds.",
       "tasks": [
         "Fence and gate repairs",
@@ -89,7 +89,7 @@ window.ELLIS_CONTENT={
       "slug": "building-renovation-structural",
       "title": "Building, renovation & structural",
       "short": "Larger property works",
-      "icon": "icon-handyman.png",
+      "icon": "icon-handyman.webp",
       "intro": "Renovation, building and structural services, with on-site assessment and a written quote for the agreed scope.",
       "tasks": [
         "Carpentry, tiling and masonry enquiries",
@@ -103,7 +103,7 @@ window.ELLIS_CONTENT={
       "slug": "planning-inspection-compliance",
       "title": "Planning, inspection & compliance",
       "short": "Checks before work",
-      "icon": "icon-plumber.png",
+      "icon": "icon-plumber.webp",
       "intro": "Help finding the right next step when a property decision depends on inspection, documentation or approval.",
       "tasks": [
         "Building and pre-work inspection enquiries",
@@ -117,7 +117,7 @@ window.ELLIS_CONTENT={
       "slug": "cleaning-removals-pest-hazard",
       "title": "Cleaning, removals, pest & hazard",
       "short": "Clear, clean and remediate",
-      "icon": "icon-air-conditioning.png",
+      "icon": "icon-air-conditioning.webp",
       "intro": "Direct local help with cleaning, moving, pest concerns and specialist hazard enquiries.",
       "tasks": [
         "General and end-of-lease cleaning enquiries",
