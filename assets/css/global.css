@@ -51,7 +51,8 @@
 .quick-paths{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
 .quick-paths a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border:1px solid #b9c8d0;border-radius:8px;color:#fff;text-decoration:none;font-weight:800}
 .quick-paths a:hover{background:var(--navy-2)}
-.quick-paths a:focus-visible,.service-toc a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.quick-paths a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.service-toc a:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
 .service-hero .service-toc{margin-top:24px;padding:18px 22px;color:var(--navy)}
 .service-hero .service-toc ul{margin-top:10px;gap:4px 20px}
 .service-hero .service-toc a{min-height:44px;padding:9px 0}

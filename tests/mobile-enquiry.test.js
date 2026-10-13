@@ -171,7 +171,20 @@ for (const viewport of [{ width: 390, height: 844 }, { width: 1440, height: 900 
       assert.ok(href.startsWith('#'));
       const target = page.locator(href);
       assert.equal(await target.count(), 1, href);
-      await nav.locator(`a[href="${href}"]`).click();
+      const link = nav.locator(`a[href="${href}"]`);
+      // A light ring on the white service panel must fail even if the link works.
+      await link.focus();
+      await page.keyboard.press('Tab');
+      await page.keyboard.press('Shift+Tab');
+      const indicator = await link.evaluate(e => {
+        const s = getComputedStyle(e), panel = getComputedStyle(e.closest('nav'));
+        return { keyboardVisible: e.matches(':focus-visible'), style: s.outlineStyle, width: parseFloat(s.outlineWidth), color: s.outlineColor, background: panel.backgroundColor };
+      });
+      assert.ok(indicator.keyboardVisible && indicator.style !== 'none' && indicator.width >= 2, `${href}: authored keyboard focus remains visible`);
+      const ringContrast = contrast(indicator.color, indicator.background);
+      assert.ok(ringContrast >= 3, `${service} ${viewport.width} ${href}: focus ring ${ringContrast.toFixed(3)}:1 against service panel`);
+      if (capture && href === hrefs[0]) await nav.screenshot({ path: path.join(screenshots, `${capture}-${service}-${viewport.width}-keyboard-focus.png`) });
+      await page.keyboard.press('Enter');
       assert.ok((await target.boundingBox()).y >= (await page.locator('.site-header').boundingBox()).height, `${href} clears sticky header`);
     }
   });
