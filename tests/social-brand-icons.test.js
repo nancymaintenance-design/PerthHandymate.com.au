@@ -25,7 +25,7 @@ test('all 125 built pages expose the four social destinations inside Important',
     const html = fs.readFileSync(file,'utf8');
     const region = html.match(/<h2>Important<\/h2>[\s\S]*?<div class="footer-social-region"[\s\S]*?<\/a><\/div><\/div>/)?.[0];
     assert.ok(region, file);
-    for (const url of ['https://share.google/qaKT4Kj7ycWHQCQWh','https://www.instagram.com/elliservices_group/','https://share.google/Z4tImXHToPi9H4LmH','https://share.google/HbT2Uijg3K6yaqcpV']) assert.ok(region.includes(url), file+': '+url);
+    for (const url of ['https://maps.app.goo.gl/iqNh8cGNbaZhBuP17','https://www.instagram.com/elliservices_group/','https://www.linkedin.com/in/ellis-services-group-091541266/?isSelfProfile=false','https://www.facebook.com/p/Ellis-Services-Group-100082926022259/']) assert.ok(region.includes(url), file+': '+url);
     assert.equal((html.match(/class="footer-social-region"/g)||[]).length,1,file);
   }
 });

@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(process.argv[2] || path.join(__dirname, '..'));
+const facts = JSON.parse(fs.readFileSync(path.join(root, 'data/business-facts.json'), 'utf8'));
 const origin = 'https://www.perthhandymate.com.au/';
 const organizationId = `${origin}#organization`;
 const officeId = `${origin}#perth-office`;
@@ -36,9 +37,12 @@ if (!existingOffice) throw new Error('Homepage must contain the verified Perth o
 const office = { ...existingOffice, '@type': 'HomeAndConstructionBusiness', '@id': officeId,
   parentOrganization: { '@id': organizationId } };
 delete office['@context'];
+delete office.openingHours;
+office.openingHoursSpecification = facts.openingHoursSpecification;
+office.sameAs = facts.sameAs;
 const organization = { '@type': 'Organization', '@id': organizationId,
   name: existingOffice.name, url: existingOffice.url, logo: existingOffice.logo };
-if (existingOffice.sameAs) organization.sameAs = existingOffice.sameAs;
+organization.sameAs = facts.sameAs;
 const graph = { '@context': 'https://schema.org', '@graph': [organization, office] };
 
 function collect(directory) {
@@ -89,6 +93,12 @@ for (const file of files) {
   if (!inserted) {
     if (!html.includes('</head>')) throw new Error(`Missing head: ${file}`);
     html = html.replace('</head>', `<script type="application/ld+json">${JSON.stringify(graph)}</script></head>`);
+  }
+  html = html.replaceAll('https://share.google/qaKT4Kj7ycWHQCQWh', facts.googleReviews)
+    .replaceAll('https://share.google/Z4tImXHToPi9H4LmH', facts.sameAs[1])
+    .replaceAll('https://share.google/HbT2Uijg3K6yaqcpV', facts.sameAs[2]);
+  if (!html.includes('class="footer-office-hours"')) {
+    html = html.replace(/(<p class="footer-hours">)/, `<p class="footer-office-hours">${facts.officeReception}</p>$1`);
   }
   const route = path.relative(root, file).split(path.sep).join('/');
   if (regulatedPages.has(route) && !html.includes(`<p class="licensed-team-scope">${sentence}</p>`)) {

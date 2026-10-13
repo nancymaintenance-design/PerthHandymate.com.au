@@ -80,7 +80,11 @@ test('shared entity retains verified NAP, hours, logo and Perth service area', (
     assert.ok(office, file);
     assert.equal(office.name, 'Ellis Services Group');
     assert.equal(office.telephone, '+61403069685');
-    assert.equal(office.openingHours, 'Mo-Su 00:00-23:59');
+    assert.equal(office.openingHours, undefined);
+    assert.deepEqual(office.openingHoursSpecification, {
+      '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '09:00', closes: '21:00',
+    });
     assert.deepEqual(office.address, {
       '@type': 'PostalAddress', streetAddress: '140 St Georges Terrace',
       addressLocality: 'Perth', addressRegion: 'WA', postalCode: '6000', addressCountry: 'AU',
@@ -108,6 +112,8 @@ test('normalizer preserves unrelated JSON-LD and visible content and is idempote
     const guide = fs.readFileSync(path.join(root, 'guides/when-home-maintenance-needs-a-licensed-trade/index.html'), 'utf8');
     fs.mkdirSync(path.join(temporaryRoot, 'services/electrical-plumbing-gas-air-conditioning/electricians'), { recursive: true });
     fs.mkdirSync(path.join(temporaryRoot, 'guides'), { recursive: true });
+    fs.mkdirSync(path.join(temporaryRoot, 'data'), { recursive: true });
+    fs.copyFileSync(path.join(root, 'data/business-facts.json'), path.join(temporaryRoot, 'data/business-facts.json'));
     const serviceFile = path.join(temporaryRoot, 'services/electrical-plumbing-gas-air-conditioning/electricians/index.html');
     const guideFile = path.join(temporaryRoot, 'guides/index.html');
     fs.writeFileSync(path.join(temporaryRoot, 'index.html'), home);

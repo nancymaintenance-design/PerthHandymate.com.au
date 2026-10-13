@@ -38,10 +38,20 @@ const sitemapRoutes = [
   ...(policy.supplementalServiceRoutes || []),
   ...(policy.indexableProjectRoutes || []),
 ];
+const sitemapFile = path.join(root, 'sitemap.xml');
+const existingSitemap = fs.existsSync(sitemapFile) ? fs.readFileSync(sitemapFile, 'utf8') : '';
+const existingDates = new Map([...existingSitemap
+  .matchAll(/<url><loc>([^<]+)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)]
+  .map(([, url, date]) => [url, date]));
+const modifications = JSON.parse(fs.readFileSync(path.join(root, 'data/content-modifications.json'), 'utf8')).routes;
 const sitemap = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-  ...sitemapRoutes.map((route) => `  <url><loc>${policy.origin}${route}</loc></url>`),
+  ...sitemapRoutes.map((route) => {
+    const url = `${policy.origin}${route}`;
+    const date = modifications[`/${route}`]?.date || existingDates.get(url);
+    return `  <url><loc>${url}</loc>${date ? `<lastmod>${date}</lastmod>` : ''}</url>`;
+  }),
   '</urlset>',
   '',
 ].join('\n');

@@ -419,11 +419,11 @@ test('places icon-based review and social links in the footer information column
     const html = fs.readFileSync(page, 'utf8');
     assert.match(html, /<div><h2>Important<\/h2><p>[^<]*<\/p><div class="footer-social-region"/, page);
     assert.match(html, /<div class="footer-social-links">/, page);
-    assert.match(html, /<a class="footer-google-reviews" href="https:\/\/share\.google\/qaKT4Kj7ycWHQCQWh"/, page);
+    assert.match(html, /<a class="footer-google-reviews" href="https:\/\/maps\.app\.goo\.gl\/iqNh8cGNbaZhBuP17"/, page);
     assert.match(html, /<a class="footer-instagram" href="https:\/\/www\.instagram\.com\/elliservices_group\/"/, page);
     assert.match(html, /<span>Instagram<\/span>/, page);
-    assert.match(html, /href="https:\/\/share\.google\/Z4tImXHToPi9H4LmH"[^>]*>[\s\S]*?<svg class="footer-social-icon"[\s\S]*?<span>LinkedIn<\/span><\/a>/, page);
-    assert.match(html, /href="https:\/\/share\.google\/HbT2Uijg3K6yaqcpV"[^>]*>[\s\S]*?<svg class="footer-social-icon"[\s\S]*?<span>Facebook<\/span><\/a>/, page);
+    assert.match(html, /href="https:\/\/www\.linkedin\.com\/in\/ellis-services-group-091541266\/\?isSelfProfile=false"[^>]*>[\s\S]*?<svg class="footer-social-icon"[\s\S]*?<span>LinkedIn<\/span><\/a>/, page);
+    assert.match(html, /href="https:\/\/www\.facebook\.com\/p\/Ellis-Services-Group-100082926022259\/"[^>]*>[\s\S]*?<svg class="footer-social-icon"[\s\S]*?<span>Facebook<\/span><\/a>/, page);
   }
   assert.match(styles, /\.site-footer \.footer-social-region\{margin-top:28px/);
   assert.match(styles, /\.site-footer \.footer-social-links\{display:grid/);
@@ -917,7 +917,7 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   for (const file of customerPages) {
     const source = fs.readFileSync(file, 'utf8');
     assert.match(source, /<p class="footer-hours">24-hour onsite service · urgent attendance from 30 minutes\*<\/p>/, file);
-    assert.match(source, /https:\/\/share\.google\/qaKT4Kj7ycWHQCQWh/, file);
+    assert.match(source, /https:\/\/maps\.app\.goo\.gl\/iqNh8cGNbaZhBuP17/, file);
     assert.match(source, /https:\/\/www\.instagram\.com\/elliservices_group\//, file);
     assert.match(source, /<a href="[^\"]*privacy\/">Privacy<\/a>/, file);
     assert.doesNotMatch(source, /\broute(?:s|d|ing)?\b/i, file);
@@ -934,7 +934,7 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   const contact = fs.readFileSync(path.join(root, 'contact', 'index.html'), 'utf8');
   const formConfig = fs.readFileSync(path.join(root, 'data', 'form-config.js'), 'utf8');
   const client = fs.readFileSync(path.join(root, 'assets', 'js', 'site.js'), 'utf8');
-  assert.match(about, /https:\/\/share\.google\/qaKT4Kj7ycWHQCQWh/);
+  assert.match(about, /https:\/\/maps\.app\.goo\.gl\/iqNh8cGNbaZhBuP17/);
   assert.match(about, /Read our Google reviews/);
   assert.match(contact, /customer service team will call you/i);
   assert.match(contact, /Read our Privacy Notice/);

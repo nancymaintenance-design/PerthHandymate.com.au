@@ -1,0 +1,376 @@
+{
+  "version": 1,
+  "meaning": "Local content modification dates, not production publication dates. Shared footer, identity boilerplate and asset-only edits do not refresh every route. Unlisted routes retain their existing lastmod or omission.",
+  "routes": {
+    "/guides/understanding-service-areas-and-postcode-checks/": {
+      "date": "2026-10-10",
+      "reason": "Guide body was added in cdd814d on 2026-10-10; existing visible Updated date already records this. Correct the older sitemap date without claiming a new edit.",
+      "source": "git show cdd814d; guide visible Updated 2026-10-10"
+    },
+    "/guides/cupboard-hinges-drawer-runners-repair-guide/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/guides/home-repair-priorities/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/guides/how-to-find-the-right-home-repairer/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/guides/photos-and-clear-scope-for-home-repairs/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/guides/prepare-before-home-repair-quote/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/guides/property-manager-maintenance-coordination/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/guides/seasonal-home-maintenance-australia/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/guides/shower-silicone-grout-waterproofing-guide/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/guides/sticking-doors-windows-repair-guide/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/guides/wall-patching-paint-touch-ups-guide/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/guides/when-home-maintenance-needs-a-licensed-trade/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/": {
+      "date": "2026-10-13",
+      "reason": "Visible user-confirmed office reception schedule added separately from conditional onsite availability.",
+      "source": "Direct user confirmation 2026-10-13; Task 3"
+    },
+    "/projects/clothesline-bracket-repair-canning/": {
+      "date": "2026-10-13",
+      "reason": "Contextual region and confirmed case links added; Canning repair and installation intent separated.",
+      "source": "Approved Task 3 link matrix"
+    },
+    "/projects/door-lock-replacement-installation/": {
+      "date": "2026-10-13",
+      "reason": "Generic project description replaced with specific visible work scope; cupboard repair title clarified where applicable.",
+      "source": "Existing verified project body; Task 3 metadata review"
+    },
+    "/projects/drawer-runner-replacement-southern-corridor/": {
+      "date": "2026-10-13",
+      "reason": "Contextual region and confirmed case links added; Canning repair and installation intent separated.",
+      "source": "Approved Task 3 link matrix"
+    },
+    "/projects/interior-wall-repair-painting/": {
+      "date": "2026-10-13",
+      "reason": "Generic project description replaced with specific visible work scope; cupboard repair title clarified where applicable.",
+      "source": "Existing verified project body; Task 3 metadata review"
+    },
+    "/projects/kitchen-cabinet-hinge-repair/": {
+      "date": "2026-10-13",
+      "reason": "Generic project description replaced with specific visible work scope; cupboard repair title clarified where applicable.",
+      "source": "Existing verified project body; Task 3 metadata review"
+    },
+    "/projects/shelf-installation-cockburn/": {
+      "date": "2026-10-13",
+      "reason": "Contextual region and confirmed case links added; Canning repair and installation intent separated.",
+      "source": "Approved Task 3 link matrix"
+    },
+    "/services/building-renovation-structural/bathroom/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/cleaning-removals-pest-hazard/pest-control/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/doors-windows-glass-screens/door-installation/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/doors-windows-glass-screens/door-repairs/": {
+      "date": "2026-10-12",
+      "reason": "Confirmed service or case body added in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/doors-windows-glass-screens/fly-screens/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/doors-windows-glass-screens/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/doors-windows-glass-screens/shower-screens/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/doors-windows-glass-screens/sliding-door-repairs/": {
+      "date": "2026-10-12",
+      "reason": "Confirmed service or case body added in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/doors-windows-glass-screens/window-repairs/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/electrical-plumbing-gas-air-conditioning/air-conditioning/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/electrical-plumbing-gas-air-conditioning/electricians/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/electrical-plumbing-gas-air-conditioning/plumbers/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/gardens-landscaping/garden-clean-up/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/gardens-landscaping/gardeners/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/gardens-landscaping/lawn-mowing/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/gardens-landscaping/tree-arborists/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/blinds-and-curtains/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/": {
+      "date": "2026-10-12",
+      "reason": "Confirmed service or case body added in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/carpenters/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/carpet-repair/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/": {
+      "date": "2026-10-12",
+      "reason": "Confirmed service or case body added in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/dishwasher-repair/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/furniture-assembly/": {
+      "date": "2026-10-12",
+      "reason": "Confirmed service or case body added in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/handymen/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/oven-repair/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/plasterers/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging/": {
+      "date": "2026-10-12",
+      "reason": "Confirmed service or case body added in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/tiling/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/": {
+      "date": "2026-10-12",
+      "reason": "Confirmed service or case body added in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/handyman-interiors-appliance-repairs/waterproofing/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/": {
+      "date": "2026-10-13",
+      "reason": "Main-body review navigation updated to the direct user-confirmed Google reviews URL; prior substantive maintenance guidance remains intact.",
+      "source": "Direct user confirmation 2026-10-13; Task 3"
+    },
+    "/services/outdoor-structures-fencing-pools/deck-builders/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/outdoor-structures-fencing-pools/fence-builders/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/outdoor-structures-fencing-pools/fencing-contractors/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/outdoor-structures-fencing-pools/pool-fence-installers/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/outdoor-structures-fencing-pools/timber-fencing/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/planning-inspection-compliance/building-inspectors/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/planning-inspection-compliance/structural-engineers/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/property-maintenance/": {
+      "date": "2026-10-12",
+      "reason": "Confirmed service or case body added in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/roofing-gutters-exterior/gutter-services/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/roofing-gutters-exterior/house-painters/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/roofing-gutters-exterior/pavers/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/services/roofing-gutters-exterior/roofing/": {
+      "date": "2026-10-12",
+      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
+      "source": "cdd814d..18dd298"
+    },
+    "/about/": {
+      "date": "2026-10-13",
+      "reason": "Visible user-confirmed office reception schedule added separately from conditional onsite availability.",
+      "source": "Direct user confirmation 2026-10-13; Task 3"
+    },
+    "/contact/": {
+      "date": "2026-10-13",
+      "reason": "Visible user-confirmed office reception schedule added separately from conditional onsite availability.",
+      "source": "Direct user confirmation 2026-10-13; Task 3"
+    },
+    "/areas/south-perth-canning/": {
+      "date": "2026-10-13",
+      "reason": "Contextual region and confirmed case links added; Canning repair and installation intent separated.",
+      "source": "Approved Task 3 link matrix"
+    },
+    "/areas/cockburn-rockingham-southern-corridor/": {
+      "date": "2026-10-13",
+      "reason": "Contextual region and confirmed case links added; Canning repair and installation intent separated.",
+      "source": "Approved Task 3 link matrix"
+    },
+    "/projects/bathroom-tile-shower-repair/": {
+      "date": "2026-10-13",
+      "reason": "Generic project description replaced with specific visible work scope; cupboard repair title clarified where applicable.",
+      "source": "Existing verified project body; Task 3 metadata review"
+    },
+    "/projects/decking-refinishing-maintenance/": {
+      "date": "2026-10-13",
+      "reason": "Generic project description replaced with specific visible work scope; cupboard repair title clarified where applicable.",
+      "source": "Existing verified project body; Task 3 metadata review"
+    },
+    "/projects/exterior-timber-window-door-repair/": {
+      "date": "2026-10-13",
+      "reason": "Generic project description replaced with specific visible work scope; cupboard repair title clarified where applicable.",
+      "source": "Existing verified project body; Task 3 metadata review"
+    },
+    "/projects/garden-clean-up/": {
+      "date": "2026-10-13",
+      "reason": "Generic project description replaced with specific visible work scope; cupboard repair title clarified where applicable.",
+      "source": "Existing verified project body; Task 3 metadata review"
+    },
+    "/projects/roof-and-gutter-maintenance/": {
+      "date": "2026-10-13",
+      "reason": "Generic project description replaced with specific visible work scope; cupboard repair title clarified where applicable.",
+      "source": "Existing verified project body; Task 3 metadata review"
+    },
+    "/projects/sliding-door-flyscreen-repair/": {
+      "date": "2026-10-13",
+      "reason": "Generic project description replaced with specific visible work scope; cupboard repair title clarified where applicable.",
+      "source": "Existing verified project body; Task 3 metadata review"
+    },
+    "/projects/timber-fence-repair/": {
+      "date": "2026-10-13",
+      "reason": "Generic project description replaced with specific visible work scope; cupboard repair title clarified where applicable.",
+      "source": "Existing verified project body; Task 3 metadata review"
+    }
+  }
+}
