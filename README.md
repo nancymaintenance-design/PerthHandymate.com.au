@@ -10,16 +10,17 @@ Static website candidate for Ellis Services Group. The stated service market is 
 - Portable reproducible build, local preview server and verification scripts
 - An existing `api/contact.js` serverless handler, separate from the static preview
 
-No dependency installation is required. Build the published static inputs before previewing.
+The static build and preview require no dependency installation. The complete test suite additionally requires Git history, Playwright and a Chromium browser as described below; these are development tools, not production website dependencies. Build the published static inputs before previewing.
 
 ## Run locally
 
-Requires a current Node.js version with built-in `fetch` and the Node test runner. From the repository root, build first, then run the complete suite and static checker:
+Requires a current Node.js version with built-in `fetch` and the Node test runner (verified with Node 24). After the verification setup below, run these commands from the repository root:
 
 ```powershell
 node scripts/build-local.js
 node --test tests/*.test.js
 node tests/check-site.js
+node tools/five-category-coverage.js
 ```
 
 The build recreates ignored `dist/` and normalizes internal index links. Rebuild after editing source. The preview serves only `dist/` and exits with build instructions when that output is missing.
@@ -37,6 +38,46 @@ Open [the local preview](http://127.0.0.1:4182/). The server binds only to `127.
 $env:ELLIS_PREVIEW_PORT=4182
 node tests/http-smoke.js
 ```
+
+## Complete verification prerequisites
+
+Use a full Git checkout, with Git on `PATH`. The original-image preservation test reads commit `18dd298dbc5ad48675c8a3b560216e85a689641e`, and existing catalogue/527-term preservation tests read `cc9d2b63f730d890cacdff430ed7551152b976e7`. Keep these historical objects: a ZIP export or shallow clone missing either commit cannot run the complete suite. CI must fetch full history (for example `fetch-depth: 0` with checkout); an existing shallow checkout can use `git fetch --unshallow origin`. Check availability with:
+
+```powershell
+git cat-file -t 18dd298dbc5ad48675c8a3b560216e85a689641e
+git cat-file -t cc9d2b63f730d890cacdff430ed7551152b976e7
+```
+
+Install the tested Playwright version locally for development, then install its bundled Chromium browser. These commands do not change the static build or require a production package manifest:
+
+```powershell
+npm install --no-save --package-lock=false playwright@1.62.1
+npx playwright install chromium
+node --test tests/*.test.js
+```
+
+On Linux CI, browser system libraries may also be required; use `npx playwright install --with-deps chromium` on a host where installing them is authorized. A maintainer with Chrome or Microsoft Edge already installed can omit the Chromium download and select that browser, for example:
+
+```powershell
+$env:PHM_BROWSER_CHANNEL='msedge' # or 'chrome'
+node --test tests/*.test.js
+Remove-Item Env:PHM_BROWSER_CHANNEL
+```
+
+Alternatively set `PHM_BROWSER_EXECUTABLE_PATH` to an absolute Chrome/Edge executable path; do not set both browser overrides. With no override, tests use bundled Chromium when available, then detect installed Chrome/Edge in standard Windows, macOS or Linux locations. Set the explicit path for a nonstandard installation. A missing module, browser or failed launch fails the suite; real browser coverage is mandatory and is never silently skipped. Browser tests serve fixtures on an ephemeral loopback port, block external requests and POSTs, and do not send real enquiries.
+
+Module loading tries standard Node `require('playwright')` resolution first. If that is unavailable, `PHM_PLAYWRIGHT_MODULE` may point to an absolute Playwright package directory in another development installation. As a convenience only, an existing Codex runtime package under the defined `USERPROFILE` or `HOME` is a final optional fallback; neither Codex nor its cache is required. For example, after installing Playwright in your own tooling directory:
+
+```powershell
+$env:PHM_PLAYWRIGHT_MODULE='C:/path/to/tooling/node_modules/playwright'
+$env:PHM_BROWSER_CHANNEL='chrome'
+node --test tests/*.test.js
+Remove-Item Env:PHM_PLAYWRIGHT_MODULE,Env:PHM_BROWSER_CHANNEL
+```
+
+## Maintaining confirmed office facts
+
+Edit `data/business-facts.json` only from confirmed evidence, then run `node scripts/normalize-entity-graph.js` and rebuild. The normalizer refreshes shared office/schema hours, the existing reception paragraph in home/about/contact, footer reception text and known Google-review/social anchors on every run. It preserves separate onsite availability, office Maps directions, unrelated links and other content. The visible reception sentence and structured opening-hours values must be updated together in the fact source. Re-run the complete suite and static/coverage checks after a factual change.
 
 ## Contact form boundary
 

@@ -5,11 +5,8 @@ const path = require('node:path');
 const http = require('node:http');
 const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
-// Use the workspace runtime without adding a production dependency.
-let playwright;
-try { playwright = require('playwright'); } catch {
-  playwright = require(path.join(process.env.USERPROFILE, '.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'));
-}
+const { loadPlaywright, browserLaunchOptions } = require('./helpers/browser-runtime');
+const playwright = loadPlaywright();
 const capture = process.env.PHM_CAPTURE_LABEL;
 const screenshots = path.resolve(root, '../reports/seo-optimization-local-2026-10-13/screenshots');
 let browser, server, base, fixture;
@@ -33,7 +30,7 @@ test.before(async () => {
   });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   base = `http://127.0.0.1:${server.address().port}`;
-  browser = await playwright.chromium.launch({ headless: true, channel: 'msedge' });
+  browser = await playwright.chromium.launch(browserLaunchOptions(playwright.chromium.executablePath()));
   if (capture) fs.mkdirSync(screenshots, { recursive: true });
 });
 test.after(async () => {

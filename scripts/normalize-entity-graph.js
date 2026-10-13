@@ -69,6 +69,39 @@ function normalizeReferences(value) {
   }
 }
 
+function escapeHtml(value) {
+  return value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+}
+
+function refreshVisibleFacts(html) {
+  // The existing footer retains the previous fact, so repeated updates can find
+  // the matching office paragraph without touching other paragraphs in that section.
+  const previous = html.match(/<p class="footer-office-hours">([^<]*)<\/p>/)?.[1];
+  const schedule = escapeHtml(facts.officeReception.replace(/^Office reception:\s*/, ''));
+  const previousSchedule = previous?.replace(/^Office reception:\s*/, '');
+  html = html.replace(/<section\b[^>]*\bid="office-reception"[^>]*>[\s\S]*?<\/section>/g, section => {
+    let refreshed = false;
+    return section.replace(/(<p\b[^>]*>)([^<]*)(<\/p>)/g, (raw, open, text, close) => {
+      if (refreshed || (text !== previousSchedule && text !== schedule)) return raw;
+      refreshed = true;
+      return open + schedule + close;
+    });
+  });
+  const reception = escapeHtml(facts.officeReception);
+  if (previous !== undefined) html = html.replace(/(<p class="footer-office-hours">)[^<]*(<\/p>)/g, (_, open, close) => open + reception + close);
+  else html = html.replace(/(<p class="footer-hours">)/, (_, open) => `<p class="footer-office-hours">${reception}</p>${open}`);
+  return html.replace(/<a\b[^>]*>[\s\S]*?<\/a>/g, anchor => {
+    const classes = anchor.match(/\bclass="([^"]*)"/)?.[1].split(/\s+/) || [];
+    let href;
+    if (classes.some(cls => ['hero-reviews', 'footer-google-reviews'].includes(cls)) ||
+        (classes.includes('text-link') && /^Read our Google reviews(?:\s|<)/.test(anchor.slice(anchor.indexOf('>') + 1)))) href = facts.googleReviews;
+    else if (classes.includes('footer-instagram')) href = facts.sameAs[0];
+    else if (classes.includes('footer-linkedin')) href = facts.sameAs[1];
+    else if (classes.includes('footer-facebook')) href = facts.sameAs[2];
+    return href ? anchor.replace(/\bhref="[^"]*"/, () => `href="${escapeHtml(href)}"`) : anchor;
+  });
+}
+
 const files = ['index.html', '404.html'].map(file => path.join(root, file))
   .filter(file => fs.existsSync(file));
 for (const directory of directories) files.push(...collect(path.join(root, directory)));
@@ -94,12 +127,7 @@ for (const file of files) {
     if (!html.includes('</head>')) throw new Error(`Missing head: ${file}`);
     html = html.replace('</head>', `<script type="application/ld+json">${JSON.stringify(graph)}</script></head>`);
   }
-  html = html.replaceAll('https://share.google/qaKT4Kj7ycWHQCQWh', facts.googleReviews)
-    .replaceAll('https://share.google/Z4tImXHToPi9H4LmH', facts.sameAs[1])
-    .replaceAll('https://share.google/HbT2Uijg3K6yaqcpV', facts.sameAs[2]);
-  if (!html.includes('class="footer-office-hours"')) {
-    html = html.replace(/(<p class="footer-hours">)/, `<p class="footer-office-hours">${facts.officeReception}</p>$1`);
-  }
+  html = refreshVisibleFacts(html);
   const route = path.relative(root, file).split(path.sep).join('/');
   if (regulatedPages.has(route) && !html.includes(`<p class="licensed-team-scope">${sentence}</p>`)) {
     if (!/<p class="lede">[\s\S]*?<\/p>/.test(html)) throw new Error(`Missing scope insertion point: ${file}`);

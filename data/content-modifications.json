@@ -198,9 +198,9 @@
       "source": "cdd814d..18dd298"
     },
     "/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/": {
-      "date": "2026-10-12",
-      "reason": "Confirmed service or case body added in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-13",
+      "reason": "Visible navigation to existing assessment and repair sections added in the current local enquiry UX round.",
+      "source": "Task 2 local navigation change, 37776ef..f93dda2 (2026-10-13)"
     },
     "/services/handyman-interiors-appliance-repairs/dishwasher-repair/": {
       "date": "2026-10-12",
@@ -213,9 +213,9 @@
       "source": "cdd814d..18dd298"
     },
     "/services/handyman-interiors-appliance-repairs/handymen/": {
-      "date": "2026-10-12",
-      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-13",
+      "reason": "Visible navigation to existing service sections added in the current local enquiry UX round.",
+      "source": "Task 2 local navigation change, 37776ef..f93dda2 (2026-10-13)"
     },
     "/services/handyman-interiors-appliance-repairs/": {
       "date": "2026-10-12",
