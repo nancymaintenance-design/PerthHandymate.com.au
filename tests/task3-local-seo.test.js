@@ -30,7 +30,7 @@ test('content dates reflect substantive edits and visible guide dates agree with
   const xml = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
   const entries = new Map([...xml.matchAll(/<url><loc>https:\/\/www.perthhandymate.com.au([^<]*)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)].map(([, route, date]) => [route, date]));
   assert.equal(entries.size, 126);
-  for (const [route, date] of [['/', '2026-10-14'], ['/services/handyman-interiors-appliance-repairs/handymen/', '2026-10-14'], ['/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/', '2026-10-14'], ['/guides/cupboard-hinges-drawer-runners-repair-guide/', '2026-10-13'], ['/guides/shower-silicone-grout-waterproofing-guide/', '2026-10-13'], [region, '2026-10-14'], [south, '2026-10-14']]) assert.equal(entries.get(route), date, route);
+  for (const [route, date] of [['/', '2026-10-14'], ['/services/handyman-interiors-appliance-repairs/handymen/', '2026-10-14'], ['/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/', '2026-10-14'], ['/guides/cupboard-hinges-drawer-runners-repair-guide/', '2026-10-14'], ['/guides/shower-silicone-grout-waterproofing-guide/', '2026-10-14'], [region, '2026-10-14'], [south, '2026-10-14']]) assert.equal(entries.get(route), date, route);
   assert.equal(entries.get('/areas/perth-central/'), '2026-10-14');
   assert.equal(entries.get('/areas/'), '2026-10-14');
   for (const [route, date] of entries) if (route.startsWith('/guides/') && route !== '/guides/' && date) assert.match(main(read(route)), new RegExp('Updated ' + date), route);

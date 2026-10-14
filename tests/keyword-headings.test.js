@@ -10,7 +10,8 @@ test('guide hub prominent headings identify Perth handyman and repair intent', (
   assert.match(text(html.match(/<title>(.*?)<\/title>/)[1]), /Perth Handyman.*Home Maintenance Guides/);
   assert.match(text(html.match(/<h1[^>]*>(.*?)<\/h1>/)[1]), /Perth Handyman.*Home Maintenance Guides/);
   const first = text(html.match(/<h2[^>]*>(.*?)<\/h2>/)[1]);
-  assert.equal(first, 'Handyman Repairs in Perth: What to Ask Before Booking');
+  assert.equal(first, 'Repair Faults & Fixings');
+  assert.match(html, /aria-label="Guide categories"/);
 });
 test('every service H1 names the Perth market rather than only a generic action', () => {
   const walk = dir => fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(dir, e.name)) : e.name.endsWith('.html') ? [path.join(dir, e.name)] : []);

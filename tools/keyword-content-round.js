@@ -101,3 +101,6 @@ const coverage=terms.map(t=>{const c=data.clusters.find(c=>c.owner===t.owner);co
 const out='docs/keyword-content-round';write(out+'/coverage.json',JSON.stringify(coverage,null,2));
 const csv=x=>'"'+String(x).replaceAll('"','""')+'"';write(out+'/527词条页面与位置覆盖表.csv','\uFEFF'+['ID,Owner,词类,词条,本地主页面,目标位置,状态,说明',...coverage.map(t=>[t.id,t.owner,t.type,t.term,t.page,t.placement,t.status,t.note].map(csv).join(','))].join('\n'));
 console.log(JSON.stringify({owners:data.clusters.length,modifiedLandingPages:groups.size,newGuides:data.guides.length,deepenedExistingGuides:Object.keys(additions).length,terms:coverage.length,literalMatches:coverage.filter(t=>t.exact).length,semanticReviewRemaining:coverage.filter(t=>!t.exact).length}));
+// Guide bodies now have a maintained editorial owner; the historical cluster
+// generator must finish with current article/hub rendering, never stale copy.
+require('./render-guide-library').apply();

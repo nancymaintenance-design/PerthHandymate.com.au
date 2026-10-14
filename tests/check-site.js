@@ -218,8 +218,14 @@ for (const asset of ['ellis-services-group-logo.png','hero-homepage-v2.png','ico
 const supportPlacements = [
   ['index.html', 'support-property-manager.png'],
   ['services/index.html', 'support-service-network.png'],
-  ['guides/index.html', 'support-guides-advice.png'],
 ];
+// The approved category-first library replaces its large support illustration;
+// the original image must still exist (asset check above), while all 12 guides
+// must remain available through five real category destinations.
+const guideHub = fs.readFileSync(path.join(root, 'guides/index.html'), 'utf8');
+if ((guideHub.match(/<article class="guide-card"/g) || []).length !== 12 ||
+    (guideHub.match(/<section class="guide-category"/g) || []).length !== 5 ||
+    !guideHub.includes('aria-label="Guide categories"')) fail('Guide hub lacks the categorized 12-article library');
 for (const [page, asset] of supportPlacements) {
   const source = fs.readFileSync(path.join(root, page), 'utf8');
   const stem = asset.replace('.png', '');

@@ -1,0 +1,55 @@
+/* Guide-only composition. Brand tokens, fonts, header and controls stay in global.css. */
+.guide-library .page-hero,.guide-reading .page-hero{padding-block:32px 36px}
+.guide-library h1,.guide-reading .article .page-hero h1{font-size:clamp(2rem,3.1vw,2.8rem);line-height:1.15;max-width:30ch;margin-top:20px;margin-bottom:18px}
+.guide-library .page-hero .eyebrow,.guide-reading .page-hero .eyebrow{color:var(--sand)}
+.guide-library .lede{font-size:1.12rem;max-width:72ch;margin-bottom:12px}
+.guide-library .page-hero p:not(.eyebrow){max-width:80ch}
+.guide-category-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.guide-category-nav a{display:inline-flex;align-items:center;min-height:44px;padding:9px 15px;border:1px solid var(--navy);border-radius:var(--radius);font-weight:700;font-size:.94rem;text-decoration:none;color:var(--navy);background:var(--white)}
+.guide-category-nav a:hover,.guide-category-nav a:active{background:var(--navy);color:var(--white)}
+.guide-groups{padding-block:32px 56px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.guide-category{grid-column:1/-1;padding:26px;border:1px solid var(--mist);border-radius:var(--radius);background:var(--white)}
+.guide-category:is(#rental-property,#local-service){grid-column:auto}
+.guide-category:is(#rental-property,#local-service) .guide-card-grid{grid-template-columns:1fr}
+.guide-category>header{border-left:4px solid var(--orange);padding-left:16px;margin-bottom:24px}
+.guide-category h2,.guide-related>h2{font-size:1.5rem;line-height:1.25;letter-spacing:-.015em;margin-bottom:8px}
+.guide-category>header p{color:var(--slate);margin:0}
+.guide-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.guide-card{padding:22px;border:1px solid var(--mist);border-radius:var(--radius);background:var(--paper);display:flex;flex-direction:column;min-width:0}
+.guide-card h3{font-size:1.38rem;line-height:1.3;letter-spacing:-.02em;margin-bottom:14px}
+.guide-card h3 a{text-decoration:none}
+.guide-card h3 a:hover{text-decoration:underline}
+.guide-card p{font-size:1rem;line-height:1.6;color:var(--slate);margin-bottom:18px}
+.guide-card .text-link{margin-top:auto;align-self:flex-start;padding-top:8px;font-size:.95rem}
+.guide-card .eyebrow{font-size:.72rem;margin-bottom:12px;color:var(--eucalypt)}
+.guide-library .cta-band h2{font-size:1.7rem;max-width:none}
+.guide-reading .breadcrumbs{font-size:.82rem}
+.guide-reading .article-meta{font-size:.86rem;color:var(--mist);margin-bottom:22px}
+.guide-introduction{max-width:76ch;font-size:1.08rem;line-height:1.7}
+.guide-introduction p:last-child{margin-bottom:0}
+.guide-reading-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:54px;padding-block:38px 48px;align-items:start}
+.guide-contents{position:sticky;top:104px;max-height:calc(100vh - 126px);overflow:auto;padding:20px;border:1px solid var(--mist);border-radius:var(--radius);background:var(--white);font-size:.88rem;line-height:1.45;scrollbar-width:thin;scrollbar-color:var(--slate) var(--paper)}
+.guide-contents strong{display:block;font-family:"Trebuchet MS",sans-serif;color:var(--navy);font-size:1rem;margin-bottom:12px}
+.guide-contents ol{list-style:none;margin:0;padding:0}
+.guide-contents li+li{margin-top:4px}
+.guide-contents a{display:block;padding:6px 0;color:var(--slate);text-decoration:none}
+.guide-contents a:hover{color:var(--navy);text-decoration:underline}
+.guide-reading .guide-prose{max-width:76ch;width:100%;padding:0;min-width:0}
+.guide-prose>section,.guide-prose>.section.shell{width:auto;margin:0 0 30px;padding:0}
+.guide-prose h2{font-size:1.5rem;line-height:1.3;letter-spacing:-.02em;margin-bottom:16px;max-width:none}
+.guide-prose h3{font-size:1.18rem;line-height:1.35;letter-spacing:-.01em}
+.guide-prose p,.guide-prose li{font-size:1rem;line-height:1.75}
+.guide-prose .article-caution{padding:18px 22px;border-radius:var(--radius);margin-bottom:30px}
+.guide-prose .article-caution p{font-size:.93rem;margin-bottom:0}
+.guide-prose details{border-radius:12px}
+.guide-prose summary{line-height:1.5;font-size:1rem}
+.guide-prose .guide-conclusion{padding:24px;background:var(--white);border:1px solid var(--mist);border-top:4px solid var(--orange);border-radius:var(--radius)}
+.guide-related{padding-block:0 48px}
+.guide-related>h2{margin-bottom:22px}
+.guide-back{margin-top:24px}
+.guide-category,.guide-prose section,.guide-related h2{scroll-margin-top:110px}
+.guide-library a:focus-visible,.guide-reading a:focus-visible,.guide-category:focus-visible,.guide-prose section:focus-visible{outline:3px solid var(--action);outline-offset:4px;border-radius:6px}
+.guide-category:target,.guide-prose section:target{outline:2px solid var(--orange);outline-offset:8px}
+@media(max-width:1050px){.guide-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-reading-layout{grid-template-columns:210px minmax(0,1fr);gap:28px}}
+@media(max-width:700px){.guide-groups{grid-template-columns:1fr}.guide-card-grid{grid-template-columns:1fr}.guide-category{padding:20px}.guide-card{padding:20px}.guide-reading-layout{display:block;padding-top:24px}.guide-contents{position:static;max-height:none;margin-bottom:28px}.guide-library .page-hero,.guide-reading .page-hero{padding-block:26px}.guide-library h1,.guide-reading .article .page-hero h1{font-size:2rem;max-width:none}.guide-introduction{font-size:1rem}.guide-category-nav a{flex:1 1 180px}.guide-category,.guide-prose section,.guide-related h2{scroll-margin-top:96px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.guide-library *,.guide-reading *{animation:none!important;transition:none!important}}

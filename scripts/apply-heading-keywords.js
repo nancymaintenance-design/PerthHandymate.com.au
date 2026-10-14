@@ -6,7 +6,7 @@ const root = path.resolve(__dirname, '..');
 const policy = JSON.parse(fs.readFileSync(path.join(root, 'data/heading-keyword-policy.json'), 'utf8'));
 const decode = s => s.replace(/<[^>]*>/g, '').replaceAll('&amp;', '&').replaceAll('&#39;', "'").replaceAll('&quot;', '"');
 const escape = s => s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-const guideLabels = new Map(Object.entries(policy.pages).filter(([f, p]) => f.startsWith('guides/') && p.h1).map(([f, p]) => [p.beforeH1, p.h1]));
+const guideLabels = new Map(Object.entries(policy.pages).filter(([f, p]) => f.startsWith('guides/') && p.h1).flatMap(([f, p]) => [p.beforeH1, ...(p.previousH1 || [])].map(old => [old, p.h1])));
 
 function transform(html, entry) {
   if (entry.title) html = html.replace(/(<title>)[\s\S]*?(<\/title>)/, (_, a, b) => a + escape(entry.title) + b);
@@ -22,7 +22,7 @@ function transform(html, entry) {
     const visit = value => {
       if (!value || typeof value !== 'object') return;
       for (const [key, item] of Object.entries(value)) {
-        if (['headline', 'name'].includes(key) && item === entry.beforeH1) value[key] = entry.h1;
+        if (['headline', 'name'].includes(key) && [entry.beforeH1, ...(entry.previousH1 || [])].includes(item)) value[key] = entry.h1;
         else if (item && typeof item === 'object') visit(item);
       }
     };

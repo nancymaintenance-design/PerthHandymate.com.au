@@ -3,64 +3,64 @@
   "meaning": "Local content modification dates, not production publication dates. Shared footer, identity boilerplate and asset-only edits do not refresh every route. Unlisted routes retain their existing lastmod or omission.",
   "routes": {
     "/guides/understanding-service-areas-and-postcode-checks/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/cupboard-hinges-drawer-runners-repair-guide/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/home-repair-priorities/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/how-to-find-the-right-home-repairer/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/photos-and-clear-scope-for-home-repairs/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/prepare-before-home-repair-quote/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/property-manager-maintenance-coordination/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/seasonal-home-maintenance-australia/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/shower-silicone-grout-waterproofing-guide/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/sticking-doors-windows-repair-guide/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/wall-patching-paint-touch-ups-guide/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/guides/when-home-maintenance-needs-a-licensed-trade/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/": {
       "date": "2026-10-14",
@@ -378,9 +378,9 @@
       "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
     },
     "/guides/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Categorized desktop guide library and scenario-led educational article openings, decisions and conclusions.",
+      "source": "data/guide-library.js; data/guide-library-body.json"
     },
     "/services/building-renovation-structural/bricklayers/": {
       "date": "2026-10-14",

@@ -121,10 +121,13 @@
       "beforeTitle": "Cupboard Hinges & Drawer Runners: Repair or Replace? | Ellis",
       "beforeH1": "Cupboard Hinges & Drawer Runners: Repair or Replace?",
       "headings": {},
-      "review": "keyword intent correction",
-      "title": "Cabinet & Drawer Repairs Perth: Hinge Guide | Ellis",
-      "h1": "Cabinet & Drawer Repairs in Perth: Hinges or Runners?",
-      "owner": "O07"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Cupboard Door Fallen off Its Hinge? Cabinet & Drawer Repairs in Perth | Ellis",
+      "h1": "Cupboard Door Fallen off Its Hinge? Cabinet & Drawer Repairs in Perth",
+      "owner": "O07",
+      "previousH1": [
+        "Cabinet & Drawer Repairs in Perth: Hinges or Runners?"
+      ]
     },
     "guides/home-repair-priorities/index.html": {
       "beforeTitle": "How to Prioritise Home Repairs | Ellis",
@@ -134,23 +137,31 @@
         "Stop active damage, then restore function": "House Repairs: Active Damage Before Cosmetic Work",
         "Bundle compatible lower-risk tasks": "Combine Small Repair Jobs into a Home Maintenance List"
       },
-      "review": "keyword intent correction",
-      "title": "Home Maintenance Perth: Repair Priorities | Ellis",
-      "h1": "Home Maintenance in Perth: Which Repairs Come First?",
-      "owner": "O02"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Doors, Skirting & Wall Marks before an Open Home: Perth Repair Priorities | Ellis",
+      "h1": "Doors, Skirting & Wall Marks before an Open Home: Perth Repair Priorities",
+      "owner": "O02",
+      "previousH1": [
+        "Home Maintenance in Perth: Which Repairs Come First?"
+      ]
     },
     "guides/how-to-find-the-right-home-repairer/index.html": {
       "beforeTitle": "How to Find the Right Home Repairer | Ellis",
       "beforeH1": "How to Find the Right Repairer for a Home Maintenance Job",
       "headings": {
-        "Start with the problem, not a trade label": "Describe Your Small Home Repair Jobs in Perth",
+        "Start with the problem, not a trade label": "Describe your small home repair jobs",
         "Match the scope to the right capability": "Handyman or Licensed Trade: Match the Repair Scope",
-        "Confirm fit before accepting a booking": "Hiring a Handyman in Perth: Scope, Quote & Booking"
+        "Confirm fit before accepting a booking": "Hiring a handyman: scope, quote & booking",
+        "Describe Your Small Home Repair Jobs in Perth": "Describe your small home repair jobs",
+        "Hiring a Handyman in Perth: Scope, Quote & Booking": "Hiring a handyman: scope, quote & booking"
       },
-      "review": "keyword intent correction",
-      "title": "Choosing a Handyman in Perth | Scope & Credentials",
-      "h1": "How to Choose a Handyman in Perth for Home Repairs",
-      "owner": "O01"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Loose Hinges, Shelves & Wall Damage: Choosing a Handyman in Perth | Ellis",
+      "h1": "Loose Hinges, Shelves & Wall Damage: Choosing a Handyman in Perth",
+      "owner": "O01",
+      "previousH1": [
+        "How to Choose a Handyman in Perth for Home Repairs"
+      ]
     },
     "guides/index.html": {
       "beforeTitle": "Property Maintenance Guides & Advice | Ellis",
@@ -171,10 +182,13 @@
         "Write the scope in observable terms": "Describe Small Repair Jobs for a Clear Handyman Quote",
         "Keep changes visible": "Confirm Changes to the Handyman Repair Scope"
       },
-      "review": "keyword intent correction",
-      "title": "Perth Home Repair Quotes: Photos & Scope | Ellis",
-      "h1": "Perth Home Repair Quotes: Photos & a Clear Repair Scope",
-      "owner": "O29"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Curtain Rod Pulled out of the Wall? Clear Repair Scope & Optional Photos in Perth | Ellis",
+      "h1": "Curtain Rod Pulled out of the Wall? Clear Repair Scope & Optional Photos in Perth",
+      "owner": "O29",
+      "previousH1": [
+        "Perth Home Repair Quotes: Photos & a Clear Repair Scope"
+      ]
     },
     "guides/prepare-before-home-repair-quote/index.html": {
       "beforeTitle": "Prepare for a Home Repair Quote | Ellis",
@@ -183,10 +197,13 @@
         "Build a short job brief": "Prepare a Home Repair List for Your Handyman Quote",
         "Make comparisons possible": "Compare Handyman Rates, Scope & Inclusions"
       },
-      "review": "keyword intent correction",
-      "title": "Handyman Quotes Perth: What to Prepare | Ellis",
-      "h1": "Handyman Quotes in Perth: Prepare Your Home Repair List",
-      "owner": "O29"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Moving In with Furniture to Assemble? Prepare a Handyman Quote in Perth | Ellis",
+      "h1": "Moving In with Furniture to Assemble? Prepare a Handyman Quote in Perth",
+      "owner": "O29",
+      "previousH1": [
+        "Handyman Quotes in Perth: Prepare Your Home Repair List"
+      ]
     },
     "guides/property-manager-maintenance-coordination/index.html": {
       "beforeTitle": "Property Manager Maintenance Coordination | Ellis",
@@ -196,68 +213,90 @@
         "Prioritise a mixed maintenance list": "Prioritise Rental Maintenance Repairs & Vacate Jobs",
         "Keep assessment authorisation separate from repair authorisation": "Rental Property Repairs: Assessment & Quote Approval"
       },
-      "review": "keyword intent correction",
-      "title": "Rental Property Maintenance Perth: Planning | Ellis",
-      "h1": "Rental Property Maintenance in Perth: A Repair Checklist",
-      "owner": "O25"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Doors, Cupboards & Wall Damage after a Rental Inspection: Perth Maintenance | Ellis",
+      "h1": "Doors, Cupboards & Wall Damage after a Rental Inspection: Perth Maintenance",
+      "owner": "O25",
+      "previousH1": [
+        "Rental Property Maintenance in Perth: A Repair Checklist"
+      ]
     },
     "guides/seasonal-home-maintenance-australia/index.html": {
       "beforeTitle": "Seasonal Home Maintenance Australia | Ellis",
       "beforeH1": "A Seasonal Home Maintenance Plan for Australian Properties",
       "headings": {
-        "Plan for your local climate": "Preventative Home Maintenance for Perth Conditions",
+        "Plan for your local climate": "Preventative maintenance for local conditions",
         "Check comfort, moisture and outdoor wear": "Routine Property Repairs: Moisture & Outdoor Wear",
-        "Turn observations into a workable list": "Create Your Seasonal Home Maintenance To-do List"
+        "Turn observations into a workable list": "Create Your Seasonal Home Maintenance To-do List",
+        "Preventative Home Maintenance for Perth Conditions": "Preventative maintenance for local conditions"
       },
-      "review": "keyword intent correction",
-      "title": "Home Maintenance Perth: Seasonal Checklist | Ellis",
-      "h1": "Home Maintenance in Perth: A Seasonal Property Checklist",
-      "owner": "O02"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Gutters Overflowing after Rain? Seasonal Home Maintenance in Perth | Ellis",
+      "h1": "Gutters Overflowing after Rain? Seasonal Home Maintenance in Perth",
+      "owner": "O02",
+      "previousH1": [
+        "Home Maintenance in Perth: A Seasonal Property Checklist"
+      ]
     },
     "guides/shower-silicone-grout-waterproofing-guide/index.html": {
       "beforeTitle": "Shower Silicone, Grout & Waterproofing: The Difference | Ellis",
       "beforeH1": "Shower Silicone, Grout & Waterproofing: The Difference",
       "headings": {},
-      "review": "keyword intent correction",
-      "title": "Shower Resealing Perth: Grout or Waterproofing? | Ellis",
-      "h1": "Shower Resealing in Perth: Silicone, Grout or Waterproofing?",
-      "owner": "O18/O31"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Shower Still Leaking after New Silicone? Resealing & Waterproofing in Perth | Ellis",
+      "h1": "Shower Still Leaking after New Silicone? Resealing & Waterproofing in Perth",
+      "owner": "O18/O31",
+      "previousH1": [
+        "Shower Resealing in Perth: Silicone, Grout or Waterproofing?"
+      ]
     },
     "guides/sticking-doors-windows-repair-guide/index.html": {
       "beforeTitle": "Sticking Doors & Timber Windows: What Needs Repair? | Ellis",
       "beforeH1": "Sticking Doors & Timber Windows: What Needs Repair?",
       "headings": {},
-      "review": "keyword intent correction",
-      "title": "Door & Timber Window Repairs Perth: Guide | Ellis",
-      "h1": "Door & Timber Window Repairs in Perth: Sticking or Dragging?",
-      "owner": "O03/O04/O06"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Door Rubbing after New Carpet or a Window Sticking after Rain? Perth Repairs | Ellis",
+      "h1": "Door Rubbing after New Carpet or a Window Sticking after Rain? Perth Repairs",
+      "owner": "O03/O04/O06",
+      "previousH1": [
+        "Door & Timber Window Repairs in Perth: Sticking or Dragging?"
+      ]
     },
     "guides/understanding-service-areas-and-postcode-checks/index.html": {
       "beforeTitle": "Service Areas and Postcode Checks | Ellis",
       "beforeH1": "How to Understand Service Areas and Postcode Checks",
       "headings": {},
-      "review": "keyword intent correction",
-      "title": "Handyman Near Me in Perth: Area Checks | Ellis",
-      "h1": "Finding a Handyman Near You in Perth: Service Area Checks",
-      "owner": "O01"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Small Repairs in a Perth Unit or Apartment: Finding a Handyman Near You | Ellis",
+      "h1": "Small Repairs in a Perth Unit or Apartment: Finding a Handyman Near You",
+      "owner": "O01",
+      "previousH1": [
+        "Finding a Handyman Near You in Perth: Service Area Checks"
+      ]
     },
     "guides/wall-patching-paint-touch-ups-guide/index.html": {
       "beforeTitle": "Wall Patching & Paint Touch-ups: Planning the Finish | Ellis",
       "beforeH1": "Wall Patching & Paint Touch-ups: Planning the Finish",
       "headings": {},
-      "review": "keyword intent correction",
-      "title": "Wall Patching Perth: Gyprock & Paint Guide | Ellis",
-      "h1": "Wall Patching in Perth: Gyprock Repairs & Paint Touch-ups",
-      "owner": "O08/O10"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Door Handle Hole or Visible Wall Patch? Gyprock Repairs & Painting in Perth | Ellis",
+      "h1": "Door Handle Hole or Visible Wall Patch? Gyprock Repairs & Painting in Perth",
+      "owner": "O08/O10",
+      "previousH1": [
+        "Wall Patching in Perth: Gyprock Repairs & Paint Touch-ups"
+      ]
     },
     "guides/when-home-maintenance-needs-a-licensed-trade/index.html": {
       "beforeTitle": "When Do You Need a Licensed Tradie? | Ellis",
       "beforeH1": "When Does Home Maintenance Need a Licensed Trade?",
       "headings": {},
-      "review": "keyword intent correction",
-      "title": "Handyman or Licensed Trade in Perth? | Ellis",
-      "h1": "When Do Perth Home Repairs Need a Licensed Trade?",
-      "owner": "O30"
+      "review": "Scenario-led editorial guide, 2026-10-14",
+      "title": "Damaged Cabinet under a Leaking Sink: Handyman or Licensed Trade in Perth? | Ellis",
+      "h1": "Damaged Cabinet under a Leaking Sink: Handyman or Licensed Trade in Perth?",
+      "owner": "O30",
+      "previousH1": [
+        "When Do Perth Home Repairs Need a Licensed Trade?"
+      ]
     },
     "privacy/index.html": {
       "beforeTitle": "Privacy Notice | Ellis Perth",

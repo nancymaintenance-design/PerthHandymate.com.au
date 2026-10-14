@@ -250,14 +250,14 @@ window.ELLIS_CONTENT={
   "guides": [
     {
       "slug": "how-to-find-the-right-home-repairer",
-      "title": "How to Choose a Handyman in Perth for Home Repairs",
-      "desc": "A practical way to define the job, identify the right skill set and confirm who will attend before work begins.",
-      "metaTitle": "Choosing a Handyman in Perth | Scope & Credentials",
-      "metaDescription": "Learn how Australian homeowners can describe a maintenance job, assess fit, confirm credentials and prepare for a clear service conversation.",
+      "title": "Loose Hinges, Shelves & Wall Damage: Choosing a Handyman in Perth",
+      "desc": "Turn several small faults into a clear brief and match each task to the right capability.",
+      "metaTitle": "Loose Hinges, Shelves & Wall Damage: Choosing a Handyman in Perth | Ellis",
+      "metaDescription": "Turn several small faults into a clear brief and match each task to the right capability.",
       "read": "5 min",
       "sections": [
         [
-          "Describe Your Small Home Repair Jobs in Perth",
+          "Describe your small home repair jobs",
           [
             "You do not need to diagnose a fault before asking for help. Start with what you can see, hear or smell, where it is happening and when it began. A sentence such as ‘the bedroom door scrapes the floor after rain’ is more useful than guessing that you need a carpenter. Include whether the issue is getting worse, affecting another room or creating a safety concern.",
             "Add the property type, approximate age if known, access conditions and any previous repair. Ellis uses these details to prepare the on-site assessment and confirm the attending team and qualified service arrangements. Describe what you have noticed; we inspect the work and confirm the scope and quote."
@@ -271,7 +271,7 @@ window.ELLIS_CONTENT={
           ]
         ],
         [
-          "Hiring a Handyman in Perth: Scope, Quote & Booking",
+          "Hiring a handyman: scope, quote & booking",
           [
             "A useful first conversation covers the proposed scope, likely inspection needs, access, materials, exclusions and how changes will be approved. Ask whether the initial figure is a quote, an estimate or an inspection fee, and request written details before committing. Do not compare totals alone; check whether each option covers the same work and materials.",
             "Contact the Ellis Perth office with your suburb and repair details. Our team arranges the site assessment, identifies the work required and provides a quote for the agreed scope. Where licensed work is involved, we confirm the qualified service arrangements and project documents before work begins.",
@@ -292,14 +292,16 @@ window.ELLIS_CONTENT={
           "question": "Who may attend an Ellis-arranged job?",
           "answer": "Depending on the confirmed service and postcode, work may be delivered by the local Ellis team or a licensed specialist where required. the Ellis Perth team member should be identified before the booking proceeds."
         }
-      ]
+      ],
+      "intro": "You have loose hinges, a shelf to hang and a damaged wall, and would like to deal with the list in one visit. The difficulty is deciding whether these are compatible small repair jobs or whether one item has a different cause, approval requirement or specialist boundary. A broad label such as general repairs does not settle that question. What jobs does a handyman usually do, and when should you use a licensed trade instead? This guide shows how to describe your mixed list, compare the proposed work and confirm who will attend. It also explains why grouping jobs can help planning without guaranteeing a lower total or a particular appointment.",
+      "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "when-home-maintenance-needs-a-licensed-trade",
-      "title": "When Do Perth Home Repairs Need a Licensed Trade?",
-      "desc": "Understand why licensing depends on the task and location, and what to confirm before regulated work starts.",
-      "metaTitle": "Handyman or Licensed Trade in Perth? | Ellis",
-      "metaDescription": "Ellis Perth checks licensed-work requirements and confirms the qualified service arrangements, project documents and repair scope before work begins.",
+      "title": "Damaged Cabinet under a Leaking Sink: Handyman or Licensed Trade in Perth?",
+      "desc": "Separate the visible repair from plumbing, electrical and other task-specific requirements.",
+      "metaTitle": "Damaged Cabinet under a Leaking Sink: Handyman or Licensed Trade in Perth? | Ellis",
+      "metaDescription": "Separate the visible repair from plumbing, electrical and other task-specific requirements.",
       "read": "5 min",
       "sections": [
         [
@@ -338,14 +340,16 @@ window.ELLIS_CONTENT={
           "question": "How do I confirm the right licence for an Ellis-arranged job?",
           "answer": "Confirm the Ellis Perth team member and check any task-specific credential through the relevant regulator before the job starts."
         }
-      ]
+      ],
+      "intro": "The cabinet below a sink is damaged and the sink is leaking. Repairing the cabinet can be one part of the work, but it does not explain or stop the water source. A similar split occurs when a TV bracket installation also needs a new power point: the mounting task and electrical change need distinct scopes. Does a handyman business name prove plumbing or electrical licensing? No: the work itself determines which credentials need checking. This guide explains how to separate dependent repairs, verify the relevant practitioner details and agree the order of work without treating a broad maintenance description as permission for every task.",
+      "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "prepare-before-home-repair-quote",
-      "title": "Handyman Quotes in Perth: Prepare Your Home Repair List",
-      "desc": "Give the Ellis Perth team the details needed to understand the job and explain price, scope and inspection requirements.",
-      "metaTitle": "Handyman Quotes Perth: What to Prepare | Ellis",
-      "metaDescription": "Use this checklist to organise job details, access, measurements, materials and questions before requesting a home maintenance quote.",
+      "title": "Moving In with Furniture to Assemble? Prepare a Handyman Quote in Perth",
+      "desc": "Bring furniture models, missing-part notes and a mixed repair list into a comparable written scope.",
+      "metaTitle": "Moving In with Furniture to Assemble? Prepare a Handyman Quote in Perth | Ellis",
+      "metaDescription": "Bring furniture models, missing-part notes and a mixed repair list into a comparable written scope.",
       "read": "5 min",
       "sections": [
         [
@@ -384,14 +388,16 @@ window.ELLIS_CONTENT={
           "question": "Does Ellis provide instant online quotes?",
           "answer": "Ellis confirms your assessment appointment directly. Send the service needed and Perth postcode so our team can arrange the visit, check the job and confirm the quote."
         }
-      ]
+      ],
+      "intro": "After moving, a bed frame and desk need assembly, a cupboard needs attention and there are wall marks to repair. You may know the products you bought but not whether the parts are complete, how wall anchoring will be handled or which tasks can share a visit. Those uncertainties matter more to a useful quote than a long list of job labels. What information is needed for a furniture assembly quote, and what should you put on a handyman job list? This guide explains how to record supplied products, separate repair from finishing and compare inclusions. It also covers assessment charges, access and approval of changes without assuming an online estimate is a final price.",
+      "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "photos-and-clear-scope-for-home-repairs",
-      "title": "Perth Home Repair Quotes: Photos & a Clear Repair Scope",
-      "desc": "Use safe, useful photos and plain-language scope notes to reduce uncertainty before a repair visit.",
-      "metaTitle": "Perth Home Repair Quotes: Photos & Scope | Ellis",
-      "metaDescription": "Learn what to photograph, what to write and how to document changes when arranging maintenance for an Australian property.",
+      "title": "Curtain Rod Pulled out of the Wall? Clear Repair Scope & Optional Photos in Perth",
+      "desc": "Describe loose supports and damaged surfaces clearly, with or without safe existing photographs.",
+      "metaTitle": "Curtain Rod Pulled out of the Wall? Clear Repair Scope & Optional Photos in Perth | Ellis",
+      "metaDescription": "Describe loose supports and damaged surfaces clearly, with or without safe existing photographs.",
       "read": "5 min",
       "sections": [
         [
@@ -430,14 +436,16 @@ window.ELLIS_CONTENT={
           "question": "What if the scope changes on site?",
           "answer": "Pause, ask for the reason and document the revised work, cost and timing before authorising it."
         }
-      ]
+      ],
+      "intro": "A curtain rod has pulled out of plasterboard, or a shelf bracket keeps loosening. Sending a close-up can show the visible damage, but it cannot establish what is behind the wall, which fixing is suitable or whether the fitting can carry its intended load. A plain description of the symptom and its history is enough to start the enquiry. Why does a curtain rail keep coming loose, and what details help before a mirror or shelf hanging job? This guide explains the difference between useful evidence and a diagnosis, how to describe supplied items and how to keep permission and finishing requirements clear. Photos are optional throughout.",
+      "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "home-repair-priorities",
-      "title": "Home Maintenance in Perth: Which Repairs Come First?",
-      "desc": "A simple framework for sorting safety, active damage, security, essential function and cosmetic maintenance.",
-      "metaTitle": "Home Maintenance Perth: Repair Priorities | Ellis",
-      "metaDescription": "Sort home maintenance by safety, active damage, security and daily function before scheduling lower-risk cosmetic work.",
+      "title": "Doors, Skirting & Wall Marks before an Open Home: Perth Repair Priorities",
+      "desc": "Prioritise safety, active damage and useful function before presentation repairs or photography.",
+      "metaTitle": "Doors, Skirting & Wall Marks before an Open Home: Perth Repair Priorities | Ellis",
+      "metaDescription": "Prioritise safety, active damage and useful function before presentation repairs or photography.",
       "read": "5 min",
       "sections": [
         [
@@ -476,18 +484,20 @@ window.ELLIS_CONTENT={
           "question": "Can I bundle small jobs?",
           "answer": "Often, if the tasks suit the same capability and access. List them separately; Ellis assesses the work on site and confirms the combined scope, qualified service arrangements and written quote."
         }
-      ]
+      ],
+      "intro": "An open home or property photography date is approaching, and the list includes a sticking door, damaged skirting and marked walls. The most visible item is not always the one to address first. A wall mark may be cosmetic, while swelling or recurring stains can point to a cause that needs assessment before any finish is applied. How should cosmetic repairs be separated from underlying defects, and which household faults should not wait for an ordinary appointment? This guide explains a practical priority order, how to record dependencies and when to split a presentation deadline from work needed for safety, security or continuing damage.",
+      "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "seasonal-home-maintenance-australia",
-      "title": "Home Maintenance in Perth: A Seasonal Property Checklist",
-      "desc": "Plan practical checks around local weather, property conditions and the skills required for each task.",
-      "metaTitle": "Home Maintenance Perth: Seasonal Checklist | Ellis",
-      "metaDescription": "Build an Australian seasonal maintenance list for drainage, seals, outdoor areas, ventilation and weather-related wear.",
+      "title": "Gutters Overflowing after Rain? Seasonal Home Maintenance in Perth",
+      "desc": "Track weather-related changes and distinguish routine upkeep from drainage, timber or structural repairs.",
+      "metaTitle": "Gutters Overflowing after Rain? Seasonal Home Maintenance in Perth | Ellis",
+      "metaDescription": "Track weather-related changes and distinguish routine upkeep from drainage, timber or structural repairs.",
       "read": "5 min",
       "sections": [
         [
-          "Preventative Home Maintenance for Perth Conditions",
+          "Preventative maintenance for local conditions",
           [
             "Australia does not have one maintenance calendar. Wet seasons, bushfire seasons, coastal exposure, frost, heat and storm patterns vary widely. Use local authority guidance and the property’s history to set timing. A useful plan combines regular visual checks with inspections by qualified people where access, safety or regulated systems are involved.",
             "Before a locally wet or stormy period, look from safe ground for loose exterior elements, damaged seals, overflowing drainage signs and vegetation affecting access. Clear only what you can reach safely. Roofs, high gutters, power lines and unstable trees require appropriate expertise and equipment."
@@ -522,14 +532,16 @@ window.ELLIS_CONTENT={
           "question": "Can Ellis schedule seasonal work everywhere?",
           "answer": "Contact Ellis with your Perth suburb, postcode and maintenance details. Our team confirms the local service arrangements, site assessment and quote."
         }
-      ]
+      ],
+      "intro": "After rain, a gutter overflows again, a gate drags or timber near a window looks different. A seasonal checklist is useful only if it records those changes and asks whether ordinary cleaning or adjustment is enough. Repeating the same maintenance task may leave a drainage, support or moisture problem unresolved. What is included in property maintenance, and how often should minor home maintenance be checked? This guide uses the condition of the property, recent weather and previous repair history to plan observations and follow-up. It explains the boundary between routine upkeep and a fault needing its own assessment, without asking you to climb or dismantle anything.",
+      "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "property-manager-maintenance-coordination",
-      "title": "Rental Property Maintenance in Perth: A Repair Checklist",
-      "desc": "Create a clear record from tenant report to access, approval, Ellis job handover and completion evidence.",
-      "metaTitle": "Rental Property Maintenance Perth: Planning | Ellis",
-      "metaDescription": "A practical workflow for Australian property managers coordinating repair scope, access, approvals and Ellis Perth teams.",
+      "title": "Doors, Cupboards & Wall Damage after a Rental Inspection: Perth Maintenance",
+      "desc": "Coordinate a mixed inspection or vacate list from tenant report to permission, access and handover.",
+      "metaTitle": "Doors, Cupboards & Wall Damage after a Rental Inspection: Perth Maintenance | Ellis",
+      "metaDescription": "Coordinate a mixed inspection or vacate list from tenant report to permission, access and handover.",
       "read": "5 min",
       "sections": [
         [
@@ -568,14 +580,16 @@ window.ELLIS_CONTENT={
           "question": "Who invoices the job?",
           "answer": "That must be confirmed for the specific booking, including the contracting and attending entities and the agreed payment process."
         }
-      ]
+      ],
+      "intro": "A rental inspection produces a mixed list: a door will not close, a cupboard is damaged and wall holes need attention before handover. The occupant, owner and property manager may each hold a different part of the information. Without a shared record, permission to inspect can be mistaken for permission to repair, or a finishing requirement can be missed. Who should authorise repairs before a handyman attends a rental property, and what belongs in a maintenance report? This guide explains how to keep the symptom, priority, access and approval together. It also distinguishes completion evidence from a bond decision and treats photos as optional supporting information.",
+      "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "understanding-service-areas-and-postcode-checks",
-      "title": "Finding a Handyman Near You in Perth: Service Area Checks",
-      "desc": "How to arrange your Perth property assessment and confirm the service, access, repair scope and quote with Ellis.",
-      "metaTitle": "Handyman Near Me in Perth: Area Checks | Ellis",
-      "metaDescription": "Understand how service type, postcode, Ellis Perth service coverage and availability affect home maintenance serviceability.",
+      "title": "Small Repairs in a Perth Unit or Apartment: Finding a Handyman Near You",
+      "desc": "Use your suburb, repair details and building access to confirm the right local assessment.",
+      "metaTitle": "Small Repairs in a Perth Unit or Apartment: Finding a Handyman Near You | Ellis",
+      "metaDescription": "Use your suburb, repair details and building access to confirm the right local assessment.",
       "read": "5 min",
       "sections": [
         [
@@ -614,7 +628,9 @@ window.ELLIS_CONTENT={
           "question": "Is a postcode result a confirmed booking?",
           "answer": "No. the Ellis Perth team, scope, timing and any job conditions still need to be confirmed."
         }
-      ]
+      ],
+      "intro": "A unit or apartment needs a sticking door repaired, a cupboard adjusted or a shelf fitted. Finding a nearby service is only the first part of the booking: building access, the actual fault and any property approval also affect how the visit is arranged. A suburb match cannot establish the repair method or reserve an appointment. What should you put on a handyman job list, and how does local availability relate to the service you need? This guide explains how to combine a location check with a clear repair description, distinguish suburb names from wider regions and confirm an assessment for the particular property.",
+      "editorialSource": "data/guide-library.js"
     }
   ],
   "faqs": [

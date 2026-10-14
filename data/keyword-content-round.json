@@ -314,9 +314,9 @@
   "guides": [
     {
       "slug": "cupboard-hinges-drawer-runners-repair-guide",
-      "title": "Cabinet & Drawer Repairs in Perth: Hinges or Runners?",
-      "description": "Understand loose cupboard hinges, dropped cabinet doors and drawers off their runners before arranging a repair assessment with Ellis Perth.",
-      "intro": "A dropped cupboard door or drawer that will not close does not automatically require a new kitchen. Identifying the moving part and its fixing surface helps distinguish a hardware repair from damaged cabinetry.",
+      "title": "Cupboard Door Fallen off Its Hinge? Cabinet & Drawer Repairs in Perth",
+      "description": "Separate a worn hinge or runner from damaged cabinet panels before choosing parts or replacing the unit.",
+      "intro": "A kitchen cupboard door has fallen off its hinge, or a drawer will not close after being loaded. Both look like hardware failures, but the part you can see may not be the only problem. A hinge fixed into damaged particleboard cannot do its job just because the hinge itself is new. Should you replace the hinge or repair the cabinet panel? Why does a drawer keep falling off its runner? This guide explains the observations that distinguish those problems, how compatible replacement parts affect the options and what to include in a cabinet repair assessment. You do not need to dismantle the fitting to describe it.",
       "sections": [
         [
           "Cupboard hinge pulled out: check the panel as well as the hinge",
@@ -362,13 +362,14 @@
           "projects/kitchen-cabinet-hinge-repair/",
           "Cabinet hinge repair example"
         ]
-      ]
+      ],
+      "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "sticking-doors-windows-repair-guide",
-      "title": "Door & Timber Window Repairs in Perth: Sticking or Dragging?",
-      "description": "Learn what rubbing doors, swollen timber windows and dragging sliding panels can indicate, and what to include in a Perth repair enquiry.",
-      "intro": "A door or window that catches may need hardware adjustment, a local timber repair or attention to moisture and movement. The place it catches and when the problem occurs are more useful than guessing which part to replace.",
+      "title": "Door Rubbing after New Carpet or a Window Sticking after Rain? Perth Repairs",
+      "description": "Compare floor clearance, hinges, swollen timber and dragging sliding-door hardware before selecting a repair.",
+      "intro": "A bedroom door starts rubbing after new carpet, while an older timber window becomes hard to close after rain. The symptoms both involve a moving fitting catching, but they point to different questions. Floor clearance, loose hinges, damaged timber and recurring moisture should not be treated as one adjustment job. Why does a timber door stick in wet weather, and how can you tell whether the door or frame needs repair? This guide helps you record where and when contact occurs. It also explains why a dragging patio slider needs its rollers, track and panel alignment considered together before anyone proposes replacement.",
       "sections": [
         [
           "Sticking internal doors and hinge adjustment",
@@ -414,13 +415,14 @@
           "services/doors-windows-glass-screens/door-installation/",
           "New door installation"
         ]
-      ]
+      ],
+      "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "wall-patching-paint-touch-ups-guide",
-      "title": "Wall Patching in Perth: Gyprock Repairs & Paint Touch-ups",
-      "description": "Understand plasterboard holes, visible wall patches and paint colour differences before arranging patching and finishing in Perth.",
-      "intro": "Repairing a hole and matching the finish are related but separate tasks. Knowing the damaged material, cause and finish you want helps make the quote clear before work starts.",
+      "title": "Door Handle Hole or Visible Wall Patch? Gyprock Repairs & Painting in Perth",
+      "description": "Understand backing, recurring cracks and paint differences before combining a wall patch with its finish.",
+      "intro": "A door handle has punched a hole in the plasterboard, or the wall patch left after removing a TV bracket still shows through the paint. A surface that looks uneven can reflect damage to the board, a difference in patch texture or a mismatch in the finishing coat. Those are related jobs, but they are not interchangeable. What is the difference between plaster and plasterboard repairs, and why do wall patches show through paint? This guide explains what the damaged surface can tell you, when moisture or recurring movement needs separate attention and how to agree the extent of patching and repainting before work starts.",
       "sections": [
         [
           "Plasterboard hole repairs and backing condition",
@@ -466,13 +468,14 @@
           "guides/prepare-before-home-repair-quote/",
           "Preparing a clear repair quote request"
         ]
-      ]
+      ],
+      "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "shower-silicone-grout-waterproofing-guide",
-      "title": "Shower Resealing in Perth: Silicone, Grout or Waterproofing?",
-      "description": "Understand surface resealing, regrouting and deeper shower waterproofing repairs before choosing a repair for recurring leaks.",
-      "intro": "A leaking shower does not always need the same repair. Surface silicone, grout, plumbing and the waterproofing beneath tiles perform different roles; the symptoms should guide assessment rather than a single advertised treatment.",
+      "title": "Shower Still Leaking after New Silicone? Resealing & Waterproofing in Perth",
+      "description": "Distinguish surface joints and grout from deeper wet-area faults before repeating a cosmetic reseal.",
+      "intro": "New silicone has been applied, but the shower still leaks or damp appears in the adjoining bedroom. The visible joint is only one part of the wet area. Split sealant, missing grout, plumbing faults and waterproofing concerns need different assessments, even when the first clue is the same patch of damp. Why does a shower still leak after new silicone, and how is a full wet-area repair different from handyman resealing? This guide explains what you can record without opening the surface, what a reseal can and cannot establish and why the repair scope may need to extend beyond the visible tile joint.",
       "sections": [
         [
           "Split shower silicone and surface joints",
@@ -518,7 +521,8 @@
           "services/electrical-plumbing-gas-air-conditioning/plumbers/",
           "Plumbing fault enquiries"
         ]
-      ]
+      ],
+      "editorialSource": "data/guide-library.js"
     }
   ]
 }

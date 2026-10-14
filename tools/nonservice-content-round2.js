@@ -4,6 +4,7 @@ const { plans: originalPlans } = require('./nonservice-content-round2-copy');
 const keywordPolicy = require('../data/heading-keyword-policy.json');
 const { renderRegion, areas } = require('./render-regions');
 const { adaptString } = require('./local-marketing-wording');
+const { renderGuide, guides } = require('./render-guide-library');
 const encodeHeading = s => s.replaceAll('&', '&amp;');
 // Retain the reviewed body/FAQ editor while respecting later approved headings.
 const guideLabels = Object.entries(keywordPolicy.pages).filter(([file, p]) => file.startsWith('guides/') && p.h1).map(([, p]) => [p.beforeH1, p.h1]);
@@ -32,6 +33,7 @@ function once(html, from, to) {
   throw new Error(`${n ? 'Ambiguous' : 'Missing'} replacement: ${from.slice(0, 70)}`);
 }
 function editHtml(html, plan) {
+  if (Object.hasOwn(plan, 'guideSlug')) return renderGuide(html, plan.guideSlug);
   const main = html.match(/<main\b[^>]*>[\s\S]*?<\/main>/)?.[0];
   if (!main) throw new Error('Missing main');
   let edited = main;
@@ -75,6 +77,9 @@ function editHtml(html, plan) {
   return html;
 }
 for (const area of areas) plans[`areas/${area.slug}/index.html`] = { region: area };
+// Later approved editorial ownership replaces the old guide string patches.
+plans['guides/index.html'] = { guideSlug: null };
+for (const guide of guides) plans[`guides/${guide.slug}/index.html`] = { guideSlug: guide.slug };
 plans['areas/index.html'].replacements = plans['areas/index.html'].replacements.map(([from, to]) => [from, to.replace('Find the Perth service area', 'Find the service area')]);
 module.exports = { editHtml, plans };
 if (require.main === module) {
