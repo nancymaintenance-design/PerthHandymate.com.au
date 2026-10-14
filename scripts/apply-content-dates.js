@@ -13,7 +13,7 @@ const sitemap = original.replace(/<url><loc>([^<]+)<\/loc>(?:<lastmod>[^<]+<\/la
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !reason || !source) throw new Error(`Invalid content modification record: ${route}`);
   const replacement = `<url><loc>${url}</loc><lastmod>${date}</lastmod></url>`;
   if (replacement !== raw) changed++;
-  if (route.startsWith('/guides/')) {
+  if (route.startsWith('/guides/') && route !== '/guides/') {
     const file = path.join(root, route.slice(1), 'index.html');
     const html = fs.readFileSync(file, 'utf8');
     if (!/Updated \d{4}-\d{2}-\d{2}/.test(html)) throw new Error(`Missing visible guide Updated date: ${route}`);

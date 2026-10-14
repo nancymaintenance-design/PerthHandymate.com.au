@@ -1,6 +1,23 @@
 'use strict';
 // Targeted editor for the reviewed non-service pages; it does not rebuild dist.
-const { plans } = require('./nonservice-content-round2-copy');
+const { plans: originalPlans } = require('./nonservice-content-round2-copy');
+const keywordPolicy = require('../data/heading-keyword-policy.json');
+const encodeHeading = s => s.replaceAll('&', '&amp;');
+// Retain the reviewed body/FAQ editor while respecting later approved headings.
+const guideLabels = Object.entries(keywordPolicy.pages).filter(([file, p]) => file.startsWith('guides/') && p.h1).map(([, p]) => [p.beforeH1, p.h1]);
+const plans = Object.fromEntries(Object.entries(originalPlans).map(([file, plan]) => {
+  const headings = keywordPolicy.pages[file]?.headings || {};
+  const adapt = value => {
+    if (Array.isArray(value)) return value.map(adapt);
+    if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key, v]) => [key, adapt(v)]));
+    if (typeof value !== 'string') return value;
+    if (headings[value]) return encodeHeading(headings[value]);
+    for (const [before, after] of Object.entries(headings)) value = value.replaceAll(`<h2>${encodeHeading(before)}</h2>`, `<h2>${encodeHeading(after)}</h2>`);
+    for (const [before, after] of guideLabels) value = value.replaceAll(`>${encodeHeading(before)}</a>`, `>${encodeHeading(after)}</a>`);
+    return value;
+  };
+  return [file, adapt(plan)];
+}));
 const plain = s => s.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ').replace(/\s+([.,;:!?])/g, '$1').trim();
 function once(html, from, to) {
   // Ignore original fragments inside a complete replacement, but reject old

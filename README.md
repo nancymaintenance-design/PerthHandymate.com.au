@@ -25,6 +25,10 @@ node tools/five-category-coverage.js
 
 The build recreates ignored `dist/` and normalizes internal index links. Rebuild after editing source. The preview serves only `dist/` and exits with build instructions when that output is missing.
 
+### Reviewed keyword headings
+
+`data/heading-keyword-policy.json` records the 125-page review and approved topic-led title/H1/H2 changes. After running a historical page generator, run `node scripts/apply-heading-keywords.js` before rebuilding. It reapplies the reviewed headings, synchronizes guide-card links and Article headlines, and maintains guide title sources without changing service scope, prices, URLs, forms or image layout. Repeated application must report zero HTML changes. Do not use the historical editorial wording to override a later user-approved heading policy.
+
 In a separate terminal, use an available port (the current keyword-gap candidate preview uses 4182):
 
 ```powershell

@@ -53,6 +53,14 @@
 .quick-paths a:hover{background:var(--navy-2)}
 .quick-paths a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .service-toc a:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.project-feature .evidence-feature figure{aspect-ratio:1672/941}
+.project-feature .evidence-feature img{object-fit:cover}
+/* Short explanations across all routes use content spacing, not feature spacing. */
+.section:is(#repair-planning-guides,#repair-quote-process,#property-repair-list,#local-repair-requests){padding-block:32px}
+.section:is(#repair-planning-guides,#repair-quote-process,#property-repair-list,#local-repair-requests)>:last-child{margin-bottom:0}
+/* Text-only content blocks must not inherit the large image-feature rhythm. */
+.section.shell:has(h2):not(:has(img,form,iframe,details,article,figure,.card-grid,.price-guide)){padding-block:32px}
+.section.shell:has(h2):not(:has(img,form,iframe,details,article,figure,.card-grid,.price-guide))>:last-child{margin-bottom:0}
 .service-hero .service-toc{margin-top:24px;padding:18px 22px;color:var(--navy)}
 .service-hero .service-toc ul{margin-top:10px;gap:4px 20px}
 .service-hero .service-toc a{min-height:44px;padding:9px 0}

@@ -231,28 +231,28 @@ window.ELLIS_CONTENT={
   "guides": [
     {
       "slug": "how-to-find-the-right-home-repairer",
-      "title": "How to Find the Right Repairer for a Home Maintenance Job",
+      "title": "How to Choose a Handyman in Perth for Home Repairs",
       "desc": "A practical way to define the job, identify the right skill set and confirm who will attend before work begins.",
-      "metaTitle": "How to Find the Right Home Repairer | Ellis Services Group",
+      "metaTitle": "Choosing a Handyman in Perth | Scope & Credentials",
       "metaDescription": "Learn how Australian homeowners can describe a maintenance job, assess fit, confirm credentials and prepare for a clear service conversation.",
       "read": "5 min",
       "sections": [
         [
-          "Start with the problem, not a trade label",
+          "Describe Your Small Home Repair Jobs in Perth",
           [
             "You do not need to diagnose a fault before asking for help. Start with what you can see, hear or smell, where it is happening and when it began. A sentence such as ‘the bedroom door scrapes the floor after rain’ is more useful than guessing that you need a carpenter. Include whether the issue is getting worse, affecting another room or creating a safety concern.",
             "Add the property type, approximate age if known, access conditions and any previous repair. Ellis uses these details to prepare the on-site assessment and confirm the attending team and qualified service arrangements. Describe what you have noticed; we inspect the work and confirm the scope and quote."
           ]
         ],
         [
-          "Match the scope to the right capability",
+          "Handyman or Licensed Trade: Match the Repair Scope",
           [
             "General repair and maintenance work may include tasks such as adjusting doors, patching minor wall damage or assembling fixtures. Electrical, plumbing, gas, structural and other regulated work may require a person with a specific licence or registration. Requirements vary by state or territory and by the exact work, so confirm them with the relevant regulator rather than relying on a broad job title.",
             "Ask who would perform the work, what part of the scope they are being engaged for, and what evidence is available for any required credential. If several skills are involved, identify which tasks depend on others. A clear sequence can prevent one Ellis Perth team arriving before the site is ready."
           ]
         ],
         [
-          "Confirm fit before accepting a booking",
+          "Hiring a Handyman in Perth: Scope, Quote & Booking",
           [
             "A useful first conversation covers the proposed scope, likely inspection needs, access, materials, exclusions and how changes will be approved. Ask whether the initial figure is a quote, an estimate or an inspection fee, and request written details before committing. Do not compare totals alone; check whether each option covers the same work and materials.",
             "Contact the Ellis Perth office with your suburb and repair details. Our team arranges the site assessment, identifies the work required and provides a quote for the agreed scope. Where licensed work is involved, we confirm the qualified service arrangements and project documents before work begins.",
@@ -277,9 +277,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "when-home-maintenance-needs-a-licensed-trade",
-      "title": "When Does Home Maintenance Need a Licensed Trade?",
+      "title": "When Do Perth Home Repairs Need a Licensed Trade?",
       "desc": "Understand why licensing depends on the task and location, and what to confirm before regulated work starts.",
-      "metaTitle": "When Do You Need a Licensed Tradie? | Ellis Services Group",
+      "metaTitle": "Handyman or Licensed Trade in Perth? | Ellis",
       "metaDescription": "Ellis Perth checks licensed-work requirements and confirms the qualified service arrangements, project documents and repair scope before work begins.",
       "read": "5 min",
       "sections": [
@@ -323,21 +323,21 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "prepare-before-home-repair-quote",
-      "title": "What to Prepare Before Asking for a Home Repair Quote",
+      "title": "Handyman Quotes in Perth: Prepare Your Home Repair List",
       "desc": "Give the Ellis Perth team the details needed to understand the job and explain price, scope and inspection requirements.",
-      "metaTitle": "Prepare for a Home Repair Quote | Ellis Services Group",
+      "metaTitle": "Handyman Quotes Perth: What to Prepare | Ellis",
       "metaDescription": "Use this checklist to organise job details, access, measurements, materials and questions before requesting a home maintenance quote.",
       "read": "5 min",
       "sections": [
         [
-          "Build a short job brief",
+          "Prepare a Home Repair List for Your Handyman Quote",
           [
             "Write down the outcome you want, the current condition and the parts of the property affected. Add approximate measurements, the number of items, preferred materials if any and whether you want supply, installation, removal or disposal included. For a recurring fault, note when it occurs and what has already been tried.",
             "Include your suburb and postcode, property type, parking or access restrictions, stairs, pets and whether someone must coordinate entry. Mention deadlines as preferences unless they are genuinely fixed. Avoid presenting a desired date as confirmed availability; the Ellis Perth team needs to assess the scope and schedule first."
           ]
         ],
         [
-          "Make comparisons possible",
+          "Compare Handyman Rates, Scope & Inclusions",
           [
             "Our Ellis Perth team reviews your brief and prepares a written proposal covering labour, materials, equipment, site preparation, disposal, GST treatment where applicable, exclusions and site assumptions. We assess the property and explain the pricing basis, repair scope and any agreed inspection or access work before you approve the repairs.",
             "Price is only one part of fit. Look at the proposed method, relevant experience, communication, timing assumptions and any required licences. Ask how a variation will be raised and approved if the condition behind a wall, fixture or surface differs from what was visible. Do not authorise extra work through vague verbal agreement."
@@ -369,9 +369,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "photos-and-clear-scope-for-home-repairs",
-      "title": "How Photos and a Clear Scope Help Home Repairs Run Better",
+      "title": "Perth Home Repair Quotes: Photos & a Clear Repair Scope",
       "desc": "Use safe, useful photos and plain-language scope notes to reduce uncertainty before a repair visit.",
-      "metaTitle": "Photos and Scope for Home Repairs | Ellis Services Group",
+      "metaTitle": "Perth Home Repair Quotes: Photos & Scope | Ellis",
       "metaDescription": "Learn what to photograph, what to write and how to document changes when arranging maintenance for an Australian property.",
       "read": "5 min",
       "sections": [
@@ -383,14 +383,14 @@ window.ELLIS_CONTENT={
           ]
         ],
         [
-          "Write the scope in observable terms",
+          "Describe Small Repair Jobs for a Clear Handyman Quote",
           [
             "Pair the images with a short description: what is wrong, where it is, the desired outcome, how many items are affected and any known history. Separate required work from optional work. For example, ‘required: rehang one sticking internal door; optional: replace three handles if compatible’ is clearer than ‘fix doors’.",
             "List known materials, finishes and dimensions, but mark estimates as approximate. Note whether matching an existing finish matters and whether materials are needed. If the cause is unknown, say so. Our Perth team arranges an on-site assessment, checks the affected area and confirms the repair plan, written quote and any qualified service arrangements."
           ]
         ],
         [
-          "Keep changes visible",
+          "Confirm Changes to the Handyman Repair Scope",
           [
             "Conditions discovered on site can change a repair. Ask the Ellis Perth team to explain the new finding, proposed work, price and schedule effect before continuing. Record the agreed variation in writing and keep any updated photos with the job record. This protects clarity without assuming that every unexpected condition is avoidable.",
             "Send your Perth suburb, job details and safe photos to Ellis Services Group. We arrange an on-site assessment, check the affected area, identify the cause and confirm the repair plan and quote. Your appointment details include the attending team and any qualified service arrangements required for licensed work.",
@@ -415,28 +415,28 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "home-repair-priorities",
-      "title": "Which Home Repairs Should You Prioritise First?",
+      "title": "Home Maintenance in Perth: Which Repairs Come First?",
       "desc": "A simple framework for sorting safety, active damage, security, essential function and cosmetic maintenance.",
-      "metaTitle": "How to Prioritise Home Repairs | Ellis Services Group",
+      "metaTitle": "Home Maintenance Perth: Repair Priorities | Ellis",
       "metaDescription": "Sort home maintenance by safety, active damage, security and daily function before scheduling lower-risk cosmetic work.",
       "read": "5 min",
       "sections": [
         [
-          "Put immediate hazards first",
+          "Home Safety Maintenance: Identify Immediate Hazards",
           [
             "Start with anything that could harm a person or rapidly damage the property. Examples may include a gas smell, sparking, active water near electricity, a ceiling that appears unstable, a broken external lock or significant storm damage. Keep people clear, isolate utilities only if you know how to do so safely, and contact the appropriate emergency service, utility or qualified trade.",
             "For immediate danger, keep people clear and use the appropriate emergency service or utility. Contact the Ellis Perth office when it is safe to arrange assessment and repairs, explain the hazard and confirm the visit details."
           ]
         ],
         [
-          "Stop active damage, then restore function",
+          "House Repairs: Active Damage Before Cosmetic Work",
           [
             "After immediate safety, address problems that are allowing damage to spread: ongoing leaks, failed weather seals, blocked drainage, pest entry points or openings that expose the home to rain. The visible symptom may have more than one cause, so avoid covering it cosmetically before the source is understood.",
             "Next, consider essential daily function and security. A failed toilet in a one-bathroom home has a different priority from a stiff cupboard hinge. Heating, cooling and hot-water priorities also depend on weather and household needs. Tell Ellis if a household member needs priority assistance or if stairs, locked gates or occupied rooms affect access. Only share personal information needed to arrange the visit."
           ]
         ],
         [
-          "Bundle compatible lower-risk tasks",
+          "Combine Small Repair Jobs into a Home Maintenance List",
           [
             "Cosmetic patches, adjustments and minor installations can often be planned together when they suit the same skill set and access. Create a room-by-room list and mark each item as urgent, soon or planned. Bundling should not combine regulated and unregulated work under an unsuitable Ellis Perth team, and it should not delay investigation of moisture or structural symptoms.",
             "Contact Ellis Services Group with your Perth suburb and priority repair list. Our team arranges an on-site assessment, identifies the cause and confirms the repair plan, quote and appointment. We explain any licensed-work requirements and confirm qualified service arrangements before work begins.",
@@ -461,28 +461,28 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "seasonal-home-maintenance-australia",
-      "title": "A Seasonal Home Maintenance Plan for Australian Properties",
+      "title": "Home Maintenance in Perth: A Seasonal Property Checklist",
       "desc": "Plan practical checks around local weather, property conditions and the skills required for each task.",
-      "metaTitle": "Seasonal Home Maintenance Australia | Ellis Services Group",
+      "metaTitle": "Home Maintenance Perth: Seasonal Checklist | Ellis",
       "metaDescription": "Build an Australian seasonal maintenance list for drainage, seals, outdoor areas, ventilation and weather-related wear.",
       "read": "5 min",
       "sections": [
         [
-          "Plan for your local climate",
+          "Preventative Home Maintenance for Perth Conditions",
           [
             "Australia does not have one maintenance calendar. Wet seasons, bushfire seasons, coastal exposure, frost, heat and storm patterns vary widely. Use local authority guidance and the property’s history to set timing. A useful plan combines regular visual checks with inspections by qualified people where access, safety or regulated systems are involved.",
             "Before a locally wet or stormy period, look from safe ground for loose exterior elements, damaged seals, overflowing drainage signs and vegetation affecting access. Clear only what you can reach safely. Roofs, high gutters, power lines and unstable trees require appropriate expertise and equipment."
           ]
         ],
         [
-          "Check comfort, moisture and outdoor wear",
+          "Routine Property Repairs: Moisture & Outdoor Wear",
           [
             "Ahead of hotter or colder months, check doors and windows for obvious gaps, inspect accessible flyscreens, and note ventilation or condensation problems. Heating, cooling, electrical and gas equipment should be maintained according to manufacturer instructions and by appropriately authorised people where required. Never dismantle equipment for a seasonal check.",
             "Outdoor timber, paint, paving, gates and fences can show early wear before failure. Record lifting surfaces, loose fixings, peeling coatings or drainage changes. In gardens, keep access paths visible and identify irrigation leaks or trip hazards. The goal is to catch change early, not to make a remote diagnosis from appearance alone."
           ]
         ],
         [
-          "Turn observations into a workable list",
+          "Create Your Seasonal Home Maintenance To-do List",
           [
             "Keep a dated list with photos and divide it into safety, water or weather exposure, essential function and planned presentation work. Note previous repair dates and known materials. This record helps explain whether an issue is new, recurring or stable and makes it easier to group compatible tasks.",
             "Contact Ellis Perth with your suburb and seasonal maintenance list to arrange an on-site assessment. Our team checks the property, identifies priority work and confirms the maintenance plan, quote and appointment. We confirm qualified service arrangements for any licensed work.",
@@ -507,14 +507,14 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "property-manager-maintenance-coordination",
-      "title": "How Property Managers Can Coordinate Maintenance Requests",
+      "title": "Rental Property Maintenance in Perth: A Repair Checklist",
       "desc": "Create a clear record from tenant report to access, approval, Ellis job handover and completion evidence.",
-      "metaTitle": "Property Manager Maintenance Coordination | Ellis Services Group",
+      "metaTitle": "Rental Property Maintenance Perth: Planning | Ellis",
       "metaDescription": "A practical workflow for Australian property managers coordinating repair scope, access, approvals and Ellis Perth teams.",
       "read": "5 min",
       "sections": [
         [
-          "Convert the report into a usable brief",
+          "Build a Property Manager Repair List",
           [
             "Start by recording the observable issue, property address, affected area, when it began and whether safety or ongoing damage is involved. Ask for clear photos only when the occupant can take them safely. Separate the tenant’s description from any diagnosis and record previous related work if it is available.",
             "Add the owner’s approval limit and escalation contact, but do not disclose financial or personal information that the Ellis Perth team does not need. State whether an inspection can proceed before a quote, whether materials require approval and what evidence is needed at completion."
@@ -553,9 +553,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "understanding-service-areas-and-postcode-checks",
-      "title": "How to Understand Service Areas and Postcode Checks",
+      "title": "Finding a Handyman Near You in Perth: Service Area Checks",
       "desc": "How to arrange your Perth property assessment and confirm the service, access, repair scope and quote with Ellis.",
-      "metaTitle": "Service Areas and Postcode Checks | Ellis Services Group",
+      "metaTitle": "Handyman Near Me in Perth: Area Checks | Ellis",
       "metaDescription": "Understand how service type, postcode, Ellis Perth service coverage and availability affect home maintenance serviceability.",
       "read": "5 min",
       "sections": [

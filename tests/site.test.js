@@ -186,7 +186,7 @@ test('replaces generic content headings with service, location or topic-led head
   const contact = fs.readFileSync(path.join(siteRoot, 'contact/index.html'), 'utf8');
   assert.match(about, /<h2>How Our Perth Local Team Handles a Job<\/h2>/);
   assert.match(about, /<h2>Perth Handyman Service Request Process<\/h2>/);
-  assert.match(guides, /<h1>Perth Home Maintenance Guides &amp; Checklists<\/h1>/);
+  assert.match(guides, /<h1>Perth Handyman &amp; Home Maintenance Guides<\/h1>/);
   assert.match(contact, /<h1>Request Handyman Services in Perth<\/h1>/);
 });
 
@@ -434,7 +434,7 @@ test('publishes company registration identifiers with the official ABR lookup', 
   const about = fs.readFileSync(path.join(__dirname, '../about/index.html'), 'utf8');
   assert.match(about, /<title>About Ellis Perth \| Local Handyman &amp; Maintenance Team<\/title>/);
   assert.match(about, /<link rel="canonical" href="https:\/\/www\.perthhandymate\.com\.au\/about\/">/);
-  assert.match(about, /<h1>About Ellis Services Group<\/h1>/);
+  assert.match(about, /<h1>About Ellis: Perth Handyman &amp; Maintenance Team<\/h1>/);
   assert.match(about, /140 St Georges Terrace, Perth WA 6000/);
   assert.match(about, /href="tel:\+61403069685"/);
   assert.match(about, /mailto:handyman\.maintenance\.au@outlook\.com/);

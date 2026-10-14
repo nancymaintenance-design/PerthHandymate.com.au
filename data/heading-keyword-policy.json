@@ -1,0 +1,1026 @@
+{
+  "version": 1,
+  "scope": "Perth Handymate only; local approval pending. Priority is topic-led title/H1 and meaningful H2, not repeating every keyword in every heading. Existing legal, error and verified project headings are deliberate exceptions.",
+  "keywordSource": "Perth_Handyman_AI_Keyword_Map.md, 2026-09-29, 527 terms / 31 owners",
+  "pages": {
+    "index.html": {
+      "beforeTitle": "Handyman Services Perth | Local Repair Team | Ellis",
+      "beforeH1": "Handyman Services Perth for Home Repairs & Maintenance",
+      "headings": {
+        "Home Repair Quotes in Perth": "Handyman Quotes in Perth: Home Repair Scope & Costs",
+        "Repair Planning Guides": "Perth Handyman & Home Repair Planning Guides",
+        "Organise a property repair list": "Property Maintenance in Perth: Organise Your Repair List",
+        "Describe the repair and your Perth location": "Handyman Near You in Perth: Describe the Repair & Location"
+      },
+      "review": "keyword intent correction",
+      "owner": "O01"
+    },
+    "404.html": {
+      "beforeTitle": "Page Not Found | Ellis",
+      "beforeH1": "This address does not lead to a service page",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "about/index.html": {
+      "beforeTitle": "About Ellis Perth | Local Handyman & Maintenance Team",
+      "beforeH1": "About Ellis Services Group",
+      "headings": {
+        "Direct local handyman and maintenance services": "Local Handyman Services & Home Maintenance in Perth",
+        "Based in Perth": "Our Perth Handyman & Maintenance Office"
+      },
+      "review": "keyword intent correction",
+      "h1": "About Ellis: Perth Handyman & Maintenance Team",
+      "owner": "O01"
+    },
+    "areas/cockburn-rockingham-southern-corridor/index.html": {
+      "beforeTitle": "Handyman Repairs Cockburn & Rockingham | Ellis Perth",
+      "beforeH1": "Handyman Services in Cockburn, Rockingham & Southern Corridor",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "areas/eastern-suburbs-midland-swan/index.html": {
+      "beforeTitle": "Handyman Repairs Midland & Swan | Ellis Perth",
+      "beforeH1": "Handyman Services in Eastern Suburbs, Midland & Swan",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "areas/fremantle-coastal-south/index.html": {
+      "beforeTitle": "Handyman Services in Fremantle & Coastal South | Ellis Perth",
+      "beforeH1": "Handyman Services in Fremantle & Coastal South",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "areas/index.html": {
+      "beforeTitle": "Handyman Near Me in Perth | Local Service Areas | Ellis",
+      "beforeH1": "Looking for a Handyman Near Me in Perth?",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "areas/joondalup-northern-suburbs/index.html": {
+      "beforeTitle": "Handyman Joondalup & Northern Suburbs | Ellis Perth",
+      "beforeH1": "Handyman Services in Joondalup & Northern Suburbs",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "areas/north-perth-stirling/index.html": {
+      "beforeTitle": "Handyman Services in North Perth & Stirling | Ellis Perth",
+      "beforeH1": "Handyman Services in North Perth & Stirling",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "areas/perth-central/index.html": {
+      "beforeTitle": "Handyman Services in Perth CBD & Inner Suburbs | Ellis Perth",
+      "beforeH1": "Handyman Services in Perth CBD & Inner Suburbs",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "areas/south-perth-canning/index.html": {
+      "beforeTitle": "Handyman Services in South Perth & Canning | Ellis Perth",
+      "beforeH1": "Handyman Services in South Perth & Canning",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "contact/index.html": {
+      "beforeTitle": "Contact Ellis Perth | Local Handyman Services",
+      "beforeH1": "Request Handyman Services in Perth",
+      "headings": {
+        "Call or email about a service request": "Contact Ellis for Handyman Services in Perth",
+        "Home Repair Quotes in Perth": "Handyman Quotes in Perth: Repair Scope & Costs",
+        "Repair Planning Guides": "Perth Handyman Quote & Repair Planning Guides"
+      },
+      "review": "keyword intent correction",
+      "title": "Handyman Quotes Perth | Contact Ellis Services",
+      "owner": "O29"
+    },
+    "faq/index.html": {
+      "beforeTitle": "Perth Handyman FAQs | Direct Local Service | Ellis",
+      "beforeH1": "Perth Handyman FAQs",
+      "headings": {
+        "Hiring & matching": "Choosing a Handyman in Perth",
+        "Quotes & scope": "Handyman Quotes, Rates & Repair Scope",
+        "Licensed trades": "Handyman or Licensed Trade in Perth?"
+      },
+      "review": "keyword intent correction",
+      "owner": "O01/O29/O30"
+    },
+    "guides/cupboard-hinges-drawer-runners-repair-guide/index.html": {
+      "beforeTitle": "Cupboard Hinges & Drawer Runners: Repair or Replace? | Ellis",
+      "beforeH1": "Cupboard Hinges & Drawer Runners: Repair or Replace?",
+      "headings": {},
+      "review": "keyword intent correction",
+      "title": "Cabinet & Drawer Repairs Perth: Hinge Guide | Ellis",
+      "h1": "Cabinet & Drawer Repairs in Perth: Hinges or Runners?",
+      "owner": "O07"
+    },
+    "guides/home-repair-priorities/index.html": {
+      "beforeTitle": "How to Prioritise Home Repairs | Ellis",
+      "beforeH1": "Which Home Repairs Should You Prioritise First?",
+      "headings": {
+        "Put immediate hazards first": "Home Safety Maintenance: Identify Immediate Hazards",
+        "Stop active damage, then restore function": "House Repairs: Active Damage Before Cosmetic Work",
+        "Bundle compatible lower-risk tasks": "Combine Small Repair Jobs into a Home Maintenance List"
+      },
+      "review": "keyword intent correction",
+      "title": "Home Maintenance Perth: Repair Priorities | Ellis",
+      "h1": "Home Maintenance in Perth: Which Repairs Come First?",
+      "owner": "O02"
+    },
+    "guides/how-to-find-the-right-home-repairer/index.html": {
+      "beforeTitle": "How to Find the Right Home Repairer | Ellis",
+      "beforeH1": "How to Find the Right Repairer for a Home Maintenance Job",
+      "headings": {
+        "Start with the problem, not a trade label": "Describe Your Small Home Repair Jobs in Perth",
+        "Match the scope to the right capability": "Handyman or Licensed Trade: Match the Repair Scope",
+        "Confirm fit before accepting a booking": "Hiring a Handyman in Perth: Scope, Quote & Booking"
+      },
+      "review": "keyword intent correction",
+      "title": "Choosing a Handyman in Perth | Scope & Credentials",
+      "h1": "How to Choose a Handyman in Perth for Home Repairs",
+      "owner": "O01"
+    },
+    "guides/index.html": {
+      "beforeTitle": "Property Maintenance Guides & Advice | Ellis",
+      "beforeH1": "Perth Home Maintenance Guides & Checklists",
+      "headings": {
+        "Prepare the right questions for your service visit": "Handyman Repairs in Perth: What to Ask Before Booking",
+        "Repair or Replace? Practical Home Repair Guides": "Perth Home Repair Guides: Doors, Cabinets, Walls & Showers"
+      },
+      "review": "keyword intent correction",
+      "title": "Perth Handyman & Home Maintenance Guides | Ellis",
+      "h1": "Perth Handyman & Home Maintenance Guides",
+      "owner": "O01/O02"
+    },
+    "guides/photos-and-clear-scope-for-home-repairs/index.html": {
+      "beforeTitle": "Photos and Scope for Home Repairs | Ellis",
+      "beforeH1": "How Photos and a Clear Scope Help Home Repairs Run Better",
+      "headings": {
+        "Write the scope in observable terms": "Describe Small Repair Jobs for a Clear Handyman Quote",
+        "Keep changes visible": "Confirm Changes to the Handyman Repair Scope"
+      },
+      "review": "keyword intent correction",
+      "title": "Perth Home Repair Quotes: Photos & Scope | Ellis",
+      "h1": "Perth Home Repair Quotes: Photos & a Clear Repair Scope",
+      "owner": "O29"
+    },
+    "guides/prepare-before-home-repair-quote/index.html": {
+      "beforeTitle": "Prepare for a Home Repair Quote | Ellis",
+      "beforeH1": "What to Prepare Before Asking for a Home Repair Quote",
+      "headings": {
+        "Build a short job brief": "Prepare a Home Repair List for Your Handyman Quote",
+        "Make comparisons possible": "Compare Handyman Rates, Scope & Inclusions"
+      },
+      "review": "keyword intent correction",
+      "title": "Handyman Quotes Perth: What to Prepare | Ellis",
+      "h1": "Handyman Quotes in Perth: Prepare Your Home Repair List",
+      "owner": "O29"
+    },
+    "guides/property-manager-maintenance-coordination/index.html": {
+      "beforeTitle": "Property Manager Maintenance Coordination | Ellis",
+      "beforeH1": "How Property Managers Can Coordinate Maintenance Requests",
+      "headings": {
+        "Convert the report into a usable brief": "Build a Property Manager Repair List",
+        "Prioritise a mixed maintenance list": "Prioritise Rental Maintenance Repairs & Vacate Jobs",
+        "Keep assessment authorisation separate from repair authorisation": "Rental Property Repairs: Assessment & Quote Approval"
+      },
+      "review": "keyword intent correction",
+      "title": "Rental Property Maintenance Perth: Planning | Ellis",
+      "h1": "Rental Property Maintenance in Perth: A Repair Checklist",
+      "owner": "O25"
+    },
+    "guides/seasonal-home-maintenance-australia/index.html": {
+      "beforeTitle": "Seasonal Home Maintenance Australia | Ellis",
+      "beforeH1": "A Seasonal Home Maintenance Plan for Australian Properties",
+      "headings": {
+        "Plan for your local climate": "Preventative Home Maintenance for Perth Conditions",
+        "Check comfort, moisture and outdoor wear": "Routine Property Repairs: Moisture & Outdoor Wear",
+        "Turn observations into a workable list": "Create Your Seasonal Home Maintenance To-do List"
+      },
+      "review": "keyword intent correction",
+      "title": "Home Maintenance Perth: Seasonal Checklist | Ellis",
+      "h1": "Home Maintenance in Perth: A Seasonal Property Checklist",
+      "owner": "O02"
+    },
+    "guides/shower-silicone-grout-waterproofing-guide/index.html": {
+      "beforeTitle": "Shower Silicone, Grout & Waterproofing: The Difference | Ellis",
+      "beforeH1": "Shower Silicone, Grout & Waterproofing: The Difference",
+      "headings": {},
+      "review": "keyword intent correction",
+      "title": "Shower Resealing Perth: Grout or Waterproofing? | Ellis",
+      "h1": "Shower Resealing in Perth: Silicone, Grout or Waterproofing?",
+      "owner": "O18/O31"
+    },
+    "guides/sticking-doors-windows-repair-guide/index.html": {
+      "beforeTitle": "Sticking Doors & Timber Windows: What Needs Repair? | Ellis",
+      "beforeH1": "Sticking Doors & Timber Windows: What Needs Repair?",
+      "headings": {},
+      "review": "keyword intent correction",
+      "title": "Door & Timber Window Repairs Perth: Guide | Ellis",
+      "h1": "Door & Timber Window Repairs in Perth: Sticking or Dragging?",
+      "owner": "O03/O04/O06"
+    },
+    "guides/understanding-service-areas-and-postcode-checks/index.html": {
+      "beforeTitle": "Service Areas and Postcode Checks | Ellis",
+      "beforeH1": "How to Understand Service Areas and Postcode Checks",
+      "headings": {},
+      "review": "keyword intent correction",
+      "title": "Handyman Near Me in Perth: Area Checks | Ellis",
+      "h1": "Finding a Handyman Near You in Perth: Service Area Checks",
+      "owner": "O01"
+    },
+    "guides/wall-patching-paint-touch-ups-guide/index.html": {
+      "beforeTitle": "Wall Patching & Paint Touch-ups: Planning the Finish | Ellis",
+      "beforeH1": "Wall Patching & Paint Touch-ups: Planning the Finish",
+      "headings": {},
+      "review": "keyword intent correction",
+      "title": "Wall Patching Perth: Gyprock & Paint Guide | Ellis",
+      "h1": "Wall Patching in Perth: Gyprock Repairs & Paint Touch-ups",
+      "owner": "O08/O10"
+    },
+    "guides/when-home-maintenance-needs-a-licensed-trade/index.html": {
+      "beforeTitle": "When Do You Need a Licensed Tradie? | Ellis",
+      "beforeH1": "When Does Home Maintenance Need a Licensed Trade?",
+      "headings": {},
+      "review": "keyword intent correction",
+      "title": "Handyman or Licensed Trade in Perth? | Ellis",
+      "h1": "When Do Perth Home Repairs Need a Licensed Trade?",
+      "owner": "O30"
+    },
+    "privacy/index.html": {
+      "beforeTitle": "Privacy Notice | Ellis Perth",
+      "beforeH1": "Privacy Notice",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/bathroom-tile-shower-repair/index.html": {
+      "beforeTitle": "Shower Resealing & Tile Grout Repair Project | Ellis",
+      "beforeH1": "Shower resealing & tile grout repair",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/clothesline-bracket-repair-canning/index.html": {
+      "beforeTitle": "Clothesline Bracket Repair in Canning | Ellis",
+      "beforeH1": "Clothesline Bracket Repair in Canning",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/decking-refinishing-maintenance/index.html": {
+      "beforeTitle": "Deck Timber Maintenance & Refinishing Examples | Ellis",
+      "beforeH1": "Deck timber maintenance & refinishing",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/door-lock-replacement-installation/index.html": {
+      "beforeTitle": "Door Hardware Replacement & Smart Lock Fitting | Ellis",
+      "beforeH1": "Door hardware replacement & smart lock fitting",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/drawer-runner-replacement-southern-corridor/index.html": {
+      "beforeTitle": "Drawer Runner Replacement in the Southern Corridor | Ellis",
+      "beforeH1": "Drawer Runner Replacement in the Southern Corridor",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/exterior-timber-window-door-repair/index.html": {
+      "beforeTitle": "Sticking Timber Window & Exterior Door Repair Project | Ellis",
+      "beforeH1": "Sticking timber window & exterior door repair",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/garden-clean-up/index.html": {
+      "beforeTitle": "Garden Clean-up & Maintenance Odd Jobs Project | Ellis",
+      "beforeH1": "Garden clean-up & maintenance odd jobs",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/interior-wall-repair-painting/index.html": {
+      "beforeTitle": "Interior Wall Repair & Painting Touch-ups Project | Ellis",
+      "beforeH1": "Interior wall repair & painting touch-ups",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/kitchen-cabinet-hinge-repair/index.html": {
+      "beforeTitle": "Cupboard Hinge Repair & Cabinet Door Alignment | Ellis",
+      "beforeH1": "Cupboard hinge pulled-out repair & cabinet door alignment",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/roof-and-gutter-maintenance/index.html": {
+      "beforeTitle": "Gutter Cleaning & Roofline Maintenance Project | Ellis",
+      "beforeH1": "Gutter cleaning & roofline maintenance",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/shelf-installation-cockburn/index.html": {
+      "beforeTitle": "Shelf Installation in Cockburn | Ellis",
+      "beforeH1": "Shelf Installation in Cockburn",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/sliding-door-flyscreen-repair/index.html": {
+      "beforeTitle": "Torn Flyscreen Mesh Repair & Remeshing Project | Ellis",
+      "beforeH1": "Torn flyscreen mesh repair & remeshing",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "projects/timber-fence-repair/index.html": {
+      "beforeTitle": "Damaged Timber Fence Panel & Post Repair Project | Ellis",
+      "beforeH1": "Damaged timber fence panel & post repair",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/building-renovation-structural/bathroom/index.html": {
+      "beforeTitle": "Bathroom Renovations & Wet-area Repairs Perth",
+      "beforeH1": "Scope bathroom upgrades and wet-area repairs",
+      "headings": {
+        "Scope bathroom upgrades and wet-area repairs — Work & Quote Details": "Bathroom Renovations & Wet-area Repairs in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Bathroom Renovations & Wet-area Repairs in Perth"
+    },
+    "services/building-renovation-structural/bricklayers/index.html": {
+      "beforeTitle": "Brickwork & Masonry Repairs Perth | Walls & Piers",
+      "beforeH1": "Build or repair brick walls and piers",
+      "headings": {
+        "Build or repair brick walls and piers — Work & Quote Details": "Brickwork & Masonry Repairs in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Brickwork & Masonry Repairs in Perth"
+    },
+    "services/building-renovation-structural/builders/index.html": {
+      "beforeTitle": "Building & Renovation Projects Perth | Ellis",
+      "beforeH1": "Define the scope for a build or renovation",
+      "headings": {
+        "Define the scope for a build or renovation — Work & Quote Details": "Building & Renovation Projects in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Building & Renovation Projects in Perth"
+    },
+    "services/building-renovation-structural/concrete-resurfacing/index.html": {
+      "beforeTitle": "Concrete Resurfacing Perth | Slab & Surface Assessment",
+      "beforeH1": "Refresh a sound concrete surface",
+      "headings": {
+        "Refresh a sound concrete surface — Work & Quote Details": "Concrete Resurfacing in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Concrete Resurfacing in Perth"
+    },
+    "services/building-renovation-structural/concreters/index.html": {
+      "beforeTitle": "Concrete Slabs & Flatwork Perth | Preparation & Finishing",
+      "beforeH1": "Prepare and pour the agreed concrete area",
+      "headings": {
+        "Prepare and pour the agreed concrete area — Work & Quote Details": "Concrete Slabs & Flatwork in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Concrete Slabs & Flatwork in Perth"
+    },
+    "services/building-renovation-structural/demolition/index.html": {
+      "beforeTitle": "Demolition & Strip-out Perth | Scope & Material Checks",
+      "beforeH1": "Plan what to remove and what to retain",
+      "headings": {
+        "Plan what to remove and what to retain — Work & Quote Details": "Demolition & Strip-out in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Demolition & Strip-out in Perth"
+    },
+    "services/building-renovation-structural/home-renovators/index.html": {
+      "beforeTitle": "Home Renovations Perth | Rooms, Repairs & Trade Coordination",
+      "beforeH1": "Plan renovation work across your home",
+      "headings": {
+        "Plan renovation work across your home — Work & Quote Details": "Home Renovations in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Home Renovations in Perth"
+    },
+    "services/building-renovation-structural/index.html": {
+      "beforeTitle": "Building, Renovation & Structural Repairs Perth | Ellis",
+      "beforeH1": "Building, Renovation & Structural Services in Perth",
+      "headings": {
+        "How Our Perth Team Can Help": "Building, Renovation & Structural Repairs in Perth: Common Repair Requests",
+        "Important scope note": "Perth Service Scope & Licensed Trade Requirements"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/building-renovation-structural/restumping/index.html": {
+      "beforeTitle": "Restumping Assessment Perth | Supports & Uneven Floors",
+      "beforeH1": "Assess deteriorated stumps and floor movement",
+      "headings": {
+        "Assess deteriorated stumps and floor movement — Work & Quote Details": "Restumping Assessment in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Restumping Assessment in Perth"
+    },
+    "services/cleaning-removals-pest-hazard/asbestos-removal/index.html": {
+      "beforeTitle": "Asbestos Assessment & Removal Perth | Ellis",
+      "beforeH1": "Assess suspect asbestos before removal",
+      "headings": {
+        "Assess suspect asbestos before removal — Work & Quote Details": "Asbestos Assessment & Removal in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Asbestos Assessment & Removal in Perth"
+    },
+    "services/cleaning-removals-pest-hazard/cleaners/index.html": {
+      "beforeTitle": "Home & End-of-lease Cleaning Perth | Agreed Task Lists",
+      "beforeH1": "Scope the rooms and surfaces that need cleaning",
+      "headings": {
+        "Scope the rooms and surfaces that need cleaning — Work & Quote Details": "Home & End-of-lease Cleaning in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Home & End-of-lease Cleaning in Perth"
+    },
+    "services/cleaning-removals-pest-hazard/index.html": {
+      "beforeTitle": "Cleaning, Removals, Pest & Asbestos Services Perth | Ellis",
+      "beforeH1": "Cleaning, Removals, Pest & Hazard Services in Perth",
+      "headings": {
+        "How Our Perth Team Can Help": "Cleaning, Removals, Pest & Asbestos Services in Perth: Common Repair Requests",
+        "Important scope note": "Perth Service Scope & Licensed Trade Requirements"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/cleaning-removals-pest-hazard/pest-control/index.html": {
+      "beforeTitle": "Pest Assessment & Treatment Perth | Household Pest Concerns",
+      "beforeH1": "Identify pest activity and suitable treatment",
+      "headings": {
+        "Identify pest activity and suitable treatment — Work & Quote Details": "Pest Assessment & Treatment in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Pest Assessment & Treatment in Perth"
+    },
+    "services/cleaning-removals-pest-hazard/removalists/index.html": {
+      "beforeTitle": "Furniture & Household Removals Perth | Local Move Planning",
+      "beforeH1": "Plan furniture and household item moves",
+      "headings": {
+        "Plan furniture and household item moves — Work & Quote Details": "Furniture & Household Removals in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Furniture & Household Removals in Perth"
+    },
+    "services/cleaning-removals-pest-hazard/rubbish-removal/index.html": {
+      "beforeTitle": "Rubbish & Green Waste Removal Perth | Load & Access Checks",
+      "beforeH1": "Clear the agreed household or garden waste",
+      "headings": {
+        "Clear the agreed household or garden waste — Work & Quote Details": "Rubbish & Green Waste Removal in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Rubbish & Green Waste Removal in Perth"
+    },
+    "services/doors-windows-glass-screens/door-installation/index.html": {
+      "beforeTitle": "Internal & External Door Installation Perth | Ellis",
+      "beforeH1": "Door Installation in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/doors-windows-glass-screens/door-repairs/index.html": {
+      "beforeTitle": "Door Repairs Perth | Hinges, Latches & Alignment | Ellis",
+      "beforeH1": "Door Repairs in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/doors-windows-glass-screens/fly-screens/index.html": {
+      "beforeTitle": "Flyscreen Repairs Perth | Remeshing & Screen Repairs | Ellis",
+      "beforeH1": "Flyscreen Repairs in Perth",
+      "headings": {
+        "Repair Planning Guides": "Flyscreen Repairs Perth: Repair Planning Guides"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/doors-windows-glass-screens/glass-glaziers/index.html": {
+      "beforeTitle": "Glaziers & Glass Replacement Perth | Ellis",
+      "beforeH1": "Glass Glaziers in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/doors-windows-glass-screens/index.html": {
+      "beforeTitle": "Door, Window, Glass & Flyscreen Repairs Perth | Ellis",
+      "beforeH1": "Door, Window, Glass & Flyscreen Services in Perth",
+      "headings": {
+        "How Our Perth Team Can Help": "Door, Window, Glass & Flyscreen Repairs in Perth: Common Repair Requests",
+        "Important scope note": "Perth Service Scope & Licensed Trade Requirements"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/doors-windows-glass-screens/shower-screens/index.html": {
+      "beforeTitle": "Shower Screen Installation & Repairs Perth | Ellis",
+      "beforeH1": "Shower Screens in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/doors-windows-glass-screens/skylights/index.html": {
+      "beforeTitle": "Skylight Installation & Repairs Perth | Ellis",
+      "beforeH1": "Skylights in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/doors-windows-glass-screens/sliding-door-repairs/index.html": {
+      "beforeTitle": "Sliding Door Repairs Perth | Ellis",
+      "beforeH1": "Sliding Door Repairs in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/doors-windows-glass-screens/window-installation/index.html": {
+      "beforeTitle": "Window Installation & Replacement Perth | Ellis",
+      "beforeH1": "Window Installation in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/doors-windows-glass-screens/window-repairs/index.html": {
+      "beforeTitle": "Timber Window & Window Frame Repairs Perth | Ellis",
+      "beforeH1": "Timber Window & Window Frame Repairs in Perth",
+      "headings": {
+        "Repair Planning Guides": "Timber Window & Window Frame Repairs Perth: Repair Planning Guides"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/electrical-plumbing-gas-air-conditioning/air-conditioning/index.html": {
+      "beforeTitle": "Air Conditioning Installation & Repairs Perth | Ellis",
+      "beforeH1": "Air Conditioning Installation & Repairs in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/electrical-plumbing-gas-air-conditioning/electricians/index.html": {
+      "beforeTitle": "Electrical Repairs & Electrician Services Perth | Ellis",
+      "beforeH1": "Electrical Repairs & Electrician Services in Perth",
+      "headings": {
+        "Repair Planning Guides": "Electrical Repairs & Electrician Services Perth: Repair Planning Guides"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/electrical-plumbing-gas-air-conditioning/gas-fitters/index.html": {
+      "beforeTitle": "Gas Fitting & Gas Appliance Connections Perth | Ellis",
+      "beforeH1": "Gas Fitting & Gas Appliance Work in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/electrical-plumbing-gas-air-conditioning/index.html": {
+      "beforeTitle": "Electrical, Plumbing, Gas & Air Conditioning Perth | Ellis",
+      "beforeH1": "Electrical, Plumbing, Gas & Air Conditioning in Perth",
+      "headings": {
+        "How Our Perth Team Can Help": "Electrical, Plumbing, Gas & Air Conditioning in Perth: Common Repair Requests",
+        "Important scope note": "Perth Service Scope & Licensed Trade Requirements"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/electrical-plumbing-gas-air-conditioning/insulation/index.html": {
+      "beforeTitle": "Ceiling, Wall & Underfloor Insulation Perth | Ellis",
+      "beforeH1": "Insulation Installation & Upgrades in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/electrical-plumbing-gas-air-conditioning/plumbers/index.html": {
+      "beforeTitle": "Plumbing Repairs & Plumber Services Perth | Ellis",
+      "beforeH1": "Plumbing Repairs & Plumber Services in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/gardens-landscaping/garden-clean-up/index.html": {
+      "beforeTitle": "Garden Clean Up Perth | Weeding, Cutbacks & Green Waste",
+      "beforeH1": "Tidy overgrown garden beds and paths",
+      "headings": {
+        "Tidy overgrown garden beds and paths — Work & Quote Details": "Garden Clean Up in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Garden Clean Up in Perth"
+    },
+    "services/gardens-landscaping/garden-landscapers/index.html": {
+      "beforeTitle": "Garden Landscaping Perth | Planting, Beds & Edging",
+      "beforeH1": "Plan planting, garden beds and edging",
+      "headings": {
+        "Plan planting, garden beds and edging — Work & Quote Details": "Garden Landscaping in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Garden Landscaping in Perth"
+    },
+    "services/gardens-landscaping/gardeners/index.html": {
+      "beforeTitle": "Garden Maintenance Perth | Weeding, Pruning & Mulch",
+      "beforeH1": "Keep garden beds and shrubs manageable",
+      "headings": {
+        "Keep garden beds and shrubs manageable — Work & Quote Details": "Garden Maintenance in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Garden Maintenance in Perth"
+    },
+    "services/gardens-landscaping/index.html": {
+      "beforeTitle": "Garden Maintenance & Landscaping Perth | Ellis",
+      "beforeH1": "Garden & Landscaping Services in Perth",
+      "headings": {
+        "How Our Perth Team Can Help": "Garden Maintenance & Landscaping in Perth: Common Repair Requests",
+        "Important scope note": "Perth Service Scope & Licensed Trade Requirements"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/gardens-landscaping/lawn-mowing/index.html": {
+      "beforeTitle": "Lawn Mowing & Edging Perth | Ellis",
+      "beforeH1": "Mow the lawn and tidy accessible edges",
+      "headings": {
+        "Mow the lawn and tidy accessible edges — Work & Quote Details": "Lawn Mowing & Edging in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Lawn Mowing & Edging in Perth"
+    },
+    "services/gardens-landscaping/synthetic-grass/index.html": {
+      "beforeTitle": "Synthetic Grass Installation Perth | Base & Drainage",
+      "beforeH1": "Prepare and install synthetic turf",
+      "headings": {
+        "Prepare and install synthetic turf — Work & Quote Details": "Synthetic Grass Installation in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Synthetic Grass Installation in Perth"
+    },
+    "services/gardens-landscaping/tree-arborists/index.html": {
+      "beforeTitle": "Tree Assessment & Arborist Work Perth | Ellis",
+      "beforeH1": "Assess tree health, pruning and removal needs",
+      "headings": {
+        "Assess tree health, pruning and removal needs — Work & Quote Details": "Tree Assessment & Arborist Work in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Tree Assessment & Arborist Work in Perth"
+    },
+    "services/handyman-interiors-appliance-repairs/blinds-and-curtains/index.html": {
+      "beforeTitle": "Blind Installation & Curtain Repairs Perth | Ellis",
+      "beforeH1": "Blind Installation & Curtain Repairs in Perth",
+      "headings": {
+        "Repair Planning Guides": "Blind Installation & Curtain Repairs Perth: Repair Planning Guides"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/cabinet-makers/index.html": {
+      "beforeTitle": "Cabinet Makers Perth | Custom & Replacement Cabinetry",
+      "beforeH1": "Cabinet Makers in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/index.html": {
+      "beforeTitle": "Cabinet & Wardrobe Repairs Perth | Hinges & Runners | Ellis",
+      "beforeH1": "Cabinet & Wardrobe Repairs in Perth",
+      "headings": {
+        "Cupboard hinges and damaged fixing points": "Cupboard Hinge Repairs & Damaged Fixing Points",
+        "Drawer runner replacement and adjustment": "Drawer Runner Replacement in Perth & Adjustment",
+        "Hinged and sliding wardrobe doors": "Wardrobe Door Repairs: Hinges, Rollers & Tracks"
+      },
+      "review": "keyword intent correction",
+      "h1": "Cabinet, Drawer & Wardrobe Repairs in Perth"
+    },
+    "services/handyman-interiors-appliance-repairs/carpenters/index.html": {
+      "beforeTitle": "Carpentry & Timber Repairs Perth | Ellis",
+      "beforeH1": "Carpentry & Timber Repairs in Perth",
+      "headings": {
+        "Repair Planning Guides": "Carpentry & Timber Repairs Perth: Repair Planning Guides",
+        "Carpentry Services — Work & Quote Details": "Minor Carpentry Repairs in Perth — Timber & Repair Scope"
+      },
+      "review": "keyword intent correction"
+    },
+    "services/handyman-interiors-appliance-repairs/carpet-repair/index.html": {
+      "beforeTitle": "Carpet Repair Perth | Patches, Joins & Re-stretching",
+      "beforeH1": "Carpet Repair in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/index.html": {
+      "beforeTitle": "Clothesline Repairs & Installation Perth | Ellis",
+      "beforeH1": "Clothesline Repairs & Installation in Perth",
+      "headings": {
+        "Identify the clothesline and the fault": "Clothesline Repairs in Perth: Identify the Fault",
+        "Restring, repair or replace the unit?": "Clothesline Restringing: Repair or Replace?",
+        "Bracket repairs and supporting surfaces": "Folding Clothesline Repair: Brackets & Supporting Surfaces"
+      },
+      "review": "keyword intent correction"
+    },
+    "services/handyman-interiors-appliance-repairs/dishwasher-repair/index.html": {
+      "beforeTitle": "Dishwasher Repair Perth | Drainage, Leaks & Cycle Faults",
+      "beforeH1": "Dishwasher Repair in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/floor-sanding/index.html": {
+      "beforeTitle": "Timber Floor Sanding Perth | Ellis",
+      "beforeH1": "Timber Floor Sanding in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/furniture-assembly/index.html": {
+      "beforeTitle": "Furniture Assembly Perth | Ellis",
+      "beforeH1": "Furniture Assembly in Perth",
+      "headings": {
+        "Beds, desks and storage furniture": "Flat Pack Furniture Assembly: Beds, Desks & Storage",
+        "Delivery, unpacking and missing parts": "Furniture Assembly: Delivery, Parts & Instructions"
+      },
+      "review": "keyword intent correction",
+      "h1": "Flat Pack & Furniture Assembly in Perth"
+    },
+    "services/handyman-interiors-appliance-repairs/handymen/index.html": {
+      "beforeTitle": "Odd Jobs & Handyman Repairs Perth | Ellis",
+      "beforeH1": "Odd Jobs & Handyman Repairs in Perth",
+      "headings": {
+        "Small Repairs & Installations We Handle": "Small Repair Jobs & Handyman Installations in Perth",
+        "Home, Rental & Workplace Repair Lists": "Home Maintenance To-do Lists for Rentals & Workplaces"
+      },
+      "review": "keyword intent correction"
+    },
+    "services/handyman-interiors-appliance-repairs/ikea-kitchens/index.html": {
+      "beforeTitle": "IKEA Kitchen Installation Perth | Ellis",
+      "beforeH1": "IKEA Kitchen Installation in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/index.html": {
+      "beforeTitle": "Handyman, Interior & Appliance Repairs Perth | Ellis",
+      "beforeH1": "Handyman, Interior & Appliance Repairs in Perth",
+      "headings": {
+        "How Our Perth Team Can Help": "Handyman, Interior & Appliance Repairs in Perth: Common Repair Requests",
+        "Important scope note": "Perth Service Scope & Licensed Trade Requirements"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/new-carpet/index.html": {
+      "beforeTitle": "New Carpet Installation Perth | Ellis",
+      "beforeH1": "New Carpet Installation in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/oven-repair/index.html": {
+      "beforeTitle": "Oven Repair Perth | Heating, Fans, Doors & Controls",
+      "beforeH1": "Oven Repair in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/plasterers/index.html": {
+      "beforeTitle": "Wall & Ceiling Repairs Perth | Gyprock Patching | Ellis",
+      "beforeH1": "Wall & Ceiling Repairs in Perth",
+      "headings": {
+        "Repair Planning Guides": "Wall & Ceiling Repairs Perth: Repair Planning Guides",
+        "Wall & Ceiling Repairs — Work & Quote Details": "Gyprock Repairs & Wall Patching in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Gyprock, Wall & Ceiling Repairs in Perth"
+    },
+    "services/handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging/index.html": {
+      "beforeTitle": "Shelf Installation, Mirror & Picture Hanging Perth | Ellis",
+      "beforeH1": "Shelving, Mirror & Picture Hanging in Perth",
+      "headings": {
+        "Plan shelves around the wall and intended load": "Shelf Installation in Perth: Wall Type & Intended Load",
+        "Mirror mounting and picture placement": "Mirror Hanging & Picture Placement in Perth",
+        "Supplied shelves, brackets and wall fixings": "Wall Shelf Mounting: Shelves, Brackets & Fixings"
+      },
+      "review": "keyword intent correction",
+      "h1": "Shelf Installation, Mirror & Picture Hanging in Perth"
+    },
+    "services/handyman-interiors-appliance-repairs/tiling/index.html": {
+      "beforeTitle": "Tile Repairs, Regrouting & Tiling Perth | Ellis",
+      "beforeH1": "Tile Repairs, Regrouting & Tiling in Perth",
+      "headings": {
+        "Repair Planning Guides": "Tile Repairs, Regrouting & Tiling Perth: Repair Planning Guides"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/tv-wall-mounting/index.html": {
+      "beforeTitle": "TV Wall Mounting Perth | Ellis",
+      "beforeH1": "TV Wall Mounting in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/upholstery-repair/index.html": {
+      "beforeTitle": "Upholstery Repair Perth | Fabric, Cushions & Seating",
+      "beforeH1": "Upholstery Repair in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/handyman-interiors-appliance-repairs/waterproofing/index.html": {
+      "beforeTitle": "Shower & Balcony Waterproofing Repairs Perth | Ellis",
+      "beforeH1": "Shower & Balcony Waterproofing Repairs in Perth",
+      "headings": {
+        "Repair Planning Guides": "Shower & Balcony Waterproofing Repairs Perth: Repair Planning Guides"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/index.html": {
+      "beforeTitle": "Perth Home Repair & Maintenance Services | Ellis",
+      "beforeH1": "Perth Home Repair & Maintenance Services",
+      "headings": {
+        "Find the service for the surface or fitting that needs repair": "Perth Home Repair Services: Choose the Surface or Fitting"
+      },
+      "review": "keyword intent correction",
+      "owner": "O01/O02"
+    },
+    "services/outdoor-structures-fencing-pools/carports-and-garages/index.html": {
+      "beforeTitle": "Carport & Garage Building Perth | Layout & Repairs",
+      "beforeH1": "Plan a carport, garage or component repair",
+      "headings": {
+        "Plan a carport, garage or component repair — Work & Quote Details": "Carport & Garage Building in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Carport & Garage Building in Perth"
+    },
+    "services/outdoor-structures-fencing-pools/deck-builders/index.html": {
+      "beforeTitle": "Deck Repairs, Maintenance & Deck Building Perth | Ellis",
+      "beforeH1": "Deck Repairs, Maintenance & Deck Building in Perth",
+      "headings": {
+        "Repair Planning Guides": "Deck Repairs, Maintenance & Deck Building Perth: Repair Planning Guides"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/outdoor-structures-fencing-pools/fence-builders/index.html": {
+      "beforeTitle": "Fence Building & Panel Replacement Perth | Ellis",
+      "beforeH1": "Replace a fence run or damaged panels",
+      "headings": {
+        "Replace a fence run or damaged panels — Work & Quote Details": "Fence Building & Panel Replacement in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Fence Building & Panel Replacement in Perth"
+    },
+    "services/outdoor-structures-fencing-pools/fencing-contractors/index.html": {
+      "beforeTitle": "Fencing Projects Perth | Replacement, Screening & Gates",
+      "beforeH1": "Plan fencing across multiple sections",
+      "headings": {
+        "Plan fencing across multiple sections — Work & Quote Details": "Fencing Projects in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Fencing Projects in Perth"
+    },
+    "services/outdoor-structures-fencing-pools/index.html": {
+      "beforeTitle": "Deck, Fence, Pergola & Pool Services Perth | Ellis",
+      "beforeH1": "Outdoor Structures, Fencing & Pool Services in Perth",
+      "headings": {
+        "How Our Perth Team Can Help": "Deck, Fence, Pergola & Pool Services in Perth: Common Repair Requests",
+        "Important scope note": "Perth Service Scope & Licensed Trade Requirements"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/outdoor-structures-fencing-pools/patio-builders/index.html": {
+      "beforeTitle": "Patio Surface Installation Perth | Levels, Steps & Drainage",
+      "beforeH1": "Create a patio surface that suits the site",
+      "headings": {
+        "Create a patio surface that suits the site — Work & Quote Details": "Patio Surface Installation in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Patio Surface Installation in Perth"
+    },
+    "services/outdoor-structures-fencing-pools/pergola-builders/index.html": {
+      "beforeTitle": "Pergola Building & Repairs Perth | Ellis",
+      "beforeH1": "Plan a pergola or assess worn timber",
+      "headings": {
+        "Plan a pergola or assess worn timber — Work & Quote Details": "Pergola Building & Repairs in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Pergola Building & Repairs in Perth"
+    },
+    "services/outdoor-structures-fencing-pools/pool-fence-installers/index.html": {
+      "beforeTitle": "Pool Fence Installation & Gate Repairs Perth",
+      "beforeH1": "Install or repair a complete pool barrier",
+      "headings": {
+        "Install or repair a complete pool barrier — Work & Quote Details": "Pool Fence Installation & Gate Repairs in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Pool Fence Installation & Gate Repairs in Perth"
+    },
+    "services/outdoor-structures-fencing-pools/pool-resurfacing/index.html": {
+      "beforeTitle": "Pool Resurfacing Perth | Shell & Finish Assessment",
+      "beforeH1": "Assess a worn pool surface before resurfacing",
+      "headings": {
+        "Assess a worn pool surface before resurfacing — Work & Quote Details": "Pool Resurfacing in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Pool Resurfacing in Perth"
+    },
+    "services/outdoor-structures-fencing-pools/retaining-walls/index.html": {
+      "beforeTitle": "Retaining Wall Building & Replacement Perth",
+      "beforeH1": "Assess a retaining wall before building or replacement",
+      "headings": {
+        "Assess a retaining wall before building or replacement — Work & Quote Details": "Retaining Wall Building & Replacement in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Retaining Wall Building & Replacement in Perth"
+    },
+    "services/outdoor-structures-fencing-pools/timber-fencing/index.html": {
+      "beforeTitle": "Timber Fence & Gate Repairs Perth | Ellis",
+      "beforeH1": "Timber Fence & Gate Repairs in Perth",
+      "headings": {
+        "Repair Planning Guides": "Timber Fence & Gate Repairs Perth: Repair Planning Guides"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/outdoor-structures-fencing-pools/verandah-builders/index.html": {
+      "beforeTitle": "Verandah Building & Repairs Perth | Ellis",
+      "beforeH1": "Plan a verandah or repair worn components",
+      "headings": {
+        "Plan a verandah or repair worn components — Work & Quote Details": "Verandah Building & Repairs in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Verandah Building & Repairs in Perth"
+    },
+    "services/planning-inspection-compliance/building-certifiers/index.html": {
+      "beforeTitle": "Building Certification Perth | Plans & Approval Documentation",
+      "beforeH1": "Clarify the building certification requirements",
+      "headings": {
+        "Clarify the building certification requirements — Work & Quote Details": "Building Certification in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Building Certification in Perth"
+    },
+    "services/planning-inspection-compliance/building-inspectors/index.html": {
+      "beforeTitle": "Building Inspections Perth | Pre-purchase, Handover & Defects",
+      "beforeH1": "Inspect visible defects and property condition",
+      "headings": {
+        "Inspect visible defects and property condition — Work & Quote Details": "Building Inspections in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Building Inspections in Perth"
+    },
+    "services/planning-inspection-compliance/draftsmen/index.html": {
+      "beforeTitle": "Renovation & Building Drafting Perth | Plans & Drawings",
+      "beforeH1": "Turn a renovation brief into measured drawings",
+      "headings": {
+        "Turn a renovation brief into measured drawings — Work & Quote Details": "Renovation & Building Drafting in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Renovation & Building Drafting in Perth"
+    },
+    "services/planning-inspection-compliance/index.html": {
+      "beforeTitle": "Building Inspections, Surveying & Plans Perth | Ellis",
+      "beforeH1": "Planning, Inspection & Compliance Services in Perth",
+      "headings": {
+        "How Our Perth Team Can Help": "Building Inspections, Surveying & Plans in Perth: Common Repair Requests",
+        "Important scope note": "Perth Service Scope & Licensed Trade Requirements"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/planning-inspection-compliance/structural-engineers/index.html": {
+      "beforeTitle": "Structural Engineering Perth | Cracks, Beams & Alterations",
+      "beforeH1": "Assess structural movement and proposed alterations",
+      "headings": {
+        "Assess structural movement and proposed alterations — Work & Quote Details": "Structural Engineering in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Structural Engineering in Perth"
+    },
+    "services/planning-inspection-compliance/surveyors/index.html": {
+      "beforeTitle": "Property Surveys Perth | Boundaries, Features & Levels",
+      "beforeH1": "Establish site levels and boundary information",
+      "headings": {
+        "Establish site levels and boundary information — Work & Quote Details": "Property Surveys in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction",
+      "h1": "Property Surveys in Perth"
+    },
+    "services/property-maintenance/index.html": {
+      "beforeTitle": "Property Maintenance Perth | Ellis",
+      "beforeH1": "Property Maintenance in Perth",
+      "headings": {
+        "Homeowners and family repair lists": "Home Maintenance in Perth: Household Repair Lists",
+        "Rental property maintenance and tenant access": "Rental Property Maintenance in Perth & Tenant Access",
+        "Strata and shared-property approval": "Strata Maintenance in Perth: Shared-property Approval"
+      },
+      "review": "keyword intent correction",
+      "owner": "O02/O25/O26/O27"
+    },
+    "services/roofing-gutters-exterior/cladding/index.html": {
+      "beforeTitle": "Cladding Repairs & Replacement Perth | Ellis",
+      "beforeH1": "Cladding Repairs & Replacement in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/roofing-gutters-exterior/gutter-services/index.html": {
+      "beforeTitle": "Gutter Cleaning & Repairs Perth | Ellis",
+      "beforeH1": "Gutter Cleaning & Repairs in Perth",
+      "headings": {
+        "Repair Planning Guides": "Gutter Cleaning & Repairs Perth: Repair Planning Guides"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/roofing-gutters-exterior/house-painters/index.html": {
+      "beforeTitle": "Interior & Exterior House Painting Perth | Ellis",
+      "beforeH1": "Interior & Exterior House Painting in Perth",
+      "headings": {
+        "Repair Planning Guides": "Interior & Exterior House Painting Perth: Repair Planning Guides",
+        "Interior & Exterior House Painting — Work & Quote Details": "House Painting & Painting Touch-ups in Perth — Scope & Quote Details"
+      },
+      "review": "keyword intent correction"
+    },
+    "services/roofing-gutters-exterior/index.html": {
+      "beforeTitle": "Roof, Gutter & Exterior Repairs Perth | Ellis",
+      "beforeH1": "Roofing, Gutter & Exterior Services in Perth",
+      "headings": {
+        "How Our Perth Team Can Help": "Roof, Gutter & Exterior Repairs in Perth: Common Repair Requests",
+        "Important scope note": "Perth Service Scope & Licensed Trade Requirements"
+      },
+      "review": "retain topic-led headings"
+    },
+    "services/roofing-gutters-exterior/pavers/index.html": {
+      "beforeTitle": "Paving Installation & Repairs Perth | Ellis",
+      "beforeH1": "Paving Installation & Repairs in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/roofing-gutters-exterior/renderers/index.html": {
+      "beforeTitle": "Wall Rendering & Render Repairs Perth | Ellis",
+      "beforeH1": "Wall Rendering & Render Repairs in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    },
+    "services/roofing-gutters-exterior/roofing/index.html": {
+      "beforeTitle": "Roofing & Roof Leak Repairs Perth | Ellis",
+      "beforeH1": "Roofing & Roof Repairs in Perth",
+      "headings": {},
+      "review": "retain topic-led headings"
+    }
+  }
+}

@@ -7,7 +7,7 @@ const contact = fs.readFileSync(path.join(__dirname, '..', 'contact', 'index.htm
 
 test('contact page uses a production enquiry title rather than a demo label', () => {
   const title = contact.match(/<title>([^<]+)<\/title>/)?.[1] || '';
-  assert.equal(title, 'Contact Ellis Perth | Local Handyman Services');
+  assert.equal(title, 'Handyman Quotes Perth | Contact Ellis Services');
   assert.match(contact, /<meta name="description" content="Contact the Ellis Perth office directly for local handyman services, home repairs and property maintenance\.">/);
   assert.doesNotMatch(title, /\bDemo\b/i);
 });

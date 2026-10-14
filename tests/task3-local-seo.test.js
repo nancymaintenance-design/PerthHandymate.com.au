@@ -30,16 +30,17 @@ test('content dates reflect substantive edits and visible guide dates agree with
   const xml = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
   const entries = new Map([...xml.matchAll(/<url><loc>https:\/\/www.perthhandymate.com.au([^<]*)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)].map(([, route, date]) => [route, date]));
   assert.equal(entries.size, 124);
-  for (const [route, date] of [['/', '2026-10-13'], ['/services/handyman-interiors-appliance-repairs/handymen/', '2026-10-13'], ['/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/', '2026-10-13'], ['/guides/cupboard-hinges-drawer-runners-repair-guide/', '2026-10-12'], ['/guides/shower-silicone-grout-waterproofing-guide/', '2026-10-12'], [region, '2026-10-13'], [south, '2026-10-13']]) assert.equal(entries.get(route), date, route);
+  for (const [route, date] of [['/', '2026-10-13'], ['/services/handyman-interiors-appliance-repairs/handymen/', '2026-10-13'], ['/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/', '2026-10-13'], ['/guides/cupboard-hinges-drawer-runners-repair-guide/', '2026-10-13'], ['/guides/shower-silicone-grout-waterproofing-guide/', '2026-10-13'], [region, '2026-10-13'], [south, '2026-10-13']]) assert.equal(entries.get(route), date, route);
   assert.equal(entries.get('/areas/perth-central/'), '2026-10-08');
   assert.equal(entries.get('/areas/'), undefined);
-  for (const [route, date] of entries) if (route.startsWith('/guides/') && date) assert.match(main(read(route)), new RegExp('Updated ' + date), route);
+  for (const [route, date] of entries) if (route.startsWith('/guides/') && route !== '/guides/' && date) assert.match(main(read(route)), new RegExp('Updated ' + date), route);
 });
 
-test('confirmed office reception is separate from conditional 24-hour onsite service', () => {
+test('office reception is shown once in the footer, separate from conditional onsite service', () => {
   for (const route of ['/', '/about/', '/contact/']) {
     const visible = main(read(route)).replace(/<[^>]*>/g, ' ');
-    assert.match(visible, /Office reception[\s\S]*Monday[–-]Sunday[\s\S]*09:00[–-]21:00[\s\S]*Perth local time/, route);
+    assert.doesNotMatch(main(read(route)), /id="office-reception"/, route + ': no duplicated standalone reception block');
+    assert.equal((read(route).match(/Office reception:/g) || []).length, 1, route + ': footer is the sole reception display');
     assert.match(visible, /24.hour onsite service|Available 24 hours/i, route);
     assert.match(visible, /subject to location, safe access and circumstances outside our control/i, route);
   }

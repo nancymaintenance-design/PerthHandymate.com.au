@@ -26,7 +26,10 @@ test('normalizer continuously refreshes managed visible facts and schema without
   for (const route of routes) {
     const file = path.join(fixture, route);
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    const original = fs.readFileSync(path.join(root, route), 'utf8').replace('</main>', `${extra}</main>`).replace('id="office-reception"><h2>Office reception</h2>', 'id="office-reception"><h2>Office reception</h2><p id="unmanaged-within-office">Preserve this paragraph.</p>');
+    // Explicit synthetic fixture exercises optional managed paragraph refresh;
+    // the live site intentionally keeps reception hours only in the shared footer.
+    const optionalOffice = '<section id="office-reception"><h2>Office reception</h2><p id="unmanaged-within-office">Preserve this paragraph.</p><p>Monday–Sunday, 09:00–21:00 Perth local time.</p></section>';
+    const original = fs.readFileSync(path.join(root, route), 'utf8').replace('</main>', `${optionalOffice}${extra}</main>`);
     fs.writeFileSync(file, original);
     originals.set(route, original);
   }

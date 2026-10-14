@@ -83,7 +83,7 @@ test('built shared orange actions meet text contrast in idle, hover and keyboard
   }
 });
 for (const viewport of [{ width: 390, height: 844 }, { width: 1440, height: 900 }]) {
-  test(`built home first-screen paths and compact projects at ${viewport.width}`, async t => {
+  test(`built home first-screen paths and complete alternating projects at ${viewport.width}`, async t => {
     const page = await pageAt(t, '/', viewport);
     const metrics = await measure(page);
     const quote = await page.locator('.hero .button.primary').boundingBox();
@@ -101,7 +101,6 @@ for (const viewport of [{ width: 390, height: 844 }, { width: 1440, height: 900 
     }
     if (viewport.width === 390) {
       assert.ok((await quick.boundingBox()).y < viewport.height + 100, 'quick routes within or immediately below first screen');
-      assert.ok(metrics.height < 16500, 'materially shorter than the 19,827px audit baseline');
     }
     const cases = await page.locator('a[href*="/projects/"]').evaluateAll(links => [...new Set(links.map(a => new URL(a.href).pathname).filter(p => p !== '/projects/'))]);
     assert.equal(cases.length, 13, 'all case pages remain crawlable from home');
@@ -109,8 +108,63 @@ for (const viewport of [{ width: 390, height: 844 }, { width: 1440, height: 900 
     assert.equal(await page.locator('.project-feature .evidence-feature').count(), 3);
     assert.equal(await page.locator('#repair-projects').count(), 1, 'existing home project section serves as the hub');
     assert.equal((await page.locator('.project-feature a[href*="/projects/"]').evaluateAll(links => [...new Set(links.map(a => new URL(a.href).pathname))])).length, 13);
-    assert.equal(await page.locator('.project-feature .support-feature:not(.evidence-feature)').count(), 0, 'older projects use compact descriptive links');
+    assert.equal(await page.locator('.project-feature .support-feature:not(.evidence-feature)').count(), 10, 'all ten older projects retain image-led presentation');
+    const rows = page.locator('.project-feature .support-feature');
+    assert.equal(await rows.count(), 13);
+    const order = await rows.evaluateAll(elements => elements.map(e => new URL(e.querySelector('a[href*="/projects/"]').href).pathname));
+    assert.deepEqual(order, [
+      '/projects/roof-and-gutter-maintenance/', '/projects/exterior-timber-window-door-repair/',
+      '/projects/bathroom-tile-shower-repair/', '/projects/garden-clean-up/',
+      '/projects/interior-wall-repair-painting/', '/projects/sliding-door-flyscreen-repair/',
+      '/projects/timber-fence-repair/', '/projects/decking-refinishing-maintenance/',
+      '/projects/door-lock-replacement-installation/', '/projects/kitchen-cabinet-hinge-repair/',
+      '/projects/clothesline-bracket-repair-canning/', '/projects/shelf-installation-cockburn/',
+      '/projects/drawer-runner-replacement-southern-corridor/',
+    ], 'ten original examples first, three confirmed local examples below');
+    const dimensions = [];
+    for (let i = 0; i < 13; i++) {
+      const row = rows.nth(i);
+      const image = row.locator('figure img');
+      await image.scrollIntoViewIfNeeded();
+      await image.evaluate(e => e.decode());
+      assert.ok(await image.evaluate(e => e.naturalWidth > 0), `case ${i + 1} image loads`);
+      const figure = await row.locator('figure').boundingBox();
+      const copy = await row.locator('.support-copy').boundingBox();
+      dimensions.push(figure);
+      if (viewport.width > 800) {
+        assert.equal(figure.x > copy.x, i % 2 === 0, `case ${i + 1} alternates image side`);
+      } else assert.ok(figure.y >= copy.y + copy.height - 1, 'mobile retains text then image');
+    }
+    for (const figure of dimensions) {
+      assert.ok(Math.abs(figure.width - dimensions[0].width) < 1, 'all case images share the original width');
+      assert.ok(Math.abs(figure.height - dimensions[0].height) < 1, 'all case images share the original height');
+    }
+    const shortSections = page.locator('#repair-planning-guides, #property-repair-list, #local-repair-requests');
+    assert.equal(await shortSections.count(), 3);
+    const gaps = await shortSections.evaluateAll(elements => elements.slice(1).map((e, i) => {
+      const before = elements[i].lastElementChild.getBoundingClientRect();
+      const after = e.querySelector('h2').getBoundingClientRect();
+      return after.top - before.bottom;
+    }));
+    assert.ok(gaps.every(gap => gap <= 80), `short content gaps stay compact: ${gaps.join(', ')}`);
     assert.ok(await page.locator('#local-repair-requests').isVisible(), 'coverage evidence stays visible');
+  });
+  test(`contact short explanations have compact spacing and no repeated reception block at ${viewport.width}`, async t => {
+    const page = await pageAt(t, '/contact/', viewport);
+    assert.equal(await page.locator('main #office-reception').count(), 0);
+    assert.equal(await page.locator('.footer-office-hours').count(), 1);
+    const spacing = await page.locator('#repair-planning-guides').evaluate(e => ({
+      padding: parseFloat(getComputedStyle(e).paddingTop),
+      gap: e.querySelector('h2').getBoundingClientRect().top - e.previousElementSibling.lastElementChild.getBoundingClientRect().bottom,
+    }));
+    assert.ok(spacing.padding <= 32 && spacing.gap <= 80, JSON.stringify(spacing));
+    for (const route of ['/services/electrical-plumbing-gas-air-conditioning/', '/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/']) {
+      await page.goto(base + route, { waitUntil: 'load' });
+      const blocks = await page.locator('main > section.section.shell').evaluateAll(es => es
+        .filter(e => e.querySelector('h2') && !e.querySelector('img,form,iframe,details,article,figure,.card-grid,.price-guide'))
+        .map(e => parseFloat(getComputedStyle(e).paddingTop)));
+      assert.ok(blocks.length > 1 && blocks.every(padding => padding <= 32), route + ': shared text blocks stay compact');
+    }
   });
   test(`built enquiry fast paths retain menu, search and task location at ${viewport.width}`, async t => {
     const page = await pageAt(t, '/', viewport);
