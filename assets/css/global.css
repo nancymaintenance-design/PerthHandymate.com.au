@@ -74,3 +74,4 @@
 .contact-hero .lede{overflow-wrap:anywhere}
 @media(max-width:700px){.hero{min-height:0;align-items:center}.hero-content{padding-block:32px}.hero h1{font-size:2.55rem;max-width:16ch}.hero-copy{font-size:1.05rem}.hero-availability{font-size:.93rem}.hero .service-search{margin-top:24px}.quick-paths{gap:8px}.quick-paths a{padding:8px 12px}.project-link-list{grid-template-columns:1fr}.contact-hero{padding:32px 0}.contact-hero h1{font-size:2.35rem;margin-top:24px}.contact-hero .lede{font-size:1rem}.contact-hero .contact-jump{margin:22px 0 0}}
 @media(forced-colors:active){.button:focus-visible,.header-call:focus-visible,.quick-paths a:focus-visible,.service-toc a:focus-visible{outline:3px solid Highlight;box-shadow:none}}
+.selected-locality{max-width:65ch;padding:14px 18px;border:1px solid currentColor;border-radius:var(--radius);font-weight:700;overflow-wrap:anywhere}

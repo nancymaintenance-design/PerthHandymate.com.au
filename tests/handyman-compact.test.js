@@ -25,6 +25,6 @@ test('every compact service topic has a working advice destination and booking r
  for(const card of cards.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)) assert.match(card[0],/href="[^"]+"/,'each task has a contextual next step');
  for(const [,href] of links){const target=new URL(href,'https://www.perthhandymate.com.au/services/handyman-interiors-appliance-repairs/handymen/');assert.ok(fs.existsSync(path.join(root,target.pathname,'index.html')),target.pathname);}
  const band=h.match(/<section class="section shell city-service-band">[\s\S]*?<\/section>/)[0];
- const regions=[...band.matchAll(/href="([^"]*suburb[^"]*)"/g)];assert.equal(regions.length,7);
+ const regions=[...band.matchAll(/href="([^"]*suburb[^"]*)"/g)];assert.equal(regions.length,9);
  for(const [,href] of regions)assert.match(href,/contact\/\?service=/);
 });

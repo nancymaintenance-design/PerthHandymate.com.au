@@ -1,0 +1,13 @@
+/* Region discovery uses the existing marketing palette and typography. */
+.area-grid>article{background:var(--white);border:1px solid #dbe3e7;border-radius:var(--radius);padding:26px;min-width:0;display:flex;flex-direction:column}
+.area-grid h2{font-size:1.5rem;line-height:1.2;letter-spacing:-.02em;margin-bottom:16px}
+.area-grid .text-link{margin-top:auto}
+.cta-band .button{flex-shrink:0}
+.region-services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:26px}
+.region-services article{border:1px solid #dbe3e7;border-radius:var(--radius);background:var(--white);padding:24px;min-width:0}
+.region-services h3{font-size:1.2rem;line-height:1.25}
+.region-services p{margin-bottom:0;color:var(--slate)}
+#local-property-guidance h2,#suburb-repair-links h2{font-size:clamp(1.7rem,3vw,2.35rem);max-width:30ch}
+#local-property-guidance>p{max-width:80ch}
+@media(max-width:900px){.region-services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.region-services{grid-template-columns:1fr}.area-grid>article{padding:22px}}

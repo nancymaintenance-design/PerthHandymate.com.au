@@ -63,9 +63,9 @@
       "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
     },
     "/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/projects/clothesline-bracket-repair-canning/": {
       "date": "2026-10-13",
@@ -98,19 +98,19 @@
       "source": "Approved Task 3 link matrix"
     },
     "/services/building-renovation-structural/bathroom/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/cleaning-removals-pest-hazard/pest-control/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/doors-windows-glass-screens/door-installation/": {
-      "date": "2026-10-12",
-      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/doors-windows-glass-screens/door-repairs/": {
       "date": "2026-10-12",
@@ -118,19 +118,19 @@
       "source": "cdd814d..18dd298"
     },
     "/services/doors-windows-glass-screens/fly-screens/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/doors-windows-glass-screens/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/doors-windows-glass-screens/shower-screens/": {
-      "date": "2026-10-12",
-      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/doors-windows-glass-screens/sliding-door-repairs/": {
       "date": "2026-10-12",
@@ -138,74 +138,74 @@
       "source": "cdd814d..18dd298"
     },
     "/services/doors-windows-glass-screens/window-repairs/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/electrical-plumbing-gas-air-conditioning/air-conditioning/": {
-      "date": "2026-10-12",
-      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/electrical-plumbing-gas-air-conditioning/electricians/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/electrical-plumbing-gas-air-conditioning/plumbers/": {
-      "date": "2026-10-12",
-      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/gardens-landscaping/garden-clean-up/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/gardens-landscaping/gardeners/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/gardens-landscaping/lawn-mowing/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/gardens-landscaping/tree-arborists/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/blinds-and-curtains/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/carpenters/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/carpet-repair/": {
-      "date": "2026-10-12",
-      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/dishwasher-repair/": {
-      "date": "2026-10-12",
-      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/furniture-assembly/": {
       "date": "2026-10-13",
@@ -213,34 +213,34 @@
       "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
     },
     "/services/handyman-interiors-appliance-repairs/handymen/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/oven-repair/": {
-      "date": "2026-10-12",
-      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/plasterers/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/tiling/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/": {
       "date": "2026-10-12",
@@ -248,94 +248,94 @@
       "source": "cdd814d..18dd298"
     },
     "/services/handyman-interiors-appliance-repairs/waterproofing/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/deck-builders/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/fence-builders/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/fencing-contractors/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/pool-fence-installers/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/timber-fencing/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/planning-inspection-compliance/building-inspectors/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/planning-inspection-compliance/structural-engineers/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/property-maintenance/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/roofing-gutters-exterior/gutter-services/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/roofing-gutters-exterior/house-painters/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/roofing-gutters-exterior/pavers/": {
-      "date": "2026-10-12",
-      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/roofing-gutters-exterior/roofing/": {
-      "date": "2026-10-12",
-      "reason": "Substantive repair-scope paragraphs, assessment guidance or FAQ changes reviewed in cdd814d..18dd298.",
-      "source": "cdd814d..18dd298"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/about/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/contact/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/areas/south-perth-canning/": {
-      "date": "2026-10-13",
-      "reason": "Contextual region and confirmed case links added; Canning repair and installation intent separated.",
-      "source": "Approved Task 3 link matrix"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/areas/cockburn-rockingham-southern-corridor/": {
-      "date": "2026-10-13",
-      "reason": "Contextual region and confirmed case links added; Canning repair and installation intent separated.",
-      "source": "Approved Task 3 link matrix"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/projects/bathroom-tile-shower-repair/": {
       "date": "2026-10-13",
@@ -383,149 +383,249 @@
       "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
     },
     "/services/building-renovation-structural/bricklayers/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/building-renovation-structural/builders/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/building-renovation-structural/concrete-resurfacing/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/building-renovation-structural/concreters/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/building-renovation-structural/demolition/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/building-renovation-structural/home-renovators/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/building-renovation-structural/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/building-renovation-structural/restumping/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/cleaning-removals-pest-hazard/asbestos-removal/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/cleaning-removals-pest-hazard/cleaners/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/cleaning-removals-pest-hazard/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/cleaning-removals-pest-hazard/removalists/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/cleaning-removals-pest-hazard/rubbish-removal/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/electrical-plumbing-gas-air-conditioning/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/gardens-landscaping/garden-landscapers/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/gardens-landscaping/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/gardens-landscaping/synthetic-grass/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/carports-and-garages/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/patio-builders/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/pergola-builders/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/pool-resurfacing/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/retaining-walls/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/outdoor-structures-fencing-pools/verandah-builders/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/planning-inspection-compliance/building-certifiers/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/planning-inspection-compliance/draftsmen/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/planning-inspection-compliance/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/planning-inspection-compliance/surveyors/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     },
     "/services/roofing-gutters-exterior/": {
-      "date": "2026-10-13",
-      "reason": "Reviewed page H1 or substantive section headings against the supplied core and distilled keyword map; local content edit, not a production publication claim.",
-      "source": "data/heading-keyword-policy.json; user title correction request 2026-10-13"
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/doors-windows-glass-screens/glass-glaziers/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/doors-windows-glass-screens/skylights/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/doors-windows-glass-screens/window-installation/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/electrical-plumbing-gas-air-conditioning/gas-fitters/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/electrical-plumbing-gas-air-conditioning/insulation/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/handyman-interiors-appliance-repairs/cabinet-makers/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/handyman-interiors-appliance-repairs/floor-sanding/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/handyman-interiors-appliance-repairs/ikea-kitchens/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/handyman-interiors-appliance-repairs/new-carpet/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/handyman-interiors-appliance-repairs/upholstery-repair/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/roofing-gutters-exterior/cladding/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/services/roofing-gutters-exterior/renderers/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/areas/eastern-suburbs-midland-swan/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/areas/fremantle-coastal-south/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/areas/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/areas/joondalup-northern-suburbs/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/areas/north-perth-stirling/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/areas/perth-central/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/areas/perth-hills-mundaring-kalamunda/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
+    },
+    "/areas/western-suburbs-swanbourne/": {
+      "date": "2026-10-14",
+      "reason": "Confirmed nine-region repair discovery, named-suburb context or secondary marketing wording revised locally.",
+      "source": "Approved Task 2 brief; tools/render-regions.js; tools/local-marketing-wording.js"
     }
   }
 }

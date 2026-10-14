@@ -21,7 +21,7 @@ function fail(message) { failures.push(message); }
 function rel(file) { return path.relative(root, file).replace(/\\/g, '/'); }
 
 walk(root);
-if (htmlFiles.length !== 125) fail(`Expected 125 HTML pages, found ${htmlFiles.length}`);
+if (htmlFiles.length !== 127) fail(`Expected 127 HTML pages, found ${htmlFiles.length}`);
 
 const titles = new Map();
 const descriptions = new Map();
@@ -99,8 +99,8 @@ if (!formConfig.includes("endpoint:'/api/contact'") || !formConfig.includes('ena
 const notFound = fs.readFileSync(path.join(root, '404.html'), 'utf8');
 if (!notFound.includes('404 · Page not found') || !notFound.includes('data-service-search') || !notFound.includes('Return home')) fail('404 page lacks branded recovery controls');
 
-const perthAreaNames = ['Perth CBD & Inner Suburbs','North Perth & Stirling','Joondalup & Northern Suburbs','South Perth & Canning','Fremantle & Coastal South','Eastern Suburbs, Midland & Swan','Cockburn, Rockingham & Southern Corridor'];
-const perthAreaSlugs = ['perth-central','north-perth-stirling','joondalup-northern-suburbs','south-perth-canning','fremantle-coastal-south','eastern-suburbs-midland-swan','cockburn-rockingham-southern-corridor'];
+const perthAreaNames = ['Perth CBD & Inner Suburbs','North Perth & Stirling','Joondalup & Northern Suburbs','South Perth & Canning','Fremantle & Coastal South','Eastern Suburbs, Midland & Swan','Cockburn, Rockingham & Southern Corridor','Western Suburbs & Swanbourne','Perth Hills, Mundaring & Kalamunda'];
+const perthAreaSlugs = ['perth-central','north-perth-stirling','joondalup-northern-suburbs','south-perth-canning','fremantle-coastal-south','eastern-suburbs-midland-swan','cockburn-rockingham-southern-corridor','western-suburbs-swanbourne','perth-hills-mundaring-kalamunda'];
 const oldAreaSlugs = ['sydney','melbourne','brisbane','perth','adelaide','canberra','gold-coast'];
 const customerHtml = htmlFiles.map((file) => fs.readFileSync(file, 'utf8')).join('\n');
 for (const oldCity of ['Sydney','Melbourne','Brisbane','Adelaide','Canberra','Gold Coast']) {
@@ -117,7 +117,7 @@ for (const slug of perthAreaSlugs) if (!sitemapSource.includes(`/areas/${slug}/`
 const publicContentData = fs.readFileSync(path.join(root, 'data/content.js'), 'utf8');
 for (const slug of perthAreaSlugs) if (!publicContentData.includes(`"slug": "${slug}"`)) fail(`New Perth area missing from JS content data: ${slug}`);
 const areaPages = htmlFiles.filter((file) => /^areas\/[^/]+\/index\.html$/.test(rel(file)));
-if (areaPages.length !== 7) fail(`Expected 7 Perth area pages, found ${areaPages.length}`);
+if (areaPages.length !== 9) fail(`Expected 9 confirmed area pages, found ${areaPages.length}`);
 for (const [index, slug] of perthAreaSlugs.entries()) {
   const areaPath = path.join(root, 'areas', slug, 'index.html');
   if (!fs.existsSync(areaPath)) continue;

@@ -4,7 +4,7 @@ Static website candidate for Ellis Services Group. The stated service market is 
 
 ## Package contents
 
-- 125 static HTML pages, including the branded `404.html`; 124 URLs in the sitemap
+- 127 static HTML pages, including the branded `404.html`; 126 URLs in the sitemap
 - Shared CSS, JavaScript, images and public data files
 - `robots.txt`, `sitemap.xml` and `vercel.json`
 - Portable reproducible build, local preview server and verification scripts
@@ -27,7 +27,9 @@ The build recreates ignored `dist/` and normalizes internal index links. Rebuild
 
 ### Reviewed keyword headings
 
-`data/heading-keyword-policy.json` records the 125-page review and approved topic-led title/H1/H2 changes. After running a historical page generator, run `node scripts/apply-heading-keywords.js` before rebuilding. It reapplies the reviewed headings, synchronizes guide-card links and Article headlines, and maintains guide title sources without changing service scope, prices, URLs, forms or image layout. Repeated application must report zero HTML changes. Do not use the historical editorial wording to override a later user-approved heading policy.
+`data/heading-keyword-policy.json` records the 127-page review and approved topic-led title/H1/H2 changes. After running a historical page generator, run `node scripts/apply-heading-keywords.js` before rebuilding. It reapplies the reviewed headings, synchronizes guide-card links and Article headlines, and maintains guide title sources without changing service scope, prices, URLs, forms or image layout. Repeated application must report zero HTML changes. Do not use the historical editorial wording to override a later user-approved heading policy.
+
+The nine confirmed service regions are maintained in `data/content.js`. After an older region/editorial generator, run `node tools/render-regions.js`, `node tools/local-marketing-wording.js`, `node scripts/apply-heading-keywords.js`, then `node scripts/apply-content-dates.js`. The region renderer preserves the seven original destinations, adds Swanbourne and Mundaring/Kalamunda coverage, and supplies static fault-specific links. `tools/nonservice-content-round2.js` delegates regional sections to this renderer and respects the current heading policy. Selected `suburb` query context is validated against the confirmed region/suburb list before a service banner is displayed; it does not create new indexable suburb URLs.
 
 In a separate terminal, use an available port (the current keyword-gap candidate preview uses 4182):
 
@@ -93,7 +95,7 @@ Canonical URLs, structured data, the sitemap and robots policy use the primary o
 
 Local slash/index redirects preserve the query string and stay on localhost. Explicit `/404.html` returns 200 with `noindex,follow`; unknown paths end with status 404 and the same recovery page. This preview does not validate Vercel host redirects, edge routing, response security/cache headers, production mail delivery or DNS.
 
-The current source checkout uses the real Git history of `nancymaintenance-design/PerthHandymate.com.au`, with latest verified remote main `cdd814d7f93bf224142276076a5d03a803ce9c53` (12 October 2026). Local work is on `codex/phm-keyword-gap-local-2026-10-12`; the 125-page candidate includes eight supplementary task pages and three additional photographed examples beyond the unchanged 67-service priced catalogue. This is local work only and does not authorise a push or release.
+The current source checkout uses the real Git history of `nancymaintenance-design/PerthHandymate.com.au`, with latest verified remote main `18dd298dbc5ad48675c8a3b560216e85a689641e` (14 October 2026). Local work is on `codex/phm-audit-local-2026-10-13`; the 127-page candidate includes nine confirmed regions, eight supplementary task pages and three additional photographed examples beyond the unchanged 67-service priced catalogue. This is local work only and does not authorise a push or release.
 
 The committed historical inventory contains 527 term IDs and routes in `docs/seo/content-round2/term-routing.json`; they remain intact. Current ownership for all 67 priced service pages and eight supplements, and visible evidence for all 527 original terms, are in [the content expansion record](docs/seo/content-expansion-2026-10-12/README.md). All 91 educational records identify service prose outside FAQ plus a relevant visible FAQ question and answer. The [earlier keyword-gap round](docs/seo/keyword-gap-round-2026-10-12/README.md) retains its four-supplement snapshot and 49 accepted actions as dated evidence. The older 31 owner clusters and four guide records describe the previous content round.
 

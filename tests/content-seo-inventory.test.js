@@ -70,10 +70,10 @@ test('durable research snapshot has exactly 527 distinct records and 31 owners w
   assert.throws(() => validateKeywordSnapshot(broken, { terms: 527, owners: 31 }), /owner/i);
 });
 
-test('actual inventory covers 124 sitemap routes and 404, with every commercial owner on an existing URL', () => {
+test('actual inventory covers 126 sitemap routes and 404, with every commercial owner on an existing URL', () => {
   const pages = inventorySite(root);
-  assert.equal(pages.length, 125);
-  assert.equal(new Set(pages.map(x => x.path)).size, 125);
+  assert.equal(pages.length, 127);
+  assert.equal(new Set(pages.map(x => x.path)).size, 127);
   assert.equal(pages.filter(x => x.type === 'service-detail').length, 67);
   assert.equal(pages.filter(x => x.type === 'guide').length, 12);
   assert.ok(pages.some(x => x.path === '/404.html' && x.type === 'not-found'));

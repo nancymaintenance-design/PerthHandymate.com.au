@@ -6,7 +6,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const origin = 'https://www.perthhandymate.com.au';
 const areas = [
-  ['perth-central', 'Perth CBD & Inner Suburbs', 'building and access'],
+  ['perth-central', 'Perth CBD & Inner Suburbs', 'Sticking doors'],
   ['north-perth-stirling', 'North Perth & Stirling', 'repair list'],
   ['joondalup-northern-suburbs', 'Joondalup & Northern Suburbs', 'outdoor item its own location'],
   ['south-perth-canning', 'South Perth & Canning', 'rooms and responsibilities'],
@@ -32,7 +32,8 @@ for (const [slug, label, guidancePhrase] of areas) {
     assert.ok(headings.some(heading => heading.includes(guidancePhrase)), `${route}: missing area-specific guidance phrase "${guidancePhrase}"`);
     const details = localUrls(content, route).filter(url => /^\/services\/[^/]+\/[^/]+\/$/.test(url.pathname));
     assert.ok(new Set(details.map(url => url.pathname)).size >= 4, `${route}: fewer than four detail services`);
-    for (const url of details) assert.equal(url.searchParams.get('suburb'), label, `${route}: ${url.href}`);
+    const confirmed = require('../tools/render-regions').areas.find(area => area.slug === slug);
+    for (const url of details) assert.ok([label, ...confirmed.suburbs].includes(url.searchParams.get('suburb')), `${route}: ${url.href}`);
   });
 }
 

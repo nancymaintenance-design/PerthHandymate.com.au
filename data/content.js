@@ -226,6 +226,25 @@ window.ELLIS_CONTENT={
         "Rockingham",
         "Baldivis"
       ]
+    },
+    {
+      "slug": "western-suburbs-swanbourne",
+      "name": "Western Suburbs & Swanbourne",
+      "state": "WA",
+      "context": "home repairs in Swanbourne and the confirmed western service region",
+      "suburbs": [
+        "Swanbourne"
+      ]
+    },
+    {
+      "slug": "perth-hills-mundaring-kalamunda",
+      "name": "Perth Hills, Mundaring & Kalamunda",
+      "state": "WA",
+      "context": "home maintenance in Mundaring and Kalamunda with property access assessed individually",
+      "suburbs": [
+        "Mundaring",
+        "Kalamunda"
+      ]
     }
   ],
   "guides": [

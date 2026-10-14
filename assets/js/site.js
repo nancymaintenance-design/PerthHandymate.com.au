@@ -94,6 +94,37 @@
     };
   }
 
+  function resolveLocalContext(search, title, areas) {
+    const value = new URLSearchParams(search || '').get('suburb');
+    if (!value || /[<>\x00-\x1f]/.test(value)) return null;
+    const names = (areas || []).flatMap(area => [area.name, ...area.suburbs]);
+    const locality = names.find(name => name.toLowerCase() === value.trim().toLowerCase());
+    if (!locality) return null;
+    const topic = title.replace(/\s+in Perth$/i, '').replace(/\s+Perth$/i, '');
+    return { locality, topic, heading: `${topic} in ${locality}` };
+  }
+
+  function initLocalContext(doc) {
+    if (!/^\/services\/[^/]+\//.test(window.location.pathname)) return;
+    const h1 = doc.querySelector('h1');
+    if (!h1) return;
+    const context = resolveLocalContext(window.location.search, h1.textContent, window.ELLIS_CONTENT?.serviceAreas);
+    if (!context) return;
+    const banner = doc.createElement('p');
+    banner.className = 'selected-locality';
+    banner.dataset.localContext = '';
+    banner.textContent = `${context.heading} — selected repair location. Ellis confirms the scope and assessment arrangements with you.`;
+    h1.after(banner);
+    doc.querySelectorAll('[data-preserve-search]').forEach(link => {
+      const href = new URL(link.href, window.location.href);
+      if (/\/contact\/$/.test(href.pathname)) {
+        href.searchParams.set('suburb', context.locality);
+        if (!href.searchParams.has('q')) href.searchParams.set('q', context.topic);
+        link.href = href.href;
+      }
+    });
+  }
+
   function initSearch(doc) {
     doc.querySelectorAll('[data-service-search]').forEach((form) => {
       const query = form.querySelector('[name="q"]');
@@ -217,10 +248,11 @@
       initNav(document);
       initSearch(document);
       initPreservedLinks(document);
+      initLocalContext(document);
       initContact(document);
       initCategoryImages(document);
     });
   }
 
-  return { resolveServiceSearch, validateContact, contactPayload, findService, mergeContactHref, buildContactPrefill };
+  return { resolveServiceSearch, validateContact, contactPayload, findService, mergeContactHref, buildContactPrefill, resolveLocalContext };
 });

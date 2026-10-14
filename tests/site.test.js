@@ -129,7 +129,7 @@ test('uses the local handyman near me query on the areas index', () => {
   const areas = fs.readFileSync(path.join(__dirname, '../areas/index.html'), 'utf8');
   assert.match(areas, /<title>Handyman Near Me in Perth \| Local Service Areas \| Ellis<\/title>/);
   assert.match(areas, /<h1>Looking for a Handyman Near Me in Perth\?<\/h1>/);
-  assert.match(areas, /Find the Perth service area closest to your property/);
+  assert.match(areas, /Find the service area closest to your property/);
   assert.doesNotMatch(areas, /Local Perth service pathways, coordinated through one team/);
 });
 
@@ -137,10 +137,10 @@ test('replaces generic content headings with service, location or topic-led head
   const siteRoot = path.join(__dirname, '..');
   const home = fs.readFileSync(path.join(siteRoot, 'index.html'), 'utf8');
   for (const heading of [
-    'How Our Perth Handyman Team Works',
-    'Perth Handyman Service Areas',
-    'Perth Handyman Repair & Maintenance Projects',
-    'Perth Home Maintenance Guides & Advice',
+    'How Our Handyman Team Works',
+    'Find Local Handyman Service Areas',
+    'Home Repair & Maintenance Projects',
+    'Home Maintenance Guides & Advice',
   ]) assert.match(home, new RegExp(`<h2>${heading.replace(/[&]/g, '&amp;')}<\\/h2>`));
 
   const categoryPages = [
@@ -156,14 +156,14 @@ test('replaces generic content headings with service, location or topic-led head
   ].map((slug) => fs.readFileSync(path.join(siteRoot, 'services', slug, 'index.html'), 'utf8'));
   for (const page of categoryPages) {
     assert.doesNotMatch(page, /<h2>(?:Choose the closest service|Start with the service, then confirm the postcode|What to include|Before you enquire)<\/h2>/);
-    assert.match(page, /<h2>Before Booking .+ Services in Perth<\/h2>/);
+    assert.match(page, /<h2>Before Booking .+ Services<\/h2>/);
   }
 
   const catalog = JSON.parse(fs.readFileSync(path.join(siteRoot, 'data/service-catalog.json'), 'utf8')).canonicalServices;
   for (const item of catalog) {
     const page = fs.readFileSync(path.join(siteRoot, item.url, 'index.html'), 'utf8');
     assert.doesNotMatch(page, /<h2>A practical route for /);
-    assert.match(page, item.slug==='handymen'?/<h2>Handyman Booking Questions<\/h2>/:/<h2>.+ in Perth: Common Questions<\/h2>/);
+    assert.match(page, item.slug==='handymen'?/<h2>Handyman Booking Questions<\/h2>/:/<h2>.+: Common Questions<\/h2>/);
   }
 
   for (const guide of [
@@ -184,8 +184,8 @@ test('replaces generic content headings with service, location or topic-led head
   const about = fs.readFileSync(path.join(siteRoot, 'about/index.html'), 'utf8');
   const guides = fs.readFileSync(path.join(siteRoot, 'guides/index.html'), 'utf8');
   const contact = fs.readFileSync(path.join(siteRoot, 'contact/index.html'), 'utf8');
-  assert.match(about, /<h2>How Our Perth Local Team Handles a Job<\/h2>/);
-  assert.match(about, /<h2>Perth Handyman Service Request Process<\/h2>/);
+  assert.match(about, /<h2>How Our Local Team Handles a Job<\/h2>/);
+  assert.match(about, /<h2>Handyman Service Request Process<\/h2>/);
   assert.match(guides, /<h1>Perth Handyman &amp; Home Maintenance Guides<\/h1>/);
   assert.match(contact, /<h1>Request Handyman Services in Perth<\/h1>/);
 });
@@ -198,7 +198,7 @@ test('service detail pages replace generic next-step copy with service-specific 
     assert.doesNotMatch(page, /<section class="section shell next-step">/);
     assert.match(page, /<section class="section shell service-questions">/);
     const escapedTitle = item.title.replaceAll('&', '&amp;').replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&');
-    assert.match(page, item.slug==='handymen'?/<h2>Handyman Booking Questions<\/h2>/:new RegExp(`<h2>${escapedTitle} in Perth: Common Questions<\\/h2>`));
+    assert.match(page, item.slug==='handymen'?/<h2>Handyman Booking Questions<\/h2>/:new RegExp(`<h2>${escapedTitle}: Common Questions<\\/h2>`));
     assert.doesNotMatch(page, /<section class="section shell detail-grid service-detail">/);
     assert.doesNotMatch(page, /<p class="eyebrow">What to tell us<\/p>/);
     assert.ok(page.indexOf('service-questions') < page.indexOf('city-service-band'), `${item.slug} question guide should precede service-area links`);
@@ -353,7 +353,7 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
     }
   };
   walk(path.join(__dirname, '..'));
-  assert.equal(customerPages.length, 125, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 127, 'customer-facing page inventory changed unexpectedly');
   for (const page of customerPages) {
     const html = fs.readFileSync(page, 'utf8');
     assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-QDLBD5EN3B/, page);
@@ -413,7 +413,7 @@ test('places icon-based review and social links in the footer information column
     }
   };
   walk(root);
-  assert.equal(pages.length, 125);
+  assert.equal(pages.length, 127);
   const styles = fs.readFileSync(path.join(__dirname, '../assets/css/global.css'), 'utf8');
   for (const page of pages) {
     const html = fs.readFileSync(page, 'utf8');
@@ -464,7 +464,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   assert.equal(policy.indexableServiceRoutes.length, 67);
   assert.equal(
     policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + policy.indexableProjectRoutes.length + policy.supplementalServiceRoutes.length,
-    124,
+    126,
     'the declared indexable routes should account for every sitemap URL',
   );
 
@@ -476,7 +476,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   }
 
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 124);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 126);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/roof-and-gutter-maintenance\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/exterior-timber-window-door-repair\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/bathroom-tile-shower-repair\//);
@@ -659,8 +659,8 @@ test('uses direct local-team language in P2 booking and service-area copy', () =
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data', 'service-catalog.json'), 'utf8'));
   for (const item of catalog.canonicalServices) {
     const page = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
-    if(item.slug==='handymen')assert.match(page,/<h2>Book Our Perth Handyman Team<\/h2>/);
-    else {assert.match(page, /<h2>Talk to Our Perth Service Team<\/h2>/, item.url);assert.match(page, /<h2>Discuss This Service Request<\/h2>/, item.url);}
+    if(item.slug==='handymen')assert.match(page,/<h2>Book Our Local Handyman Team<\/h2>/);
+    else {assert.match(page, /<h2>Talk to Our Local Service Team<\/h2>/, item.url);assert.match(page, /<h2>Discuss This Service Request<\/h2>/, item.url);}
     assert.doesNotMatch(page, /Confirm local serviceability|Start a service request/);
   }
 
@@ -913,7 +913,7 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   };
   collectHtml(root);
 
-  assert.equal(customerPages.length, 125, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 127, 'customer-facing page inventory changed unexpectedly');
   for (const file of customerPages) {
     const source = fs.readFileSync(file, 'utf8');
     assert.match(source, /<p class="footer-hours">24-hour onsite service · urgent attendance from 30 minutes\*<\/p>/, file);
@@ -950,7 +950,7 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   const catalog = JSON.parse(serviceCatalog).canonicalServices;
   for (const item of catalog) {
     const source = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
-    if(item.slug==='handymen')assert.match(source,/<h2>Book Our Perth Handyman Team<\/h2>/);
-    else {assert.match(source, /<h2>Talk to Our Perth Service Team<\/h2>/, item.slug);assert.match(source, /<h2>Discuss This Service Request<\/h2>/, item.slug);}
+    if(item.slug==='handymen')assert.match(source,/<h2>Book Our Local Handyman Team<\/h2>/);
+    else {assert.match(source, /<h2>Talk to Our Local Service Team<\/h2>/, item.slug);assert.match(source, /<h2>Discuss This Service Request<\/h2>/, item.slug);}
   }
 });

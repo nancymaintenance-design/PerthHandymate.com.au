@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 
 const sitemap = fs.readFileSync(path.resolve(__dirname, '../dist/sitemap.xml'), 'utf8');
 const paths = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => new URL(match[1]).pathname);
-assert.equal(paths.length, 124, 'Expected 124 built sitemap URLs');
+assert.equal(paths.length, 126, 'Expected 126 built sitemap URLs');
 const port = Number(process.env.ELLIS_PREVIEW_PORT || 4180);
 const base = `http://127.0.0.1:${port}`;
 

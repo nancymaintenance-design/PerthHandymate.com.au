@@ -2,6 +2,8 @@
 // Targeted editor for the reviewed non-service pages; it does not rebuild dist.
 const { plans: originalPlans } = require('./nonservice-content-round2-copy');
 const keywordPolicy = require('../data/heading-keyword-policy.json');
+const { renderRegion, areas } = require('./render-regions');
+const { adaptString } = require('./local-marketing-wording');
 const encodeHeading = s => s.replaceAll('&', '&amp;');
 // Retain the reviewed body/FAQ editor while respecting later approved headings.
 const guideLabels = Object.entries(keywordPolicy.pages).filter(([file, p]) => file.startsWith('guides/') && p.h1).map(([, p]) => [p.beforeH1, p.h1]);
@@ -14,7 +16,7 @@ const plans = Object.fromEntries(Object.entries(originalPlans).map(([file, plan]
     if (headings[value]) return encodeHeading(headings[value]);
     for (const [before, after] of Object.entries(headings)) value = value.replaceAll(`<h2>${encodeHeading(before)}</h2>`, `<h2>${encodeHeading(after)}</h2>`);
     for (const [before, after] of guideLabels) value = value.replaceAll(`>${encodeHeading(before)}</a>`, `>${encodeHeading(after)}</a>`);
-    return value;
+    return file.startsWith('guides/') ? value : adaptString(value, file);
   };
   return [file, adapt(plan)];
 }));
@@ -69,8 +71,11 @@ function editHtml(html, plan) {
     });
   }
   if (plan.updateDate) html = html.replace(/Updated 2026-10-09/g, 'Updated 2026-10-10');
+  if (plan.region) html = renderRegion(html, plan.region);
   return html;
 }
+for (const area of areas) plans[`areas/${area.slug}/index.html`] = { region: area };
+plans['areas/index.html'].replacements = plans['areas/index.html'].replacements.map(([from, to]) => [from, to.replace('Find the Perth service area', 'Find the service area')]);
 module.exports = { editHtml, plans };
 if (require.main === module) {
   const fs = require('node:fs'), path = require('node:path');
