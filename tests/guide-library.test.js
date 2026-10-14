@@ -4,6 +4,19 @@ const root = path.resolve(__dirname, '..'), read = f => fs.readFileSync(path.joi
 const slugs = fs.readdirSync(path.join(root, 'guides')).filter(s => fs.existsSync(path.join(root, 'guides', s, 'index.html')));
 const plain = s => s.replace(/<[^>]+>/g, ' ').replaceAll('&amp;', '&').replace(/\s+/g, ' ').trim();
 const { execFileSync } = require('node:child_process');
+// Break caught: a closing paragraph directs readers below even though the linked FAQs precede it.
+test('all twelve canonical conclusions refer to existing FAQ questions without a false direction', () => {
+  const { guides, articleBody } = require('../tools/render-guide-library');
+  assert.equal(guides.length, 12);
+  for (const g of guides) {
+    const { body } = articleBody(g);
+    const conclusion = body.match(/<section class="guide-conclusion"[\s\S]*?<\/section>/)[0];
+    assert.ok(body.indexOf('id="assessment-questions"') < body.indexOf('class="guide-conclusion"'), g.slug);
+    assert.doesNotMatch(plain(conclusion), /questions below/i, g.slug);
+    assert.match(plain(conclusion), /FAQ questions|questions in this guide/i, g.slug);
+    assert.match(conclusion, /href="#assessment-questions"/);
+  }
+});
 // Catches missing/duplicated destinations and category navigation pointing nowhere.
 test('guide categories expose each of the twelve articles once through real fragment links', () => {
   const html = read('guides/index.html');

@@ -93,7 +93,10 @@ function apply() {
   const header = Object.entries(coverage).filter(([key]) => key !== 'records').map(([key, value]) => `  ${JSON.stringify(key)}: ${JSON.stringify(value)},`).join('\n');
   fs.writeFileSync(coverageFile, '{\n' + header + '\n  "records": [\n' + coverage.records.map(row => '    ' + JSON.stringify(row)).join(',\n') + '\n  ]\n}\n');
   const evidenceFile = path.join(root, '.superpowers/sdd/approved-execution/task-2-wording-coverage.json');
-  if (evidence.length) fs.writeFileSync(evidenceFile, JSON.stringify(evidence, null, 2) + '\n');
+  if (evidence.length) {
+    fs.mkdirSync(path.dirname(evidenceFile), { recursive: true });
+    fs.writeFileSync(evidenceFile, JSON.stringify(evidence, null, 2) + '\n');
+  }
   console.log(`Reviewed ${files.length} non-guide marketing pages; changed ${evidence.length}.`);
 }
 if (require.main === module) apply();

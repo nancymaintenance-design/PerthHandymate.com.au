@@ -60,6 +60,31 @@ test('region hub has three desktop columns, full rounding and a keyboard path at
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), 0);
 });
 // Breaks caught: context lost on the service or Contact, unsafe query rendering, broken index redirects.
+test('every sticking-door discovery link keeps repair intent and validated locality through Contact', async t => {
+  const page = await pageFor(t);
+  let checked = 0;
+  for (const origin of ['/areas/', ...areas.map(a => `/areas/${a.slug}/`)]) {
+    await page.goto(base + origin);
+    const links = await page.locator('main a').filter({ hasText: /^Sticking-door repairs in / }).evaluateAll(nodes => nodes.map(a => ({ href: a.getAttribute('href'), text: a.textContent })));
+    assert.equal(links.length, origin === '/areas/' ? 2 : 1, origin);
+    for (const link of links) {
+      await page.goto(base + origin);
+      const suburb = link.text.slice('Sticking-door repairs in '.length);
+      await page.locator('main a').filter({ hasText: link.text }).click();
+      assert.equal(await page.locator('h1').innerText(), 'Door Repairs in Perth', origin);
+      assert.equal(new URL(page.url()).pathname, '/services/doors-windows-glass-screens/door-repairs/');
+      assert.equal(await page.locator('[data-local-context]').innerText(), `Door Repairs in ${suburb} — selected repair location. Ellis confirms the scope and assessment arrangements with you.`);
+      assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'), 'https://www.perthhandymate.com.au/services/doors-windows-glass-screens/door-repairs/');
+      await page.locator('.page-hero a[data-preserve-search]').first().click();
+      await page.waitForURL(url => url.pathname === '/contact/');
+      assert.equal(await page.locator('[name=postcode]').inputValue(), suburb);
+      assert.equal(await page.locator('[name=service]').inputValue(), 'Doors, windows, glass & screens');
+      assert.equal(await page.locator('[name=message]').inputValue(), 'Service request: Door Repairs');
+      checked++;
+    }
+  }
+  assert.equal(checked, 11);
+});
 test('named suburb goes through service context to Contact prefill and rejects unknown/XSS banners', async t => {
   const page = await pageFor(t);
   await page.goto(base + '/areas/perth-central/');

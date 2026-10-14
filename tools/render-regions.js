@@ -8,7 +8,7 @@ vm.runInNewContext(fs.readFileSync(path.join(root, 'data/content.js'), 'utf8'), 
 const areas = box.window.ELLIS_CONTENT.serviceAreas;
 const esc = s => s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const jobs = [
-  ['doors-windows-glass-screens/door-installation', 'Sticking-door repairs', 'Describe where the door catches, whether the latch closes and any visible frame damage. Adjustment, hardware and replacement needs are checked before the repair is agreed.'],
+  ['doors-windows-glass-screens/door-repairs', 'Sticking-door repairs', 'Describe where the door catches, whether the latch closes and any visible frame damage. Adjustment, hardware and replacement needs are checked before the repair is agreed.'],
   ['doors-windows-glass-screens/window-repairs', 'Window opening and latch repairs', 'Tell us whether opening, closing or locking is affected. Keep clear of loose glass; note the room and the condition of the frame and hardware from a safe position.'],
   ['handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs', 'Loose hinges and drawer repairs', 'Identify the cupboard or wardrobe, the number of affected doors or drawers and whether a hinge, runner or panel is loose. Parts and fixing surfaces need assessment.'],
   ['roofing-gutters-exterior/gutter-services', 'Blocked and leaking gutter repairs', 'Report overflowing sections, leaks or visible damage from ground level. Do not climb to inspect; roof access, debris removal and the repair scope are checked separately.'],

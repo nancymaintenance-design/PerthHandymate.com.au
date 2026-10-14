@@ -28,7 +28,7 @@ const guides = [
         'For an older cabinet, runner length, clearances, fixing positions and drawer construction need checking together. An online photograph of a similar part cannot confirm compatibility. Record any visible model label without removing the drawer. Agree whether the quote covers hardware only, panel repair, drawer-box work or replacement cabinetry. Keep clear of a hanging door, a loose drawer or an unstable mirrored wardrobe panel until it has been assessed.'
       ]]
     ],
-    conclusion: 'A fallen cupboard door can involve the hinge, its fixing or the cabinet panel; a drawer that repeatedly comes off its runner can involve support and alignment as well as the mechanism. Those distinctions determine whether local repair, compatible hardware or a wider replacement makes sense. Describe the recurrence and visible damage before buying parts, and identify who can approve the work. The questions below explain hinge and runner choices; the cabinet repair service sets out the assessment scope.',
+    conclusion: 'A fallen cupboard door can involve the hinge, its fixing or the cabinet panel; a drawer that repeatedly comes off its runner can involve support and alignment as well as the mechanism. Those distinctions determine whether local repair, compatible hardware or a wider replacement makes sense. Describe the recurrence and visible damage before buying parts, and identify who can approve the work. The FAQ questions explain hinge and runner choices; the cabinet repair service sets out the assessment scope.',
     service: ['handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs', 'Cabinet, drawer & wardrobe repairs'],
     related: ['photos-and-clear-scope-for-home-repairs', 'prepare-before-home-repair-quote']
   },
@@ -50,7 +50,7 @@ const guides = [
         'Explain any apartment lift, balcony access or building permission needed for the visit. Heavy glass, mirrored panels, security products and fire-rated doors need their own handling and work requirements checked. Keep people away from unstable panels and leave dismantling to the appropriate repair team. A written scope should distinguish hardware, timber, glazing and finishing so that each part of the job is clear.'
       ]]
     ],
-    conclusion: 'The useful distinction is between a clearance change, a hardware fault and a problem in the frame or surrounding material. Wet-weather sticking may return if moisture remains unresolved; dragging rollers may continue to catch on a damaged track. Record the timing and point of contact, then arrange assessment of the affected fitting. Use the questions below to compare door, window and sliding-panel problems, and the door repair service for hinges and latch alignment. Do not force an unstable panel while waiting.',
+    conclusion: 'The useful distinction is between a clearance change, a hardware fault and a problem in the frame or surrounding material. Wet-weather sticking may return if moisture remains unresolved; dragging rollers may continue to catch on a damaged track. Record the timing and point of contact, then arrange assessment of the affected fitting. Use the FAQ questions to compare door, window and sliding-panel problems, and the door repair service for hinges and latch alignment. Do not force an unstable panel while waiting.',
     service: ['doors-windows-glass-screens/door-repairs', 'Door repair assessments'],
     related: ['home-repair-priorities', 'when-home-maintenance-needs-a-licensed-trade']
   },
@@ -72,7 +72,7 @@ const guides = [
         'Ask the written scope to separate board or plaster repair, preparation, priming and the agreed paint area. Larger repainting should be assessed as its own scope rather than assumed to be included in the patch price. For rental work, confirm permission and the accepted finish with the authorised contact before booking. A repair record shows what was done; it does not decide a tenancy outcome.'
       ]]
     ],
-    conclusion: 'Plasterboard damage, patch preparation and paint appearance answer different parts of the repair question. An impact hole may be suitable for local repair, while returning cracks or stains require the underlying concern to be assessed first. Texture, sheen and aged colour explain why a patch can remain visible even after repainting. Describe the damage and agree the finishing area in writing. The questions below cover those distinctions, and the Gyprock repair service explains how wall and ceiling work is assessed.',
+    conclusion: 'Plasterboard damage, patch preparation and paint appearance answer different parts of the repair question. An impact hole may be suitable for local repair, while returning cracks or stains require the underlying concern to be assessed first. Texture, sheen and aged colour explain why a patch can remain visible even after repainting. Describe the damage and agree the finishing area in writing. The FAQ questions cover those distinctions, and the Gyprock repair service explains how wall and ceiling work is assessed.',
     service: ['handyman-interiors-appliance-repairs/plasterers', 'Gyprock, wall & ceiling repairs'],
     related: ['photos-and-clear-scope-for-home-repairs', 'property-manager-maintenance-coordination']
   },
@@ -94,7 +94,7 @@ const guides = [
         'A wider wet-area proposal may involve removal, substrate assessment, waterproofing, tiling and finishing, with dependencies between stages. The written scope should explain the boundaries, any separate plumbing work and how newly exposed damage will be quoted and approved. Confirm when the area can be used again with the attending team; do not assume it is ready because the surface looks dry. Product requirements and the actual repair determine the return-to-use instructions.'
       ]]
     ],
-    conclusion: 'Silicone seals specified surface joints, grout fills tile joints and waterproofing concerns the wider wet-area system. Continued leaking after a reseal requires reassessment before further surface work. Record the water pattern and earlier work, then agree whether the investigation concerns joints, plumbing or deeper construction. The questions below compare those possibilities; the waterproofing service explains the wider assessment scope. Follow the assessed repair and return-to-use instructions before using the area again.',
+    conclusion: 'Silicone seals specified surface joints, grout fills tile joints and waterproofing concerns the wider wet-area system. Continued leaking after a reseal requires reassessment before further surface work. Record the water pattern and earlier work, then agree whether the investigation concerns joints, plumbing or deeper construction. The FAQ questions compare those possibilities; the waterproofing service explains the wider assessment scope. Follow the assessed repair and return-to-use instructions before using the area again.',
     service: ['handyman-interiors-appliance-repairs/waterproofing', 'Waterproofing repair assessment'],
     related: ['when-home-maintenance-needs-a-licensed-trade', 'home-repair-priorities']
   },
@@ -116,7 +116,7 @@ const guides = [
         'Keep a preferred date separate from a confirmed booking. For a rented or managed property, identify the person who can approve changes before arranging entry. Ellis confirms the scope and attending arrangements directly; relevant credentials can be checked for the actual task. The aim is a shared understanding of what the visit will decide and what repairs have been authorised.'
       ]]
     ],
-    conclusion: 'Choosing a handyman starts with identifying the small repair jobs and the dependencies between them. A job title does not prove authority for every task, and bundling a list does not remove a leak, access problem or separate trade requirement. Compare the same scope, materials, finishing and approval process before accepting the work. Use the questions below to clarify mixed-job planning, then review the handyman service for the type of repair you need and arrange assessment with your location and list.',
+    conclusion: 'Choosing a handyman starts with identifying the small repair jobs and the dependencies between them. A job title does not prove authority for every task, and bundling a list does not remove a leak, access problem or separate trade requirement. Compare the same scope, materials, finishing and approval process before accepting the work. Use the FAQ questions to clarify mixed-job planning, then review the handyman service for the type of repair you need and arrange assessment with your location and list.',
     service: ['handyman-interiors-appliance-repairs/handymen', 'Small handyman repairs'],
     related: ['prepare-before-home-repair-quote', 'when-home-maintenance-needs-a-licensed-trade']
   },
@@ -138,7 +138,7 @@ const guides = [
         'For a mixed visit, the written record should show what has been approved and which items remain subject to specialist assessment. Keep certificates or other job documents supplied for the agreed work with that record. Do not disconnect services, expose wiring or disturb suspect material to make the visit easier. If there is an immediate hazard, use the appropriate emergency or specialist response rather than waiting for ordinary maintenance.'
       ]]
     ],
-    conclusion: 'A damaged cabinet and a leaking sink are connected symptoms but do not form a single interchangeable trade task. The same distinction separates a TV bracket from a new power point. Check credentials against the specific work, agree the sequence and keep the regulated and general repair scopes clear. The questions below explain common boundaries and link to official checks. The handyman service describes the small-repair scope; Ellis confirms the appropriate arrangements for work that needs its own authorised personnel.',
+    conclusion: 'A damaged cabinet and a leaking sink are connected symptoms but do not form a single interchangeable trade task. The same distinction separates a TV bracket from a new power point. Check credentials against the specific work, agree the sequence and keep the regulated and general repair scopes clear. The FAQ questions explain common boundaries and link to official checks. The handyman service describes the small-repair scope; Ellis confirms the appropriate arrangements for work that needs its own authorised personnel.',
     service: ['handyman-interiors-appliance-repairs/handymen', 'Handyman repair scope'],
     related: ['how-to-find-the-right-home-repairer', 'shower-silicone-grout-waterproofing-guide']
   },
@@ -160,7 +160,7 @@ const guides = [
         'Before approving the quote, check the visit purpose, supplied items, labour, materials, finishing and exclusions. Ask how incomplete furniture packs or concealed damage affect the next step. A variation should identify the additional work and approval needed before it proceeds. Keep the accepted version with the access contact and any deadline, so the team and the person authorising the work use the same brief.'
       ]]
     ],
-    conclusion: 'A useful furniture and handyman quote begins with product details, the condition of the supplied parts and a repair list that separates each outcome. Assembly, anchoring, moving items and making good are not automatically the same inclusion. Comparing those details is more informative than comparing totals alone, and bundling does not guarantee a discount. Use the questions below to clarify scope and cost terms, review the furniture assembly service, then arrange an assessment and written proposal for the actual property.',
+    conclusion: 'A useful furniture and handyman quote begins with product details, the condition of the supplied parts and a repair list that separates each outcome. Assembly, anchoring, moving items and making good are not automatically the same inclusion. Comparing those details is more informative than comparing totals alone, and bundling does not guarantee a discount. Use the FAQ questions to clarify scope and cost terms, review the furniture assembly service, then arrange an assessment and written proposal for the actual property.',
     service: ['handyman-interiors-appliance-repairs/furniture-assembly', 'Furniture & flat-pack assembly'],
     related: ['photos-and-clear-scope-for-home-repairs', 'how-to-find-the-right-home-repairer']
   },
@@ -182,7 +182,7 @@ const guides = [
         'Confirm whether the proposed quote covers damaged wall repair and paint after refitting. For rental or managed properties, identify who authorises holes or changes of location. When inspection reveals unsuitable support or hidden damage, update the written scope before work changes. Keep the accepted description with any optional images so everyone knows what the photographs were intended to illustrate.'
       ]]
     ],
-    conclusion: 'A photograph can show a loose curtain bracket or damaged wall, but it cannot verify concealed support or choose a safe fixing by itself. Recurring loosening needs the whole installation considered, including the item, surface and intended use. Describe what moved, retain useful product details and agree permission and making good. Use the questions below for scope examples and the shelf, mirror and picture service for related mounting work. Safe existing photos can help; they are never required to begin the conversation.',
+    conclusion: 'A photograph can show a loose curtain bracket or damaged wall, but it cannot verify concealed support or choose a safe fixing by itself. Recurring loosening needs the whole installation considered, including the item, surface and intended use. Describe what moved, retain useful product details and agree permission and making good. Use the FAQ questions for scope examples and the shelf, mirror and picture service for related mounting work. Safe existing photos can help; they are never required to begin the conversation.',
     service: ['handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging', 'Shelves, mirrors & picture hanging'],
     related: ['wall-patching-paint-touch-ups-guide', 'prepare-before-home-repair-quote']
   },
@@ -204,7 +204,7 @@ const guides = [
         'Separate essential work, useful functional repairs and optional presentation work in the written proposal. That makes it possible to approve a coherent scope if the whole list cannot be completed together. Keep unfinished items visible in the handover record. For a sale or rental property, the appropriate professional assessment and disclosure decisions remain separate from the handyman repair record.'
       ]]
     ],
-    conclusion: 'An open-home deadline does not change the difference between active damage, functional faults and cosmetic work. Start with consequences and safety, then resolve the causes that could undo later repairs. Keep presentation work and any unfinished concerns visible in the agreed list. The questions below explain priority choices and pre-sale scope, while the handyman service describes compatible small repairs. Arrange assessment early, confirm what has been authorised and avoid treating a fresh finish as evidence that an underlying defect has gone.',
+    conclusion: 'An open-home deadline does not change the difference between active damage, functional faults and cosmetic work. Start with consequences and safety, then resolve the causes that could undo later repairs. Keep presentation work and any unfinished concerns visible in the agreed list. The FAQ questions explain priority choices and pre-sale scope, while the handyman service describes compatible small repairs. Arrange assessment early, confirm what has been authorised and avoid treating a fresh finish as evidence that an underlying defect has gone.',
     service: ['handyman-interiors-appliance-repairs/handymen', 'Small home repair assessments'],
     related: ['seasonal-home-maintenance-australia', 'wall-patching-paint-touch-ups-guide']
   },
@@ -226,7 +226,7 @@ const guides = [
         'Set the next review around the property condition, weather exposure and advice for the actual materials. There is no single calendar interval in this guide that makes every home safe. Keep a record of completed work, outstanding concerns and any access restrictions. An owner away from the property should identify the local access contact and approval path before arranging recurring maintenance.'
       ]]
     ],
-    conclusion: 'Seasonal maintenance works best as a record of change. Overflow after cleaning, recurring damp and moving supports should lead to a fresh assessment rather than an automatic repeat of surface work. Routine upkeep and repair of an underlying fault are different decisions, and inspection timing depends on the property and conditions. The questions below cover those distinctions across outdoor fittings. Review the gutter service for overflow concerns and arrange the relevant assessment using safe observations, earlier repair notes and a clear approval contact.',
+    conclusion: 'Seasonal maintenance works best as a record of change. Overflow after cleaning, recurring damp and moving supports should lead to a fresh assessment rather than an automatic repeat of surface work. Routine upkeep and repair of an underlying fault are different decisions, and inspection timing depends on the property and conditions. The FAQ questions cover those distinctions across outdoor fittings. Review the gutter service for overflow concerns and arrange the relevant assessment using safe observations, earlier repair notes and a clear approval contact.',
     service: ['roofing-gutters-exterior/gutter-services', 'Gutter cleaning & repair assessment'],
     related: ['home-repair-priorities', 'property-manager-maintenance-coordination']
   },
@@ -248,7 +248,7 @@ const guides = [
         'For several properties, keep each address, access contact and quote separate even when similar faults occur. A wall repair at one address does not establish the cause or price at another. The repair record documents the work; it does not guarantee a bond refund, replace a statutory inspection or determine responsibility for damage. Those decisions follow their own authorised processes.'
       ]]
     ],
-    conclusion: 'Rental maintenance coordination depends on a traceable link between the observed fault, permission to assess, approval to repair and the completion record. A mixed inspection list can be planned together while each task keeps its own scope and dependencies. Photos help when available, but they do not decide liability or guarantee a bond outcome. Use the questions below to clarify authorisation and handover, then review property maintenance services and submit the address, access contact and approved repair priorities for assessment.',
+    conclusion: 'Rental maintenance coordination depends on a traceable link between the observed fault, permission to assess, approval to repair and the completion record. A mixed inspection list can be planned together while each task keeps its own scope and dependencies. Photos help when available, but they do not decide liability or guarantee a bond outcome. Use the FAQ questions to clarify authorisation and handover, then review property maintenance services and submit the address, access contact and approved repair priorities for assessment.',
     service: ['property-maintenance', 'Property maintenance requests'],
     related: ['prepare-before-home-repair-quote', 'home-repair-priorities']
   },
@@ -274,7 +274,7 @@ const guides = [
         'After inspection, the repair plan and written quote establish what is proposed. For several addresses, keep the location and approval record separate for each one. If your suburb is not shown in the directory, contact Ellis to check it rather than selecting a different location just to make the request fit. Work that needs a specific trade capability still needs that capability wherever the property is located.'
       ]]
     ],
-    conclusion: 'Finding a handyman near you means matching location, repair scope and practical access. A named suburb helps locate the property; it does not diagnose the fault or confirm a booking. For a unit or apartment, keep building permission, the access contact and the person approving repairs clear. Use the questions below for location and attendance distinctions, check the area directory and review the handyman service. Then contact Ellis with the actual suburb and observed problem so the assessment can be confirmed directly.',
+    conclusion: 'Finding a handyman near you means matching location, repair scope and practical access. A named suburb helps locate the property; it does not diagnose the fault or confirm a booking. For a unit or apartment, keep building permission, the access contact and the person approving repairs clear. Use the FAQ questions for location and attendance distinctions, check the area directory and review the handyman service. Then contact Ellis with the actual suburb and observed problem so the assessment can be confirmed directly.',
     service: ['handyman-interiors-appliance-repairs/handymen', 'Local handyman repair scope'],
     related: ['how-to-find-the-right-home-repairer', 'photos-and-clear-scope-for-home-repairs']
   }
