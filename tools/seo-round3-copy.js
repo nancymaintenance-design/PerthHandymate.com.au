@@ -31,7 +31,7 @@ for (const item of catalog.canonicalServices) {
     ? `<h3>Arrange Your ${esc(item.title)} Assessment</h3>${missingInfo.length ? `<ul class="check-list">${missingInfo.map(text => `<li>${esc(text)}</li>`).join('')}</ul>` : ''}${missingSafety ? `<p>${esc(item.safetyNote)}</p>` : ''}${missingNext ? `<p>${esc(item.nextStep)}</p>` : ''}` : '';
   const tasks = missingTasks.length ? `<h3>${esc(item.title)} Work We Assess</h3><ul class="check-list">${missingTasks.map(text => `<li>${esc(text)}</li>`).join('')}</ul>` : '';
   html = html.replace(pattern, `<section class="section shell service-questions"><p class="eyebrow">${esc(item.title)} service guide</p><h2>${esc(item.title)} in Perth: Common Questions</h2><div class="accordion-list">${questions}</div>${tasks}${assessment}</section>`);
-  fs.writeFileSync(file, html);
+  fs.writeFileSync(file, require('./normalize-service-clarity').normalizeServiceClarity(html));
   changed++;
 }
 // Remove duplicate directory cards, not their searchable aliases or canonical URLs.
@@ -50,7 +50,7 @@ for (const category of new Set(catalog.canonicalServices.map(item => item.catego
     const label = drafts[item.slug]?.h1?.replace(/ in Perth$/i, '') || item.title;
     return card.replace(/(<h3><a[^>]*>)[\s\S]*?(<\/a><\/h3>)/, `$1${esc(label)}$2`);
   });
-  fs.writeFileSync(file, html);
+  fs.writeFileSync(file, require('./normalize-service-clarity').normalizeServiceClarity(html));
 }
 console.log(JSON.stringify({ expandedServicePages: changed, removedDuplicateCards: removed, remainingCards: catalog.canonicalServices.length }));
 const additions = {
@@ -88,5 +88,5 @@ for (const [slug, [heading, sections]] of Object.entries(additions)) {
   const section = `<section class="section shell" id="keyword-map-repair-scenes"><h2>${esc(heading)}</h2>${sections.map(([title, text]) => `<h3>${esc(title)}</h3><p>${esc(text)}</p>`).join('')}</section>`;
   html = html.replace(/<section class="section shell" id="keyword-map-repair-scenes">[\s\S]*?<\/section>/, '');
   html = html.replace('<section class="cta-band">', section + '<section class="cta-band">');
-  fs.writeFileSync(file, html);
+  fs.writeFileSync(file, require('./normalize-service-clarity').normalizeServiceClarity(html));
 }

@@ -101,6 +101,6 @@ function editServiceHtml(html, spec) {
     edited = replaceOnce(edited,'<p>Share the task and location to start your service request.</p>','<p>Tell Ellis what is damaged or not working and your suburb. You can combine several tasks in one request; photos and measurements are optional. We confirm the appropriate services, access and written quote after assessment.</p>','hub booking explanation');
     html = html.replace(main,edited).replace(/<meta name="description" content="[^"]*">/,'<meta name="description" content="Explore Perth handyman repairs, interior maintenance, garden care and specialist property services. Ellis assesses the work on site and provides a written quote.">');
   }
-  return html;
+  return require('./normalize-service-clarity').normalizeServiceClarity(html);
 }
 module.exports = { editServiceHtml, replaceFaq, text };

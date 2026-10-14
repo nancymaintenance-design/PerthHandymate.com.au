@@ -87,6 +87,10 @@ Remove-Item Env:PHM_PLAYWRIGHT_MODULE,Env:PHM_BROWSER_CHANNEL
 
 Edit `data/business-facts.json` only from confirmed evidence, then run `node scripts/normalize-entity-graph.js` and rebuild. The normalizer refreshes shared office/schema hours, the existing reception paragraph in home/about/contact, footer reception text and known Google-review/social anchors on every run. It preserves separate onsite availability, office Maps directions, unrelated links and other content. The visible reception sentence and structured opening-hours values must be updated together in the fact source. Re-run the complete suite and static/coverage checks after a factual change.
 
+## Service-content layout maintenance
+
+`node tools/normalize-service-clarity.js` reapplies the presentation-only adapter after legacy service generation. It groups quote factors and related-service destinations, and separates visible work scope/preparation from the FAQ accordion. It preserves text, links, facts, prices and FAQ answers. The service-depth generator, round-three writer and round-two editor also call this shared adapter; running it twice changes no further pages. The shared CSS content rhythm applies to article/disclosure/media sections too, not a text-only whitelist. Run `node --test tests/service-clarity.test.js` and the complete suite after layout changes.
+
 ## Contact form boundary
 
 The repository already contains a serverless contact handler in `api/contact.js`. Its runtime sending secret and deployment configuration are required for live enquiry delivery. The local static preview does not execute that handler or send mail; contact delivery is not part of this acceptance. Do not submit a real enquiry during local review.

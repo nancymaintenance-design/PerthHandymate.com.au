@@ -2,6 +2,7 @@ const fs = require('node:fs'), path = require('node:path'), assert = require('no
 const root = path.resolve(__dirname, '..');
 const catalog = JSON.parse(fs.readFileSync(path.join(root,'data/service-catalog.json'),'utf8'));
 const copy = require('./service-depth-copy');
+const {normalizeServiceClarity} = require('./normalize-service-clarity');
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const bySlug = new Map(catalog.canonicalServices.map(item=>[item.slug,item]));
 assert.equal(Object.keys(copy).length,67);
@@ -44,7 +45,7 @@ for(const item of catalog.canonicalServices) {
   const section=`<section class="section shell" id="service-work-options"><h2>${esc(heading)}</h2><article><h3>${esc(scene1)}</h3><p>${esc(text1)}</p></article><article><h3>${esc(scene2)}</h3><p>${esc(text2)}</p></article><h3>What Affects the Quote?</h3><p>${esc(factors)}</p><h3>Related Services for This Job</h3><ul>${links}</ul>${projectLink}<p><a class="text-link" data-preserve-search href="../../../contact/?service=${encodeURIComponent(item.categoryTitle)}&amp;q=${encodeURIComponent(item.title)}">Arrange an assessment with Ellis</a></p></section>`;
   const marker='<section class="section shell service-questions">';assert.ok(html.includes(marker));
   html=html.replace(marker,section+marker);
-  fs.writeFileSync(file,html);
+  fs.writeFileSync(file,normalizeServiceClarity(html));
   const after=html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)[1];
   const words=text=>text.replace(/<[^>]+>/g,' ').replace(/&[a-z#0-9]+;/gi,' ').trim().split(/\s+/).length;
   rows.push([item.slug,item.url,scene1,scene2,words(before),words(after),related.join(';'),project?.[0]||'无对应现有案例，不虚构']);

@@ -60,14 +60,49 @@
 /* Short explanations across all routes use content spacing, not feature spacing. */
 .section:is(#repair-planning-guides,#repair-quote-process,#property-repair-list,#local-repair-requests){padding-block:32px}
 .section:is(#repair-planning-guides,#repair-quote-process,#property-repair-list,#local-repair-requests)>:last-child{margin-bottom:0}
-/* Text-only content blocks must not inherit the large image-feature rhythm. */
-.section.shell:has(h2):not(:has(img,form,iframe,details,article,figure,.card-grid,.price-guide)){padding-block:32px}
-.section.shell:has(h2):not(:has(img,form,iframe,details,article,figure,.card-grid,.price-guide))>:last-child{margin-bottom:0}
 .service-hero .service-toc{margin-top:24px;padding:18px 22px;color:var(--navy)}
 .service-hero .service-toc ul{margin-top:10px;gap:4px 20px}
 .service-hero .service-toc a{min-height:44px;padding:9px 0}
 .project-link-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));list-style:none;margin:24px 0 0;padding:0;gap:0 32px}
 .project-link-list li{padding:18px 0;border-top:1px solid #cbd4d9}
+
+/* One content rhythm, including sections containing articles, media or disclosures.
+   Previous content-type exclusions left 92px + 92px gaps between service blocks. */
+main>.section,main>.office-location{padding-block:20px}
+main>.section>:last-child,main>.section>.shell>:last-child{margin-bottom:0}
+main>.page-hero{padding-bottom:20px}
+main>.cta-band{padding-block:20px}
+main>.service-detail-visual{margin-block:16px}
+main>.section.support-feature,main>.section.project-feature{padding-block:20px}
+main>.section .price-guide{padding:20px}
+main>.section .price-guide>:last-child{margin-bottom:0}
+main>.article-body{padding-block:20px}
+main>.article-body>section:first-child{margin-top:0}
+main>.article-body>section:last-child{margin-bottom:0}
+/* Content-library wrappers are not .section; use the same exterior rhythm. */
+.guide-library>.guide-groups{padding-bottom:12px}
+.guide-reading .guide-reading-layout{padding-bottom:20px}
+.guide-reading .guide-prose>section:last-child{margin-bottom:20px}
+main.guide-library>.page-hero{padding-bottom:20px}
+main.handyman-compact>.section{padding-block:20px}
+main.handyman-compact>.service-hero{padding-bottom:20px}
+main.handyman-compact>.section .price-guide{margin-top:0}
+#service-work-options>h2,.service-questions>h2{font-size:clamp(1.7rem,2.8vw,2.4rem);max-width:36ch;line-height:1.15}
+#service-work-options>article{max-width:82ch;margin-block:24px}
+.service-quote-factors{margin-top:28px;padding:24px;border-left:4px solid var(--orange);background:var(--mist);border-radius:var(--radius)}
+.service-quote-factors>p:last-child{margin-bottom:0}
+.service-related-links{margin-block:28px}
+.service-link-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;list-style:none;padding:0;margin:16px 0 0}
+.service-link-cards li{min-width:0}
+.service-link-cards a{display:flex;align-items:center;min-height:64px;height:100%;padding:18px 22px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);color:var(--eucalypt);font-weight:800;text-decoration:none;overflow-wrap:anywhere}
+.service-link-cards a:hover{border-color:var(--eucalypt);background:var(--mist)}
+.service-questions>.accordion-list{padding:0 24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--white)}
+.service-questions>.accordion-list details:last-child{border-bottom:0}
+.service-questions>.accordion-list summary{line-height:1.4}
+.service-scope-panel,.service-preparation-panel{margin-top:32px;padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--white)}
+.service-preparation-panel{background:var(--mist)}
+.service-scope-panel>:last-child,.service-preparation-panel>:last-child{margin-bottom:0}
+@media(max-width:700px){.service-link-cards{grid-template-columns:1fr}.service-questions>.accordion-list,.service-scope-panel,.service-preparation-panel{padding-inline:20px}.service-quote-factors{padding:20px}}
 .project-link-list h3{font-size:1rem;line-height:1.45;letter-spacing:0;margin:0 0 5px}
 .project-link-list a{display:inline-block;padding:6px 0;min-height:44px;color:var(--eucalypt);font-weight:700}
 .contact-hero h1{max-width:22ch}
