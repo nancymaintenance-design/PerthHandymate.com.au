@@ -49,7 +49,7 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 1920, height: 10
       if (route === '/services/') assert.ok(m.titleBottom < 900, `first service titles end at ${m.titleBottom}; reserve space below them within 1000px`);
     }
   });
-  // Breaks caught: longest card stretches neighbours; fixing only align-items leaves row-sized holes.
+  // Breaks caught: longest card stretches neighbours or leaves oversized holes between full rows.
   test(`unequal task cards keep natural interiors and close following cards at ${viewport.width}`, async t => {
     const page = await pageAt(t, viewport);
     await page.goto(base + handymen);
@@ -64,16 +64,25 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 1920, height: 10
         const next = cards.filter(other => Math.abs(other.x - card.x) < 1 && other.y > card.y).sort((a, b) => a.y - b.y)[0];
         return next ? next.y - card.bottom : 0;
       });
-      return { cards, gaps, columns: new Set(cards.map(c => Math.round(c.x))).size };
+      const rows = [...new Set(cards.map(c => c.y))].map(y => cards.filter(c => c.y === y));
+      const fullRowTails = rows.filter(row => row.length === 3).flatMap(row => row.map(c => Math.max(...row.map(x => x.bottom)) - c.bottom));
+      const gridBottom = document.querySelector('.handyman-task-grid').getBoundingClientRect().bottom;
+      const columnTails = [...new Set(cards.map(c => c.x))].map(x => gridBottom - Math.max(...cards.filter(c => c.x <= x + 1 && c.x + c.width > x + 1).map(c => c.bottom)));
+      return { cards, gaps, fullRowTails, columnTails, lastRowCards: rows.at(-1).length, columns: new Set(cards.map(c => Math.round(c.x))).size };
     });
     await page.locator('#clothesline-repairs').scrollIntoViewIfNeeded();
     await record(page, `cards-${viewport.width}`, m);
     assert.equal(m.columns, 3);
     assert.ok(m.cards.every(c => c.fragments === 1), 'every card stays whole in its column');
     assert.ok(m.cards.every(c => c.blank <= 180 && c.innerGap <= 180), JSON.stringify(m));
-    assert.ok(m.gaps.every(gap => gap <= 32), `exterior row holes ${m.gaps}`);
-    const visual = [...m.cards].sort((a, b) => a.x - b.x || a.y - b.y).map(c => c.id);
-    assert.deepEqual(visual, m.cards.map(c => c.id), 'DOM order matches down-column reading order');
+    assert.ok(m.gaps.every(gap => gap <= 180), `exterior row holes ${m.gaps}`);
+    assert.ok(m.fullRowTails.every(gap => gap <= 180), `unexplained complete-row tails ${m.fullRowTails}`);
+    assert.equal(m.lastRowCards, 1, 'the tenth topic occupies the final row');
+    assert.ok(Math.abs(m.cards.at(-1).width - (m.cards[0].width * 3 + 32)) < 1, 'final desktop card spans all three tracks');
+    assert.ok(m.columnTails.every(gap => gap < 1), `full-width final card closes the grid: ${m.columnTails}`);
+    assert.ok(await page.locator('.handyman-task-grid article:last-child p').evaluate(e => e.getBoundingClientRect().width <= 800), 'full-row summary remains readable');
+    const visual = [...m.cards].sort((a, b) => a.y - b.y || a.x - b.x).map(c => c.id);
+    assert.deepEqual(visual, m.cards.map(c => c.id), 'DOM order matches left-to-right row reading order');
     const links = page.locator('.handyman-task-grid a');
     await links.first().focus();
     for (let i = 0; i < await links.count(); i++) {
@@ -98,6 +107,22 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 1920, height: 10
     assert.ok(m.grid >= 1100); assert.equal(m.intro, 2); assert.equal(m.scene, 3);
   });
 }
+
+// Breaks caught: a tablet breakpoint restores masonry tails or oversized row holes.
+test('tablet task grid measures complete rows and the whole-grid trailing edge', async t => {
+  const page=await pageAt(t,{width:800,height:1000});
+  await page.goto(base+handymen);
+  const m=await page.evaluate(()=>{
+    const grid=document.querySelector('.handyman-task-grid'),box=grid.getBoundingClientRect();
+    const cards=[...grid.children].map(e=>{const r=e.getBoundingClientRect();return {id:e.id,x:r.x,y:r.y,bottom:r.bottom,blank:r.bottom-e.lastElementChild.getBoundingClientRect().bottom};});
+    const rows=[...new Set(cards.map(c=>c.y))].map(y=>cards.filter(c=>c.y===y));
+    return {columns:getComputedStyle(grid).gridTemplateColumns.split(' ').length,rows:rows.map(r=>r.length),cards,rowTails:rows.flatMap(r=>r.map(c=>Math.max(...r.map(x=>x.bottom))-c.bottom)),columnTails:[...new Set(cards.map(c=>c.x))].map(x=>box.bottom-Math.max(...cards.filter(c=>c.x===x).map(c=>c.bottom))),overflow:document.documentElement.scrollWidth-innerWidth};
+  });
+  await page.locator('.handyman-task-grid').scrollIntoViewIfNeeded();
+  await record(page,'cards-800',m);
+  assert.equal(m.columns,2);assert.deepEqual(m.rows,[2,2,2,2,2]);assert.equal(m.overflow,0);
+  assert.ok(m.cards.every(c=>c.blank<=180));assert.ok(m.rowTails.every(v=>v<=180));assert.ok(m.columnTails.every(v=>v<=180));
+});
 
 // Breaks caught: inherited green-on-navy labels or white-on-bright-orange body copy become unreadable.
 test('shared surface text meets contrast thresholds in rendered pages', async t => {

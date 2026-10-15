@@ -73,7 +73,7 @@ fs.writeFileSync(catalogFile, `${catalogPrefix}${JSON.stringify(searchCatalog, n
 const cards = [
   ['icon-handyman.webp', 'Handyman repairs', 'services/handyman-interiors-appliance-repairs/handymen/'],
   ['icon-carpentry.webp', 'Carpentry', 'services/handyman-interiors-appliance-repairs/carpenters/'],
-  ['icon-bathroom.webp', 'Door repairs & installation', 'services/doors-windows-glass-screens/door-installation/'],
+  ['icon-bathroom.webp', 'Door repairs', 'services/doors-windows-glass-screens/door-repairs/'],
   ['icon-fly-screen-repairs.webp', 'Fly screen repairs', 'services/doors-windows-glass-screens/fly-screens/'],
   ['icon-window-repairs.webp', 'Window repairs', 'services/doors-windows-glass-screens/window-repairs/'],
   ['icon-tiling.webp', 'Minor tiling', 'services/handyman-interiors-appliance-repairs/tiling/'],

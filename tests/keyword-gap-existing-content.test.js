@@ -52,9 +52,18 @@ test('existing service answers distinguish the accepted tasks and give practical
     const section = html.match(new RegExp('<(article|section)\\b[^>]*id="' + id + '"[^>]*>([\\s\\S]*?)<\\/\\1>'))?.[2];
     assert.ok(section, `${route}#${id}: no focused answer`);
     const page = extractPage(`<main>${section}</main>`, route);
-    for (const pattern of patterns) assert.match(page.mainText, pattern, `${route}#${id}: missing task distinction`);
-    assert.match(page.mainText, /tell|share|provide|confirm|bring/i, `${id}: preparation or approval`);
-    assert.ok(page.contextualInternalLinks.length || page.conversion.contactLinks, `${id}: no contextual next step`);
+    // Selection cards now lead to the detailed owner; the decision must be available
+    // there, not repeated inside each comparable summary.
+    let decision=page.mainText;
+    if(route===hm && /handyman-task-grid/.test(html) && ['sliding-door-repairs','shelf-installation','clothesline-repairs','pet-door-installation','cabinet-repairs','grab-rail-installation','pressure-cleaning'].includes(id)){
+      for(const [,href] of section.matchAll(/href="([^"]+)"/g)){
+        const target=new URL(href,'https://www.perthhandymate.com.au'+route),owner=read(target.pathname);
+        decision+=' '+extractPage(owner,target.pathname).mainText;
+      }
+    }
+    for (const pattern of patterns) assert.match(decision, pattern, `${route}#${id}: missing task distinction`);
+    assert.match(decision, /tell|share|provide|confirm|bring/i, `${id}: preparation or approval`);
+    assert.ok(page.contextualInternalLinks.length || page.conversion.contactLinks || /href="#[^"]+"/.test(section), `${id}: no contextual next step`);
     assert.deepEqual(auditPage(html, route).issues, [], route);
   }
 });

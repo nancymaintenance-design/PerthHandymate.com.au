@@ -41,6 +41,7 @@ function replaceFaq(html, question, answer) {
   });
 }
 function editServiceHtml(html, spec) {
+  if (spec?.slug === 'handymen') return require('./compact-handyman-page')(html);
   if (!spec || !['detail','category','hub'].includes(spec.kind)) throw new Error('Unknown page kind');
   if (spec.kind === 'detail' && !requests[spec.slug]) throw new Error('Unknown service: '+spec.slug);
   if (spec.kind === 'category' && !categories[spec.slug]) throw new Error('Unknown category: '+spec.slug);
@@ -101,6 +102,7 @@ function editServiceHtml(html, spec) {
     edited = replaceOnce(edited,'<p>Share the task and location to start your service request.</p>','<p>Tell Ellis what is damaged or not working and your suburb. You can combine several tasks in one request; photos and measurements are optional. We confirm the appropriate services, access and written quote after assessment.</p>','hub booking explanation');
     html = html.replace(main,edited).replace(/<meta name="description" content="[^"]*">/,'<meta name="description" content="Explore Perth handyman repairs, interior maintenance, garden care and specialist property services. Ellis assesses the work on site and provides a written quote.">');
   }
-  return require('./normalize-service-clarity').normalizeServiceClarity(html);
+  html = require('./normalize-service-clarity').normalizeServiceClarity(html);
+  return spec.kind === 'hub' ? require('./consolidate-content').consolidateDirectory(html) : html;
 }
 module.exports = { editServiceHtml, replaceFaq, text };

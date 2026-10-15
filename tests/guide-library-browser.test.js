@@ -93,7 +93,7 @@ test('all articles have readable columns, working section focus and coherent rel
   for (const g of guides) {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(base + `/guides/${g.slug}/`);
-    const m = await page.evaluate(() => ({ width: document.querySelector('.guide-prose').getBoundingClientRect().width, font: parseFloat(getComputedStyle(document.querySelector('.guide-decision p')).fontSize), overflow: document.documentElement.scrollWidth - innerWidth, ids: [...document.querySelectorAll('[id]')].map(e => e.id) }));
+    const m = await page.evaluate(() => ({ width: document.querySelector('.guide-prose').getBoundingClientRect().width, font: parseFloat(getComputedStyle(document.querySelector('.guide-prose section p')).fontSize), overflow: document.documentElement.scrollWidth - innerWidth, ids: [...document.querySelectorAll('[id]')].map(e => e.id) }));
     assert.ok(m.width >= 600 && m.width <= 860); assert.equal(m.font, 16); assert.equal(m.overflow, 0);
     assert.equal(new Set(m.ids).size, m.ids.length, g.slug + ': unique fragments');
     assert.equal(await page.locator('.guide-prose .guide-conclusion').count(), 1, g.slug + ': conclusion remains in reading column');

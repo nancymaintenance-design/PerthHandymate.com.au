@@ -250,9 +250,9 @@ window.ELLIS_CONTENT={
   "guides": [
     {
       "slug": "how-to-find-the-right-home-repairer",
-      "title": "Loose Hinges, Shelves & Wall Damage: Choosing a Handyman in Perth",
+      "title": "A List of Small Home Repairs: Choosing a Handyman in Perth",
       "desc": "Turn several small faults into a clear brief and match each task to the right capability.",
-      "metaTitle": "Loose Hinges, Shelves & Wall Damage: Choosing a Handyman in Perth | Ellis",
+      "metaTitle": "A List of Small Home Repairs: Choosing a Handyman in Perth | Ellis",
       "metaDescription": "Turn several small faults into a clear brief and match each task to the right capability.",
       "read": "5 min",
       "sections": [
@@ -346,9 +346,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "prepare-before-home-repair-quote",
-      "title": "Moving In with Furniture to Assemble? Prepare a Handyman Quote in Perth",
+      "title": "Moving In with Flat-pack Furniture: Handyman Quotes in Perth",
       "desc": "Bring furniture models, missing-part notes and a mixed repair list into a comparable written scope.",
-      "metaTitle": "Moving In with Furniture to Assemble? Prepare a Handyman Quote in Perth | Ellis",
+      "metaTitle": "Moving In with Flat-pack Furniture: Handyman Quotes in Perth | Ellis",
       "metaDescription": "Bring furniture models, missing-part notes and a mixed repair list into a comparable written scope.",
       "read": "5 min",
       "sections": [
@@ -394,9 +394,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "photos-and-clear-scope-for-home-repairs",
-      "title": "Curtain Rod Pulled out of the Wall? Clear Repair Scope & Optional Photos in Perth",
+      "title": "Curtain Rod Pulled from the Wall: Describing a Perth Repair",
       "desc": "Describe loose supports and damaged surfaces clearly, with or without safe existing photographs.",
-      "metaTitle": "Curtain Rod Pulled out of the Wall? Clear Repair Scope & Optional Photos in Perth | Ellis",
+      "metaTitle": "Curtain Rod Pulled from the Wall: Describing a Perth Repair | Ellis",
       "metaDescription": "Describe loose supports and damaged surfaces clearly, with or without safe existing photographs.",
       "read": "5 min",
       "sections": [
@@ -442,9 +442,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "home-repair-priorities",
-      "title": "Doors, Skirting & Wall Marks before an Open Home: Perth Repair Priorities",
+      "title": "Repairs before an Open Home: Perth Property Priorities",
       "desc": "Prioritise safety, active damage and useful function before presentation repairs or photography.",
-      "metaTitle": "Doors, Skirting & Wall Marks before an Open Home: Perth Repair Priorities | Ellis",
+      "metaTitle": "Repairs before an Open Home: Perth Property Priorities | Ellis",
       "metaDescription": "Prioritise safety, active damage and useful function before presentation repairs or photography.",
       "read": "5 min",
       "sections": [
@@ -490,9 +490,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "seasonal-home-maintenance-australia",
-      "title": "Gutters Overflowing after Rain? Seasonal Home Maintenance in Perth",
+      "title": "After Rain: A Seasonal Home Maintenance Checklist for Perth",
       "desc": "Track weather-related changes and distinguish routine upkeep from drainage, timber or structural repairs.",
-      "metaTitle": "Gutters Overflowing after Rain? Seasonal Home Maintenance in Perth | Ellis",
+      "metaTitle": "After Rain: A Seasonal Home Maintenance Checklist for Perth | Ellis",
       "metaDescription": "Track weather-related changes and distinguish routine upkeep from drainage, timber or structural repairs.",
       "read": "5 min",
       "sections": [
@@ -533,14 +533,14 @@ window.ELLIS_CONTENT={
           "answer": "Contact Ellis with your Perth suburb, postcode and maintenance details. Our team confirms the local service arrangements, site assessment and quote."
         }
       ],
-      "intro": "After rain, a gutter overflows again, a gate drags or timber near a window looks different. A seasonal checklist is useful only if it records those changes and asks whether ordinary cleaning or adjustment is enough. Repeating the same maintenance task may leave a drainage, support or moisture problem unresolved. What is included in property maintenance, and how often should minor home maintenance be checked? This guide uses the condition of the property, recent weather and previous repair history to plan observations and follow-up. It explains the boundary between routine upkeep and a fault needing its own assessment, without asking you to climb or dismantle anything.",
+      "intro": "After rain, check what has changed around the property from safe ground. Record overflowing gutters, new damp marks, moving fittings and changes in how doors or windows operate. A seasonal list helps distinguish routine upkeep from a fault that needs investigation. Work through rainwater, exterior and indoor checks, then record the location, date and next action. Timing depends on local weather and property condition. Do not climb or dismantle anything to complete the list.",
       "editorialSource": "data/guide-library.js"
     },
     {
       "slug": "property-manager-maintenance-coordination",
-      "title": "Doors, Cupboards & Wall Damage after a Rental Inspection: Perth Maintenance",
+      "title": "Repairs after a Rental Inspection: Perth Maintenance Guide",
       "desc": "Coordinate a mixed inspection or vacate list from tenant report to permission, access and handover.",
-      "metaTitle": "Doors, Cupboards & Wall Damage after a Rental Inspection: Perth Maintenance | Ellis",
+      "metaTitle": "Repairs after a Rental Inspection: Perth Maintenance Guide | Ellis",
       "metaDescription": "Coordinate a mixed inspection or vacate list from tenant report to permission, access and handover.",
       "read": "5 min",
       "sections": [

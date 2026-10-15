@@ -141,12 +141,16 @@ for (const viewport of [{ width: 390, height: 844 }, { width: 1440, height: 900 
     }
     const shortSections = page.locator('#repair-planning-guides, #property-repair-list, #local-repair-requests');
     assert.equal(await shortSections.count(), 3);
-    const gaps = await shortSections.evaluateAll(elements => elements.slice(1).map((e, i) => {
-      const before = elements[i].lastElementChild.getBoundingClientRect();
-      const after = e.querySelector('h2').getBoundingClientRect();
-      return after.top - before.bottom;
-    }));
-    assert.ok(gaps.every(gap => gap <= 80), `short content gaps stay compact: ${gaps.join(', ')}`);
+    // Approved consolidation keeps these fragments on the earlier useful owners;
+    // they are no longer three repeated adjacent sections after the office map.
+    assert.equal(await page.locator('.insight-strip#repair-planning-guides').count(), 1);
+    assert.equal(await page.locator('h2#property-repair-list').count(), 1);
+    for (const id of ['repair-quote-process','repair-planning-guides','contact-team']) {
+      await page.locator(`.quick-paths a[href="#${id}"]`).click();
+      const target=page.locator('#'+id);
+      assert.equal(await target.count(),1);
+      assert.ok(await target.evaluate(e=>e.getBoundingClientRect().top)>=70,'jump target clears sticky header');
+    }
     assert.ok(await page.locator('#local-repair-requests').isVisible(), 'coverage evidence stays visible');
   });
   test(`contact short explanations have compact spacing and no repeated reception block at ${viewport.width}`, async t => {

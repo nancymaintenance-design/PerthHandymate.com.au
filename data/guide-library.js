@@ -12,7 +12,7 @@ const categories = [
 const guides = [
   {
     slug: 'cupboard-hinges-drawer-runners-repair-guide', category: 'repair-faults',
-    title: 'Cupboard Door Fallen off Its Hinge? Cabinet & Drawer Repairs in Perth',
+    title: 'Cupboard Door off Its Hinge: Cabinet Repairs in Perth',
     description: 'Separate a worn hinge or runner from damaged cabinet panels before choosing parts or replacing the unit.',
     intro: [
       'A kitchen cupboard door has fallen off its hinge, or a drawer will not close after being loaded. Both look like hardware failures, but the part you can see may not be the only problem. A hinge fixed into damaged particleboard cannot do its job just because the hinge itself is new.',
@@ -34,7 +34,7 @@ const guides = [
   },
   {
     slug: 'sticking-doors-windows-repair-guide', category: 'repair-faults',
-    title: 'Door Rubbing after New Carpet or a Window Sticking after Rain? Perth Repairs',
+    title: 'Door Rubbing after New Carpet: Perth Door Repair Guide',
     description: 'Compare floor clearance, hinges, swollen timber and dragging sliding-door hardware before selecting a repair.',
     intro: [
       'A bedroom door starts rubbing after new carpet, while an older timber window becomes hard to close after rain. The symptoms both involve a moving fitting catching, but they point to different questions. Floor clearance, loose hinges, damaged timber and recurring moisture should not be treated as one adjustment job.',
@@ -56,7 +56,7 @@ const guides = [
   },
   {
     slug: 'wall-patching-paint-touch-ups-guide', category: 'repair-faults',
-    title: 'Door Handle Hole or Visible Wall Patch? Gyprock Repairs & Painting in Perth',
+    title: 'Door Handle Hole in a Wall: Gyprock Repairs in Perth',
     description: 'Understand backing, recurring cracks and paint differences before combining a wall patch with its finish.',
     intro: [
       'A door handle has punched a hole in the plasterboard, or the wall patch left after removing a TV bracket still shows through the paint. A surface that looks uneven can reflect damage to the board, a difference in patch texture or a mismatch in the finishing coat. Those are related jobs, but they are not interchangeable.',
@@ -78,7 +78,7 @@ const guides = [
   },
   {
     slug: 'shower-silicone-grout-waterproofing-guide', category: 'repair-faults',
-    title: 'Shower Still Leaking after New Silicone? Resealing & Waterproofing in Perth',
+    title: 'Shower Leaking after New Silicone: Perth Repair Guide',
     description: 'Distinguish surface joints and grout from deeper wet-area faults before repeating a cosmetic reseal.',
     intro: [
       'New silicone has been applied, but the shower still leaks or damp appears in the adjoining bedroom. The visible joint is only one part of the wet area. Split sealant, missing grout, plumbing faults and waterproofing concerns need different assessments, even when the first clue is the same patch of damp.',
@@ -100,7 +100,7 @@ const guides = [
   },
   {
     slug: 'how-to-find-the-right-home-repairer', category: 'choosing-booking',
-    title: 'Loose Hinges, Shelves & Wall Damage: Choosing a Handyman in Perth',
+    title: 'A List of Small Home Repairs: Choosing a Handyman in Perth',
     description: 'Turn several small faults into a clear brief and match each task to the right capability.',
     intro: [
       'You have loose hinges, a shelf to hang and a damaged wall, and would like to deal with the list in one visit. The difficulty is deciding whether these are compatible small repair jobs or whether one item has a different cause, approval requirement or specialist boundary. A broad label such as general repairs does not settle that question.',
@@ -144,7 +144,7 @@ const guides = [
   },
   {
     slug: 'prepare-before-home-repair-quote', category: 'choosing-booking',
-    title: 'Moving In with Furniture to Assemble? Prepare a Handyman Quote in Perth',
+    title: 'Moving In with Flat-pack Furniture: Handyman Quotes in Perth',
     description: 'Bring furniture models, missing-part notes and a mixed repair list into a comparable written scope.',
     intro: [
       'After moving, a bed frame and desk need assembly, a cupboard needs attention and there are wall marks to repair. You may know the products you bought but not whether the parts are complete, how wall anchoring will be handled or which tasks can share a visit. Those uncertainties matter more to a useful quote than a long list of job labels.',
@@ -166,7 +166,7 @@ const guides = [
   },
   {
     slug: 'photos-and-clear-scope-for-home-repairs', category: 'choosing-booking',
-    title: 'Curtain Rod Pulled out of the Wall? Clear Repair Scope & Optional Photos in Perth',
+    title: 'Curtain Rod Pulled from the Wall: Describing a Perth Repair',
     description: 'Describe loose supports and damaged surfaces clearly, with or without safe existing photographs.',
     intro: [
       'A curtain rod has pulled out of plasterboard, or a shelf bracket keeps loosening. Sending a close-up can show the visible damage, but it cannot establish what is behind the wall, which fixing is suitable or whether the fitting can carry its intended load. A plain description of the symptom and its history is enough to start the enquiry.',
@@ -188,7 +188,7 @@ const guides = [
   },
   {
     slug: 'home-repair-priorities', category: 'maintenance-planning',
-    title: 'Doors, Skirting & Wall Marks before an Open Home: Perth Repair Priorities',
+    title: 'Repairs before an Open Home: Perth Property Priorities',
     description: 'Prioritise safety, active damage and useful function before presentation repairs or photography.',
     intro: [
       'An open home or property photography date is approaching, and the list includes a sticking door, damaged skirting and marked walls. The most visible item is not always the one to address first. A wall mark may be cosmetic, while swelling or recurring stains can point to a cause that needs assessment before any finish is applied.',
@@ -210,7 +210,7 @@ const guides = [
   },
   {
     slug: 'seasonal-home-maintenance-australia', category: 'maintenance-planning',
-    title: 'Gutters Overflowing after Rain? Seasonal Home Maintenance in Perth',
+    title: 'After Rain: A Seasonal Home Maintenance Checklist for Perth',
     description: 'Track weather-related changes and distinguish routine upkeep from drainage, timber or structural repairs.',
     intro: [
       'After rain, a gutter overflows again, a gate drags or timber near a window looks different. A seasonal checklist is useful only if it records those changes and asks whether ordinary cleaning or adjustment is enough. Repeating the same maintenance task may leave a drainage, support or moisture problem unresolved.',
@@ -232,7 +232,7 @@ const guides = [
   },
   {
     slug: 'property-manager-maintenance-coordination', category: 'rental-property',
-    title: 'Doors, Cupboards & Wall Damage after a Rental Inspection: Perth Maintenance',
+    title: 'Repairs after a Rental Inspection: Perth Maintenance Guide',
     description: 'Coordinate a mixed inspection or vacate list from tenant report to permission, access and handover.',
     intro: [
       'A rental inspection produces a mixed list: a door will not close, a cupboard is damaged and wall holes need attention before handover. The occupant, owner and property manager may each hold a different part of the information. Without a shared record, permission to inspect can be mistaken for permission to repair, or a finishing requirement can be missed.',
@@ -278,5 +278,9 @@ const guides = [
     service: ['handyman-interiors-appliance-repairs/handymen', 'Local handyman repair scope'],
     related: ['how-to-find-the-right-home-repairer', 'photos-and-clear-scope-for-home-repairs']
   }
-].map(g => ({ ...bodies[g.slug], ...g }));
+].map(g => ({ ...bodies[g.slug], ...g, ...(g.slug === 'seasonal-home-maintenance-australia' ? {
+  sections: [],
+  intro: ['After rain, check what has changed around the property from safe ground. Record overflowing gutters, new damp marks, moving fittings and changes in how doors or windows operate. A seasonal list helps distinguish routine upkeep from a fault that needs investigation.', 'Work through rainwater, exterior and indoor checks, then record the location, date and next action. Timing depends on local weather and property condition. Do not climb or dismantle anything to complete the list.'],
+  conclusion: 'Keep a dated record of changes and unresolved concerns. Overflow after cleaning, continuing damp or moving supports need assessment before another surface treatment. Use the seasonal questions in this guide for planning, then follow the relevant service link for the fault itself. Confirm the work, access and approval contact before booking.'
+} : {}) }));
 module.exports = { categories, guides, updated: '2026-10-14' };

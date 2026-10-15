@@ -22,10 +22,11 @@ test('nine confirmed regions have distinct static repair content and named-subur
     const cards = html.match(/<section[^>]+id="suburb-repair-links"[\s\S]*?<\/section>/)?.[0];
     assert.ok(cards, `${area.slug}: static repair cards`);
     for (const suburb of area.suburbs) {
-      assert.ok(cards.includes(`suburb=${encodeURIComponent(suburb)}`), `${area.slug}: ${suburb}`);
-      assert.ok(cards.includes(` in ${suburb.replaceAll('&', '&amp;')}`));
+      assert.ok(html.includes(`contact/?suburb=${encodeURIComponent(suburb)}`), `${area.slug}: ${suburb}`);
+      assert.ok(html.includes(`>${suburb.replaceAll('&', '&amp;')}</a>`));
     }
     bodies.add(html.match(/id="local-property-guidance"[\s\S]*?<\/section>/)[0]);
+    assert.equal([...cards.matchAll(/<article>/g)].length, 6, 'same real repair choices, independent of suburb count');
   }
   assert.equal(bodies.size, 9);
   for (const slug of ['western-suburbs-swanbourne', 'perth-hills-mundaring-kalamunda']) assert.ok(areas.some(a => a.slug === slug));

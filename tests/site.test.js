@@ -121,7 +121,7 @@ test('uses the core handyman services Perth phrase on the homepage', () => {
   assert.match(home, /<h1>Handyman Services Perth for Home Repairs & Maintenance<\/h1>/);
   assert.match(home, /The Ellis Perth office provides direct handyman services for home repairs and maintenance/);
   assert.match(home, /<h2>Local Handyman Services in Perth<\/h2>/);
-  assert.match(home, /<h2>Home Maintenance To-Do List for Property Managers<\/h2>/);
+  assert.match(home, /<h2\b[^>]*>Home Maintenance To-Do List for Property Managers<\/h2>/);
   assert.doesNotMatch(home, /One request\.<br><em>One team accountable\.<\/em>/);
 });
 
@@ -496,7 +496,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   for (const [route, icon] of [
     ['services/handyman-interiors-appliance-repairs/handymen/', 'icon-handyman.webp'],
     ['services/handyman-interiors-appliance-repairs/carpenters/', 'icon-carpentry.webp'],
-    ['services/doors-windows-glass-screens/door-installation/', 'icon-bathroom.webp'],
+    ['services/doors-windows-glass-screens/door-repairs/', 'icon-bathroom.webp'],
     ['services/doors-windows-glass-screens/fly-screens/', 'icon-fly-screen-repairs.webp'],
     ['services/doors-windows-glass-screens/window-repairs/', 'icon-window-repairs.webp'],
     ['services/handyman-interiors-appliance-repairs/tiling/', 'icon-tiling.webp'],

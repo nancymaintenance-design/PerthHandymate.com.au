@@ -6,27 +6,29 @@ const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const landing=cluster=>cluster.slug==='home'?'index.html':cluster.slug==='contact'?'contact/index.html':catalog.canonicalServices.find(service=>service.slug===cluster.slug)?.url+'index.html';
 const renderedGuides=()=>fs.readdirSync(path.join(root,'guides')).filter(slug=>fs.existsSync(path.join(root,'guides',slug,'index.html'))).map(slug=>({page:`guides/${slug}/index.html`,html:fs.readFileSync(path.join(root,'guides',slug,'index.html'),'utf8')}));
 const guideSlugs=['cupboard-hinges-drawer-runners-repair-guide','sticking-doors-windows-repair-guide','wall-patching-paint-touch-ups-guide','shower-silicone-grout-waterproofing-guide'];
-test('handyman landing keeps one concise FAQ and detailed scenarios live in relevant guides',()=>{
+test('booking FAQ stays focused and each research scenario retains a guide or service answer',()=>{
  const h=fs.readFileSync(path.join(root,'services/handyman-interiors-appliance-repairs/handymen/index.html'),'utf8');
- assert.equal([...h.matchAll(/<details\b/g)].length,6,'booking FAQ must not grow into a topic dump');
+ const booking=h.match(/<section class="section shell service-questions"><h2>Handyman Booking Questions[\s\S]*?<\/section>/)[0];
+ assert.equal([...booking.matchAll(/<details\b/g)].length,6,'booking FAQ remains separate from task decisions');
  assert.ok(!h.includes('id="keyword-repair-questions"'));
  const door=fs.readFileSync(path.join(root,'guides/sticking-doors-windows-repair-guide/index.html'),'utf8');
  assert.ok(door.includes('My apartment balcony door is jammed. What should I tell Ellis?'),'sliding-door scenario belongs in door guide');
- const guides=renderedGuides();
+ const moved=require('../data/service-guide-faq.json');
+ const guides=[...renderedGuides(),...Object.keys(moved).map(route=>({page:route.slice(1)+'index.html',html:fs.readFileSync(path.join(root,route.slice(1),'index.html'),'utf8')}))];
  for(const cluster of content.clusters){
   const owners=guides.filter(guide=>guide.html.includes(`<summary>${escape(cluster.scenario[0])}</summary>`));
-  assert.equal(owners.length,1,`${cluster.owner} detailed scenario has one guide owner`);
-  assert.ok(owners[0].page.startsWith('guides/'),cluster.owner);
+  assert.equal(owners.length,1,`${cluster.owner} detailed scenario has one current owner`);
   assert.ok(owners[0].html.includes(`<p>${escape(cluster.scenario[1])}</p>`),`${cluster.owner} scenario answer is rendered`);
-  assert.ok(owners[0].html.includes(`<h3>${escape(cluster.heading)}</h3>`),`${cluster.owner} topic heading is rendered`);
+  if(owners[0].page.startsWith('guides/'))assert.ok(owners[0].html.includes(`<h3>${escape(cluster.heading)}</h3>`),`${cluster.owner} topic heading is rendered`);
   // The committed renderer gives O30 a specific electrical-work answer.
   const intentAnswer=cluster.owner==='O30'?'A power point replacement is electrical work, separate from TV bracket fitting. Tell Ellis what needs changing so we can confirm the electrical work, applicable licensing requirements and quote before work starts.':cluster.answer;
   assert.ok(owners[0].html.includes(`<p>${escape(intentAnswer)}</p>`),`${cluster.owner} intent answer is rendered`);
-  assert.ok(owners[0].html.includes(`href="../../${landing(cluster).replace(/index\.html$/,'')}"`),`${cluster.owner} guide links to its landing owner`);
+  if(owners[0].page.startsWith('guides/'))assert.ok(owners[0].html.includes(`href="../../${landing(cluster).replace(/index\.html$/,'')}"`),`${cluster.owner} guide links to its landing owner`);
   const planning=fs.readFileSync(path.join(root,landing(cluster)),'utf8').match(/<(section|aside)\b[^>]*id="repair-planning-guides"[\s\S]*?<\/\1>/)?.[0];
   const guideRoute=owners[0].page.replace(/index\.html$/,'');
   const linkedViaHub=/href="[^"]*guides\/"/.test(planning||'')&&fs.readFileSync(path.join(root,'guides/index.html'),'utf8').includes(guideRoute.replace(/^guides\//,''));
-  assert.ok(planning?.includes(guideRoute)||linkedViaHub,`${cluster.owner} landing links to its guide owner directly or through the guide hub`);
+  if(owners[0].page.startsWith('guides/'))assert.ok(planning?.includes(guideRoute)||linkedViaHub,`${cluster.owner} landing links to its guide owner directly or through the guide hub`);
+  else assert.ok(fs.readFileSync(path.join(root,'guides/seasonal-home-maintenance-australia/index.html'),'utf8').includes('/'+guideRoute),`${cluster.owner} seasonal checklist links to the service owner`);
   const faq=[...owners[0].html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(match=>JSON.parse(match[1])).find(block=>block['@type']==='FAQPage');
   const scenario=faq.mainEntity.filter(question=>question.name===cluster.scenario[0]);
   assert.equal(scenario.length,1,`${cluster.owner} scenario has one structured FAQ owner`);

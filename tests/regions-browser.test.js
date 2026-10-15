@@ -63,13 +63,13 @@ test('region hub has three desktop columns, full rounding and a keyboard path at
 test('every sticking-door discovery link keeps repair intent and validated locality through Contact', async t => {
   const page = await pageFor(t);
   let checked = 0;
-  for (const origin of ['/areas/', ...areas.map(a => `/areas/${a.slug}/`)]) {
+  for (const origin of areas.map(a => `/areas/${a.slug}/`)) {
     await page.goto(base + origin);
-    const links = await page.locator('main a').filter({ hasText: /^Sticking-door repairs in / }).evaluateAll(nodes => nodes.map(a => ({ href: a.getAttribute('href'), text: a.textContent })));
-    assert.equal(links.length, origin === '/areas/' ? 2 : 1, origin);
+    const links = await page.locator('#suburb-repair-links a').filter({ hasText: /^Sticking-door repairs$/ }).evaluateAll(nodes => nodes.map(a => ({ href: a.getAttribute('href'), text: a.textContent })));
+    assert.equal(links.length, 1, origin);
     for (const link of links) {
       await page.goto(base + origin);
-      const suburb = link.text.slice('Sticking-door repairs in '.length);
+      const suburb = new URL(link.href, base + origin).searchParams.get('suburb');
       await page.locator('main a').filter({ hasText: link.text }).click();
       assert.equal(await page.locator('h1').innerText(), 'Door Repairs in Perth', origin);
       assert.equal(new URL(page.url()).pathname, '/services/doors-windows-glass-screens/door-repairs/');
@@ -83,12 +83,12 @@ test('every sticking-door discovery link keeps repair intent and validated local
       checked++;
     }
   }
-  assert.equal(checked, 11);
+  assert.equal(checked, 9);
 });
 test('named suburb goes through service context to Contact prefill and rejects unknown/XSS banners', async t => {
   const page = await pageFor(t);
-  await page.goto(base + '/areas/perth-central/');
-  const localLink = page.locator('#suburb-repair-links a').filter({ hasText: 'East Perth' });
+  await page.goto(base + '/areas/perth-central/?suburb=East+Perth');
+  const localLink = page.locator('#suburb-repair-links a').filter({ hasText: 'Sticking-door repairs' });
   await localLink.click();
   assert.match(await page.locator('[data-local-context]').innerText(), /East Perth/);
   const defaultH1 = await page.locator('h1').innerText();

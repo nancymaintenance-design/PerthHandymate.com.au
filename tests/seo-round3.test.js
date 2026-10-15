@@ -26,10 +26,11 @@ test('local distribution and source service pages are identical', t => {
   const pages = new Set(['services/index.html', ...catalog.canonicalServices.map(x => x.url+'index.html'), ...catalog.canonicalServices.map(x => `services/${x.category}/index.html`)]);
   for (const file of pages) assert.equal(fs.readFileSync(path.join(fixture, 'dist', file), 'utf8'), fs.readFileSync(path.join(root,file),'utf8'), file);
 });
-test('all 31 committed research owners retain source content and rendered guide coverage', () => {
+test('all 31 committed research owners retain source content and a current scenario destination', () => {
   const data = JSON.parse(fs.readFileSync(path.join(root, 'data/keyword-content-round.json'), 'utf8'));
   const guidePages = fs.readdirSync(path.join(root, 'guides')).filter(slug => fs.existsSync(path.join(root, 'guides', slug, 'index.html')))
     .map(slug => fs.readFileSync(path.join(root, 'guides', slug, 'index.html'), 'utf8'));
+  for(const route of Object.keys(require('../data/service-guide-faq.json'))) guidePages.push(fs.readFileSync(path.join(root,route.slice(1),'index.html'),'utf8'));
   assert.equal(data.clusters.length, 31);
   assert.deepEqual(data.clusters.map(cluster => cluster.owner).sort(), Array.from({ length: 31 }, (_, i) => `O${String(i + 1).padStart(2, '0')}`));
   for (const cluster of data.clusters) {
@@ -45,7 +46,10 @@ test('confirmed handyman scope includes eight actual service descriptions and co
     assert.ok(article, id);
     assert.match(article, /<h3>.+?<\/h3><p>.+?<\/p>/);
     assert.ok(!article.includes('<details>'),'service cards use descriptions, not separate FAQ blocks');
-    assert.match(article, /href="\.\.\/\.\.\/\.\.\/guides\//);
+    const href=article.match(/href="([^"]+)"/)[1];
+    const target=new URL(href,'https://www.perthhandymate.com.au/services/handyman-interiors-appliance-repairs/handymen/');
+    const destination=fs.readFileSync(path.join(root,target.pathname,'index.html'),'utf8');
+    if(target.hash)assert.ok(destination.includes(`id="${target.hash.slice(1)}"`),id+' has a useful local decision');
   }
   const guide=fs.readFileSync(path.join(root,'guides/when-home-maintenance-needs-a-licensed-trade/index.html'),'utf8');
   assert.match(html,/data-preserve-search href="\.\.\/\.\.\/\.\.\/contact\/\?service=Handyman/);

@@ -8,7 +8,8 @@ test('all 67 services publish individual scope, quote factors and relevant route
   const html=fs.readFileSync(path.join(root,item.url,'index.html'),'utf8');
   if(item.slug==='handymen'){
    assert.match(html, /class="handyman-task-grid"/);
-   assert.equal([...html.matchAll(/<details\b/g)].length,6);
+   const booking=html.match(/<section class="section shell service-questions"><h2>Handyman Booking Questions[\s\S]*?<\/section>/)[0];
+   assert.equal([...booking.matchAll(/<details\b/g)].length,6);
    for(const slug of ['carpenters','plasterers'])assert.ok(html.includes('href="../../../'+catalog.canonicalServices.find(x=>x.slug===slug).url+'"'));
    assert.ok(html.indexOf('id="service-work-options"')<html.indexOf('class="section shell service-questions"'));
    continue;

@@ -1,9 +1,8 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
-test('handyman landing offers six coherent sections instead of stacked repair descriptions',()=>{
+test('handyman landing separates task summaries, scope, price and booking questions',()=>{
  const h=fs.readFileSync(path.join(root,'services/handyman-interiors-appliance-repairs/handymen/index.html'),'utf8');
  const main=h.match(/<main\b[\s\S]*?<\/main>/)[0];
- assert.equal([...main.matchAll(/<section\b/g)].length,6);
  // Accepted gap work adds distinct scopes; preserve the compact navigation and six
  // booking questions rather than enforcing the previous round's arbitrary word limit.
  const cards=main.match(/<div class="handyman-task-grid">[\s\S]*?<\/div>/)[0];
@@ -13,8 +12,9 @@ test('handyman landing offers six coherent sections instead of stacked repair de
   assert.doesNotMatch(card[0],/<details\b/,'detailed accordion content stays out of task cards');
  }
  assert.match(cards,/id="shelf-installation"/,'shelving has its own task summary');
- assert.equal([...main.matchAll(/<details\b/g)].length,6);
- for(const topic of ['Sliding Door Repairs','Clothesline Repairs','Pet Door Installation','Laminate &amp; Vinyl Floor Repairs','Pressure Cleaning','Grab Rail Installation'])assert.ok(main.includes(topic),topic);
+ const booking=main.match(/<section class="section shell service-questions"><h2>Handyman Booking Questions[\s\S]*?<\/section>/)[0];
+ assert.equal([...booking.matchAll(/<details\b/g)].length,6);
+ for(const id of ['sliding-door-repairs','clothesline-repairs','pet-door-installation','minor-floor-repairs','pressure-cleaning','grab-rail-installation'])assert.ok(main.includes(`id="${id}"`),id);
  assert.ok(main.indexOf('price-guide')<main.indexOf('service-questions'));
  assert.ok(!main.includes('id="keyword-map-repair-scenes"'));
 });

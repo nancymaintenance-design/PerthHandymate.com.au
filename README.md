@@ -89,7 +89,24 @@ Edit `data/business-facts.json` only from confirmed evidence, then run `node scr
 
 ## Service-content layout maintenance
 
-`node tools/normalize-service-clarity.js` reapplies the presentation-only adapter after legacy service generation. It groups quote factors and related-service destinations, and separates visible work scope/preparation from the FAQ accordion. It preserves text, links, facts, prices and FAQ answers. The service-depth generator, round-three writer and round-two editor also call this shared adapter; running it twice changes no further pages. The shared CSS content rhythm applies to article/disclosure/media sections too, not a text-only whitelist. Run `node --test tests/service-clarity.test.js` and the complete suite after layout changes.
+### Current content owners (15 October 2026 local rectification)
+
+The Handymen body is maintained in `data/handyman-body.inc`; `tools/compact-handyman-page.js` now restores that complete body, including the later safety anchors. It preserves the current price block for the separate price renderer. Do not substitute an older compact main. Short task cards lead to visible service decisions; booking questions remain separate from repair questions. `data/service-guide-faq.json` owns the useful task answers moved out of the seasonal checklist and deduplicates matching existing questions.
+
+The guide library sources remain `data/guide-library.js` and `data/guide-library-body.json`. The seasonal guide now groups rainwater, exterior and indoor checks; its task-specific answers live with the relevant existing service. The region renderer lists confirmed suburbs independently of six service choices, preserving location query context. Home keeps all thirteen full-size case groups in their existing order.
+
+After editing these current owners, run the following sequence twice. The second pass must report zero guide, heading and consolidation changes and produce no file-content difference:
+
+```powershell
+node tools/render-guide-library.js
+node tools/render-regions.js
+node scripts/apply-heading-keywords.js
+node tools/consolidate-content.js
+```
+
+Run `node --test --test-concurrency=1 tests/*.test.js`, the build, site checker and five-category coverage check before handoff. On Windows set `TEMP` and `TMP` to the site's reports temporary directory. Do not regenerate the site using historical all-page writers. Legacy service editing delegates to the current consolidation boundary; guides delegate to their current renderer. When useful evidence moves, update the current coverage location/excerpt and action observed text after checking the actual meaning; keep the historical 527-term routing file unchanged.
+
+`node tools/normalize-service-clarity.js` reapplies scope/FAQ presentation after legacy service generation, then the current content consolidation boundary. It groups quote factors and related-service destinations, separates visible work scope/preparation from the FAQ accordion, and collects repeated preparation invitations into related reading. It preserves useful decisions, links, facts and prices; maintained task FAQs replace duplicate questions. The service-depth generator, round-three writer and round-two editor also call this adapter; running it twice changes no further pages. The shared CSS content rhythm applies to article/disclosure/media sections too. Run `node --test tests/service-clarity.test.js` and the complete suite after layout changes.
 
 ## Contact form boundary
 

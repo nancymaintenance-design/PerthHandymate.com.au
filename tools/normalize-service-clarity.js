@@ -2,8 +2,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-// Presentation-only, idempotent adapter for maintained legacy service generators.
-// Keeps original headings, body, anchors, prices and FAQ answers verbatim.
+// Idempotent presentation adapter followed by the maintained content boundary.
+// Retains useful decisions, anchors and prices; consolidates stock invitations and duplicate FAQs.
 function normalizeServiceClarity(html) {
   html = html.replace(/(<section\b[^>]*id="service-work-options"[^>]*>)([\s\S]*?)(<\/section>)/g, (all, open, body, close) => {
     if (!body.includes('class="service-quote-factors"')) {
@@ -14,7 +14,7 @@ function normalizeServiceClarity(html) {
     }
     return open + body + close;
   });
-  return html.replace(/(<section class="section shell service-questions">)([\s\S]*?)(<\/section>)/g, (all, open, body, close) => {
+  html = html.replace(/(<section class="section shell service-questions">)([\s\S]*?)(<\/section>)/g, (all, open, body, close) => {
     if (body.includes('class="service-scope-panel"')) return all;
     // The accordion owns questions only; scope and preparation remain visible,
     // independently headed panels rather than appearing to belong to the final answer.
@@ -26,6 +26,7 @@ function normalizeServiceClarity(html) {
     });
     return open + body + close;
   });
+  return require('./consolidate-content').consolidateService(html);
 }
 
 function apply(root = path.resolve(__dirname, '..')) {

@@ -97,13 +97,13 @@ test('new service links resolve to existing pages and anchors, with unique categ
   assert.equal(new Set(questions).size,27,'category answers address distinct decisions');
 });
 
-test('compact handyman page keeps six sections, advice and focused-service links and explicit own licensed personnel', () => {
+test('compact handyman page keeps booking questions, focused-service links and explicit own licensed personnel', () => {
   const main=page(read('handymen'));
-  assert.equal([...main.matchAll(/<section\b/g)].length,6);
-  assert.equal([...main.matchAll(/<details>/g)].length,6);
+  const booking=main.match(/<section class="section shell service-questions"><h2>Handyman Booking Questions[\s\S]*?<\/section>/)[0];
+  assert.equal([...booking.matchAll(/<details>/g)].length,6);
   const cards=main.match(/<div class="handyman-task-grid">[\s\S]*?<\/div>/)[0];
   for(const card of cards.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)) assert.match(card[0],/href="[^"]+"/,'every accepted task keeps contextual advice or an owner link');
-  for(const route of ['furniture-assembly','tv-wall-mounting','sliding-door-repairs']) assert.ok(cards.includes('/'+route+'/'),route+' focused owner remains discoverable');
+  for(const route of ['furniture-assembly','tv-wall-mounting','sliding-door-repairs']) assert.ok(main.includes('/'+route+'/'),route+' focused owner remains discoverable');
   assert.ok(cards.includes('id="shelf-installation"'),'shelving remains distinct from TV mounting');
   assert.match(main,/own appropriately licensed personnel/);
   assert.match(main,/Photos, measurements and a repair list are optional/);

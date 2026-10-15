@@ -38,10 +38,10 @@ function renderRegion(html, area) {
     body = body.replace(/suburb=[^"&]+/g, `suburb=${encodeURIComponent(area.suburbs[0])}`);
     return start + body + end;
   });
-  const cards = `<section class="section shell" id="suburb-repair-links"><h2>Find repair help near your home</h2><p>Choose the symptom and named suburb below. The service page keeps your selected location for the enquiry; Ellis confirms the repair scope and appointment directly.</p><div class="region-services">${Array.from({ length: Math.max(4, area.suburbs.length) }, (_, i) => {
-    const suburb = area.suburbs[i % area.suburbs.length], [route, label, detail] = jobs[(i + (area.slug.includes('hills') ? 3 : 0)) % jobs.length];
-    return `<article><h3><a href="../../services/${route}/?suburb=${encodeURIComponent(suburb)}">${label} in ${esc(suburb)}</a></h3><p>${detail}</p></article>`;
+  const cards = `<section class="section shell" id="choose-your-suburb"><h2>Choose your suburb</h2><p>Start a repair request for your location, or choose a service below. The same service choices apply across this region; the address and appointment are confirmed directly.</p><div class="city-list">${area.suburbs.map(suburb => `<a href="../../contact/?suburb=${encodeURIComponent(suburb)}">${esc(suburb)}</a>`).join('')}</div></section><section class="section shell" id="suburb-repair-links"><h2>Choose the repair you need</h2><div class="region-services">${jobs.map(([route, label, detail]) => {
+    return `<article><h3><a data-preserve-search href="../../services/${route}/?suburb=${encodeURIComponent(area.name)}">${label}</a></h3><p>${detail}</p></article>`;
   }).join('')}</div></section>`;
+  html = html.replace(/<section[^>]*id="choose-your-suburb"[\s\S]*?<\/section>/, '');
   html = html.replace(/<section[^>]*id="suburb-repair-links"[\s\S]*?<\/section>/, '');
   html = html.replace('<section class="cta-band">', cards + '<section class="cta-band">');
   html = html.replaceAll('ask our Perth team', 'ask our local team');
@@ -68,7 +68,7 @@ function apply() {
   }
   const hubFile = path.join(root, 'areas/index.html');
   let hub = fs.readFileSync(hubFile, 'utf8');
-  const grid = `<div class="area-grid">${areas.map((a, i) => `<article><p class="eyebrow">Local repair coverage</p><h2><a href="${a.slug}/">${esc(a.name)}</a></h2><p>${esc(a.context[0].toUpperCase() + a.context.slice(1))}. Explore door, window, fitting and exterior repair topics for the confirmed suburbs.</p><p><a href="../services/${jobs[i % jobs.length][0]}/?suburb=${encodeURIComponent(a.suburbs[0])}">${jobs[i % jobs.length][1]} in ${esc(a.suburbs[0])}</a></p><a class="text-link" href="${a.slug}/">Explore ${esc(a.name)} →</a></article>`).join('')}</div>`;
+  const grid = `<div class="area-grid">${areas.map(a => `<article><p class="eyebrow">Local repair coverage</p><h2><a href="${a.slug}/">${esc(a.name)}</a></h2><p>${esc(a.context[0].toUpperCase() + a.context.slice(1))}. Check the confirmed suburbs and choose the repair you need.</p><a class="text-link" href="${a.slug}/">Explore ${esc(a.name)} →</a></article>`).join('')}</div>`;
   hub = hub.replace(/<div class="area-grid">[\s\S]*?<\/div>/, grid).replace('Find the Perth service area closest to your property', 'Find the service area closest to your property').replace('Check a Perth service location', 'Check your repair location').replace('Tell Ellis your Perth suburb or postcode', 'Tell Ellis your suburb or postcode');
   if (!hub.includes('assets/css/regions.css')) hub = hub.replace('</head>', '<link rel="stylesheet" href="../assets/css/regions.css"></head>');
   fs.writeFileSync(hubFile, hub);

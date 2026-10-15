@@ -7,8 +7,7 @@ const plain = s => s.replace(/<[^>]+>/g, ' ').replaceAll('&amp;', '&').replaceAl
 const paras = list => list.map(p => `<p>${esc(p)}</p>`).join('');
 const hubTitle = 'Perth Handyman & Home Maintenance Guides';
 function articleBody(g) {
-  // Keep earlier body + scenario/FAQ evidence verbatim. Only H2 display labels and
-  // section navigation attributes are adapted; factual places and FAQ text stay.
+  // Current body owner preserves useful decisions and evidence, not obsolete duplication.
   let body = g.bodyHtml.replace('This guide helps you describe a fault and plan an assessment.', 'This guide helps you describe a fault and plan an on-site assessment.').replace(/<h2>(.*?)<\/h2>/gs, (all, text) => '<h2>' + text
     .replace('Describe Your Small Home Repair Jobs in Perth', 'Describe your small home repair jobs')
     .replace('Hiring a Handyman in Perth: Scope, Quote &amp; Booking', 'Hiring a handyman: scope, quote &amp; booking')
