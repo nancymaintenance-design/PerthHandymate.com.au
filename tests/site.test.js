@@ -436,7 +436,7 @@ test('publishes company registration identifiers with the official ABR lookup', 
   assert.match(about, /<link rel="canonical" href="https:\/\/www\.perthhandymate\.com\.au\/about\/">/);
   assert.match(about, /<h1>About Ellis: Perth Handyman &amp; Maintenance Team<\/h1>/);
   assert.match(about, /140 St Georges Terrace, Perth WA 6000/);
-  assert.match(about, /href="tel:\+61403069685"/);
+  assert.match(about, /href="tel:\+611300838722"/);
   assert.match(about, /mailto:handyman\.maintenance\.au@outlook\.com/);
   assert.match(about, /<h3>Company Registration<\/h3>/);
   assert.match(about, /<strong>ABN<\/strong><br>96 645 821 745/);

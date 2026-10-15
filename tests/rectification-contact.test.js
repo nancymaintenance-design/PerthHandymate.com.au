@@ -163,7 +163,7 @@ for (const mode of ['disabled', 'handler blocked']) test(`without JavaScript (${
   await page.locator('[name="name"]').press('Enter');
   assert.equal(page.url(), base + '/contact/');
   if (mode === 'disabled') {
-    assert.ok(await page.locator('noscript a[href="tel:+61403069685"]').isVisible());
+    assert.ok(await page.locator('noscript a[href="tel:+611300838722"]').isVisible());
     assert.ok(await page.locator('noscript a[href="mailto:handyman.maintenance.au@outlook.com"]').isVisible());
   }
 });
