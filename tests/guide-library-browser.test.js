@@ -37,7 +37,7 @@ async function capture(page, name, fullPage = true) {
 // Breaks caught: billboard/two-column desktop layout, mobile overflow, square corners.
 test('guide library renders twelve compact cards in desktop, tablet and phone grids', async t => {
   const page = await pageFor(t);
-  for (const [width, columns] of [[1440, 3], [1920, 3], [900, 2], [390, 1]]) {
+  for (const [width, columns] of [[1440, 2], [1920, 2], [900, 2], [390, 1]]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto(base + '/guides/');
     const metrics = await page.evaluate(() => ({
@@ -55,6 +55,36 @@ test('guide library renders twelve compact cards in desktop, tablet and phone gr
     assert.ok(Math.max(...metrics.details.map(c => c.bottom)) - Math.min(...metrics.details.map(c => c.bottom)) <= 1);
     await capture(page, 'library-' + width);
   }
+});
+// Catches orphan last rows and unused tracks even when every card interior is compact.
+for (const width of [1440, 1920, 390]) test(`guide categories fill their actual rows while preserving cards and paired groups at ${width}`, async t => {
+  const page = await pageFor(t, { viewport: { width, height: 1000 } });
+  await page.goto(base + '/guides/');
+  const m = await page.evaluate(() => ({
+    overflow: document.documentElement.scrollWidth - innerWidth,
+    groups: [...document.querySelectorAll('.guide-category')].map(group => {
+      const grid = group.querySelector('.guide-card-grid'), box = group.getBoundingClientRect();
+      const cards = [...grid.children].map(card => {
+        const r = card.getBoundingClientRect();
+        return { x: r.x, y: r.y, right: r.right, bottom: r.bottom, visible: r.width > 0 && r.height > 0, href: card.querySelector('h3 a').getAttribute('href') };
+      });
+      const rows = [...new Set(cards.map(c => c.y))].map(y => cards.filter(c => c.y === y));
+      return { id: group.id, y: box.y, width: box.width, columns: getComputedStyle(grid).gridTemplateColumns.split(' ').length, rows: rows.map(row => row.length), cards };
+    }),
+    anchors: [...document.querySelectorAll('nav[aria-label="Guide categories"] a')].map(a => a.getAttribute('href')),
+  }));
+  assert.equal(m.overflow, 0);
+  assert.deepEqual(m.groups.map(g => g.rows), width === 390 ? [[1,1,1,1],[1,1,1,1],[1,1],[1],[1]] : [[2,2],[2,2],[2],[1],[1]], JSON.stringify(m.groups));
+  assert.deepEqual(m.groups.map(g => g.columns), width === 390 ? [1,1,1,1,1] : [2,2,2,1,1]);
+  assert.deepEqual(m.anchors, ['#repair-faults','#choosing-booking','#maintenance-planning','#rental-property','#local-service']);
+  const cards = m.groups.flatMap(g => g.cards);
+  assert.equal(cards.length, 12); assert.ok(cards.every(c => c.visible));
+  assert.equal(new Set(cards.map(c => c.href)).size, 12);
+  for (const card of cards) assert.equal((await page.request.get(new URL(card.href, base + '/guides/').href)).status(), 200);
+  if (width > 700) {
+    assert.equal(m.groups[3].y, m.groups[4].y, 'single-article categories remain paired');
+    assert.ok(Math.abs(m.groups[3].width - m.groups[4].width) < 1);
+  } else assert.ok(m.groups[4].y > m.groups[3].y, 'phone groups remain stacked');
 });
 // Breaks caught: fake filters, stale fragments or target/focus hidden by the sticky header.
 test('category links jump and focus real groups with and without JavaScript', async t => {

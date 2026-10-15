@@ -50,6 +50,8 @@
 .guide-category,.guide-prose section,.guide-related h2{scroll-margin-top:110px}
 .guide-library a:focus-visible,.guide-reading a:focus-visible,.guide-category:focus-visible,.guide-prose section:focus-visible{outline:3px solid var(--action);outline-offset:4px;border-radius:6px}
 .guide-category:target,.guide-prose section:target{outline:2px solid var(--orange);outline-offset:8px}
+/* Complete desktop rows for the maintained two- and four-article categories. */
+@media(min-width:1051px){.guide-library .guide-card-grid:has(>.guide-card:nth-child(2):last-child),.guide-library .guide-card-grid:has(>.guide-card:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:1050px){.guide-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-reading-layout{grid-template-columns:210px minmax(0,1fr);gap:28px}}
 @media(max-width:700px){.guide-groups{grid-template-columns:1fr}.guide-card-grid{grid-template-columns:1fr}.guide-category{padding:20px}.guide-card{padding:20px}.guide-reading-layout{display:block;padding-top:24px}.guide-contents{position:static;max-height:none;margin-bottom:28px}.guide-library .page-hero,.guide-reading .page-hero{padding-block:26px}.guide-library h1,.guide-reading .article .page-hero h1{font-size:2rem;max-width:none}.guide-introduction{font-size:1rem}.guide-category-nav a{flex:1 1 180px}.guide-category,.guide-prose section,.guide-related h2{scroll-margin-top:96px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.guide-library *,.guide-reading *{animation:none!important;transition:none!important}}
