@@ -47,7 +47,7 @@ for (const file of htmlFiles) {
   if (!logoPattern.test(source)) fail(`${rel(file)} does not use the official header logo`);
   if ((source.match(/class="brand-logo"/g) || []).length !== 1) fail(`${rel(file)} must contain exactly one header brand logo`);
   if ((source.match(/<span class="brand-name">Ellis Services Group<\/span>/g) || []).length !== 1) fail(`${rel(file)} must show the company name beside the header logo`);
-  if ((source.match(/href="tel:\+611300838722"/g) || []).length < 2) fail(`${rel(file)} must expose the approved phone destination in header and footer`);
+  if ((source.match(/href="tel:\+61403069685"/g) || []).length < 2) fail(`${rel(file)} must expose the confirmed phone link in header and footer`);
   if ((source.match(/0403 069 685/g) || []).length < 2) fail(`${rel(file)} must display the confirmed phone number in header and footer`);
   const prohibitedAssetDisclosure = /AI-generated|illustrative concept|not evidence|concept candidate|not (?:a |an )?real (?:customer|project|employee|provider|property|advice session)/i;
   if (prohibitedAssetDisclosure.test(source)) fail(`${rel(file)} retains a customer-visible material disclaimer phrase`);
@@ -94,7 +94,7 @@ if (!/<button\b(?=[^>]*\btype="submit")(?=[^>]*\bdisabled(?:\s|>))[^>]*>/.test(c
 if (/Local website candidate|No online form data is transmitted|does not transmit or store|No recipient or sending service is configured|not sent/i.test(contact)) fail('Contact page retains draft or non-delivery language');
 if (!contact.includes('name="postcode"')) fail('Contact page lacks the local location-prefill field');
 if (!contact.includes('name="phone"') || !contact.includes('data-error="phone"')) fail('Contact page lacks the required phone field and local error target');
-if ((contact.match(/href="tel:\+611300838722"/g) || []).length < 3) fail('Contact page lacks its dedicated approved phone destination');
+if ((contact.match(/href="tel:\+61403069685"/g) || []).length < 3) fail('Contact page lacks its dedicated confirmed phone link');
 
 const formConfig = fs.readFileSync(path.join(root, 'data/form-config.js'), 'utf8');
 if (!formConfig.includes("endpoint:'/api/contact'") || !formConfig.includes('enabled:true')) fail('Form delivery endpoint contract is incomplete');
