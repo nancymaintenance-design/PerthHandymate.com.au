@@ -17,11 +17,15 @@ The static build and preview require no dependency installation. The complete te
 Requires a current Node.js version with built-in `fetch` and the Node test runner (verified with Node 24). After the verification setup below, run these commands from the repository root:
 
 ```powershell
+node tools/render-price-guides.js
+node scripts/normalize-share-metadata.js
 node scripts/build-local.js
 node --test tests/*.test.js
 node tests/check-site.js
 node tools/five-category-coverage.js
 ```
+
+The price renderer keeps the owner-confirmed JSON unchanged and presents hourly, item, area and booking amounts as separate labelled rows. Unknown fees and inclusions are questions for the written quote. The share normalizer uses the reviewed title/description/canonical and an existing substantial image from the same page, or the existing logo where there is no such image. It changes only OG/Twitter head tags; rerunning it reports zero changed files. Run it after any content generator, then rebuild.
 
 The build recreates ignored `dist/` and normalizes internal index links. Rebuild after editing source. The preview serves only `dist/` and exits with build instructions when that output is missing.
 
@@ -33,17 +37,17 @@ The nine confirmed service regions are maintained in `data/content.js`. After an
 
 The twelve guide articles and categorized library are maintained in `data/guide-library.js` (scenario titles, introductions, decision sections, conclusions and relationships) and `data/guide-library-body.json` (the retained approved body, scenario FAQs and evidence links). Run `node tools/render-guide-library.js` after editing either source, then apply the heading policy and content dates above. The guide entries in `data/content.js` and `data/keyword-content-round.json` are metadata/legacy projections; their `editorialSource` points to the current body owner. The older non-service editorial adapter delegates all thirteen guide pages to this renderer, and the historical keyword generator finishes with it, so neither can replace the maintained articles with previous copy. Repeated rendering and policy application must change zero HTML pages. Guide layout lives in `assets/css/guide-library.css`; global brand/header tokens remain in `assets/css/global.css`.
 
-In a separate terminal, use an available port (the current keyword-gap candidate preview uses 4182):
+In a separate terminal, use an available port (the current rectification candidate preview uses 4281; reuse it if already running):
 
 ```powershell
-$env:PORT=4182
+$env:PORT=4281
 node preview-server.js
 ```
 
-Open [the local preview](http://127.0.0.1:4182/). The server binds only to `127.0.0.1`; stop your preview with `Ctrl+C`. Keep it running while executing the HTTP acceptance check:
+Open [the local preview](http://127.0.0.1:4281/). The server binds only to `127.0.0.1`; stop your preview with `Ctrl+C`. Keep it running while executing the HTTP acceptance check:
 
 ```powershell
-$env:ELLIS_PREVIEW_PORT=4182
+$env:ELLIS_PREVIEW_PORT=4281
 node tests/http-smoke.js
 ```
 
@@ -118,7 +122,7 @@ Canonical URLs, structured data, the sitemap and robots policy use the primary o
 
 Local slash/index redirects preserve the query string and stay on localhost. Explicit `/404.html` returns 200 with `noindex,follow`; unknown paths end with status 404 and the same recovery page. This preview does not validate Vercel host redirects, edge routing, response security/cache headers, production mail delivery or DNS.
 
-The current source checkout uses the real Git history of `nancymaintenance-design/PerthHandymate.com.au`, with latest verified remote main `18dd298dbc5ad48675c8a3b560216e85a689641e` (14 October 2026). Local work is on `codex/phm-audit-local-2026-10-13`; the 127-page candidate includes nine confirmed regions, eight supplementary task pages and three additional photographed examples beyond the unchanged 67-service priced catalogue. This is local work only and does not authorise a push or release.
+The current source checkout uses the real Git history of `nancymaintenance-design/PerthHandymate.com.au`, with verified remote-tracking main `0f52680dddf791920327b904c675aa5991db641c` at the start of 15 October rectification. Local work is on `codex/phm-rectification-2026-10-15`; the 127-page candidate includes nine confirmed regions, twelve guide articles, eight supplementary task pages and thirteen photographed examples (the ten originals followed by three additions) beyond the unchanged 67-service priced catalogue. This is local work only and does not authorise a push or release.
 
 The committed historical inventory contains 527 term IDs and routes in `docs/seo/content-round2/term-routing.json`; they remain intact. Current ownership for all 67 priced service pages and eight supplements, and visible evidence for all 527 original terms, are in [the content expansion record](docs/seo/content-expansion-2026-10-12/README.md). All 91 educational records identify service prose outside FAQ plus a relevant visible FAQ question and answer. The [earlier keyword-gap round](docs/seo/keyword-gap-round-2026-10-12/README.md) retains its four-supplement snapshot and 49 accepted actions as dated evidence. The older 31 owner clusters and four guide records describe the previous content round.
 

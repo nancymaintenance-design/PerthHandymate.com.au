@@ -8,6 +8,36 @@ const root = path.resolve(__dirname, '..');
 const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data/service-catalog.json'), 'utf8'));
 const priceGuidePath = path.join(root, 'data/service-price-guides.json');
 const cjkCharacters = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uac00-\ud7af]/u;
+const mixedRows = {
+  'air-conditioning': [['A$600-12,000', 'Installation project'], ['A$600-1,500', 'Split-installation labour']],
+  'blinds-and-curtains': [['A$75-125', 'Labour only per window'], ['A$140-290', 'Roller blind supply and installation per window']],
+  'cabinet-makers': [['A$50-75', 'Labour per hour'], ['A$100-600+', 'Per cabinet']],
+  electricians: [['A$80-130', 'Service fee'], ['A$80-100', 'Labour per hour; materials extra unless included']],
+  handymen: [['A$52-145', 'Labour per hour'], ['A$210-590', 'Half-day booking'], ['A$400-945', 'Full-day booking']],
+  'house-painters': [['A$25–$65', 'Exterior painting per m²'], ['A$3,500–$15,000', 'Typical full exterior']],
+  plasterers: [['A$15-90', 'Per m² depending on plaster type'], ['A$50', 'Perth plasterboard installation average per hour']],
+  plumbers: [['A$80-200', 'Labour per hour'], ['A$60-250', 'Call-out'], ['A$150-350', 'Emergency WA call-out'], ['A$180-320', 'Emergency WA labour per hour']],
+  'shower-screens': [['A$250-700', 'Screen supply'], ['A$45-65', 'Installation per hour; additional to supply']],
+  'window-installation': [['A$40-50', 'Installation labour per hour'], ['A$100-1,250', 'Selected window supply per m²']],
+};
+function priceRows(markup) {
+  return [...markup.matchAll(/<p class="price-guide-range"><strong>([^<]+)<\/strong><span>([^<]+)<\/span><\/p>/g)].map(m => [m[1].replaceAll('&amp;', '&'), m[2].replaceAll('&amp;', '&')]);
+}
+function assertRange(markup, guide) {
+  if (mixedRows[guide.slug]) assert.deepEqual(priceRows(markup), mixedRows[guide.slug], guide.slug + ': independent price bases');
+  else assert.ok(markup.includes(guide.rangeAud), guide.slug);
+}
+
+test('mixed hourly, item, area and booking prices are separate labelled rows without invented inclusion policies', () => {
+  for (const [slug, rows] of Object.entries(mixedRows)) {
+    const service = catalog.canonicalServices.find(s => s.slug === slug);
+    const page = fs.readFileSync(path.join(root, service.url, 'index.html'), 'utf8');
+    const markup = page.match(/<div class="shell price-guide"[\s\S]*?<\/div>/)[0];
+    assert.deepEqual(priceRows(markup), rows, slug);
+    assert.match(markup, /Ask us to confirm the applicable price basis and any fees or inclusions in your written quote\./, slug);
+    assert.doesNotMatch(markup, /GST included|no call-out|free travel|materials included/i, slug);
+  }
+});
 
 test('customer price modules keep research citations in data rather than displaying outside contractor links', () => {
   const pricing = JSON.parse(fs.readFileSync(priceGuidePath, 'utf8'));
@@ -33,7 +63,7 @@ test('confirmed Ellis price ranges preserve amounts and lead to an on-site writt
     if (guide.rangeAud) {
       assert.equal(guide.status, 'company-price-range');
       assert.ok(markup.includes('Ellis Services Group service price range'), service.slug);
-      assert.ok(markup.includes(guide.rangeAud), service.slug);
+      assertRange(markup, guide);
     }
   }
 });
@@ -93,10 +123,14 @@ test('company price ranges retain their factual background provenance', () => {
 });
 
 test('the price-guide compiler preserves the reviewed in-repository source data', () => {
-  const before = fs.readFileSync(priceGuidePath, 'utf8');
+  const before = fs.readFileSync(priceGuidePath);
   const result = spawnSync(process.execPath, [path.join(root, 'tools/m012-price-guides.js')], { encoding: 'utf8' });
   assert.equal(result.status, 0, result.stderr || result.stdout);
-  assert.equal(fs.readFileSync(priceGuidePath, 'utf8'), before);
+  assert.deepEqual(fs.readFileSync(priceGuidePath), before);
+  const first = catalog.canonicalServices.map(service => fs.readFileSync(path.join(root, service.url, 'index.html')));
+  const again = spawnSync(process.execPath, [path.join(root, 'tools/m012-price-guides.js')], { encoding: 'utf8' });
+  assert.equal(again.status, 0, again.stderr || again.stdout);
+  for (const [index, service] of catalog.canonicalServices.entries()) assert.deepEqual(fs.readFileSync(path.join(root, service.url, 'index.html')), first[index], service.slug + ': repeated rendering is stable');
 });
 
 test('every service detail page presents company price ranges while retaining research citations in data', () => {
@@ -119,7 +153,7 @@ test('every service detail page presents company price ranges while retaining re
     assert.ok(!page.includes('"@type":"Offer"') && !page.includes('"@type":"Product"'), `${service.slug} has no price structured data`);
     if (guide.status === 'company-price-range') {
       assert.ok(priceGuide.includes('Ellis Services Group service price range'), `${service.slug} company price context`);
-      assert.ok(priceGuide.includes(guide.rangeAud), `${service.slug} local range`);
+      assertRange(priceGuide, guide);
     } else {
       assert.ok(priceGuide.includes('Request your project price'), `${service.slug} direct next step`);
       assert.ok(!priceGuide.includes('A$'), `${service.slug} no invented range`);

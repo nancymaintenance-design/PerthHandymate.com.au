@@ -206,6 +206,8 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(contactPayload(values)),
+        }).catch(() => {
+          throw new Error('We could not send your enquiry. Your details are still here. Please try again or call 0403 069 685.');
         });
         const body = await response.json().catch(() => ({}));
         if (!response.ok) {

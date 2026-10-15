@@ -136,6 +136,20 @@ test('duplicate submits during a pending request send one JSON POST and restore 
   assert.match(await page.locator('[data-form-status]').innerText(), /could not send/i);
 });
 
+test('transport failure gives retry and telephone guidance, keeps entries and permits a successful retry', async t => {
+  const page = await open(t); await fill(page);
+  await page.route('**/api/contact', route => route.abort('failed'));
+  await page.locator('[type="submit"]').click();
+  await page.waitForFunction(() => !document.querySelector('[type="submit"]').disabled);
+  assert.match(await page.locator('[data-form-status]').innerText(), /details are still here.*try again.*call 0403 069 685/i);
+  assert.doesNotMatch(await page.locator('[data-form-status]').innerText(), /failed to fetch|networkerror/i);
+  for (const field of ['name', 'email', 'phone', 'postcode', 'message']) assert.equal(await page.locator(`[name="${field}"]`).inputValue(), valid[field], field);
+  await page.unroute('**/api/contact');
+  await page.locator('[type="submit"]').click();
+  await page.waitForFunction(() => document.querySelector('[data-form-status]').textContent.includes('Thanks'));
+  assert.equal(await page.locator('[name="email"]').inputValue(), '');
+});
+
 for (const mode of ['disabled', 'handler blocked']) test(`without JavaScript (${mode}) contact values cannot navigate into a GET URL`, async t => {
   const context = await browser.newContext({ javaScriptEnabled: mode !== 'disabled' });
   t.after(() => context.close());
