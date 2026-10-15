@@ -3,6 +3,8 @@
   if (typeof module === 'object' && module.exports) module.exports = api;
   root.EllisSite = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  const contactValidation = typeof module === 'object' && module.exports
+    ? require('./contact-validation.js') : globalThis.EllisContactValidation;
   const serviceMap = [
     { service: 'Electricians', route: 'services/electrical-plumbing-gas-air-conditioning/', terms: ['electrician', 'electricians', 'electrical', 'sparky', 'power point', 'switchboard'] },
     { service: 'Plumbing', route: 'services/electrical-plumbing-gas-air-conditioning/', terms: ['plumber', 'plumbing', 'tap', 'toilet', 'drain', 'hot water', 'gas fitting'] },
@@ -59,13 +61,7 @@
   }
 
   function validateContact(values) {
-    const errors = {};
-    if (!clean(values.name)) errors.name = 'Enter your name.';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean(values.email))) errors.email = 'Enter a valid email address.';
-    if (!clean(values.phone)) errors.phone = 'Enter a phone number.';
-    if (!clean(values.service)) errors.service = 'Choose a service area.';
-    if (!clean(values.message)) errors.message = 'Tell us what you need help with.';
-    return { valid: Object.keys(errors).length === 0, errors };
+    return contactValidation.validateContact(values);
   }
 
   function contactPayload(values) {
@@ -164,31 +160,44 @@
 
   function initContact(doc) {
     const form = doc.querySelector('[data-contact-form]');
-    if (!form) return;
+    if (!form || !contactValidation) return;
     const prefill = buildContactPrefill(window.location.search);
     if (prefill.service && [...form.elements.service.options].some((option) => option.value === prefill.service)) form.elements.service.value = prefill.service;
     if (prefill.location) form.elements.postcode.value = prefill.location;
     if (prefill.message) form.elements.message.value = prefill.message;
+    const submit = form.querySelector('[type="submit"]');
+    const status = form.querySelector('[data-form-status]');
+    let sending = false;
+    function showFieldErrors(errors) {
+      if (!errors || typeof errors !== 'object' || Array.isArray(errors)) return false;
+      let first;
+      ['name', 'email', 'phone', 'postcode', 'service', 'message'].forEach(name => {
+        const message = errors[name];
+        const field = form.elements.namedItem(name);
+        const feedback = form.querySelector(`[data-error="${name}"]`);
+        if (!field || !feedback || typeof message !== 'string' || !message.trim() || message.length > 200) return;
+        field.setAttribute('aria-invalid', 'true');
+        feedback.textContent = message;
+        first = first || field;
+      });
+      if (first) first.focus();
+      return Boolean(first);
+    }
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
+      if (sending) return;
       const values = Object.fromEntries(new FormData(form));
       const result = validateContact(values);
       form.querySelectorAll('[data-error]').forEach((node) => { node.textContent = ''; });
       form.querySelectorAll('[aria-invalid="true"]').forEach((node) => node.removeAttribute('aria-invalid'));
-      const status = form.querySelector('[data-form-status]');
       status.textContent = '';
       if (!result.valid) {
-        Object.entries(result.errors).forEach(([name, message]) => {
-          const field = form.elements[name];
-          field.setAttribute('aria-invalid', 'true');
-          form.querySelector(`[data-error="${name}"]`).textContent = message;
-        });
-        form.querySelector('[aria-invalid="true"]').focus();
+        showFieldErrors(result.errors);
+        status.textContent = 'Please check the highlighted details and try again.';
         return;
       }
-      const submit = form.querySelector('[type="submit"]');
-      if (submit.disabled) return;
       const previousLabel = submit.textContent;
+      sending = true;
       submit.disabled = true;
       submit.textContent = 'Sending…';
       status.textContent = 'Sending your enquiry…';
@@ -199,7 +208,15 @@
           body: JSON.stringify(contactPayload(values)),
         });
         const body = await response.json().catch(() => ({}));
-        if (!response.ok) throw new Error(body.error || 'We could not send your enquiry just now. Please call 0403 069 685.');
+        if (!response.ok) {
+          const fieldsShown = response.status === 400 && showFieldErrors(body && body.errors);
+          if (fieldsShown) {
+            status.textContent = 'Please check the highlighted details and try again.';
+            if (window.EllisAnalytics) window.EllisAnalytics.contactResult(false);
+            return;
+          }
+          throw new Error(typeof body?.error === 'string' ? body.error : 'We could not send your enquiry just now. Please call 0403 069 685.');
+        }
         if (window.EllisAnalytics) window.EllisAnalytics.contactResult(true);
         status.textContent = body.message || 'Thanks. Our customer service team will call you about your request.';
         form.reset();
@@ -207,10 +224,12 @@
         if (window.EllisAnalytics) window.EllisAnalytics.contactResult(false);
         status.textContent = error.message || 'We could not send your enquiry just now. Please call 0403 069 685.';
       } finally {
+        sending = false;
         submit.disabled = false;
         submit.textContent = previousLabel;
       }
     });
+    submit.disabled = false;
   }
 
   function initNav(doc) {
@@ -230,19 +249,6 @@
     });
   }
 
-  function initCategoryImages(doc) {
-    doc.querySelectorAll('[data-service-image]').forEach((slot) => {
-      const source = slot.dataset.serviceImage;
-      if (!source || typeof Image === 'undefined') return;
-      const image = new Image();
-      image.onload = () => {
-        slot.style.backgroundImage = `linear-gradient(90deg, rgba(8,29,46,.74), rgba(8,29,46,.12)), url("${source}")`;
-        slot.dataset.loaded = 'true';
-      };
-      image.src = source;
-    });
-  }
-
   if (typeof document !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
       initNav(document);
@@ -250,7 +256,6 @@
       initPreservedLinks(document);
       initLocalContext(document);
       initContact(document);
-      initCategoryImages(document);
     });
   }
 

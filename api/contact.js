@@ -1,4 +1,5 @@
 const RECIPIENT = 'handyman.maintenance.au@outlook.com';
+const { validateContact } = require('../assets/js/contact-validation.js');
 const ALLOWED_FIELDS = new Set(['name', 'email', 'phone', 'postcode', 'service', 'message', 'website']);
 const PRODUCTION_ORIGINS = new Set([
   'https://perthhandymate.com.au',
@@ -28,20 +29,6 @@ function isJson(headers) {
   return typeof contentType === 'string' && /^application\/json(?:\s*;|$)/i.test(contentType);
 }
 
-function validString(value, min, max) {
-  return typeof value === 'string' && clean(value).length >= min && clean(value).length <= max;
-}
-
-function isValidEnquiry(body) {
-  if (!body || Object.keys(body).some((key) => !ALLOWED_FIELDS.has(key))) return false;
-  if (!['name', 'email', 'phone', 'service', 'message'].every((key) => typeof body[key] === 'string')) return false;
-  if (body.postcode !== undefined && typeof body.postcode !== 'string') return false;
-  if (body.website !== undefined && typeof body.website !== 'string') return false;
-  if (!validString(body.name, 2, 100) || !validString(body.phone, 6, 40) || !validString(body.service, 2, 160) || !validString(body.message, 10, 3000)) return false;
-  if (clean(body.postcode || '').length > 100) return false;
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean(body.email)) && clean(body.email).length <= 254;
-}
-
 function escapeHtml(value) {
   return value.replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 }
@@ -60,7 +47,7 @@ function buildEmail(body, from) {
     `Email: ${enquiry.email}`,
     `Phone: ${enquiry.phone}`,
     `Suburb or postcode: ${enquiry.postcode || 'Not provided'}`,
-    `Service area: ${enquiry.service}`,
+    `Type of work: ${enquiry.service}`,
     '',
     'Job details:',
     enquiry.message,
@@ -70,7 +57,7 @@ function buildEmail(body, from) {
     ['Email', enquiry.email],
     ['Phone', enquiry.phone],
     ['Suburb or postcode', enquiry.postcode || 'Not provided'],
-    ['Service area', enquiry.service],
+    ['Type of work', enquiry.service],
   ].map(([label, value]) => `<p><strong>${label}:</strong> ${escapeHtml(value)}</p>`).join('');
   return {
     from,
@@ -96,7 +83,9 @@ function createContactHandler({ env = process.env, fetch: request = globalThis.f
     if (!isJson(requestObject.headers)) return respond(response, 400, { error: 'Please check the highlighted details and try again.' });
 
     const body = readBody(requestObject.body);
-    if (!isValidEnquiry(body)) return respond(response, 400, { error: 'Please check the highlighted details and try again.' });
+    if (!body || typeof body !== 'object' || Array.isArray(body) || Object.keys(body).some(key => !ALLOWED_FIELDS.has(key)) || (body.website !== undefined && typeof body.website !== 'string')) return respond(response, 400, { error: 'Please check the highlighted details and try again.' });
+    const validation = validateContact(body);
+    if (!validation.valid) return respond(response, 400, { error: 'Please check the highlighted details and try again.', errors: validation.errors });
     if (clean(body.website || '')) return respond(response, 200, { ok: true, message: 'Thanks. Our customer service team will call you about your request.' });
 
     const apiKey = env.RESEND_API_KEY;

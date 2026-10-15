@@ -208,7 +208,7 @@ for (const viewport of [{ width: 390, height: 844 }, { width: 1440, height: 900 
     assert.equal(await page.locator('[name="message"]').inputValue(), 'Service request: Clothesline repair');
     assert.equal(await page.locator('[name="service"]').inputValue(), 'Handyman, interiors & appliance repairs');
     const fields = await page.locator('[data-contact-form] input,[data-contact-form] select,[data-contact-form] textarea').evaluateAll(nodes => nodes.map(e => [e.name, e.type, e.required, e.labels?.length || 0]));
-    assert.deepEqual(fields, [['website','text',false,0],['name','text',false,1],['email','email',false,1],['phone','tel',false,1],['postcode','text',false,1],['service','select-one',false,1],['message','textarea',false,1]]);
+    assert.deepEqual(fields, [['website','text',false,0],['name','text',true,1],['email','email',true,1],['phone','tel',true,1],['postcode','text',false,1],['service','select-one',true,1],['message','textarea',true,1]]);
   });
   for (const service of ['handymen', 'clothesline-repairs-installation']) test(`built ${service} section navigation resolves below header at ${viewport.width}`, async t => {
     const page = await pageAt(t, `/services/handyman-interiors-appliance-repairs/${service}/`, viewport);

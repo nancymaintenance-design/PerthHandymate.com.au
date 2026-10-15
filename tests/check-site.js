@@ -87,7 +87,10 @@ if (!css.includes('@media(max-width:1100px){.header-call strong{display:none}}')
 
 const contact = fs.readFileSync(path.join(root, 'contact/index.html'), 'utf8');
 if (!/<form[^>]+data-contact-form[^>]+novalidate/.test(contact)) fail('Contact form must use local novalidate behavior');
-if (/<form[^>]+action=/.test(contact)) fail('Contact form unexpectedly has a submission action');
+const contactForm = contact.match(/<form\b[^>]*data-contact-form[^>]*>([\s\S]*?)<\/form>/)?.[0] || '';
+const contactFormTag = contactForm.match(/^<form\b[^>]*>/)?.[0] || '';
+if (!/\bmethod="post"/i.test(contactFormTag) || !/\baction="\/api\/contact"/.test(contactFormTag)) fail('Contact form must POST only to the local contact endpoint');
+if (!/<button\b(?=[^>]*\btype="submit")(?=[^>]*\bdisabled(?:\s|>))[^>]*>/.test(contactForm)) fail('Contact form must begin with a disabled submit button');
 if (/Local website candidate|No online form data is transmitted|does not transmit or store|No recipient or sending service is configured|not sent/i.test(contact)) fail('Contact page retains draft or non-delivery language');
 if (!contact.includes('name="postcode"')) fail('Contact page lacks the local location-prefill field');
 if (!contact.includes('name="phone"') || !contact.includes('data-error="phone"')) fail('Contact page lacks the required phone field and local error target');

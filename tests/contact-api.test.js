@@ -99,7 +99,10 @@ test('rejects malformed or incomplete JSON enquiries without calling Resend', as
   await handler(request(validEnquiry({ email: 'not-an-email', message: 'short' })), response);
 
   assert.equal(response.statusCode, 400);
-  assert.deepEqual(response.body, { error: 'Please check the highlighted details and try again.' });
+  assert.deepEqual(response.body, {
+    error: 'Please check the highlighted details and try again.',
+    errors: { email: 'Enter a valid email address of at most 254 characters.', message: 'Enter job details between 10 and 3000 characters.' },
+  });
   assert.equal(calls.length, 0);
 });
 

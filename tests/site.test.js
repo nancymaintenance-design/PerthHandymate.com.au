@@ -271,9 +271,9 @@ test('rejects missing contact fields, phone and malformed email without sending 
     valid: false,
     errors: {
       name: 'Enter your name.',
-      email: 'Enter a valid email address.',
+      email: 'Enter a valid email address of at most 254 characters.',
       phone: 'Enter a phone number.',
-      service: 'Choose a service area.',
+      service: 'Choose a type of work.',
       message: 'Tell us what you need help with.',
     },
   });
