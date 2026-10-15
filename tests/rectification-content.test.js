@@ -7,6 +7,58 @@ const root = path.resolve(__dirname, '..');
 const read = f => fs.readFileSync(path.join(root, f), 'utf8');
 const hm = 'services/handyman-interiors-appliance-repairs/handymen/index.html';
 
+// Catches migrated synonyms being appended beside an existing answer to the same decision.
+test('migrated repair FAQs merge demonstrated overlaps and retain unique safety details',()=>{
+  const cases=[
+    ['services/roofing-gutters-exterior/gutter-services/index.html',/overflow.*cleaning|overflow.*leaves/i,[/outlet size/i,/light or heavy rain/i,/drainage/i]],
+    ['services/doors-windows-glass-screens/fly-screens/index.html',/replace.*mesh.*frame/i,[/corners/i,/spline/i,/security screen/i]],
+    ['services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/index.html',/repair.*replacement|repaired rather than replaced/i,[/compatible parts/i,/winds or folds/i,/purchases/i]],
+    ['services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/index.html',/loose clothesline bracket|coming loose from brickwork/i,[/unstable/i,/retensioning/i,/wall or post/i]],
+  ];
+  for(const [file,intent,details] of cases){
+    const matches=[...read(file).matchAll(/<details\b[^>]*><summary>(.*?)<\/summary>([\s\S]*?)<\/details>/g)].filter(m=>intent.test(m[1]));
+    assert.equal(matches.length,1,file+' has one answer for '+intent);
+    for(const detail of details)assert.match(matches[0][2],detail,file+' retains useful distinction');
+  }
+});
+
+// Catches unmapped migration, alias duplication, or dropped distinctive approval/material facts.
+test('all migrated intents resolve once and merged owners retain their practical distinctions',()=>{
+  const data=require('../data/service-guide-faq.json'),mapping=require('../data/service-guide-faq-owners.json');
+  const sources=Object.values(data).flat().map(s=>s.match(/<summary>(.*?)<\/summary>/)[1]);
+  assert.equal(sources.length,26);assert.deepEqual(Object.keys(mapping.questionOwners).sort(),sources.sort());
+  for(const [route,items] of Object.entries(data)){
+    const html=read(route.slice(1)+'index.html'),questions=[...html.matchAll(/<summary>(.*?)<\/summary>/g)].map(m=>m[1]);
+    for(const item of items){const source=item.match(/<summary>(.*?)<\/summary>/)[1],owner=mapping.questionOwners[source];assert.equal(questions.filter(q=>q===owner).length,1,source+' has one current owner');if(source!==owner)assert.ok(!questions.includes(source),source+' alias not appended');}
+  }
+  const checks=[
+    ['Can you provide regular property maintenance?',[/approval/i,/specialist/i,/one-off/i]],
+    ['Can you repair or replace damaged skirting boards and architraves?',[/profile/i,/matching timber/i,/moisture/i,/finish/i]],
+    ['What needs checking before a letterbox post is installed?',[/boundaries/i,/underground services/i,/old post/i]],
+    ['Can loose or damaged timber palings be replaced individually?',[/posts and rails/i,/shared boundary/i,/approval/i]],
+    ['Can a sagging timber side gate be repaired without replacement?',[/after rain/i,/pool gates/i,/powered gates/i,/latch alone/i]],
+    ['Should damaged boards be addressed before oiling?',[/unstable/i,/supports/i,/screws/i,/structural support/i]],
+    ['What do you need to assess gutter cleaning on a single-storey home?',[/safe access/i,/do not climb/i,/separate quote/i]],
+    ['Can you quote for cat-damaged flyscreens before a rental inspection?',[/approve/i,/access/i,/timing/i]],
+    ['Can I arrange maintenance while I am overseas?',[/authorised/i,/local contact/i,/completion photos/i,/extra repairs/i]]
+  ];
+  const all=Object.keys(data).map(route=>read(route.slice(1)+'index.html')).join('');
+  for(const [question,patterns] of checks){const answer=[...all.matchAll(/<details\b[^>]*><summary>(.*?)<\/summary>([\s\S]*?)<\/details>/g)].find(m=>m[1]===question)?.[2];assert.ok(answer,question);for(const pattern of patterns)assert.match(answer,pattern,question);}
+});
+
+// Catches duplicate related-list containers and loss of useful destinations during merging.
+test('guide related choices use one list and preserve every unique destination',()=>{
+  const bodies=require('../data/guide-library-body.json');
+  const old=JSON.parse(execFileSync('git',['show','6159aecc8176df5dd783c412930c7cb1843f17f6:data/guide-library-body.json'],{cwd:root,encoding:'utf8'}));
+  const lists=s=>[...s.matchAll(/<section\b[^>]*><h2>Related (?:Repair Services &amp; Guides|repair services)<\/h2>[\s\S]*?<\/section>/g)].map(m=>m[0]);
+  const links=s=>[...new Set([...s.matchAll(/href="([^"]+)"/g)].map(m=>m[1]))].sort();
+  for(const slug of Object.keys(bodies)){
+    assert.ok(lists(bodies[slug].bodyHtml).length<=1,slug+' duplicate related headings');
+    assert.deepEqual(links(lists(bodies[slug].bodyHtml).join('')),links(lists(old[slug].bodyHtml).join('')),slug+' useful destinations retained');
+    assert.ok(!bodies[slug].bodyHtml.includes('>the related small-repair explanation</a>'),slug+' distinguish linked topics');
+  }
+});
+
 // Catches a deep diagnostic answer returning inside a task-selection card.
 test('handyman cards separate concise selection from detailed safe-scope advice', () => {
   const h = read(hm), grid = h.match(/<div class="handyman-task-grid">([\s\S]*?)<\/div>/)[1];

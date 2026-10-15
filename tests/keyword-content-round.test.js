@@ -14,14 +14,19 @@ test('booking FAQ stays focused and each research scenario retains a guide or se
  const door=fs.readFileSync(path.join(root,'guides/sticking-doors-windows-repair-guide/index.html'),'utf8');
  assert.ok(door.includes('My apartment balcony door is jammed. What should I tell Ellis?'),'sliding-door scenario belongs in door guide');
  const moved=require('../data/service-guide-faq.json');
+ const mapping=require('../data/service-guide-faq-owners.json');
  const guides=[...renderedGuides(),...Object.keys(moved).map(route=>({page:route.slice(1)+'index.html',html:fs.readFileSync(path.join(root,route.slice(1),'index.html'),'utf8')}))];
  for(const cluster of content.clusters){
-  const owners=guides.filter(guide=>guide.html.includes(`<summary>${escape(cluster.scenario[0])}</summary>`));
+  const scenarioQuestion=mapping.questionOwners[cluster.scenario[0]]||cluster.scenario[0];
+  const scenarioAnswer=mapping.mergedAnswers[scenarioQuestion]||cluster.scenario[1];
+  const owners=guides.filter(guide=>guide.html.includes(`<summary>${escape(scenarioQuestion)}</summary>`));
   assert.equal(owners.length,1,`${cluster.owner} detailed scenario has one current owner`);
-  assert.ok(owners[0].html.includes(`<p>${escape(cluster.scenario[1])}</p>`),`${cluster.owner} scenario answer is rendered`);
+  assert.ok(owners[0].html.includes(`<p>${escape(scenarioAnswer)}</p>`),`${cluster.owner} current scenario answer is rendered`);
   if(owners[0].page.startsWith('guides/'))assert.ok(owners[0].html.includes(`<h3>${escape(cluster.heading)}</h3>`),`${cluster.owner} topic heading is rendered`);
   // The committed renderer gives O30 a specific electrical-work answer.
-  const intentAnswer=cluster.owner==='O30'?'A power point replacement is electrical work, separate from TV bracket fitting. Tell Ellis what needs changing so we can confirm the electrical work, applicable licensing requirements and quote before work starts.':cluster.answer;
+  const sourceIntent=Object.values(moved).flat().find(item=>item.includes(`<p>${escape(cluster.answer)}</p>`)||item.includes(`<p>${cluster.answer}</p>`));
+  const intentQuestion=sourceIntent?.match(/<summary>(.*?)<\/summary>/)[1];
+  const intentAnswer=mapping.mergedAnswers[mapping.questionOwners[intentQuestion]]||(cluster.owner==='O30'?'A power point replacement is electrical work, separate from TV bracket fitting. Tell Ellis what needs changing so we can confirm the electrical work, applicable licensing requirements and quote before work starts.':cluster.answer);
   assert.ok(owners[0].html.includes(`<p>${escape(intentAnswer)}</p>`),`${cluster.owner} intent answer is rendered`);
   if(owners[0].page.startsWith('guides/'))assert.ok(owners[0].html.includes(`href="../../${landing(cluster).replace(/index\.html$/,'')}"`),`${cluster.owner} guide links to its landing owner`);
   const planning=fs.readFileSync(path.join(root,landing(cluster)),'utf8').match(/<(section|aside)\b[^>]*id="repair-planning-guides"[\s\S]*?<\/\1>/)?.[0];
@@ -30,9 +35,9 @@ test('booking FAQ stays focused and each research scenario retains a guide or se
   if(owners[0].page.startsWith('guides/'))assert.ok(planning?.includes(guideRoute)||linkedViaHub,`${cluster.owner} landing links to its guide owner directly or through the guide hub`);
   else assert.ok(fs.readFileSync(path.join(root,'guides/seasonal-home-maintenance-australia/index.html'),'utf8').includes('/'+guideRoute),`${cluster.owner} seasonal checklist links to the service owner`);
   const faq=[...owners[0].html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(match=>JSON.parse(match[1])).find(block=>block['@type']==='FAQPage');
-  const scenario=faq.mainEntity.filter(question=>question.name===cluster.scenario[0]);
+  const scenario=faq.mainEntity.filter(question=>question.name===scenarioQuestion);
   assert.equal(scenario.length,1,`${cluster.owner} scenario has one structured FAQ owner`);
-  assert.equal(scenario[0].acceptedAnswer.text,cluster.scenario[1],`${cluster.owner} structured answer matches committed source`);
+  assert.equal(scenario[0].acceptedAnswer.text,scenarioAnswer,`${cluster.owner} structured answer matches maintained merged answer`);
  }
 });
 test('guide FAQ structured data matches all visible questions without duplicate accordion sections',()=>{

@@ -76,12 +76,10 @@
         {
           "path": "/services/handyman-interiors-appliance-repairs/handymen/",
           "anchor": "sliding-door-repairs",
-          "heading": "Internal Door & Sliding Door Repairs",
+          "heading": "Door & Sliding Door Repairs",
           "observedText": "Door & Sliding Door Repairs Repair sticking doors, hinges and latches. Glass sliders, fire-rated and security doors need their own handling and product checks. Door repair options →",
           "contextualLinks": [
-            "/services/doors-windows-glass-screens/door-installation/",
-            "/services/doors-windows-glass-screens/sliding-door-repairs/",
-            "../../../guides/sticking-doors-windows-repair-guide/"
+            "/services/doors-windows-glass-screens/door-repairs/"
           ]
         }
       ],
@@ -302,11 +300,10 @@
         {
           "path": "/services/handyman-interiors-appliance-repairs/handymen/",
           "anchor": "shelf-installation",
-          "heading": "Shelf Installation & Wall Fixings",
+          "heading": "Shelves, Mirrors & Pictures",
           "observedText": "Shelves, Mirrors & Pictures Fit shelves, mirrors and pictures to suitable wall support. Share the product and intended load; TV brackets and electrical alterations need separate checks. Wall fixing options →",
           "contextualLinks": [
-            "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
-            "/services/handyman-interiors-appliance-repairs/furniture-assembly/"
+            "/services/handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging/"
           ]
         }
       ],
@@ -334,7 +331,7 @@
           "heading": "Clothesline Repairs & Installation",
           "observedText": "Clothesline Repairs & Installation Restring lines, repair brackets or fit a supplied unit. An unstable frame needs support repairs; extra tension alone will not fix it. Clothesline repair options →",
           "contextualLinks": [
-            "../../../guides/seasonal-home-maintenance-australia/"
+            "/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/"
           ]
         }
       ],
@@ -362,7 +359,7 @@
           "heading": "Clothesline Repairs & Installation",
           "observedText": "Clothesline Repairs & Installation Restring lines, repair brackets or fit a supplied unit. An unstable frame needs support repairs; extra tension alone will not fix it. Clothesline repair options →",
           "contextualLinks": [
-            "../../../guides/seasonal-home-maintenance-australia/"
+            "/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/"
           ]
         }
       ],
@@ -387,11 +384,10 @@
         {
           "path": "/services/handyman-interiors-appliance-repairs/handymen/",
           "anchor": "pet-door-installation",
-          "heading": "Pet Door Installation: Dogs & Cats",
+          "heading": "Pet Door Installation",
           "observedText": "Pet Door Installation Fit dog doors and cat flaps in suitable panels. Timber, mesh, glass and security screens need different product and fitting checks. Pet door suitability →",
           "contextualLinks": [
-            "/services/doors-windows-glass-screens/glass-glaziers/",
-            "../../../guides/sticking-doors-windows-repair-guide/"
+            "#pet-flaps-and-panel-type"
           ]
         }
       ],
@@ -416,11 +412,10 @@
         {
           "path": "/services/handyman-interiors-appliance-repairs/handymen/",
           "anchor": "pet-door-installation",
-          "heading": "Pet Door Installation: Dogs & Cats",
+          "heading": "Pet Door Installation",
           "observedText": "Pet Door Installation Fit dog doors and cat flaps in suitable panels. Timber, mesh, glass and security screens need different product and fitting checks. Pet door suitability →",
           "contextualLinks": [
-            "/services/doors-windows-glass-screens/glass-glaziers/",
-            "../../../guides/sticking-doors-windows-repair-guide/"
+            "#pet-flaps-and-panel-type"
           ]
         }
       ],
@@ -445,15 +440,10 @@
         {
           "path": "/services/handyman-interiors-appliance-repairs/handymen/",
           "anchor": "cabinet-repairs",
-          "heading": "Cupboard Hinge & Wardrobe Door Repairs",
+          "heading": "Cupboard & Wardrobe Repairs",
           "observedText": "Cupboard & Wardrobe Repairs Repair loose hinges, drawer runners and wardrobe tracks. Panel condition and compatible hardware determine whether a local repair is suitable. Cabinet repair options →",
           "contextualLinks": [
-            "/services/doors-windows-glass-screens/sliding-door-repairs/",
-            "/projects/kitchen-cabinet-hinge-repair/",
-            "../../../guides/cupboard-hinges-drawer-runners-repair-guide/",
-            "/services/handyman-interiors-appliance-repairs/cabinet-makers/",
-            "/services/handyman-interiors-appliance-repairs/furniture-assembly/",
-            "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/"
+            "/services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/"
           ]
         }
       ],
@@ -478,15 +468,10 @@
         {
           "path": "/services/handyman-interiors-appliance-repairs/handymen/",
           "anchor": "cabinet-repairs",
-          "heading": "Cupboard Hinge & Wardrobe Door Repairs",
+          "heading": "Cupboard & Wardrobe Repairs",
           "observedText": "Cupboard & Wardrobe Repairs Repair loose hinges, drawer runners and wardrobe tracks. Panel condition and compatible hardware determine whether a local repair is suitable. Cabinet repair options →",
           "contextualLinks": [
-            "/services/doors-windows-glass-screens/sliding-door-repairs/",
-            "/projects/kitchen-cabinet-hinge-repair/",
-            "../../../guides/cupboard-hinges-drawer-runners-repair-guide/",
-            "/services/handyman-interiors-appliance-repairs/cabinet-makers/",
-            "/services/handyman-interiors-appliance-repairs/furniture-assembly/",
-            "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/"
+            "/services/handyman-interiors-appliance-repairs/cabinet-wardrobe-repairs/"
           ]
         }
       ],
@@ -511,10 +496,10 @@
         {
           "path": "/services/handyman-interiors-appliance-repairs/handymen/",
           "anchor": "grab-rail-installation",
-          "heading": "Grab Rail Installation & Support Checks",
+          "heading": "Grab Rail Installation",
           "observedText": "Grab Rail Installation Fit a suitable rail at an assessed position with structural support. Placement advice, funding approval and installation are separate decisions. Rail and support checks →",
           "contextualLinks": [
-            "../../../guides/when-home-maintenance-needs-a-licensed-trade/"
+            "#older-residents-and-support-rails"
           ]
         }
       ],
@@ -539,11 +524,10 @@
         {
           "path": "/services/handyman-interiors-appliance-repairs/handymen/",
           "anchor": "pressure-cleaning",
-          "heading": "Pressure Cleaning for Patios & Paving",
+          "heading": "Patio & Paving Cleaning",
           "observedText": "Patio & Paving Cleaning Clean suitable accessible patios and paving with a method matched to the finish, joints and drainage. Roof and asbestos cleaning are excluded. Cleaning safety checks →",
           "contextualLinks": [
-            "/services/roofing-gutters-exterior/pavers/",
-            "../../../guides/seasonal-home-maintenance-australia/"
+            "#surface-cleaning-and-material-risk"
           ]
         }
       ],

@@ -36,6 +36,19 @@ async function record(page, name, metrics) {
   await page.screenshot({ path: path.join(output, name + '.png') });
 }
 
+// Catches deep authority/access prose stretching the shorter scenario overview.
+for(const width of [1440,1920,390]) test(`scenario overview has compact rows and separate detailed owners at ${width}`,async t=>{
+  const page=await pageAt(t,{width,height:1000});await page.goto(base+handymen);
+  const m=await page.evaluate(()=>{
+    const grid=document.querySelector('.handyman-scenes'),cards=[...grid.children].map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,bottom:r.bottom,height:r.height,blank:r.bottom-e.lastElementChild.getBoundingClientRect().bottom};});
+    const rows=[...new Set(cards.map(c=>c.y))].map(y=>cards.filter(c=>c.y===y));
+    return {columns:getComputedStyle(grid).gridTemplateColumns.split(' ').length,cards,rowTails:rows.flatMap(r=>r.map(c=>Math.max(...r.map(x=>x.bottom))-c.bottom)),deepInside:!!grid.querySelector('#strata-maintenance,#vacate-repairs'),overflow:document.documentElement.scrollWidth-innerWidth};
+  });
+  await page.locator('.handyman-scenes').scrollIntoViewIfNeeded();await record(page,`scenes-${width}`,m);
+  assert.equal(m.columns,width===390?1:2);assert.equal(m.cards.length,4);assert.equal(m.deepInside,false);assert.equal(m.overflow,0);
+  assert.ok(m.cards.every(c=>c.blank<=40),JSON.stringify(m));assert.ok(m.rowTails.every(v=>v<=50),JSON.stringify(m));
+});
+
 // Breaks caught: oversized hero headings delay service discovery below the first desktop viewport.
 for (const viewport of [{ width: 1440, height: 1000 }, { width: 1920, height: 1080 }]) {
   test(`hero hierarchy and service discovery at ${viewport.width}`, async t => {
@@ -104,7 +117,7 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 1920, height: 10
     await record(page, `prose-${viewport.width}`, m);
     assert.ok(m.prose.length > 3);
     assert.ok(m.prose.every(p => p.width <= 850 && !p.clipped), JSON.stringify(m));
-    assert.ok(m.grid >= 1100); assert.equal(m.intro, 2); assert.equal(m.scene, 3);
+    assert.ok(m.grid >= 1100); assert.equal(m.intro, 2); assert.equal(m.scene, 2);
   });
 }
 

@@ -29,10 +29,28 @@ function consolidateService(html) {
   const faq = fs.existsSync(faqFile) ? JSON.parse(fs.readFileSync(faqFile, 'utf8'))[route] : null;
   if (faq) {
     html = html.replace(/<section[^>]*id="maintenance-task-questions"[\s\S]*?<\/section>/, '');
-    const maintained = new Map(faq.map(item => [plain(item.match(/<summary>(.*?)<\/summary>/s)[1]), item]));
-    html = html.replace(/<details\b[^>]*><summary>(.*?)<\/summary>[\s\S]*?<\/details>/gs, (item, question) => maintained.get(plain(question)) || item);
+    const owners = require('../data/service-guide-faq-owners.json');
+    const escape = s => s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+    const maintained = new Map(faq.map(item => {
+      const source = plain(item.match(/<summary>(.*?)<\/summary>/s)[1]), question = owners.questionOwners[source];
+      if (!question) throw new Error(`Missing maintained FAQ owner: ${source}`);
+      const answer = owners.mergedAnswers[question];
+      return [question, answer ? `<details><summary>${escape(question)}</summary><p>${escape(answer)}</p></details>` : item.replace(/<summary>.*?<\/summary>/s, `<summary>${escape(question)}</summary>`)];
+    }));
+    const seen = new Set();
+    html = html.replace(/<details\b[^>]*><summary>(.*?)<\/summary>[\s\S]*?<\/details>/gs, (item, question) => {
+      const source = plain(question), owner = owners.questionOwners[source] || owners.existingAliases[source] || source;
+      if (!maintained.has(owner)) return item;
+      if (seen.has(owner)) return '';
+      seen.add(owner); return maintained.get(owner);
+    });
+    html = html.replace(/<section\b([^>]*)>([\s\S]*?)<\/section>/g, (section, attrs, body) => {
+      attrs = attrs.replace(' id="service-task-questions"', '');
+      if (!/\bid=/.test(attrs) && [...body.matchAll(/<summary>(.*?)<\/summary>/gs)].some(m => maintained.has(plain(m[1])))) body = body.replace('<div class="accordion-list">', '<div class="accordion-list" id="service-task-questions">');
+      return `<section${attrs}>${body}</section>`;
+    });
     const existing = new Set([...html.matchAll(/<summary>(.*?)<\/summary>/gs)].map(m => plain(m[1])));
-    const items = faq.filter(item => !existing.has(plain(item.match(/<summary>(.*?)<\/summary>/s)[1])));
+    const items = [...maintained].filter(([question]) => !existing.has(question)).map(([,item]) => item);
     if (items.length) html = html.replace('</main>', `<section class="section shell service-questions" id="maintenance-task-questions"><h2>Maintenance and repair questions</h2><div class="accordion-list">${items.join('')}</div></section></main>`);
   }
   return syncFaq(html);

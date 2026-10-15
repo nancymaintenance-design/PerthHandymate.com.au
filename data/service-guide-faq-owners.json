@@ -1,0 +1,46 @@
+{
+  "questionOwners": {
+    "Who can manage ongoing home maintenance in Perth?": "Can you provide regular property maintenance?",
+    "Can I arrange maintenance while I am overseas?": "Can I arrange maintenance while I am overseas?",
+    "Can I replace just the mesh in my flyscreen frame?": "Can you replace torn mesh without replacing the frame?",
+    "Can you quote for cat-damaged flyscreens before a rental inspection?": "Can you quote for cat-damaged flyscreens before a rental inspection?",
+    "Can one damaged section of skirting board be replaced?": "Can you repair or replace damaged skirting boards and architraves?",
+    "Can you repair skirting gaps left after new flooring?": "Can you repair skirting gaps left after new flooring?",
+    "Can a broken clothesline be repaired rather than replaced?": "Should I repair the old unit or buy a replacement?",
+    "Can you assess a wall-mounted clothesline coming loose from brickwork?": "Can a loose clothesline bracket be repaired?",
+    "Who can install a freestanding letterbox in Perth?": "What needs checking before a letterbox post is installed?",
+    "Can you mount a garden hose reel on a brick wall?": "Can you mount a garden hose reel on a brick wall?",
+    "Who can assess minor repairs to a Perth pergola?": "Who can assess minor repairs to a Perth pergola?",
+    "Can you assess damaged eaves sheets on an older house?": "Can you assess damaged eaves sheets on an older house?",
+    "Can a handyman clean a small patio in Perth?": "Can a handyman clean a small patio in Perth?",
+    "Can paving cleaning be combined with a rental courtyard tidy-up?": "Can paving cleaning be combined with a rental courtyard tidy-up?",
+    "Can you replace a damaged laminate board or vinyl plank?": "Can you replace a damaged laminate board or vinyl plank?",
+    "What needs checking before a letterbox post is installed?": "What needs checking before a letterbox post is installed?",
+    "Why do outdoor wall fixings loosen over time?": "Why do outdoor wall fixings loosen over time?",
+    "Why is laminate lifting at its edges?": "Why is laminate lifting at its edges?",
+    "Should moisture damage be addressed before floorboard replacement?": "Should moisture damage be addressed before floorboard replacement?",
+    "Can pressure cleaning damage pavers or grout?": "Can pressure cleaning damage pavers or grout?",
+    "Can one damaged fence panel be replaced in Perth?": "Can loose or damaged timber palings be replaced individually?",
+    "Can you repair a side gate that will not latch after rain?": "Can a sagging timber side gate be repaired without replacement?",
+    "Can a few rotten deck boards be replaced without rebuilding the deck?": "Can a few rotten deck boards be replaced without rebuilding the deck?",
+    "Can you assess deck screws lifting in an outdoor entertaining area?": "Should damaged boards be addressed before oiling?",
+    "Can a handyman clean gutters on a single storey house in Perth?": "What do you need to assess gutter cleaning on a single-storey home?",
+    "Why is the gutter above my front door still overflowing after cleaning?": "Why do my gutters still overflow after cleaning?"
+  },
+  "existingAliases": {
+    "Is gutter overflow always caused by leaves?": "Why do my gutters still overflow after cleaning?"
+  },
+  "mergedAnswers": {
+    "Can you provide regular property maintenance?": "Discuss the property, priorities, task list and preferred interval with Ellis. We agree the approval process and visit arrangements, separating routine work from repairs needing specialist assessment. We confirm whether repeat scheduling suits the proposed work; a one-off enquiry does not establish an ongoing attendance commitment.",
+    "Can you replace torn mesh without replacing the frame?": "Yes, where the existing frame and fittings are suitable for reuse. We check the frame, corners, mesh-retaining spline and fit before recommending remeshing or a replacement screen. An ordinary insect screen is not a security screen; remeshing does not upgrade its security performance.",
+    "Can you repair or replace damaged skirting boards and architraves?": "A damaged section may be replaced while retaining the rest if the profile, material and available matching timber are suitable. We check the join, surrounding condition and intended paint or finish. Tell Ellis whether you need local repair or new trim, and mention moisture or soft timber so the cause is assessed before replacement.",
+    "Should I repair the old unit or buy a replacement?": "Frame condition, supports, compatible parts and the extent of damage affect the choice. Ellis checks the line, brackets and moving mechanism before quoting restringing, hardware repair or replacement. Tell us whether the line sags, snaps or the unit no longer winds or folds. Leave further product purchases until the model and mounting requirements are confirmed.",
+    "Can a loose clothesline bracket be repaired?": "Ellis checks the bracket, anchors, frame, product requirements and supporting wall or post before confirming a repair. Damaged support or a corroded frame may change the options. Stop using an unstable unit and describe which mounting point has moved. Retensioning the line alone does not address a failing wall fixing.",
+    "What needs checking before a letterbox post is installed?": "Ellis checks the proposed position, boundaries, access, ground conditions, underground services and supplied product's support requirements before digging. Tell us about known service locations and whether an old post must be removed. The assessment and quote identify the agreed installation work rather than relying on appearance.",
+    "Can loose or damaged timber palings be replaced individually?": "Individual boards or a damaged section may be repairable when the remaining posts and rails are sound. Rot or storm damage in the supports may need broader work. Ellis checks the material, damage and access; confirm approval arrangements for a shared boundary before work proceeds.",
+    "Can a sagging timber side gate be repaired without replacement?": "Ellis checks the gate frame, hinges, latch and supporting posts, including movement after rain. Adjustment may suit sound components; decay or movement can require replacement of affected parts. Moving the latch alone may not correct a dropping frame or post. Pool gates and powered gates have separate safety requirements.",
+    "Should damaged boards be addressed before oiling?": "Yes. Tell Ellis where boards or screws have lifted and avoid an unstable area. We check the timber, fixings and supports before agreeing repairs. Oiling cannot restore structural support or stop a loose board moving; surface preparation and coating follow any required repairs.",
+    "What do you need to assess gutter cleaning on a single-storey home?": "Tell Ellis the building height, roof type, known access limits, leaf build-up, overflow and affected downpipes. Safe access and gutter condition need assessment even on a single-storey home. Existing photos are optional; do not climb onto the roof to prepare an enquiry. Cleaning and repair of damaged drainage components are separate quote items.",
+    "Why do my gutters still overflow after cleaning?": "Leaves are only one possible cause. Blocked outlets, outlet size, downpipe problems, gutter falls or damaged sections may need attention. Tell Ellis where overflow occurs, whether it happens in light or heavy rain and what cleaning changed. We assess the drainage path before choosing further clearing or repair."
+  }
+}

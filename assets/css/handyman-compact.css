@@ -13,7 +13,8 @@
 .handyman-task-grid article>:last-child{margin-bottom:0}
 @media(min-width:951px){.handyman-task-grid article:last-child:nth-child(3n+1){grid-column:1/-1}.handyman-task-grid article:last-child:nth-child(3n+1) p{max-width:76ch}}
 .handyman-related{font-size:.94rem;margin:24px 0 0}
-.handyman-scenes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.handyman-scenes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:start}
+.handyman-scenes~article{max-width:760px;margin-top:32px}
 .handyman-scenes h3{font-size:1.15rem;margin-bottom:10px}
 .handyman-scenes p{margin-bottom:0;color:var(--slate)}
 .handyman-compact .price-guide{margin-top:28px}

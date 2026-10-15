@@ -122,3 +122,18 @@ test('all 67 catalogue pages and four supplements have explicit current intent o
   assert.equal(owner('HM0460'), '/services/electrical-plumbing-gas-air-conditioning/electricians/', 'new power point remains electrical work');
   assert.equal(owner('HM0054'), '/guides/sticking-doors-windows-repair-guide/', 'informational fault question retains its guide');
 });
+
+// Catches stale evidence that claims a heading or destination absent from its card.
+test('ten consolidated card records describe their actual heading and contextual destinations', () => {
+  const ids=['G03','G12','G13','G14','G15','G16','G17','G18','G19','G20'];
+  for(const action of load('action-coverage.json').actions.filter(a=>ids.includes(a.id))){
+    const e=action.evidence[0],html=read(e.path);
+    const card=html.match(new RegExp('<article[^>]*id="'+e.anchor+'"[^>]*>([\\s\\S]*?)<\\/article>'))[1];
+    const heading=card.match(/<h3>(.*?)<\/h3>/)[1].replaceAll('&amp;','&');
+    assert.equal(e.heading,heading,action.id+' current heading');
+    const normalize=href=>{const u=new URL(href,'https://www.perthhandymate.com.au'+e.path);return u.pathname+u.search+u.hash;};
+    const links=[...card.matchAll(/href="([^"]+)"/g)].map(m=>normalize(m[1]));
+    assert.deepEqual(e.contextualLinks.map(normalize),links,action.id+' actual contextual links');
+    for(const link of links){const u=new URL(link,'https://www.perthhandymate.com.au');if(u.hash)assert.ok(read(u.pathname).includes(`id="${u.hash.slice(1)}"`),action.id+' live fragment');}
+  }
+});

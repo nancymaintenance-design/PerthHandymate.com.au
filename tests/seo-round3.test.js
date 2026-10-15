@@ -35,7 +35,8 @@ test('all 31 committed research owners retain source content and a current scena
   assert.deepEqual(data.clusters.map(cluster => cluster.owner).sort(), Array.from({ length: 31 }, (_, i) => `O${String(i + 1).padStart(2, '0')}`));
   for (const cluster of data.clusters) {
     assert.ok(cluster.heading && cluster.answer && cluster.scenario.length === 2, cluster.owner);
-    const question = cluster.scenario[0].replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+    const mapped = require('../data/service-guide-faq-owners.json').questionOwners[cluster.scenario[0]] || cluster.scenario[0];
+    const question = mapped.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
     assert.equal(guidePages.filter(html => html.includes(`<summary>${question}</summary>`)).length, 1, `${cluster.owner} scenario has one guide owner`);
   }
 });
