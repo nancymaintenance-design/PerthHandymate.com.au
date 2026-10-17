@@ -943,8 +943,10 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   assert.match(privacy, /call you about the job/i);
   assert.match(contact, /name="website"/);
   assert.match(contact, /Not sure — please advise/);
-  assert.match(formConfig, /endpoint:'\/api\/contact'/);
-  assert.match(formConfig, /enabled:true/);
+  const formSandbox = { window: {} };
+  require('node:vm').runInNewContext(formConfig, formSandbox);
+  assert.equal(formSandbox.window.ELLIS_FORM_DELIVERY.endpoint, '/api/contact');
+  assert.equal(formSandbox.window.ELLIS_FORM_DELIVERY.enabled, true);
   assert.match(client, /fetch\(form\.dataset\.contactEndpoint \|\| '\/api\/contact'/);
   assert.doesNotMatch(client, /Please call 0403 069 685 or email our team to discuss your request\./);
 

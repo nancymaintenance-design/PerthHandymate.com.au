@@ -5,24 +5,24 @@ Static website candidate for Ellis Services Group. The stated service market is 
 ## Package contents
 
 - 127 static HTML pages, including the branded `404.html`; 126 URLs in the sitemap
-- Shared CSS, JavaScript, images and public data files
+- Shared CSS, compiled JavaScript, authoritative TypeScript sources, images and public data files
 - `robots.txt`, `sitemap.xml` and `vercel.json`
 - Portable reproducible build, local preview server and verification scripts
 - An existing `api/contact.js` serverless handler, separate from the static preview
 
-The static build and preview require no dependency installation. The complete test suite additionally requires Git history, Playwright and a Chromium browser as described below; these are development tools, not production website dependencies. Build the published static inputs before previewing.
+Use Node 24 and `npm ci` for the strictly checked TypeScript build. The complete test suite additionally requires Git history, Playwright and a Chromium browser as described below; these are development tools, not visitor dependencies. Build the published static inputs before previewing. The compatibility-only `node scripts/build-local.js` entry can still consume committed generated JavaScript without installing dependencies.
 
 ## Run locally
 
 ### English and Simplified Chinese
 
-The local and Vercel build share `node scripts/build-local.js`. It emits the existing English URLs and matching Simplified Chinese pages under `/zh/`, with a language link after Contact Us. Both versions share images, layout, telephone links, form API and mail delivery.
+The local and Vercel build share `npm run build`, which strictly checks and compiles TypeScript before calling `node scripts/build-local.js`. It emits the existing English URLs and matching Simplified Chinese pages under `/zh/`, with a language link after Contact Us. Both versions share images, layout, telephone links, form API and mail delivery.
 
 English source pages and current content generators own structure. Shared Chinese copy is maintained in `locales/zh-Hans.json`; non-service content lives in `locales/parts/content.json`, and service content in `locales/parts/servicesA.json` and `servicesB.json`. Reviewed terminology/headlines in `locales/editorial-overrides.json` take precedence: search the exact English source sentence to identify its owner before updating it. Browser feedback is maintained in `locales/ui.zh-Hans.json`. Never hand-edit `dist/zh`.
 
 Every subsequent change must be reviewed in both languages. A new English sentence with no Chinese entry fails the build instead of leaking English into the Chinese site. Existing English keys identify the exact source wording: editing that wording requires a corresponding new Chinese translation. Rebuild once to regenerate both page sets, reciprocal hreflang, canonicals and the bilingual sitemap. Run `node --test tests/bilingual.test.js` and exercise Chinese search/form messages when changing interactions. The one-time translation authoring runtime is outside the source repository and is not needed for builds or by visitors.
 
-The current bilingual implementation is for local review only. Push to GitHub/Vercel only after the user's approval of this version.
+The bilingual implementation was approved and published on 17 October. Every subsequent release still requires the user's authorization for that release; the 17 October TypeScript migration is explicitly authorized for production.
 
 ### 16 October page-clarity maintenance
 
@@ -153,3 +153,28 @@ The committed historical inventory contains 527 term IDs and routes in `docs/seo
 
 ## Local verification record
 Current evidence: [12 October five-category coverage](docs/seo/content-expansion-2026-10-12/coverage.md), plus Task 1 and Task 2 reports under `../reports/content-expansion-local-2026-10-12/`. Run `node tools/five-category-coverage.js` to validate the current excerpt locations. The [earlier keyword-gap record](docs/seo/keyword-gap-round-2026-10-12/README.md), its reports under `../reports/content-gap-local-2026-10-12/`, the [10 October round-one local record](docs/seo/2026-10-10-round1-local-verification.md) and older September reports remain dated historical evidence. Their 114-page or 99/15 approval counts do not describe the expanded candidate and do not grant deployment authorisation.
+# TypeScript runtime maintenance (2026-10-17)
+
+The authoritative executable website sources are now under `typescript/`: all
+browser scripts and browser data, the contact API, production build/localisation
+helpers, guide data and preview server. Their generated `.js` compatibility
+artifacts retain the existing public URLs and CommonJS entry points. Edit the
+corresponding `.ts` source, not a generated `.js` file. HTML, CSS, JSON, translations
+and images remain in their existing formats and locations; historical editorial
+utilities and test harnesses remain JavaScript, not visitor runtime.
+
+Use Node 24 and `npm ci`, then `npm run typecheck`, `npm run build` and `npm test`.
+`npm run build` strictly checks TypeScript before emitting compatibility artifacts
+and building both languages. To check for stale generated files without rewriting
+them, run `npm run compile -- --check`. The compiler bootstrap is
+`typescript/compile.mts`; it runs with Node's built-in type stripping and invokes
+the pinned TypeScript compiler before emitting any runtime file. Browser files
+remain classic scripts, not ES modules, so no HTML changes are needed.
+
+The earlier `node scripts/build-local.js` command still builds from committed
+compatibility artifacts (including test fixtures). After editing TypeScript, use
+`npm run build` instead. Vercel's production command is `npm run build`; publish
+only through the authorized GitHub → Vercel pipeline. After a legacy content
+generator updates a generated browser data file, port its reviewed changes to the
+matching TypeScript source before compiling; compilation deliberately overwrites
+generated artifacts. Never restore old wording from a historical generator.

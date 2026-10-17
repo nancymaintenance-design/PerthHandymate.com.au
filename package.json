@@ -1,0 +1,18 @@
+{
+  "name": "perth-handymate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual Ellis website with TypeScript runtime sources",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "compile": "node --experimental-strip-types typescript/compile.mts",
+    "build": "npm run compile && node scripts/build-local.js",
+    "test": "npm run compile && node --test --test-concurrency=1 tests/*.test.js",
+    "preview": "node preview-server.js"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.0",
+    "typescript": "5.9.3"
+  }
+}

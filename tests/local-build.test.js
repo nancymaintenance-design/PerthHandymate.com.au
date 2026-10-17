@@ -23,7 +23,7 @@ test('local build recreates the published site from clean source inputs', t => {
   const result = buildLocal(root);
   assert.equal(result.status, 0, result.stderr || result.stdout);
   const config = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
-  assert.equal(config.buildCommand, 'node scripts/build-local.js', 'local and production builds use the same bilingual pipeline');
+  assert.equal(config.buildCommand, 'npm run build', 'production checks TypeScript before using the same bilingual pipeline');
   const expectedEntries = [...fs.readdirSync(root).filter(file=>/\.(?:html|ico|png)$/.test(file)),
     'about','areas','assets','contact','data','faq','guides','privacy','projects','robots.txt','services','site.webmanifest','sitemap.xml','zh'];
   assert.deepEqual(fs.readdirSync(output).sort(), expectedEntries.sort(), 'publication inputs match vercel.json');
@@ -32,7 +32,7 @@ test('local build recreates the published site from clean source inputs', t => {
   }
   assert.equal(fs.readFileSync(path.join(output, 'build-probe.html'), 'utf8'), '<a href="services/?source=test#repairs">Services</a>');
   assert.ok(fs.readFileSync(path.join(output,'zh/contact/index.html'),'utf8').includes('lang="zh-Hans"'), 'Chinese pages are generated in the same build');
-  for (const entry of ['.git', '.env.local', '.env.example', 'docs', 'tests', 'scripts', 'tools', 'locales', 'AGENTS.md', 'README.md', 'vercel.json']) {
+  for (const entry of ['.git', '.env.local', '.env.example', 'docs', 'tests', 'scripts', 'tools', 'locales', 'typescript', 'tsconfig.json', 'package.json', 'package-lock.json', 'AGENTS.md', 'README.md', 'vercel.json']) {
     assert.ok(!fs.existsSync(path.join(output, entry)), `${entry} is not published`);
   }
 

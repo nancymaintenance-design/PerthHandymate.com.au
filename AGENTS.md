@@ -1,5 +1,12 @@
 # Perth Handymate 中英双语维护
 
+## 2026-10-17 TypeScript 维护约定
+
+- 用户当次明确要求“不调整界面，全网站改为 TypeScript，随后直接上线”。可执行的网站源码以 `typescript/` 中对应 `.ts` 为准；`.js` 为保持既有脚本 URL、CommonJS API 和测试入口的编译兼容产物，不要手工改写。HTML/CSS/JSON/图片保留原格式；历史编辑工具和测试工具不是访客运行时代码，暂保留 JavaScript。
+- 使用 Node 24，先 `npm ci`；修改后 `npm run typecheck`、`npm run build`、`npm test`。`npm run compile -- --check` 检查编译产物是否过期；Vercel 构建入口为 `npm run build`。严格类型检查失败时不得发布，不能用 ts-nocheck 绕过。
+- 历史工具若改写 data/content.js、data/guide-library.js、data/search-catalog.js，须先将审核后的改动同步到 `typescript/data/` 对应源码，再编译；不得用旧生成器恢复已废弃内容。
+- 本轮只迁移实现语言，不修改页面、文案、布局、图片、服务网址、电话、邮箱和表单行为。以后发布仍需当次用户授权。
+
 遵守 E:/Ellis-Services/AGENTS.md。2026-10-16 用户要求全站中英双语，后续修改必须同步两种语言。
 
 - 英文维持原网址；简体中文对应 `/zh/`。所有公开内容页包含对应语言切换入口，英文导航“中文服务”紧跟 Contact Us。

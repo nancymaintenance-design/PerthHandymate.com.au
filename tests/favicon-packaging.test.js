@@ -3,7 +3,9 @@ const {createBuildFixture,buildLocal}=require('./helpers/local-build');
 const root=path.resolve(__dirname,'..');
 test('production build publishes the four legacy root icon URLs as valid image files',t=>{
  const fixture=createBuildFixture(t);
- assert.equal(JSON.parse(fs.readFileSync(path.join(root,'vercel.json'),'utf8')).buildCommand,'node scripts/build-local.js');
+ assert.equal(JSON.parse(fs.readFileSync(path.join(root,'vercel.json'),'utf8')).buildCommand,'npm run build');
+ const scripts=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).scripts;
+ assert.equal(scripts.build,'npm run compile && node scripts/build-local.js');
  const result=buildLocal(fixture);
  assert.equal(result.status,0,result.stderr||result.stdout);
  const temporary=path.join(fixture,'dist');
