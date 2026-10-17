@@ -1,6 +1,6 @@
 # Current five-category evidence — 12 October 2026
 
-527 original records in original order: 163 core, 91 intent questions, 91 distilled, 91 scenarios and 91 educational. This round supersedes current task ownership only; historical routing and supplied metrics remain untouched. All 91 educational records cite service prose outside FAQ and the relevant question/answer in one visible details item. Related translations share a real English explanation. Boundary means a truthful limitation answer, not an advertised capability.
+527 original records in original order: 163 core, 91 intent questions, 91 distilled, 91 scenarios and 91 educational. Current evidence locations were updated on 16 October 2026 after the user requested a clearer bilingual layout. Historical routing and supplied metrics remain untouched. Educational records cite service prose plus either a directly relevant FAQ answer or an explicit explanatory card/disclosure; informational disclosures are not advertised as FAQ schema. Removed duplicate homepage pricing points to the existing service quote explanation. Related translations share the same explanation. Boundary means a truthful limitation answer, not an advertised capability.
 
 Evidence is checked against source HTML by tools/five-category-coverage.js. The checker verifies visibility, fragment scope and FAQ pairing; editorial review must still judge relevance. Scenarios are planning guidance, not additional completed cases. No current ranking, search volume, traffic, funding, registration or AI-citation result is inferred.
 

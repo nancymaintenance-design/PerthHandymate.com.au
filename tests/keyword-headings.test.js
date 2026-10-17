@@ -13,17 +13,32 @@ test('guide hub prominent headings identify Perth handyman and repair intent', (
   assert.equal(first, 'Repair Faults & Fixings');
   assert.match(html, /aria-label="Guide categories"/);
 });
-test('every service H1 names the Perth market rather than only a generic action', () => {
+test('service categories match their selection cards and detail H1s retain the Perth market', () => {
+  const vm=require('node:vm'),sandbox={window:{}};vm.runInNewContext(read('data/content.js'),sandbox);
+  const categories=new Map(sandbox.window.ELLIS_CONTENT.services.map(category=>[category.slug,category.title]));
+  assert.equal(categories.size,9,'nine comparable service categories');
+  const hub=read('services/index.html');
   const walk = dir => fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(dir, e.name)) : e.name.endsWith('.html') ? [path.join(dir, e.name)] : []);
   for (const file of walk(path.join(root, 'services'))) {
     const html = fs.readFileSync(file, 'utf8');
-    assert.match(text(html.match(/<h1[^>]*>(.*?)<\/h1>/)[1]), /Perth/, file);
+    const relative=path.relative(path.join(root,'services'),file).replaceAll('\\','/');
+    const heading=text(html.match(/<h1[^>]*>(.*?)<\/h1>/)[1]);
+    const category=relative.match(/^([^/]+)\/index\.html$/)?.[1];
+    if(categories.has(category)){
+      assert.equal(heading,categories.get(category),file+' category heading matches its selection label');
+      const card=[...hub.matchAll(/<h3><a[^>]*href="([^"]+)"[^>]*>(.*?)<\/a><\/h3>/g)].find(match=>new URL(match[1],'https://www.perthhandymate.com.au/services/').pathname==='/services/'+category+'/');
+      assert.ok(card,file+' category is discoverable from service hub');
+      assert.equal(text(card[2]),heading,file+' hub and category use the same name');
+    }else assert.match(heading, /Perth/, file);
   }
 });
-test('all twelve guide title/H1 pairs identify the local repair or maintenance subject', () => {
+test('all twelve guide H1s match scenario-led cards without repeated city names', () => {
   for (const folder of fs.readdirSync(path.join(root, 'guides'), { withFileTypes: true }).filter(e => e.isDirectory())) {
     const html = read(`guides/${folder.name}/index.html`);
-    for (const tag of ['title', 'h1']) assert.match(text(html.match(new RegExp(`<${tag}[^>]*>(.*?)</${tag}>`))[1]), /Perth/i, folder.name + ': ' + tag);
+    const guide=require('../data/guide-library').guides.find(g=>g.slug===folder.name);
+    const h1=text(html.match(/<h1[^>]*>(.*?)<\/h1>/)[1]);
+    assert.equal(h1,guide.title);assert.doesNotMatch(h1,/Perth/i);
+    assert.match(text(html.match(/<title>(.*?)<\/title>/)[1]),/repair|maintenance|handyman|quote/i);
   }
 });
 test('key service headings retain the keyword-map repair objects and actions', () => {

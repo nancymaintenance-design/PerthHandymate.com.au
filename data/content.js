@@ -250,9 +250,9 @@ window.ELLIS_CONTENT={
   "guides": [
     {
       "slug": "how-to-find-the-right-home-repairer",
-      "title": "A List of Small Home Repairs: Choosing a Handyman in Perth",
+      "title": "A List of Small Home Repairs: Choosing a Handyman",
       "desc": "Turn several small faults into a clear brief and match each task to the right capability.",
-      "metaTitle": "A List of Small Home Repairs: Choosing a Handyman in Perth | Ellis",
+      "metaTitle": "A List of Small Home Repairs: Choosing a Handyman | Ellis",
       "metaDescription": "Turn several small faults into a clear brief and match each task to the right capability.",
       "read": "5 min",
       "sections": [
@@ -298,9 +298,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "when-home-maintenance-needs-a-licensed-trade",
-      "title": "Damaged Cabinet under a Leaking Sink: Handyman or Licensed Trade in Perth?",
+      "title": "Damaged Cabinet under a Leaking Sink: Handyman or Licensed Trade?",
       "desc": "Separate the visible repair from plumbing, electrical and other task-specific requirements.",
-      "metaTitle": "Damaged Cabinet under a Leaking Sink: Handyman or Licensed Trade in Perth? | Ellis",
+      "metaTitle": "Damaged Cabinet under a Leaking Sink: Handyman or Licensed Trade? | Ellis",
       "metaDescription": "Separate the visible repair from plumbing, electrical and other task-specific requirements.",
       "read": "5 min",
       "sections": [
@@ -346,9 +346,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "prepare-before-home-repair-quote",
-      "title": "Moving In with Flat-pack Furniture: Handyman Quotes in Perth",
+      "title": "Moving In with Flat-pack Furniture: Handyman Quotes",
       "desc": "Bring furniture models, missing-part notes and a mixed repair list into a comparable written scope.",
-      "metaTitle": "Moving In with Flat-pack Furniture: Handyman Quotes in Perth | Ellis",
+      "metaTitle": "Moving In with Flat-pack Furniture: Handyman Quotes | Ellis",
       "metaDescription": "Bring furniture models, missing-part notes and a mixed repair list into a comparable written scope.",
       "read": "5 min",
       "sections": [
@@ -394,9 +394,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "photos-and-clear-scope-for-home-repairs",
-      "title": "Curtain Rod Pulled from the Wall: Describing a Perth Repair",
+      "title": "Curtain Rod Pulled from the Wall: Describing a Repair",
       "desc": "Describe loose supports and damaged surfaces clearly, with or without safe existing photographs.",
-      "metaTitle": "Curtain Rod Pulled from the Wall: Describing a Perth Repair | Ellis",
+      "metaTitle": "Curtain Rod Pulled from the Wall: Describing a Repair | Ellis",
       "metaDescription": "Describe loose supports and damaged surfaces clearly, with or without safe existing photographs.",
       "read": "5 min",
       "sections": [
@@ -442,9 +442,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "home-repair-priorities",
-      "title": "Repairs before an Open Home: Perth Property Priorities",
+      "title": "Repairs before an Open Home: Property Priorities",
       "desc": "Prioritise safety, active damage and useful function before presentation repairs or photography.",
-      "metaTitle": "Repairs before an Open Home: Perth Property Priorities | Ellis",
+      "metaTitle": "Repairs before an Open Home: Property Priorities | Ellis",
       "metaDescription": "Prioritise safety, active damage and useful function before presentation repairs or photography.",
       "read": "5 min",
       "sections": [
@@ -490,9 +490,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "seasonal-home-maintenance-australia",
-      "title": "After Rain: A Seasonal Home Maintenance Checklist for Perth",
+      "title": "After Rain: A Seasonal Home Maintenance Checklist",
       "desc": "Track weather-related changes and distinguish routine upkeep from drainage, timber or structural repairs.",
-      "metaTitle": "After Rain: A Seasonal Home Maintenance Checklist for Perth | Ellis",
+      "metaTitle": "After Rain: A Seasonal Home Maintenance Checklist | Ellis",
       "metaDescription": "Track weather-related changes and distinguish routine upkeep from drainage, timber or structural repairs.",
       "read": "5 min",
       "sections": [
@@ -538,9 +538,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "property-manager-maintenance-coordination",
-      "title": "Repairs after a Rental Inspection: Perth Maintenance Guide",
+      "title": "Repairs after a Rental Inspection: Maintenance Guide",
       "desc": "Coordinate a mixed inspection or vacate list from tenant report to permission, access and handover.",
-      "metaTitle": "Repairs after a Rental Inspection: Perth Maintenance Guide | Ellis",
+      "metaTitle": "Repairs after a Rental Inspection: Maintenance Guide | Ellis",
       "metaDescription": "Coordinate a mixed inspection or vacate list from tenant report to permission, access and handover.",
       "read": "5 min",
       "sections": [
@@ -586,9 +586,9 @@ window.ELLIS_CONTENT={
     },
     {
       "slug": "understanding-service-areas-and-postcode-checks",
-      "title": "Small Repairs in a Perth Unit or Apartment: Finding a Handyman Near You",
+      "title": "Small Repairs in a Unit or Apartment: Finding a Handyman Near You",
       "desc": "Use your suburb, repair details and building access to confirm the right local assessment.",
-      "metaTitle": "Small Repairs in a Perth Unit or Apartment: Finding a Handyman Near You | Ellis",
+      "metaTitle": "Small Repairs in a Unit or Apartment: Finding a Handyman Near You | Ellis",
       "metaDescription": "Use your suburb, repair details and building access to confirm the right local assessment.",
       "read": "5 min",
       "sections": [

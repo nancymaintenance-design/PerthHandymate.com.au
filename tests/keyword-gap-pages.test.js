@@ -33,7 +33,8 @@ test('four focused service destinations have contextual discovery, useful FAQs a
     const html = read(route);
     const page = extractPage(html, route);
     assert.deepEqual(auditPage(html, route).issues, [], route);
-    assert.ok(page.title && /<meta name="description" content="[^"]+"/.test(html) && page.faqCount >= 3, `${route}: title, description and practical FAQs`);
+    const usefulStructure=route==='/services/property-maintenance/'?['maintenance-plans','included-services','work-process','charging-standards','aftercare','contact-team'].every(id=>html.includes(`id="${id}"`)):page.faqCount>=3;
+    assert.ok(page.title && /<meta name="description" content="[^"]+"/.test(html) && usefulStructure, `${route}: title, description and focused service information`);
     assert.ok(new Set(pages.filter(p => p.path !== route && p.contextualInternalLinks.some(link => link.path === route)).map(p => p.path)).size >= 3, `${route}: fewer than three contextual inbound pages`);
     assert.ok(page.contextualInternalLinks.some(link => link.path.startsWith('/guides/')), `${route}: supporting advice`);
     const contacts = [...html.matchAll(/href="([^"]*contact\/\?[^"]*)"/g)].map(m => new URL(m[1].replaceAll('&amp;', '&'), origin + route));

@@ -1,0 +1,15 @@
+/* The ten service summaries remain the visual entry point. */
+.handyman-compact .handyman-task-grid { margin-bottom: 2rem; }
+.handyman-compact .handyman-task-grid > article { border-top: 3px solid var(--eucalypt); }
+.handyman-compact .handyman-topic-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; max-width: none; margin: 1.5rem 0 2rem; }
+.handyman-compact details.handyman-topic-card { border: 1px solid var(--line, #d8d8d2); border-radius: .45rem; background: var(--surface, #fff); margin: 1rem 0; align-self: start; }
+.handyman-compact .handyman-topic-grid > details { margin: 0; }
+.handyman-compact .section > details.handyman-topic-card { max-width: var(--reading); }
+.handyman-compact .handyman-topic-card > summary { padding: 1.2rem 1.35rem; font-size: 1.05rem; font-weight: 700; cursor: pointer; line-height: 1.5; }
+.handyman-compact .handyman-topic-card > summary > h3 { display: inline; margin: 0; font: inherit; }
+.handyman-compact .handyman-topic-card > summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.handyman-compact .handyman-topic-card[open] > summary { border-bottom: 1px solid var(--line, #d8d8d2); }
+.handyman-compact .handyman-topic-content { padding: .3rem 1.35rem 1.25rem; }
+.handyman-compact .handyman-topic-content h4 { margin-top: 1.4rem; }
+.handyman-compact [id] { scroll-margin-top: 7rem; }
+@media (max-width: 700px) { .handyman-compact .handyman-topic-grid { grid-template-columns: 1fr; } }

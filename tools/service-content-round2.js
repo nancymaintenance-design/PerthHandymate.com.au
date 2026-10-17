@@ -103,6 +103,8 @@ function editServiceHtml(html, spec) {
     html = html.replace(main,edited).replace(/<meta name="description" content="[^"]*">/,'<meta name="description" content="Explore Perth handyman repairs, interior maintenance, garden care and specialist property services. Ellis assesses the work on site and provides a written quote.">');
   }
   html = require('./normalize-service-clarity').normalizeServiceClarity(html);
+  if(html.includes('rel="canonical" href="https://www.perthhandymate.com.au/services/property-maintenance/"'))return require('./compact-property-page')(html);
+  if(spec.kind==='category')return require('./service-directory-clarity').category(html,spec.slug);
   return spec.kind === 'hub' ? require('./consolidate-content').consolidateDirectory(html) : html;
 }
 module.exports = { editServiceHtml, replaceFaq, text };

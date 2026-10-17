@@ -1,0 +1,21 @@
+{
+  "Please check the highlighted details and try again.": "请检查标出的信息，然后重试。",
+  "Sending…": "正在发送…",
+  "Sending your enquiry…": "正在发送您的咨询…",
+  "Thanks. Our customer service team will call you about your request.": "已收到您的咨询。客服团队会致电与您确认需求。",
+  "We could not send your enquiry. Your details are still here. Please try again or call 0403 069 685.": "咨询暂未发送成功，您填写的信息已保留。请重试，或致电 0403 069 685。",
+  "We could not send your enquiry just now. Please call 0403 069 685.": "咨询暂未发送成功，请致电 0403 069 685。",
+  "Enter your name.": "请填写您的姓名。",
+  "Enter a name between 2 and 100 characters.": "姓名请填写 2–100 个字符。",
+  "Enter a phone number.": "请填写联系电话。",
+  "Enter a phone number between 6 and 40 characters.": "联系电话请填写 6–40 个字符。",
+  "Choose a type of work.": "请选择服务类型。",
+  "Choose a type of work between 2 and 160 characters.": "服务类型请填写 2–160 个字符。",
+  "Tell us what you need help with.": "请说明您需要什么维修服务。",
+  "Enter job details between 10 and 3000 characters.": "需求详情请填写 10–3000 个字符。",
+  "Enter a valid email address of at most 254 characters.": "请填写有效的电子邮箱，最多 254 个字符。",
+  "Enter a suburb or postcode of at most 100 characters.": "请填写所在地区或邮编，最多 100 个字符。",
+  "Check the highlighted details.": "请检查标出的信息。",
+  "Online enquiries are temporarily unavailable. Please call 0403 069 685.": "在线咨询暂时不可用，请致电 0403 069 685。",
+  "This request is not allowed.": "暂时无法发送该请求。请刷新页面重试，或致电 0403 069 685。"
+}

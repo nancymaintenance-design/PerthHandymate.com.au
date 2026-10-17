@@ -34,6 +34,9 @@
   function clean(value) {
     return String(value || '').trim().replace(/\s+/g, ' ');
   }
+  function localText(value) {
+    return typeof window !== 'undefined' && window.EllisLocale ? window.EllisLocale.t(value) : value;
+  }
 
   function getServiceMap() {
     if (typeof globalThis !== 'undefined' && Array.isArray(globalThis.ELLIS_SEARCH_CATALOG) && globalThis.ELLIS_SEARCH_CATALOG.length) return globalThis.ELLIS_SEARCH_CATALOG;
@@ -86,7 +89,7 @@
     return {
       service: clean(params.get('service')),
       location: clean(params.get('postcode')) || clean(params.get('suburb')) || clean(params.get('location')),
-      message: query ? `Service request: ${query}` : '',
+      message: query ? (typeof window !== 'undefined' && window.EllisLocale?.chinese() ? `维修需求：${query}` : `Service request: ${query}`) : '',
     };
   }
 
@@ -101,7 +104,7 @@
   }
 
   function initLocalContext(doc) {
-    if (!/^\/services\/[^/]+\//.test(window.location.pathname)) return;
+    if (!/^\/(?:zh\/)?services\/[^/]+\//.test(window.location.pathname)) return;
     const h1 = doc.querySelector('h1');
     if (!h1) return;
     const context = resolveLocalContext(window.location.search, h1.textContent, window.ELLIS_CONTENT?.serviceAreas);
@@ -109,7 +112,7 @@
     const banner = doc.createElement('p');
     banner.className = 'selected-locality';
     banner.dataset.localContext = '';
-    banner.textContent = `${context.heading} — selected repair location. Ellis confirms the scope and assessment arrangements with you.`;
+    banner.textContent = window.EllisLocale?.chinese() ? `${context.locality}：${context.topic}。Ellis 将与您确认维修范围和现场评估安排。` : `${context.heading} — selected repair location. Ellis confirms the scope and assessment arrangements with you.`;
     h1.after(banner);
     doc.querySelectorAll('[data-preserve-search]').forEach(link => {
       const href = new URL(link.href, window.location.href);
@@ -128,8 +131,10 @@
       const clear = form.querySelector('[data-clear-search]');
       const suggestions = form.querySelector('[data-suggestions]');
       const base = form.dataset.root || './';
+      let composing = false;
 
       function renderSuggestions() {
+        if (composing) return;
         const value = clean(query.value).toLowerCase();
         clear.hidden = !value;
         if (!value) { suggestions.replaceChildren(); suggestions.hidden = true; return; }
@@ -137,17 +142,20 @@
         suggestions.replaceChildren(...options.map((item) => {
           const button = doc.createElement('button');
           button.type = 'button';
-          button.textContent = item.service;
-          button.addEventListener('click', () => { query.value = item.service; suggestions.hidden = true; query.focus(); });
+          button.textContent = localText(item.service);
+          button.addEventListener('click', () => { query.value = localText(item.service); suggestions.hidden = true; query.focus(); });
           return button;
         }));
         suggestions.hidden = options.length === 0;
       }
 
       query.addEventListener('input', renderSuggestions);
+      query.addEventListener('compositionstart', () => { composing = true; });
+      query.addEventListener('compositionend', () => { composing = false; renderSuggestions(); });
       clear.addEventListener('click', () => { query.value = ''; renderSuggestions(); query.focus(); });
       form.addEventListener('submit', (event) => {
         event.preventDefault();
+        if (composing) return;
         const result = resolveServiceSearch(query.value, postcode.value);
         if (!result.query) { query.setAttribute('aria-invalid', 'true'); query.focus(); return; }
         const params = new URLSearchParams({ q: result.query });
@@ -172,7 +180,7 @@
       if (!errors || typeof errors !== 'object' || Array.isArray(errors)) return false;
       let first;
       ['name', 'email', 'phone', 'postcode', 'service', 'message'].forEach(name => {
-        const message = errors[name];
+        const message = localText(errors[name]);
         const field = form.elements.namedItem(name);
         const feedback = form.querySelector(`[data-error="${name}"]`);
         if (!field || !feedback || typeof message !== 'string' || !message.trim() || message.length > 200) return;
@@ -193,14 +201,14 @@
       status.textContent = '';
       if (!result.valid) {
         showFieldErrors(result.errors);
-        status.textContent = 'Please check the highlighted details and try again.';
+        status.textContent = localText('Please check the highlighted details and try again.');
         return;
       }
       const previousLabel = submit.textContent;
       sending = true;
       submit.disabled = true;
-      submit.textContent = 'Sending…';
-      status.textContent = 'Sending your enquiry…';
+      submit.textContent = localText('Sending…');
+      status.textContent = localText('Sending your enquiry…');
       try {
         const response = await fetch(form.dataset.contactEndpoint || '/api/contact', {
           method: 'POST',
@@ -213,18 +221,18 @@
         if (!response.ok) {
           const fieldsShown = response.status === 400 && showFieldErrors(body && body.errors);
           if (fieldsShown) {
-            status.textContent = 'Please check the highlighted details and try again.';
+            status.textContent = localText('Please check the highlighted details and try again.');
             if (window.EllisAnalytics) window.EllisAnalytics.contactResult(false);
             return;
           }
           throw new Error(typeof body?.error === 'string' ? body.error : 'We could not send your enquiry just now. Please call 0403 069 685.');
         }
         if (window.EllisAnalytics) window.EllisAnalytics.contactResult(true);
-        status.textContent = body.message || 'Thanks. Our customer service team will call you about your request.';
+        status.textContent = localText(body.message || 'Thanks. Our customer service team will call you about your request.');
         form.reset();
       } catch (error) {
         if (window.EllisAnalytics) window.EllisAnalytics.contactResult(false);
-        status.textContent = error.message || 'We could not send your enquiry just now. Please call 0403 069 685.';
+        status.textContent = localText(error.message || 'We could not send your enquiry just now. Please call 0403 069 685.');
       } finally {
         sending = false;
         submit.disabled = false;

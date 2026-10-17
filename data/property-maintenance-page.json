@@ -1,0 +1,85 @@
+{
+  "intro": ["One repair list. One Ellis contact.", "一份维修清单，一个 Ellis 联系窗口。"],
+  "lede": ["Arrange home, rental and shared-property repairs with our Perth team. We assess the tasks, agree the approval contact and provide a written quote before work begins.", "由珀斯团队安排住宅、出租物业及共用区域维修。开工前，我们评估任务、确认授权联系人并提供书面报价。"],
+  "navLabel": ["Property maintenance page sections", "物业维护页面栏目"],
+  "sections": [
+    {
+      "id": "maintenance-plans",
+      "title": ["Our service plans", "我们的服务方案"],
+      "intro": ["Choose the arrangement that fits your property. Each plan starts with an agreed task list; repeat visits are arranged directly with Ellis.", "按物业需要选择服务方式。每种方案均以双方确认的任务清单为基础；定期到访须直接与 Ellis 商定。"],
+      "cards": [
+        {"title": ["One-off home repairs", "单次住宅维修"], "text": ["Group sticking doors, loose fittings and wall repairs by room and priority. We assess which jobs can be completed together and which need a separate specialist scope.", "按房间和优先级整理卡顿的门、松动配件及墙面修补。我们评估哪些任务可以合并处理，哪些需要另行安排专业施工。"]},
+        {"title": ["Rental, vacate and pre-sale work", "出租、退租及售前维修"], "text": ["Use the approved inspection or repair list and tell us the handover or photography date. Prioritise safety, active damage and reliable operation before appearance. Repairs and cleaning are separate; accepted work and timing are confirmed directly.", "提供已获批准的检查或维修清单，并告知交接或拍摄日期。外观修复之前，优先处理安全、持续损坏及正常使用问题。维修与清洁须分别列明；承接范围和时间由双方直接确认。"]},
+        {"title": ["Repeat property maintenance", "定期物业维护"], "text": ["Discuss the property's condition, past faults and preferred interval. We confirm suitable tasks, approvals and visit arrangements; an enquiry does not establish ongoing attendance.", "说明物业状况、历史故障及希望的到访间隔。我们确认适合的任务、审批及到访安排；一次咨询并不自动建立长期服务安排。"]}
+      ],
+      "details": [
+        {"title": ["Remote owners and multiple properties", "异地业主与多处物业"], "text": ["Nominate a local access contact and the person who approves quotes and variations. Keep each address, fault list and approval record distinct. Agree any completion photos or summaries before booking.", "指定本地出入联系人及有权批准报价和变更的人员。分别记录各地址、故障清单和审批情况。预约前商定是否需要完工照片或摘要。"]},
+        {"title": ["Choosing a maintenance interval", "如何确定维护间隔"], "text": ["Use property condition, exposure and repair history to plan reviews. Report new damage and recurring faults when they appear. An unstable or unsafe item needs assessment before the next routine visit.", "根据物业状况、环境暴露和维修历史安排复查。发现新损坏或反复故障时应及时告知。松动不稳或不安全的部件应在下次例行到访前接受评估。"]}
+      ]
+    },
+    {
+      "id": "included-services",
+      "title": ["Included services", "服务包含哪些内容"],
+      "intro": ["These are tasks we can assess for your list. The written quote confirms the accepted work, materials and exclusions for your property.", "以下任务可提交评估。书面报价将确认该物业实际承接的工作、材料及不包含的项目。"],
+      "cards": [
+        {"title": ["Doors, cupboards and fittings", "门、橱柜及配件"], "text": ["Sticking doors, cupboard hinges, damaged hardware and suitable indoor fittings. The support, condition and fixing method are checked before repair.", "卡顿的门、橱柜铰链、损坏五金及适合维修的室内配件。维修前检查支承、部件状况及固定方式。"]},
+        {"title": ["Walls, trim and screens", "墙面、饰条及纱窗"], "text": ["Approved nail-hole patches, local wall damage, skirting and flyscreen mesh. Confirm any patching and paint finish in the quote. Recurring cracks, dampness or movement need assessment before a cosmetic finish is chosen.", "获批的钉孔修补、局部墙面损坏、踢脚线及纱窗网。在报价中确认具体修补及涂漆饰面。反复裂缝、潮湿或位移须先评估，再决定是否进行表面修复。"]},
+        {"title": ["Outdoor maintenance items", "户外维护项目"], "text": ["Accessible outdoor fittings and exposed timber can be listed for assessment. Describe weathering, looseness and previous repairs so the quote addresses the actual condition.", "可接近的户外配件及外露木材可列入评估清单。说明风化、松动及既往维修情况，以便按实际状况报价。"]},
+        {"title": ["Strata, office and shop fittings", "分层物业、办公室及商铺配件"], "text": ["Suitable hallway trim, noticeboards, desk assembly, whiteboard hanging and minor shop-fitting repairs. Wall patches after shelf removal need backing and finish checks. Confirm the lot or common-property location, approval contact and occupied-area restrictions.", "适合维修的走廊饰条、公告板、办公桌组装、白板安装及小型商铺配件。拆除架子后的墙面修补需要检查支承基层及饰面。确认项目位于独立单元还是共用区域、授权联系人及使用中区域的限制。"]}
+      ],
+      "details": [
+        {"title": ["Specialist systems and fire-rated doors", "专业系统与防火门"], "text": ["Electrical, plumbing, gas, security, fire-safety and structural tasks need their appropriate assessment and qualifications. Ellis separates these scopes from minor fittings work. Fire-rated doors require product and building requirements to be checked before changes to the leaf, frame, closer or latch.", "电气、管道、燃气、安防、消防及结构工程需要相应评估和资质。Ellis 将这些项目与小型配件维修分别确定范围。调整防火门的门扇、门框、闭门器或锁舌前，须核对产品及建筑要求。"]},
+        {"title": ["What a maintenance list does not establish", "维护清单不能替代什么"], "text": ["A defined repair list is not an unlimited package or an inspection guarantee. Surface repairs do not establish the absence of concealed defects. Vacate repairs do not guarantee a bond refund or inspection result; pre-sale repairs do not promise a sale outcome.", "明确的维修清单并非无限服务套餐，也不是检查结果保证。表面修复不能证明不存在隐蔽缺陷。退租维修不保证押金退还或验收结果；售前维修不承诺出售结果。"]}
+      ]
+    },
+    {
+      "id": "work-process",
+      "title": ["Our work process", "我们的工作流程"],
+      "steps": [
+        {"title": ["Tell us the tasks", "说明维修任务"], "text": ["Share the suburb or postcode, affected rooms and priorities. Mention previous repairs, recurring faults and any deadline. Photos are optional; we can assess on site.", "提供所在城区或邮编、受影响房间及优先级。说明既往维修、反复故障及截止日期。照片可选；我们可以到现场评估。"]},
+        {"title": ["Confirm authority and access", "确认授权与出入安排"], "text": ["Identify who approves the quote and variations. Agree the tenant appointment, key collection and return, parking, lifts and working-hour restrictions privately with the responsible contact.", "确认谁有权批准报价和变更。与负责联系人私下商定租客预约、钥匙领取和归还、停车、电梯及施工时间限制。"]},
+        {"title": ["Assess and agree the quote", "评估并确认报价"], "text": ["We check the condition, materials and specialist requirements, then set out the accepted tasks and exclusions in writing. Confirm the scope and price basis before work proceeds.", "我们检查现场状况、材料及专业施工需求，再以书面列明承接任务及排除项目。施工前确认范围及计价方式。"]},
+        {"title": ["Complete the agreed repairs", "完成商定维修"], "text": ["Work follows the approved list. Extra damage or changed materials are discussed for approval before additional work. Agree the completion summary or photos you need for handover.", "按获批清单施工。如发现额外损坏或需要更换材料，先讨论并获得批准，再开展新增工作。商定交接所需的完工摘要或照片。"]}
+      ],
+      "details": [
+        {"title": ["Tenant access and common-property permission", "租客配合出入与共用区域许可"], "text": ["Reporting a fault or opening the property does not authorise repairs or extra spending. Confirm the landlord, property manager or other authorised person for the particular task. Resolve unclear strata responsibility before booking; a resident's request alone is insufficient.", "报告故障或开门配合不等于授权维修或额外支出。须确认该项任务的业主、物业经理或其他授权人。预约前解决不明确的分层物业责任；仅凭住户提出请求并不足够。"]},
+        {"title": ["Occupied workplaces and after-hours requests", "使用中的工作场所与非营业时间请求"], "text": ["Tell us about reception, restricted rooms, noisy-work limits and protection around occupants. Request a preferred work window directly; the appointment and building restrictions still need confirmation. Keep sensitive access instructions private.", "告知前台接待、限制进入的房间、噪声限制及人员周边的防护要求。直接提出希望的施工时段；预约与建筑管理限制仍须确认。敏感出入信息请私下提供。"]}
+      ]
+    },
+    {
+      "id": "charging-standards",
+      "title": ["Charging standards", "收费标准"],
+      "intro": ["Property maintenance is quoted for the agreed list after assessment. Contact Ellis for your property's written quote.", "物业维护在评估后按商定清单报价。请联系 Ellis 获取该物业的书面报价。"],
+      "cards": [
+        {"title": ["Your quote basis", "报价依据"], "text": ["The task type, number of repairs, materials, site condition, access and specialist requirements affect the quote. Combining tasks does not automatically establish a package price.", "任务类型、维修数量、材料、现场状况、出入条件及专业施工需求均影响报价。合并任务不代表自动采用套餐价。"]},
+        {"title": ["Confirm the included work", "确认费用包含的工作"], "text": ["Review the accepted tasks, materials and exclusions with the person authorised to approve the work. Confirm any purchase-order requirement and the completion information requested.", "由有权批准施工的人员核对承接任务、材料和排除项目。确认是否需要采购订单及要求提供哪些完工资料。"]},
+        {"title": ["Changes need approval", "变更须获批准"], "text": ["Additional repairs, hidden damage or material changes may alter the scope and price. Ellis discusses the revised work with the authorised contact before proceeding.", "新增维修、隐蔽损坏或材料变化可能改变施工范围和价格。继续施工前，Ellis 会与授权联系人讨论修改后的工作。"]}
+      ]
+    },
+    {
+      "id": "aftercare",
+      "title": ["Aftercare and completed work", "售后与完工事项"],
+      "cards": [
+        {"title": ["Keep a useful completion record", "保留有用的完工记录"], "text": ["Keep the approved list and agreed summary or before-and-after photos. Record the item, room and any unfinished or separately approved tasks. Photos should avoid occupants, keys and private documents; they do not prove concealed work. For approved strata or common-property repairs, agree completion photos and summaries with the responsible contact as part of the accepted scope; they are not an automatic reporting package.", "保留获批清单及商定的摘要或维修前后照片。记录部件、房间及尚未完成或另行审批的任务。照片应避开住户、钥匙和私人文件；照片不能证明隐蔽工程状况。对于获批的分层物业或共用区域维修，应与负责联系人商定是否将完工照片和摘要纳入承接范围；这些资料并非自动包含的报告服务。"]},
+        {"title": ["Contact us about completed repairs", "完工后如有问题请联系我们"], "text": ["If you have a concern about completed work, contact the Ellis team with the property, repaired item and quote or job details. Explain what has changed and when you noticed it; photos are optional.", "如对已完成的工作有疑问，请向 Ellis 团队提供物业、维修部件及报价或任务信息。说明发生了什么变化及何时发现；照片可选。"]},
+        {"title": ["Agree any follow-up work", "商定后续处理"], "text": ["We review the concern against the agreed work and discuss any assessment needed. A recurring symptom, new damage or extra request may need a separate scope; any proposed changes are discussed with the authorised contact.", "我们对照商定的工作了解问题，并讨论是否需要评估。反复症状、新损坏或额外请求可能需要单独确定范围；任何拟议变更均与授权联系人商议。"]}
+      ]
+    },
+    {
+      "id": "contact-team",
+      "title": ["Contact our Perth team", "联系珀斯团队"],
+      "intro": ["Send your repair list and suburb or postcode. We confirm service arrangements for your location, the assessment and the written quote directly.", "发送维修清单及城区或邮编。我们将直接确认该地点的服务安排、现场评估和书面报价。"],
+      "contact": true,
+      "details": [
+        {"title": ["Useful planning guides", "实用规划指南"], "links": [
+          {"href": "/guides/property-manager-maintenance-coordination/", "label": ["Maintenance approvals and tenant access", "维护审批与租客出入安排"]},
+          {"href": "/guides/prepare-before-home-repair-quote/", "label": ["What to include in a repair request", "维修请求应包含哪些信息"]},
+          {"href": "/services/handyman-interiors-appliance-repairs/handymen/", "label": ["Explore small repair services", "查看小型维修服务"]},
+          {"href": "/services/", "label": ["Explore the full service directory", "查看完整服务目录"]}
+        ]}
+      ]
+    }
+  ],
+  "cta": ["Send your maintenance request", "发送物业维护请求"],
+  "call": ["Call 0403 069 685", "致电 0403 069 685"]
+}

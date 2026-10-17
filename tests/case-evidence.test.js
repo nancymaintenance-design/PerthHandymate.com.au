@@ -72,7 +72,7 @@ test('fence image descriptions identify fence details and fence work', () => {
 
 test('homepage photographed project discovery includes related services and maintenance advice', () => {
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-  const section = html.match(/<section class="section shell project-feature">([\s\S]*?)<\/section>/)?.[1] || '';
+  const section = html.match(/<section class="section shell project-feature"[^>]*>([\s\S]*?)<\/section>/)?.[1] || '';
   assert.match(section, /href="\.\/services\/roofing-gutters-exterior\/gutter-services\/"/);
   assert.match(section, /href="\.\/guides\/seasonal-home-maintenance-australia\/"/);
 });

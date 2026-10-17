@@ -1,0 +1,35 @@
+/* Homepage-only presentation; shared page hierarchy remains in global.css. */
+.home-clarity .hero h1{font-size:clamp(2rem,3.4vw,3rem);max-width:26ch;line-height:1.14;letter-spacing:-.025em;margin-bottom:22px;text-wrap:balance}
+.home-title-line{display:block}
+.home-title-detail{color:var(--sand);font-size:.88em;margin-top:.15em}
+.home-clarity>.project-feature{padding-top:40px;padding-bottom:40px}
+.home-clarity .project-feature>.section-heading{padding:clamp(22px,3vw,36px);margin-bottom:0;background:var(--navy);color:var(--white);border-radius:var(--radius);border-left:5px solid var(--orange);align-items:center}
+.home-clarity .project-feature>.section-heading .eyebrow{color:var(--sand)}
+.home-clarity .project-feature>.section-heading>p{color:var(--white);margin-bottom:0}
+.home-clarity .project-feature>.section-heading h2{font-size:clamp(1.8rem,3vw,2.6rem);max-width:24ch}
+.home-clarity .project-feature-list{gap:0}
+.home-clarity .project-feature-list>.support-feature{padding-block:36px;border-bottom:1px solid var(--line)}
+.home-clarity .project-feature-list>.support-feature:last-child{border-bottom:0;padding-bottom:0}
+.home-clarity .project-feature-list .support-copy h3{font-size:clamp(1.55rem,2.5vw,2.15rem);line-height:1.18;max-width:26ch;margin-bottom:18px}
+.home-clarity #repair-planning-guides{padding-block:36px}
+.home-clarity #repair-planning-guides .text-link{color:var(--sand);justify-self:start}
+.home-guides-toolbar{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:18px}
+.home-guides-toolbar>p{font-size:.88rem;color:#dfe8ec;max-width:65ch;margin:0}
+.home-guides-controls{display:flex;gap:12px;align-items:center;flex-shrink:0}
+.home-guides-controls[hidden]{display:none}
+.home-guides-controls button{display:inline-grid;place-items:center;width:46px;min-height:46px;padding:4px;border:1px solid var(--sand);border-radius:8px;background:var(--navy);color:var(--white);font-size:1.3rem}
+.home-guides-controls button:hover:not(:disabled){background:var(--navy-2)}
+.home-guides-controls button:disabled{opacity:.45;cursor:default}
+.home-guides-controls [data-guide-position]{min-width:4.5ch;text-align:center;font-variant-numeric:tabular-nums;font-size:.85rem}
+.home-guide-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3.2);gap:20px;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:4px;padding:4px 4px 18px;overscroll-behavior-x:contain;scrollbar-color:var(--sand) var(--navy);scrollbar-width:thin}
+.home-guide-card{min-width:0;border-top:3px solid var(--orange);padding:24px;background:var(--white);color:var(--ink);border-radius:0 0 14px 14px;scroll-snap-align:start}
+.home-guide-card h3{font-size:1.2rem;line-height:1.3;letter-spacing:-.015em;margin-bottom:16px}
+.home-guide-card h3 a{text-decoration:none}
+.home-guide-card h3 a:hover{text-decoration:underline}
+.home-guide-card p{font-size:.94rem;color:var(--slate);margin-bottom:0}
+.home-guide-track:focus-visible,.home-guides-controls button:focus-visible,.home-guide-card a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.home-clarity .home-office-phone a{display:inline-flex;align-items:center;min-height:44px;font-size:1.25rem;color:var(--navy);font-weight:800}
+@media(max-width:900px){.home-guide-track{grid-auto-columns:calc((100% - 24px)/2.15)}.home-clarity .project-feature-list>.support-feature{padding-block:28px}}
+@media(max-width:700px){.home-clarity .hero h1{font-size:clamp(1.85rem,7.1vw,2.45rem);max-width:25ch}.home-clarity .project-feature>.section-heading{gap:16px}.home-guides-toolbar{align-items:flex-start;flex-direction:column;gap:14px}.home-guide-track{grid-auto-columns:86%;gap:16px}.home-guide-card{padding:22px}.home-clarity>.project-feature{padding-block:28px}}
+@media(prefers-reduced-motion:reduce){.home-guide-track{scroll-behavior:auto;scroll-snap-type:none}}
+@media(forced-colors:active){.home-guide-track:focus-visible,.home-guides-controls button:focus-visible,.home-guide-card a:focus-visible{outline-color:Highlight}.home-guides-controls button:disabled{opacity:1;color:GrayText}}

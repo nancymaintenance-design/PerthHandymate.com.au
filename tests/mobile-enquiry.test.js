@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const http = require('node:http');
 const { execFileSync } = require('node:child_process');
+const { createBuildFixture } = require('./helpers/local-build');
 const root = path.resolve(__dirname, '..');
 const { loadPlaywright, browserLaunchOptions } = require('./helpers/browser-runtime');
 const playwright = loadPlaywright();
@@ -14,11 +15,8 @@ test.before(async () => {
   // Build outside source so concurrent inventory tests never see dist being replaced.
   const reports = path.resolve(root, '../reports/seo-optimization-local-2026-10-13');
   fs.mkdirSync(reports, { recursive: true });
-  fixture = fs.mkdtempSync(path.join(reports, 'task-2-build-'));
-  const inputs = [...fs.readdirSync(root).filter(file => /\.(?:html|ico|png)$/.test(file)), 'about', 'areas', 'assets', 'contact', 'data', 'faq', 'guides', 'privacy', 'projects', 'robots.txt', 'services', 'site.webmanifest', 'sitemap.xml'];
-  for (const entry of inputs) fs.cpSync(path.join(root, entry), path.join(fixture, entry), { recursive: true });
-  fs.mkdirSync(path.join(fixture, 'scripts'));
-  for (const script of ['build-local.js', 'normalize-index-links.js']) fs.copyFileSync(path.join(root, 'scripts', script), path.join(fixture, 'scripts', script));
+  // This suite's after hook closes the browser/server before removing its fixture.
+  fixture = createBuildFixture({after:()=>{}});
   execFileSync(process.execPath, ['scripts/build-local.js'], { cwd: fixture });
   server = http.createServer((req, res) => {
     const pathname = new URL(req.url, 'http://localhost').pathname;
@@ -139,19 +137,19 @@ for (const viewport of [{ width: 390, height: 844 }, { width: 1440, height: 900 
       assert.ok(Math.abs(figure.width - dimensions[0].width) < 1, 'all case images share the original width');
       assert.ok(Math.abs(figure.height - dimensions[0].height) < 1, 'all case images share the original height');
     }
-    const shortSections = page.locator('#repair-planning-guides, #property-repair-list, #local-repair-requests');
-    assert.equal(await shortSections.count(), 3);
+    const shortSections = page.locator('#repair-planning-guides, #property-repair-list');
+    assert.equal(await shortSections.count(), 2);
     // Approved consolidation keeps these fragments on the earlier useful owners;
     // they are no longer three repeated adjacent sections after the office map.
     assert.equal(await page.locator('.insight-strip#repair-planning-guides').count(), 1);
     assert.equal(await page.locator('h2#property-repair-list').count(), 1);
-    for (const id of ['repair-quote-process','repair-planning-guides','contact-team']) {
+    for (const id of ['repair-planning-guides','contact-team']) {
       await page.locator(`.quick-paths a[href="#${id}"]`).click();
       const target=page.locator('#'+id);
       assert.equal(await target.count(),1);
       assert.ok(await target.evaluate(e=>e.getBoundingClientRect().top)>=70,'jump target clears sticky header');
     }
-    assert.ok(await page.locator('#local-repair-requests').isVisible(), 'coverage evidence stays visible');
+    assert.equal(await page.locator('#local-repair-requests, #repair-quote-process').count(),0,'requested duplicate sections are removed');
   });
   test(`contact short explanations have compact spacing and no repeated reception block at ${viewport.width}`, async t => {
     const page = await pageAt(t, '/contact/', viewport);

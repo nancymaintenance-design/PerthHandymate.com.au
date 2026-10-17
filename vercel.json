@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "mkdir -p dist && cp -R *.html *.ico *.png about areas assets contact data faq guides privacy projects robots.txt services site.webmanifest sitemap.xml dist/ && node scripts/normalize-index-links.js dist",
+  "buildCommand": "node scripts/build-local.js",
   "outputDirectory": "dist",
   "routes": [
     {
@@ -63,6 +63,11 @@
     },
     {
       "handle": "filesystem"
+    },
+    {
+      "src": "^/zh/.*$",
+      "dest": "/zh/404.html",
+      "status": 404
     },
     {
       "src": "^/.*$",

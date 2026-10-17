@@ -12,6 +12,7 @@ function syncFaq(html) {
   });
 }
 function consolidateService(html) {
+  if(html.includes('rel="canonical" href="https://www.perthhandymate.com.au/services/property-maintenance/"'))return require('./compact-property-page')(html);
   const links = [];
   html = html.replace(/<section[^>]*id="repair-related-reading"[\s\S]*?<\/section>/g, block => {
     links.push(...block.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/g)); return '';
@@ -65,11 +66,11 @@ function consolidateHome(html) {
   if (!html.includes('id="property-repair-list"')) html = html.replace('<section class="section shell" id="local-repair-requests">', '<section class="section shell" id="local-repair-requests"><span id="property-repair-list"></span>');
   html = html.replace(/<nav class="quick-paths"[\s\S]*?<\/nav>/, '<nav class="quick-paths" aria-label="Quick enquiry paths"><a href="./services/">Services</a><a href="./areas/">Areas</a><a href="./contact/">Enquire</a><a href="#repair-projects">Projects</a><a href="#repair-quote-process">Quotes</a><a href="#repair-planning-guides">Guides</a><a href="#contact-team">Contact</a></nav>');
   html = html.replace('<section class="cta-band">', '<section class="cta-band" id="contact-team">');
-  return html;
+  return require('./render-home-clarity').renderHome(html);
 }
 function consolidateDirectory(html) {
   if (!html.includes('id="choose-your-work"')) html = html.replace('</p></div></section>', '</p><nav class="quick-paths" id="choose-your-work" aria-label="Choose your work"><a href="handyman-interiors-appliance-repairs/handymen/">Small repairs</a><a href="property-maintenance/">Property maintenance lists</a><a href="#service-groups">Specialist services</a></nav></div></section>');
-  return html;
+  return require('./service-directory-clarity').directory(html);
 }
 function apply() {
   let changed = 0;

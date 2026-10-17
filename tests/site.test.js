@@ -118,7 +118,7 @@ test('uses the core handyman services Perth phrase on the homepage', () => {
   assert.match(title, /^Handyman Services Perth\b/);
   assert.match(title, /\bLocal Repair Team \| Ellis$/);
   assert.ok(title.length <= 60, 'homepage title stays concise in search results');
-  assert.match(home, /<h1>Handyman Services Perth for Home Repairs & Maintenance<\/h1>/);
+  assert.equal(home.match(/<h1>([\s\S]*?)<\/h1>/)[1].replace(/<[^>]*>/g,'').replaceAll('&amp;','&'),'Handyman Services Perth for Home Repairs & Maintenance');
   assert.match(home, /The Ellis Perth office provides direct handyman services for home repairs and maintenance/);
   assert.match(home, /<h2>Local Handyman Services in Perth<\/h2>/);
   assert.match(home, /<h2\b[^>]*>Home Maintenance To-Do List for Property Managers<\/h2>/);
@@ -141,7 +141,7 @@ test('replaces generic content headings with service, location or topic-led head
     'Find Local Handyman Service Areas',
     'Home Repair & Maintenance Projects',
     'Home Maintenance Guides & Advice',
-  ]) assert.match(home, new RegExp(`<h2>${heading.replace(/[&]/g, '&amp;')}<\\/h2>`));
+  ]) assert.match(home, new RegExp(`<h2\\b[^>]*>${heading.replace(/[&]/g, '&amp;')}<\\/h2>`));
 
   const categoryPages = [
     'building-renovation-structural',
@@ -935,7 +935,8 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   const formConfig = fs.readFileSync(path.join(root, 'data', 'form-config.js'), 'utf8');
   const client = fs.readFileSync(path.join(root, 'assets', 'js', 'site.js'), 'utf8');
   assert.match(about, /https:\/\/maps\.app\.goo\.gl\/iqNh8cGNbaZhBuP17/);
-  assert.match(about, /Read our Google reviews/);
+  assert.doesNotMatch(about.match(/<main\b[\s\S]*?<\/main>/)[0], /Read our Google reviews/);
+  assert.match(about.match(/<footer\b[\s\S]*?<\/footer>/)[0], /Google Reviews/);
   assert.match(contact, /customer service team will call you/i);
   assert.match(contact, /Read our Privacy Notice/);
   const privacy = fs.readFileSync(path.join(root, 'privacy', 'index.html'), 'utf8');

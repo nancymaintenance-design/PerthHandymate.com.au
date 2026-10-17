@@ -24,7 +24,8 @@ test('local distribution and source service pages are identical', t => {
   const result = buildLocal(fixture);
   assert.equal(result.status, 0, result.stderr || result.stdout);
   const pages = new Set(['services/index.html', ...catalog.canonicalServices.map(x => x.url+'index.html'), ...catalog.canonicalServices.map(x => `services/${x.category}/index.html`)]);
-  for (const file of pages) assert.equal(fs.readFileSync(path.join(fixture, 'dist', file), 'utf8'), fs.readFileSync(path.join(root,file),'utf8'), file);
+  const {languageShell}=require('../scripts/lib/locales');
+  for (const file of pages) assert.equal(fs.readFileSync(path.join(fixture, 'dist', file), 'utf8'), languageShell(fs.readFileSync(path.join(root,file),'utf8'),file,false), file);
 });
 test('all 31 committed research owners retain source content and a current scenario destination', () => {
   const data = JSON.parse(fs.readFileSync(path.join(root, 'data/keyword-content-round.json'), 'utf8'));
@@ -37,7 +38,9 @@ test('all 31 committed research owners retain source content and a current scena
     assert.ok(cluster.heading && cluster.answer && cluster.scenario.length === 2, cluster.owner);
     const mapped = require('../data/service-guide-faq-owners.json').questionOwners[cluster.scenario[0]] || cluster.scenario[0];
     const question = mapped.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
-    assert.equal(guidePages.filter(html => html.includes(`<summary>${question}</summary>`)).length, 1, `${cluster.owner} scenario has one guide owner`);
+    const propertyPage=fs.readFileSync(path.join(root,'services/property-maintenance/index.html'),'utf8');
+    const propertyPlan=cluster.owner==='O02'&&propertyPage.includes('id="maintenance-plans"')&&propertyPage.includes('Repeat property maintenance')&&propertyPage.includes('past faults and preferred interval');
+    assert.equal(propertyPlan?1:guidePages.filter(html => html.includes(`<summary>${question}</summary>`)||html.includes(`<h4>${question}</h4>`)).length, 1, `${cluster.owner} scenario has one current content owner`);
   }
 });
 test('confirmed handyman scope includes eight actual service descriptions and contact routes', () => {

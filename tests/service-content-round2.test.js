@@ -26,7 +26,7 @@ test('targeted service editing consolidates overlapping scenarios without losing
 test('category editing replaces unhelpful generic questions with three distinct choosing and booking answers', () => {
   const before = fs.readFileSync(path.join(root, 'services/gardens-landscaping/index.html'),'utf8');
   const after = editServiceHtml(before, {kind:'category', slug:'gardens-landscaping'});
-  assert.match(after, /<h1>Garden &amp; Landscaping Services in Perth<\/h1>/);
+  assert.match(after, /<h1>Gardens &amp; landscaping<\/h1>/);
   assert.doesNotMatch(page(after), /Can I book this service directly online\?|Is this service available in every suburb\?/);
   assert.match(after, /href="\.\.\/\.\.\/services\/gardens-landscaping\/garden-clean-up\/"/);
   assert.match(after, /Photos and measurements are optional/);

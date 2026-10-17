@@ -69,19 +69,41 @@ test('confirmed Ellis price ranges preserve amounts and lead to an on-site writt
 });
 
 function publicFrontstageFiles() {
-  const files = fs.readdirSync(root, { recursive: true, withFileTypes: true });
-  return files
-    .filter((entry) => entry.isFile())
-    .map((entry) => path.join(entry.parentPath, entry.name))
-    .filter((file) => file.endsWith('.html') || /[\\/](?:assets[\\/]js|data)[\\/].+\.js$/.test(file));
+  const {sourceFiles}=require('../scripts/lib/locales');
+  const scripts=['assets/js','data'].flatMap(directory=>fs.readdirSync(path.join(root,directory),{recursive:true,withFileTypes:true})
+    .filter(entry=>entry.isFile()&&entry.name.endsWith('.js')).map(entry=>path.join(entry.parentPath,entry.name)));
+  return [...sourceFiles(root).map(file=>path.join(root,file)),...scripts];
 }
 
-test('public HTML and browser-loaded JavaScript contain no CJK characters', () => {
+test('English public content stays English while explicit locale UI and Chinese runtime strings remain isolated', () => {
   const files = publicFrontstageFiles();
   assert.ok(files.some((file) => file.endsWith('index.html')), 'public HTML inventory');
   assert.ok(files.some((file) => /[\\/]assets[\\/]js[\\/]site\.js$/.test(file)), 'public JavaScript inventory');
   for (const file of files) {
-    assert.doesNotMatch(fs.readFileSync(file, 'utf8'), cjkCharacters, path.relative(root, file));
+    const relative=path.relative(root,file).replaceAll('\\','/');
+    let content=fs.readFileSync(file,'utf8');
+    if(file.endsWith('.html')){
+      assert.match(content,/<html lang="en-AU">/,relative);
+      assert.doesNotMatch(content,/<script[^>]+src="[^"]*zh-messages\.js"/,relative+': Chinese messages are not loaded by English pages');
+      content=content.replace(/<a\b[^>]*data-language-switch[^>]*>[\s\S]*?<\/a>/g,'');
+    }else if(relative==='assets/js/locales.js'){
+      // The locale runtime is shared, so prove its English branch returns the
+      // original label and leaves English service search terms untouched.
+      const vm=require('node:vm'),listeners={},catalog=[{service:'Door repairs',route:'/services/doors/door-repairs/',terms:['door']}];
+      const document={documentElement:{lang:'en-AU'},addEventListener:(event,fn)=>listeners[event]=fn,querySelectorAll:()=>[]};
+      const window={ELLIS_ZH_MESSAGES:{'Door repairs':'修门'},ELLIS_SEARCH_CATALOG:catalog};
+      vm.runInNewContext(content,{window,document});
+      assert.equal(window.EllisLocale.chinese(),false);
+      assert.equal(window.EllisLocale.t('Door repairs'),'Door repairs');
+      listeners.DOMContentLoaded();assert.deepEqual(catalog[0].terms,['door']);
+      continue;
+    }else if(relative==='assets/js/site.js'){
+      // Only the Chinese arm of an explicit locale conditional may contain CJK.
+      content=content.replace(/(?:typeof window !== 'undefined' && )?window\.EllisLocale\?\.chinese\(\)\s*\?\s*`[^`]*`\s*:/g,'false ? `` :');
+      const site=require('../assets/js/site');
+      assert.equal(site.buildContactPrefill('?q=Door+repair').message,'Service request: Door repair');
+    }
+    assert.doesNotMatch(content,cjkCharacters,relative);
   }
 });
 

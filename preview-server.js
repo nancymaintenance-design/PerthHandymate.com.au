@@ -23,7 +23,7 @@ const types = {
 
 http.createServer((request, response) => {
   function notFound() {
-    fs.readFile(path.join(root, '404.html'), (notFoundError, notFoundBody) => {
+    fs.readFile(path.join(root, request.url.startsWith('/zh/') ? 'zh/404.html' : '404.html'), (notFoundError, notFoundBody) => {
       response.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
       response.end(notFoundError ? 'Not found' : notFoundBody);
     });

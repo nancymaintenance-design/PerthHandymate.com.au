@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 
 const sitemap = fs.readFileSync(path.resolve(__dirname, '../dist/sitemap.xml'), 'utf8');
 const paths = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => new URL(match[1]).pathname);
-assert.equal(paths.length, 126, 'Expected 126 built sitemap URLs');
+assert.equal(paths.length, 252, 'Expected 126 English and 126 Chinese sitemap URLs');
 const port = Number(process.env.ELLIS_PREVIEW_PORT || 4180);
 const base = `http://127.0.0.1:${port}`;
 
@@ -34,10 +34,14 @@ async function run() {
   const recoveryAssets = [...notFoundBody.matchAll(/(?:src|href)="(\/(?:assets|data)\/[^\"]+)"/g)].map(match => match[1]);
   assert.ok(recoveryAssets.length > 0);
   for (const asset of recoveryAssets) assert.equal((await fetch(`${base}${asset}`)).status, 200, asset);
+  const missingChinese=await fetch(`${base}/zh/missing-smoke-page/`);
+  assert.equal(missingChinese.status,404);
+  assert.ok((await missingChinese.text()).includes('<html lang="zh-Hans">'),'Chinese unknown routes recover in Chinese');
   for (const [route, target] of [
     ['/index.html?source=smoke', '/?source=smoke'],
     ['/services/index.html?source=smoke&x=1', '/services/?source=smoke&x=1'],
     ['/services?source=smoke', '/services/?source=smoke'],
+    ['/zh/contact?suburb=Fremantle', '/zh/contact/?suburb=Fremantle'],
   ]) {
     const response = await fetch(`${base}${route}`, { redirect: 'manual' });
     assert.equal(response.status, 308, route);

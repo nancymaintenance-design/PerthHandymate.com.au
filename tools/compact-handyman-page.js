@@ -7,5 +7,5 @@ module.exports = function compactHandymanPage(html) {
   const price = html.match(/<div class="shell price-guide"[\s\S]*?<\/div>/)?.[0];
   if (!price) throw new Error('Missing current Handymen price block');
   const body = fs.readFileSync(path.join(__dirname, '../data/handyman-body.inc'), 'utf8').trimEnd().replace('{{PRICE_GUIDE}}', price);
-  return consolidateService(html.replace(/<main\b[\s\S]*?<\/main>/, body));
+  return require('./handyman-clarity')(consolidateService(html.replace(/<main\b[\s\S]*?<\/main>/, body)));
 };

@@ -17,7 +17,7 @@ function auditPage(html, route) {
   for (let i = 1; i < page.headings.length; i++) if (page.headings[i].level > page.headings[i - 1].level + 1) issues.push(`Heading level jump: ${page.headings[i].text}`);
   if (page.canonical !== ORIGIN + route) issues.push(`Incorrect canonical: ${page.canonical}`);
   if (/[\u3400-\u9fff]|\bHM\d{4}\b/.test(text(html))) issues.push('Public research/CJK leak');
-  const visible = [...html.matchAll(/<details\b[^>]*>\s*<summary\b[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/gi)].map(m => ({ question: text(m[1]), answer: text(m[2]) }));
+  const visible = [...html.matchAll(/<details\b([^>]*)>\s*<summary\b[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/gi)].filter(m=>!/(?:handyman-topic-card|property-disclosure)/.test(attribute(m[1],'class'))).map(m => ({ question: text(m[2]), answer: text(m[3]) }));
   const faqs = [];
   const scan = x => {
     if (Array.isArray(x)) return x.forEach(scan);

@@ -18,7 +18,7 @@ function tree(html) {
       if (index > 0) stack.length = index;
       continue;
     }
-    const node = { tag, id: attribute(token, 'id'), children: [], parent: stack.at(-1),
+    const node = { tag, id: attribute(token, 'id'), classes:attribute(token,'class').split(/\s+/), children: [], parent: stack.at(-1),
       hidden: /\s(?:hidden|inert)(?:\s|=|>)/i.test(token) || attribute(token, 'aria-hidden') === 'true' || /(?:display\s*:\s*none|visibility\s*:\s*hidden)/i.test(attribute(token, 'style')) };
     stack.at(-1).children.push(node);
     if (!voidTags.has(tag) && !token.endsWith('/>')) stack.push(node);
@@ -35,6 +35,7 @@ function visibleText(node, omitDetails = false) {
   return node.children.map(child => visibleText(child, omitDetails)).join(' ');
 }
 function hasAncestor(node, tag) { for (let p = node; p; p = p.parent) if (p.tag === tag) return true; return false; }
+function inFaq(node){for(let p=node;p;p=p.parent)if(p.tag==='details'&&!p.classes.some(c=>['property-disclosure','handyman-topic-card'].includes(c)))return true;return false;}
 function validateCoverage(rows, original, read) {
   const issues = [], cache = new Map();
   if (!Array.isArray(rows) || rows.length !== original.length) issues.push('Coverage record count differs from original');
@@ -66,11 +67,16 @@ function validateCoverage(rows, original, read) {
     const body = locate(row, row.bodyEvidence, 'body');
     if (body) {
       const excerpt = text(row.bodyEvidence.excerpt || '');
-      const prose = descendants(body, node => ['p', 'li'].includes(node.tag) && !hasAncestor(node, 'details')).map(node => text(visibleText(node, true))).join(' ');
+      const prose = descendants(body, node => ['p', 'li'].includes(node.tag) && !inFaq(node)).map(node => text(visibleText(node))).join(' ');
       if (excerpt.length < 25 || !text(prose).includes(excerpt)) issues.push(`${row.id}: body excerpt absent from stated fragment prose outside FAQ`);
     }
     if (row.category === '问题科普词') {
       if (!row.bodyEvidence?.path?.startsWith('/services/')) issues.push(`${row.id}: educational body must be service prose`);
+      if(row.educationalEvidence){
+        const explanation=locate(row,row.educationalEvidence,'educational explanation');
+        const excerpt=text(row.educationalEvidence.excerpt||'');
+        if(explanation&&(excerpt.length<25||!text(visibleText(explanation)).includes(excerpt)))issues.push(`${row.id}: educational explanation excerpt absent from current content`);
+      }else{
       const faq = locate(row, row.faqEvidence, 'FAQ');
       if (faq) {
         const match = descendants(faq, node => node.tag === 'details').filter(item => {
@@ -79,6 +85,7 @@ function validateCoverage(rows, original, read) {
         });
         const answer = match.length === 1 ? text(match[0].children.filter(child => child?.tag !== 'summary').map(child => visibleText(child)).join(' ')) : '';
         if (!row.faqEvidence.answerExcerpt || !answer.includes(text(row.faqEvidence.answerExcerpt))) issues.push(`${row.id}: FAQ question/answer not in same visible details item`);
+      }
       }
     }
     for (const [category, field] of [['意向提问词', 'decisionEvidence'], ['场景使用词', 'scenarioEvidence']]) if (row.category === category) {

@@ -89,7 +89,7 @@ function extractPage(html, route) {
   const links = [...main.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)].map(match => ({ href: attrs(match[1]).href || '', text: clean(match[2]) })).filter(link => link.href);
   const internal = links.flatMap(link => { try { const url = new URL(link.href, ORIGIN + route); return url.origin === ORIGIN ? [{ ...link, path: url.pathname, hash: url.hash }] : []; } catch { return []; } });
   const contextualInternalLinks = internal.filter(link => link.path !== route && !['/', '/contact/'].includes(link.path));
-  const faqCount = [...main.matchAll(/<summary\b/g)].length;
+  const faqCount = [...main.matchAll(/<details\b([^>]*)>\s*<summary\b/g)].filter(m=>!/(?:handyman-topic-card|property-disclosure)/.test(attrs(m[1]).class||'')).length;
   let structuredFaqCount = 0;
   const schemaErrors = [];
   const scanFaq = value => {

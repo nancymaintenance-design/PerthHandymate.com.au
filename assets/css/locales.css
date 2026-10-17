@@ -1,0 +1,12 @@
+/* The established brand palette, image sizes and content spacing stay shared. */
+.main-nav .language-switch{color:var(--eucalypt);font-weight:800;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:9px 11px;line-height:1.2}
+.main-nav .language-switch:hover{background:var(--mist)}
+.main-nav .language-switch:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+@media(min-width:921px){.header-inner{gap:clamp(12px,1.4vw,24px)}.main-nav{gap:clamp(10px,1.25vw,22px)}.main-nav a{font-size:.88rem}.brand-name{max-width:165px}}
+html[lang="zh-Hans"] body{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",Arial,sans-serif;line-height:1.8}
+html[lang="zh-Hans"] :is(h1,h2,h3,.brand-name,.footer-brand,.contact-phone){font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif;letter-spacing:0;line-height:1.35;word-break:normal;overflow-wrap:anywhere}
+html[lang="zh-Hans"] .eyebrow{letter-spacing:.08em}
+html[lang="zh-Hans"] .guide-card h3{line-height:1.45}
+html[lang="zh-Hans"] .service-card h2{line-height:1.45}
+html[lang="zh-Hans"] .contact-form button[type="submit"]{min-inline-size:9rem}
+@media(max-width:920px){.main-nav .language-switch{margin-top:8px;align-self:flex-start}}

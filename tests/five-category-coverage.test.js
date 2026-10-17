@@ -67,7 +67,7 @@ test('all 527 original records retain order and have fragment-scoped current vis
   assert.deepEqual(validator()(rows, original, read), []);
   for (const row of rows.filter(x => x.category === '问题科普词')) {
     assert.ok(row.bodyEvidence.path.startsWith('/services/'), row.id + ' needs service-body counterpart');
-    assert.ok(row.faqEvidence, row.id);
+    assert.ok(row.faqEvidence||row.educationalEvidence, row.id+' has an explicit FAQ or explanatory-card destination');
   }
 });
 test('public assessment anchors describe the topic without research record identifiers', () => {

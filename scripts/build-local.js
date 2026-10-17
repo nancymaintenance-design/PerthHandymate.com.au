@@ -11,6 +11,8 @@ const publishedEntries = [
   'privacy', 'projects', 'robots.txt', 'services', 'site.webmanifest', 'sitemap.xml',
 ];
 
+// Keep the last working preview intact if an edit has no Chinese counterpart.
+execFileSync(process.execPath, [path.join(__dirname, 'build-locales.js'), '--check'], { cwd: root, stdio: 'inherit' });
 fs.rmSync(output, { recursive: true, force: true });
 fs.mkdirSync(output);
 for (const entry of publishedEntries) {
@@ -20,3 +22,4 @@ execFileSync(process.execPath, [path.join(__dirname, 'normalize-index-links.js')
   cwd: root,
   stdio: 'inherit',
 });
+execFileSync(process.execPath, [path.join(__dirname, 'build-locales.js')], { cwd: root, stdio: 'inherit' });

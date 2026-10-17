@@ -49,7 +49,7 @@ const contracts = [
 test('existing service answers distinguish the accepted tasks and give practical preparation', () => {
   for (const [route, id, patterns] of contracts) {
     const html = read(route);
-    const section = html.match(new RegExp('<(article|section)\\b[^>]*id="' + id + '"[^>]*>([\\s\\S]*?)<\\/\\1>'))?.[2];
+    const section = html.match(new RegExp('<(article|section|details)\\b[^>]*id="' + id + '"[^>]*>([\\s\\S]*?)<\\/\\1>'))?.[2];
     assert.ok(section, `${route}#${id}: no focused answer`);
     const page = extractPage(`<main>${section}</main>`, route);
     // Selection cards now lead to the detailed owner; the decision must be available
@@ -85,7 +85,8 @@ test('current action coverage accounts for all 49 decisions without promoting un
     if (action.priority === 'P2') {
       assert.ok(action.evidence.some(e => e.anchor && read(e.path).includes(`id="${e.anchor}"`)), action.id);
       const e=action.evidence[0];
-      const section=read(e.path).match(new RegExp('<(article|section)\\b[^>]*id="'+e.anchor+'"[^>]*>([\\s\\S]*?)<\\/\\1>'))[2];
+      const section=read(e.path).match(new RegExp('<(article|section|details)\\b[^>]*id="'+e.anchor+'"[^>]*>([\\s\\S]*?)<\\/\\1>'))?.[2];
+      assert.ok(section,action.id+': evidence has a current focused owner');
       assert.equal(e.observedText,extractPage(`<main>${section}</main>`,e.path).mainText,action.id+': evidence must describe the final visible answer');
     }
   }

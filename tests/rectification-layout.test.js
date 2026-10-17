@@ -107,16 +107,20 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 1920, height: 10
   test(`long prose stays bounded while desktop grids and photography stay wide at ${viewport.width}`, async t => {
     const page = await pageAt(t, viewport);
     await page.goto(base + handymen);
+    const disclosures=page.locator('details.handyman-topic-card');
+    assert.equal(await disclosures.count(),12,'all retained explanatory topics have disclosures');
+    for(const disclosure of await disclosures.all()) await disclosure.locator('summary').click();
+    assert.equal(await page.locator('details.handyman-topic-card[open]').count(),12);
     const m = await page.evaluate(() => ({
-      prose: [...document.querySelectorAll('#service-work-options>div:not(.handyman-task-grid) p, #service-work-options>article p, #repair-planning-guides p')].map(e => ({ width: e.getBoundingClientRect().width, clipped: getComputedStyle(e).overflow === 'hidden' || e.scrollHeight > e.clientHeight + 1 })),
+      prose: [...document.querySelectorAll('.handyman-topic-card[open] .handyman-topic-content p, #repair-planning-guides p')].map(e => ({ width: e.getBoundingClientRect().width, clipped: getComputedStyle(e).overflow === 'hidden' || e.scrollHeight > e.clientHeight + 1 })),
       grid: document.querySelector('.handyman-task-grid').getBoundingClientRect().width,
       intro: getComputedStyle(document.querySelector('.handyman-intro')).gridTemplateColumns.split(' ').length,
       scene: getComputedStyle(document.querySelector('.handyman-scenes')).gridTemplateColumns.split(' ').length
     }));
-    await page.locator('#service-work-options>div[id]:not(.handyman-task-grid),#service-work-options>article').first().scrollIntoViewIfNeeded();
+    await disclosures.first().scrollIntoViewIfNeeded();
     await record(page, `prose-${viewport.width}`, m);
     assert.ok(m.prose.length > 3);
-    assert.ok(m.prose.every(p => p.width <= 850 && !p.clipped), JSON.stringify(m));
+    assert.ok(m.prose.every(p => p.width > 0 && p.width <= 850 && !p.clipped), JSON.stringify(m));
     assert.ok(m.grid >= 1100); assert.equal(m.intro, 2); assert.equal(m.scene, 2);
   });
 }

@@ -28,22 +28,47 @@ test('all migrated intents resolve once and merged owners retain their practical
   const sources=Object.values(data).flat().map(s=>s.match(/<summary>(.*?)<\/summary>/)[1]);
   assert.equal(sources.length,26);assert.deepEqual(Object.keys(mapping.questionOwners).sort(),sources.sort());
   for(const [route,items] of Object.entries(data)){
-    const html=read(route.slice(1)+'index.html'),questions=[...html.matchAll(/<summary>(.*?)<\/summary>/g)].map(m=>m[1]);
-    for(const item of items){const source=item.match(/<summary>(.*?)<\/summary>/)[1],owner=mapping.questionOwners[source];assert.equal(questions.filter(q=>q===owner).length,1,source+' has one current owner');if(source!==owner)assert.ok(!questions.includes(source),source+' alias not appended');}
+    const html=read(route.slice(1)+'index.html');
+    const questions=[...html.matchAll(/<summary>(.*?)<\/summary>/g)].map(m=>m[1]);
+    // Consolidated task disclosures retain these educational answers as a headed
+    // paragraph inside the decision, rather than a second independent FAQ.
+    if(route==='/services/handyman-interiors-appliance-repairs/handymen/')questions.push(...[...html.matchAll(/<div class="handyman-explanation"><h4>(.*?)<\/h4>/g)].map(m=>m[1]));
+    for(const item of items){
+      const source=item.match(/<summary>(.*?)<\/summary>/)[1],owner=mapping.questionOwners[source];
+      if(route==='/services/property-maintenance/'){
+        const id=/overseas/i.test(source)?'remote-owners-and-multiple-properties':'maintenance-plans';
+        assert.equal((html.match(new RegExp('id="'+id+'"','g'))||[]).length,1,source+' has one current service-content owner');
+        assert.ok(!questions.includes(source)&&!questions.includes(owner),source+' is represented as practical service content without a duplicate FAQ');
+      }else{
+        assert.equal(questions.filter(q=>q===owner).length,1,source+' has one current owner');
+        if(source!==owner)assert.ok(!questions.includes(source),source+' alias not appended');
+      }
+    }
   }
   const checks=[
-    ['Can you provide regular property maintenance?',[/approval/i,/specialist/i,/one-off/i]],
     ['Can you repair or replace damaged skirting boards and architraves?',[/profile/i,/matching timber/i,/moisture/i,/finish/i]],
     ['What needs checking before a letterbox post is installed?',[/boundaries/i,/underground services/i,/old post/i]],
+    ['Why do outdoor wall fixings loosen over time?',[/corrosion|movement/i,/supporting surface/i,/Retightening.*cause/i]],
+    ['Why is laminate lifting at its edges?',[/moisture/i,/joint damage|uneven backing/i,/underlying problem/i]],
+    ['Should moisture damage be addressed before floorboard replacement?',[/moisture source/i,/substrate/i,/cause.*resolved/i]],
+    ['Can pressure cleaning damage pavers or grout?',[/jointing/i,/unsuitable method/i,/drainage/i,/separate scope/i]],
     ['Can loose or damaged timber palings be replaced individually?',[/posts and rails/i,/shared boundary/i,/approval/i]],
     ['Can a sagging timber side gate be repaired without replacement?',[/after rain/i,/pool gates/i,/powered gates/i,/latch alone/i]],
     ['Should damaged boards be addressed before oiling?',[/unstable/i,/supports/i,/screws/i,/structural support/i]],
     ['What do you need to assess gutter cleaning on a single-storey home?',[/safe access/i,/do not climb/i,/separate quote/i]],
-    ['Can you quote for cat-damaged flyscreens before a rental inspection?',[/approve/i,/access/i,/timing/i]],
-    ['Can I arrange maintenance while I am overseas?',[/authorised/i,/local contact/i,/completion photos/i,/extra repairs/i]]
+    ['Can you quote for cat-damaged flyscreens before a rental inspection?',[/approve/i,/access/i,/timing/i]]
   ];
   const all=Object.keys(data).map(route=>read(route.slice(1)+'index.html')).join('');
-  for(const [question,patterns] of checks){const answer=[...all.matchAll(/<details\b[^>]*><summary>(.*?)<\/summary>([\s\S]*?)<\/details>/g)].find(m=>m[1]===question)?.[2];assert.ok(answer,question);for(const pattern of patterns)assert.match(answer,pattern,question);}
+  const answers=[...all.matchAll(/<details\b[^>]*><summary>(.*?)<\/summary>([\s\S]*?)<\/details>/g),...all.matchAll(/<div class="handyman-explanation"><h4>(.*?)<\/h4>([\s\S]*?)<\/div>/g)];
+  for(const [question,patterns] of checks){const answer=answers.find(m=>m[1]===question)?.[2];assert.ok(answer,question);for(const pattern of patterns)assert.match(answer,pattern,question);}
+  const property=read('services/property-maintenance/index.html');
+  const plans=property.match(/<section[^>]*id="maintenance-plans"[^>]*>[\s\S]*?<\/section>/)?.[0];
+  assert.ok(plans,'ongoing maintenance remains in the service plans');
+  for(const distinction of [/approval/i,/specialist/i,/one-off/i,/preferred interval/i,/enquiry does not establish ongoing attendance/i])assert.match(plans,distinction,'routine maintenance retains its approvals and attendance limits');
+  const remote=property.match(/<details[^>]*id="remote-owners-and-multiple-properties"[^>]*>[\s\S]*?<\/details>/)?.[0];
+  assert.ok(remote,'overseas-owner arrangements remain in the relevant plan disclosure');
+  for(const distinction of [/local access contact/i,/approves quotes and variations/i,/completion photos/i,/before booking/i])assert.match(remote,distinction,'remote owners retain access, spending and reporting decisions');
+  assert.match(property,/Reporting a fault or opening the property does not authorise repairs or extra spending/,'access does not approve repairs');
 });
 
 // Catches duplicate related-list containers and loss of useful destinations during merging.
@@ -112,10 +137,10 @@ test('home jump links bypass all thirteen preserved full-size alternating cases'
   const h = read('index.html');
   const before = execFileSync('git', ['show', '3d05ecdd3aed27bcf5533082a5a308d4323fd140:index.html'], { cwd: root, encoding: 'utf8' });
   const groups = source => source.match(/<div class="project-feature-list">([\s\S]*?)<\/section>/)[0];
-  assert.equal(groups(h), groups(before));
+  assert.equal(groups(h).replace(/<h3>/g,'<h2>').replace(/<\/h3>/g,'</h2>'), groups(before));
   assert.equal([...groups(h).matchAll(/class="support-feature(?: |")/g)].length, 13);
   const nav = h.match(/<nav class="quick-paths"[\s\S]*?<\/nav>/)[0];
-  for (const id of ['repair-quote-process', 'repair-planning-guides', 'contact-team']) {
+  for (const id of ['repair-planning-guides', 'contact-team']) {
     assert.ok(nav.includes(`href="#${id}"`)); assert.ok(h.includes(`id="${id}"`));
   }
   assert.equal([...h.matchAll(/id="repair-planning-guides"/g)].length, 1);

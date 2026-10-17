@@ -14,6 +14,31 @@ The static build and preview require no dependency installation. The complete te
 
 ## Run locally
 
+### English and Simplified Chinese
+
+The local and Vercel build share `node scripts/build-local.js`. It emits the existing English URLs and matching Simplified Chinese pages under `/zh/`, with a language link after Contact Us. Both versions share images, layout, telephone links, form API and mail delivery.
+
+English source pages and current content generators own structure. Shared Chinese copy is maintained in `locales/zh-Hans.json`; non-service content lives in `locales/parts/content.json`, and service content in `locales/parts/servicesA.json` and `servicesB.json`. Reviewed terminology/headlines in `locales/editorial-overrides.json` take precedence: search the exact English source sentence to identify its owner before updating it. Browser feedback is maintained in `locales/ui.zh-Hans.json`. Never hand-edit `dist/zh`.
+
+Every subsequent change must be reviewed in both languages. A new English sentence with no Chinese entry fails the build instead of leaking English into the Chinese site. Existing English keys identify the exact source wording: editing that wording requires a corresponding new Chinese translation. Rebuild once to regenerate both page sets, reciprocal hreflang, canonicals and the bilingual sitemap. Run `node --test tests/bilingual.test.js` and exercise Chinese search/form messages when changing interactions. The one-time translation authoring runtime is outside the source repository and is not needed for builds or by visitors.
+
+The current bilingual implementation is for local review only. Push to GitHub/Vercel only after the user's approval of this version.
+
+### 16 October page-clarity maintenance
+
+Home presentation is owned by `tools/render-home-clarity.js` (all 13 original cases, compact segmented hero, 12 static guide links with manual scrolling, no repeated home quote/location block). Property maintenance is owned by bilingual `data/property-maintenance-page.json` and `tools/compact-property-page.js`, with six main sections and informational disclosures, not an extra FAQ graph. Handymen retains its ten task cards; `tools/handyman-clarity.js` folds long explanations and retains legacy hash access. Directory category H1 names match `data/content.js` card names via `tools/service-directory-clarity.js`, without appended Perth text. Current `revision-*.json` parts take precedence over older editorial translations.
+
+After legacy generation, apply current owners before building:
+
+```powershell
+node tools/consolidate-content.js
+node tools/service-directory-clarity.js
+node scripts/normalize-share-metadata.js
+node scripts/build-local.js
+```
+
+Repeat this maintenance pass to verify idempotence. Coverage records retain all 527 original IDs but now distinguish explanatory disclosures from true FAQ answers; do not restore duplicate FAQ blocks to satisfy historical presentation assumptions. Current local preview is http://127.0.0.1:4282/ (Chinese at /zh/).
+
 Requires a current Node.js version with built-in `fetch` and the Node test runner (verified with Node 24). After the verification setup below, run these commands from the repository root:
 
 ```powershell

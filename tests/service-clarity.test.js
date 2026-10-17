@@ -83,3 +83,29 @@ test('FAQ keyboard disclosure keeps scope separate when answers expand',async()=
     assert.equal(await detail.getAttribute('open'),null);
   } finally {await context.close();}
 });
+
+test('handyman task disclosures reveal complete advice by keyboard and legacy fragment',async()=>{
+  for(const width of [1440,390]) {
+    const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});
+    await context.route('**/*',r=>r.request().url().startsWith(base)?r.continue():r.abort());
+    const page=await context.newPage();
+    try {
+      const route=base+'/services/handyman-interiors-appliance-repairs/handymen/';
+      await page.goto(route,{waitUntil:'load'});
+      assert.equal(await page.locator('.handyman-task-grid > article').count(),10);
+      assert.equal(await page.locator('details.handyman-topic-card[open]').count(),0);
+      for(const id of ['outdoor-posts-and-wall-fixtures','pet-flaps-and-panel-type','floor-edge-movement-and-moisture','surface-cleaning-and-material-risk','older-residents-and-support-rails','patio-supports-and-eaves-material']) {
+        const detail=page.locator('#'+id);
+        await detail.locator('summary').focus(); await page.keyboard.press('Enter');
+        assert.equal(await detail.getAttribute('open'),'');
+        assert.ok(await detail.locator('p').first().isVisible());
+        await page.keyboard.press('Space');
+        assert.equal(await detail.getAttribute('open'),null);
+      }
+      await page.goto(route+'#older-residents-and-support-rails-placement-and-structural-fixing',{waitUntil:'load'});
+      assert.equal(await page.locator('#older-residents-and-support-rails').getAttribute('open'),'');
+      assert.ok(await page.locator('#older-residents-and-support-rails-placement-and-structural-fixing p').isVisible());
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
+    } finally { await context.close(); }
+  }
+});

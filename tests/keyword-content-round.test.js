@@ -3,7 +3,20 @@ const root=path.resolve(__dirname,'..');
 const content=JSON.parse(fs.readFileSync(path.join(root,'data/keyword-content-round.json'),'utf8'));
 const catalog=JSON.parse(fs.readFileSync(path.join(root,'data/service-catalog.json'),'utf8'));
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const landing=cluster=>cluster.slug==='home'?'index.html':cluster.slug==='contact'?'contact/index.html':catalog.canonicalServices.find(service=>service.slug===cluster.slug)?.url+'index.html';
+const landing=cluster=>cluster.owner==='O02'?'services/property-maintenance/index.html':cluster.slug==='home'?'index.html':cluster.slug==='contact'?'contact/index.html':catalog.canonicalServices.find(service=>service.slug===cluster.slug)?.url+'index.html';
+const plain=html=>html.replace(/<[^>]*>/g,' ').replaceAll('&#39;',"'").replaceAll('&amp;','&').replace(/\s+/g,' ').trim();
+function assertPropertyMaintenanceOwner(html){
+ const plans=html.match(/<section[^>]*id="maintenance-plans"[^>]*>[\s\S]*?<\/section>/)?.[0];
+ assert.ok(plans,'O02 current service plans exist');
+ for(const distinction of [/Repeat property maintenance/,/condition.*past faults.*preferred interval/,/approvals and visit arrangements/,/enquiry does not establish ongoing attendance/])assert.match(plain(plans),distinction);
+ const remote=html.match(/<details[^>]*id="remote-owners-and-multiple-properties"[^>]*>[\s\S]*?<\/details>/)?.[0];
+ assert.ok(remote,'O02 remote-owner decision exists');
+ for(const distinction of [/local access contact/,/approves quotes and variations/,/Agree any completion photos or summaries before booking/])assert.match(plain(remote),distinction);
+ assert.match(plain(html),/Reporting a fault or opening the property does not authorise repairs or extra spending/);
+ assert.match(plain(html),/specialist requirements.*accepted tasks and exclusions/);
+ assert.doesNotMatch(html,/"@type":"FAQPage"/,'informational plans are not advertised as FAQ questions');
+ assert.equal((html.match(/id="maintenance-plans"/g)||[]).length,1);
+}
 const renderedGuides=()=>fs.readdirSync(path.join(root,'guides')).filter(slug=>fs.existsSync(path.join(root,'guides',slug,'index.html'))).map(slug=>({page:`guides/${slug}/index.html`,html:fs.readFileSync(path.join(root,'guides',slug,'index.html'),'utf8')}));
 const guideSlugs=['cupboard-hinges-drawer-runners-repair-guide','sticking-doors-windows-repair-guide','wall-patching-paint-touch-ups-guide','shower-silicone-grout-waterproofing-guide'];
 test('booking FAQ stays focused and each research scenario retains a guide or service answer',()=>{
@@ -17,6 +30,14 @@ test('booking FAQ stays focused and each research scenario retains a guide or se
  const mapping=require('../data/service-guide-faq-owners.json');
  const guides=[...renderedGuides(),...Object.keys(moved).map(route=>({page:route.slice(1)+'index.html',html:fs.readFileSync(path.join(root,route.slice(1),'index.html'),'utf8')}))];
  for(const cluster of content.clusters){
+  if(cluster.owner==='O02'){
+   const owner=fs.readFileSync(path.join(root,landing(cluster)),'utf8');
+   assertPropertyMaintenanceOwner(owner);
+   const oldQuestion=mapping.questionOwners[cluster.scenario[0]]||cluster.scenario[0];
+   assert.equal(guides.filter(guide=>guide.html.includes(`<summary>${escape(oldQuestion)}</summary>`)).length,0,'O02 migrated scenario is represented by the maintained service plan, not a duplicate FAQ');
+   assert.ok(fs.readFileSync(path.join(root,'guides/seasonal-home-maintenance-australia/index.html'),'utf8').includes('/services/property-maintenance/'),'seasonal checklist links to the current maintenance owner');
+   continue;
+  }
   const scenarioQuestion=mapping.questionOwners[cluster.scenario[0]]||cluster.scenario[0];
   const scenarioAnswer=mapping.mergedAnswers[scenarioQuestion]||cluster.scenario[1];
   const owners=guides.filter(guide=>guide.html.includes(`<summary>${escape(scenarioQuestion)}</summary>`));
@@ -63,11 +84,16 @@ test('new repair guides are discoverable and indexable with matching structured 
 test('committed keyword clusters and guides have unique owners and valid rendered page targets',()=>{
  assert.equal(content.clusters.length,31);assert.equal(new Set(content.clusters.map(cluster=>cluster.owner)).size,31);
  const home=content.clusters.find(cluster=>cluster.owner==='O01');assert.equal(home.slug,'home');
- assert.match(fs.readFileSync(path.join(root,landing(home)),'utf8'),/<h1\b[^>]*>[^<]*Handyman[^<]*<\/h1>/i);
+ const homeHtml=fs.readFileSync(path.join(root,landing(home)),'utf8');
+ assert.match(plain(homeHtml.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)[1]),/Handyman.*Perth/i);
  for(const cluster of content.clusters){
   const page=landing(cluster);assert.ok(fs.existsSync(path.join(root,page)),`${cluster.owner}: ${page}`);
   const html=fs.readFileSync(path.join(root,page),'utf8');assert.match(html,/<h1\b[^>]*>.+?<\/h1>/);
-  assert.ok(html.includes('id="repair-planning-guides"'),`${cluster.owner} landing links to detailed guidance`);
+  if(cluster.owner==='O02'){
+   assertPropertyMaintenanceOwner(html);
+   assert.ok(html.includes('/guides/property-manager-maintenance-coordination/'),'O02 links to authority and access guidance');
+   assert.ok(html.includes('/guides/prepare-before-home-repair-quote/'),'O02 links to repair-list preparation');
+  }else assert.ok(html.includes('id="repair-planning-guides"'),`${cluster.owner} landing links to detailed guidance`);
   assert.ok(cluster.heading&&cluster.answer&&cluster.scenario[0]&&cluster.scenario[1],cluster.owner);
  }
  assert.equal(content.guides.length,4);assert.equal(new Set(content.guides.map(guide=>guide.slug)).size,4);
