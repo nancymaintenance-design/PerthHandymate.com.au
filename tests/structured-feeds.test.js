@@ -8,6 +8,41 @@ const root = path.resolve(__dirname,'..');
 const read = file => fs.readFileSync(path.join(root,'dist',file),'utf8');
 const graph = html => load(html)('script[type="application/ld+json"]').toArray().flatMap(e=>{const d=JSON.parse(load(html)(e).text());return d['@graph']||[d];});
 
+test('every English and Chinese FAQ schema answer exactly follows its visible answer',()=>{
+ const differences=[];let checked=0;
+ for(const f of sourceFiles(root).filter(f=>f!=='404.html'))for(const prefix of ['','zh/']){
+  const html=read(prefix+f),$=load(html);
+  for(const faq of graph(html).filter(n=>n['@type']==='FAQPage'))for(const question of faq.mainEntity){
+   const matches=$('main details').toArray().filter(e=>$(e).children('summary').first().text().replace(/\s+/g,' ').trim()===question.name);
+   assert.equal(matches.length,1,prefix+f+': '+question.name);
+   const visible=$(matches[0]).clone();visible.children('summary').remove();
+   const answer=visible.text().replace(/\s+/g,' ').trim();
+   if(question.acceptedAnswer.text!==answer)differences.push({file:prefix+f,question:question.name});
+   checked++;
+  }
+ }
+ assert.equal(checked,584,'all existing FAQ questions remain represented');
+ assert.deepEqual(differences,[],'Schema must not retain separate or older translations');
+});
+
+test('build refuses FAQ schema with absent or ambiguous visible questions',t=>{
+ const {createBuildFixture,buildLocal}=require('./helpers/local-build');
+ const fixture=createBuildFixture(t),file=path.join(fixture,'faq/index.html');
+ const original=fs.readFileSync(file,'utf8');
+ const absent=original.replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g,(whole,raw)=>{
+  const d=JSON.parse(raw);if(d['@type']!=='FAQPage')return whole;
+  d.mainEntity[0].name='Home';return '<script type="application/ld+json">'+JSON.stringify(d)+'</script>';
+ });
+ assert.notEqual(absent,original,'fixture modifies an actual FAQ schema');
+ fs.writeFileSync(file,absent);
+ const missing=buildLocal(fixture);assert.notEqual(missing.status,0,'cannot publish a FAQ with no visible matching question');
+ assert.match(missing.stderr,/FAQ question must match exactly one visible/);
+ const detail=original.match(/<details\b[^>]*>[\s\S]*?<\/details>/)?.[0];assert.ok(detail);
+ fs.writeFileSync(file,original.replace(detail,detail+detail));
+ const duplicate=buildLocal(fixture);assert.notEqual(duplicate.status,0,'ambiguous matches cannot silently select one answer');
+ assert.match(duplicate.stderr,/FAQ question must match exactly one visible/);
+});
+
 // Missing entity connections would make crawlers unable to identify the page's primary subject.
 test('bilingual pages connect stable business, website and unique primary page entities',()=>{
  for(const f of sourceFiles(root).filter(f=>f!=='404.html')) for(const prefix of ['', 'zh/']){

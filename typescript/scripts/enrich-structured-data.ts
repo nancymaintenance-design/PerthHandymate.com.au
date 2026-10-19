@@ -34,6 +34,20 @@ function readPage(file:string,lang:string):RecordPage{
 function enrich(page:RecordPage,known:Set<string>):string{
  const {$,url,title,summary,lang,topics}=page;
  const nodes=page.nodes.map(n=>({...n}));
+ // Localized HTML owns FAQ wording. Never translate/store its structured answer separately.
+ for(const faq of nodes.filter(n=>n['@type']==='FAQPage')){
+  if(!Array.isArray(faq.mainEntity))throw new Error(`Invalid FAQ questions: ${page.file}`);
+  faq.mainEntity=faq.mainEntity.map((entry:unknown)=>{
+   if(!entry||typeof entry!=='object')throw new Error(`Invalid FAQ question: ${page.file}`);
+   const question=entry as Node;
+   const matches=$('main details').toArray().filter(e=>text($(e).children('summary').first().text())===question.name);
+   if(matches.length!==1)throw new Error(`FAQ question must match exactly one visible summary: ${page.file}: ${String(question.name)}`);
+   const answer=$(matches[0]).clone();answer.children('summary').remove();
+   const visible=text(answer.text()),old=question.acceptedAnswer;
+   if(!visible||!old||typeof old!=='object'||Array.isArray(old))throw new Error(`Invalid FAQ answer: ${page.file}: ${String(question.name)}`);
+   return {...question,acceptedAnswer:{...old,text:visible}};
+  });
+ }
  const organization=nodes.find(n=>n['@id']===origin+'/#organization');
  if(!organization)throw new Error(`Missing existing company identity: ${page.file}`);
  const plainRoute=new URL(url).pathname.replace(/^\/zh\//,'/');

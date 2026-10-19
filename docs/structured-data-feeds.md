@@ -8,6 +8,8 @@
 
 保留现有 `#organization`、`#perth-office` 及已有实体标识。新增统一 `#website` 与逐页 `#webpage`，服务页连接 `#service`、指南连接 `#article`、案例连接原 CreativeWork（缺 ID 时补 `#work`）。关于、联系及目录按真实用途使用 AboutPage、ContactPage、CollectionPage；保留既有 FAQ 和面包屑内容。
 
+2026-10-20 FAQ 修复：在双语正文生成完成后，FAQPage 的每个问题必须唯一匹配同页 main 中的 details/summary，acceptedAnswer.text 直接取该可见答案的文本，不再使用独立翻译。保留其余实体字段和原始页面字节；问题缺失或重复匹配时中止构建。中英文全部584条问题由回归测试检查。
+
 公司简介来自关于页现有段落；页面摘要来自本页公开段落；keywords/tags 来自本页 H1/H2，最多六项。它们是主题描述，不是额外的隐形广告文案或权重承诺。没有公开署名及可靠首次发布时间，不虚构作者、发布时间或构建日期。
 
 ## Feed
