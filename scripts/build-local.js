@@ -22,3 +22,4 @@ execFileSync(process.execPath, [path.join(__dirname, 'normalize-index-links.js')
     stdio: 'inherit',
 });
 execFileSync(process.execPath, [path.join(__dirname, 'build-locales.js')], { cwd: root, stdio: 'inherit' });
+execFileSync(process.execPath, [path.join(__dirname, 'enrich-structured-data.js')], { cwd: root, stdio: 'inherit' });

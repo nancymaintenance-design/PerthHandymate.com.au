@@ -19,13 +19,14 @@ test('all 67 detail pages have Perth titles and unique task-specific questions',
     assert.doesNotMatch(faq, /What information helps confirm the scope\?|What work is typically included|covered by this service\?|What can change the recommended approach\?/);
   }
 });
-test('local distribution and source service pages are identical', t => {
+test('local distribution preserves source service pages outside structured data and feed discovery', t => {
   const fixture = createBuildFixture(t);
   const result = buildLocal(fixture);
   assert.equal(result.status, 0, result.stderr || result.stdout);
   const pages = new Set(['services/index.html', ...catalog.canonicalServices.map(x => x.url+'index.html'), ...catalog.canonicalServices.map(x => `services/${x.category}/index.html`)]);
   const {languageShell}=require('../scripts/lib/locales');
-  for (const file of pages) assert.equal(fs.readFileSync(path.join(fixture, 'dist', file), 'utf8'), languageShell(fs.readFileSync(path.join(root,file),'utf8'),file,false), file);
+  const presentation = html => html.replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '').replace(/<link\b[^>]*type="application\/(?:rss\+xml|feed\+json)"[^>]*>/gi, '');
+  for (const file of pages) assert.equal(presentation(fs.readFileSync(path.join(fixture, 'dist', file), 'utf8')), presentation(languageShell(fs.readFileSync(path.join(root,file),'utf8'),file,false)), file);
 });
 test('all 31 committed research owners retain source content and a current scenario destination', () => {
   const data = JSON.parse(fs.readFileSync(path.join(root, 'data/keyword-content-round.json'), 'utf8'));

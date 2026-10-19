@@ -25,6 +25,8 @@ function buildLocal(root) {
   return spawnSync(process.execPath, ['scripts/build-local.js'], {
     cwd: root,
     encoding: 'utf8',
+    // Fixtures deliberately exclude node_modules; reuse installed build dependencies.
+    env: { ...process.env, NODE_PATH: [path.join(sourceRoot, 'node_modules'), process.env.NODE_PATH].filter(Boolean).join(path.delimiter) },
   });
 }
 

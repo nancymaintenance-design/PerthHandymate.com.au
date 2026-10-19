@@ -64,7 +64,8 @@ http.createServer((request, response) => {
   }
   fs.readFile(target, (error, body) => {
     if (error) { notFound(); return; }
-    response.writeHead(200, { 'Content-Type': types[path.extname(target)] || 'application/octet-stream' });
+    const contentType = pathname.endsWith('/feed.json') ? 'application/feed+json; charset=utf-8' : pathname.endsWith('/feed.xml') ? 'application/rss+xml; charset=utf-8' : types[path.extname(target)] || 'application/octet-stream';
+    response.writeHead(200, { 'Content-Type': contentType });
     response.end(body);
   });
 }).listen(port, host, () => {

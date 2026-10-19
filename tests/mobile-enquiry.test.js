@@ -3,8 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const http = require('node:http');
-const { execFileSync } = require('node:child_process');
-const { createBuildFixture } = require('./helpers/local-build');
+const { createBuildFixture, buildLocal } = require('./helpers/local-build');
 const root = path.resolve(__dirname, '..');
 const { loadPlaywright, browserLaunchOptions } = require('./helpers/browser-runtime');
 const playwright = loadPlaywright();
@@ -17,7 +16,8 @@ test.before(async () => {
   fs.mkdirSync(reports, { recursive: true });
   // This suite's after hook closes the browser/server before removing its fixture.
   fixture = createBuildFixture({after:()=>{}});
-  execFileSync(process.execPath, ['scripts/build-local.js'], { cwd: fixture });
+  const build = buildLocal(fixture);
+  assert.equal(build.status, 0, build.stderr || build.stdout);
   server = http.createServer((req, res) => {
     const pathname = new URL(req.url, 'http://localhost').pathname;
     const file = path.join(fixture, 'dist', pathname, pathname.endsWith('/') ? 'index.html' : '');

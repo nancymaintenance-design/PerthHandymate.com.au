@@ -4,6 +4,16 @@
   "outputDirectory": "dist",
   "routes": [
     {
+      "src": "^/(?:zh/)?feed\\.json$",
+      "headers": { "Content-Type": "application/feed+json; charset=utf-8" },
+      "continue": true
+    },
+    {
+      "src": "^/(?:zh/)?feed\\.xml$",
+      "headers": { "Content-Type": "application/rss+xml; charset=utf-8" },
+      "continue": true
+    },
+    {
       "src": "^/.*$",
       "headers": {
         "X-Content-Type-Options": "nosniff",
