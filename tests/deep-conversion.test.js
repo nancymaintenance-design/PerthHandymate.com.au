@@ -67,7 +67,7 @@ for (const [route, decision, concepts] of [
  ['outdoor-structures-fencing-pools/timber-fencing', /(?:fence.*keep leaning|repaired fence keep leaning)/i,
   [/post/i, /footing/i, /connections/i, /ground movement/i, /retaining function/i, /replacement/i]],
  ['handyman-interiors-appliance-repairs/tv-wall-mounting', /(?:move a power point|adds a power point)/i,
-  [/licensed electrical personnel/i, /quotation/i, /fixed wiring/i, /outlet position/i, /access/i, /making good/i, /WA electrical-work guidance/i]],
+  [/licensed electrical personnel/i, /quotation/i, /fixed wiring/i, /outlet position/i, /access/i, /making good/i]],
  ['handyman-interiors-appliance-repairs/shelving-mirror-picture-hanging', /(?:weight.*shelf hold|suitable shelf load)/i,
   [/product instructions/i, /brackets/i, /fixings/i, /wall support/i, /intended use/i, /No general weight figure/i, /Photos alone/i]],
 ]) test(`${route} gives one qualified FAQ answer for the reviewed decision`, () => {

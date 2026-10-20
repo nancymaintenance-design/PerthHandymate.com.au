@@ -3054,12 +3054,12 @@
       "bodyEvidence": {
         "path": "/services/roofing-gutters-exterior/house-painters/",
         "fragment": "touch-up-colour-and-registration",
-        "excerpt": "Ellis assesses paint work as its own scope, including relevant registration requirements. Those requirements depend on the applicable jurisdiction and contract value; see WA painting registration guidance. A handyman label does not decide whether a painting contract can be accepted. Peeling paint after adhesive hooks and a rental patch that needs matching paint both need the remaining coating assessed. Share any retained paint details if available. Colour matching can help select a coating but cannot promise that aged surfaces will blend invisibly."
+        "excerpt": "We assess the surfaces, preparation and finish you need, then confirm the painting scope, relevant registration requirements and written quote before work begins. Peeling paint after adhesive hooks and a rental patch that needs matching paint both need the remaining coating assessed. Share any retained paint details if available. Colour matching can help select a coating but cannot promise that aged surfaces will blend invisibly."
       },
       "decisionEvidence": {
         "path": "/services/roofing-gutters-exterior/house-painters/",
         "fragment": "touch-up-colour-and-registration",
-        "excerpt": "Ellis assesses paint work as its own scope, including relevant registration requirements. Those requirements depend on the applicable jurisdiction and contract value; see WA painting registration guidance. A handyman label does not decide whether a painting contract can be accepted. Peeling paint after adhesive hooks and a rental patch that needs matching paint both need the remaining coating assessed. Share any retained paint details if available. Colour matching can help select a coating but cannot promise that aged surfaces will blend invisibly."
+        "excerpt": "We assess the surfaces, preparation and finish you need, then confirm the painting scope, relevant registration requirements and written quote before work begins. Peeling paint after adhesive hooks and a rental patch that needs matching paint both need the remaining coating assessed. Share any retained paint details if available. Colour matching can help select a coating but cannot promise that aged surfaces will blend invisibly."
       }
     },
     {
@@ -3072,12 +3072,12 @@
       "bodyEvidence": {
         "path": "/services/roofing-gutters-exterior/house-painters/",
         "fragment": "touch-up-colour-and-registration",
-        "excerpt": "Ellis assesses paint work as its own scope, including relevant registration requirements. Those requirements depend on the applicable jurisdiction and contract value; see WA painting registration guidance. A handyman label does not decide whether a painting contract can be accepted. Peeling paint after adhesive hooks and a rental patch that needs matching paint both need the remaining coating assessed. Share any retained paint details if available. Colour matching can help select a coating but cannot promise that aged surfaces will blend invisibly."
+        "excerpt": "We assess the surfaces, preparation and finish you need, then confirm the painting scope, relevant registration requirements and written quote before work begins. Peeling paint after adhesive hooks and a rental patch that needs matching paint both need the remaining coating assessed. Share any retained paint details if available. Colour matching can help select a coating but cannot promise that aged surfaces will blend invisibly."
       },
       "decisionEvidence": {
         "path": "/services/roofing-gutters-exterior/house-painters/",
         "fragment": "touch-up-colour-and-registration",
-        "excerpt": "Ellis assesses paint work as its own scope, including relevant registration requirements. Those requirements depend on the applicable jurisdiction and contract value; see WA painting registration guidance. A handyman label does not decide whether a painting contract can be accepted. Peeling paint after adhesive hooks and a rental patch that needs matching paint both need the remaining coating assessed. Share any retained paint details if available. Colour matching can help select a coating but cannot promise that aged surfaces will blend invisibly."
+        "excerpt": "We assess the surfaces, preparation and finish you need, then confirm the painting scope, relevant registration requirements and written quote before work begins. Peeling paint after adhesive hooks and a rental patch that needs matching paint both need the remaining coating assessed. Share any retained paint details if available. Colour matching can help select a coating but cannot promise that aged surfaces will blend invisibly."
       }
     },
     {
@@ -3171,14 +3171,14 @@
       "bodyEvidence": {
         "path": "/services/roofing-gutters-exterior/house-painters/",
         "fragment": "touch-up-colour-and-registration-check-painting-requirements-for-the-actual-job",
-        "excerpt": "WA painting registration depends on the work, contract value and applicable area. Check WA painting registration guidance against the proposed project. Ellis confirms the appropriate personnel and scope before acceptance; splitting a job is not a substitute for checking its requirements."
+        "excerpt": "We review the proposed painting work, property location and contract value, then confirm the relevant registration requirements and personnel before accepting the project."
       },
       "boundaryReason": "Safety, product, permission or regulated-work requirements are explained; no ordinary handyman capability or guaranteed outcome is inferred.",
       "faqEvidence": {
         "path": "/services/roofing-gutters-exterior/house-painters/",
         "fragment": "assessment-questions",
         "question": "How are WA painting registration requirements checked?",
-        "answerExcerpt": "Check the proposed work, contract value and applicable area against WA painting registration guidance. Ellis confirms the relevant requirements for the actual scope before acceptance. A small-job description alone does not establish an exemption or a company registration number."
+        "answerExcerpt": "Tell us which surfaces need painting and the finish you want. We inspect the property and confirm preparation, materials, relevant registration requirements and the written quote."
       }
     },
     {
@@ -3841,14 +3841,14 @@
       "bodyEvidence": {
         "path": "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
         "fragment": "tv-support-and-power-planning-a-new-power-point-is-electrical-work",
-        "excerpt": "Adding a power point behind a television is separate from fitting its bracket. Fixed electrical work requires the appropriate licensed personnel; see WA electrical-work guidance. Ellis scopes the electrical work with its own licensed team and coordinates the mechanical installation."
+        "excerpt": "Tell us if you need a power point behind the television. We assess and quote the electrical work separately, then coordinate outlet position, bracket fitting and finishing with you."
       },
       "boundaryReason": "Safety, product, permission or regulated-work requirements are explained; no ordinary handyman capability or guaranteed outcome is inferred.",
       "faqEvidence": {
         "path": "/services/handyman-interiors-appliance-repairs/tv-wall-mounting/",
         "fragment": "assessment-questions",
         "question": "Who adds a power point behind a wall-mounted TV?",
-        "answerExcerpt": "Ellis’s own appropriately licensed electrical personnel assess and carry out the agreed electrical scope. Any new or relocated power point needs separate assessment and quotation; bracket fitting does not include fixed wiring by default. See WA electrical-work guidance; agree outlet position, access and making good separately from mechanical mounting."
+        "answerExcerpt": "Our appropriately licensed electrical personnel assess and carry out the agreed electrical scope. Any new or relocated power point needs separate assessment and quotation; bracket fitting does not include fixed wiring by default. We agree outlet position, access and making good with you before installation."
       }
     },
     {
@@ -4629,14 +4629,14 @@
       "bodyEvidence": {
         "path": "/services/handyman-interiors-appliance-repairs/handymen/",
         "fragment": "pet-flaps-and-panel-type-toughened-glass-is-not-a-site-cut-out",
-        "excerpt": "An existing toughened-glass pane cannot be treated as an ordinary on-site cut-out. Holes are prepared before toughening; see the manufacturer’s toughened-glass guidance. A glazier assesses whether a purpose-made replacement pane and compatible pet-door product are required."
+        "excerpt": "Do not drill or cut an existing toughened-glass pane. We assess the glass and pet-door product and confirm whether a purpose-made replacement pane is needed before installation."
       },
       "boundaryReason": "Safety, product, permission or regulated-work requirements are explained; no ordinary handyman capability or guaranteed outcome is inferred.",
       "faqEvidence": {
         "path": "/guides/sticking-doors-windows-repair-guide/",
         "fragment": "assessment-questions",
         "question": "Can a pet door be cut into an existing toughened pane?",
-        "answerExcerpt": "No ordinary on-site cut-out should be planned. Holes are prepared before toughening, as explained in the manufacturer’s toughened-glass guidance. Ellis’s glazing assessment identifies a suitable replacement-pane and pet-door scope where needed; do not drill or cut the existing pane."
+        "answerExcerpt": "Do not drill or cut an existing toughened-glass pane. We assess the opening and pet-door product, then confirm whether a purpose-made replacement pane is needed."
       }
     },
     {
@@ -5711,14 +5711,14 @@
       "bodyEvidence": {
         "path": "/services/outdoor-structures-fencing-pools/timber-fencing/",
         "fragment": "fence-lean-and-old-materials-old-fibre-cement-material",
-        "excerpt": "Old unidentified fibre-cement fencing may contain asbestos. Material must be assessed before disturbance; do not cut, drill or remove sheets to investigate. See WorkSafe asbestos guidance. Ellis identifies the appropriate assessment and work requirements separately from ordinary timber repairs."
+        "excerpt": "Leave old unidentified fibre-cement sheets undisturbed; do not cut, drill or remove them. We assess the affected fence and materials before confirming the repair plan."
       },
       "boundaryReason": "Safety, product, permission or regulated-work requirements are explained; no ordinary handyman capability or guaranteed outcome is inferred.",
       "faqEvidence": {
         "path": "/services/outdoor-structures-fencing-pools/timber-fencing/",
         "fragment": "assessment-questions",
         "question": "What should happen before repairing an old fibre-cement fence?",
-        "answerExcerpt": "Leave unidentified material undisturbed and arrange appropriate assessment before repair or removal. Suspected asbestos is not an ordinary timber-fence task. See WorkSafe asbestos guidance; do not cut, drill or pressure clean suspect sheets."
+        "answerExcerpt": "Leave unidentified sheets undisturbed and tell us which part of the fence needs repair. We arrange material assessment before repair or removal; do not cut, drill or pressure clean suspect sheets."
       }
     },
     {
@@ -6103,14 +6103,14 @@
       "bodyEvidence": {
         "path": "/services/handyman-interiors-appliance-repairs/handymen/",
         "fragment": "patio-supports-and-eaves-material-unidentified-older-eaves-sheets",
-        "excerpt": "Older eaves lining can contain asbestos, which cannot be ruled out by a photograph alone. Leave unidentified sheets undisturbed until assessed. See WorkSafe asbestos guidance. Material identification and the work plan come before cutting, drilling or removing lining."
+        "excerpt": "Leave unidentified eaves sheets undisturbed. Tell us where the damage is; we arrange material assessment and confirm the repair plan before cutting, drilling or removing lining."
       },
       "boundaryReason": "Safety, product, permission or regulated-work requirements are explained; no ordinary handyman capability or guaranteed outcome is inferred.",
       "faqEvidence": {
         "path": "/guides/when-home-maintenance-needs-a-licensed-trade/",
         "fragment": "assessment-questions",
         "question": "Could older eaves lining contain asbestos?",
-        "answerExcerpt": "Yes. A photo or the age of the house alone cannot rule it out. Leave unidentified lining undisturbed and arrange appropriate assessment before repair. See WorkSafe asbestos guidance; do not cut, drill, sand or pressure clean suspect material."
+        "answerExcerpt": "Yes. Leave unidentified lining undisturbed and tell us where the repair is needed. We arrange assessment before work; do not cut, drill, sand or pressure clean suspect material."
       }
     },
     {
@@ -6123,14 +6123,14 @@
       "bodyEvidence": {
         "path": "/services/handyman-interiors-appliance-repairs/handymen/",
         "fragment": "patio-supports-and-eaves-material-unidentified-older-eaves-sheets",
-        "excerpt": "Older eaves lining can contain asbestos, which cannot be ruled out by a photograph alone. Leave unidentified sheets undisturbed until assessed. See WorkSafe asbestos guidance. Material identification and the work plan come before cutting, drilling or removing lining."
+        "excerpt": "Leave unidentified eaves sheets undisturbed. Tell us where the damage is; we arrange material assessment and confirm the repair plan before cutting, drilling or removing lining."
       },
       "boundaryReason": "Safety, product, permission or regulated-work requirements are explained; no ordinary handyman capability or guaranteed outcome is inferred.",
       "faqEvidence": {
         "path": "/guides/when-home-maintenance-needs-a-licensed-trade/",
         "fragment": "assessment-questions",
         "question": "Could older eaves lining contain asbestos?",
-        "answerExcerpt": "Yes. A photo or the age of the house alone cannot rule it out. Leave unidentified lining undisturbed and arrange appropriate assessment before repair. See WorkSafe asbestos guidance; do not cut, drill, sand or pressure clean suspect material."
+        "answerExcerpt": "Yes. Leave unidentified lining undisturbed and tell us where the repair is needed. We arrange assessment before work; do not cut, drill, sand or pressure clean suspect material."
       }
     },
     {
@@ -6610,14 +6610,14 @@
       "bodyEvidence": {
         "path": "/services/handyman-interiors-appliance-repairs/handymen/",
         "fragment": "surface-cleaning-and-material-risk-suspect-older-material",
-        "excerpt": "Suspected asbestos-containing material must not be pressure cleaned. Older unidentified sheets and finishes require assessment before disturbance; appearance alone cannot establish safety. See WorkSafe asbestos guidance. The patio and paving task does not include roof or asbestos cleaning."
+        "excerpt": "Suspected asbestos-containing material must not be pressure cleaned. Keep unidentified sheets and finishes undisturbed. We check the patio and paving materials before choosing a cleaning method; roof and asbestos cleaning are not included in this service."
       },
       "boundaryReason": "Safety, product, permission or regulated-work requirements are explained; no ordinary handyman capability or guaranteed outcome is inferred.",
       "faqEvidence": {
         "path": "/guides/when-home-maintenance-needs-a-licensed-trade/",
         "fragment": "assessment-questions",
         "question": "Which older materials should not be pressure cleaned?",
-        "answerExcerpt": "Do not pressure clean suspected asbestos-containing material or disturb unidentified material before assessment. See WorkSafe asbestos guidance. Fragile coatings and weak joints also need their method checked; roof and asbestos cleaning are outside this patio-and-paving scope."
+        "answerExcerpt": "Keep suspected asbestos and unidentified materials undisturbed. We check paving, coatings and joints before choosing a cleaning method. Patio and paving cleaning does not include roof or asbestos cleaning."
       }
     },
     {
@@ -7621,7 +7621,7 @@
       "bodyEvidence": {
         "path": "/guides/when-home-maintenance-needs-a-licensed-trade/",
         "fragment": "older-residents-and-support-rails",
-        "excerpt": "Grab rails need a suitable product, supporting structure and placement plan. Routine repairs do not establish funded home-modification eligibility, company NDIS registration or payment acceptance. Check individual arrangements separately; NDIS home-modification guidance distinguishes modification needs from ordinary maintenance."
+        "excerpt": "We check the grab rail, wall support and installation position. Tell us your installation requirements and confirm any funding approval and payment arrangements before booking."
       },
       "boundaryReason": "No NDIS registration, funding or reimbursement claim; placement, suitable product and structural support need assessment."
     },
@@ -7635,12 +7635,12 @@
       "bodyEvidence": {
         "path": "/guides/when-home-maintenance-needs-a-licensed-trade/",
         "fragment": "older-residents-and-support-rails",
-        "excerpt": "Grab rails need a suitable product, supporting structure and placement plan. Routine repairs do not establish funded home-modification eligibility, company NDIS registration or payment acceptance. Check individual arrangements separately; NDIS home-modification guidance distinguishes modification needs from ordinary maintenance. For a loose front-step handrail or household fittings needing repair for an older resident, describe the risk and keep the unstable fitting out of use. Bring any adviser’s rail plan; location advice and installation are separate assessments, without an accessibility guarantee."
+        "excerpt": "We check the grab rail, wall support and installation position. Tell us your installation requirements and confirm any funding approval and payment arrangements before booking. For a loose front-step handrail or household fittings needing repair for an older resident, describe the risk and keep the unstable fitting out of use. Bring any adviser’s rail plan; location advice and installation are separate assessments, without an accessibility guarantee."
       },
       "decisionEvidence": {
         "path": "/guides/when-home-maintenance-needs-a-licensed-trade/",
         "fragment": "older-residents-and-support-rails",
-        "excerpt": "Grab rails need a suitable product, supporting structure and placement plan. Routine repairs do not establish funded home-modification eligibility, company NDIS registration or payment acceptance. Check individual arrangements separately; NDIS home-modification guidance distinguishes modification needs from ordinary maintenance. For a loose front-step handrail or household fittings needing repair for an older resident, describe the risk and keep the unstable fitting out of use. Bring any adviser’s rail plan; location advice and installation are separate assessments, without an accessibility guarantee."
+        "excerpt": "We check the grab rail, wall support and installation position. Tell us your installation requirements and confirm any funding approval and payment arrangements before booking. For a loose front-step handrail or household fittings needing repair for an older resident, describe the risk and keep the unstable fitting out of use. Bring any adviser’s rail plan; location advice and installation are separate assessments, without an accessibility guarantee."
       }
     },
     {
@@ -7653,13 +7653,13 @@
       "bodyEvidence": {
         "path": "/guides/when-home-maintenance-needs-a-licensed-trade/",
         "fragment": "older-residents-and-support-rails",
-        "excerpt": "Grab rails need a suitable product, supporting structure and placement plan. Routine repairs do not establish funded home-modification eligibility, company NDIS registration or payment acceptance. Check individual arrangements separately; NDIS home-modification guidance distinguishes modification needs from ordinary maintenance. For a loose front-step handrail or household fittings needing repair for an older resident, describe the risk and keep the unstable fitting out of use. Bring any adviser’s rail plan; location advice and installation are separate assessments, without an accessibility guarantee."
+        "excerpt": "We check the grab rail, wall support and installation position. Tell us your installation requirements and confirm any funding approval and payment arrangements before booking. For a loose front-step handrail or household fittings needing repair for an older resident, describe the risk and keep the unstable fitting out of use. Bring any adviser’s rail plan; location advice and installation are separate assessments, without an accessibility guarantee."
       },
       "boundaryReason": "No NDIS registration, funding or reimbursement claim; placement, suitable product and structural support need assessment.",
       "decisionEvidence": {
         "path": "/guides/when-home-maintenance-needs-a-licensed-trade/",
         "fragment": "older-residents-and-support-rails",
-        "excerpt": "Grab rails need a suitable product, supporting structure and placement plan. Routine repairs do not establish funded home-modification eligibility, company NDIS registration or payment acceptance. Check individual arrangements separately; NDIS home-modification guidance distinguishes modification needs from ordinary maintenance. For a loose front-step handrail or household fittings needing repair for an older resident, describe the risk and keep the unstable fitting out of use. Bring any adviser’s rail plan; location advice and installation are separate assessments, without an accessibility guarantee."
+        "excerpt": "We check the grab rail, wall support and installation position. Tell us your installation requirements and confirm any funding approval and payment arrangements before booking. For a loose front-step handrail or household fittings needing repair for an older resident, describe the risk and keep the unstable fitting out of use. Bring any adviser’s rail plan; location advice and installation are separate assessments, without an accessibility guarantee."
       }
     },
     {
@@ -7734,14 +7734,14 @@
       "bodyEvidence": {
         "path": "/services/handyman-interiors-appliance-repairs/handymen/",
         "fragment": "older-residents-and-support-rails-maintenance-and-funded-modifications",
-        "excerpt": "Ordinary maintenance repairs worn or damaged items; disability-related home modifications respond to individual needs and funding decisions. They are not automatically the same service. Read NDIS home-modification guidance and confirm the individual funding and payment arrangements separately before booking."
+        "excerpt": "We repair worn or damaged fittings and assess home modifications against your installation needs. If funding is involved, confirm the approval and payment arrangements before booking so we can agree the work and quote with you."
       },
       "boundaryReason": "No NDIS registration, funding or reimbursement claim; placement, suitable product and structural support need assessment.",
       "faqEvidence": {
         "path": "/guides/when-home-maintenance-needs-a-licensed-trade/",
         "fragment": "assessment-questions",
         "question": "Is handyman maintenance the same as a funded home modification?",
-        "answerExcerpt": "No. A funded modification depends on individual needs and arrangements; routine maintenance does not establish eligibility. See NDIS home-modification guidance. Confirm the funding and payment requirements separately with Ellis before booking; registration or reimbursement is not assumed."
+        "answerExcerpt": "No. Tell us the repair or modification you need. We confirm the work and quote with you; please confirm any funding approval and payment arrangements before booking."
       }
     },
     {
@@ -7985,7 +7985,7 @@
       "bodyEvidence": {
         "path": "/services/handyman-interiors-appliance-repairs/handymen/",
         "fragment": "quote-inclusions-and-business-checks-check-identity-and-scope-specific-qualifications",
-        "excerpt": "Check the business name, contact details and the personnel responsible for the proposed work. Relevant qualifications are specific to the task; WA electrical-work guidance and WA security licence classes explain different work categories. Ask for applicable details rather than treating a handyman business name as a universal licence."
+        "excerpt": "Tell us the repairs you need. We confirm the personnel, relevant qualifications and written scope for each task before work begins, including any separate electrical or security work."
       },
       "boundaryReason": "No invented fee, discount, free visit or universal licence; confirm the actual written scope and applicable details.",
       "faqEvidence": {
@@ -8064,13 +8064,13 @@
       "bodyEvidence": {
         "path": "/services/electrical-plumbing-gas-air-conditioning/electricians/",
         "fragment": "trade-boundaries-and-mixed-repairs",
-        "excerpt": "A TV bracket plus a new outlet needs mechanical and electrical work assessed separately. See WA electrical-work guidance. For prescribed security equipment, the applicable class and work must also be checked against WA security licence classes; ordinary door handles are not all the same security task. A cabinet damaged beside a leaking sink needs the plumbing cause assessed as well as the cabinetry. Tell Ellis about both faults. Repairing a panel while water continues to enter may leave the cause unresolved; each accepted trade task is identified in the quote."
+        "excerpt": "We assess TV bracket fitting and electrical work separately. Tell us if you also need a new outlet, lock or security equipment so we can confirm the personnel and work requirements for each task. A cabinet damaged beside a leaking sink needs the plumbing cause assessed as well as the cabinetry. Tell Ellis about both faults. Repairing a panel while water continues to enter may leave the cause unresolved; each accepted trade task is identified in the quote."
       },
       "boundaryReason": "Safety, product, permission or regulated-work requirements are explained; no ordinary handyman capability or guaranteed outcome is inferred.",
       "decisionEvidence": {
         "path": "/services/electrical-plumbing-gas-air-conditioning/electricians/",
         "fragment": "trade-boundaries-and-mixed-repairs",
-        "excerpt": "A TV bracket plus a new outlet needs mechanical and electrical work assessed separately. See WA electrical-work guidance. For prescribed security equipment, the applicable class and work must also be checked against WA security licence classes; ordinary door handles are not all the same security task. A cabinet damaged beside a leaking sink needs the plumbing cause assessed as well as the cabinetry. Tell Ellis about both faults. Repairing a panel while water continues to enter may leave the cause unresolved; each accepted trade task is identified in the quote."
+        "excerpt": "We assess TV bracket fitting and electrical work separately. Tell us if you also need a new outlet, lock or security equipment so we can confirm the personnel and work requirements for each task. A cabinet damaged beside a leaking sink needs the plumbing cause assessed as well as the cabinetry. Tell Ellis about both faults. Repairing a panel while water continues to enter may leave the cause unresolved; each accepted trade task is identified in the quote."
       }
     },
     {
@@ -8129,12 +8129,12 @@
       "bodyEvidence": {
         "path": "/services/electrical-plumbing-gas-air-conditioning/electricians/",
         "fragment": "trade-boundaries-and-mixed-repairs",
-        "excerpt": "A TV bracket plus a new outlet needs mechanical and electrical work assessed separately."
+        "excerpt": "We assess TV bracket fitting and electrical work separately. Tell us if you also need a new outlet, lock or security equipment so we can confirm the personnel and work requirements for each task."
       },
       "scenarioEvidence": {
         "path": "/services/electrical-plumbing-gas-air-conditioning/electricians/",
         "fragment": "trade-boundaries-and-mixed-repairs",
-        "excerpt": "A TV bracket plus a new outlet needs mechanical and electrical work assessed separately."
+        "excerpt": "We assess TV bracket fitting and electrical work separately. Tell us if you also need a new outlet, lock or security equipment so we can confirm the personnel and work requirements for each task."
       }
     },
     {
@@ -8167,14 +8167,14 @@
       "bodyEvidence": {
         "path": "/services/electrical-plumbing-gas-air-conditioning/electricians/",
         "fragment": "trade-boundaries-and-mixed-repairs-security-work-has-its-own-classes",
-        "excerpt": "Prescribed security equipment, relevant locks and security doors can involve specific security licence classes. Check the actual work against WA security licence classes. Do not assume every ordinary door handle is regulated security equipment, or that a handyman description authorises all security work."
+        "excerpt": "Tell us the lock, security door or equipment that needs attention. We check the product and proposed work, then confirm the relevant licence requirements and personnel."
       },
       "boundaryReason": "Safety, product, permission or regulated-work requirements are explained; no ordinary handyman capability or guaranteed outcome is inferred.",
       "faqEvidence": {
         "path": "/services/electrical-plumbing-gas-air-conditioning/electricians/",
         "fragment": "assessment-questions",
         "question": "Do security-door and lock repairs have separate licensing requirements?",
-        "answerExcerpt": "They can involve specific security licence classes depending on the equipment and work. See WA security licence classes. Ellis checks the actual product and scope before acceptance; an ordinary handle repair and prescribed security work must not be treated as identical."
+        "answerExcerpt": "We check the security product and the work you need, then confirm the applicable licence requirements and personnel before starting. Please describe the affected lock, door or equipment when you contact us."
       }
     },
     {
@@ -8187,7 +8187,7 @@
       "bodyEvidence": {
         "path": "/services/electrical-plumbing-gas-air-conditioning/electricians/",
         "fragment": "trade-boundaries-and-mixed-repairs-tap-and-power-point-requests",
-        "excerpt": "Replacing a power point is electrical work; a tap or water-service fault needs the appropriate plumbing scope. Ellis assigns its own appropriately licensed personnel and quotes the tasks separately from minor repairs. See WA electrical-work guidance for fixed-electrical requirements."
+        "excerpt": "Tell us whether you need a power point replaced, a tap repaired or both. We assess electrical and plumbing tasks separately from minor repairs and confirm the appropriate personnel and written quote."
       },
       "boundaryReason": "Safety, product, permission or regulated-work requirements are explained; no ordinary handyman capability or guaranteed outcome is inferred.",
       "faqEvidence": {

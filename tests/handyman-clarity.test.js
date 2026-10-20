@@ -33,7 +33,7 @@ test('educational answers remain in associated service prose while FAQ schema co
     .map(m=>JSON.parse(m[1])).flatMap(v=>v['@graph']||[v]).find(v=>v['@type']==='FAQPage');
   assert.equal(schema.mainEntity.length,13);
   assert.ok(schema.mainEntity.every(v=>v.name.endsWith('?')));
-  for(const marker of ['the manufacturer’s toughened-glass guidance','WorkSafe asbestos guidance','NDIS home-modification guidance']) assert.ok(page.includes(marker));
+  for(const concept of [/do not drill or cut an existing toughened-glass pane/i,/suspected asbestos-containing material must not be pressure cleaned/i,/confirm the approval and payment arrangements before booking/i]) assert.match(page,concept);
 });
 test('legacy topic and nested fragment links open their disclosure on load and repeated clicks', () => {
   const parent = {tagName:'DETAILS',open:false,parentElement:null};

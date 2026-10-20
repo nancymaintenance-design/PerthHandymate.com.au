@@ -48,9 +48,10 @@ test('mobile carousel keeps both arrows and the position on the same row', async
 
 test('guides advance after five seconds and cycle from the end', async t => {
   const page = await fixture(t);
-  await page.clock.runFor(4999);
+  // Installation/RAF setup also consumes clock time; avoid a 1ms-wide race at 5000ms.
+  await page.clock.runFor(4000);
   assert.equal(await offset(page), 0);
-  await page.clock.runFor(1000);
+  await page.clock.runFor(2000);
   await settle();
   assert.ok(await offset(page) > 100, 'first automatic advance');
   assert.equal(await page.locator('[data-guide-position]').getAttribute('aria-live'), 'off');

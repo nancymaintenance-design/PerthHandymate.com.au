@@ -68,8 +68,8 @@ test('canonical renderer and legacy editorial adapter restore an altered guide a
     assert.equal(editHtml(out, plans[file]), out, file + ': idempotence');
   }
 });
-// Catches lost safety decisions or official evidence, without freezing redundant paragraphs.
-test('guides retain specific repair decisions, relevant owners and official evidence', () => {
+// Keep service decisions while respecting the approved removal of external reference links.
+test('guides retain specific repair decisions and relevant service owners without removed reference links', () => {
   const { guides } = require('../data/guide-library');
   const decisions = {
     'cupboard-hinges-drawer-runners-repair-guide': [/panel/i, /runner/i, /hinge/i],
@@ -86,11 +86,10 @@ test('guides retain specific repair decisions, relevant owners and official evid
     'understanding-service-areas-and-postcode-checks': [/suburb/i, /appointment/i, /permission/i]
   };
   for (const g of guides) {
-    const before = execFileSync('git', ['show', `831598f:guides/${g.slug}/index.html`], { cwd: root, encoding: 'utf8' });
     const current = read(`guides/${g.slug}/index.html`);
     for (const pattern of decisions[g.slug]) assert.match(plain(current), pattern, g.slug);
     assert.ok(current.includes(`/services/${g.service[0]}/`), g.slug + ': service owner');
-    for (const [, url] of before.matchAll(/href="(https:\/\/(?:www\.)?(?:wa\.gov\.au|worksafe\.wa\.gov\.au|ndis\.gov\.au|pilkington\.com)[^"]+)"/g)) assert.ok(current.includes(url), g.slug + ': retained official evidence');
+    assert.doesNotMatch(current,/href="https:\/\/(?:www\.)?(?:wa\.gov\.au|worksafe\.wa\.gov\.au|ndis\.gov\.au|pilkington\.com)/,g.slug+': removed reference links stay removed');
   }
 });
 test('current guide inventories and heading policy converge on the canonical scenario identity', () => {
