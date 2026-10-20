@@ -6,6 +6,7 @@ const os = require('node:os');
 const http = require('node:http');
 const { spawn } = require('node:child_process');
 const { once } = require('node:events');
+const { load } = require('cheerio');
 const { createBuildFixture, buildLocal } = require('./helpers/local-build');
 
 async function startPreview(t, root) {
@@ -49,6 +50,51 @@ test('preview serves the built artifact and local recovery routes over HTTP', as
   fs.writeFileSync(path.join(root, 'index.html'), '<main>UNBUILT SOURCE PROBE</main>');
   fs.writeFileSync(path.join(root, '.env.local'), 'PREVIEW_SECRET=private-probe');
   const { base, port } = await startPreview(t, root);
+
+  await t.test('curated llms links resolve to public bilingual canonical pages in the artifact', () => {
+    const markdown = new TextDecoder('utf-8', { fatal: true }).decode(fs.readFileSync(path.join(root, 'dist/llms.txt')));
+    assert.equal((markdown.match(/^# /gm) || []).length, 1);
+    assert.match(markdown, /^> .+/m);
+    assert.match(markdown, /^## 中文服务$/m);
+    assert.doesNotMatch(markdown, /<\/?(?:html|script)\b|localhost|127\.0\.0\.1|example\.com/i);
+    const items = [...markdown.matchAll(/^- \[([^\]]+)\]\(([^)]+)\): (.+)$/gm)];
+    assert.equal(items.length, (markdown.match(/^- /gm) || []).length, 'every item has a descriptive title and summary');
+    assert.ok(items.length >= 10 && items.length <= 40, 'curated, not a sitemap dump');
+    const urls = items.map(item => item[2]);
+    assert.equal(new Set(urls).size, urls.length);
+    for (const [, name, href, summary] of items) {
+      assert.ok(name.length > 3 && summary.length > 12);
+      const url = new URL(href);
+      assert.equal(url.origin, 'https://www.perthhandymate.com.au');
+      assert.equal(url.search + url.hash, '', 'only canonical owner URLs');
+      assert.doesNotMatch(url.pathname, /(?:admin|api|editor|draft|preview|404)/i);
+      const zh = url.pathname.startsWith('/zh/');
+      const pair = zh ? href.replace('/zh/', '/') : href.replace('com.au/', 'com.au/zh/');
+      assert.ok(urls.includes(pair), `paired language present: ${href}`);
+      const $ = load(fs.readFileSync(path.join(root, 'dist', url.pathname, 'index.html'), 'utf8'));
+      assert.equal($('html').attr('lang'), zh ? 'zh-Hans' : 'en-AU');
+      assert.equal($('link[rel="canonical"]').attr('href'), href);
+      assert.doesNotMatch($('meta[name="robots"]').attr('content') || '', /noindex/i);
+      assert.ok($('main').text().trim().length > 200);
+      assert.ok($('link[rel="alternate"][hreflang]').toArray().some(e => $(e).attr('href') === pair));
+    }
+    const config = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
+    const headers = config.routes.filter(r => r.headers && new RegExp(r.src).test('/llms.txt')).reduce((out, r) => ({ ...out, ...r.headers }), {});
+    assert.equal(headers['Content-Type'], 'text/plain; charset=utf-8');
+  });
+
+  await t.test('llms GET returns the same UTF-8 Markdown for both language preferences', async () => {
+    for (const language of ['en-AU', 'zh-CN']) {
+      const response = await fetch(`${base}/llms.txt`, { headers: { 'Accept-Language': language }, redirect: 'manual' });
+      assert.equal(response.status, 200);
+      assert.equal(response.headers.get('content-type'), 'text/plain; charset=utf-8');
+      const bytes = Buffer.from(await response.arrayBuffer());
+      assert.deepEqual(bytes, fs.readFileSync(path.join(root, 'llms.txt')));
+      const text = new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+      assert.match(text, /^# Ellis Services Group/);
+      assert.doesNotMatch(text, /<html|<!doctype|captcha/i);
+    }
+  });
 
   await t.test('serves dist while source docs, configuration and secrets stay private', async () => {
     const home = await fetch(`${base}/`);

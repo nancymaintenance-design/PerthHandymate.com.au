@@ -8,7 +8,7 @@ const output = path.join(root, 'dist');
 const publishedEntries = [
     ...fs.readdirSync(root).filter(file => /\.(?:html|ico|png)$/.test(file)),
     'about', 'areas', 'assets', 'contact', 'data', 'faq', 'guides',
-    'privacy', 'projects', 'robots.txt', 'services', 'site.webmanifest', 'sitemap.xml',
+    'privacy', 'projects', 'robots.txt', 'services', 'site.webmanifest', 'sitemap.xml', 'llms.txt',
 ];
 // Keep the last working preview intact if an edit has no Chinese counterpart.
 execFileSync(process.execPath, [path.join(__dirname, 'build-locales.js'), '--check'], { cwd: root, stdio: 'inherit' });

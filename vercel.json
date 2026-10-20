@@ -4,6 +4,11 @@
   "outputDirectory": "dist",
   "routes": [
     {
+      "src": "^/llms\\.txt$",
+      "headers": { "Content-Type": "text/plain; charset=utf-8" },
+      "continue": true
+    },
+    {
       "src": "^/(?:zh/)?feed\\.json$",
       "headers": { "Content-Type": "application/feed+json; charset=utf-8" },
       "continue": true
