@@ -1,0 +1,18 @@
+/* Existing brand tokens; compact service discovery, not a second page design. */
+.breadcrumbs li{min-width:0;overflow-wrap:anywhere}
+.breadcrumbs li+li:before{content:none}
+.breadcrumbs li+li{border-inline-start:1px solid currentColor;padding-inline-start:10px}
+.breadcrumbs a{display:inline-block;padding-block:5px}
+.breadcrumbs [aria-current=page]{display:inline-block;padding-block:5px}
+.service-path-start{padding-block:20px}
+.service-path-links{padding-block:24px;border-top:1px solid var(--line,#d7dfe3);margin-block:0}
+.service-path-links h2{font-size:1.3rem;line-height:1.3;letter-spacing:-.015em;margin-bottom:14px}
+.service-path-links ul{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.service-path-links li{min-width:0;max-width:100%}
+.service-path-links a{display:block;padding:10px 14px;border:1px solid var(--line,#d7dfe3);border-radius:8px;color:var(--eucalypt);background:var(--white,#fff);font-weight:700;overflow-wrap:anywhere;text-decoration:none}
+.service-path-links a:hover{border-color:var(--orange);text-decoration:underline}
+.service-path-links a:focus-visible,.breadcrumbs a:focus-visible{outline:3px solid var(--focus,var(--orange));outline-offset:3px}
+.about-contact>*{min-width:0}
+.about-contact .about-panel a{overflow-wrap:anywhere}
+.service-preparation-panel{min-width:0;overflow-wrap:anywhere}
+@media(max-width:600px){.breadcrumbs ol{gap:5px 8px}.breadcrumbs li+li{padding-inline-start:8px}.service-path-links ul{gap:8px}.service-path-links a{padding:10px 12px}}

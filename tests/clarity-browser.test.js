@@ -32,7 +32,8 @@ for(const locale of ['','/zh'])test(`requested clarity changes work in ${locale|
     assert.equal(categories.length,9);
     for(const category of categories){await page.goto(category.href);assert.equal((await page.locator('h1').innerText()).trim(),category.label);}
     await page.goto(base+locale+'/services/property-maintenance/');
-    assert.equal(await page.locator('main>section').count(),6);
+    assert.equal(await page.locator('main>section:not([data-service-path-links])').count(),6,'retain the six approved service sections');
+    assert.equal(await page.locator('main>[data-service-path-links]').count(),1,'one compact related-guide entry, not duplicated explanation sections');
     assert.equal(await page.locator('main details[open]').count(),0);
     await page.screenshot({path:path.join(evidence,`clarity${locale?'zh':'en'}-property.png`),fullPage:true});
     await page.goto(base+locale+'/services/handyman-interiors-appliance-repairs/handymen/');

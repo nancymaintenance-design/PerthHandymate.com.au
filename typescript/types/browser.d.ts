@@ -10,7 +10,9 @@ declare global {
   interface EllisContactResult { valid: boolean; errors: Record<string, string> }
   interface EllisValidation { validateContact(values?: EllisContactValues | null): EllisContactResult }
   interface EllisLocaleAPI { chinese(): boolean; t<T>(value: T): T | string }
-  interface EllisAnalyticsAPI { track(name: string, properties?: { method?: string } | null): void; contactResult(success: boolean): void }
+  interface EllisBreadcrumbEvent { source_path: string; target_path: string; locale: 'en-AU' | 'zh-Hans'; position: number; owner_id: string }
+  type EllisAnalyticsProperties = { method?: string } | EllisBreadcrumbEvent;
+  interface EllisAnalyticsAPI { track(name: string, properties?: EllisAnalyticsProperties | null): void; contactResult(success: boolean): void }
   interface EllisSiteAPI {
     resolveServiceSearch(query: unknown, postcode?: unknown): { route: string; service: string; query: string; postcode: string; matched: boolean };
     validateContact(values?: EllisContactValues | null): EllisContactResult;
@@ -32,6 +34,7 @@ declare global {
     EllisLocale: EllisLocaleAPI;
     EllisContactValidation: EllisValidation;
     EllisAnalytics?: EllisAnalyticsAPI;
-    gtag?: (command: 'event', name: string, properties: { method: string; page_path: string }) => void;
+    __ellisAnalyticsInitialized?: boolean;
+    gtag?: (command: 'event', name: string, properties: { method: string; page_path: string } | EllisBreadcrumbEvent) => void;
   }
 }
