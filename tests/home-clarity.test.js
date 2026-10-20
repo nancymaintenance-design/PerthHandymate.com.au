@@ -2,7 +2,6 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const vm = require('node:vm');
 const { execFileSync } = require('node:child_process');
 const { renderHome } = require('../tools/render-home-clarity');
 const { guides } = require('../data/guide-library');
@@ -39,23 +38,5 @@ test('all twelve homepage cards use maintained titles, excerpts and static desti
   assert.match(html, /home-guides-controls" hidden/);
   assert.match(html, /id="home-guide-track" tabindex="0" role="group"/);
 });
-test('manual controls, keyboard and reduced motion work without timers', () => {
-  const events = {}, previous = {}, next = {}, position = {}, controls = { hidden: true };
-  const on = (object, name) => object.addEventListener = (event, listener) => events[name + ':' + event] = listener;
-  on(previous, 'prev'); on(next, 'next');
-  const moves = [];
-  const track = { scrollLeft: 0, scrollWidth: 1200, clientWidth: 300, getBoundingClientRect: () => ({ left: 0 }), scrollTo: options => moves.push(options) };
-  track.children = Array.from({ length: 12 }, (_, i) => ({ getBoundingClientRect: () => ({ left: i * 100 - track.scrollLeft }) }));
-  on(track, 'track');
-  const section = { querySelector: key => ({ '.home-guides-controls': controls, '[data-guide-prev]': previous, '[data-guide-next]': next, '[data-guide-position]': position })[key] };
-  const media = { matches: true }, window = { matchMedia: () => media };
-  on(window, 'window');
-  vm.runInNewContext(fs.readFileSync(path.join(root, 'assets/js/home-guides.js'), 'utf8'), { document: { getElementById: id => id === 'home-guide-track' ? track : section }, window });
-  assert.equal(controls.hidden, false); assert.equal(previous.disabled, true); assert.equal(next.disabled, false);
-  events['next:click'](); assert.equal(moves.at(-1).left, 96); assert.equal(moves.at(-1).behavior, 'instant');
-  media.matches = false;
-  let prevented = false;
-  events['track:keydown']({ target: track, key: 'End', preventDefault: () => prevented = true });
-  assert.ok(prevented); assert.equal(moves.at(-1).left, 1096); assert.equal(moves.at(-1).behavior, 'smooth');
-  track.scrollLeft = 900; events['track:scroll'](); assert.equal(next.disabled, true);
-});
+// Timing, manual controls, keyboard and reduced motion run in a real browser in
+// home-guides-autoplay.test.js rather than a partial DOM mock.

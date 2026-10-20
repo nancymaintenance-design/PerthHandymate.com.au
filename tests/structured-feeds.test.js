@@ -21,7 +21,8 @@ test('every English and Chinese FAQ schema answer exactly follows its visible an
    checked++;
   }
  }
- assert.equal(checked,584,'all existing FAQ questions remain represented');
+ // Approved GSC consolidation removes three repeated window FAQs and one repeated slider FAQ per language.
+ assert.equal(checked,576,'all retained bilingual FAQ questions remain represented after the approved four-question consolidation');
  assert.deepEqual(differences,[],'Schema must not retain separate or older translations');
 });
 

@@ -13,11 +13,14 @@
 .home-clarity .project-feature-list .support-copy h3{font-size:clamp(1.55rem,2.5vw,2.15rem);line-height:1.18;max-width:26ch;margin-bottom:18px}
 .home-clarity #repair-planning-guides{padding-block:36px}
 .home-clarity #repair-planning-guides .text-link{color:var(--sand);justify-self:start}
-.home-guides-toolbar{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:18px}
+.home-guides-toolbar{display:flex;justify-content:flex-end;align-items:center;gap:24px;margin-bottom:18px}
 .home-guides-toolbar>p{font-size:.88rem;color:#dfe8ec;max-width:65ch;margin:0}
-.home-guides-controls{display:flex;gap:12px;align-items:center;flex-shrink:0}
+.home-guides-controls{display:flex;gap:12px;align-items:center;flex-shrink:0;flex-wrap:wrap;max-width:100%}
 .home-guides-controls[hidden]{display:none}
-.home-guides-controls button{display:inline-grid;place-items:center;width:46px;min-height:46px;padding:4px;border:1px solid var(--sand);border-radius:8px;background:var(--navy);color:var(--white);font-size:1.3rem}
+.home-guides-controls button{display:inline-grid;place-items:center;width:46px;min-height:46px;padding:4px;border:1px solid var(--sand);border-radius:8px;background:var(--navy);color:var(--white);font-size:1.3rem;cursor:pointer}
+.home-guides-controls [data-guide-autoplay]{width:auto;min-width:15rem;padding-inline:12px;font-size:.85rem}
+.home-guides-controls [data-guide-autoplay] [hidden]{display:none}
+.home-guides-controls button:active:not(:disabled){background:var(--navy-2);border-color:var(--orange)}
 .home-guides-controls button:hover:not(:disabled){background:var(--navy-2)}
 .home-guides-controls button:disabled{opacity:.45;cursor:default}
 .home-guides-controls [data-guide-position]{min-width:4.5ch;text-align:center;font-variant-numeric:tabular-nums;font-size:.85rem}
@@ -32,4 +35,5 @@
 @media(max-width:900px){.home-guide-track{grid-auto-columns:calc((100% - 24px)/2.15)}.home-clarity .project-feature-list>.support-feature{padding-block:28px}}
 @media(max-width:700px){.home-clarity .hero h1{font-size:clamp(1.85rem,7.1vw,2.45rem);max-width:25ch}.home-clarity .project-feature>.section-heading{gap:16px}.home-guides-toolbar{align-items:flex-start;flex-direction:column;gap:14px}.home-guide-track{grid-auto-columns:86%;gap:16px}.home-guide-card{padding:22px}.home-clarity>.project-feature{padding-block:28px}}
 @media(prefers-reduced-motion:reduce){.home-guide-track{scroll-behavior:auto;scroll-snap-type:none}}
+@media(max-width:700px){.home-guides-controls{width:100%}.home-guides-controls [data-guide-autoplay]{flex-basis:100%;min-width:0}}
 @media(forced-colors:active){.home-guide-track:focus-visible,.home-guides-controls button:focus-visible,.home-guide-card a:focus-visible{outline-color:Highlight}.home-guides-controls button:disabled{opacity:1;color:GrayText}}

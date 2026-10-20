@@ -47,14 +47,15 @@ function consolidateService(html) {
     });
     html = html.replace(/<section\b([^>]*)>([\s\S]*?)<\/section>/g, (section, attrs, body) => {
       attrs = attrs.replace(' id="service-task-questions"', '');
-      if (!/\bid=/.test(attrs) && [...body.matchAll(/<summary>(.*?)<\/summary>/gs)].some(m => maintained.has(plain(m[1])))) body = body.replace('<div class="accordion-list">', '<div class="accordion-list" id="service-task-questions">');
+      if (!/\bid=/.test(attrs) && !body.includes('id="service-task-questions"') && [...body.matchAll(/<summary>(.*?)<\/summary>/gs)].some(m => maintained.has(plain(m[1])))) body = body.replace('<div class="accordion-list">', '<div class="accordion-list" id="service-task-questions">');
       return `<section${attrs}>${body}</section>`;
     });
     const existing = new Set([...html.matchAll(/<summary>(.*?)<\/summary>/gs)].map(m => plain(m[1])));
     const items = [...maintained].filter(([question]) => !existing.has(question)).map(([,item]) => item);
     if (items.length) html = html.replace('</main>', `<section class="section shell service-questions" id="maintenance-task-questions"><h2>Maintenance and repair questions</h2><div class="accordion-list">${items.join('')}</div></section></main>`);
   }
-  return syncFaq(html);
+  const owner = require('../scripts/service-gsc-clarity');
+  return require('../scripts/service-content-cleanup').cleanup(owner.reviseCategory(owner.reviseService(syncFaq(html))));
 }
 function consolidateHome(html) {
   html = html.replace('href="./services/doors-windows-glass-screens/door-installation/">Door repairs & installation</a>', 'href="./services/doors-windows-glass-screens/door-repairs/">Door repairs</a>');

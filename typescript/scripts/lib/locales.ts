@@ -80,7 +80,7 @@ function languageShell(html: string,file: string,zh: boolean): string{
   html=html.replace('</head>',tags+(zh?'<script defer src="/assets/js/zh-messages.js"></script>':'')+'</head>');
   // The seventh navigation item follows Contact Us on every page, including no-JS rendering.
   html=html.replace(/(<nav\b[^>]*\bid="main-nav"[^>]*>)([\s\S]*?)(<\/nav>)/i,(_,open,body,close)=>open+body+`<a class="language-switch" data-language-switch href="${alternate}" hreflang="${lang}" lang="${lang}" aria-label="${zh?'Switch this page to English':'切换到本页简体中文版'}">${label}</a>`+close);
-  return html;
+  return require('./customer-voice').publicCopy(html,zh);
 }
 function renderChinese(html: string,file: string,known: ReadonlySet<string>,t: TextTranslator): string{
   html=html.replace(/<option([^>]*)>([^<]*)<\/option>/gi,(all,attrs,label)=>/\bvalue\s*=/.test(attrs)?all:`<option${attrs} value="${escape(clean(label))}">${label}</option>`);

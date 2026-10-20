@@ -18,6 +18,19 @@ test('all 67 services publish individual scope, quote factors and relevant route
   assert.ok(section,item.slug+' missing deep content');
   assert.equal((html.match(/id="service-work-options"/g)||[]).length,1,item.slug+' duplicate depth block');
   const [a,b,c,d,factors,related]=copy[item.slug];
+  const revised = {
+   'window-repairs':['Sticking sashes and worn hardware','Local frame and sill repairs','timber-window-moisture-and-hardware'],
+   'window-installation':['Replacing windows in existing openings','Supply and install or installation only','Your installation quote'],
+   'door-installation':['Fit a new door to an existing frame','Supply and install or fit your supplied door','door-installation-scope'],
+   'shower-screens':['Hinges and rollers','Seals and water escape','shower-screen-repair-options']
+  }[item.slug];
+  if(revised){
+   for(const topic of revised)assert.ok(section.includes(topic),item.slug+' lost its approved task distinction');
+   assert.ok(section.includes(esc(factors)),item.slug+' lost its price factors');
+   for(const slug of related){const target=catalog.canonicalServices.find(x=>x.slug===slug);assert.ok(section.includes('href="../../../'+target.url+'"'));}
+   assert.match(section,/data-preserve-search href="\.\.\/\.\.\/\.\.\/contact\/\?service=/);
+   continue;
+  }
   const actions=current.filter(action=>action.priority==='P2' && action.currentOwner.split('#')[0]==='/'+item.url);
   const fenceSibling=['fence-builders','fencing-contractors'].includes(item.slug);
   if(actions.length || fenceSibling) {

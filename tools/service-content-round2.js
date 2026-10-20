@@ -59,6 +59,9 @@ function editServiceHtml(html, spec) {
     if (['carpenters','fly-screens','plasterers','house-painters','window-repairs'].includes(spec.slug)) {
       edited = edited.replace(/<section class="section shell" id="keyword-map-repair-scenes">[\s\S]*?<\/section>/, '');
     }
+    // The approved GSC revision owns these bounded pages above historical FAQ copy.
+    const currentOwner = require('../scripts/service-gsc-clarity');
+    if (currentOwner.scoped(html)) return require('../scripts/service-content-cleanup').cleanup(currentOwner.reviseService(html.replace(main, edited)));
     if (spec.slug === 'carpenters') {
       const old = '<a href="../../../guides/seasonal-home-maintenance-australia/">A Seasonal Home Maintenance Plan for Australian Properties</a></li>';
       const addition = '<li><a href="../../../services/handyman-interiors-appliance-repairs/handymen/#eaves-patio-repairs">Local eaves, patio and pergola repairs</a></li>';

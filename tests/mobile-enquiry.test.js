@@ -165,7 +165,9 @@ for (const viewport of [{ width: 390, height: 844 }, { width: 1440, height: 900 
       const blocks = await page.locator('main > section.section.shell').evaluateAll(es => es
         .filter(e => e.querySelector('h2') && !e.querySelector('img,form,iframe,details,article,figure,.card-grid,.price-guide'))
         .map(e => parseFloat(getComputedStyle(e).paddingTop)));
-      assert.ok(blocks.length > 1 && blocks.every(padding => padding <= 32), route + ': shared text blocks stay compact');
+      // Repeated category explanations were removed; require actual retained prose,
+      // not a minimum of two explanation blocks that would force redundant copy back.
+      assert.ok(blocks.length >= 1 && blocks.every(padding => padding <= 32), route + ': retained shared text blocks stay compact');
     }
   });
   test(`built enquiry fast paths retain menu, search and task location at ${viewport.width}`, async t => {

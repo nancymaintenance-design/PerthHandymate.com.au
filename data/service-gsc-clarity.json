@@ -1,0 +1,32 @@
+{
+  "window-repairs": {"articles": []},
+  "sliding-door-repairs": {"articles": []},
+  "window-installation": {
+    "h1": "Window Installation & Replacement in Perth",
+    "articles": [
+      ["Replacing windows in existing openings", ["Ellis measures the opening and checks the frame, surrounding finish and access before agreeing a replacement window. The frame material, glazing and opening style form part of the specification; changes to the structural opening require separate assessment."]],
+      ["Supply and install or installation only", ["Tell us whether you want window supply included or already have a product. We check the supplied specification and opening before agreeing installation; purchasing a window does not establish that it will fit."]],
+      ["Removal, fitting and making good", ["Agree who removes and disposes of the old unit, the required flashings and seals, and any internal or external finishing. The written quote identifies which materials and tasks are included, rather than treating fitting alone as a complete replacement package."]],
+      ["When a repair may be sufficient", ["A sticking sash or worn fitting may suit repair instead of full replacement. Extensive frame damage, deterioration or a different window design can change the recommendation. Compare the existing condition with the proposed result before ordering."]],
+      ["Your installation quote", ["Hourly installation labour and window supply per square metre are different price bases, not a complete installed-window total. Confirm measurement, supply, removal, disposal, sealing and finishing in the written quote."]]
+    ]
+  },
+  "door-installation": {
+    "groupId": "door-installation-scope",
+    "articles": [
+      ["Fit a new door to an existing frame", ["Ellis checks the opening, frame condition, swing and floor clearance before agreeing a new door. A sound frame may be retained; damage, distortion or a different door system can add work. Entry, fire-rated, security and glazed doors retain their specific product and qualified-work requirements."]],
+      ["Supply and install or fit your supplied door", ["Tell us whether you already have the door, hinges and handles. The quote distinguishes door supply from fitting, compatible hardware and any frame repairs. Contact Ellis before ordering if the fit is uncertain; we measure on site rather than requiring you to provide final dimensions."]],
+      ["Removal, trimming and finishing", ["Confirm removal and disposal of the old door, suitable trimming, hardware fitting and the final finish. Painting, frame repairs and regulated lock work must be identified separately rather than assumed to be included in every installation."]],
+      ["Repair before replacing", ["For a sound door that rubs or fails to latch, request an <a href=\"../../../services/doors-windows-glass-screens/door-repairs/\">ordinary door repair assessment</a> before buying a replacement. A hinge or clearance adjustment may be sufficient; the door construction and condition determine the suitable work."]]
+    ]
+  },
+  "shower-screens": {
+    "groupId": "shower-screen-repair-options",
+    "h1": "Shower Screen Repairs & Installation in Perth",
+    "articles": [
+      ["Hinges and rollers", ["A door that catches needs its hinge or roller movement, alignment, handles and wall fixings checked. Tell us the screen style and which panel moves. Do not force a door or handle cracked, loose or unstable glass."]],
+      ["Seals and water escape", ["A worn sweep or seal needs a compatible profile and a check of where water escapes. Replacing a seal may suit a serviceable screen when that edge is the cause; it is not a promise to fix every shower leak. Persistent moisture can require separate wet-area or plumbing investigation."]],
+      ["Glass or complete screen replacement", ["Damaged glass and replacing the complete enclosure are different scopes from hardware adjustment. Ellis measures the opening and checks the glass, supporting tiles and fixing requirements before confirming supply, removal and installation in the written quote."]]
+    ]
+  }
+}
