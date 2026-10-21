@@ -17,8 +17,14 @@ function readPage(file, lang) {
     const title = text($('h1').first().text());
     const main = $('main').clone();
     main.find('script,style,iframe,form,nav,button,input,select,textarea').remove();
-    // Use published paragraphs, not a separate promotional synopsis or template manuscript.
-    const summary = main.find('p').toArray().map(e => text($(e).text())).find(s => s.length >= 65) || title;
+    // The existing published introduction owns every summary, regardless of language
+    // or length. Guide metadata and later repair conditions are not introductions.
+    const heading = main.find('h1').first();
+    const intro = heading.nextAll('p.hero-copy,p.lede').first();
+    const guideIntro = heading.nextAll('.guide-introduction').find('p').first();
+    const summary = text((intro.length ? intro : guideIntro).text());
+    if (!summary)
+        throw new Error(`Missing published introduction: ${file}`);
     const topics = [...new Set($('main h1, main h2').toArray().map(e => text($(e).text())).filter(Boolean))].slice(0, 6);
     const article = main.find('article.article').first();
     const body = article.length ? article : main;
@@ -113,6 +119,7 @@ function enrich(page, known) {
         const work = nodes.find(n => n['@type'] === 'CreativeWork');
         if (work) {
             work['@id'] ??= url + '#work';
+            work.description = summary;
             work.mainEntityOfPage = ref(pageId);
             web.mainEntity = ref(String(work['@id']));
         }

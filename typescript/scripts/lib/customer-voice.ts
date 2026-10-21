@@ -5,6 +5,7 @@ const path:typeof import('node:path')=require('node:path');
 interface Rule {en:[string,string];zh:[string,string]}
 const rules:Rule[]=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../config/customer-voice.json'),'utf8'));
 const operatorRules:Rule[]=['operator-copy.json','operator-copy-review.json'].flatMap(file=>JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../config/'+file),'utf8')));
+const followupRules:Rule[]=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../config/operator-copy-followup.json'),'utf8'));
 const verbs:Record<string,string>={confirms:'confirm',checks:'check',assesses:'assess',arranges:'arrange',provides:'provide',identifies:'identify',explains:'explain',repairs:'repair',installs:'install',handles:'handle',uses:'use',distinguishes:'distinguish',agrees:'agree',inspects:'inspect',discusses:'discuss',completes:'complete',accepts:'accept',reviews:'review',separates:'separate',cleans:'clean',replaces:'replace',records:'record',clarifies:'clarify',measures:'measure',coordinates:'coordinate',supports:'support',offers:'offer',plans:'plan',renews:'renew',adjusts:'adjust',supplies:'supply',sets:'set',documents:'document'};
 verbs.scopes='scope';verbs.seeks='seek';
 const companyClause=new RegExp('\\bEllis (?:(also|first|then|directly) )?('+Object.keys(verbs).join('|')+')\\b([^.!?]*)','g');
@@ -43,6 +44,17 @@ function wording(text:string,zh:boolean,includeOperator=true):string{
  const escape=(s:string):string=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
  if(includeOperator)for(const rule of operatorRules){const [old,next]=zh?rule.zh:rule.en;text=text.replaceAll(escape(old),escape(next));if(escape(old)!==old)text=text.replaceAll(old,next);}
  if(includeOperator&&zh)text=text.replaceAll('请向 Ellis','请向我们').replaceAll('Ellis 会确定','我们会确定').replace(/请向我们\s+(?=[\u4e00-\u9fff])/g,'请向我们');
+ // Follow-up sentence edits leave existing paragraphs and inline anchors in place.
+ if(includeOperator){
+  for(const rule of followupRules){const [old,next]=zh?rule.zh:rule.en;text=text.replaceAll(escape(old),escape(next));if(escape(old)!==old)text=text.replaceAll(old,next);}
+  if(zh)text=text.replace(/Ellis 珀斯(?:办事处|办公室|团队)(会直接|直接|在|会|评估)/g,(_all:string,verb:string)=>'我们'+verb)
+   .replace(/向 Ellis 珀斯办事处/g,'向我们').replace(/让 Ellis 直接确认/g,'由我们直接确认');
+  else{
+   const office=new RegExp('\\b(?:The Ellis Perth office|Ellis Perth) ('+Object.keys(verbs).join('|')+')\\b([^.!?]*)','g');
+   text=text.replace(office,(_all:string,verb:string,tail:string,offset:number)=>(!text.slice(0,offset).trim()||/[.!?]\s*$/.test(text.slice(0,offset))?'We ':'we ')+verbs[verb]+tail.replace(coordinated,(_s:string,join:string,v:string)=>join+verbs[v]))
+    .replace(/Ellis's own licensed personnel/g,'our own licensed employees');
+  }
+ }
  return text;
 }
 function publicCopy(html:string,zh=false):string{

@@ -40,3 +40,26 @@ test('unchanged language keeps its existing inline structure in paired grammar-o
  assert.doesNotMatch(out,/相关内容：/,'grammar-only changes must not relocate existing links in either language');
  assert.match(out,/请向我们描述/);
 });
+
+test('office voice normalisation keeps sentence case and never changes contact targets or quotations',()=>{
+ const html='<p>The Ellis Perth office provides repairs and confirms appointments. Ellis Perth assesses the work and explains the quote.</p><a href="/contact/?service=Ellis%20Perth">Contact</a><blockquote><p>The Ellis Perth office provides repairs.</p></blockquote>';
+ const out=publicCopy(html);
+ assert.match(out,/<p>We provide repairs and confirm appointments\. We assess the work and explain the quote\.<\/p>/);
+ assert.match(out,/href="\/contact\/\?service=Ellis%20Perth"/);
+ assert.match(out,/<blockquote><p>The Ellis Perth office provides repairs\.<\/p><\/blockquote>/);
+ assert.equal(publicCopy(out),out,'repeated rendering must not change the approved output');
+});
+
+test('follow-up edits preserve linked paragraph structure and explicit safety actions in both languages',()=>{
+ const cases=[
+  [false,'<p>Matching tile or grout appearance is assessed rather than promised. See <a href="/projects/bathroom-tile-shower-repair/">our bathroom example</a>; it does not establish the cause of your leak.</p><p>Do not drill or cut an existing toughened-glass pane.</p>'],
+  [true,'<p>瓷砖或勾缝外观匹配需评估，不作保证。请参阅<a href="/zh/projects/bathroom-tile-shower-repair/">浴室案例</a>；该案例不能确定您的漏水原因。</p><p>不要钻孔或切割现有钢化玻璃。</p>'],
+ ];
+ const {load}=require('cheerio');
+ for(const [zh,html] of cases){const before=load(html),out=publicCopy(html,zh),after=load(out);
+  assert.deepEqual(after('body *').toArray().map(e=>[e.name,e.attribs]),before('body *').toArray().map(e=>[e.name,e.attribs]));
+  assert.equal(after('p').last().text(),before('p').last().text());
+  assert.doesNotMatch(out,/rather than promised|不作保证|does not establish the cause|该案例不能确定/);
+  assert.doesNotMatch(out,/free|guaranteed|免费|终身|无痕保证/i);
+ }
+});
