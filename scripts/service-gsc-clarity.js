@@ -83,7 +83,7 @@ function reviseService(html) {
     if (slug === 'door-installation')
         main = main.replace(/href="(?:\.\.\/\.\.\/\.\.\/|\/)services\/handyman-interiors-appliance-repairs\/handymen\/#sliding-door-repairs"/g, 'href="../../../services/doors-windows-glass-screens/door-repairs/"');
     if (slug === 'window-installation') {
-        const explanation = '<p>Hourly installation labour and window supply per square metre are different price bases, not a complete installed-window total. Confirm measurement, supply, removal, disposal, sealing and finishing in the written quote.</p>';
+        const explanation = '<p>Once we agree the installation scope, we provide a written quote setting out the materials, labour and work. We explain the arrangements for window supply, old-window removal and disposal, sealing, and internal and external finishing, including what is included and what is priced separately.</p>';
         // Keep pricing writer ownership intact: explanation now belongs in the work-options quote article.
         main = main.replace('<div class="shell">' + explanation + '</div>', '');
     }
