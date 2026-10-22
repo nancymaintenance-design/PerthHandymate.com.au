@@ -13,15 +13,15 @@ test('Important social icons retain Facebook circle and LinkedIn square brand co
   assert.match(css, /\.footer-instagram img\{width:18px;height:18px;flex:0 0 18px/);
 });
 
-test('all 127 English and 127 Chinese pages expose four social destinations inside the localized Important footer', t => {
+test('all 128 English and 128 Chinese pages expose four social destinations inside the localized Important footer', t => {
   const fixture = createBuildFixture(t);
   const result = buildLocal(fixture);
   assert.equal(result.status, 0, result.stderr || result.stdout);
   const output = path.join(fixture, 'dist');
   const walk = directory => fs.readdirSync(directory, {withFileTypes:true}).flatMap(entry => entry.isDirectory() ? walk(path.join(directory, entry.name)) : /^(?:index|404)\.html$/.test(entry.name) ? [path.join(directory,entry.name)] : []);
   const pages = walk(output);
-  assert.equal(pages.length, 254);
-  assert.equal(pages.filter(file=>path.relative(output,file).split(path.sep)[0]==='zh').length,127);
+  assert.equal(pages.length, 256);
+  assert.equal(pages.filter(file=>path.relative(output,file).split(path.sep)[0]==='zh').length,128);
   for (const file of pages) {
     const html = fs.readFileSync(file,'utf8');
     const chinese=/<html lang="zh-Hans">/.test(html);

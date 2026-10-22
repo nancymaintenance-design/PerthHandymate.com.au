@@ -3,6 +3,7 @@
 // published pages, schema and feeds receive the same approved first-person copy.
 const fs = require('node:fs');
 const path = require('node:path');
+const { serviceBodyCopy } = require('./service-body-language');
 const rules = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../config/customer-voice.json'), 'utf8'));
 const operatorRules = ['operator-copy.json', 'operator-copy-review.json'].flatMap(file => JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../config/' + file), 'utf8')));
 const followupRules = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../config/operator-copy-followup.json'), 'utf8'));
@@ -95,11 +96,12 @@ function publicCopy(html, zh = false) {
     if (!/<body\b/i.test(html))
         html = prose(html);
     html = html.replace(/<meta\b[^>]*>/gi, tag => /\b(?:name|property)="(?:description|og:description|twitter:description)"/i.test(tag) ? tag.replace(/(\bcontent=")([^"]*)(")/i, (_all, a, value, b) => a + edit(value) + b) : tag);
-    return html.replace(/(<script\b[^>]*type="application\/ld\+json"[^>]*>)([\s\S]*?)(<\/script>)/g, (all, open, raw, close) => {
+    html = html.replace(/(<script\b[^>]*type="application\/ld\+json"[^>]*>)([\s\S]*?)(<\/script>)/g, (all, open, raw, close) => {
         const keys = new Set(['name', 'headline', 'description', 'text', 'articleBody', 'caption']);
         const visit = (value, key = '') => Array.isArray(value) ? value.map(v => visit(v, key)) : value && typeof value === 'object' ? (['Review', 'Quotation'].includes(String(value['@type'])) ? value : Object.fromEntries(Object.entries(value).map(([k, v]) => [k, visit(v, k)]))) : typeof value === 'string' && keys.has(key) ? edit(value) : value;
         const before = JSON.parse(raw), after = visit(before);
         return JSON.stringify(before) === JSON.stringify(after) ? all : open + JSON.stringify(after) + close;
     });
+    return serviceBodyCopy(html, zh);
 }
 module.exports = { publicCopy, wording };

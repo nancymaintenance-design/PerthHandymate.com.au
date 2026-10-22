@@ -52,5 +52,5 @@ test('all mapped published outputs retain language metadata and visible/schema p
   const parent=record.primary_parent_url,pfile=parent.endsWith('/')?parent.slice(1)+'index.html':'index.html',p$=load(fs.readFileSync(path.resolve(__dirname,'../dist',pfile),'utf8'));
   assert.ok(p$('a[href]').toArray().some(e=>new URL(p$(e).attr('href'),origin+parent).pathname===route),'parent back-link '+route);checked++;
  }
- assert.equal(checked,250);
+ assert.equal(checked,252);
 });

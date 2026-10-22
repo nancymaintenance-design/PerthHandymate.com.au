@@ -1,0 +1,118 @@
+/* Loaded only by the two sliding-door pages: topic links jump directly to their headings. */
+html { scroll-behavior: auto; }
+/* Sliding-door service page: one responsive grid from header to footer. */
+.section > #sliding-door-repair-photos {
+  width: 100%;
+  max-width: none;
+  margin-block: 40px 8px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 112px;
+}
+#sliding-door-repair-photos .case-heading { margin-bottom: 28px; }
+#sliding-door-repair-photos h3 { font-size: clamp(1.8rem, 3vw, 2.65rem); margin-bottom: 14px; }
+#sliding-door-repair-photos .case-heading p { color: var(--slate); margin: 0; max-width: 65ch; }
+#sliding-door-repair-photos .case-layout { display: grid; grid-template-columns: minmax(0, 2.6fr) minmax(260px, 1fr); gap: 22px 34px; align-items: center; grid-template-areas: "photo context" "thumbs thumbs"; }
+#sliding-door-repair-photos .case-feature { grid-area: photo; margin: 0; min-width: 0; }
+#sliding-door-repair-photos .case-stage { aspect-ratio: 16 / 9; background: var(--mist); border-radius: 12px; overflow: hidden; position: relative; }
+#sliding-door-repair-photos .case-stage img { width: 100%; height: 100%; object-fit: contain; cursor: default; }
+#sliding-door-repair-photos .case-context { grid-area: context; }
+#sliding-door-repair-photos .case-context h4 { font: 700 clamp(1.35rem, 2vw, 1.8rem)/1.25 "Trebuchet MS", "Aptos Display", sans-serif; color: var(--navy); margin: 0 0 18px; }
+#sliding-door-repair-photos .case-context p { color: var(--slate); margin-bottom: 24px; }
+#sliding-door-repair-photos .case-context .button { width: 100%; text-align: center; }
+#sliding-door-repair-photos .case-thumbs { grid-area: thumbs; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 0; }
+#sliding-door-repair-photos .case-thumb { min-width: 0; padding: 0; border: 0; background: transparent; color: var(--navy); text-align: left; cursor: pointer; border-radius: 8px; }
+#sliding-door-repair-photos .case-thumb img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border: 2px solid transparent; border-radius: 8px; padding: 2px; transition: border-color .15s ease; }
+#sliding-door-repair-photos .case-thumb span { display: block; padding: 8px 3px 0; font-size: .9rem; line-height: 1.4; font-weight: 600; }
+#sliding-door-repair-photos .case-thumb:hover img { border-color: var(--line); }
+#sliding-door-repair-photos .case-thumb[aria-pressed="true"] img { border-color: var(--eucalypt); }
+#sliding-door-repair-photos .case-thumb:focus-visible { outline: 3px solid var(--action); outline-offset: 4px; }
+#sliding-door-repair-photos .case-thumb:disabled { cursor: default; }
+#sliding-door-repair-photos .case-status { position: absolute; inset: auto 10px 10px; margin: 0; padding: 8px 12px; background: var(--white); color: var(--navy); border: 1px solid var(--line); border-radius: 6px; font-size: .88rem; }
+@media (max-width: 900px) {
+  .section > #sliding-door-repair-photos { width: 100%; left: auto; transform: none; }
+  #sliding-door-repair-photos .case-layout { grid-template-columns: 1fr; grid-template-areas: "photo" "thumbs" "context"; gap: 20px; }
+  #sliding-door-repair-photos .case-context h4 { margin: 0 0 14px; font-size: 1.25rem; }
+  #sliding-door-repair-photos .case-thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; gap: 14px; }
+  #sliding-door-repair-photos .case-context p { margin-bottom: 18px; }
+  #sliding-door-repair-photos .case-thumb span { font-size: .86rem; line-height: 1.4; }
+  #sliding-door-repair-photos .case-heading { margin-bottom: 20px; }
+}
+@media (max-width: 360px) { #sliding-door-repair-photos .case-thumbs { gap: 6px; } }
+@media (prefers-reduced-motion: reduce) { #sliding-door-repair-photos .case-thumb img { transition: none; } }
+
+/* Complete internal service page: headings belong above their own content. */
+.sliding-door-page { --shell: min(1280px, calc(100% - 64px)); }
+.sliding-door-layout > .service-hero { padding: 28px 0 36px; }
+.sliding-door-layout .service-hero .breadcrumbs { margin-bottom: 24px; }
+.sliding-door-layout .service-hero-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.sliding-door-layout .service-hero-copy .eyebrow { margin-bottom: 12px; }
+.sliding-door-layout .service-hero h1 { max-width: 18ch; margin: 0 0 20px; font-size: clamp(2.35rem, 3.7vw, 3.4rem); line-height: 1.12; }
+.sliding-door-layout .service-hero .lede { max-width: 64ch; margin-bottom: 24px; font-size: 1.1rem; line-height: 1.7; }
+.sliding-door-layout .service-hero-photo { margin: 0; border-radius: 12px; overflow: hidden; }
+.sliding-door-layout .service-hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.sliding-door-layout .page-topic-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--white); border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+.sliding-door-layout .page-topic-nav a { display: flex; justify-content: center; align-items: center; min-height: 58px; padding: 12px; text-align: center; text-decoration: none; color: var(--navy); font-weight: 700; border-bottom: 3px solid transparent; }
+.sliding-door-layout .page-topic-nav a:hover,.sliding-door-layout .page-topic-nav a:focus-visible { background: var(--mist); border-bottom-color: var(--action); }
+.sliding-door-layout .service-decision-grid,.sliding-door-layout .service-support-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 24px; align-items: stretch; margin-bottom: 24px; }
+.sliding-door-layout .service-decision-grid > .section,.sliding-door-layout .service-support-grid > .section,.sliding-door-layout > .service-evidence { width: 100%; min-width: 0; margin: 0; padding: 28px; background: var(--white); border: 1px solid var(--line); border-radius: 14px; }
+.sliding-door-layout > .service-evidence { width: var(--shell); margin: 0 auto 24px; }
+.sliding-door-layout .service-decision-grid > #service-work-options { grid-column: 1; grid-row: 1 / 3; }
+.sliding-door-layout .service-decision-grid > .section:not(#service-work-options) { grid-column: 2; }
+.sliding-door-layout :is(.service-decision-grid,.service-support-grid) h2,.sliding-door-layout #service-work-options > h2,.sliding-door-layout .service-questions > h2,.sliding-door-layout #sliding-door-repair-photos h3 { max-width: none; margin: 0 0 20px; font-size: clamp(1.5rem, 2.1vw, 1.85rem); line-height: 1.28; }
+.sliding-door-layout :is(.service-decision-grid,.service-support-grid) > .section > div[id] { max-width: none; }
+.sliding-door-layout .service-prose > :last-child,.sliding-door-layout #slider-dragging-and-track-wear > :last-child { margin-bottom: 0; }
+.sliding-door-layout .service-prose p,.sliding-door-layout #repair-assessment-details p { line-height: 1.75; }
+.sliding-door-layout #slider-dragging-and-track-wear { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+.sliding-door-layout #slider-dragging-and-track-wear > h3,.sliding-door-layout #slider-dragging-and-track-wear > p { grid-column: 1 / -1; }
+.sliding-door-layout #slider-dragging-and-track-wear > h3 { font-size: 1.15rem; line-height: 1.4; margin: 0 0 16px; }
+.sliding-door-layout #slider-dragging-and-track-wear > div { padding-top: 20px; border-top: 1px solid var(--line); }
+.sliding-door-layout #slider-dragging-and-track-wear h4 { margin: 0 0 12px; font-size: 1.05rem; line-height: 1.4; }
+.sliding-door-layout #slider-dragging-and-track-wear > div > p { margin-bottom: 0; }
+.sliding-door-layout .service-evidence > #sliding-door-repair-photos { margin: 0; padding: 0; border: 0; }
+.sliding-door-layout #sliding-door-repair-photos .case-heading { margin-bottom: 24px; }
+.sliding-door-layout .service-questions > .accordion-list { width: 100%; max-width: none; padding: 0; border: 0; border-radius: 0; border-top: 1px solid var(--line); }
+.sliding-door-layout .service-questions summary { padding-block: 18px; font-size: 1rem; line-height: 1.5; }
+.sliding-door-layout .service-questions details > p { padding: 0 0 18px; }
+.sliding-door-layout #sliding-door-enquiry ul { margin-bottom: 0; padding-left: 20px; }
+.sliding-door-layout #sliding-door-enquiry li { margin-top: 12px; }
+.sliding-door-layout #sliding-door-enquiry a { line-height: 1.6; }
+.sliding-door-layout #repair-related-reading,.sliding-door-layout > .service-path-links { padding-block: 16px; }
+.sliding-door-layout #repair-related-reading h2,.sliding-door-layout > .service-path-links h2 { font-size: 1.2rem; margin: 0 0 12px; line-height: 1.4; }
+.sliding-door-layout #repair-related-reading ul { display: flex; flex-wrap: wrap; gap: 10px 32px; padding-left: 20px; margin-bottom: 0; }
+.sliding-door-layout > .cta-band { margin-top: 20px; padding-block: 32px; }
+.sliding-door-layout .cta-band h2 { max-width: 30ch; font-size: clamp(1.75rem, 3vw, 2.5rem); }
+.sliding-door-layout .cta-band .split > div { max-width: 76ch; }
+.sliding-door-layout .cta-band .button { flex-shrink: 0; white-space: nowrap; }
+.sliding-door-layout :is(#sliding-door-scope,#sliding-door-repair-photos,#sliding-door-help,#sliding-door-enquiry) { scroll-margin-top: 110px; }
+@media (max-width: 1100px) {
+ .sliding-door-layout .service-decision-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .sliding-door-layout .service-decision-grid > #service-work-options { grid-column: 1 / -1; grid-row: auto; }
+ .sliding-door-layout .service-decision-grid > .section:not(#service-work-options) { grid-column: auto; }
+ .sliding-door-layout .service-hero-layout { gap: 28px; }
+}
+@media (max-width: 950px) { .sliding-door-layout .service-support-grid { grid-template-columns: 1fr; } }
+@media (max-width: 800px) {
+ .sliding-door-page { --shell: min(1280px, calc(100% - 40px)); }
+ .sliding-door-layout > .service-hero { padding-block: 24px 28px; }
+ .sliding-door-layout .service-hero-layout { grid-template-columns: 1fr; gap: 24px; }
+ .sliding-door-layout .service-hero h1 { max-width: 20ch; font-size: clamp(2rem, 5.6vw, 2.7rem); }
+ .sliding-door-layout .service-hero .lede { font-size: 1.05rem; }
+ .sliding-door-layout .service-decision-grid > .section,.sliding-door-layout .service-support-grid > .section,.sliding-door-layout > .service-evidence { padding: 22px; }
+}
+@media (max-width: 700px) {
+ .sliding-door-layout .service-decision-grid { grid-template-columns: 1fr; }
+ .sliding-door-layout .service-decision-grid > #service-work-options { grid-column: auto; }
+ .sliding-door-layout .service-decision-grid,.sliding-door-layout .service-support-grid { gap: 16px; margin-bottom: 16px; }
+}
+@media (max-width: 550px) {
+ .sliding-door-page { --shell: calc(100% - 32px); }
+ .sliding-door-layout .page-topic-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 16px; }
+ .sliding-door-layout .page-topic-nav a { min-height: 48px; font-size: .9rem; }
+ .sliding-door-layout #slider-dragging-and-track-wear { display: block; }
+ .sliding-door-layout #slider-dragging-and-track-wear > div { margin-top: 20px; }
+ .sliding-door-layout .service-decision-grid > .section,.sliding-door-layout .service-support-grid > .section,.sliding-door-layout > .service-evidence { padding: 20px; }
+ .sliding-door-layout #sliding-door-repair-photos .case-thumb span { font-size: .82rem; }
+ .sliding-door-layout .cta-band .button { width: 100%; }
+ .sliding-door-layout :is(#sliding-door-scope,#sliding-door-repair-photos,#sliding-door-help,#sliding-door-enquiry) { scroll-margin-top: 94px; }
+}

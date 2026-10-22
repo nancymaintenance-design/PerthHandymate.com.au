@@ -166,5 +166,5 @@ test('current content writers converge without changing protected routes or term
   // Git stores LF while this Windows checkout uses CRLF. Compare the unchanged
   // tracked content without generating a huge Buffer diff for line endings.
   assert.equal(read('docs/seo/content-round2/term-routing.json').replace(/\r\n/g,'\n'),before.toString('utf8'));
-  assert.equal([...read('sitemap.xml').matchAll(/<loc>/g)].length,126);
+  assert.equal([...read('sitemap.xml').matchAll(/<loc>/g)].length,127);
 });

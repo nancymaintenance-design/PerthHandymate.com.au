@@ -47,6 +47,6 @@ test('service secondary headings retain repair topics without repeated city suff
   const html = read('services/doors-windows-glass-screens/window-repairs/index.html');
   assert.match(html, /<h1>Timber Window &amp; Window Frame Repairs in Perth<\/h1>/);
   assert.match(html, /<h2>Window Repairs: Common Questions<\/h2>/);
-  assert.match(html, /<h2>Talk to Our Local Service Team<\/h2>/);
+  assert.match(html, /<h2>Speak with our local team<\/h2>/);
   assert.doesNotMatch(html, /<h2>Window Repairs in Perth: Common Questions<\/h2>/);
 });

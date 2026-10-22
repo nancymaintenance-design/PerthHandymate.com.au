@@ -46,7 +46,7 @@ test('service content and FAQ have compact gaps and independent scope panels at 
 test('related service collections retain their destinations in clearly labelled card groups',()=>{
   for(const item of catalog.filter(x=>x.slug!=='handymen')){
     const html=fs.readFileSync(path.join(root,item.url,'index.html'),'utf8');
-    assert.match(html,/<div class="service-related-links">[\s\S]*?<h3>Related Services for This Job<\/h3>[\s\S]*?<ul class="service-link-cards">/,item.slug);
+    assert.match(html,/<div class="service-related-links">[\s\S]*?<h3>Related services<\/h3>[\s\S]*?<ul class="service-link-cards">/,item.slug);
   }
 });
 

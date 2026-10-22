@@ -15,7 +15,8 @@ test('guide hub prominent headings identify Perth handyman and repair intent', (
 });
 test('service categories match their selection cards and detail H1s retain the Perth market', () => {
   const vm=require('node:vm'),sandbox={window:{}};vm.runInNewContext(read('data/content.js'),sandbox);
-  const categories=new Map(sandbox.window.ELLIS_CONTENT.services.map(category=>[category.slug,category.title]));
+  const policy=JSON.parse(read('data/heading-keyword-policy.json'));
+  const categories=new Map(sandbox.window.ELLIS_CONTENT.services.map(category=>[category.slug,policy.pages[`services/${category.slug}/index.html`]?.h1||category.title]));
   assert.equal(categories.size,9,'nine comparable service categories');
   const hub=read('services/index.html');
   const walk = dir => fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(dir, e.name)) : e.name.endsWith('.html') ? [path.join(dir, e.name)] : []);

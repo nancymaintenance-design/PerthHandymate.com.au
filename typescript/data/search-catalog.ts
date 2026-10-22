@@ -96,6 +96,17 @@ window.ELLIS_SEARCH_CATALOG=[
     ]
   },
   {
+    "service": "Rangehood Installation",
+    "canonical": "Handyman, interiors & appliance repairs",
+    "route": "services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "terms": [
+      "rangehood installation",
+      "range hood installation",
+      "rangehood repairs",
+      "rangehood cleaning"
+    ]
+  },
+  {
     "service": "Air Conditioning",
     "canonical": "Electrical, plumbing, gas & air conditioning",
     "route": "services/electrical-plumbing-gas-air-conditioning/air-conditioning/",

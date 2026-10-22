@@ -57,7 +57,7 @@ test('Chinese form validation, server errors, pending state and successful reply
   assert.equal(await page.locator(':focus').getAttribute('name'),'name');
   assert.equal(await page.locator('[data-error="name"]').innerText(),'请填写您的姓名。');
   for(const [name,value] of Object.entries({name:'测试用户',email:'test@example.com',phone:'0400 000 000',message:'厨房抽屉滑轨损坏，需要检查更换。'}))await page.locator(`[name="${name}"]`).fill(value);
-  await page.locator('[name="service"]').selectOption({label:'家居小修、室内及家电维修'});
+  await page.locator('[name="service"]').selectOption({label:'家居小修、室内与家电维修'});
   assert.equal(await page.locator('[name="service"]').inputValue(),'Handyman, interiors & appliance repairs');
   await page.route('**/api/contact',route=>route.fulfill({status:400,contentType:'application/json',body:JSON.stringify({error:'Please check the highlighted details and try again.',errors:{email:'Enter a valid email address of at most 254 characters.'}})}));
   await page.locator('[type="submit"]').click();

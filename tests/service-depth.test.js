@@ -21,8 +21,8 @@ test('all 67 services publish individual scope, quote factors and relevant route
   const revised = {
    'window-repairs':['Sticking sashes and worn hardware','Local frame and sill repairs','timber-window-moisture-and-hardware'],
    'window-installation':['Replacing windows in existing openings','Supply and install or installation only','Your installation quote'],
-   'door-installation':['Fit a new door to an existing frame','Supply and install or fit your supplied door','door-installation-scope'],
-   'shower-screens':['Hinges and rollers','Seals and water escape','shower-screen-repair-options']
+   'door-installation':['Fit a new door to an existing frame','Supply and fit, or fit a door you supply','door-installation-scope'],
+   'shower-screens':['Hinges and rollers','Seals and water leaks','shower-screen-repair-options']
   }[item.slug];
   if(revised){
    for(const topic of revised)assert.ok(section.includes(topic),item.slug+' lost its approved task distinction');

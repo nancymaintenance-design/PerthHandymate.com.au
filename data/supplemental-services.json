@@ -1,6 +1,6 @@
 {
   "classification": "supplemental-service-landings",
-  "note": "Focused owners of existing handyman tasks; separate from the original 67 priced canonical services. Quotes follow assessment; no new price guide.",
+  "note": "Approved focused service landings, separate from the original 67 priced canonical services. Quotes follow assessment; no new price guide.",
   "services": [
     {
       "slug": "sliding-door-repairs",
@@ -101,6 +101,18 @@
         "clothesline installation",
         "clothesline restringing",
         "clothesline bracket repair"
+      ]
+    },
+    {
+      "slug": "rangehood-installation",
+      "url": "services/handyman-interiors-appliance-repairs/rangehood-installation/",
+      "title": "Rangehood Installation",
+      "categoryTitle": "Handyman, interiors & appliance repairs",
+      "searchTerms": [
+        "rangehood installation",
+        "range hood installation",
+        "rangehood repairs",
+        "rangehood cleaning"
       ]
     }
   ]

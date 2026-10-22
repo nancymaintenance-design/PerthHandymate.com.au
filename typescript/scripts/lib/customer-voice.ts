@@ -2,6 +2,7 @@
 // published pages, schema and feeds receive the same approved first-person copy.
 const fs:typeof import('node:fs')=require('node:fs');
 const path:typeof import('node:path')=require('node:path');
+const {serviceBodyCopy}: {serviceBodyCopy:(html:string,zh:boolean)=>string}=require('./service-body-language');
 interface Rule {en:[string,string];zh:[string,string]}
 const rules:Rule[]=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../config/customer-voice.json'),'utf8'));
 const operatorRules:Rule[]=['operator-copy.json','operator-copy-review.json'].flatMap(file=>JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../config/'+file),'utf8')));
@@ -71,10 +72,11 @@ function publicCopy(html:string,zh=false):string{
  // Support bounded fragments used by the editor/tests, without touching attributes.
  if(!/<body\b/i.test(html))html=prose(html);
  html=html.replace(/<meta\b[^>]*>/gi,tag=>/\b(?:name|property)="(?:description|og:description|twitter:description)"/i.test(tag)?tag.replace(/(\bcontent=")([^"]*)(")/i,(_all:string,a:string,value:string,b:string)=>a+edit(value)+b):tag);
- return html.replace(/(<script\b[^>]*type="application\/ld\+json"[^>]*>)([\s\S]*?)(<\/script>)/g,(all:string,open:string,raw:string,close:string)=>{
+ html=html.replace(/(<script\b[^>]*type="application\/ld\+json"[^>]*>)([\s\S]*?)(<\/script>)/g,(all:string,open:string,raw:string,close:string)=>{
   const keys=new Set(['name','headline','description','text','articleBody','caption']);
   const visit=(value:unknown,key=''):unknown=>Array.isArray(value)?value.map(v=>visit(v,key)):value&&typeof value==='object'?(['Review','Quotation'].includes(String((value as Record<string,unknown>)['@type']))?value:Object.fromEntries(Object.entries(value).map(([k,v])=>[k,visit(v,k)]))):typeof value==='string'&&keys.has(key)?edit(value):value;
   const before=JSON.parse(raw),after=visit(before);return JSON.stringify(before)===JSON.stringify(after)?all:open+JSON.stringify(after)+close;
  });
+ return serviceBodyCopy(html,zh);
 }
 module.exports={publicCopy,wording};

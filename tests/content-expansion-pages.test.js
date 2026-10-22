@@ -112,9 +112,9 @@ test('three supplied cases give scope, outcome, region and onward links without 
   assert.match(css, /\.evidence-gallery \.project-card img\{[^}]*height:auto[^}]*aspect-ratio:auto[^}]*object-fit:contain/);
 });
 
-test('expanded 127-page inventory resolves all routes, FAQs, fragments and original term anchors', () => {
+test('expanded 128-page inventory resolves all routes, FAQs, fragments and original term anchors', () => {
   const pages = inventorySite(root);
-  assert.equal(pages.length, 127);
+  assert.equal(pages.length, 128);
   const policy = require('../data/indexing-policy.json');
   for (const [route] of services) assert.ok(policy.supplementalServiceRoutes.includes(route.slice(1)));
   for (const [slug] of projects) assert.ok(policy.indexableProjectRoutes.includes('projects/' + slug + '/'));

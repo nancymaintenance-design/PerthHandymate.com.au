@@ -67,7 +67,7 @@ test('generated service catalog covers all 75 source labels through 67 canonical
 
 test('search catalog covers every approved indexable service page', () => {
   const policy = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/indexing-policy.json'), 'utf8'));
-  assert.equal(window.ELLIS_SEARCH_CATALOG.length, 75);
+  assert.equal(window.ELLIS_SEARCH_CATALOG.length, 76);
   assert.deepEqual(
     new Set(window.ELLIS_SEARCH_CATALOG.map((item) => item.route)),
     new Set([...policy.indexableServiceRoutes, ...policy.supplementalServiceRoutes]),
@@ -156,7 +156,7 @@ test('replaces generic content headings with service, location or topic-led head
   ].map((slug) => fs.readFileSync(path.join(siteRoot, 'services', slug, 'index.html'), 'utf8'));
   for (const page of categoryPages) {
     assert.doesNotMatch(page, /<h2>(?:Choose the closest service|Start with the service, then confirm the postcode|What to include|Before you enquire)<\/h2>/);
-    assert.match(page, /<h2>Before Booking .+ Services<\/h2>/);
+    assert.match(page, /<h2>Before you book<\/h2>/);
   }
 
   const catalog = JSON.parse(fs.readFileSync(path.join(siteRoot, 'data/service-catalog.json'), 'utf8')).canonicalServices;
@@ -353,7 +353,7 @@ test('ships the PHM GA4 measurement on every customer-facing HTML page', () => {
     }
   };
   walk(path.join(__dirname, '..'));
-  assert.equal(customerPages.length, 127, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 128, 'customer-facing page inventory changed unexpectedly');
   for (const page of customerPages) {
     const html = fs.readFileSync(page, 'utf8');
     assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-QDLBD5EN3B/, page);
@@ -413,7 +413,7 @@ test('places icon-based review and social links in the footer information column
     }
   };
   walk(root);
-  assert.equal(pages.length, 127);
+  assert.equal(pages.length, 128);
   const styles = fs.readFileSync(path.join(__dirname, '../assets/css/global.css'), 'utf8');
   for (const page of pages) {
     const html = fs.readFileSync(page, 'utf8');
@@ -460,11 +460,11 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
     }
   };
   walk(path.join(root, 'services'));
-  assert.equal(leafRoutes.length, 74, '67 original details and seven nested supplemental details remain live');
+  assert.equal(leafRoutes.length, 75, '67 original details and eight nested supplemental details remain live');
   assert.equal(policy.indexableServiceRoutes.length, 67);
   assert.equal(
     policy.indexableSitemapRoutes.length + policy.indexableServiceRoutes.length + policy.indexableProjectRoutes.length + policy.supplementalServiceRoutes.length,
-    126,
+    127,
     'the declared indexable routes should account for every sitemap URL',
   );
 
@@ -476,7 +476,7 @@ test('keeps all service pages live while focusing indexation, sitemap and homepa
   }
 
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 126);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 127);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/roof-and-gutter-maintenance\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/exterior-timber-window-door-repair\//);
   assert.match(sitemap, /https:\/\/www\.perthhandymate\.com\.au\/projects\/bathroom-tile-shower-repair\//);
@@ -660,7 +660,7 @@ test('uses direct local-team language in P2 booking and service-area copy', () =
   for (const item of catalog.canonicalServices) {
     const page = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
     if(item.slug==='handymen')assert.match(page,/<h2>Book Our Local Handyman Team<\/h2>/);
-    else {assert.match(page, /<h2>Talk to Our Local Service Team<\/h2>/, item.url);assert.match(page, /<h2>Discuss This Service Request<\/h2>/, item.url);}
+    else {assert.match(page, /<h2>Speak with our local team<\/h2>/, item.url);assert.match(page, /<h2>Enquire about this service<\/h2>/, item.url);}
     assert.doesNotMatch(page, /Confirm local serviceability|Start a service request/);
   }
 
@@ -913,7 +913,7 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   };
   collectHtml(root);
 
-  assert.equal(customerPages.length, 127, 'customer-facing page inventory changed unexpectedly');
+  assert.equal(customerPages.length, 128, 'customer-facing page inventory changed unexpectedly');
   for (const file of customerPages) {
     const source = fs.readFileSync(file, 'utf8');
     assert.match(source, /<p class="footer-hours">24-hour onsite service · urgent attendance from 30 minutes\*<\/p>/, file);
@@ -954,6 +954,6 @@ test('keeps customer-facing next steps direct, publishes 24-hour availability an
   for (const item of catalog) {
     const source = fs.readFileSync(path.join(root, item.url, 'index.html'), 'utf8');
     if(item.slug==='handymen')assert.match(source,/<h2>Book Our Local Handyman Team<\/h2>/);
-    else {assert.match(source, /<h2>Talk to Our Local Service Team<\/h2>/, item.slug);assert.match(source, /<h2>Discuss This Service Request<\/h2>/, item.slug);}
+    else {assert.match(source, /<h2>Speak with our local team<\/h2>/, item.slug);assert.match(source, /<h2>Enquire about this service<\/h2>/, item.slug);}
   }
 });

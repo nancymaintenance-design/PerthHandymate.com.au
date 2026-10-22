@@ -42,13 +42,13 @@
         {"title": ["Complete the agreed repairs", "完成商定维修"], "text": ["Work follows the approved list. Extra damage or changed materials are discussed for approval before additional work. Agree the completion summary or photos you need for handover.", "按获批清单施工。如发现额外损坏或需要更换材料，先讨论并获得批准，再开展新增工作。商定交接所需的完工摘要或照片。"]}
       ],
       "details": [
-        {"title": ["Tenant access and common-property permission", "租客配合出入与共用区域许可"], "text": ["Reporting a fault or opening the property does not authorise repairs or extra spending. Confirm the landlord, property manager or other authorised person for the particular task. Resolve unclear strata responsibility before booking; a resident's request alone is insufficient.", "报告故障或开门配合不等于授权维修或额外支出。须确认该项任务的业主、物业经理或其他授权人。预约前解决不明确的分层物业责任；仅凭住户提出请求并不足够。"]},
-        {"title": ["Occupied workplaces and after-hours requests", "使用中的工作场所与非营业时间请求"], "text": ["Tell us about reception, restricted rooms, noisy-work limits and protection around occupants. Request a preferred work window directly; the appointment and building restrictions still need confirmation. Keep sensitive access instructions private.", "告知前台接待、限制进入的房间、噪声限制及人员周边的防护要求。直接提出希望的施工时段；预约与建筑管理限制仍须确认。敏感出入信息请私下提供。"]}
+        {"title": ["Tenant access and common-property permission", "租客进场配合与共用区域许可"], "text": ["Reporting a fault or opening the property does not authorise repairs or extra spending. Confirm the landlord, property manager or other authorised person for the particular task. Resolve unclear strata responsibility before booking; a resident's request alone is insufficient.", "报告故障或开门配合不等于授权维修或额外支出。须确认该项任务的业主、物业经理或其他授权人。预约前解决不明确的分层物业责任；仅凭住户提出请求并不足够。"]},
+        {"title": ["Occupied workplaces and after-hours requests", "营业场所施工与非营业时间需求"], "text": ["Tell us about reception, restricted rooms, noisy-work limits and protection around occupants. Request a preferred work window directly; the appointment and building restrictions still need confirmation. Keep sensitive access instructions private.", "告知前台接待、限制进入的房间、噪声限制及人员周边的防护要求。直接提出希望的施工时段；预约与建筑管理限制仍须确认。敏感出入信息请私下提供。"]}
       ]
     },
     {
       "id": "charging-standards",
-      "title": ["Charging standards", "收费标准"],
+      "title": ["How we quote", "报价方式"],
       "intro": ["Property maintenance is quoted for the agreed list after assessment. Contact Ellis for your property's written quote.", "物业维护在评估后按商定清单报价。请联系 Ellis 获取该物业的书面报价。"],
       "cards": [
         {"title": ["Your quote basis", "报价依据"], "text": ["The task type, number of repairs, materials, site condition, access and specialist requirements affect the quote. Combining tasks does not automatically establish a package price.", "任务类型、维修数量、材料、现场状况、出入条件及专业施工需求均影响报价。合并任务不代表自动采用套餐价。"]},
@@ -58,9 +58,9 @@
     },
     {
       "id": "aftercare",
-      "title": ["Aftercare and completed work", "售后与完工事项"],
+      "title": ["Completed work and follow-up", "完工事项与后续处理"],
       "cards": [
-        {"title": ["Keep a useful completion record", "保留有用的完工记录"], "text": ["Keep the approved list and agreed summary or before-and-after photos. Record the item, room and any unfinished or separately approved tasks. Photos should avoid occupants, keys and private documents; they do not prove concealed work. For approved strata or common-property repairs, agree completion photos and summaries with the responsible contact as part of the accepted scope; they are not an automatic reporting package.", "保留获批清单及商定的摘要或维修前后照片。记录部件、房间及尚未完成或另行审批的任务。照片应避开住户、钥匙和私人文件；照片不能证明隐蔽工程状况。对于获批的分层物业或共用区域维修，应与负责联系人商定是否将完工照片和摘要纳入承接范围；这些资料并非自动包含的报告服务。"]},
+        {"title": ["Keeping a record of completed work", "保留完工记录"], "text": ["Keep the approved list and agreed summary or before-and-after photos. Record the item, room and any unfinished or separately approved tasks. Photos should avoid occupants, keys and private documents; they do not prove concealed work. For approved strata or common-property repairs, agree completion photos and summaries with the responsible contact as part of the accepted scope; they are not an automatic reporting package.", "保留获批清单及商定的摘要或维修前后照片。记录部件、房间及尚未完成或另行审批的任务。照片应避开住户、钥匙和私人文件；照片不能证明隐蔽工程状况。对于获批的分层物业或共用区域维修，应与负责联系人商定是否将完工照片和摘要纳入承接范围；这些资料并非自动包含的报告服务。"]},
         {"title": ["Contact us about completed repairs", "完工后如有问题请联系我们"], "text": ["If you have a concern about completed work, contact the Ellis team with the property, repaired item and quote or job details. Explain what has changed and when you noticed it; photos are optional.", "如对已完成的工作有疑问，请向 Ellis 团队提供物业、维修部件及报价或任务信息。说明发生了什么变化及何时发现；照片可选。"]},
         {"title": ["Agree any follow-up work", "商定后续处理"], "text": ["We review the concern against the agreed work and discuss any assessment needed. A recurring symptom, new damage or extra request may need a separate scope; any proposed changes are discussed with the authorised contact.", "我们对照商定的工作了解问题，并讨论是否需要评估。反复症状、新损坏或额外请求可能需要单独确定范围；任何拟议变更均与授权联系人商议。"]}
       ]

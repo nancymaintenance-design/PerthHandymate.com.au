@@ -26,7 +26,7 @@ test('property flow has six destinations, one H1 and no detached FAQ schema', ()
 test('every property string renders in Chinese and contact routes remain usable', () => {
   const known = new Set(sourceFiles(root).map(routeOf));
   const zh = renderChinese(html, file, known, translator(dictionary()));
-  assert.match(zh, /id="aftercare-title">售后与完工事项/);
+  assert.match(zh, /id="aftercare-title">完工事项与后续处理/);
   assert.match(zh, /href="tel:\+61403069685"/);
   assert.match(zh, /href="\/zh\/contact\/\?service=/);
   assert.match(zh, /href="\/assets\/css\/property-clarity.css"/);

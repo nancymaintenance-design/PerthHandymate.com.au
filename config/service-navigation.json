@@ -1760,7 +1760,7 @@
       "/services/building-renovation-structural/"
     ],
     "primary_parent_url": "/services/",
-    "breadcrumb_label": "Building, renovation & structural",
+    "breadcrumb_label": "Building, renovation & structural work",
     "alternate_url": "/zh/services/building-renovation-structural/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/services/building-renovation-structural/",
@@ -1904,7 +1904,7 @@
       "/services/cleaning-removals-pest-hazard/"
     ],
     "primary_parent_url": "/services/",
-    "breadcrumb_label": "Cleaning, removals, pest & hazard",
+    "breadcrumb_label": "Cleaning, removals, pest control & asbestos services",
     "alternate_url": "/zh/services/cleaning-removals-pest-hazard/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/services/cleaning-removals-pest-hazard/",
@@ -1922,7 +1922,7 @@
       "/zh/services/cleaning-removals-pest-hazard/"
     ],
     "primary_parent_url": "/zh/services/",
-    "breadcrumb_label": "清洁、搬运、害虫及危险物处理",
+    "breadcrumb_label": "清洁、搬运、虫害防治与石棉处理",
     "alternate_url": "/services/cleaning-removals-pest-hazard/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/zh/services/cleaning-removals-pest-hazard/",
@@ -2066,7 +2066,7 @@
       "/zh/services/doors-windows-glass-screens/door-installation/"
     ],
     "primary_parent_url": "/zh/",
-    "breadcrumb_label": "门安装",
+    "breadcrumb_label": "房门安装",
     "alternate_url": "/services/doors-windows-glass-screens/door-installation/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/zh/services/doors-windows-glass-screens/door-installation/",
@@ -2156,7 +2156,7 @@
       "/services/doors-windows-glass-screens/glass-glaziers/"
     ],
     "primary_parent_url": "/services/doors-windows-glass-screens/",
-    "breadcrumb_label": "Glass Glaziers",
+    "breadcrumb_label": "Glaziers & glass replacement",
     "alternate_url": "/zh/services/doors-windows-glass-screens/glass-glaziers/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/services/doors-windows-glass-screens/glass-glaziers/",
@@ -2174,7 +2174,7 @@
       "/zh/services/doors-windows-glass-screens/glass-glaziers/"
     ],
     "primary_parent_url": "/zh/services/doors-windows-glass-screens/",
-    "breadcrumb_label": "玻璃安装",
+    "breadcrumb_label": "玻璃安装与更换",
     "alternate_url": "/services/doors-windows-glass-screens/glass-glaziers/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/zh/services/doors-windows-glass-screens/glass-glaziers/",
@@ -2210,7 +2210,7 @@
       "/zh/services/doors-windows-glass-screens/"
     ],
     "primary_parent_url": "/zh/services/",
-    "breadcrumb_label": "门窗、玻璃与纱窗",
+    "breadcrumb_label": "门窗、玻璃与纱网",
     "alternate_url": "/services/doors-windows-glass-screens/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/zh/services/doors-windows-glass-screens/",
@@ -2894,7 +2894,7 @@
       "/zh/services/handyman-interiors-appliance-repairs/blinds-and-curtains/"
     ],
     "primary_parent_url": "/zh/services/handyman-interiors-appliance-repairs/",
-    "breadcrumb_label": "百叶窗与窗帘",
+    "breadcrumb_label": "百叶帘与窗帘",
     "alternate_url": "/services/handyman-interiors-appliance-repairs/blinds-and-curtains/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/zh/services/handyman-interiors-appliance-repairs/blinds-and-curtains/",
@@ -3290,7 +3290,7 @@
       "/zh/services/handyman-interiors-appliance-repairs/"
     ],
     "primary_parent_url": "/zh/services/",
-    "breadcrumb_label": "家居小修、室内及家电维修",
+    "breadcrumb_label": "家居小修、室内与家电维修",
     "alternate_url": "/services/handyman-interiors-appliance-repairs/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/zh/services/handyman-interiors-appliance-repairs/",
@@ -3398,7 +3398,7 @@
       "/zh/services/handyman-interiors-appliance-repairs/plasterers/"
     ],
     "primary_parent_url": "/zh/services/handyman-interiors-appliance-repairs/",
-    "breadcrumb_label": "石膏工",
+    "breadcrumb_label": "石膏板与墙面修补",
     "alternate_url": "/services/handyman-interiors-appliance-repairs/plasterers/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/zh/services/handyman-interiors-appliance-repairs/plasterers/",
@@ -3542,7 +3542,7 @@
       "/zh/services/handyman-interiors-appliance-repairs/upholstery-repair/"
     ],
     "primary_parent_url": "/zh/services/handyman-interiors-appliance-repairs/",
-    "breadcrumb_label": "软包家具维修",
+    "breadcrumb_label": "家具软包维修",
     "alternate_url": "/services/handyman-interiors-appliance-repairs/upholstery-repair/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/zh/services/handyman-interiors-appliance-repairs/upholstery-repair/",
@@ -3790,7 +3790,7 @@
       "/zh/services/outdoor-structures-fencing-pools/"
     ],
     "primary_parent_url": "/zh/services/",
-    "breadcrumb_label": "户外结构、围栏与泳池",
+    "breadcrumb_label": "户外设施、围栏与泳池",
     "alternate_url": "/services/outdoor-structures-fencing-pools/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/zh/services/outdoor-structures-fencing-pools/",
@@ -4168,7 +4168,7 @@
       "/services/planning-inspection-compliance/"
     ],
     "primary_parent_url": "/services/",
-    "breadcrumb_label": "Planning, inspection & compliance",
+    "breadcrumb_label": "Planning, inspection & compliance services",
     "alternate_url": "/zh/services/planning-inspection-compliance/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/services/planning-inspection-compliance/",
@@ -4420,7 +4420,7 @@
       "/services/roofing-gutters-exterior/"
     ],
     "primary_parent_url": "/services/",
-    "breadcrumb_label": "Roofing, gutters & exterior",
+    "breadcrumb_label": "Roofing, gutters & exterior services",
     "alternate_url": "/zh/services/roofing-gutters-exterior/",
     "index_directives": "index,follow",
     "canonical_url": "https://www.perthhandymate.com.au/services/roofing-gutters-exterior/",
@@ -4552,5 +4552,41 @@
     "canonical_url": "https://www.perthhandymate.com.au/zh/services/roofing-gutters-exterior/roofing/",
     "priority": false,
     "selection_basis": "Existing published navigation and actual page content; existing service intent ownership retained."
+  },
+  "/services/handyman-interiors-appliance-repairs/rangehood-installation/": {
+    "page_id": "en:/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "path": "/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "locale": "en-AU",
+    "page_type": "Service",
+    "service_group": "/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "commercial_owner_url": "/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "related_owner_urls": [
+      "/services/handyman-interiors-appliance-repairs/rangehood-installation/"
+    ],
+    "primary_parent_url": "/services/handyman-interiors-appliance-repairs/",
+    "breadcrumb_label": "Rangehood Installation",
+    "alternate_url": "/zh/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "index_directives": "index,follow",
+    "canonical_url": "https://www.perthhandymate.com.au/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "priority": false,
+    "selection_basis": "Operator-approved new rangehood service; existing service intent ownership retained."
+  },
+  "/zh/services/handyman-interiors-appliance-repairs/rangehood-installation/": {
+    "page_id": "zh:/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "path": "/zh/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "locale": "zh-Hans",
+    "page_type": "Service",
+    "service_group": "/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "commercial_owner_url": "/zh/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "related_owner_urls": [
+      "/zh/services/handyman-interiors-appliance-repairs/rangehood-installation/"
+    ],
+    "primary_parent_url": "/zh/services/handyman-interiors-appliance-repairs/",
+    "breadcrumb_label": "油烟机安装",
+    "alternate_url": "/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "index_directives": "index,follow",
+    "canonical_url": "https://www.perthhandymate.com.au/zh/services/handyman-interiors-appliance-repairs/rangehood-installation/",
+    "priority": false,
+    "selection_basis": "Operator-approved new rangehood service; existing service intent ownership retained."
   }
 }

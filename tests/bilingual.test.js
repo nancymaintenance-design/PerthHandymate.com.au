@@ -11,8 +11,8 @@ test('new or changed English copy cannot silently fall back to English on a Chin
   assert.throws(()=>translator({})('A newly changed paragraph.'),/Missing Chinese translation/);
   assert.equal(translator({'A newly changed paragraph.':'新修改的段落。'})('A newly changed paragraph.'),'新修改的段落。');
 });
-test('all 127 content pages have static Chinese counterparts, reciprocal SEO and seventh navigation item',()=>{
-  assert.equal(files.length,127);
+test('all 128 content pages have static Chinese counterparts, reciprocal SEO and seventh navigation item',()=>{
+  assert.equal(files.length,128);
   for(const file of files){
     const en=read('',file),zh=read('zh',file),route=routeOf(file);
     assert.match(en,/<html lang="en-AU">/);assert.match(zh,/<html lang="zh-Hans">/);
@@ -63,8 +63,8 @@ test('Chinese forms preserve original English option values required by service 
 });
 test('sitemap doubles only the approved indexable URL set and declares both alternates',()=>{
   const xml=fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8');
-  const urls=matches(xml,/<loc>(.*?)<\/loc>/g);assert.equal(urls.length,252);assert.equal(new Set(urls).size,252);
-  assert.equal(urls.filter(url=>new URL(url).pathname.startsWith('/zh/')).length,126);
+  const urls=matches(xml,/<loc>(.*?)<\/loc>/g);assert.equal(urls.length,254);assert.equal(new Set(urls).size,254);
+  assert.equal(urls.filter(url=>new URL(url).pathname.startsWith('/zh/')).length,127);
   for(const entry of matches(xml,/<url>(.*?)<\/url>/g))for(const language of ['en-AU','zh-Hans','x-default'])assert.ok(entry.includes(`hreflang="${language}"`));
   assert.ok(!urls.some(url=>url.includes('404.html')));
 });

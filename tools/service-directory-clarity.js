@@ -11,7 +11,9 @@ function category(html,slug){
   const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'data/content.js'),'utf8'),sandbox);
   const item=sandbox.window.ELLIS_CONTENT.services.find(item=>item.slug===slug);
   if(!item)throw new Error('Unknown category '+slug);
-  return html.replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/,`<h1>${esc(item.title)}</h1>`).replace(/<title>[\s\S]*?<\/title>/,`<title>${esc(item.title)} | Ellis</title>`);
+  const approved=JSON.parse(fs.readFileSync(path.join(root,'data/heading-keyword-policy.json'),'utf8')).pages[`services/${slug}/index.html`];
+  const label=approved?.h1||item.title;
+  return html.replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/,`<h1>${esc(label)}</h1>`).replace(/<title>[\s\S]*?<\/title>/,`<title>${esc(label)} | Ellis</title>`);
 }
 function apply(){
   const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'data/content.js'),'utf8'),sandbox);
@@ -19,9 +21,10 @@ function apply(){
   for(const category of sandbox.window.ELLIS_CONTENT.services){
     const file=`services/${category.slug}/index.html`,target=path.join(root,file);
     const before=fs.readFileSync(target,'utf8');
-    const after=before.replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/,`<h1>${esc(category.title)}</h1>`).replace(/<title>[\s\S]*?<\/title>/,`<title>${esc(category.title)} | Ellis</title>`);
+    const label=policy.pages[file]?.h1||category.title;
+    const after=before.replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/,`<h1>${esc(label)}</h1>`).replace(/<title>[\s\S]*?<\/title>/,`<title>${esc(label)} | Ellis</title>`);
     if(after!==before)fs.writeFileSync(target,after);
-    if(policy.pages[file]){policy.pages[file].h1=category.title;policy.pages[file].title=category.title+' | Ellis';policy.pages[file].review='2026-10-16: user requested category destination heading to match directory card; retain Perth context in body and metadata description';}
+    if(policy.pages[file]){policy.pages[file].h1=label;policy.pages[file].title=label+' | Ellis';policy.pages[file].review='2026-10-16: user requested category destination heading to match directory card; retain Perth context in body and metadata description';}
   }
   fs.writeFileSync(policyFile,JSON.stringify(policy,null,2)+'\n');
   const index=path.join(root,'services/index.html');fs.writeFileSync(index,directory(fs.readFileSync(index,'utf8')));

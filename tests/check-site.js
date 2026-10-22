@@ -21,7 +21,7 @@ function fail(message) { failures.push(message); }
 function rel(file) { return path.relative(root, file).replace(/\\/g, '/'); }
 
 walk(root);
-if (htmlFiles.length !== 127) fail(`Expected 127 HTML pages, found ${htmlFiles.length}`);
+if (htmlFiles.length !== 128) fail(`Expected 128 HTML pages, found ${htmlFiles.length}`);
 
 const titles = new Map();
 const descriptions = new Map();
@@ -177,11 +177,16 @@ if (!fs.existsSync(catalogPath)) {
   const categorySource = categoryPages.map((file) => fs.readFileSync(file, 'utf8')).join('\n');
   const directoryCards = categorySource.match(/<article class="service-directory-card">[\s\S]*?<\/article>/g) || [];
   const directoryUrls = directoryCards.map(card => card.match(/href="\.\.\/\.\.\/(services\/[^"?]+)"/)?.[1]);
-  if (directoryCards.length !== 67 || new Set(directoryUrls).size !== 67) fail('Category directories must expose exactly 67 unique canonical service cards');
-  for (const item of catalog.canonicalServices) {
+  // The original priced catalogue stays intact; the approved focused pages
+  // also have explicit category cards, including the new rangehood service.
+  const supplementalCards = require('../data/supplemental-services.json').services.filter(item => ['tv-wall-mounting', 'furniture-assembly', 'rangehood-installation'].includes(item.slug));
+  if (supplementalCards.length !== 3) fail('All three approved supplemental directory services must exist');
+  const directoryServices = [...catalog.canonicalServices, ...supplementalCards];
+  if (directoryCards.length !== directoryServices.length || new Set(directoryUrls).size !== directoryServices.length) fail('Category directories must expose exactly 67 original and three approved supplemental service cards');
+  for (const item of directoryServices) {
     if (directoryUrls.filter(url => url === item.url).length !== 1) fail(`Canonical service must have exactly one directory card: ${item.url}`);
   }
-  if ((categorySource.match(/>Explore service</g) || []).length !== 67) fail('Category directories must expose one Explore service link for each canonical service');
+  if ((categorySource.match(/>Explore service</g) || []).length !== directoryServices.length) fail('Category directories must expose one Explore service link for each listed service');
   if ((categorySource.match(/data-service-image=/g) || []).length !== 9) fail('Nine category image integration paths are not reserved');
   const categorySlugs = [...new Set(catalog.rawServices.map((item) => item.category))];
   if (categorySlugs.length !== 9) fail(`Expected 9 image categories, found ${categorySlugs.length}`);

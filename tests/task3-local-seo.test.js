@@ -29,7 +29,7 @@ test('confirmed regional case evidence is linked in both server-rendered bodies'
 test('content dates reflect substantive edits and visible guide dates agree with sitemap', () => {
   const xml = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
   const entries = new Map([...xml.matchAll(/<url><loc>https:\/\/www.perthhandymate.com.au([^<]*)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)].map(([, route, date]) => [route, date]));
-  assert.equal(entries.size, 126);
+  assert.equal(entries.size, 127);
   for (const [route, date] of [['/', '2026-10-14'], ['/services/handyman-interiors-appliance-repairs/handymen/', '2026-10-14'], ['/services/handyman-interiors-appliance-repairs/clothesline-repairs-installation/', '2026-10-14'], ['/guides/cupboard-hinges-drawer-runners-repair-guide/', '2026-10-14'], ['/guides/shower-silicone-grout-waterproofing-guide/', '2026-10-14'], [region, '2026-10-14'], [south, '2026-10-14']]) assert.equal(entries.get(route), date, route);
   assert.equal(entries.get('/areas/perth-central/'), '2026-10-14');
   assert.equal(entries.get('/areas/'), '2026-10-14');
@@ -49,7 +49,7 @@ test('office reception is shown once in the footer, separate from conditional on
 test('every business page has all seven office days and confirmed identities without ratings', () => {
   const walk = dir => fs.readdirSync(dir, {withFileTypes:true}).flatMap(x => x.isDirectory() ? walk(path.join(dir,x.name)) : x.name.endsWith('.html') ? [path.join(dir,x.name)] : []);
   const files = ['index.html','404.html'].map(x => path.join(root,x)).concat(...['about','areas','contact','faq','guides','privacy','projects','services'].map(x => walk(path.join(root,x))));
-  assert.equal(files.length, 127);
+  assert.equal(files.length, 128);
   for (const file of files) {
     const html = fs.readFileSync(file,'utf8');
     const nodes = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(([,s]) => {const b=JSON.parse(s);return b['@graph']||[b];});
