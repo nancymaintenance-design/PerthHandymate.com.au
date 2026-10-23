@@ -20,3 +20,16 @@ test('existing contact CTA retains its style and position without wrapping Engli
   await button.focus();assert.equal(await button.evaluate(e=>e===document.activeElement),true);await button.click();await page.waitForLoadState();assert.equal(new URL(page.url()).pathname,prefix+'/contact/');await page.close();
  }}finally{await browser.close();}
 });
+
+test('case and service contact actions retain a single readable line without losing their prefilled destination',async()=>{
+ const {chromium}=loadPlaywright(),browser=await chromium.launch(browserLaunchOptions(chromium.executablePath()));
+ try{for(const prefix of ['','/zh'])for(const width of [320,768,1440])for(const route of ['/projects/exterior-timber-window-door-repair/','/services/handyman-interiors-appliance-repairs/rangehood-installation/']){
+  const page=await browser.newPage({viewport:{width,height:960}});await page.route('**/*',r=>r.request().url().startsWith(base)?r.continue():r.abort());
+  await page.goto(base+prefix+route,{waitUntil:'load'});const action=page.locator('.cta-band a.button');
+  assert.equal(await action.count(),1);assert.equal(await action.innerText(),prefix?'联系我们':'Contact Us');
+  const geometry=await action.evaluate(e=>{const s=getComputedStyle(e),r=document.createRange();r.selectNodeContents(e);return {lines:r.getClientRects().length,width:e.getBoundingClientRect().width,overflow:e.scrollWidth>e.clientWidth+1,shrink:s.flexShrink,whiteSpace:s.whiteSpace,layout:getComputedStyle(e.parentElement).flexDirection};});
+  assert.equal(geometry.lines,1);assert.equal(geometry.overflow,false);assert.equal(geometry.whiteSpace,'nowrap');assert.equal(geometry.shrink,'0');assert.equal(geometry.layout,width<=700?'column':'row');
+  const target=await action.getAttribute('href');assert.match(target,/contact\//);assert.match(target,/service=/);await action.focus();assert.equal(await action.evaluate(e=>e===document.activeElement),true);
+  await action.click();await page.waitForLoadState();assert.equal(new URL(page.url()).pathname,prefix+'/contact/');assert.equal(new URL(page.url()).searchParams.get('service'),new URL(target,base+prefix+route).searchParams.get('service'));await page.close();
+ }}finally{await browser.close();}
+});

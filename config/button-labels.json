@@ -1,0 +1,211 @@
+[
+  {
+    "en": [
+      "Arrange a handyman assessment",
+      "Contact Us"
+    ],
+    "zh": [
+      "安排家居维修评估",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Arrange an on-site assessment",
+      "Contact Us"
+    ],
+    "zh": [
+      "预约现场评估",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Contact us",
+      "Contact Us"
+    ],
+    "zh": [
+      "联系我们",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Discuss IKEA kitchen installation",
+      "Contact Us"
+    ],
+    "zh": [
+      "咨询 IKEA 厨房安装",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Discuss bathroom repairs or renovation",
+      "Contact Us"
+    ],
+    "zh": [
+      "咨询浴室维修或翻新",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Discuss fence replacement or repair",
+      "Contact Us"
+    ],
+    "zh": [
+      "咨询围栏更换或维修",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Discuss gutter cleaning or repairs",
+      "Contact Us"
+    ],
+    "zh": [
+      "咨询天沟清洁或维修",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Discuss non-emergency gas work",
+      "Contact Us"
+    ],
+    "zh": [
+      "咨询非紧急燃气工程",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Discuss rangehood installation",
+      "Contact Us"
+    ],
+    "zh": [
+      "咨询油烟机安装",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Discuss sliding door repairs",
+      "Contact Us"
+    ],
+    "zh": [
+      "咨询推拉门维修",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Discuss synthetic grass installation",
+      "Contact Us"
+    ],
+    "zh": [
+      "咨询人造草坪安装",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Discuss tile repairs or installation",
+      "Contact Us"
+    ],
+    "zh": [
+      "咨询瓷砖维修或铺贴",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Discuss underfloor support concerns",
+      "Contact Us"
+    ],
+    "zh": [
+      "咨询地板下支撑问题",
+      "联系我们"
+    ],
+    "destination": "contact"
+  },
+  {
+    "en": [
+      "Explore cabinet & wardrobe repairs",
+      "Cabinet & wardrobe repairs"
+    ],
+    "zh": [
+      "了解橱柜与衣柜维修",
+      "橱柜与衣柜维修"
+    ],
+    "destination": "service"
+  },
+  {
+    "en": [
+      "Explore clothesline repairs & installation",
+      "Clothesline services"
+    ],
+    "zh": [
+      "了解晾衣架维修与安装",
+      "晾衣架服务"
+    ],
+    "destination": "service"
+  },
+  {
+    "en": [
+      "Explore garden clean-up services",
+      "Garden clean-up"
+    ],
+    "zh": [
+      "了解花园清理服务",
+      "花园清理"
+    ],
+    "destination": "service"
+  },
+  {
+    "en": [
+      "Explore gutter cleaning and repair services",
+      "Gutter cleaning & repairs"
+    ],
+    "zh": [
+      "了解天沟清理与维修服务",
+      "天沟清理与维修"
+    ],
+    "destination": "service"
+  },
+  {
+    "en": [
+      "Explore shelving, mirror & picture hanging",
+      "Shelves, mirrors & pictures"
+    ],
+    "zh": [
+      "了解搁板、镜子与挂画安装",
+      "搁板、镜子与挂画"
+    ],
+    "destination": "service"
+  },
+  {
+    "en": [
+      "Request a site assessment and quote",
+      "Contact Us"
+    ],
+    "zh": [
+      "申请现场评估与报价",
+      "联系我们"
+    ],
+    "destination": "contact"
+  }
+]

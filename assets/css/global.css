@@ -137,3 +137,8 @@ main.handyman-compact>.service-hero{padding-top:32px}
 .service-contact-button{white-space:nowrap;flex-shrink:0}
 .field-help{font-size:.82rem;line-height:1.5;color:var(--slate);margin:6px 0 0}
 @media(max-width:700px){.hero h1{font-size:2.55rem}.contact-hero h1{font-size:2.35rem}.section-heading{gap:18px}}
+
+/* Action labels stay on one line without being squeezed by adjacent copy. */
+.button{white-space:nowrap;flex-shrink:0}
+.cta-band .split>div{min-width:0}
+@media(max-width:800px){.project-intro{grid-template-columns:minmax(0,1fr)}}

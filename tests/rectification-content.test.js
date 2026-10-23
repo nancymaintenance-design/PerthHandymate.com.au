@@ -137,7 +137,31 @@ test('home jump links bypass all thirteen preserved full-size alternating cases'
   const h = read('index.html');
   const before = execFileSync('git', ['show', '3d05ecdd3aed27bcf5533082a5a308d4323fd140:index.html'], { cwd: root, encoding: 'utf8' });
   const groups = source => source.match(/<div class="project-feature-list">([\s\S]*?)<\/section>/)[0];
-  assert.equal(groups(h).replace(/<h3>/g,'<h2>').replace(/<\/h3>/g,'</h2>'), groups(before));
+  // Apply only the owner-confirmed Q01 copy revision to the historical baseline.
+  const approvedCaseCopy = [
+    [
+      "Sticking timber window &amp; exterior door repair",
+      "Timber Door Repairs and Repainting"
+    ],
+    [
+      "Timber window and exterior door repair",
+      "Timber Door Repairs and Repainting"
+    ],
+    [
+      "Explore a photo-led example of weathered exterior joinery, repair work and finished timber window and door details.",
+      "See our timber door repairs and repainting, with window sill repairs and opening hardware replacement on the same job."
+    ],
+    [
+      "Completed exterior timber window and door repair",
+      "Exterior view after timber door repairs and repainting"
+    ],
+    [
+      "Exterior timber window and door repair project",
+      "Timber door repair and repainting project"
+    ]
+  ];
+  const applyApprovedCaseCopy = value => approvedCaseCopy.reduce((text, [oldCopy, newCopy]) => text.replaceAll(oldCopy, newCopy), value);
+  assert.equal(groups(h).replace(/<h3>/g,'<h2>').replace(/<\/h3>/g,'</h2>'), applyApprovedCaseCopy(groups(before)));
   assert.equal([...groups(h).matchAll(/class="support-feature(?: |")/g)].length, 13);
   const nav = h.match(/<nav class="quick-paths"[\s\S]*?<\/nav>/)[0];
   for (const id of ['repair-planning-guides', 'contact-team']) {

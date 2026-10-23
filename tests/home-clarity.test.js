@@ -21,7 +21,31 @@ test('all thirteen case rows retain images, links, order and alternation', () =>
   const normalize = h => h.replace(/<h[23]>/g, '<h3>').replace(/<\/h[23]>/g, '</h3>');
   const cases = extract(home());
   assert.equal((cases.match(/class="support-feature(?: |")/g) || []).length, 13);
-  assert.equal(normalize(cases), normalize(extract(before)), 'all approved case content is retained verbatim apart from semantic heading levels');
+  // Apply only the owner-confirmed Q01 copy revision to the historical baseline.
+  const approvedCaseCopy = [
+    [
+      "Sticking timber window &amp; exterior door repair",
+      "Timber Door Repairs and Repainting"
+    ],
+    [
+      "Timber window and exterior door repair",
+      "Timber Door Repairs and Repainting"
+    ],
+    [
+      "Explore a photo-led example of weathered exterior joinery, repair work and finished timber window and door details.",
+      "See our timber door repairs and repainting, with window sill repairs and opening hardware replacement on the same job."
+    ],
+    [
+      "Completed exterior timber window and door repair",
+      "Exterior view after timber door repairs and repainting"
+    ],
+    [
+      "Exterior timber window and door repair project",
+      "Timber door repair and repainting project"
+    ]
+  ];
+  const applyApprovedCaseCopy = value => approvedCaseCopy.reduce((text, [oldCopy, newCopy]) => text.replaceAll(oldCopy, newCopy), value);
+  assert.equal(normalize(cases), normalize(applyApprovedCaseCopy(extract(before))), 'only approved Q01 text and semantic heading levels differ; all other case content is retained');
   assert.doesNotMatch(cases, /<h2>/);
   assert.match(home(), /project-feature" id="repair-projects"/);
 });

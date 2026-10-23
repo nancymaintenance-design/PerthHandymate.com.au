@@ -7,6 +7,8 @@ interface Rule {en:[string,string];zh:[string,string]}
 const rules:Rule[]=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../config/customer-voice.json'),'utf8'));
 const operatorRules:Rule[]=['operator-copy.json','operator-copy-review.json'].flatMap(file=>JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../config/'+file),'utf8')));
 const followupRules:Rule[]=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../config/operator-copy-followup.json'),'utf8'));
+interface ButtonLabelRule extends Rule {destination:'contact'|'service'}
+const buttonLabelRules:ButtonLabelRule[]=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../config/button-labels.json'),'utf8'));
 const verbs:Record<string,string>={confirms:'confirm',checks:'check',assesses:'assess',arranges:'arrange',provides:'provide',identifies:'identify',explains:'explain',repairs:'repair',installs:'install',handles:'handle',uses:'use',distinguishes:'distinguish',agrees:'agree',inspects:'inspect',discusses:'discuss',completes:'complete',accepts:'accept',reviews:'review',separates:'separate',cleans:'clean',replaces:'replace',records:'record',clarifies:'clarify',measures:'measure',coordinates:'coordinate',supports:'support',offers:'offer',plans:'plan',renews:'renew',adjusts:'adjust',supplies:'supply',sets:'set',documents:'document'};
 verbs.scopes='scope';verbs.seeks='seek';
 const companyClause=new RegExp('\\bEllis (?:(also|first|then|directly) )?('+Object.keys(verbs).join('|')+')\\b([^.!?]*)','g');
@@ -77,6 +79,14 @@ function publicCopy(html:string,zh=false):string{
   const visit=(value:unknown,key=''):unknown=>Array.isArray(value)?value.map(v=>visit(v,key)):value&&typeof value==='object'?(['Review','Quotation'].includes(String((value as Record<string,unknown>)['@type']))?value:Object.fromEntries(Object.entries(value).map(([k,v])=>[k,visit(v,k)]))):typeof value==='string'&&keys.has(key)?edit(value):value;
   const before=JSON.parse(raw),after=visit(before);return JSON.stringify(before)===JSON.stringify(after)?all:open+JSON.stringify(after)+close;
  });
- return serviceBodyCopy(html,zh);
+ // Short labels belong only to action links; prose, destinations and styling stay intact.
+ html=serviceBodyCopy(html,zh);
+ return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>|<style\b[^>]*>[\s\S]*?<\/style>|(<a\b[^>]*>)([\s\S]*?)(<\/a>)/gi,(all:string,open:string,inner:string,close:string)=>{
+  if(!open||/<[^>]+>/.test(inner))return all;
+  const classes=open.match(/\bclass=["']([^"']*)["']/)?.[1]||'',href=open.match(/\bhref=["']([^"']*)["']/)?.[1]||'';
+  if(!classes.split(/\s+/).includes('button'))return all;
+  const label=plainParagraph(inner),rule=buttonLabelRules.find(r=>(zh?r.zh:r.en)[0]===label&&(r.destination==='contact'?/(?:^|\/)contact(?:\/|[?#]|$)/.test(href):/(?:^|\/)services\//.test(href)));
+  return rule?open+htmlEscape((zh?rule.zh:rule.en)[1])+close:all;
+ });
 }
 module.exports={publicCopy,wording};

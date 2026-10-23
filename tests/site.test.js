@@ -692,8 +692,8 @@ test('publishes the exterior timber window and door repair case study from the h
   const caseStudy = fs.readFileSync(path.join(root, 'projects/exterior-timber-window-door-repair/index.html'), 'utf8');
 
   assert.match(home, /href="\.\/projects\/exterior-timber-window-door-repair\/"/);
-  assert.match(home, /Sticking timber window &amp; exterior door repair/);
-  assert.ok(caseStudy.includes('<h1>Sticking timber window &amp; exterior door repair</h1>'));
+  assert.match(home, /Timber Door Repairs and Repainting/);
+  assert.ok(caseStudy.includes('<h1>Timber Door Repairs and Repainting</h1>'));
   assert.match(caseStudy, /sticking timber window/);
   assert.match(caseStudy, /services\/handyman-interiors-appliance-repairs\/carpenters\//);
 
@@ -840,7 +840,7 @@ test('uses distinct search-led case-study titles and grounded scenario copy', ()
   const root = path.join(__dirname, '..');
   const cases = [
     ['roof-and-gutter-maintenance', 'Gutter cleaning &amp; roofline maintenance', 'blocked gutter cleaning'],
-    ['exterior-timber-window-door-repair', 'Sticking timber window &amp; exterior door repair', 'sticking timber window'],
+    ['exterior-timber-window-door-repair', 'Timber Door Repairs and Repainting', 'timber door'],
     ['bathroom-tile-shower-repair', 'Shower resealing &amp; tile grout repair', 'split shower silicone'],
     ['garden-clean-up', 'Garden clean-up &amp; maintenance odd jobs', 'garden maintenance odd jobs'],
     ['interior-wall-repair-painting', 'Interior wall repair &amp; painting touch-ups', 'painting touch-ups'],

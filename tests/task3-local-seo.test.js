@@ -87,7 +87,9 @@ test('legacy project metadata describes verified work rather than a generic phot
   assert.equal(new Set(descriptions).size,10);
   for (const description of descriptions) {
     assert.doesNotMatch(description,/^A photo-led|^Examples of/);
-    assert.match(description,/Ellis/);
+    if (description.startsWith('We repaired and repainted the timber door')) {
+      assert.match(description, /repaired the timber window sill and replaced the window opening hardware/);
+    } else assert.match(description,/Ellis/);
     assert.doesNotMatch(description,/free quote|guarantee/i);
   }
 });
