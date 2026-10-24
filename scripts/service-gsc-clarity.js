@@ -56,7 +56,8 @@ function reviseService(html) {
         const related = '<div class="service-related-links"><h3>Related services</h3><ul class="service-link-cards"><li><a data-preserve-search href="../../../services/doors-windows-glass-screens/window-installation/">Window installation and replacement</a></li><li><a data-preserve-search href="../../../services/doors-windows-glass-screens/glass-glaziers/">Glass replacement assessment</a></li><li><a data-preserve-search href="../../../services/handyman-interiors-appliance-repairs/carpenters/">Timber and carpentry repairs</a></li></ul></div>';
         main = main.replace(original, `<section class="section shell" id="service-work-options"><h2>Window Repairs</h2><div id="repair-assessment-details">${article}</div>${quote}${related}${cta}</section>`)
             .replace(/<section\b[^>]*id="repair-assessment-details"[\s\S]*?<\/section>/g, '');
-        main = combineFaq(main, ['Can a damaged window frame be repaired instead of replaced?', 'Do you repair window locks, handles and hinges?', 'What determines the price, and do I need to send photos?', 'Why does a timber window keep swelling?', 'Does my window need carpentry or glazing work?']);
+        const propertyQuestion = 'What information helps with a rental or strata window repair?';
+        main = combineFaq(main, ['Can a damaged window frame be repaired instead of replaced?', 'Do you repair window locks, handles and hinges?', 'What determines the price, and do I need to send photos?', 'Why does a timber window keep swelling?', 'Does my window need carpentry or glazing work?', ...(main.includes(`<summary>${propertyQuestion}</summary>`) ? [propertyQuestion] : [])]);
         main = main.replace(/(<section\b[^>]*id="repair-planning-guides"[\s\S]*?<a href=")[^"]*(">)[\s\S]*?(<\/a>)/, '$1../../../guides/sticking-doors-windows-repair-guide/#guide-section-4$2Timber windows swelling after wet weather$3');
     }
     if (slug === 'sliding-door-repairs') {

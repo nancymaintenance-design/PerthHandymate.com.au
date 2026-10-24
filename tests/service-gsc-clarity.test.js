@@ -15,7 +15,7 @@ test('window advice link describes windows and resolves to a real guide section'
 });
 // Catches repeated assessment blocks reappearing after legacy writers are run.
 test('window and slider decision details are grouped with scope rather than repeated in separate sections',()=>{
- for(const slug of ['window-repairs','sliding-door-repairs']){const doc=page(slug);assert.equal(doc('section#repair-assessment-details').length,0);assert.equal(doc('#repair-assessment-details').length,1);assert.equal(doc('section#assessment-questions').length,0);assert.ok(doc('#assessment-questions details').length>=4);assert.ok(doc('#assessment-questions details').length<=5);}
+ for(const slug of ['window-repairs','sliding-door-repairs']){const doc=page(slug);assert.equal(doc('section#repair-assessment-details').length,0);assert.equal(doc('#repair-assessment-details').length,1);assert.equal(doc('section#assessment-questions').length,0);assert.ok(doc('#assessment-questions details').length>=4);assert.ok(doc('#assessment-questions details').length<=(slug==='window-repairs'?6:5));if(slug==='window-repairs')assert.equal(doc('#assessment-questions summary').toArray().filter(e=>doc(e).text()==='What information helps with a rental or strata window repair?').length,1);}
 });
 // Catches a repeated maintenance pass duplicating headings, questions or invitation blocks.
 test('bounded service owner is repeatable and rejects missing owned content',()=>{
