@@ -1,0 +1,78 @@
+/* Homepage and contact page only: selected contact-first design. */
+.team-contacts{padding:42px 0 0;background:#fff;color:var(--ink);scroll-margin-top:110px}
+.team-contacts-heading{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-bottom:26px}
+.team-contacts-heading>div{min-width:0;max-width:760px}
+.team-contacts-heading h2{font-size:clamp(1.65rem,2.7vw,2.3rem);line-height:1.2;margin-bottom:12px}
+.team-contacts-heading p:last-child{color:var(--slate);margin:0;max-width:68ch}
+.team-contacts-heading>.button{flex-shrink:0;white-space:nowrap}
+.team-contact-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.team-contact-card{min-width:0;padding:22px 0;border-top:1px solid var(--line)}
+.team-contact-card h3{font-size:1.25rem;line-height:1.3;letter-spacing:0;margin:0 0 3px;color:var(--navy)}
+.team-contact-role{font-size:.88rem;line-height:1.45;color:var(--slate);margin:0 0 14px}
+.team-contact-methods{display:grid;gap:10px}
+.contact-method{display:flex;align-items:center;gap:14px;text-decoration:none;min-height:46px;min-width:0;width:fit-content;max-width:100%;border-radius:4px;color:var(--navy)}
+.contact-icon-disc{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:var(--action)}
+.contact-icon{width:22px;height:22px;filter:brightness(0) invert(1)}
+.contact-method-copy{display:flex;flex-direction:column;min-width:0;gap:1px}
+.contact-method-copy>span:first-child{font-size:.8rem;font-weight:700}
+.contact-method-copy strong{font-size:1.3rem;line-height:1.35;white-space:nowrap}
+.team-contact-email .contact-method-copy>span:last-child{font-size:.95rem;overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:4px}
+.contact-method:hover{color:var(--action-hover)}
+.contact-method:hover .contact-icon-disc{background:var(--action-hover)}
+.contact-method:focus-visible,.team-contact-guide:focus-visible{outline:3px solid var(--action);outline-offset:4px}
+.team-contact-support{background:var(--mist);color:var(--navy);padding:28px 0;margin-top:12px}
+.team-contact-notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:38px}
+.team-contact-notes section+section{border-left:1px solid #a7b9c4;padding-left:36px}
+.team-contact-notes h2{font-size:1.08rem;line-height:1.4;letter-spacing:0;margin:0 0 10px}
+.team-contact-notes p{font-size:.9rem;line-height:1.65;margin:0 0 10px}
+.team-contact-guide{font-size:.9rem;font-weight:700;color:var(--eucalypt)}
+.team-contact-notes [id],#contact-team,#enquiry-form{scroll-margin-top:110px}
+[data-contact-design] .contact-hero{padding:24px 0 28px}
+[data-contact-design] .contact-hero h1{font-size:clamp(2rem,3.5vw,3rem);max-width:none;margin:12px 0 16px}
+[data-contact-design] .contact-hero .lede{max-width:1050px;font-size:1rem;line-height:1.6;margin-bottom:12px}
+[data-contact-design] .contact-hero .contact-jump{margin:10px 0}
+[data-contact-design] .contact-hero .contact-jump .button{padding:9px 16px;min-height:44px}
+[data-contact-design] .contact-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:42px;align-items:start;padding:32px 0}
+.contact-layout>.contact-form,.contact-layout>.contact-aside{min-width:0}
+[data-contact-design] .contact-aside h2{font-size:clamp(1.6rem,2.2vw,2rem);line-height:1.25;letter-spacing:-.02em;margin:0 0 20px}
+[data-contact-design] .contact-aside .team-contact-cards{grid-template-columns:1fr;gap:0;margin-top:22px}
+.contact-main-phone strong{font-size:1.65rem}
+.contact-office{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:12px;font-size:.85rem}
+.contact-office a,.contact-aside a[href^="mailto:"]{overflow-wrap:anywhere}
+[data-contact-design] .contact-form{padding:24px;border-radius:8px;box-shadow:none;min-width:0}
+[data-contact-design] .contact-form-title{font-size:1.65rem;line-height:1.25;letter-spacing:-.02em;margin:0 0 12px}
+[data-contact-design] #contact-required{font-size:.87rem;line-height:1.55;margin-bottom:18px}
+[data-contact-design] .form-grid{gap:14px 18px}
+[data-contact-design] .contact-form label{font-size:.9rem;margin-bottom:5px}
+[data-contact-design] .contact-form input:not(.sr-only),[data-contact-design] .contact-form select{height:46px;min-height:46px;padding:9px 12px;min-width:0;width:100%}
+[data-contact-design] .contact-form textarea{height:110px;min-height:110px;resize:vertical;padding:10px 12px;width:100%;min-width:0}
+[data-contact-design] .field-error:empty,[data-contact-design] .form-status:empty{display:none}
+[data-contact-design] .field-error{min-height:0;margin:4px 0 0}
+[data-contact-design] #message-help{font-size:.8rem;margin:5px 0 0}
+[data-contact-design] .contact-form>.button{margin-top:18px;min-height:46px;padding:11px 24px}
+[data-contact-design] .contact-form .privacy-note{font-size:.8rem;line-height:1.6;margin:14px 0 0}
+[data-contact-design] .team-contact-support{margin-top:0}
+@media(max-width:900px){
+ [data-contact-design] .contact-layout{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:26px}
+ [data-contact-design] .contact-form{padding:20px}
+ [data-contact-design] .form-grid{grid-template-columns:1fr}
+ [data-contact-design] .contact-aside h2{font-size:1.5rem}
+}
+@media(max-width:700px){
+ [data-contact-design] .contact-layout{grid-template-columns:1fr;gap:28px;padding:26px 0}
+ [data-contact-design] .contact-aside .team-contact-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+ [data-contact-design] .contact-form{padding:20px}
+ .team-contacts-heading{align-items:flex-start;flex-direction:column;gap:18px}
+ .team-contact-notes{grid-template-columns:1fr;gap:22px}
+ .team-contact-notes section+section{border-left:0;border-top:1px solid #a7b9c4;padding:20px 0 0}
+ .team-contacts{padding-top:30px}
+}
+@media(max-width:480px){
+ .team-contact-cards,[data-contact-design] .contact-aside .team-contact-cards{grid-template-columns:1fr;gap:0}
+ .team-contact-card{padding:18px 0}
+ [data-contact-design] .contact-form{padding:18px}
+ [data-contact-design] .contact-hero .lede{font-size:.95rem}
+ .contact-icon-disc{flex-basis:38px;width:38px;height:38px}
+ .contact-method{gap:12px}
+ .team-contact-email .contact-method-copy>span:last-child{font-size:.88rem}
+}
