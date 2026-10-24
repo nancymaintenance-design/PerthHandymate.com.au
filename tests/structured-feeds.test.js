@@ -21,8 +21,8 @@ test('every English and Chinese FAQ schema answer exactly follows its visible an
    checked++;
   }
  }
- // Retain the GSC consolidation and rangehood FAQs, plus three property-enquiry questions per language.
- assert.equal(checked,590,'all retained bilingual FAQs and the three new property-enquiry questions per language remain represented');
+ // Retain all prior FAQs plus one existing-deck enquiry question per language.
+ assert.equal(checked,592,'all retained bilingual FAQs and the new existing-deck enquiry question per language remain represented');
  assert.deepEqual(differences,[],'Schema must not retain separate or older translations');
 });
 
