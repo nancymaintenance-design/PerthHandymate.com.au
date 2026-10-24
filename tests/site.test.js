@@ -785,7 +785,7 @@ test('publishes the timber fence repair case study from the homepage', () => {
     assert.ok(image.subarray(0, 3).equals(Buffer.from([255,216,255])), `${asset} must be a JPEG`);
   }
 });
-test('publishes decking refinishing and maintenance examples without presenting separate photos as one project sequence', () => {
+test('publishes confirmed decking repairs and refinishing while preserving the existing route and images', () => {
   const root = path.join(__dirname, '..');
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const page = fs.readFileSync(path.join(root, 'projects/decking-refinishing-maintenance/index.html'), 'utf8');
@@ -793,7 +793,7 @@ test('publishes decking refinishing and maintenance examples without presenting 
   assert.match(home, /href="\.\/projects\/decking-refinishing-maintenance\/"/);
   assert.match(home, /Deck timber maintenance &amp; refinishing/);
   assert.ok(page.includes('<h1>Deck timber maintenance &amp; refinishing</h1>'));
-  assert.match(page, /These images are examples, not a single before-and-after project sequence\./);
+  assert.match(page, /The deck boards had deteriorated, with lifting and warping\./);
   assert.match(page, /services\/outdoor-structures-fencing-pools\/deck-builders\//);
 
   for (const asset of ['decking-preparation.jpg', 'decking-coating.jpg', 'decking-finished-entry.jpg', 'decking-finished-outdoor.jpg']) {

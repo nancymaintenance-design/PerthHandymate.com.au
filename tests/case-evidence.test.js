@@ -55,10 +55,12 @@ for (const [slug, service, guide] of cases) {
   });
 }
 
-test('deck evidence keeps separate settings rather than inventing one before-and-after sequence', () => {
+test('deck evidence reflects confirmed work without inventing a single-job photo sequence or ratings', () => {
   const html = fs.readFileSync(path.join(root, 'projects/decking-refinishing-maintenance/index.html'), 'utf8');
-  assert.match(html, /examples, not a single before-and-after project sequence/);
-  assert.match(html, /<h[23]>Outcome<\/h[23]>\s*<p>[^<]*separate[^<]*settings/i);
+  assert.match(html, /The photos show stages before, during and after the work/);
+  assert.doesNotMatch(html, /single (?:job|project)|one continuous|aggregateRating|ratingValue|100%/i);
+  assert.match(html, /<h[23]>Scope<\/h[23]>\s*<p>We repaired the damaged and warped boards, sanded the timber and applied Cabot’s Natural Decking Oil\./);
+  assert.match(html, /<h[23]>Outcome<\/h[23]>\s*<p>The work is complete and the deck has a refreshed appearance\. The customer was pleased with the result\./);
   for (const image of ['decking-preparation', 'decking-coating', 'decking-finished-entry', 'decking-finished-outdoor']) {
     assert.ok(html.includes(`/optimized/${image}-1440.webp`), image);
   }
